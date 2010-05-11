@@ -1,8 +1,4 @@
-.. Mejores Practicas de Plone documentation master file, created by
-   sphinx-quickstart on Tue Apr  6 11:45:39 2010.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
+==========================
 Mejores Practicas de Plone
 ==========================
 
@@ -27,21 +23,86 @@ principales tecnologias de Zope y Plone.
 
 En particular, conoceremos:
 
+Python
+------
+
+Python es el lenguaje con el que estan desarrollados tanto Zope como Plone,
+por lo que es muy importante conocerlo para poder tomar maxima ventaja de
+estos sistemas. Es imprescindible programar en Python para poder crear
+productos y tipos de contenido para Plone.
+
+En esta seccion tenemos el tutorial oficial de Python, preparado por la
+asociacion de Python de Argentina y la fundacion de Python.
+
 .. toctree::
    :maxdepth: 2
 
-   python
+   Tutorial de Python <python/python-tutorial/index>
+
+Tutorial de Subversion
+----------------------
+
+Para tener un ambiente de desarrollo productivo, en especial cuando se
+trabaje en equipo, es muy importante contar con un sistema de control de
+versiones. Subversion es el utilizado por plone.org y el plone collective,
+por lo que consideramos necesario conocerlo, aunque recientemente la
+popularidad de sistemas distribuidos como Git y Mercurial ha aumentado.
+
+.. toctree::
+   :maxdepth: 2
+
    subversion
+
+Buildout y setuptools
+---------------------
+
+Buildout es un sistema que permite definir ambientes de desarrollo
+repetibles, incluyendo dependencias y configuracion. Buildout se apoya
+fuertemente en setuptools, que permite instalar paquetes de Python a traves
+de Internet. Es recomendable utilizar buildout para cualquier proyecto de
+Plone que se quiera emprender.
+
+.. toctree::
+   :maxdepth: 2
+
    setuptools
    buildout
+
+Tecnologias de Zope
+-------------------
+
+Plone esta basado en el servidor de aplicaciones Zope y en un toolkit de
+desarrollo de portales llamado CMF. Para trabajar con Plone es necesario
+conocer diversas tecnologias provenientes de estos sistemas.
+
+.. toctree::
+   :maxdepth: 2
+
    zpt
    zcatalog
    workflow
    gs
+
+Temas varios de Plone
+---------------------
+
+Existen muchos temas importantes para el desarrollo con Plone, en esta
+seccion tocaremos algunos de ellos.
+
+.. toctree::
+   :maxdepth: 2
+
    productos
    policy
    tema
    minituts
+
+Otros recursos
+--------------
+
+.. toctree::
+   :maxdepth: 2
+
    links
    presentaciones
    
