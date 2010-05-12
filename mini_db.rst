@@ -62,7 +62,7 @@ Primero definimos una vista que se conectará a SQLite:
     session.add(User(name='joe'))
     bob = session.query(User).all()[0]
     bob.addresses.append(Address(email='bob@bob.bob'))
-    joe = session.query(User).all()[0]
+    joe = session.query(User).all()[1]
     bob.addresses.append(Address(email='joe@joe.joe'))
     transaction.commit()
 
