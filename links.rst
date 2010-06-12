@@ -6,7 +6,7 @@ http://www.plone.org
     Pagina principal de la comunidad Plone.
 
 http://www.python.org
-    Pagina principal de Python y su fundacion.
+    Pagina principal de Python y su fundación.
 
 http://docs.python.org/library/index.html
     Documentacion de la libreria standard de Python.
@@ -31,7 +31,7 @@ http://svnbook.red-bean.com/
     Libro de Subversion.
 
 http://sphinx.pocoo.org/
-    Sphinx es un sistema de documentacion basado en Python, que utiliza un
+    Sphinx es un sistema de documentación basado en Python, que utiliza un
     formato de texto llamado reStructuredText.
 
 http://docutils.sourceforge.net/rst.html
@@ -39,7 +39,7 @@ http://docutils.sourceforge.net/rst.html
     estructurados.
 
 http://plone.org/documentation/manual/developer-manual
-    Documentacion para desarrolladores de Plone.
+    Documentación para desarrolladores de Plone.
 
 http://plone.org/documentation/manual/developer-manual/archetypes/fields/fields-reference
     Referencia de campos disponibles para Archetypes.

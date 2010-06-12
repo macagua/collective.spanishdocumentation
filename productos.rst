@@ -45,7 +45,7 @@ La estructura del código que se recomienda incluye las siguientes partes:
 
         * Definición de tipos y campos.
         * Workflows específicos para un tipo de contenido.
-        * Vistas y viewlets epeciales para un tipo de contenido.
+        * Vistas y viewlets especiales para un tipo de contenido.
         * Imágenes y estilos propios del contenido.
         * Portlets propios del contenido.
         * Índices y metadatos del catálogo para cada tipo utilizado.

@@ -2,37 +2,37 @@
 Mejores Practicas de Plone
 ==========================
 
-Desarrollar un sitio con Plone requiere de la combinacion de una serie de
-tecnologias y conocimientos, desde HTML hasta desarrollo avanzado con Python.
+Desarrollar un sitio con Plone requiere de la combinación de una serie de
+tecnologías y conocimientos, desde HTML hasta desarrollo avanzado con Python.
 A lo largo del tiempo, la comunidad de Plone ha ido experimentando y
-adoptando diversas formas de trabajar un proyecto, las cuales hoy en dia
+adoptando diversas formas de trabajar un proyecto, las cuales hoy en día
 pueden considerarse como las mejores practicas de desarrollo con Plone.
 
-Algunas de estas practicas se refieren por supuesto a la programacion con
-Python y a la construccion de aplicaciones administracion de contenido con
-Plone, pero hay algunas otras que rebasan el ambito de Plone y son utiles
+Algunas de estas practicas se refieren por supuesto a la programación con
+Python y a la construcción de aplicaciones administración de contenido con
+Plone, pero hay algunas otras que rebasan el ámbito de Plone y son útiles
 para cualquier ambiente de desarrollo.
 
 En este texto vamos a abordar una por una diversas practicas que consideramos
-invaluables para el trabajo profesional con Plone. La intencion es demostrar
+invaluables para el trabajo profesional con Plone. La intención es demostrar
 la manera en que se integra un ambiente de desarrollo ideal para desarrollar
 con Plone.
 
-Ademas de las mejores practicas, conoceremos en detalle algunas de las
-principales tecnologias de Zope y Plone.
+Además de las mejores practicas, conoceremos en detalle algunas de las
+principales tecnologías de Zope y Plone.
 
 En particular, conoceremos:
 
 Python
 ------
 
-Python es el lenguaje con el que estan desarrollados tanto Zope como Plone,
-por lo que es muy importante conocerlo para poder tomar maxima ventaja de
+Python es el lenguaje con el que están desarrollados tanto Zope como Plone,
+por lo que es muy importante conocerlo para poder tomar máxima ventaja de
 estos sistemas. Es imprescindible programar en Python para poder crear
 productos y tipos de contenido para Plone.
 
-En esta seccion tenemos el tutorial oficial de Python, preparado por la
-asociacion de Python de Argentina y la fundacion de Python.
+En esta sección tenemos el tutorial oficial de Python, preparado por la
+asociación de Python de Argentina y la fundación de Python.
 
 .. toctree::
    :maxdepth: 2
@@ -57,8 +57,8 @@ Buildout y setuptools
 ---------------------
 
 Buildout es un sistema que permite definir ambientes de desarrollo
-repetibles, incluyendo dependencias y configuracion. Buildout se apoya
-fuertemente en setuptools, que permite instalar paquetes de Python a traves
+que pueden ser replicados, incluyendo dependencias y configuración. Buildout se apoya
+fuertemente en setuptools, que permite instalar paquetes de Python a través
 de Internet. Es recomendable utilizar buildout para cualquier proyecto de
 Plone que se quiera emprender.
 
@@ -68,12 +68,12 @@ Plone que se quiera emprender.
    setuptools
    buildout
 
-Tecnologias de Zope
+Tecnologías de Zope
 -------------------
 
 Plone esta basado en el servidor de aplicaciones Zope y en un toolkit de
 desarrollo de portales llamado CMF. Para trabajar con Plone es necesario
-conocer diversas tecnologias provenientes de estos sistemas.
+conocer diversas tecnologías provenientes de estos sistemas.
 
 .. toctree::
    :maxdepth: 2
@@ -87,7 +87,7 @@ Temas varios de Plone
 ---------------------
 
 Existen muchos temas importantes para el desarrollo con Plone, en esta
-seccion tocaremos algunos de ellos.
+sección tocaremos algunos de ellos.
 
 .. toctree::
    :maxdepth: 2
@@ -106,7 +106,7 @@ Otros recursos
    links
    presentaciones
    
-Indices y tablas
+Índices y tablas
 ================
 
 * :ref:`genindex`

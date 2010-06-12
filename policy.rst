@@ -98,7 +98,7 @@ configuración deseada. La manera recomendada de generar los archivos xml
 necesarios para ello, es crear un sitio nuevo de Plone y a continuación
 modificar toda la configuración que se quiere incluir en el producto. Una vez
 hecho esto, se debe exportar la configuración modificada desde la herramienta
-de portal_setup, que se puede accesar desde la raiz del portal desde la
+de portal_setup, la cual se puede acceder a esta desde la raíz del portal desde la
 administración de Zope (ZMI):
 
 Al seleccionar los pasos deseados y presionar el botón de 'export selected
@@ -109,14 +109,14 @@ descomprimirse en el directorio del perfil creado en el paso anterior::
     $ cd profiles/default
     $ tar xzf setuptool_20080630134421.tar.gz
 
-Como ejecutar codigo Python en import steps
+Como ejecutar código Python en import steps
 ===========================================
 
 Finalmente, en algunas ocasiones hay pasos que queremos realizar al momento de
 la instalación de un producto de configuración que no son manejables con
 Generic Setup. En esos casos, existe un mecanismo para ejecutar código Python
 en el momento que se instala un perfil. Se crea un archivo setuphandlers.py en
-la raiz del producto, con el siguiente código:
+la raíz del producto, con el siguiente código:
 
 .. code-block:: python
 

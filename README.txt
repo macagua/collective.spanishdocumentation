@@ -4,7 +4,7 @@ addition to Sphinx when you setup the project.
 
 -----------------------------------------------------------------------------
 
-Esta es una coleccion de documentacion para Plone y temas relacionados en
-espanol. Es un proyecto de Sphinx. El makefile requiere tener instalado
+Esta es una colección de documentación para Plone y temas relacionados en
+español. Es un proyecto de Sphinx. El makefile requiere tener instalado
 rst2pdf para funcionar.
 

@@ -6,15 +6,15 @@ Control de versiones utilizando Subversion
 
 Subversion es un sistema centralizado de control de versiones. En otras
 palabras, es un sistema que permite llevar el control de los cambios 
-realizados por una o mas personas a una serie de documentos a traves del
+realizados por una o mas personas a una serie de documentos a través del
 tiempo.
 
 En un proyecto de Plone podemos tener docenas o centenares de documentos de
-diversos tipos, como HTML o codigo de Python. Dependiendo del tamano de
+diversos tipos, como HTML o código de Python. Dependiendo del tamaño de
 nuestro equipo de trabajo, los documentos pueden estar cambiando 
 constantemente y ser modificados por diversas personas. En el ciclo de
-trabajo diario, esta situacion puede ocasionar cambios perdidos y severos
-problemas de coordinacion, lo que degenera en tiempo perdido y baja de
+trabajo diario, esta situación puede ocasionar cambios perdidos y severos
+problemas de coordinación, lo que degenera en tiempo perdido y baja de
 productividad para todos los miembros del equipo de desarrollo.
 
 Un sistema de control de versiones se encarga de llevar el control de 
@@ -24,20 +24,20 @@ sistema se ocupa de integrarlos con los cambios de los otros miembros del
 equipo y de asegurarse de que no existan conflictos.
 
 Adicionalmente, utilizar un sistema de control de versiones nos permite
-cosas como comparar la mas reciente version de un documento con versiones
-anteriores, identificar quien ha realizado cuales cambios en el codigo y
-designar un conjunto de documentos especificos como una 'entrega' del
+cosas como comparar la mas reciente versión de un documento con versiones
+anteriores, identificar quien ha realizado cuales cambios en el código y
+designar un conjunto de documentos específicos como una 'entrega' del
 proyecto que queda identificada con las versiones de cada uno de los
-documentos en el instante de la definicion.
+documentos en el instante de la definición.
 
-Instalacion de Subversion
+Instalación de Subversion
 =========================
 
 Uno de los sistemas de control de versiones mas utilizados en la actualidad
-es Subversion. Es un sistema facil de usar y esta disponible para todas las
+es Subversion. Es un sistema fácil de usar y esta disponible para todas las
 plataformas populares, como Linux, Mac OSX y Windows.
 
-La instalacion depende de la plataforma, pero generalmente hay paquetes 
+La instalación depende de la plataforma, pero generalmente hay paquetes 
 disponibles para instalar con el administrador de paquetes propio de cada
 sistema.
 
@@ -51,7 +51,7 @@ En el caso de Red Hat o CentOS, el comando es muy similar::
     $ yum install subversion
 
 Otras distribuciones de Linux y otros sistemas operativos tienen sus propios
-mecanismos de instalacion, pero no difieren mucho de lo anterior.
+mecanismos de instalación, pero no difieren mucho de lo anterior.
 
 Arranque del servidor
 ---------------------
@@ -64,12 +64,12 @@ comando `svnserve`, de la siguiente manera::
 El servicio espera peticiones en el puerto 3690, por lo que si se tiene un
 firewall debe abrirse dicho puerto para entrada y salida.
 
-Creacion de un repositorio
+Creación de un repositorio
 ==========================
 
-Por supuesto, el servicio recien iniciado no tiene ninguna utilidad hasta que
+Por supuesto, el servicio recién iniciado no tiene ninguna utilidad hasta que
 es creado un repositorio para servir. Esto se hace con el comando `svnadmin`,
-el cual recibe como parametro el path dentro del sistema de archivos donde se
+el cual recibe como parámetro el path dentro del sistema de archivos donde se
 desea crear el repositorio::
 
     $ svnadmin create /path/del/repositorio
@@ -87,17 +87,17 @@ path elegido. Por ejemplo, si creamos el repositorio en `/opt/svn`::
 El contenido del repositorio se guarda dentro del directorio `db`, pero por
 supuesto nunca hay que modificar nada dentro del mismo.
 
-El repositorio que hemos creado tiene un URL que se forma utlizando el 
+El repositorio que hemos creado tiene un URL que se forma utilizando el 
 protocolo `svn` con el host donde se encuentra el servicio de `svnserve` y el
 path completo al repositorio. En este caso: ``svn://localhost/opt/svn``.
 
 
-Configuracion de un repositorio
+Configuración de un repositorio
 -------------------------------
 
-Por el momento, el unico directorio que debe interesarnos dentro del
-repositorio es `conf`, pues ahi se guardan los archivos de configuracion. El
-archivo pricipal de configuracion de Subversion es `svnserve.conf` y contiene
+Por el momento, el único directorio que debe interesarnos dentro del
+repositorio es `conf`, pues ahí se guardan los archivos de configuración. El
+archivo principal de configuración de Subversion es `svnserve.conf` y contiene
 las siguientes declaraciones, omitiendo los comentarios:
 
 .. code-block:: ini
@@ -114,52 +114,52 @@ las siguientes declaraciones, omitiendo los comentarios:
     min-encryption = 0
     max-encryption = 256
 
-La seccion general define primero el tipo de acceso permitido al repositorio.
-Por default, los usuarios anonimos tiene permiso para leer y solo los
-autenticados pueden escribir. En la mayoria de los ambientes corporativos, es
-deseable que los usuarios anonimos no tengan ningun acceso, por lo que la
-declaracion correspondiente debe cambiarse por la siguiente:
+La sección general define primero el tipo de acceso permitido al repositorio.
+Por defecto, los usuarios anónimos tiene permiso para leer y solo los
+autenticados pueden escribir. En la mayoría de los ambientes corporativos, es
+deseable que los usuarios anónimos no tengan ningún acceso, por lo que la
+declaración correspondiente debe cambiarse por la siguiente:
 
 .. code-block:: ini
 
     anon-access = write
 
-Generalmente este es el unico cambio que tiene sentido en los valores de
+Generalmente este es el único cambio que tiene sentido en los valores de
 acceso.
 
 Las siguientes dos opciones, `password-db` y `authz-db` se refieren a nombres
 de archivos en el mismo directorio que contienen la base de datos de
-passwords y las definiciones de grupos y permisos por path, respectivamente.
+contraseñas y las definiciones de grupos y permisos por path, respectivamente.
 
-La opcion `realm` se utiliza para nombrar al respositorio y puede tener
+La opción `realm` se utiliza para nombrar al repositorio y puede tener
 cualquier valor deseado.
 
-Finalmente, la seccion sasl es para definir si se desea utilizar encripcion
-para los passwords. En caso de que el valor de `use-sasl` sea `true`, el
+Finalmente, la sección sasl es para definir si se desea utilizar cifrado
+para las contraseñas. En caso de que el valor de `use-sasl` sea `true`, el
 archivo definido arriba en `password-db` no se utiliza. El uso de SASL
 requiere tener instalado el soporte para SASL en el sistema.
 
-Base de datos de passwords
---------------------------
+Base de datos de contraseñas
+----------------------------
 
-El archivo `passwd` contiene la definicion de usuarios y passwords del
+El archivo `passwd` contiene la definición de usuarios y contraseñas del
 repositorio. Es simplemente un archivo de texto donde se define un usuario con
-su password en cada linea:
+su contraseña en cada linea:
 
 .. code-block:: ini
 
     [users]
     juan = secreto
 
-En el ejemplo, se define un usuario llamado `juan`, con el password
+En el ejemplo, se define un usuario llamado `juan`, con la contraseña
 `secreto`. Para agregar usuarios simplemente hay que poner una nueva linea
-con el nombre del usuario y el password, separados por el signo `=`.
+con el nombre del usuario y la contraseña, separados por el signo `=`.
 
 Definiciones de grupos y permisos por path
 ------------------------------------------
 
 El archivo `authz` contiene las definiciones de grupos y permisos por path.
-Por default contiene solamente ejemplos:
+Por defecto contiene solamente ejemplos:
 
 .. code-block:: ini
 
@@ -179,16 +179,16 @@ Por default contiene solamente ejemplos:
     # @harry_and_sally = rw
     # * = r
 
-Dado que el repositorio que recien hemos creado no tiene contenido aun, no
-podemos configurar otro path mas que la raiz. Para permitir al usuario `juan`
+Dado que el repositorio que recién hemos creado no tiene contenido aun, no
+podemos configurar otro path mas que la raíz. Para permitir al usuario `juan`
 que definimos arriba acceso de lectura y escritura al repositorio, basta
 agregar las siguientes lineas::
 
     [/]
     juan = rw
 
-Tambien es posible agregar grupos de usuarios en la seccion `groups`. Basta
-poner el nombre de grupo y a continuacion una lista de nombres de los que
+También es posible agregar grupos de usuarios en la sección `groups`. Basta
+poner el nombre de grupo y a continuación una lista de nombres de los que
 fueron definidos en el archivo `passwd`, separados por comas.
 
 Estructura del repositorio
@@ -196,10 +196,10 @@ Estructura del repositorio
 
 Una vez creado y configurado el repositorio es importante definir su
 estructura antes de comenzar a importar contenido. Independientemente de la
-organizacion de carpetas que se decida adoptar, en un repositorio de 
+organización de carpetas que se decida adoptar, en un repositorio de 
 Subversion se recomienda tener una carpeta principal por cada proyecto. A su
-vez, dentro de cada proyecto es usual utilizar una carpeta con la version
-oficial del codigo, llamada `trunk`, asi como carpetas para etiquetar
+vez, dentro de cada proyecto es usual utilizar una carpeta con la versión
+oficial del código, llamada `trunk`, así como carpetas para etiquetar
 versiones y para realizar pruebas, llamadas `tags` y `branches`
 respectivamente.
 
@@ -225,20 +225,20 @@ anterioridad, podemos usar una secuencia de comandos como la que sigue::
 
     Committed revision 1
 
-La primera vez que nos conectamos al repositorio, Subversion nos pedira el
-password para entrar, asumiendo que nuestro nombre de usuario es el mismo con
-el que estamos conectados en nuestro sistema. Si esto no es asi, basta
+La primera vez que nos conectamos al repositorio, Subversion nos pedirá la
+contraseña para entrar, asumiendo que nuestro nombre de usuario es el mismo con
+el que estamos conectados en nuestro sistema. Si esto no es así, basta
 presionar la tecla `enter` sin escribir nada y Subersion nos preguntara el
 nombre de usuario primero.
 
-Antes de hacer el import, Subversion abrira una ventana del editor default
+Antes de hacer el import, Subversion abrirá una ventana del editor defecto
 del sistema, para que escribamos un mensaje que explique el cambio. Esto debe
-hacerse en todas las operaciones de escritura al repositorio y es util ser
+hacerse en todas las operaciones de escritura al repositorio y es útil ser
 concisos pero al mismo tiempo informativos al poner el comentario.
 
-Notese que al final de la operacion, Subversion nos informa el numero de
-version que se aplica a estos cambios. Cada operacion donde se cambia el
-repositorio aumenta el numero de version por uno, independientemente de la
+Nótese que al final de la operación, Subversion nos informa el numero de
+versión que se aplica a estos cambios. Cada operación donde se cambia el
+repositorio aumenta el numero de versión por uno, independientemente de la
 cantidad de documentos modificados en ella.
 
 `ls` - Como listar los contenidos del repositorio
@@ -264,11 +264,11 @@ directamente, utilizando el comando `mkdir`::
     Committed revision 2
 
 En este caso, en lugar de esperar a que se nos muestre una ventana del
-editor, enviamos el mensaje junto con el comando utilizando la opcion `-m`.
+editor, enviamos el mensaje junto con el comando utilizando la opción `-m`.
 Esto podemos hacerlo con todos los comandos que escriben en el repositorio en
 lugar de utilizar el editor.
 
-Comandos basicos de Subversion
+Comandos básicos de Subversion
 ==============================
 
 Una vez que se tiene un proyecto o estructura en el repositorio, la manera de
@@ -281,7 +281,7 @@ agregado o han sido modificados mientras trabajos en ella.
 --------------------------------------------
 
 El proceso de obtener del repositorio una copia del proyecto se conoce como
-`checkout`. El parametro que se pasa al comando ademas del path en el 
+`checkout`. El parámetro que se pasa al comando además del path en el 
 repositorio que queremos copiar es el nombre de la carpeta donde colocaremos
 la copia::
 
@@ -292,11 +292,11 @@ la copia::
     Checked out revision 2
 
 Los archivos del proyecto quedan guardados en la carpeta `proyecto_ejemplo` y
-Subversion nos informa que la version que ha obtenido es la 2. Una vez que se
+Subversion nos informa que la versión que ha obtenido es la 2. Una vez que se
 ha realizado el checkout podemos cambiarnos al directorio del proyecto y
 comenzar a trabajar.
 
-`info` - Como obtener informacion basica del repositorio
+`info` - Como obtener información básica del repositorio
 --------------------------------------------------------
 
 Al cambiarnos dentro del directorio de la copia de trabajo, Subversion puede
@@ -318,8 +318,8 @@ el comando `info`::
     Last Changed Date: 2010-04-09 00:30:57 -0500 (Fri, 09 Apr 2010)
 
 El comando `info` nos devuelve entre otras cosas el URL de donde se extrajo el
-directorio donde estamos trabajando (`URL`), el URL de la raiz del repositorio
-(`Repository Root`), la revision o version al momento del checkout
+directorio donde estamos trabajando (`URL`), el URL de la raíz del repositorio
+(`Repository Root`), la revision o versión al momento del checkout
 (`Revision`), el autor del ultimo cambio (`Last Changed Author`) y la fecha de
 ese cambio (`Last Changed Date`).
 
@@ -338,8 +338,8 @@ cualquier momento podemos consultarlos::
 En el ejemplo anterior, creamos un archivo de texto con una sola linea,
 llamado `info.txt`. Una vez creado el archivo, utilizamos el comando `status`
 para mostrar como Subversion ha detectado que existe un nuevo archivo en el
-directorio. El signo de interrogacion que aparece antes del nombre, significa
-que el archivo en cuestion no esta bajo control de versiones y Subversion lo
+directorio. El signo de interrogación que aparece antes del nombre, significa
+que el archivo en cuestión no esta bajo control de versiones y Subversion lo
 desconoce.
 
 `add` - Como agregar documentos al proyecto
@@ -352,26 +352,26 @@ Para agregar ese archivo al proyecto, utilizamos el comando `add`::
 
 Subversion agrega el archivo `info.txt` a los que se encuentran bajo control
 de versiones, por lo que el status muestra ahora la letra `A` junto al nombre.
-Es importante hacer notar que este comando unicamente tiene efecto en nuestra
-copia de trabajo y no sube de inmediato el archivo al respositorio.
+Es importante hacer notar que este comando únicamente tiene efecto en nuestra
+copia de trabajo y no sube de inmediato el archivo al repositorio.
 
 El comando `add` no esta limitado a agregar un solo archivo, por supuesto. Es
-posible incluir como parametro cualquier cantidad de archivos. Si se agrega
-un directorio, todos los archivos contenidos en el seran agregados
+posible incluir como parámetro cualquier cantidad de archivos. Si se agrega
+un directorio, todos los archivos contenidos en el serán agregados
 recursivamente al proyecto.
 
 `commit` - Como guardar nuestros cambios en el repositorio
 ----------------------------------------------------------
 
 Podemos hacer todos los cambios que necesitemos en nuestra copia de trabajo,
-si bien se recomienda subir la informacion al menos al final de cada sesion de
+si bien se recomienda subir la información al menos al final de cada sesión de
 trabajo y de preferencia cada vez que terminemos una tarea especifica de
-edicion. La razon es que mientras mas tiempo pasemos sin subir los cambios,
-mas dificil puede resultar integrarlos con otros cambios al repositorio,
+edición. La razón es que mientras mas tiempo pasemos sin subir los cambios,
+mas difícil puede resultar integrarlos con otros cambios al repositorio,
 especialmente si muchas personas tienen acceso al mismo.
 
-A la operacion de subir los cambios al repositorio se le llama `commit`. Una
-vez que hemos terminado nuestra sesion de trabajo, utilizamos ese comando
+A la operación de subir los cambios al repositorio se le llama `commit`. Una
+vez que hemos terminado nuestra sesión de trabajo, utilizamos ese comando
 para guardarlos en el repositorio::
 
     $ svn commit -m 'se agrego archivo info'
@@ -380,7 +380,7 @@ para guardarlos en el repositorio::
     Committed revision 3.
 
 El comando `commit` guarda todos los cambios realizados desde que inicio la
-sesion. En caso de no querer guardar todo, es posible especificar los
+sesión. En caso de no querer guardar todo, es posible especificar los
 archivos que deben subirse.
 
 Ciclo de trabajo con Subversion
@@ -389,18 +389,18 @@ Ciclo de trabajo con Subversion
 Para utilizar Subversion eficientemente, la rutina de trabajo que utilizamos
 debe cambiar un poco para incluir los momentos en que actualizamos o subimos
 archivos. Ademas, a lo largo del tiempo, el repositorio ira evolucionando y
-encontraremos necesidad de revisar cambios anteoriores y, si trabajamos con
+encontraremos necesidad de revisar cambios anteriores y, si trabajamos con
 otras personas, de resolver conflictos.
 
-Subversion tiene varios comandos para apoyarnos en ese ciclo basico de
-trabajo. En esta seccion conoceremos algunos de los mas importantes.
+Subversion tiene varios comandos para apoyarnos en ese ciclo básico de
+trabajo. En esta sección conoceremos algunos de los mas importantes.
 
-`update` - Como trabajar con la version mas reciente
+`update` - Como trabajar con la versión mas reciente
 ----------------------------------------------------
 
-Lo primero que debemos hacer diariamente al iniciar una sesion de trabajo, es
+Lo primero que debemos hacer diariamente al iniciar una sesión de trabajo, es
 actualizar nuestra copia de trabajo del repositorio, para asegurarnos de
-trabajar con la version mas reciente de nuestros documentos. El comando para
+trabajar con la versión mas reciente de nuestros documentos. El comando para
 hacer esto se llama `update`::
 
     $ svn update
@@ -408,7 +408,7 @@ hacer esto se llama `update`::
 
 El comando actualiza los archivos que han cambiado, integrando al mismo
 tiempo nuestros cambios y nos muestra el status de lo que ha sido modificado,
-junto con la version a la que nos hemos actualizado. En el ejemplo anterior
+junto con la versión a la que nos hemos actualizado. En el ejemplo anterior
 no hubo cambios que integrar.
 
 Ahora supongamos que alguien ha agregado un titulo al archivo `info.txt` y ha
@@ -424,8 +424,8 @@ documento existente fue modificado.
 `log` - Como revisar la historia de un documento
 ------------------------------------------------
 
-Como el archivo `info.txt` ha sido modificado, quiza deseamos saber quien
-realizo la modificacion y cuando. Subversion ofrece el comando `log` para
+Como el archivo `info.txt` ha sido modificado, quizá deseamos saber quien
+realizo la modificación y cuando. Subversion ofrece el comando `log` para
 poder conocer la historia de commits de un archivo::
 
     $ svn log info.txt
@@ -439,14 +439,14 @@ poder conocer la historia de commits de un archivo::
     se agrego archivo info
     ------------------------------------------------------------------------
 
-El comando nos muestra revision, autor, fecha y comentario por cada cambio
+El comando nos muestra revisión, autor, fecha y comentario por cada cambio
 que se ha hecho al archivo. En este caso, podemos ver que el usuario `pedro`
 agrego un titulo a nuestro archivo.
 
-`diff` - Como revisar los cambios que hemos realizado en una sesion
+`diff` - Como revisar los cambios que hemos realizado en una sesión
 -------------------------------------------------------------------
 
-Si ademas de conocer al autor del cambio y su comentario queremos saber
+Si además de conocer al autor del cambio y su comentario queremos saber
 exactamente que texto ha cambiado en nuestro archivo, podemos utilizar el
 comando `diff` de Subversion para hacerlo::
 
@@ -460,24 +460,24 @@ comando `diff` de Subversion para hacerlo::
     +
      La capital de Francia es Tokio
 
-El comando `diff` acepta el parametro -r para especificar los numeros de
+El comando `diff` acepta el parámetro -r para especificar los números de
 versiones entre los que queremos conocer la diferencia. En este caso
 necesitamos conocer los cambios entre las revisiones 3 y 4, por lo que
-pasamos esos numeros. Se puede omitir el parametro -r y entonces Subversion
-nos dara las diferencias entre el estado actual del archivo y el estado que
+pasamos esos números. Se puede omitir el parámetro -r y entonces Subversion
+nos dará las diferencias entre el estado actual del archivo y el estado que
 tenia la ultima vez que actualizamos el repositorio.
 
-Lo que nos muestra el comando son las lineas que difieren entre una version y
-otra. Las lineas que tienen el simbolo `+` al lado izquierdo son las lineas
-que fueron agregadas entre la primera y la segunda version especificadas. En
-caso de que se hayan eliminado algunas lineas, estas tendran el simbolo `-` a
+Lo que nos muestra el comando son las lineas que difieren entre una versión y
+otra. Las lineas que tienen el símbolo `+` al lado izquierdo son las lineas
+que fueron agregadas entre la primera y la segunda versión especificadas. En
+caso de que se hayan eliminado algunas lineas, estas tendrán el símbolo `-` a
 su lado izquierdo.
 
 `blame` - Como saber quien modifico una parte especifica de un documento
 ------------------------------------------------------------------------
 
-Todavia podemos averiguar mas informacion sobre la historia de cambios del
-archivo. El comando `blame` nos muestra la ultima revision en que ha cambiado
+Todavía podemos averiguar mas información sobre la historia de cambios del
+archivo. El comando `blame` nos muestra la ultima revisión en que ha cambiado
 cada linea del archivo, junto con el nombre del autor del cambio::
 
     $ svn blame info.txt
@@ -488,20 +488,20 @@ cada linea del archivo, junto con el nombre del autor del cambio::
 `cat` - Como ver el contenido de versiones anteriores de un documento
 ---------------------------------------------------------------------
 
-Subversion nos permite tambien conocer el contenido completo de algun archivo
-en el momento en que determinada revision fue subida al repositorio. Por
-ejemplo, para ver el contenido del archivo `info.txt` en la revision 3::
+Subversion nos permite también conocer el contenido completo de algún archivo
+en el momento en que determinada revisión fue subida al repositorio. Por
+ejemplo, para ver el contenido del archivo `info.txt` en la revisión 3::
 
     $ svn cat -r3 info.txt
     La capital de Francia es Tokio
 
-`revert` - Como regresar un documento a su estado inicial en una sesion
+`revert` - Como regresar un documento a su estado inicial en una sesión
 -----------------------------------------------------------------------
 
-En ocasiones, despues de haber realizado algunos cambios en un archivo, nos
+En ocasiones, después de haber realizado algunos cambios en un archivo, nos
 damos cuenta de que no queremos conservarlos, sino que deseamos volver a la
-version original del mismo. El comando `revert` anula cualquier cambio
-realizado a un archivo en la sesion actual, regresandolo al estado que tenia
+versión original del mismo. El comando `revert` anula cualquier cambio
+realizado a un archivo en la sesión actual, volviendo al estado que tenia
 al momento de actualizar el repositorio por ultima vez::
 
     $ svn revert info.txt

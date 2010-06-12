@@ -1,11 +1,11 @@
-********
-Workflow
-********
+****************
+Flujo de trabajo
+****************
 
 .. contents :: :local:
 
-Esta es una introducción al workflow de Plone y explicación de las opciones
-básicas de configuración y creación de workflows.
+Esta es una introducción al flujo de trabajo de Plone y explicación de las opciones
+básicas de configuración y creación de flujo de trabajos.
 
 El editor de flujos de trabajo de Plone se encuentra dentro del ZMI de Zope,
 bajo portal_workflow. Permite definir el proceso que sigue un documento desde
@@ -26,7 +26,7 @@ cantidad de grupos puede cambiar en cualquier momento y es posible agregar o
 eliminar a un usuario de un grupo determinado utilizando la administración de
 Plone. En este sentido, los grupos son variables.
 
-Tanto a un grupo como a un usuario se le puden asignar roles. Los roles son
+Tanto a un grupo como a un usuario se le pueden asignar roles. Los roles son
 estáticos, en el sentido de que agregar nuevos roles es una actividad de
 desarrollo. Los permisos específicos de un usuario o grupo dependen de los
 roles que tenga asignados.
@@ -35,10 +35,10 @@ Para asignar correctamente los permisos de modificación en el flujo de trabajo
 es necesario conocer los roles del sistema, que son los siguientes:
 
 `Anonymous`
-    Este rol es asignado automáticamente por el motor de workflow a cualquier
+    Este rol es asignado automáticamente por el motor de flujo de trabajo a cualquier
     usuario no autenticado en el sistema.
 `Authenticated`
-    Este rol es asignado automáticamente por el motor de workflow a todos los
+    Este rol es asignado automáticamente por el motor de flujo de trabajo a todos los
     usuarios que han sido autenticados por el sistema. Sirve para distinguir
     entre usuarios conectados y anónimos, cuando no importa el rol en sí sino
     la autenticación.
@@ -48,7 +48,7 @@ es necesario conocer los roles del sistema, que son los siguientes:
     pueden crear formularios y editar flujos de trabajo.
 `Member`
     Este rol es para distinguir entre usuarios dados de alta en el servidor de
-    aplicaciones donde se ejecuta el motor de workflow y usuarios del motor de
+    aplicaciones donde se ejecuta el motor de flujo de trabajo y usuarios del motor de
     workflow en sí.
 `Owner`
     Este rol se asigna al creador de un formulario u otro tipo de contenido.
@@ -99,7 +99,7 @@ crear el documento y sirve como punto de partida para cualquier cambio a otro
 estado.
 
 Generalmente, el estado inicial representa la creación del documento. Para
-indicar al motor de workflow cuál es el estado inicial de un flujo específico,
+indicar al motor de flujo de trabajo cuál es el estado inicial de un flujo específico,
 basta seleccionarlo en la lista de estados que aparece en la parte de arriba a
 la izquierda del tab de estados y presionar el botón de estado inicial.
 
@@ -118,7 +118,7 @@ Este tipo de permisos se asigna en la ventana de propiedades por estado. Dicha
 ventana muestra una lista breve de permisos básicos del formulario cruzada con
 la lista de roles del sistema, para seleccionar uno por uno que permisos se
 aplican a cada rol. Por default, se toman los permisos establecidos en el
-motor de workflow, pero casi siempre es aconsejable modificarlos para tomar en
+motor de flujo de trabajo, pero casi siempre es aconsejable modificarlos para tomar en
 cuenta el estado y el flujo específicos que se estén trabajando.
 
 La lista de permisos especiales requiere mayor explicación:
@@ -135,9 +135,9 @@ La lista de permisos especiales requiere mayor explicación:
 `View`
     Permiso básico para poder ver un formulario.
 `Change portal events`
-    Este permiso no se utiliza en el motor de workflow.
+    Este permiso no se utiliza en el motor de flujo de trabajo.
 
-En el motor de workflow los permisos que más se utilizarán son los de ver y
+En el motor de flujo de trabajo los permisos que más se utilizarán son los de ver y
 modificar contenido. Por ejemplo, a la hora de crear el formulario, el dueño
 del mismo debe tener el permiso de modificar contenido. Tal vez un manager
 también pueda tener este permiso, pero sería recomendable que los demás roles
@@ -161,7 +161,7 @@ todas las transiciones.
 
 Primero que nada, es muy recomendable colocar un título y descripción
 adecuados para la transición, lo que no requiere de mayor explicación. Las
-demás propiedadades de la transición, sin embargo, sí la requieren y se
+demás propiedades de la transición, sin embargo, sí la requieren y se
 discuten a continuación.
 
 `Activación de la transición`
@@ -183,8 +183,8 @@ discuten a continuación.
     ejecución es lo que ocasiona que una transición determinada aparezca o no
     en el menú de opciones de un usuario específico. La protección tiene
     cuatro partes: permisos, roles, grupos y expresión. Cada una de las partes
-    puede tener un valor o estar vacía. En caso de que todas esten vacías
-    todos los usuarios del motor de workflow podrán ejecutar la transición así
+    puede tener un valor o estar vacía. En caso de que todas estén vacías
+    todos los usuarios del motor de flujo de trabajo podrán ejecutar la transición así
     definida.
 
     En el campo de permisos se pude incluir uno o más de los permisos

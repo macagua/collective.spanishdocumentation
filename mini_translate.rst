@@ -7,8 +7,8 @@ traducir automáticamente cualquier texto desde uno de los idiomas disponibles
 a cualquier otro de ellos. Agregaremos esta funcionalidad a cualquier tipo
 de contenido que tenga un campo de texto específico.
 
-Prerequisitos
-=============
+Requisitos previos
+==================
 
 Para agilizar el acceso al servicio de traducción, utilizaremos una librería
 de Python que envuelve el API de Google. Necesitamos agregar lo siguiente en

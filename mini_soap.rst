@@ -10,12 +10,12 @@ Crearemos una vista de Plone que muestre una forma para capturar dos
 direcciones de USA y muestre los pasos para llegar de una a otra al presionar
 el botón de enviar.
 
-Prerequisitos
-=============
+Requisitos previos
+==================
 
 Una librería de Python que permite conectarse a servicios web de un manera
 sencilla se llama *suds* y esta disponible en `PYPI <http://pypi.python.org/pypi/suds>`_.
-Utilizaremos esta librería para nuestra mini aplicación. Si utilizamos Plone
+Utilizaremos esta librería para nuestra pequeña aplicación. Si utilizamos Plone
 con buildout (como debe ser), simplemente debemos agregar *suds* a la
 sección de *eggs* del buildout.
 
@@ -152,7 +152,7 @@ fácil. Para utilizar otro servicio simplemente hay que cambiar el URL y
 conocer la especificación para saber qué clase de servicios existen y qué
 valores regresan.
 
-Plone también puede utlizarse para publicar servicios, utilizando z3c.soap y
+Plone también puede utilizarse para publicar servicios, utilizando z3c.soap y
 Zolera. Para mayor información:
 
  * `z3c.soap <http://pypi.python.org/pypi/z3c.soap>`_

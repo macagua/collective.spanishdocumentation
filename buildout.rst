@@ -1,6 +1,6 @@
-***************
-Qué es buildout
-***************
+*****************
+¿Qué es buildout?
+*****************
 
 .. contents :: :local:
 
@@ -40,10 +40,10 @@ Algunos términos importantes
     Un script de línea de comando que permite instalar a través de la red
     paquetes del PYPI.
 
-Prerequisitos
--------------
+Requisitos previos
+------------------
 
-Existen instrucciones detalladas para la instalacion de requisitos, pero en
+Existen instrucciones detalladas para la instalación de requisitos, pero en
 general se necesita lo siguiente:
 
 * Python 2.4.x.
@@ -137,7 +137,7 @@ Directorios creados
 Ejemplo
 -------
 
-Un ejemplo de un buildout funcional se muestra a continuacion:
+Un ejemplo de un buildout funcional se muestra a continuación:
 
 .. code-block:: ini
 
@@ -166,7 +166,7 @@ Un ejemplo de un buildout funcional se muestra a continuacion:
     # e.g.: develop = src/my.package
     develop =
 
-    # Esta receta instala zope 2. Para usar la misma url que requier plone se
+    # Esta receta instala zope 2. Para usar la misma url que requiere plone se
     # utiliza ${plone:zope2-url}. Es posible referirse con esta sintaxis a
     # cualquier variable de una de las partes, así: ${parte:variable}
     [zope2]
@@ -507,8 +507,8 @@ path de ejecución están todos los paquetes utilizados en el buildout:
     output = ${buildout:directory}/devel/server.ini
 
 Esta configuración de construcción se integra después en una configuración
-base del sitio. La base contiene la mayoria de los servicios y configuraciones
-compartidas entre los demas buildouts. El buildout contiene los siguientes
+base del sitio. La base contiene la mayoría de los servicios y configuraciones
+compartidas entre los demás buildouts. El buildout contiene los siguientes
 servidores:
 
 * `main`
@@ -531,13 +531,13 @@ servidores:
     un cliente ZEO que no forma parte del cluster y esta siempre en modo de
     desarrollo
 * `zeoserver`
-    un servidor ZEO para la base de datos de Zope comun
+    un servidor ZEO para la base de datos de Zope común
 
-Se incluye la configuracion para rotacion de logs con logrotate, excepto para
-Varnish. La configuracion queda en el directorio production/logrotate.conf y
-debe integrarse a la configuracion general de logrotate usando un symlink.
+Se incluye la configuración para rotación de logs con logrotate, excepto para
+Varnish. La configuración queda en el directorio production/logrotate.conf y
+debe integrarse a la configuración general de logrotate usando un symlink.
 
-En la configuracion de transformacion de Nginx, solo se incluye un servidor
+En la configuración de transformación de Nginx, solo se incluye un servidor
 Plone, pero es posible agregar mas si es necesario.
 
 Para controlar todos los servicios, se incluye Supervisor::
@@ -547,8 +547,8 @@ Para controlar todos los servicios, se incluye Supervisor::
 En http://localhost:9001 puede consultarse el estado de los servicios. Desde
 ahí es posible iniciar o detener cualquiera de ellos.
 
-La configuracion esta contenida enteramente en este buildout, con patrones
-para los archivos de configuracion en production/\*.template. Los nombres de
+La configuración esta contenida enteramente en este buildout, con patrones
+para los archivos de configuración en production/\*.template. Los nombres de
 servidores, puertos y otras opciones comunes pueden cambiarse en las secciones
 que se encuentran al inicio de este archivo. Estos son los valores que se
 utilizan en la sección de construcción definida arriba:
@@ -558,9 +558,9 @@ utilizan en la sección de construcción definida arriba:
     [buildout]
     extensions = buildout.dumppickedversions
     # Copiar las versiones mas recientes de los paquetes utilizados a un archivo,
-    # para poder "congelarlas" despues en produccion.
+    # para poder "congelarlas" después en producción.
     dump-picked-versions-file = versions/known-good-versions.cfg
-    # Extender la configuracion de versiones para obtener la version de Plone
+    # Extender la configuración de versiones para obtener la versión de Plone
     # requerida, desde http://dist.plone.org/release/<version>/versions.cfg
     extends =
        build.cfg
@@ -611,7 +611,7 @@ utilizan en la sección de construcción definida arriba:
     zope = ${versions:zope2-url}
     varnish = http://downloads.sourceforge.net/varnish/varnish-2.0.4.tar.gz
     nginx = http://sysoev.ru/nginx/nginx-0.7.43.tar.gz
-    # Configuracion basica de los clientes ZEO
+    # configuración básica de los clientes ZEO
     [instance-settings]
     eggs =
     #   mynamespace.policy
@@ -636,7 +636,7 @@ utilizan en la sección de construcción definida arriba:
     blob-storage = ${zeoserver:zeo-var}/blobstorage
     zeo-address = ${zeoserver:zeo-address}
     effective-user = ${users:zope}
-    # Configuracion basica de supervisor
+    # configuración básica de supervisor
     [supervisor-settings]
     user = admin
     password = admin
@@ -683,21 +683,21 @@ utilizan en la sección de construcción definida arriba:
     balancer = www
     zope = www
     supervisor = www
-    # Configuracion del tema
+    # configuración del tema
     [theme]
     root = ${buildout:directory}/theme
     theme = ${theme:root}/theme.html
     rules = ${theme:root}/rules/default.xml
     absolute-prefix = /static
     output-xslt = ${theme:root}/theme.xsl
-    # Configuracion de compilacion
+    # configuración de compilación
     [build]
     cpu = i686
     target = linux26
-    # Creacion de scripts para backup
+    # Creación de scripts para backup
     [backup]
     recipe = collective.recipe.backup
-    # Compresion semanal de la base de datos
+    # Compresión semanal de la base de datos
     [cron-pack]
     recipe = z3c.recipe.usercrontab
     times = 0 2 1 * *

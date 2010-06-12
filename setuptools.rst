@@ -16,7 +16,7 @@ funcionar. Entre sus características principales están:
   utilizando HTTP, FTP, Subversion o SourceForge. 
 * Permite crear Python Eggs, que son paquetes de Python empaquetados en un
   sólo archivo para su distribución.
-* Inluye archivos de configuración y todos los archivos que forman parte del
+* Incluye archivos de configuración y todos los archivos que forman parte del
   directorio de trabajo, sin necesidad de listarlos individualmente o crear
   archivos de manifiesto.
 * La instalación es muy sencilla, solo se necesita bajar de internet el

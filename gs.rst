@@ -10,47 +10,47 @@ Introduccion
 GenericSetup es un mecanismo basado en XML para importar y exportar
 configuraciones de sitios Plone.
 
-Se utiliza principalmente para modificar la configuracion de un sitio al
+Se utiliza principalmente para modificar la configuración de un sitio al
 momento de instalar un producto. Entre otras cosas permite:
 
 * Registrar CSS
 * Registrar Javascript
 * Modificar los valores de diversas propiedades del sitio
 * Registrar portlets
-* Registrar indices de busqueda del portal_catalog
+* Registrar índices de búsqueda del portal_catalog
 * Y mas...
 
-Usualmente los archivos de configuracion para GenericSetup se guardan bajo la
+Usualmente los archivos de configuración para GenericSetup se guardan bajo la
 carpeta *profiles/default* dentro del producto.
 
-Toda la configuracion que puede realizarse a traves del panel de control de
+Toda la configuración que puede realizarse a través del panel de control de
 Plone y del ZMI, como por ejemplo el orden de los viewlets elegido en
 /@@manage-viewlets, puede guardarse y ser reutilizada mediante un perfil de
 GenericSetup.
 
 No es necesario editar manualmente los archivos XML del perfil de
-GenericSetup, pues siempre es posible modificar la configuracion de Plone
-desde el sitio y despues exportarla completa o en partes a XML. La herramienta
+GenericSetup, pues siempre es posible modificar la configuración de Plone
+desde el sitio y después exportarla completa o en partes a XML. La herramienta
 *portal_setup* en el ZMI permite exportar, importar y generar copias de las
 configuraciones.
 
-Modificar los archivos de configuracion en XML de un producto no ocasiona
+Modificar los archivos de configuración en XML de un producto no ocasiona
 cambios inmediatos en el sitio de Plone, aun reiniciando el servidor. La
-configuracion `real` del portal se almacena en la ZODB, por lo que es
+configuración `real` del portal se almacena en la ZODB, por lo que es
 necesario reimportar los perfiles desde portal_setup o reinstalar el
-producto en cuestion desde el panel de control de Plone. Solo en ese momento
-sera modificada la configuracion.
+producto en cuestión desde el panel de control de Plone. Solo en ese momento
+sera modificada la configuración.
 
 .. note::
 
     Diferencias entre ZCML y GenericSetup
 
-    Cambios realizados mediante configuracion de ZCML afectan el codigo
+    Cambios realizados mediante configuración de ZCML afectan el código
     Python de todos los sitios presentes en una instancia de Zope, mientras
     que los cambios en perfiles de GenericSetup solo afectan el sitio de
     Plone en que se hacen. Al importar un perfil de GenericSetup, se
     realizan cambios directamente en la base de datos del sitio, mientras que
-    al cargar archivos de configuracion de ZCML solo se modifica el codigo
+    al cargar archivos de configuración de ZCML solo se modifica el código
     cargado en memoria.
 
 * `GenericSetup tutorial <http://plone.org/documentation/tutorial/genericsetup>`_
@@ -60,13 +60,13 @@ sera modificada la configuracion.
 * `Source code <http://svn.zope.org/Products.GenericSetup/trunk/Products/GenericSetup/README.txt?rev=87436&view=auto>`_.
 
 
-Creacion de un perfil
+Creación de un perfil
 ---------------------
 
 Un perfil se declara utilizando la directriz <genericsetup> en el archivo
 configure.zcml del producto. El instalador de Plone importara la
-configuracion almacenada en el perfil llamado "default", pero es posible
-declarar otros perfiles con diferentes nombres e importalos por separado, por
+configuración almacenada en el perfil llamado "default", pero es posible
+declarar otros perfiles con diferentes nombres e importarlos por separado, por
 ejemplo para ejecutar pruebas.
 
 Los archivos XML del perfil se colocan en el directorio profiles/default
@@ -89,10 +89,10 @@ dentro del producto.
 
 	</configure>
 
-Tambien es posible registrar un "Import various step" que ejecute codigo
+También es posible registrar un "Import various step" que ejecute código
 Python cada vez que se instale el perfil de un producto.
 
-Mas informacion sobre ejecutar steps:
+Mas información sobre ejecutar steps:
 
 * http://n2.nabble.com/indexing-of-content-created-by-Generic-Setup-tp4454703p4454703.html
 
@@ -132,6 +132,6 @@ GenericSetup permite declarar como dependencias los perfiles de otros
 productos, de manera que estos sean instalados antes del perfil de nuestro
 producto.
 
-* `Mas informacion sobre dependencias <http://plone.org/products/plone/roadmap/195/>`_.
+* `Mas información sobre dependencias <http://plone.org/products/plone/roadmap/195/>`_.
 
 

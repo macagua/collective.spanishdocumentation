@@ -6,18 +6,18 @@ En este ejemplo utilizaremos un tipo de contenido de Plone para capturar
 información y crearemos una vista para el tipo donde se muestre una gráfica
 de pastel que refleje los datos capturados.
 
-Prerequisitos
-=============
+Requisitos previos
+==================
 
 Para definir el tipo de contenido, agregaremos dos productos al buildout, que
-nos permitiran utilizar una tabla para capturar la información y seleccionar
+nos permitirán utilizar una tabla para capturar la información y seleccionar
 el color de la gráfica::
 
     Products.SmartColorWidget
     Products.DataGridField<=1.7
 
 Google ofrece una serie de APIs muy útiles para el desarrollo web. En este
-caso, utilizaremos el servicio de Charts. No se requiere instalr nada en
+caso, utilizaremos el servicio de Charts. No se requiere instalar nada en
 Plone para usarlo.
 
 Tipo de contenido

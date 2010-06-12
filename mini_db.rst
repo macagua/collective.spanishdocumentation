@@ -5,8 +5,8 @@ Presentar información de una base de datos relacional
 Demostración de como conectarse a una base de datos relacional desde una
 vista de Plone, utilizando SQLAlchemy y SQLite.
 
-Prerequisitos
-=============
+Requisitos previos
+==================
 
 Se necesita tener instalada una base de datos relacional, incluyendo las
 librerías de desarrollo. En este ejemplo se utiliza SQLite. Necesitamos

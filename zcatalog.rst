@@ -10,7 +10,7 @@ Uso del ZCatalog de Zope:
 * Todos los objetos de Zope son potencialmente catalogables.
 * Ofrece varios índices para diversos tipos de búsqueda.
 * Plone lo utiliza a fondo para manejar el contenido.
-* Hacer una busqueda es sencillo: resultados = catalog(portal_type='Document')
+* Hacer una búsqueda es sencillo: resultados = catalog(portal_type='Document')
 
 Tipos de índices
 ================
@@ -29,7 +29,7 @@ Tipos de índices
     Para hacer búsquedas por path absoluto de los objetos.
 
 `TopicIndex`
-    Índice especial para buscar en colecciones prefiltradas.
+    Índice especial para buscar en colecciones previamente filtradas.
 
 `DateIndex`
     Parecido a FieldIndex, pero especializado para buscar fechas.
@@ -93,7 +93,7 @@ pueden estar incluídos los siguientes campos:
 Ordenamiento
 ============
 
-Por default, solo el ZCTextIndex regresa los resultados en algún orden
+Por defecto, solo el ZCTextIndex regresa los resultados en algún orden
 específico, por relevancia. Para los demás tipos de índices es necesario
 especificar si se desea un orden, utilizando los siguientes parámetros en la
 búsqueda:
