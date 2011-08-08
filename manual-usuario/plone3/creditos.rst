@@ -37,6 +37,8 @@ Créditos
     
     * Leonardo J. Caballero G. (leonardocaballero at gmail dot com).
     
+    * José Subero (arawako at gmail dot com).
+    
     * Victor Terán (vteran93 at yahoo dot es).
     
     * Luis Sumoza (lsumoza at gmail dot com).
