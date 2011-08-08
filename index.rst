@@ -68,6 +68,21 @@ Plone que se quiera emprender.
    setuptools
    buildout
 
+Uso de Plone
+------------
+
+Plone es un Sistema de gestión de contenidos muy completo y útil,
+por lo que es muy importante conocerlo para poder tomar máxima ventaja de
+estos CMS.  
+
+En esta sección tenemos el tutorial traducción oficial a los manuales de usuario 
+y administración de elementos de Plone.
+
+.. toctree::
+   :maxdepth: 2
+
+   Manual de Usuario de Plone 3 <manual-usuario/plone3/index>
+
 Tecnologías de Zope
 -------------------
 
