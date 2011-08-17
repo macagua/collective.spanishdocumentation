@@ -53,6 +53,18 @@ popularidad de sistemas distribuidos como Git y Mercurial ha aumentado.
 
    subversion
 
+Instalación de Plone
+--------------------
+
+Este sección se dedica a recopilar las diversas formas de instalación de Plone 
+en diversos Sistemas operativos como Windows, OS X, Linux, BSD (distribución de 
+software Berkeley) y prácticamente cualquier otra plataforma.
+
+.. toctree::
+   :maxdepth: 2
+
+   instalando_plone
+
 Buildout y setuptools
 ---------------------
 
