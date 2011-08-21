@@ -67,24 +67,26 @@ continuación, con dos sub-carpetas dentro de la carpeta Mariposas:
 .. image:: images/folders_within_folders.png
 
 
-¿Que ocurre tras bambalinas?
+¿Qué ocurre tras bambalinas?
 ============================
 
-Es probable que el lector se pregunte como funciona todo. Un sitio Web Plone
-típico existe como una instalación de Plone instalada en un servidor web. El
-servidor web puede estar en cualquier sitio, usualmente en una compañía de
-hospedaje con una "pila" de computadoras dedicadas a realizar la tarea:
+Es probable que el lector se pregunte cómo funciona todo. Un sitio Web
+Plone típico existe como una instalación de Plone alojada en un
+servidor web. El servidor web puede estar en cualquier sitio;
+usualmente se encuentra en una compañía de hospedaje con una "pila" de
+computadoras dedicadas a realizar la tarea:
 
 .. image:: images/server_rack.png
 
 
-El diagrama muestra los cables que conectan los servidores individuales a
-internet, a través de rápidas conexiones de red. Su sitio Plone es solo un
-software y almacenamiento de base de datos instalados en uno de los
-servidores individuales. Cuando introduce texto o hace clic, la computadora
-del usuario envía y recibe datos a través de cables de red y canales de
-comunicación en internet que interactúan con la instalación de Plone en el
-servidor.
+El diagrama muestra los cables que conectan los servidores
+individuales a internet, a través de rápidas conexiones de red. Su
+sitio Plone consiste en el software y el almacenamiento de base de
+datos instalados en uno de los servidores individuales. Cuando
+introduce texto o hace clic en algún lugar del sitio, la computadora
+del usuario envía y recibe datos a través de cables de red y canales
+de comunicación en internet que interactúan con la instalación de
+Plone en el servidor.
 
 Simplifiquemos el diagrama que muestra como se interactúa con Plone:
 
@@ -92,7 +94,7 @@ Simplifiquemos el diagrama que muestra como se interactúa con Plone:
 
 
 Usted usa su navegador web; Mozilla Firefox, Safari, Internet Explorer, etc.
--- para ver y editar su sitio web Plone, y este guarda los cambios realizados
+-- para ver y editar su sitio web Plone, y éste guarda los cambios realizados
 en su sistema de almacenamiento de bases de datos.
 
 Por ejemplo, imagine que su sitio web Plone de Mariposas esta ubicado en el
