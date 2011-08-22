@@ -23,7 +23,7 @@ equivocadamente una mariposa swallowtail (mariposa papilionido) -- la carpeta
 Eastern Tiger Swallowtail mostrada abajo --, esta carpeta puede ser movida de
 una manera simple usando una operación de *cortar*/*pegar*:
 
-.. image:: plone-3-user-manual_archivos/copy_of_operationcut.png
+.. image:: images/copy_of_operationcut.png
 
 
 Note que se ha seleccionado la carpeta Eastern Tiger Swallowtail, y que se
@@ -34,13 +34,13 @@ web. Sin embargo, la carpeta Eastern Tiger Swallowtail no desaparece
 inmediatamente, esperando la operación de pegar. El botón *pegar* esta
 resaltado para mostrar que las operaciones cortar/pegar están en proceso:
 
- .. image:: plone-3-user-manual_archivos/operationpaste.png
+ .. image:: images/operationpaste.png
 
 
 El botón *pegar* esta activo. El próximo paso es navegar hasta la carpeta de
 destino, en este caso la carpeta Swallowtails :
 
-.. image:: plone-3-user-manual_archivos/copy_of_operationpaste2.png
+.. image:: images/copy_of_operationpaste2.png
 
 
 
@@ -48,7 +48,7 @@ destino, en este caso la carpeta Swallowtails :
 Después de hacer clic en la carpeta Swallowtails, allí se sigue mostrando el
 botón *pegar*, porque la operación de pegado aun no se ha completado:
 
- .. image:: plone-3-user-manual_archivos/operationpaste3.png
+ .. image:: images/operationpaste3.png
 
 
  Por ultimo, al hacer clic en el botón *pegar* se agrega la carpeta Eastern
@@ -58,7 +58,7 @@ botón *pegar*, porque la operación de pegado aun no se ha completado:
 
 
 
-.. image:: plone-3-user-manual_archivos/operationpaste4.png
+.. image:: images/operationpaste4.png
 
 
 El botón *pegar* permanece activo porque se puede continuar pegando la
@@ -74,9 +74,10 @@ Una operación de *copiar*/*pegar* es idéntica a la operación de
 *cortar*/*pegar*, con la excepción de que no es eliminado el contenido de la
 carpeta original. Funciona como es esperado que funcione.
 
-`.. image:: plone-3-user-manual_archivos/lights-camera-action.png
+.. image:: images/lights-camera-action.png
     :alt: lights-camera-action.png
-`_ Ver un vídeo sobre como `ejecutar esas operaciones`_ en Plone 2.
+
+Ver un vídeo sobre como `ejecutar esas operaciones`_ en Plone 2.
 
 
 3.2. Editando Contenido
@@ -106,7 +107,7 @@ contenido en Plone lo mas simple posible.
 Acá vemos el panel *Editar* para una carpeta, en este caso, una llamada
 "Butterflies":
 
-.. image:: plone-3-user-manual_archivos/edititemfolder.png
+.. image:: images/edititemfolder.png
 
 
 Eso es todo. Cambie lo que desee y guarde, y el contenido sera actualizado en
@@ -125,7 +126,7 @@ puede hacerse navegando a una imagen individual y haciendo clic en la pestaña
 *Editar*. Haciendo clic en la pestaña *Editar* para la imagen, se vera el
 siguiente panel de *Edición de Imagen*:
 
-.. image:: plone-3-user-manual_archivos/editimage.png
+.. image:: images/editimage.png
 
 
 Aquí, una imagen llamada "Eastern Tiger Swallowtail Butterfly" esta siendo
@@ -139,7 +140,7 @@ Note también la pestaña *Transformar* en la parte superior, que aparece
 específicamente en las imágenes, ofreciendo varias alternativas de
 transformación de la imagen:
 
-.. image:: plone-3-user-manual_archivos/transformimage.png
+.. image:: images/transformimage.png
 
 
 De esta manera editar una imagen es un poco distinto que crearla desde un
@@ -170,19 +171,19 @@ rodeara el texto editable. En la siguiente captura de pantalla, el cursor del
 ratón *NO* esta sobre texto editable, así que puede ver el titulo y cuerpo
 del texto como lo haría normalmente:
 
-.. image:: plone-3-user-manual_archivos/inlineeditingoff.png
+.. image:: images/inlineeditingoff.png
 
 
 Pero cuando el ratón se mueve sobre el cuerpo del texto, una caja remarca el
 cuerpo del texto como editable:
 
-.. image:: plone-3-user-manual_archivos/inlineeditingbodytext1.png
+.. image:: images/inlineeditingbodytext1.png
 
 
 Al hacer clic dentro del cuerpo del texto después que aparece la caja de
 edición, aparece el editor visual:
 
-.. image:: plone-3-user-manual_archivos/inlineeditingbodytext2.png
+.. image:: images/inlineeditingbodytext2.png
 
 
 Al cambiar o agregar texto y guardar devuelve la vista normal. Esto es
@@ -193,13 +194,13 @@ se cargue completamente la pagina con los paneles de edición.
 Si se mueve el mouse sobre el titulo, que también es editable, aparece una
 caja de edición rápida:
 
-.. image:: plone-3-user-manual_archivos/inlineeditingtitle1.png
+.. image:: images/inlineeditingtitle1.png
 
 
 Al hacer clic en el titulo después que aparece la caja de edición, se activa
 un simple campo de edición con los botones Guardar y Cancelar:
 
-.. image:: plone-3-user-manual_archivos/inlineeditingtitle2.png
+.. image:: images/inlineeditingtitle2.png
 
 
 Cambie el titulo y guarde. El beneficio en rapidez de la edición rápida se
@@ -225,7 +226,7 @@ superiores del sitio web, o el menú de navegación, que esta a la izquierda en
 el diseño por defecto de su sitio web Plone. Cuando hace clic en la carpeta
 "Skippers", se muestra el panel de vista estándar, llamado "vista estándar":
 
-.. image:: plone-3-user-manual_archivos/folderviewstandard.png
+.. image:: images/folderviewstandard.png
 
 
 La pestaña *Visualizar* es como se muestran los contenidos de un elemento
@@ -236,23 +237,23 @@ esta contiene, en una de todas las formas de presentación que existen,
 seleccionadas mediante el menú desplegable de selección *mostrar*. La vista
 por defecto se llama *vista estándar*:
 
-.. image:: plone-3-user-manual_archivos/folderdisplaymenu.png
+.. image:: images/folderdisplaymenu.png
 
 
 Y esta es una *vista resumen*:
 
- .. image:: plone-3-user-manual_archivos/folderviewsummary.png
+ .. image:: images/folderviewsummary.png
 
 
 Y una *vista tabular*:
 
- .. image:: plone-3-user-manual_archivos/folderviewtabular.png
+ .. image:: images/folderviewtabular.png
 
 
 Y una *vista en miniatura*, la que se usa principalmente para fotografías,
 pero que también funciona para el contenido normal:
 
- .. image:: plone-3-user-manual_archivos/folderviewthumbnail.png
+ .. image:: images/folderviewthumbnail.png
 
 
 Hacer un álbum de fotos es muy simple. Tan solo agregue las fotografías
@@ -290,10 +291,10 @@ carpetas, desde actuar como un simple contenedor a actuar como un enlace
 directo a contenido. En lugar de eso, usualmente puede lograr lo que quiera
 únicamente utilizando Colecciones, las cuales se describirán mas adelante.
 
-`.. image:: plone-3-user-manual_archivos/lights-camera-action.png
+.. image:: images/lights-camera-action.png
     :alt: lights-camera-action.png
-`_Ver un vídeo sobre como `definir la pagina en la vista mostrar`_ en Plone
-2.
+
+Ver un vídeo sobre como `definir la pagina en la vista mostrar`_ en Plone 2.
 
 Lo próximo sera movernos a la pestaña *Contenidos* para ver las funciones
 importantes para accesar a los contenidos en una lista de contenido de
@@ -314,7 +315,7 @@ respectivamente y el "Finder" en Mac OS X, con una funcionalidad similar.
 Haciendo clic en la pestaña *Contenidos* para una carpeta, como la siguiente
 carpeta Skippers, muestra el panel de la pestaña *Contenidos*:
 
-.. image:: plone-3-user-manual_archivos/foldercontents.png
+.. image:: images/foldercontents.png
 
 
 El panel de la pestaña *Contenidos* es inmediatamente reconocido observando
@@ -338,7 +339,7 @@ la mayoría de los sitios Web Plone.  Pero la operación renombrar debe mostrar
 el *nombre corto* así como el *titulo*, por que usualmente se desea cambiar
 ambos, si se cambia alguno. Considere el siguiente ejemplo:
 
-.. image:: plone-3-user-manual_archivos/renameitem.png
+.. image:: images/renameitem.png
 
 
 Si usted quisiera cambiar el titulo a "Long-tailed Skippers," usted podría
@@ -352,9 +353,9 @@ corto. También vea la pagina "`¿Que hay en un nombre Web?`_" para una
 descripción de como Plone manipula las direcciones Web y el nombre corto. El
 siguiente vídeo también incluye una ilustración de la operación de renombrar:
 
-`.. image:: plone-3-user-manual_archivos/lights-camera-action.png
+.. image:: images/lights-camera-action.png
     :alt: lights-camera-action.png
-`_Ver un vídeo que incluye `renombrar un elemento`_ en Plone 2.
+Ver un vídeo que incluye `renombrar un elemento`_ en Plone 2.
 
 La operación *eliminar* es sencilla. Haga clic para seleccionar uno o mas
 elementos en sus casillas de comprobación, y luego haga clic en el botón
@@ -374,7 +375,7 @@ Presione *Shift* y haga *clic* para seleccionar un rango de elementos de
 trabajo. Esto podría ser muy útil para una carpeta con una docena o mas
 elementos, y podría ser indispensable para carpetas con cientos de elementos.
 
-.. image:: plone-3-user-manual_archivos/advancedstatepanel.html
+.. image:: images/advancedstatepanel.html
 
 
 Adicionalmente a estas operaciones de acción individual, el reordenar es una
@@ -395,26 +396,26 @@ opción deseada no siempre es alfabética, pero en este ejemplo se asume eso. A
 continuación puede ver que las sub-carpetas de mariposa Skipper no están en
 orden alfabético:
 
-.. image:: plone-3-user-manual_archivos/copy_of_foldercontents.png
+.. image:: images/copy_of_foldercontents.png
 
 
 Para mover el elemento del tope nombrado "Spread-winged Skippers" al final de
 la lista, uno podría hacer clic en la columna Orden a la derecha (que
 contiene dos signos de dos puntos) y arrastre la fila a la posición deseada:
 
-.. image:: plone-3-user-manual_archivos/copy_of_foldercontentsreorder.png
+.. image:: images/copy_of_foldercontentsreorder.png
 
 
 Arrastrar y soltar se hace presionando y manteniendo el botón del ratón hasta
 donde quiera mover el elemento. El elemento que se esta moviendo se torna
 amarillo mientras que este en esta acción:
 
-.. image:: plone-3-user-manual_archivos/foldercontentsdrag.png
+.. image:: images/foldercontentsdrag.png
 
 
 Cuando el botón de ratón es liberado, el elemento queda donde fue soltado:
 
-.. image:: plone-3-user-manual_archivos/foldercontentsdrop.png
+.. image:: images/foldercontentsdrop.png
 
 
 
@@ -429,14 +430,14 @@ La pestaña *Configuración* se encuentra haciendo clic en la pestaña *Editar*
 para la carpeta. Allí hay un casilla de comprobación para "Habilitar la
 navegación siguiente/anterior" para los elementos contenidos en la carpeta:
 
-.. image:: plone-3-user-manual_archivos/previousnextenabling.png
+.. image:: images/previousnextenabling.png
 
 
 Una ves habilitado, tan pronto elementos de contenidos son agregados en la
 carpeta, los enlaces siguiente/anterior automáticamente aparecerán como ha
 sido requerido:
 
-.. image:: plone-3-user-manual_archivos/previousnextexample.png
+.. image:: images/previousnextexample.png
 
 
 
@@ -458,7 +459,7 @@ un elemento, por una variedad de razones. En el ejemplo de la mariposa
 swallowtail agregada por error a la carpeta Skippers, en vez de cortar y
 pegar en algún lugar, simplemente podría ser eliminada:
 
-.. image:: plone-3-user-manual_archivos/operationdelete.png
+.. image:: images/operationdelete.png
 
 
 En el ejemplo que se muestra arriba, la carpeta *Eastern Tiger Swallowtail*
@@ -485,12 +486,8 @@ edición del documento "Widget Installation". Cuando Jane Smythe (quien tiene
 permisos para editar este documento) se dirige a la pestaña ver del
 documento, ella observara lo siguiente:
 
-
-
-.. image:: plone-3-user-manual_archivos/locking01.png
-    :alt: locking01.png
-
-
+.. image:: images/locking01.png
+  :alt: locking01.png
 
 
 Una ves que George allá finalizado la edición del documento y haga clic en el
@@ -515,8 +512,6 @@ como Safari.
 Tal vez usted quiera deshabilitar los bloqueos, para esto dirijase al panel
 de control de Plone (Configuración del Sitio -> Sitio) y desmarque *Habilitar
 el bloqueo para ediciones a través de la interfaz web*.
-
-
 
 3.9. Versionando (Plone v3.0 - Plone v3.2)
 ==========================================
@@ -553,12 +548,12 @@ Una nueva versión es creada cada ves que el elemento es guardado.
 
 
 Viendo el histórico de versiones
-~~~~~~~~~~~~~~~~~
+--------------------------------
 
 Una ves que un elemento ha sido guardado, usted puede usar la pestaña
 Histórico para ver la historia de versiones:
 
-`.. image:: plone-3-user-manual_archivos/image_preview_003.png
+.. image:: images/image_preview_003.png
     :alt: Histórico de Versión
 
 `_
@@ -575,7 +570,7 @@ con la versión actual usando el enlace "Comparar con versión actual" en la
 columna de Acciones. También puede comparar cualquier versión con la versión
 previa usando el enlace "Comparar con versión previa".
 
-`.. image:: plone-3-user-manual_archivos/image_preview_004.png
+.. image:: images/image_preview_004.png
     :alt: Comparando Versiones
 
 `_
@@ -590,7 +585,7 @@ amarillo indica que ha sido cambiado.
 Usted también puede ver las diferencias en el código haciendo clic en en
 enlace "Mostrar diferencias como código":
 
-`.. image:: plone-3-user-manual_archivos/image_preview_005.png
+.. image:: images/image_preview_005.png
     :alt: Comparando Versiones (código HTML)
 
 `_
@@ -604,14 +599,14 @@ clic en el enlace "vista preliminar" en la columna Versión para cualquier
 versión en particular desde la pestaña "Histórico"; en la pagina subsecuente,
 usted necesitara hacer clic al enlace vista preliminar:
 
-`.. image:: plone-3-user-manual_archivos/image_preview_002.png
+.. image:: images/image_preview_002.png
     :alt: Vista preliminar (Enlace que lleva abajo)
 
 `_
 
 o desplazar toda la pagina hacia abajo para ver la vista preliminar:
 
-`.. image:: plone-3-user-manual_archivos/image_preview_006.png
+.. image:: images/image_preview_006.png
     :alt: Vista preliminar
 
 `_
@@ -620,7 +615,7 @@ Para revertir una versión en particular, solo use el enlace "Volver a esta
 versión". Un comentario indicara cuando un elemento fue revertido y a cual
 versión fue revertido:
 
-`.. image:: plone-3-user-manual_archivos/image_preview_010.png
+.. image:: images/image_preview_010.png
     :alt: Volver a esta versión
 
 `_
@@ -670,7 +665,7 @@ Una ves que un elemento ha sido Guardado, usted puede verlo en el viewlet
 **Histórico** encontrado al final de la pagina. Simplemente haciendo clic en
 el viewlet Histórico para expandirlo:
 
-`.. image:: plone-3-user-manual_archivos/image_large_003.png
+.. image:: images/image_large_003.png
     :alt: history-viewlet.png
 
 `_
@@ -696,14 +691,14 @@ Para comparar cualquier versión previa con aquella que justo esta antes de
 esa, use el botón COMPARAR ubicado entre las dos versiones adyacentes en el
 viewlet Histórico.
 
-.. image:: plone-3-user-manual_archivos/image_preview_009.png
+.. image:: images/image_preview_009.png
     :alt: compare-button.png
 
 
 Haciendo clic en este botón, usted vera una pantalla como esta en donde puede
 ver las diferencias entre las dos versiones:
 
-.. image:: plone-3-user-manual_archivos/image_preview_007.png
+.. image:: images/image_preview_007.png
     :alt: compare-versions.png
 
 
@@ -713,7 +708,7 @@ la nueva versión. Una etiqueta de párrafo vacía es también muestra que ha
 sido eliminado en este ejemplo. Usted puede elegir entre las vista
 **directa** o **como código** para ver las diferencias entre versiones.
 
-.. image:: plone-3-user-manual_archivos/image_preview_005.png
+.. image:: images/image_preview_005.png
     :alt: Comparando Versiones (código HTML)
 
 
@@ -788,20 +783,20 @@ Usando "Retirar versión"
 Primero, navegue a la pagina que usted quiere ejecutar "Retirar versión".
 Entonces desde el menú desplegable "Acciones", seleccione Retirar versión:
 
-.. image:: plone-3-user-manual_archivos/01.png
+.. image:: images/01.png
 
 
 Después se le pedirá que seleccione la carpeta en la cual la "copia de
 trabajo" deberá localizarse -- esta sera la versión que usted edite. En este
 ejemplo, elegiremos la carpeta Home, que es la carpeta personal del usuario:
 
-.. image:: plone-3-user-manual_archivos/02.png
+.. image:: images/02.png
 
 
 Luego haga clic en "Retirar versión". Su ubicación actual es automáticamente
 actualizada a la copia de trabajo:
 
-.. image:: plone-3-user-manual_archivos/03.png
+.. image:: images/03.png
 
 
 Ahora usted es libre para editar su propia copia local del documento
@@ -811,7 +806,7 @@ tenga "retirada" una copia de trabajo. Esto previene que se inicien otros
 cambios hechos a (y subsecuentemente se pierdan desde la versión de copia de
 trabajo) la versión publicada mientras usted edita su copia.
 
-.. image:: plone-3-user-manual_archivos/locked.png
+.. image:: images/locked.png
 
 
 
@@ -822,20 +817,20 @@ Cuando usted haya terminado con la edición de la copia de trabajo hay que
 remplazarla por la versión publicada, simplemente seleccione la opción
 "Guardar nueva versión" en el menú desplegable "Acciones":
 
-.. image:: plone-3-user-manual_archivos/04a.png
+.. image:: images/04a.png
 
 
 Se le pedirá que ingrese un mensaje para el guardar la Nueva Versión.
 Rellenelo y haga clic en el botón "Guardar nueva versión":
 
-.. image:: plone-3-user-manual_archivos/04b.png
+.. image:: images/04b.png
 
 
 Su documento actualizado remplazara ahora la copia publicada y se convertirá
 en la nueva copia publicada. Note que su ubicación ha sido actualizada a la
 ubicación del documento original.
 
-.. image:: plone-3-user-manual_archivos/05.png
+.. image:: images/05.png
 
 
 También note que ya no existe una copia de trabajo del documento en la
@@ -855,13 +850,13 @@ guardar ninguno de sus cambios**, simplemente navegue hacia la copia de
 trabajo y seleccione la opción "Cancelar retirada de versión" desde el menú
 desplegable "Acciones":
 
-.. image:: plone-3-user-manual_archivos/cancel1.png
+.. image:: images/cancel1.png
 
 
 Se le pedirá que confirme "Cancelar retirada de versión" o "Mantener retirada
 de versión":
 
-.. image:: plone-3-user-manual_archivos/cancel2.png
+.. image:: images/cancel2.png
 
 
 Note que si el usuario que ha retirado una versión de una copia de trabajo no

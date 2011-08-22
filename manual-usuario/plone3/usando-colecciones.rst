@@ -80,12 +80,12 @@ inteligente.
 Para agregar una colección, use el menú *Agregar elemento*, tal como los es
 para agregar otros tipos de contenido:
 
-.. image:: plone-3-user-manual_archivos/addnewmenu_002.png
+.. image:: images/addnewmenu_002.png
 
 
 Usted vera el panel de Agregar* Colección *:
 
-.. image:: plone-3-user-manual_archivos/addcollection.png
+.. image:: images/addcollection.png
 
 
 Debajo de los campos de titulo y descripción hay un grupo de campos para
@@ -104,7 +104,7 @@ Después de establecer la configuración mostrada en el panel de arriba, haga
 clic en la pestaña Criterio para que se muestre el panel de configuración de
 Criterios de búsqueda:
 
-.. image:: plone-3-user-manual_archivos/collectionssearchcrit1.png
+.. image:: images/collectionssearchcrit1.png
 
 
 La parte superior del panel *Agregar Nuevos Criterios de Búsqueda*, le
@@ -112,7 +112,7 @@ permite configurar un campo de palabras claves y un campo de criterios que
 coincidan. La parte baja *Establecer Tipo de Ordenación*, es un campo de
 selección sencilla para ordenar:
 
-.. image:: plone-3-user-manual_archivos/collectionssearchcrit2.png
+.. image:: images/collectionssearchcrit2.png
 
 
 Para que los tipos de criterios coincidan con los datos en los elementos de
@@ -138,7 +138,7 @@ Nota: una Colección no se comporta como una carpeta regular -- usted no puede
 agregar elementos de contenido a través del menú de agregar elemento, tal
 como lo podría hacer en una carpeta regular.
 
-`.. image:: plone-3-user-manual_archivos/lights-camera-action_003.png
+`.. image:: images/lights-camera-action_003.png
     :alt: lights-camera-action.png
 `_Ver un vídeo sobre como `anadir una smart folder (ahora llamada
 Colección).`_ en Plone 2

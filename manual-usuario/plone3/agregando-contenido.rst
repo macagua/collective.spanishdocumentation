@@ -10,16 +10,15 @@ Como agregar tipos de contenidos básicos a sitios web Plone
 Una descripción general de como agregar nuevos elementos de contenidos en
 Plone, incluyendo definiciones de cada tipo de contenido estándar.
 
-Los nuevos contenidos son agregados vía el menú desplegable **Agregar
-elemento ** :
+Los nuevos contenidos son agregados vía el menú desplegable **Agregar elemento**:
 
-.. image:: plone-3-user-manual_archivos/image_preview.png
+.. image:: images/image_preview.png
     :alt: addnew_image.gif
 
-Agregar contenido en Plone se hace de manera *agradable *, lo que quiere
+Agregar contenido en Plone se hace de manera *agradable*, lo que quiere
 decir que usted debe navegar a la sección de su sitio web Plone en donde
 quiere que el nuevo contenido resida antes de usar el menú desplegable
-**Agregar elemento ** . Por supuesto usted puede cortar, copiar y pegar
+**Agregar elemento**. Por supuesto usted puede cortar, copiar y pegar
 elementos de contenido desde una sección a otra si es necesario.
 
 Tipos de Contenido
@@ -44,7 +43,7 @@ Para agregar un evento a su calendario, haga clic en el enlace vCal o iCal al
 lado del texto "Agregar evento al calendario" en la vista principal de un
 elemento de evento.
 
-.. image:: plone-3-user-manual_archivos/image_preview.jpeg
+.. image:: images/image_preview.jpeg
     :alt: Tabla resumen de Eventos
 
 Desde Plone 3.3 usted puede obtener también todos los eventos en una carpeta
@@ -78,13 +77,13 @@ escribir la mayor parte de sus paginas web en el sitio Web Plone.
 
 
 Nota: Dependiendo de que productos adicionales tenga usted instalado, tendrá
-mas opciones en su menú desplegable **Agregar elemento . ** de las que
+mas opciones en su menú desplegable **Agregar elemento** de las que
 aparecen aquí. Para mas información acerca de esos tipos de contenidos
 adicionales, consulte la documentación del Producto adicional a utilizar.
 
 
 Titulo
-~~~~~~
+------
 
 Todos los tipos de contenidos en Plone tiene dos campos en común: **Titulo**
 y **Descripción.**
@@ -118,7 +117,7 @@ contenido Enlace tiene el campo de dirección URL. El tipo de contenido
 Archivo tiene el campo de Archivo, así continua con todos los campos.
 
 Descripción
-~~~~~~~~~~~
+-----------
 
 La **Descripción** aparece al tope de las paginas, justo abajo del Titulo.
 Las descripciones regularmente son usadas en conjunción con una variante de
@@ -143,14 +142,13 @@ Las carpetas son agregadas haciendo clic en el menú **Agregar elemento**
 (usted necesita haber iniciado sesión para ver el menú **Agregar elemento**).
 Seleccione **Carpeta** desde el menú desplegable:
 
-.. image:: plone-3-user-manual_archivos/copy_of_addnewmenu.png
-    :alt: add-new-menú.png
+.. image:: images/copy_of_addnewmenu.png
+  :alt: add-new-menú.png
 
+Después de hacer clic para agregar una Carpeta usted vera el panel *Agregar Carpeta*:
 
-Después de hacer clic para agregar una Carpeta usted vera el panel *Agregar
-Carpeta*:
-
-.. image:: plone-3-user-manual_archivos/addfolder.png
+.. image:: images/addfolder.png
+  :alt:
 
 
 Rellene el **Titulo**, que es requerido como lo indica el cuadrado rojo. La
@@ -160,17 +158,13 @@ si necesita agregar una descripción para la carpeta. Las descripciones son
 con Plone - los resultados se mostraran con ambos, el Titulo y la Descripción
 del elemento.
 
-Usted notara también pestañas en la parte superior:*
-*
+Usted notara también pestañas en la parte superior:
 
--   *Predeterminado*, para ingresar los campos Titulo y Descripción,*
-*
+-   *Predeterminado*, para ingresar los campos Titulo y Descripción,
 -   *Categorización,* para especificar las categorías que se aplican a la
-    carpeta (tal vez las conozca como *palabras claves*),*
-*
+    carpeta (tal vez las conozca como *palabras claves*),
 -   *Fechas*, para configurar el periodo de tiempo durante el cual la
-    carpeta debería estar disponible para ser vista en el sitio web,*
-*
+    carpeta debería estar disponible para ser vista en el sitio web,
 -   *Propietario*, para especificar el creador y/o contribuidores al
     elemento de contenido,
 -   *Configuración,* para permitir comentarios acerca del elemento y si
@@ -183,12 +177,10 @@ manual de usuario.
 Asegúrese de hacer clic en el botón **Guardar** al final de la pagina cuando
 haya terminado. Esto completara el proceso de creación de una carpeta.
 
-`.. image:: plone-3-user-manual_archivos/lights-camera-action_002.png
-    :alt: lights-camera-action.png
-`_ Ver un vídeo sobre como `agregar una carpeta`_ en Plone 2
-(significativamente diferente).
+.. image:: images/lights-camera-action_002.png
+  :alt: lights-camera-action.png
 
-.. image:: plone-3-user-manual_archivos/additemmenufolder.html
+Ver un vídeo sobre como `agregar una carpeta`_ en Plone 2 (significativamente diferente).
 
 
 2.3. ¿Que hay en un nombre web?
@@ -223,21 +215,19 @@ direcciones muy similares al **Titulo** que usted eligió, convirtiéndolas a
 minúsculas, y sustituyendo guiones por espacios y otras puntuaciones.
 
 Para ilustrar tomemos cada una de estas direcciones web y divida cada una en
-las partes que las componen:
+las partes que las componen: ::
 
-::www.misitio.com/acerca/personal/sally/bio
-    ^
-    nombre del sitio web
-                   ^
-                   una carpeta llamada Acerca
-                         ^
-                         una carpeta llamada
-                         Personal
-                                   ^
-                                   una
-                                   carpeta llamada Sally
-     ^
-     una carpeta llamada Bio
+    www.misitio.com/acerca/personal/sally/bio
+        ^
+        nombre del sitio web
+                       ^
+                       una carpeta llamada Acerca
+                             ^
+                             una carpeta llamada Personal
+                                       ^
+                                       una carpeta llamada Sally    
+                                            ^
+                                            una carpeta llamada Bio
 
 
 En este ejemplo Plone cambio cada titulo de carpeta a minúscula, por ejemplo,
@@ -245,19 +235,19 @@ de Personal a personal. Usted no tiene que preocuparse por esto. Plone se
 encarga de las direcciones web; usted solo escribe los títulos de la forma
 que quiera.
 
-Y, para el segundo ejemplo:
+Y, para el segundo ejemplo: ::
 
-::www.misitio.com/imágenes/mariposas/skippers/long-tailed-skippers
-    ^
-    nombre del sitio web
-                   ^
-                   una carpeta llamada Imágenes
-                          ^
-                          una carpeta llamada Mariposas
-                                      ^
-                                      una carpeta llamada Skippers
-                                                       ^
-                                                       una carpeta llamada Long-Tailed Skippers
+    www.misitio.com/imágenes/mariposas/skippers/long-tailed-skippers
+        ^
+        nombre del sitio web
+                       ^
+                       una carpeta llamada Imágenes
+                              ^
+                              una carpeta llamada Mariposas
+                                          ^
+                                          una carpeta llamada Skippers
+                                                           ^
+                                                           una carpeta llamada Long-Tailed Skippers
 
 
 Este ejemplo es similar al primero, ilustrando una conversión a minúscula del
@@ -280,25 +270,23 @@ involucrar un poco de trabajo en su computadora local, pero es esencial
 porque las fotografías, mapas y gráficos personalizados son muy importantes
 en los sitios web.
 
-> **`Preparando imágenes para la Web`_
-**
+    `Preparando imágenes para la Web`_
 
-> **Recuerde usar formatos de archivos que sean estándares para la web para
-cada una de las imágenes. Los formatos aceptados incluyen: JPG, JPEG, GIF, y
-PNG. No use formatos BMP o TIFF ya que estos no son completamente compatibles
-con los navegadores web.**
+    **Recuerde usar formatos de archivos que sean estándares para la web para cada una de las imágenes. Los formatos aceptados incluyen: JPG, JPEG, GIF, y PNG. No use formatos BMP o TIFF ya que estos no son completamente compatibles con los navegadores web.**
 
 Cuando este listo para agregar una imagen use el menú desplegable *Agregar
 elemento* (usted solo vera el menú *Agregar elemento* después de iniciar
 sesión):
 
-.. image:: plone-3-user-manual_archivos/addnewmenu.png
+.. image:: images/addnewmenu.png
+  :alt:
 
 
 Después de hacer clic para agregar una **Imagen** usted vera el panel
 *Agregar Imagen*:
 
-.. image:: plone-3-user-manual_archivos/addimage.png
+.. image:: images/addimage.png
+  :alt:
 
 
 Ahí se encuentran los campos Titulo y Descripción (campo como "espacio para
@@ -334,12 +322,14 @@ un orden u otro.
 
 Para agregar una pagina use el menú *Agregar elemento* en una carpeta:
 
-.. image:: plone-3-user-manual_archivos/copy_of_addnewmenu.png
+.. image:: images/copy_of_addnewmenu.png
+  :alt:
 
 Seleccione **Pagina** en el menú desplegable y usted vera el panel *Agregar
 Pagina*:
 
-.. image:: plone-3-user-manual_archivos/editpagepanelplone3.png
+.. image:: images/editpagepanelplone3.png
+  :alt:
 
 
 Los campos **Titulo** y **Descripción** se encuentran en la parte de arriba.
@@ -361,15 +351,13 @@ ve es el texto en negrita - Plone se encarga de la parte HTML.
 
 La gente generalmente se siente cómoda con la características WYSIWYG de los
 procesadores de texto típicos. Nosotros describiremos esto aquí. Su
-administrador del sitio también puede habilitar el tan llamado `lenguaje de
-marcado`_ para su sitio.
+administrador del sitio también puede habilitar el tan llamado `lenguaje de marcado`_ 
+para su sitio.
 
+.. image:: images/lights-camera-action_002.png
+  :alt: lights-camera-action.png
 
-
-`.. image:: plone-3-user-manual_archivos/lights-camera-action_002.png
-    :alt: lights-camera-action.png
-`_Ver un vídeo de Plone 2 donde se `usa el editor visual para editar el texto
-de cuerpo de una pagina`_.
+Ver un vídeo de Plone 2 donde se `usa el editor visual para editar el texto de cuerpo de una pagina`_.
 
 
 Descripción de la barra de herramientas y iconos en el editor Kupu 1.4.x
@@ -381,7 +369,7 @@ lado cuando este editando contenidos.
 
 Una barra de herramientas típica de Kupu luce como esta:
 
-.. image:: plone-3-user-manual_archivos/image_large.png
+.. image:: images/image_large.png
     :alt: kupu-grab
 
 El formato de texto es normalmente definido en HTML, pero algunos sitios
@@ -431,13 +419,13 @@ Los iconos son:
 
 
 Imágenes
-~~~~~~~~
+--------
 
 Coloque el cursor de su ratón sobre el texto de una pagina, luego haga clic
 en el icono "árbol". Este panel mostrara una ventana emergente:
 
-.. image:: plone-3-user-manual_archivos/image_large_002.png
-    :alt: insert-image-current-folder.png
+.. image:: images/image_large_002.png
+  :alt: insert-image-current-folder.png
 
 Haga clic en "Carpeta actual" del lado izquierdo del panel, si no esta ya
 resaltada. La carpeta actual es la carpeta que contiene la pagina que usted
@@ -470,12 +458,13 @@ sobreescribir el tamaño de la imagen seleccionado la edición por HTML.
 
 
 Enlaces Internos
-~~~~~~~~~~~~~~~~
+----------------
 
 Seleccione una palabra o frase, haga clic en el icono de *enlaces internos*,
 y el panel *insertar enlace* aparecerá:
 
-.. image:: plone-3-user-manual_archivos/insertlinkpanel.png
+.. image:: images/insertlinkpanel.png
+  :alt:
 
 Usted use este panel haciendo clic en Inicio o Carpeta actual para iniciar la
 navegación del sitio Web Plone y encontrar una carpeta, pagina, o imagen a la
@@ -486,12 +475,13 @@ establecido con la palabra o frase seleccionada para este enlace.
 
 
 Enlaces externos
-~~~~~~~~~~~~~~~~
+----------------
 
 Seleccione una palabra o frase, haga clic en el icono de *enlaces externos*,
 y el panel Enlace Externo aparecerá:
 
-.. image:: plone-3-user-manual_archivos/externallinkpanel.png
+.. image:: images/externallinkpanel.png
+  :alt:
 
 Escriba la dirección web del sitio web externo en la caja que inicia con el
 prefijo http://. Usted puede hacer clic en el botón *Vista Preliminar* si
@@ -501,7 +491,7 @@ Entonces haga clic en el botón *Registrar*. El enlace externo sera
 establecido en la palabra o frase que usted selecciono.
 
 Anclas
-~~~~~~
+------
 
 Las anclas son como marcadores de posición en un documento, basado en
 encabezados, subtítulos, u otros estilos definidos dentro del documento. Como
@@ -514,19 +504,22 @@ creados usando anclas.
 Primero cree el documento con los subtítulos definido en el, y reescriba los
 subtítulos en el tope del documento:
 
-.. image:: plone-3-user-manual_archivos/anchortext.png
+.. image:: images/anchortext.png
+  :alt:
 
 
 Entonces seleccione cada uno de los subtítulos reescritos en el tope y haga
 clic en el icono de anclas para seleccionar los subtítulos:
 
-.. image:: plone-3-user-manual_archivos/anchorset.png
+.. image:: images/anchorset.png
+  :alt:
 
 
 Un panel aparecerá para seleccionar a cual subtitulo el enlace de ancla debe
 conectarse:
 
-.. image:: plone-3-user-manual_archivos/anchorwindow.png
+.. image:: images/anchorwindow.png
+  :alt:
 
 La pestaña *Enlace a ancla* aparecerá. Al lado izquierdo se muestra una lista
 de estilos que podrían establecerse dentro del documento. Para este ejemplo,
@@ -544,20 +537,22 @@ para documentos largos.
 
 
 Tablas
-~~~~~~
+------
 
 Las tablas son útiles para tabular y listar datos. Para agregar una tabla,
 coloque su cursor del ratón donde usted quiera y haga clic en el icono de
 *Insertar una tabla*. Usted vera el panel *Tabla*:
 
-.. image:: plone-3-user-manual_archivos/inserttablepanel.png
+.. image:: images/inserttablepanel.png
+  :alt:
 
 Definir filas y columnas es sencillo. Si usted marca la casilla *Crear
 Títulos* usted tendrá un sitio para escribir el encabezado de columna para la
 tabla. La Clase de Tabla se refiere a como quiere estilizar la tabla. Usted
 tiene opciones como las siguientes:
 
-.. image:: plone-3-user-manual_archivos/inserttablepanelclasses.png
+.. image:: images/inserttablepanelclasses.png
+  :alt:
 
 Aquí unos ejemplos de estos estilos de tablas:
 
@@ -609,7 +604,8 @@ Easy Jet
  agregar/eliminar filas y columnas:
 
 
-.. image:: plone-3-user-manual_archivos/tableediting.png
+.. image:: images/tableediting.png
+  :alt:
 
 En la tabla de arriba, el cursor ha sido colocado en la celda "Special
 Leader", la cual activa pequeños controles cuadrados alrededor de los filos
@@ -622,7 +618,7 @@ la derecha de la celda actual.
 
 
 Estilos de Texto
-~~~~~~~~~~~~~~~~
+----------------
 
 Los estilos de texto son definidos en el menú desplegable. Aquí están las
 opciones:
@@ -635,7 +631,7 @@ texto
 
 Subtitulo
 texto
-~~~~~
+-----
 
 Literal ::texto
 Sobrio texto
@@ -661,7 +657,7 @@ los cambios aplicados inmediatamente.
 
 
 Guardar
-~~~~~~~
+-------
 
 Haga clic en el botón Guardar al final y sus cambios serán hechos en la
 pagina.
@@ -670,7 +666,7 @@ pagina.
 
 
 Notas de pie de pagina
-~~~~~~~~~~~~~~~~~~~~~~
+----------------------
 
 **Lenguajes de marcado**
 
@@ -687,7 +683,7 @@ ingresar texto. Los formatos de marcado disponibles en Plone son:
 Cada uno de estos trabaja incrustando códigos especiales de formatos en el
 texto. Por ejemplo, con el formato de texto estructurado, al encerrar una
 palabra o frase con doble asterisco pondrá la palabra o frase en negrita,
-como en **Este texto podría ser negrita.** Estos formatos de marcado merecen
+como en **Este texto podría ser negrita**. Estos formatos de marcado merecen
 aprenderse para la velocidad de entrada si usted quiere hacer una creación de
 bastantes paginas, o si usted es adepto a introducir textos de una manera un
 poco mas técnica Algunas personas prefieren estos formatos, no solo por la
@@ -702,23 +698,25 @@ Archivos de distintos tipos pueden ser subidos a sitios web Plone.
 Seleccione Archivo en el menú desplegable *Agregar elemento*,para que una
 carpeta suba un archivo:
 
-.. image:: plone-3-user-manual_archivos/copy_of_addnewmenu.png
+.. image:: images/copy_of_addnewmenu.png
     :alt: add-new-menú.png
 
 Usted vera el panel *Agregar Archivo*:
 
-.. image:: plone-3-user-manual_archivos/addfile.png
+.. image:: images/addfile.png
+  :alt:
 
 
 Haga clic en el botón *Examinar...* para navegar al archivo que usted quiere
 subir desde su computadora local. Provea un titulo (usted puede usar el mismo
 nombre de archivo usado en su computadora local si así lo desea). Provea una
-*descripción*** si usted quiere. Cuando haga clic en el botón Guardar el
+**descripción** si usted quiere. Cuando haga clic en el botón Guardar el
 archivo sera subido a la carpeta.
 
-`.. image:: plone-3-user-manual_archivos/lights-camera-action_002.png
+.. image:: images/lights-camera-action_002.png
     :alt: lights-camera-action.png
-`_Ver un vídeo sobre como `agregar un archivo`_ en Plone 2.
+
+Ver un vídeo sobre como `agregar un archivo`_ en Plone 2.
 
 Ejemplos de tipos de archivo incluyen archivos PDF, documentos Word, archivos
 de base de datos, archivos comprimidos zip... -- bueno, prácticamente
@@ -743,13 +741,14 @@ resultados de búsquedas, o incluirlos en la navegación.
 
 Para agregar un enlace use el menú *Agregar elemento* en una carpeta:
 
-.. image:: plone-3-user-manual_archivos/copy_of_addnewmenu.png
+.. image:: images/copy_of_addnewmenu.png
     :alt: add-new-menú.png
 
 
-Usted vera el panel Agregar * Enlace*:
+Usted vera el panel Agregar *Enlace*:
 
-.. image:: plone-3-user-manual_archivos/addlink.png
+.. image:: images/addlink.png
+  :alt:
 
 
 Los buenos títulos para los enlaces son importantes, por que los títulos
@@ -764,7 +763,7 @@ del enlace para que se asegure que tiene la dirección correcta.
 
 
 El Objeto de Enlace en Uso
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------
 
 Un objeto de enlace se comportara de las siguientes maneras, dependiendo de
 su estatus de inicio de sesión o permisos.
@@ -790,13 +789,14 @@ calendario de eventos.
 Use el menú desplegable *Agregar elemento* en una carpeta para agregar un
 evento:
 
-.. image:: plone-3-user-manual_archivos/copy_of_addnewmenu.png
+.. image:: images/copy_of_addnewmenu.png
     :alt: add-new-menú.png
 
 
 Usted podrá ver el panel *Agregar Evento*que es algo grande:
 
-.. image:: plone-3-user-manual_archivos/addevent.png
+.. image:: images/addevent.png
+  :alt:
 
 
 Desde el tope, tiene los siguientes campos:
@@ -831,13 +831,15 @@ emergente manipulador de calendario que ofrece una alternativa para
 seleccionar el día. Si usted hace un clic sobre el icono del pequeño
 calendario adyacente al menú desplegable del día:
 
-.. image:: plone-3-user-manual_archivos/eventstartandendfields.png
+.. image:: images/eventstartandendfields.png
+  :alt:
 
 
 usted vera esta ventana emergente con un calendario:
 
 
-.. image:: plone-3-user-manual_archivos/calendarpopuppanel.png
+.. image:: images/calendarpopuppanel.png
+  :alt:
 
 
 Solo haga clic en el día y este sera establecido. Rellene los campos para los
@@ -848,9 +850,10 @@ cuales tiene información y presione el botón Guardar, pero recuerde:
 sitio web hasta que no sea **publicado*****.
 **
 
-`.. image:: plone-3-user-manual_archivos/lights-camera-action_002.png
+.. image:: images/lights-camera-action_002.png
     :alt: lights-camera-action.png
-`_Ver un vídeo sobre como `agregar un evento`_ en Plone 2.
+
+Ver un vídeo sobre como `agregar un evento`_ en Plone 2.
 
 
 2.9. Agregar Noticias
@@ -862,13 +865,14 @@ Noticias.
 Use el menú desplegable *Agregar elemento* en una carpeta para agregar una
 noticia:
 
-.. image:: plone-3-user-manual_archivos/copy_of_addnewmenu.png
+.. image:: images/copy_of_addnewmenu.png
     :alt: add-new-menú.png
 
 
 Usted vera el panel *Agregar Noticia*:
 
-.. image:: plone-3-user-manual_archivos/addnewsitem.png
+.. image:: images/addnewsitem.png
+  :alt:
 
 
 Los campos estándar para el titulo, descripción, y nota sobre el cambio están
@@ -886,13 +890,12 @@ dimensiones y sera posicionada. Use el **Cuerpo del Texto** para insertar una
 imagen en el actual cuerpo de la Noticia.
 
 **IMPORTANTE**: Las noticias no se mostraran en la lista principal de noticia
-del sitio web o en el porlet de noticias hasta que esta no sea
-**publicada.***
-*
+del sitio web o en el porlet de noticias hasta que esta no sea **publicada.**
 
-`.. image:: plone-3-user-manual_archivos/lights-camera-action_002.png
+.. image:: images/lights-camera-action_002.png
     :alt: lights-camera-action.png
-`_Ver un vídeo sobre como `agregar una noticia`_ en Plone 2.
+
+Ver un vídeo sobre como `agregar una noticia`_ en Plone 2.
 
 
 2.10. Definiendo Propiedades Básicas
@@ -906,7 +909,8 @@ Cuando el usuario con permisos de edición para elementos hace clic en
 cualquier elemento de contenido, estos mostraran una serie de pestañas en el
 tope para definir propiedades básicas:
 
-.. image:: plone-3-user-manual_archivos/basicpropertiestabs.png
+.. image:: images/basicpropertiestabs.png
+  :alt:
 
 
 Las pestañas de propiedades básicas son:
@@ -926,13 +930,14 @@ Las pestañas de propiedades básicas son:
 
 
 Los campos de entrada de estas pestañas comprenden la información descriptiva
-básica llamada ***metadatos***. Los Metadatos son a veces llamados "datos
+básica llamada **metadatos**. Los Metadatos son a veces llamados "datos
 acerca de datos." Plone puede usar este metadato de múltiples de formas.
 
 Acá vemos el panel *Categorización*, mostrado en el elemento de contenido de
 pagina (podría ser el mismo para otros tipos de contenidos):
 
-.. image:: plone-3-user-manual_archivos/editpagecategorization.png
+.. image:: images/editpagecategorization.png
+  :alt:
 
 
 *Nota: Las categorías fueron formalmente llamadas palabras claves en Plone,
@@ -964,14 +969,16 @@ El panel *Fechas* tiene campos para la Fecha de Publicación y para la Fecha
 de Terminación, y efectivamente fecha de inicio y culminación para el
 contenido si usted las desea establecer:
 
-.. image:: plone-3-user-manual_archivos/datessettings.png
+.. image:: images/datessettings.png
+  :alt:
 
 
 El panel *Propietario* tiene tres campos de estilo libre para listar a los
 creadores, colaboradores, e información acerca de los derechos de autor o los
 derechos de propietario del contenido:
 
-.. image:: plone-3-user-manual_archivos/ownershipsettings.png
+.. image:: images/ownershipsettings.png
+  :alt:
 
 
 El panel de *Configuración* tiene campos que tal vez varíen un poco de un
@@ -979,11 +986,12 @@ tipo de contenido a otro, pero generalmente hay campos que controlan si los
 elementos aparecen o no en la navegación, si los comentarios son permitidos,
 y otros controles similares:
 
-.. image:: plone-3-user-manual_archivos/settingspanel.png
+.. image:: images/settingspanel.png
+  :alt:
 
 
 Recomendaciones
-~~~~~~~~~~~~~~~
+---------------
 
 No hay requerimientos para ingresar la información especificada a través de
 estos paneles, pero es muy buena idea hacerlo. Para el panel de
@@ -1020,14 +1028,15 @@ practicas tales como solo colocar imágenes en la carpeta de imágenes.
 Primero, seleccione la ultima opción en el menú desplegable *Agregar
 elemento* llamado *Restringir...*:
 
-.. image:: plone-3-user-manual_archivos/addnewmenu.png
+.. image:: images/addnewmenu.png
     :alt: add-new-menú.png
 
 
 Allí hay tres opciones mostradas para restringir tipos de contenidos en la
 carpeta:
 
-.. image:: plone-3-user-manual_archivos/restricttypes.png
+.. image:: images/restricttypes.png
+  :alt:
 
 
 La opción predeterminada usa las definiciones de la carpeta "padre". Al tener
@@ -1038,7 +1047,8 @@ permite a los tipos estándar ser agregados, es una forma de redefinir a los
 predeterminados, deshabilitando las restricciones heredadas. La ultima opción
 permite seleccionar desde una lista de tipos disponibles:
 
-.. image:: plone-3-user-manual_archivos/restricttypesmanually.png
+.. image:: images/restricttypesmanually.png
+  :alt:
 
 
 Los tipos listado bajo el encabezado *Tipos permitidos* son aquellos que
@@ -1110,7 +1120,7 @@ comunes para imágenes incluye .png y .gif. Tome en cuenta la ubicación en su
 computadora en donde se guardan sus imágenes, para que pueda encontrarlas
 cuando las suba a su sitio web Plone.
 
-.. image:: plone-3-user-manual_archivos/a.png
+.. image:: images/a.png
     :alt: image_resizing.png
 
 
@@ -1124,20 +1134,23 @@ cuando las suba a su sitio web Plone.
 4.  Subala a su sitio web Plone
 
 
-.. _  : http://media.plone.org/LearnPlone/Adding%20a%20new%20folder%20and%20new%20page.swf
-.. _genes para la Web: http://plone.org/documentation/manual/plone-3
-    -user-manual/adding-content/preparing-images-for-the-web (Preparando
-    imágenes para la Web)
-.. _lenguaje de marcado: http://plone.org/documentation/manual/plone-3
-    -user-manual/adding-content/adding-pages#footnotes (Notas de pie de
-    pagina)
-.. _  : http://media.plone.org/LearnPlone/Editing%20Body%20Text.swf
+.. _agregar una carpeta: http://media.plone.org/LearnPlone/Adding%20a%20new%20folder%20and%20new%20page.swf
+.. _Preparando imágenes para la Web: http://plone.org/documentation/manual/plone-3-user-manual/adding-content/preparing-images-for-the-web
+.. _lenguaje de marcado: http://plone.org/documentation/manual/plone-3-user-manual/adding-content/adding-pages#footnotes
+.. _usa el editor visual para editar el texto de cuerpo de una pagina: http://media.plone.org/LearnPlone/Editing%20Body%20Text.swf
 .. _Markdown: http://en.wikipedia.org/wiki/Markdown
 .. _Textile: http://en.wikipedia.org/wiki/Textile_%28markup_language%29
 .. _Texto estructurado: http://www.zope.org/Documentation/Articles/STX
 .. _Texto Reestructurado: http://en.wikipedia.org/wiki/ReStructuredText
-.. _  : http://media.plone.org/LearnPlone/Adding%20a%20File.swf
-.. _  : http://media.plone.org/LearnPlone/Creating%20an%20Event.swf
-.. _  : http://media.plone.org/LearnPlone/Creating%20a%20News%20Item.swf
-.. _  : http://media.plone.org/LearnPlone/Copy,%20Paste,%20Cut,%20etc.swf
+.. _agregar un archivo: http://media.plone.org/LearnPlone/Adding%20a%20File.swf
+.. _agregar un evento: http://media.plone.org/LearnPlone/Creating%20an%20Event.swf
+.. _agregar una noticia: http://media.plone.org/LearnPlone/Creating%20a%20News%20Item.swf
+.. _: http://media.plone.org/LearnPlone/Copy,%20Paste,%20Cut,%20etc.swf
 .. _  : http://media.plone.org/LearnPlone/Choosing%20a%20default%20page.swf
+
+
+Creditos de esta sección
+========================
+
+.. sectionauthor:: Guido van Rossum <guido@python.org>
+.. codeauthor:: Leonardo J. Caballero G. <lcaballero@hoatzin.org>

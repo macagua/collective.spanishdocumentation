@@ -10,7 +10,7 @@ Una introducción al uso y administración de porlets.
 Los Portlets usan un enfoque de jerarquía básica para determinar como y por
 que aparecen en cada sección de su sitio.
 
-.. image:: plone-3-user-manual_archivos/portlet_block.GIF
+.. image:: images/portlet_block.GIF
     :alt: portlet_block.gif
 Los Portlets usan un enfoque de jerarquía básica. Por defecto los Portlets
 que usted asigne en la raíz (pagina de inicio) del sitio se propagaran por
@@ -20,7 +20,7 @@ Portlets para una sub-sección en particular, tiene que usar el control de
 bloquea Porlets debe agregar explícitamente todos los Portlets que usted
 desea ver en la pagina hija.
 
-.. image:: plone-3-user-manual_archivos/image_preview_012.png
+.. image:: images/image_preview_012.png
     :alt: hierarchy.gif
 Como puede ver en este diagrama los Portlets están representados en azul bajo
 cada titulo de Pagina.
@@ -60,7 +60,7 @@ Administrar portlets**, generalmente localizado a lo ultimo de las columnas
 de los lados. En esta sección de Administrar Portlets, usted puede crear
 nuevos Portlets, remover Portlets, y reorganizarlos.
 
-.. image:: plone-3-user-manual_archivos/portlet_managelink.GIF
+.. image:: images/portlet_managelink.GIF
     :alt: portlet_managelink.gif
 Haciendo clic en el enlace le llevara a una nueva pantalla que le permitirá
 editar Portlets. La otra manera de obtener esta pantalla es añadiendo
@@ -70,7 +70,7 @@ de, la dirección URL tendría que terminar de la siguiente manera:
 www.myplonesite.org/about/@@manage-portlets.
 
 
-.. image:: plone-3-user-manual_archivos/image_preview_011.png
+.. image:: images/image_preview_011.png
     :alt: portlet_manage.gif
 
 Agregar un Portlet

@@ -17,7 +17,7 @@ carpetas, imágenes, paginas, etc. y cualquier tipo de contenido especializado
 -- hay un menú a la derecha para el Estado de Publicación Este menú *Estado*
 tiene opciones para controlar los Estados de Publicación:
 
-.. image:: plone-3-user-manual_archivos/statemenu1.png
+.. image:: images/statemenu1.png
 
 
 El titulo del menú mostrara el Estado actual de Publicación para el elemento
@@ -57,7 +57,7 @@ cambiarlo de vuelta al estado *borrador publico*, o de vuelta al Estado
 Privado con la opción *Echar atrás*, si se requiere. La opciones del menú
 Estado cambiaran consecuentemente:
 
-.. image:: plone-3-user-manual_archivos/statemenu2.png
+.. image:: images/statemenu2.png
 
 
 Debería considerarse la retracción o ajustarse a *Privado*, todo aquel
@@ -82,12 +82,12 @@ contenido.
 
 Este menú *Estado* tiene la opción *Avanzado*...:
 
-.. image:: plone-3-user-manual_archivos/copy_of_statemenu1.png
+.. image:: images/copy_of_statemenu1.png
 
 
 El cual muestra el panel de *Avanzado*:
 
-.. image:: plone-3-user-manual_archivos/stateadvanced.png
+.. image:: images/stateadvanced.png
 
 
 Debajo de una sección de explicación al principio del panel, se haya una
@@ -141,7 +141,7 @@ elemento ya esta publicado aparecerán las siguientes opciones al final del
 panel *Retirar* y *Echar atrás* para "privatizar" el elemento,
 estableciéndolo a *borrador publico* o luego para Estado *Privado*.
 
-`.. image:: plone-3-user-manual_archivos/lightscameraaction.png
+`.. image:: images/lightscameraaction.png
 `_ Ver un vídeo sobre como `controlar el Estado de Publicación`_ en Plone 2
 
 
@@ -181,7 +181,7 @@ periodistas hacen el trabajo de agregar nuevos artículos. Luego los
 periodistas crearan historias y las enviaran para su respectiva revisión y
 aprobación:
 
-.. image:: plone-3-user-manual_archivos/workflowsteps.png
+.. image:: images/workflowsteps.png
 
 
 Los periodistas agregaran noticias y las *enviaran* (la opción de menú
@@ -232,7 +232,7 @@ los contenidos existentes, pero ella necesita que el comience a agregar
 contenido. Antes de seguir junto a Jane, rápidamente observemos lo que
 actualmente ve George cuando inicia sesión en este sitio Plone:
 
- .. image:: plone-3-user-manual_archivos/02b.png
+ .. image:: images/02b.png
 
 
 Note que actualmente George ni siquiera puede ver la carpeta "Documentation,
@@ -245,7 +245,7 @@ contenido a la carpeta Documentation.
 
 Jane navega a la carpeta Documentation y hace clic en la pestaña Compartir:
 
-.. image:: plone-3-user-manual_archivos/03_002.png
+.. image:: images/03_002.png
 
 
 Lo primero que hay que notar es que ella tiene todos los permisos disponibles
@@ -283,14 +283,14 @@ En este ejemplo Jane le otorgara el permiso "Puede agregar" a George en la
 carpeta Documention, para que pueda agregar contenido a la carpeta. Jane lo
 busca por su nombre:
 
-.. image:: plone-3-user-manual_archivos/04.png
+.. image:: images/04.png
 
 
 Ahora ella puede otorgar permisos específicos a George para la carpeta
 Documentation. Ella le dará el permiso "Puede agregar" y luego hará clic en
 "Guardar"
 
-.. image:: plone-3-user-manual_archivos/05_002.png
+.. image:: images/05_002.png
 
 
  ¡Eso es todo! Ahora veamos como ve George el sitio.
@@ -302,7 +302,7 @@ cualquier parte en un sitio web Plone (ej. hace clic en un enlace).
 Por ejemplo, George puede hacer clic en la pestaña *Inicio* para refrescar la
 pagina y podrá ver la carpeta Documentation
 
-.. image:: plone-3-user-manual_archivos/06.png
+.. image:: images/06.png
 
 
 Cuando George hace clic en la pestaña Documentation, se da cuenta que puede
@@ -310,13 +310,13 @@ ver todo el contenido en la carpeta Documentation, y también puede agregar
 los tipos de contenidos disponibles en esta, como se muestra en el menú
 *Agregar elemento*:
 
-.. image:: plone-3-user-manual_archivos/07.png
+.. image:: images/07.png
 
 
 George quiere revisar lo que Jane ha creado ya, así que hace clic en el
 enlace "Project Overview" y revisa:
 
-.. image:: plone-3-user-manual_archivos/07b.png
+.. image:: images/07b.png
 
 
 George puede ver el documento, sin embargo, sus permisos limitados no le
@@ -326,14 +326,14 @@ el documento es hacer su propia copia de el.
 George agrega una Pagina llamada "Widget Installation" y crea el contenido
 para esa Pagina. Cuando finalice el la guarda:
 
-.. image:: plone-3-user-manual_archivos/08.png
+.. image:: images/08.png
 
 
 Jane ve el trabajo que ha hecho George. Ella hace clic en la pestaña
 Documentation y puede ver George realmente ha estado ocupado. Ella hace clic
 en la Pagina "Widget Installation" para revisarla detenidamente:
 
-.. image:: plone-3-user-manual_archivos/09.png
+.. image:: images/09.png
 
 
 Note que Jane tiene acceso completo a la Pagina que ha creado George. Ella la
@@ -349,14 +349,14 @@ George y Jane han estado trabajando duro para crear Paginas en la carpeta
 Documentation. **Jane ha publicado la carpeta Documentation y varias de sus
 paginas**
 
-.. image:: plone-3-user-manual_archivos/09b.png
+.. image:: images/09b.png
 
 
 Jane ha decidido cambiar todo el control de las ediciones (mas no publicar)
 de la carpeta Documentation y dárselo a George. De tal manera que retorna a
 la carpeta Documentation y hace clic en la pestaña *Compartir*:
 
-.. image:: plone-3-user-manual_archivos/10.png
+.. image:: images/10.png
     :alt: sharing10.png
 
 
@@ -366,7 +366,7 @@ incluyendo la carpeta Documentation como tal. Cuando George visite la carpeta
 y haga clic en "Project Overview" (una Pagina que creo Jane), esto es lo que
 el vera:
 
-.. image:: plone-3-user-manual_archivos/11.png
+.. image:: images/11.png
     :alt: sharing11.png
 
 
@@ -379,21 +379,21 @@ Installation" el va a la pestaña "Widget Installation" y busca el nombre
 completo de Molly (no usuario) y le otorga el permiso "Puede editar" para
 este documento.
 
-.. image:: plone-3-user-manual_archivos/12.png
+.. image:: images/12.png
     :alt: sharing12.png
 
 
 Ahora cuando Molly vaya a la carpeta Documentation, ella puede ver los dos
 elementos publicados y el elemento privado que ahora puede editar:
 
-.. image:: plone-3-user-manual_archivos/13.png
+.. image:: images/13.png
     :alt: sharing13.png
 
 
 Y de hecho puede editar el documento "Widget Installation" cuando haga clic
 en el:
 
-.. image:: plone-3-user-manual_archivos/13b.png
+.. image:: images/13b.png
     :alt: sharing13b.png
 
 
@@ -402,7 +402,7 @@ no tiene permitido editar, no tiene ningún tipo de acceso adicional. Ella
 puede ver estos dos elementos porque están publicados y en el flujo de
 trabajo por defecto de Plone (lo que significa que cualquiera los puede ver)
 
-.. image:: plone-3-user-manual_archivos/13c.png
+.. image:: images/13c.png
     :alt: sharing13c.png
 
 
