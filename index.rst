@@ -1,6 +1,45 @@
+=========================================
+Documentación oficial de Plone en Español
+=========================================
+
+Esta sección intenta recoger todo la documentación que hasta el momento esta traducida al Español, como resultado de la iniciativa llamada *traducciones plone* creada en 2008 en el sitio CoActivate.org por miembros de la comunidad Plone Conosur. A continuación se listan los documentos traducidos hasta el momento:
+
+Instalación de Plone
+--------------------
+
+Este sección se dedica a recopilar las diversas formas de instalación de Plone 
+en diversos Sistemas operativos como Windows, OS X, Linux, BSD (distribución de 
+software Berkeley) y prácticamente cualquier otra plataforma.
+
+.. toctree::
+   :maxdepth: 2
+
+   instalando_plone
+
+Uso de Plone
+------------
+
+Plone es un Sistema de gestión de contenidos muy completo y útil,
+por lo que es muy importante conocerlo para poder tomar máxima ventaja de
+estos CMS.  
+
+En esta sección tenemos el tutorial traducción oficial a los manuales de usuario 
+y administración de elementos de Plone.
+
+.. toctree::
+   :maxdepth: 2
+
+   Manual de Usuario de Plone 3 <manual-usuario/plone3/index>
+
+
 ==========================
 Mejores Practicas de Plone
 ==========================
+
+Esta sección intenta recoger todo la documentación disponible en en Español, sobre las *Mejores Practicas de Plone*, esta es resultado de la iniciativa de *Carlos de la Guardia* que publica esta documentación en busca de promover la documentación en Español, desde entonces esta documentación es mantenida por miembros de la comunidad Plone Conosur. A continuación se listan los documentos traducidos hasta el momento:
+
+Introducción
+------------
 
 Desarrollar un sitio con Plone requiere de la combinación de una serie de
 tecnologías y conocimientos, desde HTML hasta desarrollo avanzado con Python.
@@ -39,8 +78,8 @@ asociación de Python de Argentina y la fundación de Python.
 
    Tutorial de Python <python/python-tutorial/index>
 
-Tutorial de Subversion
-----------------------
+Tutorial de Control de versiones
+--------------------------------
 
 Para tener un ambiente de desarrollo productivo, en especial cuando se
 trabaje en equipo, es muy importante contar con un sistema de control de
@@ -52,18 +91,6 @@ popularidad de sistemas distribuidos como Git y Mercurial ha aumentado.
    :maxdepth: 2
 
    subversion
-
-Instalación de Plone
---------------------
-
-Este sección se dedica a recopilar las diversas formas de instalación de Plone 
-en diversos Sistemas operativos como Windows, OS X, Linux, BSD (distribución de 
-software Berkeley) y prácticamente cualquier otra plataforma.
-
-.. toctree::
-   :maxdepth: 2
-
-   instalando_plone
 
 Buildout y setuptools
 ---------------------
@@ -79,21 +106,6 @@ Plone que se quiera emprender.
 
    setuptools
    buildout
-
-Uso de Plone
-------------
-
-Plone es un Sistema de gestión de contenidos muy completo y útil,
-por lo que es muy importante conocerlo para poder tomar máxima ventaja de
-estos CMS.  
-
-En esta sección tenemos el tutorial traducción oficial a los manuales de usuario 
-y administración de elementos de Plone.
-
-.. toctree::
-   :maxdepth: 2
-
-   Manual de Usuario de Plone 3 <manual-usuario/plone3/index>
 
 Tecnologías de Zope
 -------------------
