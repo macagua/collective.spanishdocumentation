@@ -16,7 +16,7 @@ Una explicación de Plone como sistema de gestión de contenidos
 
 
 ¿Qué es Plone?
-==============
+--------------
 
 Plone es un sistema de gestión de contenidos (del ingles, Content Management
 System - CMS) que puede emplearse para construir un sitio web. Empleando
@@ -29,7 +29,7 @@ incluyendo:
 
 
 .. image:: images/content_types_into_plone.png
-    :alt: Tipos de contenidos dentro de Plone
+  :alt: Tipos de contenidos dentro de Plone
 
 
 Un sitio web Plone contiene diferentes tipos de contenido, incluyendo textos,
@@ -40,25 +40,25 @@ puede subirse desde una computadora local, además, Plone le permite crear
 *carpetas* para organizar el contenido y crear una estructura de navegación:
 
 .. image:: images/content_is_added_to_folders.png
-    :alt: Contenido es agregado en carpetas
+  :alt: Contenido es agregado en carpetas
 
 
 
 ¡Usted adora las mariposas!
-==========================
+---------------------------
 
 Si se deseara agregar contenido sobre mariposas, por ejemplo, se puede crear
 una carpeta llamada "Mariposas" y luego agregar texto a una pagina dentro de
 la carpeta:
 
 .. image:: images/butterflies_folder_text.png
-    :alt: Texto de Carpeta Mariposas
+  :alt: Texto de Carpeta Mariposas
 
 
 También se pueden agregar algunas imágenes a la carpeta:
 
 .. image:: images/butterflies_folder.png
-    :alt: Carpeta Mariposas
+  :alt: Carpeta Mariposas
 
 
 Dentro de una carpeta usted puede agregar muchos contenidos de distintos
@@ -67,11 +67,11 @@ la carpeta Mariposas, el contenido debería estar organizado como se muestra a
 continuación, con dos sub-carpetas dentro de la carpeta Mariposas:
 
 .. image:: images/folders_within_folders.png
-    :alt: Carpeta en carpeta
+  :alt: Carpeta en carpeta
 
 
 ¿Qué ocurre tras bambalinas?
-============================
+----------------------------
 
 Es probable que el lector se pregunte cómo funciona todo. Un sitio Web Plone
 típico existe como una instalación de Plone instalada en un servidor web. El
@@ -79,7 +79,7 @@ servidor web puede estar en cualquier sitio, usualmente en una compañía de
 hospedaje con una "pila" de computadoras dedicadas a realizar la tarea:
 
 .. image:: images/server_rack.png
-    :alt: Rack del servidor
+  :alt: Rack del servidor
 
 
 El diagrama muestra los cables que conectan los servidores individuales a
@@ -93,7 +93,7 @@ servidor.
 Simplifiquemos el diagrama que muestra como se interactúa con Plone:
 
 .. image:: images/client_to_server_simple.png
-    :alt: Del cliente al servidor
+  :alt: Del cliente al servidor
 
 
 Usted usa su navegador web; Mozilla Firefox, Safari, Internet Explorer, etc.
@@ -106,12 +106,12 @@ presiona la tecla Enter, la siguiente secuencia de eventos es llevada a cabo
 entre el navegador y el servidor de www.misitio.com:
 
 .. image:: images/client_request.png
-    :alt: Solicitud del cliente
+  :alt: Solicitud del cliente
 
 Luego el software Plone responde:
 
 .. image:: images/server_response.png
-    :alt: Respuesta del servidor
+  :alt: Respuesta del servidor
 
 
 Plone lee su respectiva base de datos para buscar la información almacenada
@@ -130,7 +130,7 @@ servidor. El navegador web "suministra" (traduce) este HTML para que pueda
 ver la pagina web resultante:
 
 .. image:: images/my_site_served.png
-    :alt: Mi sitio servido
+  :alt: Mi sitio servido
 
 
 Así que cuando ve su pagina web de mariposas, puede decidir si cambiarla o
@@ -138,14 +138,14 @@ agregarle contenido. Además en cualquier momento se puede subir fotos,
 documentos, etc:
 
 .. image:: images/plone_donut.png
-    :alt: 
+  :alt: 
 
 
 Luego que hace sus cambios y hace clic en "Guardar", la nueva versión de la
 pagina web se mostrara a cualquiera que visite el sitio:
 
 .. image:: images/plone_donut_full.png
-    :alt: 
+  :alt: 
 
 
 1.2. Diseño visual de los sitios web Plone
@@ -160,7 +160,7 @@ diseño consistente para la apariencia por defecto de Plone. El diseño por
 defecto generalmente se parece a lo siguiente:
 
 .. image:: images/plone-default-design-areas.png
-    :alt: Áreas de diseño por defecto de Plone
+  :alt: Áreas de diseño por defecto de Plone
 
 Aunque un sitio Plone puede tener un diseño radicalmente distinto a este,
 igual debería identificar los elementos comunes, como por ejemplo el enlace
@@ -185,7 +185,7 @@ Usaremos el diseño por defecto de Plone como ejemplo de una división típica
 de pantalla:
 
 .. image:: images/plonedefaultareaslabeled.png
-    :alt: Áreas por defecto de etiquetada de Plone
+  :alt: Áreas por defecto de etiquetada de Plone
 
 
 Usted tal ves requiera adaptar estos términos (áreas) según sea necesario
@@ -198,7 +198,7 @@ A modo de ejemplo, se seleccionara tres sitios para comparar tomados de la
 `lista de sitios web Plone`_:
 
 .. image:: images/akamaidesign.png
-    :alt: Diseño de Akamai
+  :alt: Diseño de Akamai
 
 En la figura, se muestra el sitio de Akamai, un líder proveedor de
 herramientas y tecnologías de aceleración web. El encabezado posee un simple
@@ -213,7 +213,7 @@ un menú horizontal con las mismas opciones del encabezado convenientemente.
 Por ultimo, a la derecha hay una columna con opciones de zoom.
 
 .. image:: images/discoverdesign.png
-    :alt: Diseño de Discover Magazine
+  :alt: Diseño de Discover Magazine
 
 Este es el sitio web de Discover Magazine. El área de encabezado contiene un
 extenso menú horizontal o si se quiere "menú principal," en la esquina
@@ -231,7 +231,7 @@ programación que facilita mucho "cableado" inteligente de flujo de texto y
 gráficos en el sitio web.
 
 .. image:: images/smealdesign.png
-    :alt: Diseño de Penn State University's Smeal College of Business
+  :alt: Diseño de Penn State University's Smeal College of Business
 
 El ultimo ejemplo para examinar de los tres sitios web es el de Penn State
 University's Smeal College of Business (Escuela de Negocios Smeal de la
@@ -331,7 +331,7 @@ Actividad web autenticada (registrado)
      iniciado sesión dentro de un nuevo sitio web Plone:
 
     .. image:: images/plonemain3_002.png
-      :alt: Navegación de un sitio Plone como usuario registrado
+  :alt: Navegación de un sitio Plone como usuario registrado
 
 
 Roles de usuario
@@ -374,7 +374,7 @@ visualizar pestañas de color verde con los nombres *Contenidos*, *Vista*,
 *Editar*, Reglas, *Compartir*, e *Historia*:
 
 .. image:: images/editstriptabs.png
-      :alt: Pestañas
+  :alt: Pestañas
 
 
 Si se hace clic en ellas es posible explorar las diferencias entre una y
@@ -400,7 +400,7 @@ Debajo de las pestañas en la parte baja del encabezado verde puede ver varios
 menús *Mostrar, Agregar elemento y Estado*:
 
 .. image:: images/editstripmenus.png
-      :alt: Menús
+  :alt: Menús
 
 Explore estos también. Aquí están las descripciones básicas de estos menús:
 
@@ -428,14 +428,14 @@ dirección web para mantenimiento del sitio, aparecerá un botón *Entrar*
 similar al siguiente:
 
 .. image:: images/log-in.png
-    :alt: Entrar
+  :alt: Entrar
 
 
 Luego de hacer clic en el botón *Entrar*, vera un panel donde debe escribir
 el nombre de usuario y contraseña:
 
 .. image:: images/loginform.png
-    :alt: Panel inicio de sección
+  :alt: Panel inicio de sección
 
 
 Luego de iniciar sesión en un sitio web Plone el usuario vera su nombre,
@@ -456,13 +456,13 @@ del encabezado. Haga clic en su nombre para ir a su área personal llamada
 cuadro de mando:
 
 .. image:: images/loggedinstrip.png
-      :alt: Nombre completo del usuario
+  :alt: Nombre completo del usuario
 
 
 Usted podrá ver su *panel cuadro de mando*:
 
 .. image:: images/dashboardjohnsmith.png
-      :alt: Panel cuadro de mando
+  :alt: Panel cuadro de mando
 
 
 Cuando usted inicia sesión por primera vez, su cuadro de mando estará vacío,
@@ -480,7 +480,7 @@ todo correctamente listado. La pestaña *Editar* del perfil o el enlace de
 preferencias":
 
 .. image:: images/dashboardpersonalprefs.png
-      :alt: Preferencias Personales
+  :alt: Preferencias Personales
 
 
 Los campos de entrada incluyen:
@@ -554,7 +554,7 @@ Elizabeth Smith podrá ver luego de iniciar sesión y hacer clic en su nombre
 en la parte superior derecha para ir a su área personal:
 
 .. image:: images/dashboard.png
-      :alt: 
+  :alt: 
 
 
 El cuadro de control aparece vacío para nuevos usuarios.
@@ -565,7 +565,7 @@ vacío, porque aquí no hay contenido disponible para mostrar en los Portlets
 de este nuevo sitio web. Aquí están los Portlets por defecto:
 
 .. image:: images/dashboardedit.png
-      :alt: 
+  :alt: 
 
 Usted ve los Portlets de *Noticias* y *Eventos* en la columna totalmente a la
 izquierda, los Portlets de *Elementos recientes* en la segunda columna, y el
@@ -590,10 +590,10 @@ noticias, eventos, u otros elementos añadidos al sitio web.
 .. _lista de sitios web Plone: http://plone.net/sites
 
 
-Creditos de esta sección
-========================
+Créditos de esta sección
+------------------------
 
 .. sectionauthor:: Roberto Allende <rallende@menttes.com>
 .. codeauthor:: 
-    Leonardo J. Caballero G. <lcaballero@hoatzin.org>, 
-    Luis Sumoza <lsumoza@gmail.com>
+    Luis Sumoza <lsumoza@gmail.com>, 
+    Leonardo J. Caballero G. <lcaballero@cenditel.gob.ve>, 

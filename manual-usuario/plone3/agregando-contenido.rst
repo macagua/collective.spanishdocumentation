@@ -1,3 +1,4 @@
+======================
 2. Agregando Contenido
 ======================
 
@@ -361,7 +362,7 @@ Ver un vídeo de Plone 2 donde se `usa el editor visual para editar el texto de 
 
 
 Descripción de la barra de herramientas y iconos en el editor Kupu 1.4.x
-========================================================================
+------------------------------------------------------------------------
 
 Nota: Kupu es una pieza de software incrustada en Plone que se usa como
 editor visual predeterminado -- usted no vera el nombre de Kupu en ningún
@@ -1149,8 +1150,10 @@ cuando las suba a su sitio web Plone.
 .. _  : http://media.plone.org/LearnPlone/Choosing%20a%20default%20page.swf
 
 
-Creditos de esta sección
-========================
+Créditos de esta sección
+------------------------
 
-.. sectionauthor:: Guido van Rossum <guido@python.org>
-.. codeauthor:: Leonardo J. Caballero G. <lcaballero@hoatzin.org>
+.. sectionauthor:: Emanuel Sartor <emanuel@menttes.com>
+.. codeauthor:: 
+    Luis Sumoza <lsumoza@gmail.com>, 
+    Leonardo J. Caballero G. <lcaballero@cenditel.gob.ve>, 

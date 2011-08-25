@@ -1,3 +1,4 @@
+=============================
 8. Créditos y Reconocimientos
 =============================
 
@@ -40,6 +41,8 @@ A continuación se en listan a todos los traductores que han participado en este
     * Hugo Salgado (hsalgado at vulcano dot cl).
     
     * Leonardo J. Caballero G. (leonardocaballero at gmail dot com).
+    
+    * Israel Saeta Pérez (dukebody at gmail dot com).
     
     * José Subero (arawako at gmail dot com).
     

@@ -1,3 +1,4 @@
+==================================
 4. Colaboración y flujo de trabajo
 ==================================
 
@@ -215,9 +216,8 @@ La pestaña Compartir le concede colaborar con otros usuarios a través del uso
 de varias herramientas incorporadas.
 
 
-Ejemplo 1: Autorizar a otros para agregar contenido a una carpeta que usted
-creo.
-~
+Ejemplo 1: Autorizar a otros para agregar contenido a una carpeta que usted creo.
+---------------------------------------------------------------------------------
 
 En este ejemplo, Jane Smythe tiene acceso completo a su sitio web Plone. Ella
 puede agregar, editar, eliminar y publicar contenido en cualquier parte del
@@ -343,7 +343,7 @@ cambio con ella.
 
 
 Ejemplo 2: Dejar a otros editar el contenido que usted creo.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------------------------------------
 
 George y Jane han estado trabajando duro para crear Paginas en la carpeta
 Documentation. **Jane ha publicado la carpeta Documentation y varias de sus
@@ -357,7 +357,7 @@ de la carpeta Documentation y dárselo a George. De tal manera que retorna a
 la carpeta Documentation y hace clic en la pestaña *Compartir*:
 
 .. image:: images/10.png
-    :alt: sharing10.png
+  :alt: sharing10.png
 
 
 En este punto ella solo necesita hacer clic en la casilla de confirmación
@@ -367,7 +367,7 @@ y haga clic en "Project Overview" (una Pagina que creo Jane), esto es lo que
 el vera:
 
 .. image:: images/11.png
-    :alt: sharing11.png
+  :alt: sharing11.png
 
 
 Ahora George puede editar cualquier elemento en la carpeta, sin importar
@@ -380,21 +380,21 @@ completo de Molly (no usuario) y le otorga el permiso "Puede editar" para
 este documento.
 
 .. image:: images/12.png
-    :alt: sharing12.png
+  :alt: sharing12.png
 
 
 Ahora cuando Molly vaya a la carpeta Documentation, ella puede ver los dos
 elementos publicados y el elemento privado que ahora puede editar:
 
 .. image:: images/13.png
-    :alt: sharing13.png
+  :alt: sharing13.png
 
 
 Y de hecho puede editar el documento "Widget Installation" cuando haga clic
 en el:
 
 .. image:: images/13b.png
-    :alt: sharing13b.png
+  :alt: sharing13b.png
 
 
 Sin embargo note que ella cuando hace clic en cualquiera de los elementos que
@@ -403,7 +403,7 @@ puede ver estos dos elementos porque están publicados y en el flujo de
 trabajo por defecto de Plone (lo que significa que cualquiera los puede ver)
 
 .. image:: images/13c.png
-    :alt: sharing13c.png
+  :alt: sharing13c.png
 
 
 Una nota final para este ejemplo: si la carpeta Documentation no hubiese
@@ -412,5 +412,12 @@ estado en el Estado Publicado, o Molly no hubiese tenido algún otro permiso
 necesitado la dirección URL completa para poder llegar al documento que tenia
 permiso de editar. ¡Los permisos son muy específicos en Plone!
 
-~~
+
+Créditos de esta sección
+------------------------
+
+.. sectionauthor:: Leonardo J. Caballero G. <lcaballero@cenditel.gob.ve>, 
+.. codeauthor:: 
+    Luis Sumoza <lsumoza@gmail.com>, 
+    Victor Terán <vteran93@yahoo.es>
 

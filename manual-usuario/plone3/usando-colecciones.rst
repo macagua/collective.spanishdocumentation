@@ -1,3 +1,4 @@
+=====================
 5. Usando Colecciones
 =====================
 
@@ -98,7 +99,7 @@ búsqueda.
 
 
 Configurando el criterio de búsqueda
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------------
 
 Después de establecer la configuración mostrada en el panel de arriba, haga
 clic en la pestaña Criterio para que se muestre el panel de configuración de
@@ -213,7 +214,7 @@ demostrar las distintas formas de usar los Criterios.
 
 
 **Categorías**
-~~~~~~~~~~~~~~
+--------------
 
 El criterio de Categoría le permite buscar los **campos categóricos** de los
 elementos. Para que esto funcione usted debe especificar las Categorías para
@@ -231,7 +232,7 @@ lo que se haya especificado en la pestaña Categorización de cada uno de los
 elementos.
 
 **Creador**
-~~~~~~~~~~~
+-----------
 
 ****
 
@@ -255,7 +256,7 @@ usted mismo, en este caso usaría la opción Restringir al Usuario Actual.
 
 
 **Descripción**
-~~~~~~~~~~~~~~~
+---------------
 
 El campo de Descripción es esencialmente un criterio **tipo cuadro de
 búsqueda **. Sin embargo, en vez de buscar el titulo y contenido de una
@@ -267,7 +268,7 @@ llena el campo de Descripción para todos sus elementos de contenido.
 
 **
 **Ubicación**
-~~~~~~~~~~~~~
+-------------
 
 El usar el criterio de Ubicación se asemeja bastante a cuando especifica una
 ubicación al buscar un documento en su disco duro. Al especificar un criterio
@@ -292,7 +293,7 @@ Titulo de un elemento.**
 
 
 **Texto de Búsqueda**
-~~~~~~~~~~~~~~~~~~~~~
+---------------------
 
 El criterio Texto de Búsqueda es bastante útil. Es similar al cuadro de
 búsqueda de su sitio o a los motores de búsqueda de internet. Toma el texto
@@ -309,7 +310,7 @@ Contenido aparecerían en los resultados de la Colección.
 
 
 **Relativo A**
-~~~~~~~~~~~~~~
+--------------
 
 El campo Relativo A es otro campo mas, que como el de Categoría **tiene que
 ser especificado en el contenido del elemento antes de ser usado por la
@@ -337,7 +338,7 @@ relacionados a ese valor.**
 **
 
 **Estado**
-~~~~~~~~~~
+----------
 
 Usar el criterio Estado es muy sencillo. Le permite ordenar los resultados
 por los Estados **Publico o Privado**. Es una buena idea restringir
@@ -348,7 +349,7 @@ un sitio quisiera ver rápidamente el contenido privado, para determinar en
 que se tiene que trabajar y que se podría eliminar.
 
 **Fechas**
-~~~~~~~~~~
+----------
 
 Usted puede notar que hay **distintas fechas disponibles** a ser usadas como
 criterios. Puesto que hay un gran numero de fechas, estas serán estudiadas en
@@ -375,7 +376,7 @@ primero, etc.
 
 
 **Fechas******
-~~~~~~~~~~
+----------
 
 Existen numerosas opciones de Fechas que serán explicadas en la siguiente
 sección del manual.
@@ -384,7 +385,7 @@ sección del manual.
 
 
 Propiedades del Objeto
-~~~~~~~~~~~~~~~~~~~~~~
+----------------------
 
 **Tipo de Elemento**
 
@@ -418,7 +419,7 @@ especificada en las propiedades.
 
 
 Texto
-~~~~~
+-----
 
 **Nombre Corto**
 
@@ -543,7 +544,7 @@ Noticias recientes o una sección con Eventos próximos.
 
 
 Relative Date (Fecha Relativa)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------
 
 Al mirar la opción de Fecha Relativa usted puede ver que hay tres opciones
 para llenar.
@@ -580,7 +581,7 @@ esta frase "Quiero que los resultados incluyan los elementos **Menor que**
 
 
 Date Range (Rango de Fechas)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------
 
 El **Rango de Fechas** es mucho mas fácil de entender. Las Fechas de Inicio y
 Finalización son requeridas (¡No confunda estos términos con las Fechas
@@ -589,3 +590,10 @@ periodo con inicio y fin y mostrar todo el contenido dentro de este plazo.
 Note que también le permite establecer horas especificas de los días.
 
 
+Créditos de esta sección
+------------------------
+
+.. sectionauthor:: Carlos de la Guardia <carlos.delaguardia@gmail.com>
+.. codeauthor:: 
+    Luis Sumoza <lsumoza@gmail.com>, 
+    Leonardo J. Caballero G. <lcaballero@cenditel.gob.ve>, 

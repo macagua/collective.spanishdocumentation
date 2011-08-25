@@ -1,3 +1,4 @@
+==========================
 3. Administrando Contenido
 ==========================
 
@@ -13,7 +14,7 @@ elementos de una carpeta a otra.
 
 
 Cortar/Pegar
-~~~~~~~~~~~~
+------------
 
 Una tarea común en un sitio web es mover elementos desde un área hacia otra.
 Esto ocurre a menudo porque algún contenido esta en la ubicación incorrecta.
@@ -68,14 +69,14 @@ plantilla base, dentro de muchas carpetas.
 
 
 Copiar/Pegar
-~~~~~~~~~~~~
+------------
 
 Una operación de *copiar*/*pegar* es idéntica a la operación de
 *cortar*/*pegar*, con la excepción de que no es eliminado el contenido de la
 carpeta original. Funciona como es esperado que funcione.
 
 .. image:: images/lights-camera-action.png
-    :alt: lights-camera-action.png
+  :alt: lights-camera-action.png
 
 Ver un vídeo sobre como `ejecutar esas operaciones`_ en Plone 2.
 
@@ -151,12 +152,9 @@ iguales a los paneles de creación.
 
 
 Edición rápida (*opcional*)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------
 
-> Edición rápida esta deshabilitada por defecto en versiones superiores de
-Plone (3.3+). Esta puede ser habilitada a través del panel de control por un
-Administrador del sitio (Configuración del sitio -> Sitio -> casilla
-Habilitar edición rápida).
+    Edición rápida esta deshabilitada por defecto en versiones superiores de Plone (3.3+). Esta puede ser habilitada a través del panel de control por un Administrador del sitio (Configuración del sitio -> Sitio -> casilla Habilitar edición rápida).
 
 El procedimiento normal para editar un elemento de contenido es hacer clic en
 la pestaña *Editar* y usar los campos de ingreso específicos de información
@@ -292,7 +290,7 @@ directo a contenido. En lugar de eso, usualmente puede lograr lo que quiera
 únicamente utilizando Colecciones, las cuales se describirán mas adelante.
 
 .. image:: images/lights-camera-action.png
-    :alt: lights-camera-action.png
+  :alt: lights-camera-action.png
 
 Ver un vídeo sobre como `definir la pagina en la vista mostrar`_ en Plone 2.
 
@@ -354,7 +352,7 @@ descripción de como Plone manipula las direcciones Web y el nombre corto. El
 siguiente vídeo también incluye una ilustración de la operación de renombrar:
 
 .. image:: images/lights-camera-action.png
-    :alt: lights-camera-action.png
+  :alt: lights-camera-action.png
 Ver un vídeo que incluye `renombrar un elemento`_ en Plone 2.
 
 La operación *eliminar* es sencilla. Haga clic para seleccionar uno o mas
@@ -523,7 +521,7 @@ y 3.2.
 
 
 **Crear una nueva versión**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------
 
 Plone 3.0 incluye una característica de versionado. Por defecto, los
 siguientes tipos de contenidos tienen habilitado el versionamiento:
@@ -554,7 +552,7 @@ Una ves que un elemento ha sido guardado, usted puede usar la pestaña
 Histórico para ver la historia de versiones:
 
 .. image:: images/image_preview_003.png
-    :alt: Histórico de Versión
+  :alt: Histórico de Versión
 
 `_
 
@@ -563,7 +561,7 @@ de los encabezados de las columnas, estas se re-ordenaran en la lista.
 
 
 Comparando versiones
-~~~~~~~~~~~~~~~~~~~~
+--------------------
 
 Desde la pestaña "Histórico" usted puede comparar cualquier versión previa
 con la versión actual usando el enlace "Comparar con versión actual" en la
@@ -571,7 +569,7 @@ columna de Acciones. También puede comparar cualquier versión con la versión
 previa usando el enlace "Comparar con versión previa".
 
 .. image:: images/image_preview_004.png
-    :alt: Comparando Versiones
+  :alt: Comparando Versiones
 
 `_
 
@@ -586,13 +584,13 @@ Usted también puede ver las diferencias en el código haciendo clic en en
 enlace "Mostrar diferencias como código":
 
 .. image:: images/image_preview_005.png
-    :alt: Comparando Versiones (código HTML)
+  :alt: Comparando Versiones (código HTML)
 
 `_
 
 
 Previsualizando y revirtiendo a versiones previas
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------------------------------
 
 Usted puede tener una visualización previa de una versión anterior haciendo
 clic en el enlace "vista preliminar" en la columna Versión para cualquier
@@ -600,14 +598,14 @@ versión en particular desde la pestaña "Histórico"; en la pagina subsecuente,
 usted necesitara hacer clic al enlace vista preliminar:
 
 .. image:: images/image_preview_002.png
-    :alt: Vista preliminar (Enlace que lleva abajo)
+  :alt: Vista preliminar (Enlace que lleva abajo)
 
 `_
 
 o desplazar toda la pagina hacia abajo para ver la vista preliminar:
 
 .. image:: images/image_preview_006.png
-    :alt: Vista preliminar
+  :alt: Vista preliminar
 
 `_
 
@@ -616,7 +614,7 @@ versión". Un comentario indicara cuando un elemento fue revertido y a cual
 versión fue revertido:
 
 .. image:: images/image_preview_010.png
-    :alt: Volver a esta versión
+  :alt: Volver a esta versión
 
 `_
 
@@ -631,7 +629,7 @@ superiores
 
 
 **Crear una nueva versión**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------
 
 Plone 3 incluye una característica de versionado. Por defecto, los siguientes
 tipos de contenidos tienen habilitado el versionamiento:
@@ -659,14 +657,14 @@ metadatos, configuraciones, etc.
 
 
 Viendo el histórico de versiones
-~~~~~~~~~~~~~~~~~
+--------------------------------
 
 Una ves que un elemento ha sido Guardado, usted puede verlo en el viewlet
 **Histórico** encontrado al final de la pagina. Simplemente haciendo clic en
 el viewlet Histórico para expandirlo:
 
 .. image:: images/image_large_003.png
-    :alt: history-viewlet.png
+  :alt: history-viewlet.png
 
 `_
 
@@ -681,7 +679,7 @@ la siguiente información:
 
 
 Comparando versiones
-~~~~~~~~~~~~~~~~~~~~
+--------------------
 
 Desde el viewlet Histórico usted puede comparar cualquier versión previa con
 la versión actual o cualquier otra versión con la versión justo antes de
@@ -692,14 +690,14 @@ esa, use el botón COMPARAR ubicado entre las dos versiones adyacentes en el
 viewlet Histórico.
 
 .. image:: images/image_preview_009.png
-    :alt: compare-button.png
+  :alt: compare-button.png
 
 
 Haciendo clic en este botón, usted vera una pantalla como esta en donde puede
 ver las diferencias entre las dos versiones:
 
 .. image:: images/image_preview_007.png
-    :alt: compare-versions.png
+  :alt: compare-versions.png
 
 
 En este ejemplo, el texto esta de color rojo, indicando que este texto fue
@@ -709,33 +707,36 @@ sido eliminado en este ejemplo. Usted puede elegir entre las vista
 **directa** o **como código** para ver las diferencias entre versiones.
 
 .. image:: images/image_preview_005.png
-    :alt: Comparando Versiones (código HTML)
+  :alt: Comparando Versiones (código HTML)
 
 
 Usted también puede comparar cualquier versión con la versión *actual*
-haciendo clic en el icono de flecha en el viewlet Histórico.. image:: plone-3
--user-manual_archivos/image_preview_008.png
-    :alt: history-icons.png
+haciendo clic en el icono de flecha en el viewlet Histórico
+
+.. image:: plone-3-user-manual_archivos/image_preview_008.png
+  :alt: history-icons.png
+
 (icono a la izquierda). Estos iconos son encontrados a la derecha de cada
 versión listada en el viewlet.
 
 
 Viendo y revirtiendo a versiones previas
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------------------
 
 **Usted puede tener una vista preliminar de cualquier versión anterior** de
 un documento haciendo clic en el icono del "ojo" a la derecha de cualquier
-versión listada en el viewlet Histórico.. image:: plone-3-user-
-manual_archivos/image_preview_008.png
-    :alt: history-icons.png
+versión listada en el viewlet Histórico
+
+.. image:: plone-3-user-manual_archivos/image_preview_008.png
+  :alt: history-icons.png
 (icono centrado).`
 `_
 
 **Para revertir a una versión previa**, haga clic en el icono cara-reloj a la
-derecha de cualquier versión listada en el viewlet Histórico.. image::
-plone-3-user-manual_archivos/image_preview_008.png
-    :alt: history-icons.png
+derecha de cualquier versión listada en el viewlet Histórico
+
+.. image::plone-3-user-manual_archivos/image_preview_008.png
+  :alt: history-icons.png
 (icono a la derecha).`
 `_
 
@@ -757,7 +758,7 @@ su sitio y solicitarle que instale "Working Copy Support (Iterate)".**
 
 
 Resumen
-~~~~~~~
+-------
 
 Tal vez usted haya estado en una situación como esta antes: tiene un
 documento publicado, y necesita actualizarlo extensivamente, pero usted
@@ -778,7 +779,7 @@ histórico de versiones del documento.
 
 
 Usando "Retirar versión"
-~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------
 
 Primero, navegue a la pagina que usted quiere ejecutar "Retirar versión".
 Entonces desde el menú desplegable "Acciones", seleccione Retirar versión:
@@ -811,7 +812,7 @@ trabajo) la versión publicada mientras usted edita su copia.
 
 
 Usando "Guardar nueva versión"
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------
 
 Cuando usted haya terminado con la edición de la copia de trabajo hay que
 remplazarla por la versión publicada, simplemente seleccione la opción
@@ -843,7 +844,7 @@ opción "Guardar nueva versión" desde el menú desplegable "Acciones".
 
 
 Cancelando un "Retirar versión"
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------------
 
 Si por alguna razón es necesario cancelar una "retirado" y **usted no quiere
 guardar ninguno de sus cambios**, simplemente navegue hacia la copia de
@@ -890,7 +891,7 @@ presentación."
 
 
 ¿Como crear laminas?
-~~~~~~~~~~~~~~~~~~~~
+--------------------
 
 Todos los contenidos para una presentación residen en una sola pagina. Usted
 no necesita crear una pagina para cada lamina. Una lamina es creada cuando
@@ -904,7 +905,7 @@ lamina.
 
 
 ¿Como aplicar formato una lamina?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------------
 
 Es importante saber que el **Estilo de Párrafo Normal no hará que ningún
 contenido se muestre en la lamina.**. Las laminas están destinadas a contener
@@ -930,3 +931,11 @@ Párrafo Normal. Ejemplos de esos estilos incluye:
 
 -   Resaltar
 
+
+Créditos de esta sección
+------------------------
+
+.. sectionauthor::  Hugo Salgado <hsalgado@vulcano.cl>
+.. codeauthor:: 
+    Luis Sumoza <lsumoza@gmail.com>, 
+    Leonardo J. Caballero G. <lcaballero@cenditel.gob.ve>, 

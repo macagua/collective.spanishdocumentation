@@ -1,3 +1,4 @@
+=================
 7. Próximos pasos
 =================
 
@@ -277,3 +278,11 @@ documentación de Plone.org`_, o adquiera un libro de Plone o Zope para
 adentrarse en aguas mas profundas en cuanto administraciones de sitios y
 programación.
 
+
+Créditos de esta sección
+------------------------
+
+.. sectionauthor:: Israel Saeta Pérez <dukebody@gmail.com>, José Subero <arawako@gmail.com>
+.. codeauthor:: 
+    Luis Sumoza <lsumoza@gmail.com>, 
+    Leonardo J. Caballero G. <lcaballero@cenditel.gob.ve>, 

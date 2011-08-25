@@ -1,3 +1,4 @@
+============================
 6. Administración de Porlets
 ============================
 
@@ -12,6 +13,7 @@ que aparecen en cada sección de su sitio.
 
 .. image:: images/portlet_block.GIF
     :alt: portlet_block.gif
+
 Los Portlets usan un enfoque de jerarquía básica. Por defecto los Portlets
 que usted asigne en la raíz (pagina de inicio) del sitio se propagaran por
 todas las sub-secciones de este. Si usted desea un conjunto distinto de
@@ -22,6 +24,7 @@ desea ver en la pagina hija.
 
 .. image:: images/image_preview_012.png
     :alt: hierarchy.gif
+
 Como puede ver en este diagrama los Portlets están representados en azul bajo
 cada titulo de Pagina.
 
@@ -74,7 +77,7 @@ www.myplonesite.org/about/@@manage-portlets.
     :alt: portlet_manage.gif
 
 Agregar un Portlet
-~~~~~~~~~~~~~~~~~~
+------------------
 
 Agregar un Portlet es tan simple como hacer clic en el menú desplegable
 **Agregar portlet** y escoger aquel que usted desea agregar. En esta sección
@@ -82,7 +85,7 @@ cubriremos las distintas opciones disponibles.
 
 
 Editando un Portlet existente
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------
 
  Para editar las propiedades de un Portlet existente, simplemente haga clic
  en el nombre de este. En el ejemplo de la izquierda, si quisiéramos editar
@@ -92,7 +95,7 @@ Editando un Portlet existente
 
 
 Reorganizando Portlets
-~~~~~~~~~~~~~~~~~~~~~~
+----------------------
 
 Para reorganizar sus Portlets. simplemente haga clic en la **flecha que
 apunta hacia arriba o hacia abajo**. Esto afectara el orden en que se
@@ -100,7 +103,7 @@ muestran los Portlets en su pagina.
 
 
 Removiendo Portlets
-~~~~~~~~~~~~~~~~~~~
+-------------------
 
 Para remover un Portlet. haga clic en la **"X" roja **asociada a su nombre.
 
@@ -131,7 +134,7 @@ disponible.
 
 
 Navegación
-~~~~~~~~~~
+----------
 
 El Portlet de Navegación **le permite a los usuarios navegar su sitio ** con
 facilidad por medio de un "mapa estructurado del sitio" o un árbol de
@@ -144,7 +147,7 @@ Portlet de Navegación.
 
 
 Calendario
-~~~~~~~~~~
+----------
 
 El Portlet de Calendario es muy sencillo, lo que hace es mostrar un
 calendario en su sitio. Este Portlet no tiene opciones de personalizacion. Si
@@ -154,7 +157,7 @@ evento correspondiente de su sitio.
 
 
 Clásico
-~~~~~~
+------
 
 Un Portlet Clásico se refiere a la forma en que los Portlets eran usados en
 versiones mas viejas de Plone: antes de Plone 3. Usted debe crear una
@@ -164,7 +167,7 @@ requiere un conocimiento técnico de la Interfaz de Administración de Zope y
 TALES.
 
 Colección
-~~~~~~~~~
+---------
 
 El Portlet de Colección le permitirá **mostrar los resultados de una
 Colección**. Usted debe tener una Colección previamente creada para agregar
@@ -174,7 +177,7 @@ modo que sea fácilmente visible para el publico. Para instrucciones de como
 crear un Portlet de Colección siga este `Como-hacer`_.
 
 Eventos
-~~~~~~~
+-------
 
 El Portlet de Eventos **muestra Eventos próximos**, en el caso de que usted
 tenga Eventos en su sitio. Usted puede determinar cuantos Eventos quiere
@@ -182,7 +185,7 @@ mostrar y cuales basados en el Estado de Publicación.
 
 
 Entrar
-~~~~~~
+------
 
 El Portlet de Inicio de sesión es otro que no es personalizable y simplemente
 **muestra un campo para Inicio de sesión** que le permitirá a usuarios
@@ -191,7 +194,7 @@ este Portlet no aparecerá.
 
 
 Noticias
-~~~~~~~~
+--------
 
 El Portlet de Noticias funciona exactamente como el Portlet de Eventos. No
 obstante en vez de mostrar Eventos, **muestra Noticias recientes**. Una vez
@@ -200,7 +203,7 @@ en su Estado.
 
 
 Fuente RSS
-~~~~~~~~~~
+----------
 
 El Portlet de Fuente RSS le permite hacer un enlace a una Fuente RSS, escoger
 el numero de elementos a mostrar, y especificar el tiempo máximo de intento
@@ -208,7 +211,7 @@ de recarga de fuente.
 
 
 Elementos recientes
-~~~~~~~~~~~~~~~~~~~
+-------------------
 
 El Portlet de Elementos recientes muestra un **numero personalizable de
 Elementos recientes**, listados por Titulo. Estos son determinados por su
@@ -216,7 +219,7 @@ ultima fecha de modificación.
 
 
 Lista de revisión
-~~~~~~~~~~~~~~~~~
+-----------------
 
 El Portlet de Lista de Revisión mostrara una **lista de elementos que han
 sido enviados a revisión**. Si usted esta usando un ciclo de enviar y revisar
@@ -227,7 +230,7 @@ iniciado sesión, es decir, que no esta disponible para el publico.
 
 
 Búsqueda
-~~~~~~~~
+--------
 
 El Portlet de Búsqueda ubicara un cuadro de búsqueda en su columna de
 Portlet. Este cuadro de búsqueda buscara títulos, descripciones, y contenido
@@ -238,7 +241,7 @@ JavaScript.
 
 
 Texto estático
-~~~~~~~~~~~~~~
+--------------
 
 El Portlet de Texto estático le permite ingresar contenido tal como si fuera
 un elemento de Pagina normal. Esto es útil para agregar hiperenlaces a
@@ -246,4 +249,11 @@ diferentes sitios o cualquier información que vaya a cambiar. Un ejemplo de
 este Portlet seria el "Still Stumped?" ("¿Aun no entiende?") ubicado en la
 parte derecha de este sitio. Para información en Portlets de texto estático
 vea el Como-hacer de `Portlets estáticos`_.
+
+
+Créditos de esta sección
+------------------------
+
+.. sectionauthor:: Luis Sumoza <lsumoza@gmail.com>
+.. codeauthor:: Leonardo J. Caballero G. <lcaballero@cenditel.gob.ve>
 
