@@ -17,7 +17,7 @@ Linux/BSD
 
 
 Requisitos previos
-------------------
+^^^^^^^^^^^^^^^^^^
 
 Antes de instalar Plone en Linux, BSD, o cualquier otro sistema operativo
 basado en Unix, debería asegurarse que tiene los siguientes paquetes
@@ -43,7 +43,7 @@ construir Plone
 
 
 Obtener el instalador de Plone
-------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 El instalador para Linux/BSD/Unix, denominado Unified Installer (Instalador
 Unificado), se puede descargar de `esta pagina`_ en el sitio web de Plone.
@@ -62,7 +62,7 @@ Unificado), se puede descargar de `esta pagina`_ en el sitio web de Plone.
 
 
 Configurando su Instalación Plone
----------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Lo primero que debe decidir al momento de instalar Plone es si quiere una
 instalación ZEO o una instalación autónoma. Probablemente debería escoger ZEO
@@ -79,7 +79,7 @@ comando la puede encontrar `aquí`_.
 
 
 Últimos pasos
--------------
+^^^^^^^^^^^^^
 
 Cercano del final de la instalación, el instalador debió haber mostrado su
 nombre de usuario y contraseña para su instalación Plone en la Terminal. Si
@@ -123,7 +123,7 @@ MS Windows (2000, 2003, XP, Vista, 7)
 
 
 Obtener Plone
--------------
+^^^^^^^^^^^^^
 
 Puede descargar Plone para Windows de `esta pagina`_.
 
@@ -135,7 +135,7 @@ Puede descargar Plone para Windows de `esta pagina`_.
 
 
 Asistente de instalación de Plone
----------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 1.  Introduzca el directorio donde le gustaría instalar Plone. La mayoría
     de personas están de acuerdo con la ubicación predeterminada. (Haga clic
@@ -153,7 +153,7 @@ Asistente de instalación de Plone
 
 
 Iniciando Plone
----------------
+^^^^^^^^^^^^^^^
 
 Si usted decidió no hacer de Plone un servicio, usted lo puede iniciar y
 detener a través del directorio de Plone en su linea de comandos y a
@@ -218,7 +218,7 @@ Unificado lo usara sin tener que modificarlo en las librerías de su sitio.
 
 
 ¿Por que el instalador Unificado?, ¿Por que no un sistema de Paquetes/Puertos?
-------------------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 En las listas de ayuda y canales IRC de Plone, la sugerencia "simplemente use
 el instalador Unificado", generalmente resulta en una de dos reacciones:
@@ -252,7 +252,7 @@ resolvieron este problema.
 
 
 Opciones principales del instalador Unificado
----------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 El instalador Unificado para Plone posee tres características principales:
 
@@ -267,7 +267,7 @@ Cada una de estas opciones están descritas en secciones separadas.
 
 
 Cambios en Plone 4
-------------------
+^^^^^^^^^^^^^^^^^^
 
 -   El instalador ahora incluye un archivo de configuración
     *develop.cfg*, el cual puede usar después de la instalación inicial para
@@ -284,7 +284,7 @@ Cambios en Plone 4
     Correo) para correo electrónico.
 
 Cambios en Plone 3.1
---------------------
+^^^^^^^^^^^^^^^^^^^^
 
 -   El instalador Unificado ahora usa buildout para configurar las
     instancias de Plone, lo que hace mas fácil controlar productos
@@ -306,7 +306,7 @@ Cambios en Plone 3.1
 
 
 Cambios en Plone 3
-------------------
+^^^^^^^^^^^^^^^^^^
 
 Si usted ha usado el instalador Unificado para versiones anteriores de Plone,
 ya sabrá que las opciones anteriores son nuevas. Hay algunos cambios
@@ -353,7 +353,7 @@ diferencias claves son:
 
 
 ¿Por que escoger entre instalación normal o root?
--------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Instalar como root (o con privilegios root a través de sudo) puede ser la
 mejor opción para instalaciones de producción de Plone. Ya que la instalación
@@ -427,7 +427,7 @@ Preparar la ejecución y ejecutar el instalador Unificado.
 
 
 Preparaciones
--------------
+^^^^^^^^^^^^^
 
 Verifique su plataforma de administrador de paquetes y asegúrese que tenga
 los siguientes instalados:
@@ -456,7 +456,7 @@ Luego vaya al nuevo directorio creado: ::
 
 
 Ejecutando install.sh
----------------------
+^^^^^^^^^^^^^^^^^^^^^
 
 Si usted se decidió por la instalación con privilegios root; ya sea por el
 comando su a root o precediendo estos comandos con el comando sudo.
@@ -542,7 +542,7 @@ para la instalación principal.
 
 
 Los Comandos
-------------
+^^^^^^^^^^^^
 
 Ubiquese en el directorio que contiene el archivo install.sh de su instalador
 Unificado desempaquetado.
@@ -566,7 +566,7 @@ el cache de buildout.
 
 
 Definiendo nuevos Puertos
--------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 La nueva instancia aun no esta lista para ejecutarse, ya que esta configurada
 para usar los puertos por defecto y entrara en conflicto con la instalación
@@ -590,7 +590,7 @@ Solo cambie el numero de puerto (8100); y no modifique la dirección IP.
 
 
 Construyalo
------------
+^^^^^^^^^^^
 
 Guarde sus cambios y ejecute buildout para actualizar todas las partes de la
 instalación: ::
@@ -697,7 +697,7 @@ plataformas particulares
 
 
 Instalando en Solaris 10 (x86)
-------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
 *Publicado por Michael Bobzin el 15 de Febrero de 2008 03:12 PM*
@@ -727,7 +727,7 @@ cambiar algunas lineas en install.sh ::
 
 
 Instalando en Solaris 10 (SPARC)
---------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 *Publicado por Joni Barnoff el 5 de abril de 2008 07:31 PM* ::
 
@@ -738,7 +738,7 @@ Esto es necesario para incluir *libssl* en la construcción de Python.
 
 
 Instalando en Solaris 10 (SPARC)
---------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 *Publicado por Jim Leek el 20 de Marzo de 2009 04:21 PM*
 
@@ -802,7 +802,7 @@ Para mas información:
 
 
 Solaris 10 x86
---------------
+^^^^^^^^^^^^^^
 
 *Publicado por Coopertino el 9 de Septiembre de 2008 02:03 PM* ::
 
@@ -864,7 +864,7 @@ Iniciando/Deteniendo Plone
 
 
 Usando el Controlador
----------------------
+^^^^^^^^^^^^^^^^^^^^^
 
 Usted puede acceder al Controlador de Plone para Windows, mediante el botón
 de *Inicio > Todos los programas > Plone*. Con el controlador puede start/stop
@@ -872,7 +872,7 @@ de *Inicio > Todos los programas > Plone*. Con el controlador puede start/stop
 
 
 Usando la linea de comando.
----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Después de que el instalador haya finalizado proceda a abrir una ventana de
 Símbolo de sistema (generalmente *Inicio > Todos los programas > Accesorios*).
