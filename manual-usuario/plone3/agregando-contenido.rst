@@ -271,7 +271,7 @@ involucrar un poco de trabajo en su computadora local, pero es esencial
 porque las fotografías, mapas y gráficos personalizados son muy importantes
 en los sitios web.
 
-    `Preparando imágenes para la Web`_
+     :ref:`preparando-imagenes-para-la-web`
 
     **Recuerde usar formatos de archivos que sean estándares para la web para cada una de las imágenes. Los formatos aceptados incluyen: JPG, JPEG, GIF, y PNG. No use formatos BMP o TIFF ya que estos no son completamente compatibles con los navegadores web.**
 
@@ -1077,6 +1077,7 @@ sitio web, sin ninguna restricción. Otros prefieren un enfoque mas
 controlado, restringiendo los tipos en un esquema organizativo u otro. Plone
 tiene la flexibilidad para acomodarse a un rango de diseños.
 
+.. _preparando-imagenes-para-la-web:
 
 2.12. Preparando imágenes para la Web
 =====================================
@@ -1136,7 +1137,6 @@ cuando las suba a su sitio web Plone.
 
 
 .. _agregar una carpeta: http://media.plone.org/LearnPlone/Adding%20a%20new%20folder%20and%20new%20page.swf
-.. _Preparando imágenes para la Web: http://plone.org/documentation/manual/plone-3-user-manual/adding-content/preparing-images-for-the-web
 .. _lenguaje de marcado: http://plone.org/documentation/manual/plone-3-user-manual/adding-content/adding-pages#footnotes
 .. _usa el editor visual para editar el texto de cuerpo de una pagina: http://media.plone.org/LearnPlone/Editing%20Body%20Text.swf
 .. _Markdown: http://en.wikipedia.org/wiki/Markdown

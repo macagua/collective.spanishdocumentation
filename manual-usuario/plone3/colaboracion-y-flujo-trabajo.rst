@@ -19,6 +19,7 @@ carpetas, imágenes, paginas, etc. y cualquier tipo de contenido especializado
 tiene opciones para controlar los Estados de Publicación:
 
 .. image:: images/statemenu1.png
+  :alt: 
 
 
 El titulo del menú mostrara el Estado actual de Publicación para el elemento
@@ -59,6 +60,7 @@ Privado con la opción *Echar atrás*, si se requiere. La opciones del menú
 Estado cambiaran consecuentemente:
 
 .. image:: images/statemenu2.png
+  :alt: 
 
 
 Debería considerarse la retracción o ajustarse a *Privado*, todo aquel
@@ -84,11 +86,13 @@ contenido.
 Este menú *Estado* tiene la opción *Avanzado*...:
 
 .. image:: images/copy_of_statemenu1.png
+  :alt: 
 
 
 El cual muestra el panel de *Avanzado*:
 
 .. image:: images/stateadvanced.png
+  :alt: 
 
 
 Debajo de una sección de explicación al principio del panel, se haya una
@@ -142,8 +146,10 @@ elemento ya esta publicado aparecerán las siguientes opciones al final del
 panel *Retirar* y *Echar atrás* para "privatizar" el elemento,
 estableciéndolo a *borrador publico* o luego para Estado *Privado*.
 
-`.. image:: images/lightscameraaction.png
-`_ Ver un vídeo sobre como `controlar el Estado de Publicación`_ en Plone 2
+.. image:: images/lightscameraaction.png
+  :alt: 
+
+Ver un vídeo sobre como `controlar el Estado de Publicación`_ en Plone 2
 
 
 4.3. Políticas de flujo de trabajo
@@ -183,6 +189,7 @@ periodistas crearan historias y las enviaran para su respectiva revisión y
 aprobación:
 
 .. image:: images/workflowsteps.png
+  :alt: 
 
 
 Los periodistas agregaran noticias y las *enviaran* (la opción de menú
@@ -232,7 +239,8 @@ los contenidos existentes, pero ella necesita que el comience a agregar
 contenido. Antes de seguir junto a Jane, rápidamente observemos lo que
 actualmente ve George cuando inicia sesión en este sitio Plone:
 
- .. image:: images/02b.png
+.. image:: images/02b.png
+  :alt: 
 
 
 Note que actualmente George ni siquiera puede ver la carpeta "Documentation,
@@ -246,6 +254,7 @@ contenido a la carpeta Documentation.
 Jane navega a la carpeta Documentation y hace clic en la pestaña Compartir:
 
 .. image:: images/03_002.png
+  :alt: 
 
 
 Lo primero que hay que notar es que ella tiene todos los permisos disponibles
@@ -284,6 +293,7 @@ carpeta Documention, para que pueda agregar contenido a la carpeta. Jane lo
 busca por su nombre:
 
 .. image:: images/04.png
+  :alt: 
 
 
 Ahora ella puede otorgar permisos específicos a George para la carpeta
@@ -291,6 +301,7 @@ Documentation. Ella le dará el permiso "Puede agregar" y luego hará clic en
 "Guardar"
 
 .. image:: images/05_002.png
+  :alt: 
 
 
  ¡Eso es todo! Ahora veamos como ve George el sitio.
@@ -303,6 +314,7 @@ Por ejemplo, George puede hacer clic en la pestaña *Inicio* para refrescar la
 pagina y podrá ver la carpeta Documentation
 
 .. image:: images/06.png
+  :alt: 
 
 
 Cuando George hace clic en la pestaña Documentation, se da cuenta que puede
@@ -311,12 +323,14 @@ los tipos de contenidos disponibles en esta, como se muestra en el menú
 *Agregar elemento*:
 
 .. image:: images/07.png
+  :alt: 
 
 
 George quiere revisar lo que Jane ha creado ya, así que hace clic en el
 enlace "Project Overview" y revisa:
 
 .. image:: images/07b.png
+  :alt: 
 
 
 George puede ver el documento, sin embargo, sus permisos limitados no le
@@ -327,6 +341,7 @@ George agrega una Pagina llamada "Widget Installation" y crea el contenido
 para esa Pagina. Cuando finalice el la guarda:
 
 .. image:: images/08.png
+  :alt: 
 
 
 Jane ve el trabajo que ha hecho George. Ella hace clic en la pestaña
@@ -334,6 +349,7 @@ Documentation y puede ver George realmente ha estado ocupado. Ella hace clic
 en la Pagina "Widget Installation" para revisarla detenidamente:
 
 .. image:: images/09.png
+  :alt: 
 
 
 Note que Jane tiene acceso completo a la Pagina que ha creado George. Ella la
@@ -350,6 +366,7 @@ Documentation. **Jane ha publicado la carpeta Documentation y varias de sus
 paginas**
 
 .. image:: images/09b.png
+  :alt: 
 
 
 Jane ha decidido cambiar todo el control de las ediciones (mas no publicar)
