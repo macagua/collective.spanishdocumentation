@@ -25,6 +25,8 @@ Eastern Tiger Swallowtail mostrada abajo --, esta carpeta puede ser movida de
 una manera simple usando una operación de *cortar*/*pegar*:
 
 .. image:: images/copy_of_operationcut.png
+  :alt:
+  :align: center
 
 
 Note que se ha seleccionado la carpeta Eastern Tiger Swallowtail, y que se
@@ -35,31 +37,37 @@ web. Sin embargo, la carpeta Eastern Tiger Swallowtail no desaparece
 inmediatamente, esperando la operación de pegar. El botón *pegar* esta
 resaltado para mostrar que las operaciones cortar/pegar están en proceso:
 
- .. image:: images/operationpaste.png
+.. image:: images/operationpaste.png
+  :alt:
+  :align: center
 
 
 El botón *pegar* esta activo. El próximo paso es navegar hasta la carpeta de
 destino, en este caso la carpeta Swallowtails :
 
 .. image:: images/copy_of_operationpaste2.png
-
-
+  :alt:
+  :align: center
 
 
 Después de hacer clic en la carpeta Swallowtails, allí se sigue mostrando el
 botón *pegar*, porque la operación de pegado aun no se ha completado:
 
- .. image:: images/operationpaste3.png
+.. image:: images/operationpaste3.png
+  :alt:
+  :align: center
 
 
- Por ultimo, al hacer clic en el botón *pegar* se agrega la carpeta Eastern
- Tiger Swallowtail a la carpeta correcta Swallowtails, y se borra de su
- ubicación original; carpeta Skippers. Con esto la operación de
- *cortar*/*pegar* ha terminado:
+Por ultimo, al hacer clic en el botón *pegar* se agrega la carpeta Eastern
+Tiger Swallowtail a la carpeta correcta Swallowtails, y se borra de su
+ubicación original; carpeta Skippers. Con esto la operación de
+*cortar*/*pegar* ha terminado:
 
 
 
 .. image:: images/operationpaste4.png
+  :alt:
+  :align: center
 
 
 El botón *pegar* permanece activo porque se puede continuar pegando la
@@ -77,6 +85,7 @@ carpeta original. Funciona como es esperado que funcione.
 
 .. image:: images/lights-camera-action.png
   :alt: lights-camera-action.png
+  :align: center
 
 Ver un vídeo sobre como `ejecutar esas operaciones`_ en Plone 2.
 
@@ -109,6 +118,8 @@ Acá vemos el panel *Editar* para una carpeta, en este caso, una llamada
 "Butterflies":
 
 .. image:: images/edititemfolder.png
+  :alt:
+  :align: center
 
 
 Eso es todo. Cambie lo que desee y guarde, y el contenido sera actualizado en
@@ -128,6 +139,8 @@ puede hacerse navegando a una imagen individual y haciendo clic en la pestaña
 siguiente panel de *Edición de Imagen*:
 
 .. image:: images/editimage.png
+  :alt:
+  :align: center
 
 
 Aquí, una imagen llamada "Eastern Tiger Swallowtail Butterfly" esta siendo
@@ -142,6 +155,8 @@ específicamente en las imágenes, ofreciendo varias alternativas de
 transformación de la imagen:
 
 .. image:: images/transformimage.png
+  :alt:
+  :align: center
 
 
 De esta manera editar una imagen es un poco distinto que crearla desde un
@@ -170,18 +185,24 @@ ratón *NO* esta sobre texto editable, así que puede ver el titulo y cuerpo
 del texto como lo haría normalmente:
 
 .. image:: images/inlineeditingoff.png
+  :alt:
+  :align: center
 
 
 Pero cuando el ratón se mueve sobre el cuerpo del texto, una caja remarca el
 cuerpo del texto como editable:
 
 .. image:: images/inlineeditingbodytext1.png
+  :alt:
+  :align: center
 
 
 Al hacer clic dentro del cuerpo del texto después que aparece la caja de
 edición, aparece el editor visual:
 
 .. image:: images/inlineeditingbodytext2.png
+  :alt:
+  :align: center
 
 
 Al cambiar o agregar texto y guardar devuelve la vista normal. Esto es
@@ -193,12 +214,16 @@ Si se mueve el mouse sobre el titulo, que también es editable, aparece una
 caja de edición rápida:
 
 .. image:: images/inlineeditingtitle1.png
+  :alt:
+  :align: center
 
 
 Al hacer clic en el titulo después que aparece la caja de edición, se activa
 un simple campo de edición con los botones Guardar y Cancelar:
 
 .. image:: images/inlineeditingtitle2.png
+  :alt:
+  :align: center
 
 
 Cambie el titulo y guarde. El beneficio en rapidez de la edición rápida se
@@ -225,6 +250,8 @@ el diseño por defecto de su sitio web Plone. Cuando hace clic en la carpeta
 "Skippers", se muestra el panel de vista estándar, llamado "vista estándar":
 
 .. image:: images/folderviewstandard.png
+  :alt:
+  :align: center
 
 
 La pestaña *Visualizar* es como se muestran los contenidos de un elemento
@@ -236,22 +263,30 @@ seleccionadas mediante el menú desplegable de selección *mostrar*. La vista
 por defecto se llama *vista estándar*:
 
 .. image:: images/folderdisplaymenu.png
+  :alt:
+  :align: center
 
 
 Y esta es una *vista resumen*:
 
  .. image:: images/folderviewsummary.png
+  :alt:
+  :align: center
 
 
 Y una *vista tabular*:
 
  .. image:: images/folderviewtabular.png
+  :alt:
+  :align: center
 
 
 Y una *vista en miniatura*, la que se usa principalmente para fotografías,
 pero que también funciona para el contenido normal:
 
  .. image:: images/folderviewthumbnail.png
+  :alt:
+  :align: center
 
 
 Hacer un álbum de fotos es muy simple. Tan solo agregue las fotografías
@@ -266,10 +301,8 @@ mejor sera que le cambie las dimensiones en su computador local antes de
 subirlas, debido a que son muy grandes.
 
 
-Establecer un elemento de contenido individual de la carpeta como vista por
-defecto de la misma.
------------------------------------------------------------------------------
--------------------
+Establecer un elemento de contenido individual de la carpeta como vista por defecto de la misma.
+------------------------------------------------------------------------------------------------
 
 La funcionalidad de lista de vista básica de carpetas descrita anteriormente
 encaja con la manera normal de pensar en carpetas -- como contenedores de
@@ -291,6 +324,7 @@ directo a contenido. En lugar de eso, usualmente puede lograr lo que quiera
 
 .. image:: images/lights-camera-action.png
   :alt: lights-camera-action.png
+  :align: center
 
 Ver un vídeo sobre como `definir la pagina en la vista mostrar`_ en Plone 2.
 
@@ -314,6 +348,8 @@ Haciendo clic en la pestaña *Contenidos* para una carpeta, como la siguiente
 carpeta Skippers, muestra el panel de la pestaña *Contenidos*:
 
 .. image:: images/foldercontents.png
+  :alt:
+  :align: center
 
 
 El panel de la pestaña *Contenidos* es inmediatamente reconocido observando
@@ -338,6 +374,8 @@ el *nombre corto* así como el *titulo*, por que usualmente se desea cambiar
 ambos, si se cambia alguno. Considere el siguiente ejemplo:
 
 .. image:: images/renameitem.png
+  :alt:
+  :align: center
 
 
 Si usted quisiera cambiar el titulo a "Long-tailed Skippers," usted podría
@@ -353,6 +391,8 @@ siguiente vídeo también incluye una ilustración de la operación de renombrar
 
 .. image:: images/lights-camera-action.png
   :alt: lights-camera-action.png
+  :align: center
+
 Ver un vídeo que incluye `renombrar un elemento`_ en Plone 2.
 
 La operación *eliminar* es sencilla. Haga clic para seleccionar uno o mas
@@ -373,9 +413,6 @@ Presione *Shift* y haga *clic* para seleccionar un rango de elementos de
 trabajo. Esto podría ser muy útil para una carpeta con una docena o mas
 elementos, y podría ser indispensable para carpetas con cientos de elementos.
 
-.. image:: images/advancedstatepanel.html
-
-
 Adicionalmente a estas operaciones de acción individual, el reordenar es una
 manipulación natural usando el ratón, como esta descrita en la próxima
 sección.
@@ -395,6 +432,8 @@ continuación puede ver que las sub-carpetas de mariposa Skipper no están en
 orden alfabético:
 
 .. image:: images/copy_of_foldercontents.png
+  :alt:
+  :align: center
 
 
 Para mover el elemento del tope nombrado "Spread-winged Skippers" al final de
@@ -402,6 +441,8 @@ la lista, uno podría hacer clic en la columna Orden a la derecha (que
 contiene dos signos de dos puntos) y arrastre la fila a la posición deseada:
 
 .. image:: images/copy_of_foldercontentsreorder.png
+  :alt:
+  :align: center
 
 
 Arrastrar y soltar se hace presionando y manteniendo el botón del ratón hasta
@@ -409,11 +450,15 @@ donde quiera mover el elemento. El elemento que se esta moviendo se torna
 amarillo mientras que este en esta acción:
 
 .. image:: images/foldercontentsdrag.png
+  :alt:
+  :align: center
 
 
 Cuando el botón de ratón es liberado, el elemento queda donde fue soltado:
 
 .. image:: images/foldercontentsdrop.png
+  :alt:
+  :align: center
 
 
 
@@ -429,6 +474,8 @@ para la carpeta. Allí hay un casilla de comprobación para "Habilitar la
 navegación siguiente/anterior" para los elementos contenidos en la carpeta:
 
 .. image:: images/previousnextenabling.png
+  :alt:
+  :align: center
 
 
 Una ves habilitado, tan pronto elementos de contenidos son agregados en la
@@ -436,6 +483,8 @@ carpeta, los enlaces siguiente/anterior automáticamente aparecerán como ha
 sido requerido:
 
 .. image:: images/previousnextexample.png
+  :alt:
+  :align: center
 
 
 
@@ -458,6 +507,8 @@ swallowtail agregada por error a la carpeta Skippers, en vez de cortar y
 pegar en algún lugar, simplemente podría ser eliminada:
 
 .. image:: images/operationdelete.png
+  :alt:
+  :align: center
 
 
 En el ejemplo que se muestra arriba, la carpeta *Eastern Tiger Swallowtail*
@@ -486,6 +537,7 @@ documento, ella observara lo siguiente:
 
 .. image:: images/locking01.png
   :alt: locking01.png
+  :align: center
 
 
 Una ves que George allá finalizado la edición del documento y haga clic en el
@@ -553,8 +605,7 @@ Histórico para ver la historia de versiones:
 
 .. image:: images/image_preview_003.png
   :alt: Histórico de Versión
-
-`_
+  :align: center
 
 La versión mas reciente es listada de primero y al hacer clic en cualquiera
 de los encabezados de las columnas, estas se re-ordenaran en la lista.
@@ -570,8 +621,7 @@ previa usando el enlace "Comparar con versión previa".
 
 .. image:: images/image_preview_004.png
   :alt: Comparando Versiones
-
-`_
+  :align: center
 
 
 La leyenda indica que el contenido agregado se manifiesta en color verde
@@ -585,8 +635,8 @@ enlace "Mostrar diferencias como código":
 
 .. image:: images/image_preview_005.png
   :alt: Comparando Versiones (código HTML)
+  :align: center
 
-`_
 
 
 Previsualizando y revirtiendo a versiones previas
@@ -599,15 +649,15 @@ usted necesitara hacer clic al enlace vista preliminar:
 
 .. image:: images/image_preview_002.png
   :alt: Vista preliminar (Enlace que lleva abajo)
+  :align: center
 
-`_
 
 o desplazar toda la pagina hacia abajo para ver la vista preliminar:
 
 .. image:: images/image_preview_006.png
   :alt: Vista preliminar
+  :align: center
 
-`_
 
 Para revertir una versión en particular, solo use el enlace "Volver a esta
 versión". Un comentario indicara cuando un elemento fue revertido y a cual
@@ -615,8 +665,8 @@ versión fue revertido:
 
 .. image:: images/image_preview_010.png
   :alt: Volver a esta versión
+  :align: center
 
-`_
 
 
 3.10. Versionando (Plone v3.3+)
@@ -665,8 +715,8 @@ el viewlet Histórico para expandirlo:
 
 .. image:: images/image_large_003.png
   :alt: history-viewlet.png
+  :align: center
 
-`_
 
 La versión mas reciente es listada de primero. El viewlet de Histórico provee
 la siguiente información:
@@ -691,6 +741,7 @@ viewlet Histórico.
 
 .. image:: images/image_preview_009.png
   :alt: compare-button.png
+  :align: center
 
 
 Haciendo clic en este botón, usted vera una pantalla como esta en donde puede
@@ -698,6 +749,7 @@ ver las diferencias entre las dos versiones:
 
 .. image:: images/image_preview_007.png
   :alt: compare-versions.png
+  :align: center
 
 
 En este ejemplo, el texto esta de color rojo, indicando que este texto fue
@@ -708,13 +760,15 @@ sido eliminado en este ejemplo. Usted puede elegir entre las vista
 
 .. image:: images/image_preview_005.png
   :alt: Comparando Versiones (código HTML)
+  :align: center
 
 
 Usted también puede comparar cualquier versión con la versión *actual*
 haciendo clic en el icono de flecha en el viewlet Histórico
 
-.. image:: plone-3-user-manual_archivos/image_preview_008.png
+.. image:: images/image_preview_008.png
   :alt: history-icons.png
+  :align: center
 
 (icono a la izquierda). Estos iconos son encontrados a la derecha de cada
 versión listada en el viewlet.
@@ -727,21 +781,20 @@ Viendo y revirtiendo a versiones previas
 un documento haciendo clic en el icono del "ojo" a la derecha de cualquier
 versión listada en el viewlet Histórico
 
-.. image:: plone-3-user-manual_archivos/image_preview_008.png
+.. image:: images/image_preview_008.png
   :alt: history-icons.png
-(icono centrado).`
-`_
+  :align: center
+
+(icono centrado).
 
 **Para revertir a una versión previa**, haga clic en el icono cara-reloj a la
 derecha de cualquier versión listada en el viewlet Histórico
 
-.. image::plone-3-user-manual_archivos/image_preview_008.png
+.. image:: images/image_preview_008.png
   :alt: history-icons.png
-(icono a la derecha).`
-`_
+  :align: center
 
-`
-`_
+(icono a la derecha).
 
 
 3.11. Copia de trabajo
@@ -785,6 +838,8 @@ Primero, navegue a la pagina que usted quiere ejecutar "Retirar versión".
 Entonces desde el menú desplegable "Acciones", seleccione Retirar versión:
 
 .. image:: images/01.png
+  :alt:
+  :align: center
 
 
 Después se le pedirá que seleccione la carpeta en la cual la "copia de
@@ -792,12 +847,16 @@ trabajo" deberá localizarse -- esta sera la versión que usted edite. En este
 ejemplo, elegiremos la carpeta Home, que es la carpeta personal del usuario:
 
 .. image:: images/02.png
+  :alt:
+  :align: center
 
 
 Luego haga clic en "Retirar versión". Su ubicación actual es automáticamente
 actualizada a la copia de trabajo:
 
 .. image:: images/03.png
+  :alt:
+  :align: center
 
 
 Ahora usted es libre para editar su propia copia local del documento
@@ -808,6 +867,8 @@ cambios hechos a (y subsecuentemente se pierdan desde la versión de copia de
 trabajo) la versión publicada mientras usted edita su copia.
 
 .. image:: images/locked.png
+  :alt:
+  :align: center
 
 
 
@@ -819,12 +880,16 @@ remplazarla por la versión publicada, simplemente seleccione la opción
 "Guardar nueva versión" en el menú desplegable "Acciones":
 
 .. image:: images/04a.png
+  :alt:
+  :align: center
 
 
 Se le pedirá que ingrese un mensaje para el guardar la Nueva Versión.
 Rellenelo y haga clic en el botón "Guardar nueva versión":
 
 .. image:: images/04b.png
+  :alt:
+  :align: center
 
 
 Su documento actualizado remplazara ahora la copia publicada y se convertirá
@@ -832,6 +897,8 @@ en la nueva copia publicada. Note que su ubicación ha sido actualizada a la
 ubicación del documento original.
 
 .. image:: images/05.png
+  :alt:
+  :align: center
 
 
 También note que ya no existe una copia de trabajo del documento en la
@@ -852,12 +919,16 @@ trabajo y seleccione la opción "Cancelar retirada de versión" desde el menú
 desplegable "Acciones":
 
 .. image:: images/cancel1.png
+  :alt:
+  :align: center
 
 
 Se le pedirá que confirme "Cancelar retirada de versión" o "Mantener retirada
 de versión":
 
 .. image:: images/cancel2.png
+  :alt:
+  :align: center
 
 
 Note que si el usuario que ha retirado una versión de una copia de trabajo no

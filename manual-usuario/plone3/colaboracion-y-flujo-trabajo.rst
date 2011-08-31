@@ -20,6 +20,7 @@ tiene opciones para controlar los Estados de Publicación:
 
 .. image:: images/statemenu1.png
   :alt: 
+  :align: center
 
 
 El titulo del menú mostrara el Estado actual de Publicación para el elemento
@@ -61,6 +62,7 @@ Estado cambiaran consecuentemente:
 
 .. image:: images/statemenu2.png
   :alt: 
+  :align: center
 
 
 Debería considerarse la retracción o ajustarse a *Privado*, todo aquel
@@ -87,12 +89,14 @@ Este menú *Estado* tiene la opción *Avanzado*...:
 
 .. image:: images/copy_of_statemenu1.png
   :alt: 
+  :align: center
 
 
 El cual muestra el panel de *Avanzado*:
 
 .. image:: images/stateadvanced.png
   :alt: 
+  :align: center
 
 
 Debajo de una sección de explicación al principio del panel, se haya una
@@ -148,6 +152,7 @@ estableciéndolo a *borrador publico* o luego para Estado *Privado*.
 
 .. image:: images/lightscameraaction.png
   :alt: 
+  :align: center
 
 Ver un vídeo sobre como `controlar el Estado de Publicación`_ en Plone 2
 
@@ -190,6 +195,7 @@ aprobación:
 
 .. image:: images/workflowsteps.png
   :alt: 
+  :align: center
 
 
 Los periodistas agregaran noticias y las *enviaran* (la opción de menú
@@ -241,6 +247,7 @@ actualmente ve George cuando inicia sesión en este sitio Plone:
 
 .. image:: images/02b.png
   :alt: 
+  :align: center
 
 
 Note que actualmente George ni siquiera puede ver la carpeta "Documentation,
@@ -255,6 +262,7 @@ Jane navega a la carpeta Documentation y hace clic en la pestaña Compartir:
 
 .. image:: images/03_002.png
   :alt: 
+  :align: center
 
 
 Lo primero que hay que notar es que ella tiene todos los permisos disponibles
@@ -294,6 +302,7 @@ busca por su nombre:
 
 .. image:: images/04.png
   :alt: 
+  :align: center
 
 
 Ahora ella puede otorgar permisos específicos a George para la carpeta
@@ -302,7 +311,7 @@ Documentation. Ella le dará el permiso "Puede agregar" y luego hará clic en
 
 .. image:: images/05_002.png
   :alt: 
-
+  :align: center
 
  ¡Eso es todo! Ahora veamos como ve George el sitio.
 
@@ -315,6 +324,7 @@ pagina y podrá ver la carpeta Documentation
 
 .. image:: images/06.png
   :alt: 
+  :align: center
 
 
 Cuando George hace clic en la pestaña Documentation, se da cuenta que puede
@@ -324,6 +334,7 @@ los tipos de contenidos disponibles en esta, como se muestra en el menú
 
 .. image:: images/07.png
   :alt: 
+  :align: center
 
 
 George quiere revisar lo que Jane ha creado ya, así que hace clic en el
@@ -331,6 +342,7 @@ enlace "Project Overview" y revisa:
 
 .. image:: images/07b.png
   :alt: 
+  :align: center
 
 
 George puede ver el documento, sin embargo, sus permisos limitados no le
@@ -342,6 +354,7 @@ para esa Pagina. Cuando finalice el la guarda:
 
 .. image:: images/08.png
   :alt: 
+  :align: center
 
 
 Jane ve el trabajo que ha hecho George. Ella hace clic en la pestaña
@@ -350,6 +363,7 @@ en la Pagina "Widget Installation" para revisarla detenidamente:
 
 .. image:: images/09.png
   :alt: 
+  :align: center
 
 
 Note que Jane tiene acceso completo a la Pagina que ha creado George. Ella la
@@ -367,6 +381,7 @@ paginas**
 
 .. image:: images/09b.png
   :alt: 
+  :align: center
 
 
 Jane ha decidido cambiar todo el control de las ediciones (mas no publicar)
@@ -375,6 +390,7 @@ la carpeta Documentation y hace clic en la pestaña *Compartir*:
 
 .. image:: images/10.png
   :alt: sharing10.png
+  :align: center
 
 
 En este punto ella solo necesita hacer clic en la casilla de confirmación
@@ -385,6 +401,7 @@ el vera:
 
 .. image:: images/11.png
   :alt: sharing11.png
+  :align: center
 
 
 Ahora George puede editar cualquier elemento en la carpeta, sin importar
@@ -398,6 +415,7 @@ este documento.
 
 .. image:: images/12.png
   :alt: sharing12.png
+  :align: center
 
 
 Ahora cuando Molly vaya a la carpeta Documentation, ella puede ver los dos
@@ -405,6 +423,7 @@ elementos publicados y el elemento privado que ahora puede editar:
 
 .. image:: images/13.png
   :alt: sharing13.png
+  :align: center
 
 
 Y de hecho puede editar el documento "Widget Installation" cuando haga clic
@@ -412,6 +431,7 @@ en el:
 
 .. image:: images/13b.png
   :alt: sharing13b.png
+  :align: center
 
 
 Sin embargo note que ella cuando hace clic en cualquiera de los elementos que
@@ -421,6 +441,7 @@ trabajo por defecto de Plone (lo que significa que cualquiera los puede ver)
 
 .. image:: images/13c.png
   :alt: sharing13c.png
+  :align: center
 
 
 Una nota final para este ejemplo: si la carpeta Documentation no hubiese

@@ -14,7 +14,8 @@ Plone, incluyendo definiciones de cada tipo de contenido estándar.
 Los nuevos contenidos son agregados vía el menú desplegable **Agregar elemento**:
 
 .. image:: images/image_preview.png
-    :alt: addnew_image.gif
+  :alt: addnew_image.gif
+  :align: center
 
 Agregar contenido en Plone se hace de manera *agradable*, lo que quiere
 decir que usted debe navegar a la sección de su sitio web Plone en donde
@@ -45,7 +46,8 @@ lado del texto "Agregar evento al calendario" en la vista principal de un
 elemento de evento.
 
 .. image:: images/image_preview.jpeg
-    :alt: Tabla resumen de Eventos
+  :alt: Tabla resumen de Eventos
+  :align: center
 
 Desde Plone 3.3 usted puede obtener también todos los eventos en una carpeta
 en un solo paso (actualmente solo disponible en formato iCal). Para descargar
@@ -145,11 +147,13 @@ Seleccione **Carpeta** desde el menú desplegable:
 
 .. image:: images/copy_of_addnewmenu.png
   :alt: add-new-menú.png
+  :align: center
 
 Después de hacer clic para agregar una Carpeta usted vera el panel *Agregar Carpeta*:
 
 .. image:: images/addfolder.png
   :alt:
+  :align: center
 
 
 Rellene el **Titulo**, que es requerido como lo indica el cuadrado rojo. La
@@ -180,6 +184,7 @@ haya terminado. Esto completara el proceso de creación de una carpeta.
 
 .. image:: images/lights-camera-action_002.png
   :alt: lights-camera-action.png
+  :align: center
 
 Ver un vídeo sobre como `agregar una carpeta`_ en Plone 2 (significativamente diferente).
 
@@ -281,6 +286,7 @@ sesión):
 
 .. image:: images/addnewmenu.png
   :alt:
+  :align: center
 
 
 Después de hacer clic para agregar una **Imagen** usted vera el panel
@@ -288,6 +294,7 @@ Después de hacer clic para agregar una **Imagen** usted vera el panel
 
 .. image:: images/addimage.png
   :alt:
+  :align: center
 
 
 Ahí se encuentran los campos Titulo y Descripción (campo como "espacio para
@@ -325,12 +332,14 @@ Para agregar una pagina use el menú *Agregar elemento* en una carpeta:
 
 .. image:: images/copy_of_addnewmenu.png
   :alt:
+  :align: center
 
 Seleccione **Pagina** en el menú desplegable y usted vera el panel *Agregar
 Pagina*:
 
 .. image:: images/editpagepanelplone3.png
   :alt:
+  :align: center
 
 
 Los campos **Titulo** y **Descripción** se encuentran en la parte de arriba.
@@ -357,6 +366,7 @@ para su sitio.
 
 .. image:: images/lights-camera-action_002.png
   :alt: lights-camera-action.png
+  :align: center
 
 Ver un vídeo de Plone 2 donde se `usa el editor visual para editar el texto de cuerpo de una pagina`_.
 
@@ -371,7 +381,8 @@ lado cuando este editando contenidos.
 Una barra de herramientas típica de Kupu luce como esta:
 
 .. image:: images/image_large.png
-    :alt: kupu-grab
+  :alt: kupu-grab
+  :align: center
 
 El formato de texto es normalmente definido en HTML, pero algunos sitios
 ofrecen texto estructurado o otros lenguajes de marcado para edición de
@@ -427,6 +438,7 @@ en el icono "árbol". Este panel mostrara una ventana emergente:
 
 .. image:: images/image_large_002.png
   :alt: insert-image-current-folder.png
+  :align: center
 
 Haga clic en "Carpeta actual" del lado izquierdo del panel, si no esta ya
 resaltada. La carpeta actual es la carpeta que contiene la pagina que usted
@@ -466,6 +478,7 @@ y el panel *insertar enlace* aparecerá:
 
 .. image:: images/insertlinkpanel.png
   :alt:
+  :align: center
 
 Usted use este panel haciendo clic en Inicio o Carpeta actual para iniciar la
 navegación del sitio Web Plone y encontrar una carpeta, pagina, o imagen a la
@@ -483,6 +496,7 @@ y el panel Enlace Externo aparecerá:
 
 .. image:: images/externallinkpanel.png
   :alt:
+  :align: center
 
 Escriba la dirección web del sitio web externo en la caja que inicia con el
 prefijo http://. Usted puede hacer clic en el botón *Vista Preliminar* si
@@ -507,6 +521,7 @@ subtítulos en el tope del documento:
 
 .. image:: images/anchortext.png
   :alt:
+  :align: center
 
 
 Entonces seleccione cada uno de los subtítulos reescritos en el tope y haga
@@ -514,6 +529,7 @@ clic en el icono de anclas para seleccionar los subtítulos:
 
 .. image:: images/anchorset.png
   :alt:
+  :align: center
 
 
 Un panel aparecerá para seleccionar a cual subtitulo el enlace de ancla debe
@@ -521,6 +537,7 @@ conectarse:
 
 .. image:: images/anchorwindow.png
   :alt:
+  :align: center
 
 La pestaña *Enlace a ancla* aparecerá. Al lado izquierdo se muestra una lista
 de estilos que podrían establecerse dentro del documento. Para este ejemplo,
@@ -546,6 +563,7 @@ coloque su cursor del ratón donde usted quiera y haga clic en el icono de
 
 .. image:: images/inserttablepanel.png
   :alt:
+  :align: center
 
 Definir filas y columnas es sencillo. Si usted marca la casilla *Crear
 Títulos* usted tendrá un sitio para escribir el encabezado de columna para la
@@ -554,6 +572,7 @@ tiene opciones como las siguientes:
 
 .. image:: images/inserttablepanelclasses.png
   :alt:
+  :align: center
 
 Aquí unos ejemplos de estos estilos de tablas:
 
@@ -607,6 +626,7 @@ Easy Jet
 
 .. image:: images/tableediting.png
   :alt:
+  :align: center
 
 En la tabla de arriba, el cursor ha sido colocado en la celda "Special
 Leader", la cual activa pequeños controles cuadrados alrededor de los filos
@@ -700,12 +720,14 @@ Seleccione Archivo en el menú desplegable *Agregar elemento*,para que una
 carpeta suba un archivo:
 
 .. image:: images/copy_of_addnewmenu.png
-    :alt: add-new-menú.png
+  :alt: add-new-menu.png
+  :align: center
 
 Usted vera el panel *Agregar Archivo*:
 
 .. image:: images/addfile.png
   :alt:
+  :align: center
 
 
 Haga clic en el botón *Examinar...* para navegar al archivo que usted quiere
@@ -715,7 +737,8 @@ nombre de archivo usado en su computadora local si así lo desea). Provea una
 archivo sera subido a la carpeta.
 
 .. image:: images/lights-camera-action_002.png
-    :alt: lights-camera-action.png
+  :alt: lights-camera-action.png
+  :align: center
 
 Ver un vídeo sobre como `agregar un archivo`_ en Plone 2.
 
@@ -743,13 +766,15 @@ resultados de búsquedas, o incluirlos en la navegación.
 Para agregar un enlace use el menú *Agregar elemento* en una carpeta:
 
 .. image:: images/copy_of_addnewmenu.png
-    :alt: add-new-menú.png
+  :alt: add-new-menu.png
+  :align: center
 
 
 Usted vera el panel Agregar *Enlace*:
 
 .. image:: images/addlink.png
   :alt:
+  :align: center
 
 
 Los buenos títulos para los enlaces son importantes, por que los títulos
@@ -791,13 +816,15 @@ Use el menú desplegable *Agregar elemento* en una carpeta para agregar un
 evento:
 
 .. image:: images/copy_of_addnewmenu.png
-    :alt: add-new-menú.png
+  :alt: add-new-menu.png
+  :align: center
 
 
 Usted podrá ver el panel *Agregar Evento*que es algo grande:
 
 .. image:: images/addevent.png
   :alt:
+  :align: center
 
 
 Desde el tope, tiene los siguientes campos:
@@ -834,6 +861,7 @@ calendario adyacente al menú desplegable del día:
 
 .. image:: images/eventstartandendfields.png
   :alt:
+  :align: center
 
 
 usted vera esta ventana emergente con un calendario:
@@ -841,6 +869,7 @@ usted vera esta ventana emergente con un calendario:
 
 .. image:: images/calendarpopuppanel.png
   :alt:
+  :align: center
 
 
 Solo haga clic en el día y este sera establecido. Rellene los campos para los
@@ -852,7 +881,8 @@ sitio web hasta que no sea **publicado*****.
 **
 
 .. image:: images/lights-camera-action_002.png
-    :alt: lights-camera-action.png
+  :alt: lights-camera-action.png
+  :align: center
 
 Ver un vídeo sobre como `agregar un evento`_ en Plone 2.
 
@@ -867,13 +897,15 @@ Use el menú desplegable *Agregar elemento* en una carpeta para agregar una
 noticia:
 
 .. image:: images/copy_of_addnewmenu.png
-    :alt: add-new-menú.png
+  :alt: add-new-menu.png
+  :align: center
 
 
 Usted vera el panel *Agregar Noticia*:
 
 .. image:: images/addnewsitem.png
   :alt:
+  :align: center
 
 
 Los campos estándar para el titulo, descripción, y nota sobre el cambio están
@@ -894,7 +926,8 @@ imagen en el actual cuerpo de la Noticia.
 del sitio web o en el porlet de noticias hasta que esta no sea **publicada.**
 
 .. image:: images/lights-camera-action_002.png
-    :alt: lights-camera-action.png
+  :alt: lights-camera-action.png
+  :align: center
 
 Ver un vídeo sobre como `agregar una noticia`_ en Plone 2.
 
@@ -912,6 +945,7 @@ tope para definir propiedades básicas:
 
 .. image:: images/basicpropertiestabs.png
   :alt:
+  :align: center
 
 
 Las pestañas de propiedades básicas son:
@@ -939,6 +973,7 @@ pagina (podría ser el mismo para otros tipos de contenidos):
 
 .. image:: images/editpagecategorization.png
   :alt:
+  :align: center
 
 
 *Nota: Las categorías fueron formalmente llamadas palabras claves en Plone,
@@ -972,6 +1007,7 @@ contenido si usted las desea establecer:
 
 .. image:: images/datessettings.png
   :alt:
+  :align: center
 
 
 El panel *Propietario* tiene tres campos de estilo libre para listar a los
@@ -980,6 +1016,7 @@ derechos de propietario del contenido:
 
 .. image:: images/ownershipsettings.png
   :alt:
+  :align: center
 
 
 El panel de *Configuración* tiene campos que tal vez varíen un poco de un
@@ -989,6 +1026,7 @@ y otros controles similares:
 
 .. image:: images/settingspanel.png
   :alt:
+  :align: center
 
 
 Recomendaciones
@@ -1030,7 +1068,8 @@ Primero, seleccione la ultima opción en el menú desplegable *Agregar
 elemento* llamado *Restringir...*:
 
 .. image:: images/addnewmenu.png
-    :alt: add-new-menú.png
+  :alt: add-new-menu.png
+  :align: center
 
 
 Allí hay tres opciones mostradas para restringir tipos de contenidos en la
@@ -1038,6 +1077,7 @@ carpeta:
 
 .. image:: images/restricttypes.png
   :alt:
+  :align: center
 
 
 La opción predeterminada usa las definiciones de la carpeta "padre". Al tener
@@ -1050,6 +1090,7 @@ permite seleccionar desde una lista de tipos disponibles:
 
 .. image:: images/restricttypesmanually.png
   :alt:
+  :align: center
 
 
 Los tipos listado bajo el encabezado *Tipos permitidos* son aquellos que
@@ -1123,7 +1164,8 @@ computadora en donde se guardan sus imágenes, para que pueda encontrarlas
 cuando las suba a su sitio web Plone.
 
 .. image:: images/a.png
-    :alt: image_resizing.png
+  :alt: image_resizing.png
+  :align: center
 
 
 **Para resumir**:

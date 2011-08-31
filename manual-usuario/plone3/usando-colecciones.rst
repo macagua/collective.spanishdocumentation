@@ -82,11 +82,15 @@ Para agregar una colección, use el menú *Agregar elemento*, tal como los es
 para agregar otros tipos de contenido:
 
 .. image:: images/addnewmenu_002.png
+  :alt:
+  :align: center
 
 
 Usted vera el panel de Agregar* Colección *:
 
 .. image:: images/addcollection.png
+  :alt:
+  :align: center
 
 
 Debajo de los campos de titulo y descripción hay un grupo de campos para
@@ -106,6 +110,8 @@ clic en la pestaña Criterio para que se muestre el panel de configuración de
 Criterios de búsqueda:
 
 .. image:: images/collectionssearchcrit1.png
+  :alt:
+  :align: center
 
 
 La parte superior del panel *Agregar Nuevos Criterios de Búsqueda*, le
@@ -114,6 +120,8 @@ coincidan. La parte baja *Establecer Tipo de Ordenación*, es un campo de
 selección sencilla para ordenar:
 
 .. image:: images/collectionssearchcrit2.png
+  :alt:
+  :align: center
 
 
 Para que los tipos de criterios coincidan con los datos en los elementos de
@@ -139,10 +147,11 @@ Nota: una Colección no se comporta como una carpeta regular -- usted no puede
 agregar elementos de contenido a través del menú de agregar elemento, tal
 como lo podría hacer en una carpeta regular.
 
-`.. image:: images/lights-camera-action_003.png
-    :alt: lights-camera-action.png
-`_Ver un vídeo sobre como `anadir una smart folder (ahora llamada
-Colección).`_ en Plone 2
+.. image:: images/lights-camera-action_003.png
+  :alt: lights-camera-action.png
+  :align: center
+
+Ver un vídeo sobre como `anadir una smart folder (ahora llamada Colección).`_ en Plone 2
 
 
 5.3. Ajustando las opciones de vista
@@ -168,7 +177,7 @@ los Eventos en un sitio, y una Sub-Colección que también muestre los Eventos
 palabra clave en particular.
 
 **Limitar Resultados de Búsqueda
-**Se puede usar la opción Limitar Resultados de Búsqueda para (como su nombre
+Se puede usar la opción Limitar Resultados de Búsqueda para (como su nombre
 lo indica) limitar el numero de resultados que una Colección mostrara *por
 pagina*. De esta manera si se tiene una Colección que muestra Noticias, se
 pueden limitar los resultados a cinco o diez, en vez de mostrar todos los
@@ -234,8 +243,6 @@ elementos.
 **Creador**
 -----------
 
-****
-
 Cuando use el criterio Creador, se estarán **filtrando los elementos basados
 en quien los creo**. Esto puede ser útil si usted quiere crear una sección de
 autor destacado, donde quisiera mostrar solamente contenidos en su sitio que
@@ -251,9 +258,6 @@ usar la opción **Lista de Valores**. De lo contrario normalmente necesitaría
 usar la opción de texto a menos que el creador que quiere seleccionar sea
 usted mismo, en este caso usaría la opción Restringir al Usuario Actual.
 
-**
-**
-
 
 **Descripción**
 ---------------
@@ -264,9 +268,6 @@ pagina **solo buscara por el texto en el campo de Descripción** de una pagina
 de contenido. Este criterio es solo realmente útil si usted consistentemente
 llena el campo de Descripción para todos sus elementos de contenido.
 
-**
-
-**
 **Ubicación**
 -------------
 
@@ -287,9 +288,7 @@ carpeta Acerca de.
 Usted puede abrir carpetas para observar el contenido dentro de ellas, ya sea
 haciendo el clic en el botón buscar o directamente en el titulo de la carpeta
 que quiera abrir. También puede usar el cuadro de búsqueda para buscar por el
-Titulo de un elemento.**
-
-**
+Titulo de un elemento.
 
 
 **Texto de Búsqueda**
@@ -333,9 +332,7 @@ mostrara todo aquello relacionado a la pagina de Historia.
 Tenga en cuenta que la lista de Relativo A no funciona sobre la base de que
 objetos están relacionados al contenido, sino que un objeto tiene otro objeto
 relacionado **a el**. La Colección mostrara los resultados que estén
-relacionados a ese valor.**
-
-**
+relacionados a ese valor.
 
 **Estado**
 ----------
@@ -375,7 +372,7 @@ esto podemos invertir el orden de visualización, o la fecha mas reciente
 primero, etc.
 
 
-**Fechas******
+**Fechas**
 ----------
 
 Existen numerosas opciones de Fechas que serán explicadas en la siguiente

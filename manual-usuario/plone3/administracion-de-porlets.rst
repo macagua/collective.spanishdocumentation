@@ -12,7 +12,8 @@ Los Portlets usan un enfoque de jerarquía básica para determinar como y por
 que aparecen en cada sección de su sitio.
 
 .. image:: images/portlet_block.GIF
-    :alt: portlet_block.gif
+  :alt: portlet_block.gif
+  :align: center
 
 Los Portlets usan un enfoque de jerarquía básica. Por defecto los Portlets
 que usted asigne en la raíz (pagina de inicio) del sitio se propagaran por
@@ -23,7 +24,8 @@ bloquea Porlets debe agregar explícitamente todos los Portlets que usted
 desea ver en la pagina hija.
 
 .. image:: images/image_preview_012.png
-    :alt: hierarchy.gif
+  :alt: hierarchy.gif
+  :align: center
 
 Como puede ver en este diagrama los Portlets están representados en azul bajo
 cada titulo de Pagina.
@@ -64,7 +66,9 @@ de los lados. En esta sección de Administrar Portlets, usted puede crear
 nuevos Portlets, remover Portlets, y reorganizarlos.
 
 .. image:: images/portlet_managelink.GIF
-    :alt: portlet_managelink.gif
+  :alt: portlet_managelink.gif
+  :align: center
+
 Haciendo clic en el enlace le llevara a una nueva pantalla que le permitirá
 editar Portlets. La otra manera de obtener esta pantalla es añadiendo
 /@@manage-portlets a la dirección URL de la pagina a la cual le queremos
@@ -74,7 +78,8 @@ www.myplonesite.org/about/@@manage-portlets.
 
 
 .. image:: images/image_preview_011.png
-    :alt: portlet_manage.gif
+  :alt: portlet_manage.gif
+  :align: center
 
 Agregar un Portlet
 ------------------

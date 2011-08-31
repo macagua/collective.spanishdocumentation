@@ -30,6 +30,7 @@ incluyendo:
 
 .. image:: images/content_types_into_plone.png
   :alt: Tipos de contenidos dentro de Plone
+  :align: center
 
 
 Un sitio web Plone contiene diferentes tipos de contenido, incluyendo textos,
@@ -41,6 +42,7 @@ puede subirse desde una computadora local, además, Plone le permite crear
 
 .. image:: images/content_is_added_to_folders.png
   :alt: Contenido es agregado en carpetas
+  :align: center
 
 
 
@@ -53,12 +55,14 @@ la carpeta:
 
 .. image:: images/butterflies_folder_text.png
   :alt: Texto de Carpeta Mariposas
+  :align: center
 
 
 También se pueden agregar algunas imágenes a la carpeta:
 
 .. image:: images/butterflies_folder.png
   :alt: Carpeta Mariposas
+  :align: center
 
 
 Dentro de una carpeta usted puede agregar muchos contenidos de distintos
@@ -68,6 +72,7 @@ continuación, con dos sub-carpetas dentro de la carpeta Mariposas:
 
 .. image:: images/folders_within_folders.png
   :alt: Carpeta en carpeta
+  :align: center
 
 
 ¿Qué ocurre tras bambalinas?
@@ -80,6 +85,7 @@ hospedaje con una "pila" de computadoras dedicadas a realizar la tarea:
 
 .. image:: images/server_rack.png
   :alt: Rack del servidor
+  :align: center
 
 
 El diagrama muestra los cables que conectan los servidores individuales a
@@ -94,6 +100,7 @@ Simplifiquemos el diagrama que muestra como se interactúa con Plone:
 
 .. image:: images/client_to_server_simple.png
   :alt: Del cliente al servidor
+  :align: center
 
 
 Usted usa su navegador web; Mozilla Firefox, Safari, Internet Explorer, etc.
@@ -107,11 +114,13 @@ entre el navegador y el servidor de www.misitio.com:
 
 .. image:: images/client_request.png
   :alt: Solicitud del cliente
+  :align: center
 
 Luego el software Plone responde:
 
 .. image:: images/server_response.png
   :alt: Respuesta del servidor
+  :align: center
 
 
 Plone lee su respectiva base de datos para buscar la información almacenada
@@ -131,6 +140,7 @@ ver la pagina web resultante:
 
 .. image:: images/my_site_served.png
   :alt: Mi sitio servido
+  :align: center
 
 
 Así que cuando ve su pagina web de mariposas, puede decidir si cambiarla o
@@ -139,6 +149,7 @@ documentos, etc:
 
 .. image:: images/plone_donut.png
   :alt: 
+  :align: center
 
 
 Luego que hace sus cambios y hace clic en "Guardar", la nueva versión de la
@@ -146,6 +157,7 @@ pagina web se mostrara a cualquiera que visite el sitio:
 
 .. image:: images/plone_donut_full.png
   :alt: 
+  :align: center
 
 
 1.2. Diseño visual de los sitios web Plone
@@ -161,6 +173,7 @@ defecto generalmente se parece a lo siguiente:
 
 .. image:: images/plone-default-design-areas.png
   :alt: Áreas de diseño por defecto de Plone
+  :align: center
 
 Aunque un sitio Plone puede tener un diseño radicalmente distinto a este,
 igual debería identificar los elementos comunes, como por ejemplo el enlace
@@ -186,6 +199,7 @@ de pantalla:
 
 .. image:: images/plonedefaultareaslabeled.png
   :alt: Áreas por defecto de etiquetada de Plone
+  :align: center
 
 
 Usted tal ves requiera adaptar estos términos (áreas) según sea necesario
@@ -199,6 +213,7 @@ A modo de ejemplo, se seleccionara tres sitios para comparar tomados de la
 
 .. image:: images/akamaidesign.png
   :alt: Diseño de Akamai
+  :align: center
 
 En la figura, se muestra el sitio de Akamai, un líder proveedor de
 herramientas y tecnologías de aceleración web. El encabezado posee un simple
@@ -214,6 +229,7 @@ Por ultimo, a la derecha hay una columna con opciones de zoom.
 
 .. image:: images/discoverdesign.png
   :alt: Diseño de Discover Magazine
+  :align: center
 
 Este es el sitio web de Discover Magazine. El área de encabezado contiene un
 extenso menú horizontal o si se quiere "menú principal," en la esquina
@@ -232,6 +248,7 @@ gráficos en el sitio web.
 
 .. image:: images/smealdesign.png
   :alt: Diseño de Penn State University's Smeal College of Business
+  :align: center
 
 El ultimo ejemplo para examinar de los tres sitios web es el de Penn State
 University's Smeal College of Business (Escuela de Negocios Smeal de la
@@ -306,6 +323,7 @@ Navegación de usuario anónimo
 
      .. image:: images/plonemain3.png
        :alt: Navegación de un sitio Plone como usuario anónimo
+       :align: center
 
 
 Actividad web autenticada (registrado)
@@ -331,7 +349,8 @@ Actividad web autenticada (registrado)
      iniciado sesión dentro de un nuevo sitio web Plone:
 
     .. image:: images/plonemain3_002.png
-  :alt: Navegación de un sitio Plone como usuario registrado
+      :alt: Navegación de un sitio Plone como usuario registrado
+      :align: center
 
 
 Roles de usuario
@@ -375,6 +394,7 @@ visualizar pestañas de color verde con los nombres *Contenidos*, *Vista*,
 
 .. image:: images/editstriptabs.png
   :alt: Pestañas
+  :align: center
 
 
 Si se hace clic en ellas es posible explorar las diferencias entre una y
@@ -401,6 +421,7 @@ menús *Mostrar, Agregar elemento y Estado*:
 
 .. image:: images/editstripmenus.png
   :alt: Menús
+  :align: center
 
 Explore estos también. Aquí están las descripciones básicas de estos menús:
 
@@ -429,6 +450,7 @@ similar al siguiente:
 
 .. image:: images/log-in.png
   :alt: Entrar
+  :align: center
 
 
 Luego de hacer clic en el botón *Entrar*, vera un panel donde debe escribir
@@ -436,6 +458,7 @@ el nombre de usuario y contraseña:
 
 .. image:: images/loginform.png
   :alt: Panel inicio de sección
+  :align: center
 
 
 Luego de iniciar sesión en un sitio web Plone el usuario vera su nombre,
@@ -457,12 +480,14 @@ cuadro de mando:
 
 .. image:: images/loggedinstrip.png
   :alt: Nombre completo del usuario
+  :align: center
 
 
 Usted podrá ver su *panel cuadro de mando*:
 
 .. image:: images/dashboardjohnsmith.png
   :alt: Panel cuadro de mando
+  :align: center
 
 
 Cuando usted inicia sesión por primera vez, su cuadro de mando estará vacío,
@@ -481,6 +506,7 @@ preferencias":
 
 .. image:: images/dashboardpersonalprefs.png
   :alt: Preferencias Personales
+  :align: center
 
 
 Los campos de entrada incluyen:
@@ -555,6 +581,7 @@ en la parte superior derecha para ir a su área personal:
 
 .. image:: images/dashboard.png
   :alt: 
+  :align: center
 
 
 El cuadro de control aparece vacío para nuevos usuarios.
@@ -566,6 +593,7 @@ de este nuevo sitio web. Aquí están los Portlets por defecto:
 
 .. image:: images/dashboardedit.png
   :alt: 
+  :align: center
 
 Usted ve los Portlets de *Noticias* y *Eventos* en la columna totalmente a la
 izquierda, los Portlets de *Elementos recientes* en la segunda columna, y el
