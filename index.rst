@@ -65,6 +65,37 @@ principales tecnologías de Zope y Plone.
 
 En particular, conoceremos:
 
+
+Tutorial de control de versiones
+--------------------------------
+
+Para tener un ambiente de desarrollo productivo, en especial cuando se
+trabaje en equipo, es muy importante contar con un sistema de control de
+versiones. Subversion es el utilizado por plone.org y el plone collective,
+por lo que consideramos necesario conocerlo, aunque recientemente la
+popularidad de sistemas distribuidos como Git y Mercurial ha aumentado.
+
+.. toctree::
+   :maxdepth: 2
+
+   subversion
+
+
+Una pequeña Inmersión al modo interactivo de Python
+---------------------------------------------------
+
+La idea de este tutorial es que alguien que **NUNCA** ha trabajando con el
+interprete de `Python`_ pueda tener un primer acercamiento **SIN
+PROGRAMAR**, solamente con conocer el uso del interprete y sus comandos
+básicos.
+
+.. _Python: http://www.python.org/
+
+.. toctree::
+   :maxdepth: 2
+
+   python/una_pequena_inmersion_python
+
 Python
 ------
 
@@ -81,22 +112,37 @@ asociación de Python de Argentina y la fundación de Python.
 
    Tutorial de Python <python/python-tutorial/index>
 
-Tutorial de Control de versiones
---------------------------------
 
-Para tener un ambiente de desarrollo productivo, en especial cuando se
-trabaje en equipo, es muy importante contar con un sistema de control de
-versiones. Subversion es el utilizado por plone.org y el plone collective,
-por lo que consideramos necesario conocerlo, aunque recientemente la
-popularidad de sistemas distribuidos como Git y Mercurial ha aumentado.
+Entornos virtuales en Python
+----------------------------
+
+Python ofrece un mecanismo para poder experiementar con nuevas versiones de librerias Python 
+en formato Egg, sin afectar su sistema, o para crear un entorno de instalación Python aislado 
+al Python de su sistema operativo, por eso está sección que se dedica a explicar sus casos de uso.
 
 .. toctree::
    :maxdepth: 2
 
-   subversion
+   python/creacion-de-entornos-virtuales-python
 
-Buildout y setuptools
----------------------
+
+Setuptools / Distribute
+-----------------------
+
+Python ofrece un sistema de paquetes para aplicaciones Python en formato Egg, 
+para la cual posee dos especificaciones de como hacer paquetes Egg y sus respectivas
+utilidades para la gestión de estos paquetes, por eso está sección que se dedica a 
+explicar sus diferencias.
+
+.. toctree::
+   :maxdepth: 2
+
+   setuptools
+   python/distribute-y-pip
+
+
+Buildout y sus complementos
+---------------------------
 
 Buildout es un sistema que permite definir ambientes de desarrollo
 que pueden ser replicados, incluyendo dependencias y configuración. Buildout se apoya
@@ -107,7 +153,6 @@ Plone que se quiera emprender.
 .. toctree::
    :maxdepth: 2
 
-   setuptools
    buildout
 
 Tecnologías de Zope
