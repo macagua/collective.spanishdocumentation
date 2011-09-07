@@ -234,7 +234,9 @@ las partes del sitio. Para conocer ejemplos de esto de una manera práctica,
 revisaremos paso por paso un script completo de buildout, comentando las
 diferentes partes que utilizaremos.
 
-.. image:: highavail.png
+.. image:: ./highavail.png
+  :alt: Arquitectura en Plone de Alta Disponibilidad
+  :align: center
 
 Lo primero es definir las secciones de construcción del software necesario.
 Lxml y xdv son componentes que forman parte de deliverance, que es un
