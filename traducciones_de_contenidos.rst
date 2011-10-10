@@ -1,7 +1,8 @@
+.. -*- coding: utf-8 -*-
+
 ==========================
 Traducciones de contenidos
 ==========================
-
 
 Términos básicos
 ----------------
@@ -67,13 +68,17 @@ El almacenamiento de las memorias de traducción disponibles para este material
 está disponible en el servidor de Subversion `"collective"
 <https://svn.plone.org/svn/collective/>`_ de los contribuyentes 
 a Plone. Si usted tiene una credenciales en este servidor y desea convertirse 
-en un colaborador ejecute el siguiente comando: ::
+en un colaborador ejecute el siguiente comando:
+
+.. code-block:: sh
 
   $ svn co https://svn.plone.org/svn/collective/spanishdocs/cat spanishdocs-omegat
 
 Si usted no tiene las credenciales de acceso al repositorio SVN `"collective"
 <https://svn.plone.org/svn/collective/>`_ de Plone o simplemente solo desea obtener 
-y compilar esta documentación ejecute el siguiente comando: ::
+y compilar esta documentación ejecute el siguiente comando:
+
+.. code-block:: sh
 
   $ svn export http://svn.plone.org/svn/collective/spanishdocs/cat spanishdocs-omegat
 
@@ -81,7 +86,9 @@ y compilar esta documentación ejecute el siguiente comando: ::
 Instalando OmegaT
 -----------------
 
-Para instalarlo debe ejecutar los siguientes comandos: ::
+Para instalarlo debe ejecutar los siguientes comandos:
+
+.. code-block:: sh
 
   $ wget http://ufpr.dl.sourceforge.net/project/omegat/OmegaT%20-%20Standard/OmegaT%202.3.0/OmegaT_2.3.0_Linux.tar.bz2
   $ tar -xjvvf OmegaT_2.3.0_Linux.tar.bz2 -C $HOME
@@ -90,7 +97,9 @@ Para instalarlo debe ejecutar los siguientes comandos: ::
 Ejecutando OmegaT
 -----------------
 
-Para ejecutar OmegaT debe ejecutar el siguiente comando: ::
+Para ejecutar OmegaT debe ejecutar el siguiente comando:
+
+.. code-block:: sh
 
   $ $HOME/OmegaT/jre/bin/java -jar $HOME/OmegaT/OmegaT.jar &
 

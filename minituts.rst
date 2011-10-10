@@ -1,3 +1,5 @@
+.. -*- coding: utf-8 -*-
+
 ***************
 Mini Tutoriales
 ***************
@@ -11,8 +13,9 @@ comunes en aplicaciones web con Plone.
 .. toctree::
    :maxdepth: 1
 
-   mini_soap
+   plone/utilizando-z3c.form
    mini_db
    mini_gcharts
    mini_translate
+   mini_soap
 

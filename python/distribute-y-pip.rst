@@ -1,3 +1,5 @@
+.. -*- coding: utf-8 -*-
+
 ================
 Distribute y PIP
 ================
@@ -187,7 +189,13 @@ repositorio PYPI`_ o tu repositorio de paquetes Egg privado:
 
     $ pip install http://example.com/path/to/MyPackage-1.2.3.tgz
 
-**Ejemplo 5.** Instalar todas las dependencias de mi proyecto Python usando
+**Ejemplo 5.** Instalar un paquete con una versión especifica: 
+
+.. code-block:: sh
+
+    $ pip install 'ZopeSkel==2.21.2'
+
+**Ejemplo 6.** Instalar todas las dependencias de mi proyecto Python usando
 un archivo de dependencias requeridas para instalar: 
 
 .. code-block:: sh
@@ -203,21 +211,21 @@ Un ejemplo del archivo :file:`pip_requirement.txt` puede ser el siguiente: ::
     PyYAML
     south
 
-**Ejemplo 6.** Actualizar un paquete ya instalado con la versión más reciente
+**Ejemplo 7.** Actualizar un paquete ya instalado con la versión más reciente
 de PyPI: 
 
 .. code-block:: sh
 
     $ pip install --upgrade PyProtocols
 
-**Ejemplo 7.** Para usar realizar búsquedas de paquetes disponibles para
+**Ejemplo 8.** Para usar realizar búsquedas de paquetes disponibles para
 instalar desde los repositorios por definidos: 
 
 .. code-block:: sh
 
     $ pip search plonetheme-*
 
-**Ejemplo 8.** Para remover un paquete egg 
+**Ejemplo 9.** Para remover un paquete egg 
 
 .. code-block:: sh
 

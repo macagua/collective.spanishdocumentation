@@ -31,25 +31,41 @@ El script easy_install ofrece varias formas de uso, para instalar los paquetes
 de diversas fuentes.
 
 Ejemplo 1. Instalar un paquete por nombre, buscando en PyPI la versión más
-reciente::
+reciente: 
+
+.. code-block:: sh
 
     $ easy_install SQLObject
 
 Ejemplo 2.Instalar o actualizar un paquete por nombre y versión utilizando las
-ligas encontradas en una "página de descargas"::
+ligas encontradas en una "página de descargas": 
+
+.. code-block:: sh
 
     $ easy_install -f http://pythonpaste.org/package_index.html SQLObject
 
-Ejemplo 3. Descargar e instalar una distribución de código fuente::
+Ejemplo 3. Descargar e instalar una distribución de código fuente: 
+
+.. code-block:: sh
 
     $ easy_install http://example.com/path/to/MyPackage-1.2.3.tgz
 
-Ejemplo 4. Instalar un Python .egg ya descargado::
+Ejemplo 4. Instalar un Python .egg ya descargado: 
+
+.. code-block:: sh
 
     $ easy_install /my_downloads/OtherPackage-3.2.1-py2.3.egg
 
-Ejemplo 5. Actualizar un paquete ya instalado con la versión más reciente de
-PyPI::
+Ejemplo 5. Instalar un paquete con una versión especifica: 
+
+.. code-block:: sh
+
+    $ easy_install "ZopeSkel==2.21.2"
+
+Ejemplo 6. Actualizar un paquete ya instalado con la versión más reciente de
+PyPI: 
+
+.. code-block:: sh
 
     $ easy_install --upgrade PyProtocols
 

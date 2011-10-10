@@ -1,4 +1,5 @@
-=========================
+.. -*- coding: utf-8 -*-
+
 Procesos de documentación
 =========================
 
@@ -8,17 +9,23 @@ Obtener y compilar la documentación
 El almacenamiento de este material está disponible en el servidor de Subversion
 `"collective" <https://svn.plone.org/svn/collective/>`_ de los contribuyentes a 
 Plone. Si usted tiene una credenciales en este servidor y desea convertirse en 
-un colaborador ejecute el siguiente comando: ::
+un colaborador ejecute el siguiente comando:
+
+.. code-block:: sh
 
   $ svn co https://svn.plone.org/svn/collective/spanishdocs/buildout spanishdocs-buildout
 
 Si usted no tiene las credenciales de acceso al repositorio SVN `"collective"
 <https://svn.plone.org/svn/collective/>`_ de Plone o simplemente solo desea obtener 
-y compilar esta documentación ejecute el siguiente comando: ::
+y compilar esta documentación ejecute el siguiente comando:
+
+.. code-block:: sh
 
   $ svn export http://svn.plone.org/svn/collective/spanishdocs/buildout spanishdocs-buildout
 
-Crear entorno virtual de Python para reconstruir este proyecto: ::
+Crear entorno virtual de Python para reconstruir este proyecto:
+
+.. code-block:: sh
 
   # aptitude install python-setuptools subversion
   # easy_install virtualenv
@@ -27,7 +34,9 @@ Crear entorno virtual de Python para reconstruir este proyecto: ::
   $ virtualenv --no-site-packages --python=/usr/bin/python sphinx
   $ cd -
 
-Ahora puede generar la documentación de HTML, con los siguiente comandos: ::
+Ahora puede generar la documentación de HTML, con los siguiente comandos:
+
+.. code-block:: sh
 
   $ source virtualenv/sphinx/bin/activate
   (sphinx)$ cd spanishdocs-buildout/
@@ -38,7 +47,9 @@ Ahora puede generar la documentación de HTML, con los siguiente comandos: ::
 Ahora se puede abrir ``spanishdocs-buildout/build/html/index.html`` desde 
 su navegador Web favorito.
 
-Para obtener la documentación en PDF : ::
+Para obtener la documentación en PDF:
+
+.. code-block:: sh
 
   $ source virtualenv/sphinx/bin/activate
   (sphinx)$ cd ./spanishdocs-buildout/build

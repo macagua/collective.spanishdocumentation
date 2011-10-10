@@ -1,3 +1,5 @@
+.. -*- coding: utf-8 -*-
+
 Instalación de Plone
 ====================
 
@@ -461,11 +463,15 @@ Ejecutando install.sh
 Si usted se decidió por la instalación con privilegios root; ya sea por el
 comando su a root o precediendo estos comandos con el comando sudo.
 
-**Instalación ZEO:** ::
+**Instalación ZEO:**
+
+.. code-block:: sh
 
     ./install.sh zeo
 
-**Instalación autónoma de Zope:** ::
+**Instalación autónoma de Zope:**
+
+.. code-block:: sh
 
     ./install.sh standalone
 

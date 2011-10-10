@@ -1,3 +1,5 @@
+.. -*- coding: utf-8 -*-
+
 *****************
 ¿Qué es buildout?
 *****************
@@ -56,7 +58,7 @@ Creación de un buildout
 
 Se puede generar un buildout utilizando un template de paster::
 
-    $ paster create -t plone3_buildout buildout
+    $ paster create -t plone3_buildout unam.buildout
 
 El template hace varias preguntas::
 
@@ -64,9 +66,9 @@ El template hace varias preguntas::
       ZopeSkel#plone3_buildout  A buildout for Plone 3 projects
 
     Variables:
-      egg:      buildout
-      package:  buildout
-      project:  buildout
+      egg:      unam.buildout
+      package:  unam.buildout
+      project:  unam.buildout
 
     Enter zope2_install (Path to Zope 2 installation; leave blank to fetch one) ['']:
     <si ya se tiene una instalación de Zope se puede usar poniendo aquí el path>
@@ -104,7 +106,7 @@ mismo python con que se desea trabajar::
     ...
     ...
     ...
-    $ bin/buildout
+    $ bin/buildout -v
     ...
     ...
     ...
@@ -139,85 +141,85 @@ Ejemplo
 
 Un ejemplo de un buildout funcional se muestra a continuación:
 
-.. code-block:: ini
+.. code-block:: cfg
 
-    # definicion de las partes que va a tener el buildout, cada parte es una
-    # sección de configuración y generalmente utiliza una receta específica
-    [buildout]
-    parts =
-        zope2
-        productdistros
-        instance
-        zopepy
+  # definicion de las partes que va a tener el buildout, cada parte es una
+  # sección de configuración y generalmente utiliza una receta específica
+  [buildout]
+  parts =
+      zope2
+      productdistros
+      instance
+      zopepy
 
-    # ligas adicionales a pypi.python.org donde pueden encontrarse eggs
-    find-links =
-        http://dist.plone.org
-        http://download.zope.org/ppix/
-        http://download.zope.org/distribution/
-        http://effbot.org/downloads
+  # ligas adicionales a pypi.python.org donde pueden encontrarse eggs
+  find-links =
+      http://dist.plone.org
+      http://download.zope.org/ppix/
+      http://download.zope.org/distribution/
+      http://effbot.org/downloads
 
-    # Agregar eggs adicionales aquí
-    # elementtree es requerido por Plone
-    eggs =
-        elementtree
+  # Agregar eggs adicionales aquí
+  # elementtree es requerido por Plone
+  eggs =
+      elementtree
     
-    # Por cada paquete en desarrollo (dentro de src) se debe agregar una línea
-    # e.g.: develop = src/my.package
-    develop =
+  # Por cada paquete en desarrollo (dentro de src) se debe agregar una línea
+  # e.g.: develop = src/my.package
+  develop =
 
-    # Esta receta instala zope 2. Para usar la misma url que requiere plone se
-    # utiliza ${plone:zope2-url}. Es posible referirse con esta sintaxis a
-    # cualquier variable de una de las partes, así: ${parte:variable}
-    [zope2]
-    recipe = plone.recipe.zope2install
-    url = ${plone:zope2-url}
+  # Esta receta instala zope 2. Para usar la misma url que requiere plone se
+  # utiliza ${plone:zope2-url}. Es posible referirse con esta sintaxis a
+  # cualquier variable de una de las partes, así: ${parte:variable}
+  [zope2]
+  recipe = plone.recipe.zope2install
+  url = ${plone:zope2-url}
 
-    # Ligas a distribuciones de productos tradicionales de Zope.
-    # En nested-packages se pone el nombre del archivo (sin path) cuando
-    # una distribución incluye varios productos.
-    [productdistros]
-    recipe = plone.recipe.distros
-    urls =
-    nested-packages =
-    version-suffix-packages = 
+  # Ligas a distribuciones de productos tradicionales de Zope.
+  # En nested-packages se pone el nombre del archivo (sin path) cuando
+  # una distribución incluye varios productos.
+  [productdistros]
+  recipe = plone.recipe.distros
+  urls =
+  nested-packages =
+  version-suffix-packages = 
 
-    # esta receta inicializa la instancia de zope y utiliza los datos de las
-    # respuestas que se dieron al crear el buildout
-    [instance]
-    recipe = plone.recipe.zope2instance
-    zope2-location = ${zope2:location}
-    user = admin:admin
-    http-address = 8080
-    debug-mode = on
-    verbose-security = on
+  # esta receta inicializa la instancia de zope y utiliza los datos de las
+  # respuestas que se dieron al crear el buildout
+  [instance]
+  recipe = plone.recipe.zope2instance
+  zope2-location = ${zope2:location}
+  user = admin:admin
+  http-address = 8080
+  debug-mode = on
+  verbose-security = on
 
-    # Aquí se deben listar todos los eggs que zope debe poder ver
-    # incluyendo los de desarrollo que se definen arriba
-    # e.g. eggs = ${buildout:eggs} ${plone:eggs} my.package
-    eggs =
-        Plone
-        ${buildout:eggs}
-        ${plone:eggs}
+  # Aquí se deben listar todos los eggs que zope debe poder ver
+  # incluyendo los de desarrollo que se definen arriba
+  # e.g. eggs = ${buildout:eggs} ${plone:eggs} my.package
+  eggs =
+      Plone
+      ${buildout:eggs}
+      ${plone:eggs}
 
-    # Activar la inicialización de zcml de los paquetes que lo requieran
-    # e.g. zcml = my.package my.other.package
-    zcml = 
+  # Activar la inicialización de zcml de los paquetes que lo requieran
+  # e.g. zcml = my.package my.other.package
+  zcml = 
 
-    # Directorios donde zope buscará productos
-    products =
-        ${buildout:directory}/products
-        ${productdistros:location}
-        ${plone:products}
+  # Directorios donde zope buscará productos
+  products =
+      ${buildout:directory}/products
+      ${productdistros:location}
+      ${plone:products}
 
-    # Interpreté de python generado con todos los paquetes activados en 
-    # el path
-    [zopepy]
-    recipe = zc.recipe.egg
-    eggs = ${instance:eggs}
-    interpreter = zopepy
-    extra-paths = ${zope2:location}/lib/python
-    scripts = zopepy
+  # Interpreté de python generado con todos los paquetes activados en 
+  # el path
+  [zopepy]
+  recipe = zc.recipe.egg
+  eggs = ${instance:eggs}
+  interpreter = zopepy
+  extra-paths = ${zope2:location}/lib/python
+  scripts = zopepy
 
 En los comentarios en el codigo se explican las secciones del buildout.
 
@@ -251,6 +253,7 @@ básica de instalación de paquetes de Python:
     recipe = z3c.recipe.staticlxml
     egg = lxml
     force = false
+
     [xdv]
     recipe = zc.recipe.egg
     eggs =
@@ -282,6 +285,7 @@ dentro de esa sección:
        zope.testing
        zope.i18n
     url = ${downloads:zope}
+
     [zeoserver]
     recipe = plone.recipe.zope2zeoserver
     zope2-location = ${zope2:location}
@@ -310,6 +314,7 @@ una sección separada:
        <icp-server>
           address ${ports:instance1-icp}
        </icp-server>
+
     [instance2]
     recipe = collective.recipe.zope2cluster
     instance-clone = instance-settings
@@ -318,6 +323,7 @@ una sección separada:
        <icp-server>
           address ${ports:instance2-icp}
        </icp-server>
+
     [instance3]
     recipe = collective.recipe.zope2cluster
     instance-clone = instance-settings
@@ -326,6 +332,7 @@ una sección separada:
        <icp-server>
           address ${ports:instance3-icp}
        </icp-server>
+
     [instance4]
     recipe = collective.recipe.zope2cluster
     instance-clone = instance-settings
@@ -404,14 +411,17 @@ funciona de la misma manera:
     recipe = collective.recipe.template
     input = ${buildout:directory}/production/main.conf.template
     output = ${buildout:directory}/production/main.conf
+
     [compile-theme]
     recipe = plone.recipe.command
     command = ${buildout:directory}/bin/xdvcompiler -t ${theme:theme} -r ${theme:rules} -a ${theme:absolute-prefix} ${theme:output-xslt}
     update-command = ${compile-theme:command}
+
     [cache-config]
     recipe = collective.recipe.template
     input = ${buildout:directory}/production/cache.conf.template
     output = ${buildout:directory}/production/cache.conf
+
     [cache]
     recipe = plone.recipe.varnish
     daemon = ${buildout:directory}/parts/varnish-build/sbin/varnishd
@@ -456,7 +466,7 @@ para iniciar y detener los servicios, así como consultar su status y logs:
     programs =
        10 zeo     ${zeoserver:location}/bin/runzeo
                       true ${users:zope}
-       20 instance1 ${buildout:directory}/parts/instance1/bin/runzope
+       20 instance1 ${buildout:directory}/parts/instance1/bin/runzope 
                       true ${users:zope}
        20 instance2 ${buildout:directory}/parts/instance2/bin/runzope
                       true ${users:zope}
@@ -498,11 +508,13 @@ path de ejecución están todos los paquetes utilizados en el buildout:
     interpreter = zopepy
     extra-paths = ${zope2:location}/lib/python
     scripts = zopepy
+
     [omelette]
     recipe = collective.recipe.omelette
     eggs = ${instance-settings:eggs}
     products = ${instance-settings:products}
     packages = ${zope2:location}/lib/python ./
+
     [xdv-setup]
     recipe = collective.recipe.template
     input = ${buildout:directory}/devel/server.ini.template
@@ -522,13 +534,13 @@ servidores:
 * `balancer`
     un cluster de HAproxy que balancea los clientes ZEO
 * `instance1`
-    Clientge de ZEO 1
+    Cliente de ZEO 1
 * `instance2`
-    Clientge de ZEO 2
+    Cliente de ZEO 2
 * `instance3`
-    Clientge de ZEO 3
+    Cliente de ZEO 3
 * `instance4`
-    Clientge de ZEO 4
+    Cliente de ZEO 4
 * `instance-debug`
     un cliente ZEO que no forma parte del cluster y esta siempre en modo de
     desarrollo
@@ -562,14 +574,17 @@ utilizan en la sección de construcción definida arriba:
     # Copiar las versiones mas recientes de los paquetes utilizados a un archivo,
     # para poder "congelarlas" después en producción.
     dump-picked-versions-file = versions/known-good-versions.cfg
+
     # Extender la configuración de versiones para obtener la versión de Plone
     # requerida, desde http://dist.plone.org/release/<version>/versions.cfg
     extends =
        build.cfg
        versions/plone-3.3rc4.cfg
+
     newest = false
     unzip = true
     versions = versions
+
     # Las partes del buildout son todos los servicios que se instalaran
     parts =
        lxml
@@ -597,8 +612,10 @@ utilizan en la sección de construcción definida arriba:
        backup
        cron-pack
        cron-backup
+
     develop =
        src/*
+
     # Se requieren versiones especificas de algunos proyectos
     [versions]
     zc.buildout = 1.2.1
@@ -607,12 +624,14 @@ utilizan en la sección de construcción definida arriba:
     ZODB3 = 3.8.1
     z3c.blobfile = 0.1.2
     lxml = 2.1.5
+
     ###
     # URLs de las versiones de Zope, Varnish y Nginx que se utilizaran
     [downloads]
     zope = ${versions:zope2-url}
     varnish = http://downloads.sourceforge.net/varnish/varnish-2.0.4.tar.gz
     nginx = http://sysoev.ru/nginx/nginx-0.7.43.tar.gz
+
     # configuración básica de los clientes ZEO
     [instance-settings]
     eggs =
@@ -638,13 +657,16 @@ utilizan en la sección de construcción definida arriba:
     blob-storage = ${zeoserver:zeo-var}/blobstorage
     zeo-address = ${zeoserver:zeo-address}
     effective-user = ${users:zope}
+
     # configuración básica de supervisor
     [supervisor-settings]
     user = admin
     password = admin
+
     # Nombre del sitio Plone que se usara para configurar virtual hosting
     [plone-sites]
     main = plone-site
+
     # Nombres o ips de los diversos servidores, main es el principal
     [hosts]
     main = 127.0.0.1
@@ -659,6 +681,7 @@ utilizan en la sección de construcción definida arriba:
     instance-debug = 127.0.0.1
     xdv = 127.0.0.1
     syslog = 127.0.0.1
+
     # Puertos de los servidores, main es el principal
     [ports]
     main = 8000
@@ -677,6 +700,7 @@ utilizan en la sección de construcción definida arriba:
     zeo-server = 8501
     supervisor = 9001
     xdv = 5000
+
     # Usuarios del sistema a los que se asignaran los servicios
     [users]
     main = www
@@ -685,6 +709,7 @@ utilizan en la sección de construcción definida arriba:
     balancer = www
     zope = www
     supervisor = www
+
     # configuración del tema
     [theme]
     root = ${buildout:directory}/theme
@@ -692,18 +717,22 @@ utilizan en la sección de construcción definida arriba:
     rules = ${theme:root}/rules/default.xml
     absolute-prefix = /static
     output-xslt = ${theme:root}/theme.xsl
+
     # configuración de compilación
     [build]
     cpu = i686
     target = linux26
+
     # Creación de scripts para backup
     [backup]
     recipe = collective.recipe.backup
+
     # Compresión semanal de la base de datos
     [cron-pack]
     recipe = z3c.recipe.usercrontab
     times = 0 2 1 * *
     command = ${buildout:directory}/bin/zeopack
+
     # Backups diarios
     [cron-backup]
     recipe = z3c.recipe.usercrontab

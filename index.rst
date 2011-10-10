@@ -153,7 +153,31 @@ Plone que se quiera emprender.
 .. toctree::
    :maxdepth: 2
 
+   python/skel-proyectos-python
+   buildout/replicacion-de-proyectos-python
+   buildout/hola-mundo-en-zc-buildout
+   buildout/programar-tareas-con-crontab
+   buildout/rotar-archivos-log
    buildout
+
+Administración de Zope
+----------------------
+
+Plone esta basado en el servidor de aplicaciones Zope y este requiere realizar tareas de hospedaje y administrativa para un servidor de aplicación Zope / sitio de Plone.
+
+.. toctree::
+   :maxdepth: 2
+
+   zope/zope-cli
+   zope/puntos-montaje-zodb-sitios-plone
+   zope/compactar-zodb
+   zope/zope-como-servidor-ftp
+   zope/zope-como-servidor-webdav
+   zope/zope-registrar-niveles-arraque
+   zope/importar-exportar-plone
+   zope/instancia-debug-zope
+   zope/virtual-host-monster
+   zope/hosting-zope
 
 Tecnologías de Zope
 -------------------
@@ -180,6 +204,7 @@ sección tocaremos algunos de ellos.
 .. toctree::
    :maxdepth: 2
 
+   plone/agregando-productos-adicionales
    productos
    policy
    tema
