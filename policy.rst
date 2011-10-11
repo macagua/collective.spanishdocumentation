@@ -1,8 +1,8 @@
 .. -*- coding: utf-8 -*-
 
-*********************************************
+=============================================
 Pasos para crear un producto de configuración
-*********************************************
+=============================================
 
 Se detallan los pasos para crear un producto de configuración y se describe
 cada uno de los directorios y archivos importantes generados.
@@ -163,3 +163,10 @@ nombre del paso que necesitamos sea ejecutado antes que nuestro código. Se
 pueden agregar varias etiquetas dependency con distintos pasos para el caso de'
 que nuestro código dependa de varios pasos.
 
+
+Referencia
+==========
+
+- `Pasos para crear un producto de configuración`_
+
+.. _Pasos para crear un producto de configuración: http://www.plone.mx/docs/policy.html
