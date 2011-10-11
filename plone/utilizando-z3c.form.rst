@@ -1,10 +1,8 @@
 .. -*- coding: utf-8 -*-
 
+========================================
 Utilizando formularios z3c.form en Plone
 ========================================
-
-Descripción general
--------------------
 
 El paquete `z3c.form`_ es un framework avanzado para construcción y
 utilización de formularios y widgets dentro de Zope / Plone. El provee una
@@ -12,13 +10,13 @@ forma fácil y flexible para mostrar formularios y manejar sus etapas de
 creación, validación y posibles acciones posteriores.
 
 Introducción
-~~~~~~~~~~~~
+============
 
 ¿Qué es z3cform? y ¿por qué debo considerar el uso de la misma?.
 
 
 ¿Qué es plone.app.z3cform?
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------
 
 El `plone.app.z3cform`_ es un paquete que proporciona widgets y otras
 utilidades para hacer formularios dentro de Plone. También contiene las
@@ -33,7 +31,7 @@ hay cláusulas secretas o hacks especiales de Zope 2 y Plone (cosas como
 El paquete `z3c.form`_ viene con una excelente `documentación`_.
 
 z3c.form vs arquetipos
-~~~~~~~~~~~~~~~~~~~~~~
+----------------------
 
 Los formularios arquetipos son difíciles de usar, independientemente de los
 tipos de contenido. Esto llevó a varios hacks en el pasado cuando los tipos
@@ -41,19 +39,19 @@ de contenidos arquetipos fueron utilizados erróneamente como herramientas,
 formularios de encuesta, etc.
 
 z3c.form vs formlib
-~~~~~~~~~~~~~~~~~~~
+-------------------
 
 El paquete `zope.formlib`_ a veces cubiertos por inflexible o hacks, debido a
 su falta de capacidad de adaptación y un sólido conjunto de widgets.
 
 ¿Qué voy a aprender en este tutorial?
--------------------------------------
+=====================================
 
 Este tutorial le mostrará cómo crear un formulario z3c.form simple de
 comentarios, que luego se ampliará y se mostrará dentro de un Viewlet.
 
 Más información
-~~~~~~~~~~~~~~~
+---------------
 
 Puede encontrar más información en las páginas de PyPI de los paquetes
 `plone.z3cform`_ y `plone.app.z3cform`_.
@@ -70,7 +68,7 @@ toneladas de ejemplos de formularios z3c.form.
 
 
 Creación de un buildout para el desarrollo z3c.form
----------------------------------------------------
+===================================================
 Algunas cosas que usted necesita antes de comenzar.
 
 Antes de que podamos crear un formulario z3c.form dentro de Plone necesita
@@ -86,7 +84,7 @@ instalado, con el siguiente comando:
 
 
 Crear un ambiente de buildout
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------
 
 Inicialmente se crea un nuevo buildout Plone 3 con la ayuda del script
 paster, con el siguiente comando:
@@ -141,8 +139,8 @@ la contraseña de Zope, el que debe completar individual.
     See README.txt for details
     -----------------------------------------------------------
 
-Ajustar las versiones de los paquetes necesarios para trabajar con z3c.form
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Ajustar versiones de paquetes necesarios para trabajar con z3c.form
+-------------------------------------------------------------------
 
 Para hacer que funcione z3c.form en Plone necesita instalar algunos paquetes
 con un conjunto específico de las versiones. Para facilitar las cosas,
@@ -170,7 +168,7 @@ paquete zope.schema en su configuración ``buildout.cfg``:
 
 
 Ejecutar el buildout
-~~~~~~~~~~~~~~~~~~~~
+--------------------
 
 Después de ajustar las versiones, puede ejecutar el script de buildout, con
 el siguiente comando:
@@ -186,8 +184,8 @@ para crear un paquete Python que contiene el formulario que creará el
 siguiente paso.
 
 
-Creación de un paquete de Python para un formulario z3c.form
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Creación de paquete Python para un formulario z3c.form
+------------------------------------------------------
 
 Ahora cree un nuevo paquete de Python que contiene un simple formulario.
 
@@ -259,8 +257,7 @@ nombre del paquete. La salida se verá algo así:
         ./example.z3cformtutorial/docs/LICENSE.GPL
         Copying LICENSE.txt_tmpl to
         ./example.z3cformtutorial/docs/LICENSE.txt
-    Replace 1022 bytes with 1272 bytes (0/32 lines changed; 8 lines
-    added)
+    Replace 1022 bytes with 1272 bytes (0/32 lines changed; 8 lines added)
       Copying setup.py_tmpl to ./example.z3cformtutorial/setup.py
     ------------------------------------------------------------------------------
     The project you just created has local commands. These can be used
@@ -277,12 +274,12 @@ nombre del paquete. La salida se verá algo así:
     Running /usr/bin/python2.4 setup.py egg_info
 
 
-Agrega a las dependencias de z3c.form a la paquete creado
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Agregar dependencias de z3c.form a la paquete creado
+----------------------------------------------------
 
-Ahora agregue el paquete plone.app.z3cform como una dependencia a su paquete
+Ahora agregue el paquete ``plone.app.z3cform`` como una dependencia a su paquete
 recién creado Python. A su vez, el paquete se descargará automáticamente como
-plone.z3cform dependencia plone.app.z3cform:
+``plone.z3cform`` dependencia ``plone.app.z3cform``:
 
 ``src/example.z3cformtutorial/setup.py``
 
@@ -329,8 +326,8 @@ Luego ejecute de nuevo el buildout para bajar las dependencias de su paquete:
 Ahora esta listo para crear realmente nuestro primer formulario.
 
 
-Crear un formulario simples con z3cform
----------------------------------------
+Crear un formulario simple con z3c.form
+=======================================
 
 Crear un formulario simples para registrar comentarios.
 
@@ -454,8 +451,8 @@ en su navegador de preferencia: ::
   http://localhost:8080/test/comment_form
 
 
-Mostrando su formulario z3c.form dentro de un Viewlet en Plone
---------------------------------------------------------------
+Mostrar formulario z3c.form dentro de un Viewlet en Plone
+=========================================================
 
 Ahora es debe mostrar el formulario de comentarios dentro de un Viewlet en
 Plone.
@@ -549,7 +546,7 @@ comentarios en: ::
 
 
 OBS: plone.z3cform >= 0.6.0
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------
 
 Si usted está usando el paquete plone.z3cform >= 0.6.0, el formulario de
 comentarios precisa fornecer una interfaz IWrappedForm, sen?o o Plone
@@ -598,7 +595,7 @@ funcione en todas las versiones de plone.z3cform:
 
 
 Referencias
-~~~~~~~~~~~
+===========
 
 -   `Utilizando formul?rios z3c.form no Plone`_.
 
