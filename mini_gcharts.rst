@@ -1,8 +1,8 @@
 .. -*- coding: utf-8 -*-
 
-********************************************************
+========================================================
 Crear gráficas a partir de datos de un tipo de contenido
-********************************************************
+========================================================
 
 En este ejemplo utilizaremos un tipo de contenido de Plone para capturar
 información y crearemos una vista para el tipo donde se muestre una gráfica
@@ -11,12 +11,17 @@ de pastel que refleje los datos capturados.
 Requisitos previos
 ==================
 
-Para definir el tipo de contenido, agregaremos dos productos al buildout, que
-nos permitirán utilizar una tabla para capturar la información y seleccionar
-el color de la gráfica::
+Para definir el tipo de contenido, agregaremos dos productos a la sección
+de eggs del buildout, que nos permitirán utilizar una tabla para capturar 
+la información y seleccionar el color de la gráfica:
 
-    Products.SmartColorWidget
-    Products.DataGridField<=1.7
+.. code-block:: cfg
+
+    eggs = 
+        ...
+        Products.SmartColorWidget
+        Products.DataGridField<=1.7
+        ...
 
 Google ofrece una serie de APIs muy útiles para el desarrollo web. En este
 caso, utilizaremos el servicio de Charts. No se requiere instalar nada en
@@ -158,4 +163,12 @@ Configuramos la vista para usarla solamente con nuestro tipo de ejemplo:
         class=".tipoejemplo.TipoEjemploView"
         permission="zope2.View"
     />
+
+
+Referencia
+==========
+
+- `Crear gráficas a partir de datos de un tipo de contenido`_
+
+.. _Crear gráficas a partir de datos de un tipo de contenido: http://www.plone.mx/docs/mini_gcharts.html
 
