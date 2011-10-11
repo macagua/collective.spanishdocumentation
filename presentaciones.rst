@@ -1,8 +1,8 @@
 .. -*- coding: utf-8 -*-
 
-*********************
+=====================
 Presentaciones en PDF
-*********************
+=====================
 
 A lo largo del curso utilizamos diversas presentaciones para apoyar
 visualmente los conceptos explicados. A continuacion se describen algunas y
