@@ -1,3 +1,5 @@
+.. -*- coding: utf-8 -*-
+
 EasyInstall y Setuptools
 ========================
 
@@ -112,3 +114,9 @@ disponibles, se utiliza la opción --list-templates::
       zope_app:           Package that contains a Zope application
       zope_deploy:        (Paste) deployment of a Zope application
 
+
+Referencia
+----------
+- `Instalación de setuptools y EasyInstall para Python`_
+
+.. _Instalación de setuptools y EasyInstall para Python: http://plone.org/countries/mx/instalacion-de-setuptools-y-easyinstall-para-python
