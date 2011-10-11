@@ -1,8 +1,8 @@
 .. -*- coding: utf-8 -*-
 
-*****************************************
+=========================================
 Desarrollo avanzado de sitios con Plone 3
-*****************************************
+=========================================
 
 Un sitio basado en Plone es muy complejo y se compone de una colección de
 elementos como contenido, configuración y recursos de presentación. La
@@ -60,4 +60,12 @@ La estructura del código que se recomienda incluye las siguientes partes:
         * Portlets generales.
         * Vistas y viewlets especiales.
         * Funcionalidades que extiendan Plone.
+
+
+Referencia
+==========
+
+- `Desarrollo avanzado de sitios con Plone 3`_
+
+.. _Desarrollo avanzado de sitios con Plone 3: http://www.plone.mx/docs/productos.html
 
