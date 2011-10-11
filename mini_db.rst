@@ -1,31 +1,36 @@
 .. -*- coding: utf-8 -*-
 
-*****************************************************
+=====================================================
 Presentar información de una base de datos relacional
-*****************************************************
+=====================================================
 
 Demostración de como conectarse a una base de datos relacional desde una
-vista de Plone, utilizando SQLAlchemy y SQLite.
+vista de Plone, utilizando ``SQLAlchemy`` y ``SQLite``.
 
 Requisitos previos
 ==================
 
 Se necesita tener instalada una base de datos relacional, incluyendo las
-librerías de desarrollo. En este ejemplo se utiliza SQLite. Necesitamos
-también el driver de SQL para Python y SQLAlchemy, que es una librería para
+librerías de desarrollo. En este ejemplo se utiliza ``SQLite``. Necesitamos
+también el driver de SQL para Python y ``SQLAlchemy``, que es una librería para
 generalizar y facilitar al acceso a diversas bases de datos.
 
 Para este ejemplo, es necesario agregar los siguientes paquetes a la sección
-de eggs en el buildout::
+de eggs en el buildout:
 
-    SQLAlchemy
-    zope.sqlalchemy
-    pysqlite
+.. code-block:: cfg
+
+    eggs = 
+        ...
+        SQLAlchemy
+        zope.sqlalchemy
+        pysqlite
+        ...
 
 Vista Python
 ============
 
-Primero definimos una vista que se conectará a SQLite:
+Primero definimos una vista que se conectará a ``SQLite``:
 
 .. code-block:: python
 
@@ -88,7 +93,7 @@ Primero definimos una vista que se conectará a SQLite:
 Template ZPT
 ============
 
-En el template de ZPT, simplemente presentamos las filas de datos:
+En el template de ``ZPT``, simplemente presentamos las filas de datos:
 
 .. code-block:: html
 
@@ -130,4 +135,11 @@ La configuración de la vista es como sigue:
         permission="zope2.View"
     />
 
+
+Referencia
+==========
+
+- `Presentar información de una base de datos relacional`_
+
+.. _Presentar información de una base de datos relacional: http://www.plone.mx/docs/mini_db.html
 
