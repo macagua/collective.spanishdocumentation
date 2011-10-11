@@ -1,8 +1,10 @@
 .. -*- coding: utf-8 -*-
 
-*****************
-Ligas importantes
-*****************
+===================
+Enlaces importantes
+===================
+
+A continuación se presentan una serie de enlaces en la Web donde podrá conseguir información más detallada sobre las tecnologías expuestas en esta documentación:
 
 Sphinx y reStructuredText
 =========================
