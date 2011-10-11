@@ -7,7 +7,7 @@ GenericSetup y Perfiles
 .. contents :: :local:
 
 Introduccion
--------------
+============
 
 GenericSetup es un mecanismo basado en XML para importar y exportar
 configuraciones de sitios Plone.
@@ -63,7 +63,7 @@ sera modificada la configuración.
 
 
 Creación de un perfil
----------------------
+=====================
 
 Un perfil se declara utilizando la directriz <genericsetup> en el archivo
 configure.zcml del producto. El instalador de Plone importara la
@@ -98,8 +98,8 @@ Mas información sobre ejecutar steps:
 
 * http://n2.nabble.com/indexing-of-content-created-by-Generic-Setup-tp4454703p4454703.html
 
-Como obtener el listado de perfiles disponibles
------------------------------------------------
+Obtener el listado de perfiles disponibles
+==========================================
 
 Ejemplo::
 
@@ -117,8 +117,8 @@ Resultados::
     {'product': 'Products.Archetypes', 'description': u'Extension profile for default Archetypes setup.', 'for': None, 'title': u'Archetypes', 'version': u'1.5.7', 'path': u'/home/moo/sits/parts/plone/Archetypes/profiles/default', 'type': 2, 'id': u'Products.Archetypes:Archetypes'}
     ...
 
-Como instalar un perfil desde Python
-====================================
+Instalación un perfil desde Python
+==================================
 
 Para instalar un perfil desde Python, por ejemplo para pruebas, se puede
 llamar por su nombre, en el formato *profile-${product_name}:${profile_id}*
@@ -128,7 +128,7 @@ Ejemplo::
     setup_tool.runAllImportStepsFromProfile('profile-miproducto.miperfil')
 
 Dependencias
-------------
+============
 
 GenericSetup permite declarar como dependencias los perfiles de otros
 productos, de manera que estos sean instalados antes del perfil de nuestro
@@ -136,4 +136,9 @@ producto.
 
 * `Mas información sobre dependencias <http://plone.org/products/plone/roadmap/195/>`_.
 
+Referencias
+===========
 
+-   `GenericSetup y Perfiles`_.
+
+.. _GenericSetup y Perfiles: http://www.plone.mx/docs/gs.html
