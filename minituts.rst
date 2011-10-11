@@ -1,8 +1,8 @@
 .. -*- coding: utf-8 -*-
 
-***************
+===============
 Mini Tutoriales
-***************
+===============
 
 En esta sección agrupamos una serie de mini tutoriales acerca de algunas de
 las demostraciones más solicitadas por participantes en cursos de Plone.
