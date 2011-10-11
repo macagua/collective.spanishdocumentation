@@ -141,6 +141,20 @@ explicar sus diferencias.
    python/distribute-y-pip
 
 
+Esqueletos de proyectos
+-----------------------
+
+Como parte de la filosofía de desarrollo ágil de aplicaciones, varios proyectos Python 
+ofrecen mecanismo de plantilla de proyectos y tipos de módulos que cumplen con las buenas 
+practicas implementadas en sus proyectos.
+
+.. toctree::
+   :maxdepth: 2
+
+   python/skel-proyectos-python
+   python/skel-proyectos-plone
+
+
 Buildout y sus complementos
 ---------------------------
 
@@ -153,12 +167,13 @@ Plone que se quiera emprender.
 .. toctree::
    :maxdepth: 2
 
-   python/skel-proyectos-python
    buildout/replicacion-de-proyectos-python
    buildout/hola-mundo-en-zc-buildout
+   buildout
+   buildout/plone-esquema-alta-disponibilidad
    buildout/programar-tareas-con-crontab
    buildout/rotar-archivos-log
-   buildout
+
 
 Administración de Zope
 ----------------------
