@@ -1,8 +1,8 @@
 .. -*- coding: utf-8 -*-
 
-**************************************
+======================================
 Obtener direcciones de manejo con SOAP
-**************************************
+======================================
 
 Plone puede conectarse fácilmente a servicios SOAP utilizando el poder de
 Python. A continuación veremos como obtener direcciones de manejo dentro de
@@ -19,7 +19,15 @@ Una librería de Python que permite conectarse a servicios web de un manera
 sencilla se llama *suds* y esta disponible en `PYPI <http://pypi.python.org/pypi/suds>`_.
 Utilizaremos esta librería para nuestra pequeña aplicación. Si utilizamos Plone
 con buildout (como debe ser), simplemente debemos agregar *suds* a la
-sección de *eggs* del buildout.
+sección de *eggs* del buildout:
+
+.. code-block:: cfg
+
+    eggs = 
+        ...
+        suds
+        ...
+
 
 Vista Python
 ============
@@ -160,3 +168,10 @@ Zolera. Para mayor información:
  * `z3c.soap <http://pypi.python.org/pypi/z3c.soap>`_
  * `Zolera <http://pypi.python.org/pypi/ZSI>`_
 
+
+Referencia
+==========
+
+- `Obtener direcciones de manejo con SOAP`_
+
+.. _Obtener direcciones de manejo con SOAP: http://www.plone.mx/docs/mini_soap.html
