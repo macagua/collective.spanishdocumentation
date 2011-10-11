@@ -1,8 +1,8 @@
 .. -*- coding: utf-8 -*-
 
-***************************************************
+===================================================
 Traducir un documento a otro idioma automáticamente
-***************************************************
+===================================================
 
 Google ofrece un servicio de traducción de idiomas con el que podemos
 traducir automáticamente cualquier texto desde uno de los idiomas disponibles
@@ -14,10 +14,15 @@ Requisitos previos
 
 Para agilizar el acceso al servicio de traducción, utilizaremos una librería
 de Python que envuelve el API de Google. Necesitamos agregar lo siguiente en
-la sección de *eggs* de nuestro buildout::
+la sección de *eggs* del buildout:
 
-    simplejson
-    goopytrans
+.. code-block:: cfg
+
+    eggs = 
+        ...
+        simplejson
+        goopytrans
+        ...
 
 Además, requeriremos que el tipo de contenido utilizado tenga un campo de
 texto llamado *text*.
@@ -90,4 +95,11 @@ La configuración de la vista es la siguiente:
         permission="zope2.View"
     />
 
+
+Referencia
+==========
+
+- `Traducir un documento a otro idioma automáticamente`_
+
+.. _Traducir un documento a otro idioma automáticamente: http://www.plone.mx/docs/mini_translate.html
 
