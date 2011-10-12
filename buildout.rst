@@ -1,8 +1,8 @@
 .. -*- coding: utf-8 -*-
 
-******************
+==================
 Buildout y Plone 3
-******************
+==================
 
 .. contents :: :local:
 
@@ -17,7 +17,14 @@ diversos paquetes de Python fácilmente porque está conectado con el índice
 de paquetes de Python (http://www.python.org/pypi).
 
 Algunos términos importantes
-----------------------------
+============================
+
+**Paquete de Python**.
+    Básicamente, una carpeta con código Python que contiene un archivo
+    ``__init__.py``.
+
+**Huevo (Python egg)**.
+    Un mecanismo para empaquetar y distribuir paquetes de Python.
 
 **Instalación de Zope**.
     El software propio del servidor de aplicaciones.
@@ -25,22 +32,16 @@ Algunos términos importantes
 **Instancia de Zope**.
     Un directorio específico que contiene una configuración completa de Zope.
 
-**Paquete de Python**.
-    Básicamente, una carpeta con código Python que contiene un archivo
-    __init__.py.
-
 **Producto de Zope**.
     Un paquete de Python especial para extender Zope.
-
-**Huevo (Python egg)**.
-    Un mecanismo para empaquetar y distribuir paquetes de Python.
-
-**Cheese shop (PYPI)**.
-    Un repositorio de paquetes de Python.
 
 **easy_install**.
     Un script de línea de comando que permite instalar a través de la red
     paquetes del PYPI.
+
+**Cheese shop (PYPI)**.
+    Un repositorio de paquetes de Python.
+
 
 Requisitos previos
 ------------------
@@ -53,17 +54,22 @@ general se necesita lo siguiente:
 * Para Zope, ZopeSkel (egg).
 * Para Plone, Python Imaging Library (PIL) instalado en ese Python.
 
+
 Creación de un buildout
------------------------
+=======================
 
-Se puede generar un buildout utilizando un template de paster::
+Se puede generar un buildout utilizando un template de paster:
 
-    $ paster create -t plone3_buildout unam.buildout
+.. code-block:: sh
 
-El template hace varias preguntas::
+  $ paster create -t plone3_buildout unam.buildout
 
-    Selected and implied templates:
-      ZopeSkel#plone3_buildout  A buildout for Plone 3 projects
+El template hace varias preguntas:
+
+.. code-block:: sh
+
+  Selected and implied templates:
+    ZopeSkel#plone3_buildout  A buildout for Plone 3 projects
 
     Variables:
       egg:      unam.buildout
@@ -96,21 +102,23 @@ El template hace varias preguntas::
     -----------------------------------------------------------
 
 Activación de un buildout
--------------------------
+=========================
 
 Para activar un buildout hay que ejecutar el script `bootstrap.py` con el
-mismo python con que se desea trabajar::
+mismo python con que se desea trabajar:
 
-    $ cd unam.buildout
-    $ python2.4 bootstrap.py
-    ...
-    ...
-    ...
-    $ bin/buildout -v
-    ...
-    ...
-    ...
-    $ bin/instance fg
+.. code-block:: sh
+
+  $ cd unam.buildout
+  $ python2.4 bootstrap.py
+  ...
+  ...
+  ...
+  $ bin/buildout -v
+  ...
+  ...
+  ...
+  $ bin/instance fg
 
 Directorios creados
 -------------------
@@ -136,8 +144,8 @@ Directorios creados
 **parts**.
     Todo el código, configuración y datos manejados por buildout.
 
-Ejemplo
--------
+Descripción de este ejemplo
+---------------------------
 
 Un ejemplo de un buildout funcional se muestra a continuación:
 
