@@ -4,13 +4,21 @@
 Replicación de proyectos Python
 ===============================
 
-¿Que es zc.buildout?
+¿Qué es zc.buildout?
 --------------------
 
 Es una herramienta que replica todo un entorno de trabajo aislado. Esto es
 una buena práctica para experimentar con código y el estar familiarizado con
 estas herramientas será beneficioso para desarrollar e implantar
 aplicaciones.
+
+Estas son sus principales características:
+
+- Permite definición de buildouts de forma declarativa.
+- Basado en Python.
+- Orientado a desarrollador.
+- Se puede replicar.
+- Es fácil trabajar con los formatos de paquetes eggs.
 
 
 Puedes instalar `zc.buildout`_ usando `pip`_ (es recomendable hacerlo dentro
