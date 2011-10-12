@@ -71,30 +71,15 @@ Tutorial de control de versiones
 
 Para tener un ambiente de desarrollo productivo, en especial cuando se
 trabaje en equipo, es muy importante contar con un sistema de control de
-versiones. Subversion es el utilizado por plone.org y el plone collective,
+versiones. ``Subversion`` es el utilizado por plone.org y el plone collective,
 por lo que consideramos necesario conocerlo, aunque recientemente la
-popularidad de sistemas distribuidos como Git y Mercurial ha aumentado.
+popularidad de sistemas distribuidos como ``Git`` y ``Mercurial`` ha aumentado.
 
 .. toctree::
    :maxdepth: 2
 
    subversion
 
-
-Una pequeña Inmersión al modo interactivo de Python
----------------------------------------------------
-
-La idea de este tutorial es que alguien que **NUNCA** ha trabajando con el
-interprete de `Python`_ pueda tener un primer acercamiento **SIN
-PROGRAMAR**, solamente con conocer el uso del interprete y sus comandos
-básicos.
-
-.. _Python: http://www.python.org/
-
-.. toctree::
-   :maxdepth: 2
-
-   python/una_pequena_inmersion_python
 
 Python
 ------
@@ -111,6 +96,22 @@ asociación de Python de Argentina y la fundación de Python.
    :maxdepth: 2
 
    Tutorial de Python <python/python-tutorial/index>
+
+
+Inmersión al modo interactivo de Python
+---------------------------------------
+
+La idea de este tutorial es que alguien que **NUNCA** ha trabajando con el
+interprete de `Python`_ pueda tener un primer acercamiento **SIN
+PROGRAMAR**, solamente con conocer el uso del interprete y sus comandos
+básicos.
+
+.. _Python: http://www.python.org/
+
+.. toctree::
+   :maxdepth: 2
+
+   python/una_pequena_inmersion_python
 
 
 Entornos virtuales en Python
@@ -170,9 +171,10 @@ Plone que se quiera emprender.
    buildout/replicacion-de-proyectos-python
    buildout/hola-mundo-en-zc-buildout
    buildout
-   buildout/plone-esquema-alta-disponibilidad
+   buildout/recipes-buildout
    buildout/programar-tareas-con-crontab
    buildout/rotar-archivos-log
+   buildout/plone-esquema-alta-disponibilidad
 
 
 Administración de Zope
