@@ -1,10 +1,11 @@
 .. -*- coding: utf-8 -*-
 
+====================================================
 Agregando módulos y complementos adicionales a Plone
 ====================================================
 
 ¿Cómo agrego productos específicos al sitio Plone?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==================================================
 
 Para la mayor comprensión de este manual cada vez que nos refiramos a un
 producto estaremos hablando de plugins para los que usen WordPress o módulos
@@ -18,7 +19,7 @@ discusión, integrar con otros servicios como *Bases de Datos*, *LDAP*, *Lista
 de correo*, entre otros.
 
 Módulos / Complementos / Agregados adicionales
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------------------------
 
 Hay que entender varios conceptos antes de continuar:
 
@@ -31,7 +32,7 @@ Hay que entender varios conceptos antes de continuar:
   Es una terminología usada por la comunidad Zope / Plone asociada a
   cualquier implementación de módulos / complementos y agregados que amplíen la
   funcionalidad por defecto que ofrece Zope/Plone. También son conocidos como
-  *"Productos de terceros"* del Ingles **`Third-Party Products`_**.
+  *"Productos de terceros"* del Ingles `Third-Party Products`_.
 
 **Producto Zope**
   Es un tipo especial de paquete Python usado para extender Zope. En las
@@ -71,8 +72,9 @@ Hay que entender varios conceptos antes de continuar:
   para su producto. Para consultar el repositorio en forma Web en el siguiente
   `enlace`_.
 
+
 Tipos de productos disponibles
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==============================
 
 Teniendo en cuenta los conceptos previos, entonces existen muchos Productos
 distribuidos como Productos Zope o paquetes Egg, pero ahora hay que saber que
@@ -104,7 +106,7 @@ estos:
 
 
 Recomendaciones para agregar productos
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------------
 
 Al momento de buscar que producto a instalar, proceda de la siguiente forma:
 
@@ -130,7 +132,7 @@ Al momento de buscar que producto a instalar, proceda de la siguiente forma:
 
 
 Ejemplo de uso
-~~~~~~~~~~~~~~~
+==============
 
 Para ejemplificar estos conceptos previos, agregue el siguiente producto:
 
@@ -138,15 +140,14 @@ Para ejemplificar estos conceptos previos, agregue el siguiente producto:
   :align: center
   :alt: El producto heddex.tranquility-theme
 
-`heddex.tranquility theme`_
 
-Este tema se empaqueta como un paquete egg Python y en la `página del
-producto en plone.org`_ tiene buenas instrucciones de instalación. Esta
-documentación dice añadir el nombre de producto ``heddex.tranquility``
+`heddex.tranquility theme`_, es un tema se empaqueta como un paquete egg Python 
+y en la `página del producto en plone.org`_ tiene buenas instrucciones de instalación. 
+Esta documentación dice añadir el nombre de producto ``heddex.tranquility``
 debajo de la directivas ``eggs`` y ``zcml`` en parte **[buildout]**.
 
 Antes de seguir seria bueno que entiendas que es buildout y sus hiervas, para
-esto recomiendo leer el manual sobre **`Gestión de proyectos con Buildout`_**.
+esto recomiendo leer el manual sobre `Gestión de proyectos con Buildout`_.
 
 Para empezar, es una buena idea hacer una copia de seguridad del archivo
 original ``buildout.cfg``, sólo en caso de que accidentalmente dañe la
@@ -184,7 +185,8 @@ describen a continuación:
       heddex.tranquility
 
 
-**Agregando un producto tradicional Zope 2**
+Agregando un producto tradicional Zope 2
+----------------------------------------
 
 La forma más sencilla de probar un producto tradicional de Zope 2 es para
 extraerlo en dentro de la carpeta ``products/`` de instalación. Si ves
@@ -219,7 +221,8 @@ necesita buscar el enlace de descargas en la página de productos en plone.org
 y coloque la dirección URL.
 
 
-**Agregando un paquete "desarrollo"**
+Agregando un paquete "desarrollo"
+---------------------------------
 
 A veces usted tiene que existen algunos productos que no están empaquetados
 en ``egg`` ni **al viejo estilo de Zope**, pero estos están disponibles desde
@@ -265,11 +268,11 @@ Este es un tema para Plone 3 y Plone 4 que aun esta en desarrollo:
   :alt: Canaima Aponwao Theme
   :align: center
 
-`canaima.aponwaotheme`_
+El paquete `canaima.aponwaotheme`_, es un tema para sitios Plone 3.
 
 Cabe destacar que ya existente `extensiones de Buildout`_ que gestión
 descargas desde repositorios de control de versiones como
-`infrae.subversion`_ y `mr.developer`_ que con unas simples
+`mr.developer`_ y `infrae.subversion`_ que con unas simples
 configuraciones adicionales en tu archivo ``buildout.cfg`` puede automatizar
 la descarga de los códigos fuentes del los respectivos repositorios.
 
@@ -314,7 +317,7 @@ Agregue la siguiente configuración del producto al archivo ``buildout.cfg``
 Foros de discusión
 ~~~~~~~~~~~~~~~~~~
 
-`Ploneboard`_ es uno de los más usados en la mayoría de sitios Plone. Si
+`Ploneboard`_, es uno de los más usados en la mayoría de sitios Plone. Si
 usted necesita realmente un foro avanzado usted más bien debe buscar fuera
 del sitio de Plone y tratarte de integrarlo a su sitio.
 
@@ -406,7 +409,7 @@ Agregue la siguiente configuración del producto al archivo ``buildout.cfg``
 Etiquetas
 ~~~~~~~~~
 
-`quintagroup.portlet.cumulus`_ Es un portlet de nubes de etiquetas que rotan usando una animación de Flash 3D.
+`quintagroup.portlet.cumulus`_, es un portlet de nubes de etiquetas que rotan usando una animación de Flash 3D.
 
 .. image:: ./images/screenshot_002.jpeg
   :align: center
@@ -460,7 +463,7 @@ Agregue la siguiente configuración del producto al archivo ``buildout.cfg``
       ...
       se.portlet.gallery
 
-`plone.app.imaging`_ le habilita declarativamente definir adicionales tamaños
+`plone.app.imaging`_, le habilita declarativamente definir adicionales tamaños
 de imágenes inicialmente generadas cuando usted agrega imágenes en su portal.
 
 .. image:: ./images/screenshot_006.png
@@ -483,7 +486,7 @@ Agregue la siguiente configuración del producto al archivo ``buildout.cfg``
 Seguridad
 ~~~~~~~~~
 
-`Plone Captchas`_ agrega mecanismos de captcha para si sitio Plone.
+`Plone Captchas`_, agrega mecanismos de captcha para si sitio Plone.
 
 .. code-block:: cfg
 
@@ -499,7 +502,7 @@ Seguridad
 Administración
 ~~~~~~~~~~~~~~
 
-`Anonymous view`_ es bastante útil porque le permite a usted mostrar ciertas
+`Anonymous view`_, es bastante útil porque le permite a usted mostrar ciertas
 páginas que estarán disponibles a usuarios anónimos.
 
 .. code-block:: cfg
@@ -549,8 +552,11 @@ Referencias
 .. _su instalación: http://localhost:8080/manage
 .. _Add-on Product Releases: http://plone.org/products
 .. _Python Package Index (PyPI): http://pypi.python.org/pypi/
+.. _repositorio SVN Collective: http://svn.plone.org/svn/collective/
 .. _heddex.tranquility theme: http://plone.org/products/heddex.tranquility-theme
+.. _página del producto en plone.org: http://plone.org/products/heddex.tranquility-theme
 .. _Gestión de proyectos con Buildout: http://coactivate.org/projects/ploneve/gestion-de-proyectos-con-buildout
+.. _Agregar/Quitar Productos: http://localhost:8080/Plone/prefs_install_products_form
 .. _canaima.aponwaotheme: http://gitorious.org/%7Emacagua/canaima-aponwao-plone-theme/canaima-aponwaotheme
 .. _extensiones de Buildout: http://pypi.python.org/pypi?:action=search&term=Buildout&submit=search
 .. _infrae.subversion: http://pypi.python.org/pypi/infrae.subversion
@@ -571,6 +577,7 @@ Referencias
 .. _Anonymous view: http://plone.org/products/collective.anonymousview/
 .. _collective.uploadify: http://plone.org/products/collective.uploadify/
 .. _Installing Plone add-ons - quick instructions: http://plone.org/documentation/kb/installing-add-ons-quick-how-to
+.. _Using Add-ons: http://plone.org/documentation/kb/add-ons/tutorial-all-pages
 .. _Add on product installation fails: http://plone.org/documentation/kb/diagnosing-third-party-product-installation-problems
 .. _Installing a third party product: http://plone.org/documentation/manual/developer-manual/managing-projects-with-buildout/installing-a-third-party-product
 .. _Packages, products and eggs: http://plone.org/documentation/manual/developer-manual/managing-projects-with-buildout/packages-products-and-eggs/
