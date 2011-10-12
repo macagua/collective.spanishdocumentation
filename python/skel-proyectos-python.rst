@@ -8,26 +8,10 @@ Son una serie de colecciones de plantillas *esqueletos* que permiten iniciar
 rápidamente proyectos, existente diversos *esqueletos* orientados a tipos de
 desarrollos específicos.
 
-Instalando dependencias en distribuciones basadas en Debian GNU/Linux
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Instalar dependencias de esqueletos Python
+==========================================
 
-Para para distribuciones basadas en Debian GNU/Linux, debe instalar los
-requisitos previos con el siguiente comando: 
-
-.. code-block:: sh
-
-  # aptitude install python python-dev python-profiler python-setuptools python-virtualenv libc6-dev
-
-
-Activar el entorno virtual creado previamente, ejecutando el siguiente
-comando: 
-
-.. code-block:: sh
-
-  $ source .virtualenv/python/bin/activate
-
-Luego de activar el entorno virtual creado previamente, ejecutando el
-siguiente comando: 
+Dentro de su entorno virtual activado debe instalar el paquete ``PasteScript``, ejecutando el siguiente comando: 
 
 .. code-block:: sh
 
@@ -36,7 +20,7 @@ siguiente comando:
 No olvidar que estos paquetes han sido instalados con el entorno virtual que
 previamente usted activo, eso quiere decir que los paquetes previamente
 instalados con Easy Install están instalados en el directorio
-``~/virtualenv/python/lib/python4/site-packages/`` en ves del directorio de
+``~/virtualenv/python/lib/python2.x/site-packages/`` en ves del directorio de
 su versión de Python de sistema ``/usr/lib/python2.x/site-packages/``
 
 Al finalizar la instalación podrá opcionalmente consultar cuales plantillas
@@ -49,15 +33,13 @@ tiene disponible para usa, ejecutando el siguiente comando:
       basic_package:       A basic setuptools-enabled package
       paste_deploy:        A web application deployed through paste.deploy
 
-Usted debe usar el comando paster para crear el proyecto Buildout. 
+Usted puede usar el comando paster para crear paquetes Python. 
 
 .. code-block:: sh
 
   (python)$ paster create -t basic_package mipaquetepython
 
-
     Selected and implied templates:
-
 
       PasteScript#basic_package  A basic setuptools-enabled package
 
@@ -86,7 +68,7 @@ Usted debe usar el comando paster para crear el proyecto Buildout.
 
 
 Usted puede verificar el paquete previamente creado y observará como este
-paquete básico ha habilitado el setuptools 
+paquete básico ha habilitado el ``setuptools`` 
 
 .. code-block:: sh
 
@@ -108,8 +90,23 @@ Para instalar este paquete ejecute el siguiente comando:
 
 .. code-block:: sh
 
-  (python)$ cd mipaquetepython/
-  (python)$ python setup.py install
+  (python)$ cd mipaquetepython/mipaquetepython/
+  (python)$ vim app.py
+
+Escriba un simple código que solicita un valor y luego lo muestra: 
+
+.. code-block:: python
+
+  var = raw_input("Introduzca alguna frase: ")
+  print "Usted introdujo: ", var
+
+Guarde los cambios en el archivo ``app.py``
+
+Luego importe su aplicacion ``app.py`` en el archivo ``__init__.py`` con el siguiente código fuente: 
+
+.. code-block:: python
+
+  from mipaquetepython import app
 
 Para comprabar su instalación ejecute el siguiente comando:
 
@@ -122,6 +119,10 @@ Y realice una importación del paquete mipaquetepython ejecutando el siguiente c
 .. code-block:: python
 
   >>> import mipaquetepython
+  Introduzca alguna frase: Esta cadena
+  Usted introdujo:  Esta cadena
+  >>> exit()
+
 
 Esqueletos en diversos proyectos Python
 =======================================
@@ -129,45 +130,20 @@ Esqueletos en diversos proyectos Python
 A continuación se muestran algunos esqueletos útiles:
 
 - `Esqueletos de proyectos Zope/Plone`_.
-
 - Esqueletos de proyectos Django:
-
   - `django-project-templates`_, plantillas Paster para crear proyectos Django.
-  - `fez.djangoskel`_, es una colección de plantillas Paster para
-    crear aplicaciones Django como paquetes eggs.
-  - `django-harness`_, es una aplicación destinada a simplificar las
-    tareas típicas relacionadas con la creación de un sitio web hechos con
-    Django, el mantenimiento de varias instalaciones (local, producción, etc)
-    y cuidando su instalación global y su estructura de "esqueleto"
-    actualizado del sitio de manera fácil.
-  - `lfc-skel`_, Plantillas Paster para django-lfc. lfc-skel provee
-    una plantilla para crear una aplicación LFC.
-
+  - `fez.djangoskel`_, es una colección de plantillas Paster para crear aplicaciones Django como paquetes eggs.
+  - `django-harness`_, es una aplicación destinada a simplificar las tareas típicas relacionadas con la creación de un sitio web hechos con Django, el mantenimiento de varias instalaciones (local, producción, etc) y cuidando su instalación global y su estructura de "esqueleto" actualizado del sitio de manera fácil.
+  - `lfc-skel`_, Plantillas Paster para django-lfc. lfc-skel provee una plantilla para crear una aplicación LFC.
 - Esqueletos de proyectos Pylons:
-
-  - `Pylons`_,  un Framework Web Pylons, que al instalarse con Easy
-    Install instala dos plantillas de proyectos Pylons.
-  - `PylonsTemplates`_, Plantillas extras de paster para Pylons,
-    incluyendo implementación de repoze.what. PylonsTemplates le ofrece
-    plantillas adicionales paster para aplicaciones Pylons.
-  - `BlastOff`_, Una plantilla de aplicación Pylons que proporciona
-    un esqueleto de entorno de trabajo configurado con SQLAlchemy, mako,
-    repoze.who, ToscaWidgets, TurboMail, WebFlash y (opcionalmente)
-    SchemaBot. La aplicación generada esta previamente configurada con
-    autenticación, inicio de sesión y formularios de registro, y
-    (opcionalmente) confirmación de correo electrónico. BlastOff ayudar a
-    acelerar el desarrollo de aplicaciones en Pylons por que genera un
-    proyecto con una serie de dependencias configuraciones previamente.
-
+  - `Pylons`_,  un Framework Web Pylons, que al instalarse con EasyInstall instala dos plantillas de proyectos Pylons.
+  - `PylonsTemplates`_, Plantillas extras de paster para Pylons, incluyendo implementación de repoze.what. PylonsTemplates le ofrece plantillas adicionales paster para aplicaciones Pylons.
+  - `BlastOff`_, Una plantilla de aplicación Pylons que proporciona un esqueleto de entorno de trabajo configurado con SQLAlchemy, mako, repoze.who, ToscaWidgets, TurboMail, WebFlash y (opcionalmente)SchemaBot. La aplicación generada esta previamente configurada con autenticación, inicio de sesión y formularios de registro, y (opcionalmente) confirmación de correo electrónico. BlastOff ayudar a acelerar el desarrollo de aplicaciones en Pylons por que genera un proyecto con una serie de dependencias configuraciones previamente.
 - Esqueletos de proyectos CherryPy:
   - `CherryPaste`_, Usar CherryPy dentro Paste.
-
 - Esqueletos de proyectos Trac:
-  - `TracLegosScript`_, TracLegos es un software diseñado para
-    ofrecer plantillas para proyectos Trac y asiste con la creación de
-    proyecto trac.
-  - `trac_project`_, Plantilla de proyecto Trac de software de código
-    abierto.
+  - `TracLegosScript`_, TracLegos es un software diseñado para ofrecer plantillas para proyectos Trac y asiste con la creación de proyecto trac.
+  - `trac_project`_, Plantilla de proyecto Trac de software de código abierto.
 
 
 Recomendaciones
@@ -182,6 +158,8 @@ Recomendaciones
 Referencias
 ===========
 
+
+.. _Esqueletos de proyectos Zope/Plone: http://readthedocs.org/docs/plone-spanish-docs/en/latest/python/skel-proyectos-plone.html
 .. _django-project-templates: http://pypi.python.org/pypi/django-project-templates
 .. _fez.djangoskel: http://pypi.python.org/pypi/fez.djangoskel
 .. _django-harness: http://pypi.python.org/pypi/django-harness
