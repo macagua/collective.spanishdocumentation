@@ -374,8 +374,7 @@ en caso contrario prosiga de la siguiente forma:
       if data.has_key('text'):
           print data['text'] # ... or do stuff
 
-Como último paso, es necesario precisar encapsular el formulario en una
-página Plone padr?o:
+Como último paso, es necesario envolver el formulario en una página por defecto de Plone:
 
 .. code-block:: python
 
@@ -549,7 +548,7 @@ OBS: plone.z3cform >= 0.6.0
 ---------------------------
 
 Si usted está usando el paquete plone.z3cform >= 0.6.0, el formulario de
-comentarios precisa fornecer una interfaz IWrappedForm, sen?o o Plone
+comentarios precisa fornecer una interfaz IWrappedForm, de lo contrario Plone
 levantará una excepción de "maximum recursion error". Adicione el siguiente
 código en con la marca ``### copy ... ###`` para hacer al formulario que 
 funcione en todas las versiones de plone.z3cform:
@@ -597,7 +596,7 @@ funcione en todas las versiones de plone.z3cform:
 Referencias
 ===========
 
--   `Utilizando formul?rios z3c.form no Plone`_.
+-   `Utilizando z3c.form`_.
 
 
 .. _z3c.form: http://pypi.python.org/pypi/z3c.form
@@ -615,4 +614,4 @@ Referencias
 .. _tutorial sobre buildout: http://coactivate.org/projects/ploneve/gestion-de-proyectos-con-buildout
 .. _Known Good Set - (KGS) de plone.autoform: http://good-py.appspot.com/release/plone.autoform/1.0b2
 .. _http://docs.zope.org/z3c.form/browser/README.html: http://docs.zope.org/z3c.form/browser/README.html
-.. _Utilizando formul?rios z3c.form no Plone: http://coactivate.org/projects/ploneorgbr/utilizando-z3c.form
+.. _Utilizando z3c.form: http://coactivate.org/projects/ploneorgbr/utilizando-z3c.form
