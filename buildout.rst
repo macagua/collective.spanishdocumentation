@@ -19,27 +19,29 @@ de paquetes de Python (http://www.python.org/pypi).
 Algunos términos importantes
 ============================
 
-**Paquete de Python**.
+.. glossary::
+
+  Paquete de Pythons.
     Básicamente, una carpeta con código Python que contiene un archivo
     ``__init__.py``.
 
-**Huevo (Python egg)**.
+  Huevo (Python egg).
     Un mecanismo para empaquetar y distribuir paquetes de Python.
 
-**Instalación de Zope**.
+  Instalación de Zope.
     El software propio del servidor de aplicaciones.
 
-**Instancia de Zope**.
+  Instancia de Zope.
     Un directorio específico que contiene una configuración completa de Zope.
 
-**Producto de Zope**.
+  Producto de Zope.
     Un paquete de Python especial para extender Zope.
 
-**easy_install**.
+  easy_install.
     Un script de línea de comando que permite instalar a través de la red
     paquetes del PYPI.
 
-**Cheese shop (PYPI)**.
+  Cheese shop (PYPI).
     Un repositorio de paquetes de Python.
 
 
@@ -123,25 +125,27 @@ mismo python con que se desea trabajar:
 Directorios creados
 -------------------
 
-**bin**.
+.. glossary::
+
+  bin/
     Ejecutables de buildout y producidos por las partes.
 
-**eggs**.
+  eggs/
     Los eggs obtenidos e instalados de PYPI.
 
-**downloads**.
+  downloads/
     Software adicional descargado. 
 
-**var**.
+  var/
     Logs y archivo de ZODB de Zope (buildout nunca sobreescribe estos archivos).
 
-**src**.
+  src/
     Código fuente de nuestros desarrollos.
 
-**products**.
+  products/
     Productos tradicionales de zope.
 
-**parts**.
+  parts/
     Todo el código, configuración y datos manejados por buildout.
 
 Descripción de este ejemplo
