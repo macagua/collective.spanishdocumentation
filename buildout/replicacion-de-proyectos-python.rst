@@ -5,13 +5,15 @@ Replicación de proyectos Python
 ===============================
 
 ¿Qué es zc.buildout?
---------------------
+====================
 
 Es una herramienta que replica todo un entorno de trabajo aislado. Esto es
 una buena práctica para experimentar con código y el estar familiarizado con
 estas herramientas será beneficioso para desarrollar e implantar
 aplicaciones.
 
+Características
+---------------
 Estas son sus principales características:
 
 - Permite definición de buildouts de forma declarativa.
@@ -21,6 +23,21 @@ Estas son sus principales características:
 - Es fácil trabajar con los formatos de paquetes eggs.
 
 
+Vocabulario
+-----------
+
+.. glossary::
+
+  buildout
+    Un conjunto de partes que describe como ensamblar una aplicación.
+  part
+    Un conjunto opciones que le permite a usted construir una pieza de la aplicación.
+  recipe
+    El software usado para crear una parte basada en sus opciones. 
+
+
+Instalación
+===========
 Puedes instalar `zc.buildout`_ usando `pip`_ (es recomendable hacerlo dentro
 de un `entorno virtual`_):
 
@@ -28,15 +45,42 @@ de un `entorno virtual`_):
 
   $ pip install zc.buildout
 
-Ahora crea una nueva configuración zc.buildout asi:
+
+Configuraciones genéricas
+=========================
+Usted puede agregar las configuraciones genéricas para todos sus proyectos Buildout, para esto debe ejecutar los siguientes comandos:
+
+.. code-block:: sh
+
+  $ mkdir $HOME/.buildout ; mkdir $HOME/.buildout/{eggs,downloads,zope}
+  $ nano $HOME/.buildout/default.cfg
+
+Luego de crear el archivo ``default.cfg`` defina algunas configuraciones de usuario predeterminadas para cualquier parte de su configuración **buildout**:
+
+.. code-block:: cfg
+
+  [buildout]
+  eggs-directory = /path/to/home/.buildout/eggs
+  download-cache = /path/to/home/.buildout/downloads
+  zope-directory = /path/to/home/.buildout/zope
+
+.. note::
+
+  Esto solamente proveerá valores predeterminados, ¡estos no sobreescribirán 
+  las configuraciones en su configuraciones buildout!
+
+
+Creación de proyectos buildout
+==============================
+Ahora crea una nueva configuración zc.buildout así:
 
 .. code-block:: sh
 
   $ mkdir mibuildout ; cd mibuildout
   $ buildout init
 
-Ahora el nuevo directorio *mibuildout* es un buildout. El archivo de
-configuración predeterminado de buildout es **buildout.cfg** . Después de la
+Ahora el nuevo directorio ``mibuildout`` es un proyecto **buildout**. El archivo de
+configuración predeterminado del buildout es ``buildout.cfg`` . Después de la
 inicialización, tendrá el siguiente contenido:
 
 .. code-block:: cfg
@@ -58,15 +102,15 @@ Puedes cambiarlo a:
   eggs = zope.component
 
 Ahora ejecuta el comando buildout disponible dentro del directorio
-*mibuildout/bin* sin ningún argumento. Esto creará un nuevo interprete Python
-dentro del directorio *mibuildout/bin*:
+``mibuildout/bin`` sin ningún argumento. Esto creará un nuevo interprete Python
+dentro del directorio ``mibuildout/bin``:
 
 .. code-block:: sh
 
   $ ./bin/buildout
 
 Esto creará un nuevo intérprete Python dentro del directorio
-*mibuildout/bin*:
+``mibuildout/bin``:
 
 .. code-block:: sh
 
@@ -79,7 +123,7 @@ Y luego tendrá a disposición en su PythonPath el paquete que instalo
 
   >>> import zope.component
 
-Utilizando zc.buildout con la receta `zc.recipe.egg`_ se puede crear un
+Utilizando ``zc.buildout`` con la receta `zc.recipe.egg`_ se puede crear un
 intérprete de Python con los huevos Python especificados.
 
 
@@ -88,7 +132,7 @@ el código de su proyecto.
 
 
 Descarga código fuente
-~~~~~~~~~~~~~~~~~~~~~~
+======================
 
 Para descargar el código fuente de este ejemplo ejecute el siguiente comando:
 
@@ -98,14 +142,14 @@ Para descargar el código fuente de este ejemplo ejecute el siguiente comando:
 
 
 Conclusiones
-~~~~~~~~~~~~
+============
 
 Este ejemplo intenta mostrar las capacidades del `zc.buildout`_ con el
 interprete Python de su entorno de desarrollo.
 
 
 Referencias
-~~~~~~~~~~~
+===========
 
 -   `Arquitectura de componentes Zope`_.
 
