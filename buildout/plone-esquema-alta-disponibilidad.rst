@@ -364,26 +364,28 @@ base del sitio. La base contiene la mayoría de los servicios y configuraciones
 compartidas entre los demás buildouts. El buildout contiene los siguientes
 servidores:
 
-* `main`
+.. glossary::
+
+  main
     el servidor web Nginx que puede correr en el puerto principal
-* `cache`
+  cache
     un cache Varnish configurado para servir un sitio Plone
-* `transform`
+  transform
     un servidor web Nginx que realiza transformaciones
-* `balancer`
+  balancer
     un cluster de HAproxy que balancea los clientes ZEO
-* `instance1`
+  instance1
     Cliente de ZEO 1
-* `instance2`
+  instance2
     Cliente de ZEO 2
-* `instance3`
+  instance3
     Cliente de ZEO 3
-* `instance4`
+  instance4
     Cliente de ZEO 4
-* `instance-debug`
+  instance-debug
     un cliente ZEO que no forma parte del cluster y esta siempre en modo de
     desarrollo
-* `zeoserver`
+  zeoserver
     un servidor ZEO para la base de datos de Zope común
 
 Se incluye la configuración para rotación de logs con logrotate, excepto para
@@ -393,190 +395,192 @@ debe integrarse a la configuración general de logrotate usando un symlink.
 En la configuración de transformación de Nginx, solo se incluye un servidor
 Plone, pero es posible agregar mas si es necesario.
 
-Para controlar todos los servicios, se incluye Supervisor::
+Para controlar todos los servicios, se incluye Supervisor:
 
-    $ ./bin/supervisord
+.. code-block:: sh
+
+  $ ./bin/supervisord
 
 En http://localhost:9001 puede consultarse el estado de los servicios. Desde
 ahí es posible iniciar o detener cualquiera de ellos.
 
 La configuración esta contenida enteramente en este buildout, con patrones
-para los archivos de configuración en production/\*.template. Los nombres de
+para los archivos de configuración en ``production/*.template``. Los nombres de
 servidores, puertos y otras opciones comunes pueden cambiarse en las secciones
 que se encuentran al inicio de este archivo. Estos son los valores que se
 utilizan en la sección de construcción definida arriba:
 
-.. code-block:: ini
+.. code-block:: cfg
 
-    [buildout]
-    extensions = buildout.dumppickedversions
-    # Copiar las versiones mas recientes de los paquetes utilizados a un archivo,
-    # para poder "congelarlas" después en producción.
-    dump-picked-versions-file = versions/known-good-versions.cfg
+  [buildout]
+  extensions = buildout.dumppickedversions
+  # Copiar las versiones mas recientes de los paquetes utilizados a un archivo,
+  # para poder "congelarlas" después en producción.
+  dump-picked-versions-file = versions/known-good-versions.cfg
 
-    # Extender la configuración de versiones para obtener la versión de Plone
-    # requerida, desde http://dist.plone.org/release/<version>/versions.cfg
-    extends =
-       build.cfg
-       versions/plone-3.3rc4.cfg
+  # Extender la configuración de versiones para obtener la versión de Plone
+  # requerida, desde http://dist.plone.org/release/<version>/versions.cfg
+  extends =
+     build.cfg
+     versions/plone-3.3rc4.cfg
 
-    newest = false
-    unzip = true
-    versions = versions
+  newest = false
+  unzip = true
+  versions = versions
 
-    # Las partes del buildout son todos los servicios que se instalaran
-    parts =
-       lxml
-       diazo
-       zope2
-       zeoserver
-       instance1
-       instance2
-       instance3
-       instance4
-       instance-debug
-       nginx-build
-       varnish-build
-       haproxy-build
-       cache
-       main-config
-       cache-config
-       transform-config
-       balancer-config
-       compile-theme
-       logrotate.conf
-       supervisor
-       zopepy
-       omelette
-       backup
-       cron-pack
-       cron-backup
+  # Las partes del buildout son todos los servicios que se instalaran
+  parts =
+     lxml
+     diazo
+     zope2
+     zeoserver
+     instance1
+     instance2
+     instance3
+     instance4
+     instance-debug
+     nginx-build
+     varnish-build
+     haproxy-build
+     cache
+     main-config
+     cache-config
+     transform-config
+     balancer-config
+     compile-theme
+     logrotate.conf
+     supervisor
+     zopepy
+     omelette
+     backup
+     cron-pack
+     cron-backup
 
-    develop =
-       src/*
+  develop =
+     src/*
 
-    # Se requieren versiones especificas de algunos proyectos
-    [versions]
-    zc.buildout = 1.2.1
-    zc.recipe.testrunner = 1.1.0
-    elementtree = 1.2.6-20050316
-    ZODB3 = 3.8.1
-    z3c.blobfile = 0.1.2
-    lxml = 2.1.5
+  # Se requieren versiones especificas de algunos proyectos
+  [versions]
+  zc.buildout = 1.2.1
+  zc.recipe.testrunner = 1.1.0
+  elementtree = 1.2.6-20050316
+  ZODB3 = 3.8.1
+  z3c.blobfile = 0.1.2
+  lxml = 2.1.5
 
-    ###
-    # URLs de las versiones de Zope, Varnish y Nginx que se utilizaran
-    [downloads]
-    zope = ${versions:zope2-url}
-    varnish = http://downloads.sourceforge.net/varnish/varnish-2.0.4.tar.gz
-    nginx = http://sysoev.ru/nginx/nginx-0.7.43.tar.gz
+  ###
+  # URLs de las versiones de Zope, Varnish y Nginx que se utilizaran
+  [downloads]
+  zope = ${versions:zope2-url}
+  varnish = http://downloads.sourceforge.net/varnish/varnish-2.0.4.tar.gz
+  nginx = http://sysoev.ru/nginx/nginx-0.7.43.tar.gz
 
-    # configuración básica de los clientes ZEO
-    [instance-settings]
-    eggs =
-    #   mynamespace.policy
-       Plone
-       plone.app.blob
-       plone.app.ldap
-       Products.CacheSetup
-    zcml =
-    # mynamespace.policy
-    # mynamespace.policy-meta
-    # mynamespace.policy-overrides
-       plone.app.ldap
-       plone.app.blob
-    products =
-    user = admin:admin
-    zodb-cache-size = 10000
-    zeo-client-cache-size = 300MB
-    debug-mode = off
-    zope2-location = ${zope2:location}
-    zeo-client = true
-    shared-blob = on
-    blob-storage = ${zeoserver:zeo-var}/blobstorage
-    zeo-address = ${zeoserver:zeo-address}
-    effective-user = ${users:zope}
+  # configuración básica de los clientes ZEO
+  [instance-settings]
+  eggs =
+  #   mynamespace.policy
+     Plone
+     plone.app.blob
+     plone.app.ldap
+     Products.CacheSetup
+  zcml =
+  # mynamespace.policy
+  # mynamespace.policy-meta
+  # mynamespace.policy-overrides
+     plone.app.ldap
+     plone.app.blob
+  products =
+  user = admin:admin
+  zodb-cache-size = 10000
+  zeo-client-cache-size = 300MB
+  debug-mode = off
+  zope2-location = ${zope2:location}
+  zeo-client = true
+  shared-blob = on
+  blob-storage = ${zeoserver:zeo-var}/blobstorage
+  zeo-address = ${zeoserver:zeo-address}
+  effective-user = ${users:zope}
 
-    # configuración básica de supervisor
-    [supervisor-settings]
-    user = admin
-    password = admin
+  # configuración básica de supervisor
+  [supervisor-settings]
+  user = admin
+  password = admin
 
-    # Nombre del sitio Plone que se usara para configurar virtual hosting
-    [plone-sites]
-    main = plone-site
+  # Nombre del sitio Plone que se usara para configurar virtual hosting
+  [plone-sites]
+  main = plone-site
 
-    # Nombres o ips de los diversos servidores, main es el principal
-    [hosts]
-    main = 127.0.0.1
-    cache = 127.0.0.1
-    supervisor = 127.0.0.1
-    balancer = 127.0.0.1
-    transform = 127.0.0.1
-    instance1 = 127.0.0.1
-    instance2 = 127.0.0.1
-    instance3 = 127.0.0.1
-    instance4 = 127.0.0.1
-    instance-debug = 127.0.0.1
-    diazo = 127.0.0.1
-    syslog = 127.0.0.1
+  # Nombres o ips de los diversos servidores, main es el principal
+  [hosts]
+  main = 127.0.0.1
+  cache = 127.0.0.1
+  supervisor = 127.0.0.1
+  balancer = 127.0.0.1
+  transform = 127.0.0.1
+  instance1 = 127.0.0.1
+  instance2 = 127.0.0.1
+  instance3 = 127.0.0.1
+  instance4 = 127.0.0.1
+  instance-debug = 127.0.0.1
+  diazo = 127.0.0.1
+  syslog = 127.0.0.1
 
-    # Puertos de los servidores, main es el principal
-    [ports]
-    main = 8000
-    cache = 8101
-    balancer = 8201
-    transform = 8301
-    instance1 = 8401
-    instance2 = 8402
-    instance3 = 8403
-    instance4 = 8404
-    instance1-icp = 8401
-    instance2-icp = 8402
-    instance3-icp = 8403
-    instance4-icp = 8404
-    instance-debug = 8499
-    zeo-server = 8501
-    supervisor = 9001
-    diazo = 5000
+  # Puertos de los servidores, main es el principal
+  [ports]
+  main = 8000
+  cache = 8101
+  balancer = 8201
+  transform = 8301
+  instance1 = 8401
+  instance2 = 8402
+  instance3 = 8403
+  instance4 = 8404
+  instance1-icp = 8401
+  instance2-icp = 8402
+  instance3-icp = 8403
+  instance4-icp = 8404
+  instance-debug = 8499
+  zeo-server = 8501
+  supervisor = 9001
+  diazo = 5000
 
-    # Usuarios del sistema a los que se asignaran los servicios
-    [users]
-    main = www
-    cache = www
-    transform = www
-    balancer = www
-    zope = www
-    supervisor = www
+  # Usuarios del sistema a los que se asignaran los servicios
+  [users]
+  main = www
+  cache = www
+  transform = www
+  balancer = www
+  zope = www
+  supervisor = www
 
-    # configuración del tema
-    [theme]
-    root = ${buildout:directory}/theme
-    theme = ${theme:root}/theme.html
-    rules = ${theme:root}/rules/default.xml
-    absolute-prefix = /static
-    output-xslt = ${theme:root}/theme.xsl
+  # configuración del tema
+  [theme]
+  root = ${buildout:directory}/theme
+  theme = ${theme:root}/theme.html
+  rules = ${theme:root}/rules/default.xml
+  absolute-prefix = /static
+  output-xslt = ${theme:root}/theme.xsl
 
-    # configuración de compilación
-    [build]
-    cpu = i686
-    target = linux26
+  # configuración de compilación
+  [build]
+  cpu = i686
+  target = linux26
 
-    # Creación de scripts para backup
-    [backup]
-    recipe = collective.recipe.backup
+  # Creación de scripts para backup
+  [backup]
+  recipe = collective.recipe.backup
 
-    # Compresión semanal de la base de datos
-    [cron-pack]
-    recipe = z3c.recipe.usercrontab
-    times = 0 2 1 * *
-    command = ${buildout:directory}/bin/zeopack
+  # Compresión semanal de la base de datos
+  [cron-pack]
+  recipe = z3c.recipe.usercrontab
+  times = 0 2 1 * *
+  command = ${buildout:directory}/bin/zeopack
 
-    # Backups diarios
-    [cron-backup]
-    recipe = z3c.recipe.usercrontab
-    times = 0 1 * * *
-    command = ${buildout:directory}/bin/backup
+  # Backups diarios
+  [cron-backup]
+  recipe = z3c.recipe.usercrontab
+  times = 0 1 * * *
+  command = ${buildout:directory}/bin/backup
 
 
 Descarga código fuente
