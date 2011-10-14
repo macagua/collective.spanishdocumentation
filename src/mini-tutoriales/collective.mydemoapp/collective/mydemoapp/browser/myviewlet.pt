@@ -13,4 +13,6 @@
 <div>
   <span tal:content="view/computed_value|nothing" />,  
   <b tal:content="view/company|nothing" />
+  <br/>
+  <b>¡click <a href="#" onclick="helloworld()">here</a> to test!</b>
 </div>
