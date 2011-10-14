@@ -1,0 +1,36 @@
+[server:main]
+use = egg:Paste#http
+host = ${hosts:diazo}
+port = ${ports:diazo}
+
+[composite:main]
+use = egg:Paste#urlmap
+/static = static
+/ = default
+
+# Serve the theme from disk from /static (as set up in [composite:main])
+[app:static]
+use = egg:Paste#static
+document_root = %(here)s/theme
+
+# Serve the Diazo-transformed content everywhere else
+[pipeline:default]
+pipeline = theme
+           content
+
+# Reference the rules file and the prefix applied to relative links
+# (e.g. the stylesheet). We turn on debug mode so that the theme is
+# re-built on each request, making it easy to experiment.
+
+[filter:theme]
+use = egg:diazo
+rules = %(here)s/rules.xml
+prefix = /static
+debug = true
+
+# Proxy http://diazo.org as the content
+[app:content]
+use = egg:Paste#proxy
+#address = http://diazo.org/
+address = http://${hosts:main}:${ports:main}/VirtualHostBase/http/${hosts:diazo}:${ports:diazo}/Plone/VirtualHostRoot/
+suppress_http_headers = accept-encoding
