@@ -17,8 +17,11 @@ http://sphinx.pocoo.org/
     formato de texto llamado reStructuredText.
 
 
+Sistemas de control de versiones
+================================
+
 Subversion
-==========
+----------
 
 http://subversion.apache.org/
     Página de Subversion.
@@ -39,9 +42,19 @@ http://docs.python.org/library/index.html
 http://diveintopython.org/
     Libro de Python para programadores intermedios.
 
+http://pyve.org.ve/
+    python Venezuela
+
+http://webchat.freenode.net/?channels=python-ve
+    Canal IRC de la comunidad python Venezuela
+
+http://www.coactivate.org/projects/pyve/lists/pyve-discussion
+    Foro de discusión / Lista de correo electrónico de la comunidad python Venezuela.
+
 http://pypi.python.org/
     Repositorio de paquetes `egg` de Python, desde donde easy_install y
     buildout obtienen los paquetes a instalar.
+
 
 
 Zope2 y Zope3
@@ -66,14 +79,20 @@ Plone
 http://plone.org/
     Página principal de la comunidad Plone.
 
+http://plone.org/countries/conosur/
+    Página principal de la comunidad Plone Conosur.
+
+http://webchat.freenode.net/?channels=plone-conosur
+    Canal IRC de la comunidad Plone Conosur, Plone México y Plone Venezuela.
+
 http://plone.org/countries/mx/
-    Página principal de la comunidad Plone México
+    Página principal de la comunidad Plone México.
 
 http://plone.org/countries/ve/
-    Página principal de la comunidad Plone Venezuela
+    Página principal de la comunidad Plone Venezuela.
 
-http://plone.org/countries/conosur/
-    Página principal de la comunidad Plone Conosur
+http://www.coactivate.org/projects/ploneve/lists/ploneve-discussion
+    Foro de discusión / Lista de correo electrónico de la comunidad Plone Venezuela.
 
 
 Framework Archetypes en Plone
