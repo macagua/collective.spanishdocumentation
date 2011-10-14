@@ -1,0 +1,10 @@
+setup.cfg
+setup.py
+mipaquetepython/__init__.py
+mipaquetepython/app.py
+mipaquetepython.egg-info/PKG-INFO
+mipaquetepython.egg-info/SOURCES.txt
+mipaquetepython.egg-info/dependency_links.txt
+mipaquetepython.egg-info/entry_points.txt
+mipaquetepython.egg-info/not-zip-safe
+mipaquetepython.egg-info/top_level.txt

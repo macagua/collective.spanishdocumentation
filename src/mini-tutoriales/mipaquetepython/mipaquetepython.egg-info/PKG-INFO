@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: mipaquetepython
+Version: 0.0dev
+Summary: Mi primer paquete python
+Home-page: UNKNOWN
+Author: Leonardo Caballero
+Author-email: lcaballero@hoatzin.org
+License: GPL
+Description: Mi primer paquete Python
+Keywords: paquete python2.6 demo
+Platform: UNKNOWN
