@@ -221,10 +221,10 @@ sección tocaremos algunos de ellos.
 .. toctree::
    :maxdepth: 2
 
-   plone/agregando-productos-adicionales
    productos
    policy
    tema
+   plone/agregando-productos-adicionales
    minituts
 
 Otros recursos
