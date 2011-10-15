@@ -1,0 +1,15 @@
+README.txt
+setup.cfg
+setup.py
+collective/__init__.py
+collective.mydemopolicy.egg-info/PKG-INFO
+collective.mydemopolicy.egg-info/SOURCES.txt
+collective.mydemopolicy.egg-info/dependency_links.txt
+collective.mydemopolicy.egg-info/entry_points.txt
+collective.mydemopolicy.egg-info/namespace_packages.txt
+collective.mydemopolicy.egg-info/not-zip-safe
+collective.mydemopolicy.egg-info/paster_plugins.txt
+collective.mydemopolicy.egg-info/requires.txt
+collective.mydemopolicy.egg-info/top_level.txt
+collective/mydemopolicy/__init__.py
+collective/mydemopolicy/tests.py
