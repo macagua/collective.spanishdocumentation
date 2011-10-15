@@ -9,9 +9,17 @@
 
   <genericsetup:registerProfile
       name="default"
-      title="collective.mydemopolicy"
+      title="install collective.mydemopolicy"
       directory="profiles/default"
       description="Installs the collective.mydemopolicy package"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <genericsetup:registerProfile
+      name="uninstall"
+      title="uninstall collective.mydemopolicy"
+      directory="profiles/uninstall"
+      description="Uninstalls the collective.mydemopolicy package"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
   <!-- -*- extra stuff goes here -*- -->
