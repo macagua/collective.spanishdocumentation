@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <metadata>
-  <version>0.1</version>
+  <version>1000</version>
  <dependencies>
   <dependency>profile-collective.mydemoapp:default</dependency>
  </dependencies>
