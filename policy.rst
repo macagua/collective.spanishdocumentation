@@ -1,8 +1,8 @@
 .. -*- coding: utf-8 -*-
 
-=============================================
-Pasos para crear un producto de configuración
-=============================================
+========================================
+Creacion de un producto de configuración
+========================================
 
 Se detallan los pasos para crear un producto de configuración y se describe
 cada uno de los directorios y archivos importantes generados.
@@ -35,8 +35,7 @@ de paquete para Plone proporcionado por paster::
     Enter namespace_package (Namespace package (like plone)) ['plone']: ejemplo
     el espacio de nombres se usa para poder agrupar varios paquetes bajo un
     mismo nombre
-    Enter package (The package contained namespace package (like example))
-    ['example']: policy
+    Enter package (The package contained namespace package (like example)) ['example']: policy
     el nombre del paquete en sí
     Enter zope2product (Are you creating a Zope 2 Product?) [False]: True
     <siempre debe ser True para funcionar en Zope 2>
@@ -69,11 +68,11 @@ Dentro del directorio del producto se encuentran los dos archivos
 imprescindibles para crear un producto para Zope 2, junto con un esqueleto de
 módulo para tests:
 
-* __init__.py, incluye un método llamado 'initialize' para que Zope reconozca
+* ``__init__.py``, incluye un método llamado 'initialize' para que Zope reconozca
   el paquete como producto.
-* configure.zcml, el archivo de configuración con XML, que permite al producto
+* ``configure.zcml``, el archivo de configuración con XML, que permite al producto
   utilizar código basado en Zope 3.
-* tests.py, esqueleto de módulo para tests.
+* ``tests.py``, esqueleto de módulo para tests.
 
 Una vez generado el producto, debemos agregar un directorio para almacenar la
 configuración de Generic Setup::
@@ -117,7 +116,7 @@ Como ejecutar código Python en import steps
 Finalmente, en algunas ocasiones hay pasos que queremos realizar al momento de
 la instalación de un producto de configuración que no son manejables con
 Generic Setup. En esos casos, existe un mecanismo para ejecutar código Python
-en el momento que se instala un perfil. Se crea un archivo setuphandlers.py en
+en el momento que se instala un perfil. Se crea un archivo ``setuphandlers.py`` en
 la raíz del producto, con el siguiente código:
 
 .. code-block:: python
@@ -134,12 +133,12 @@ El método setupVarious es donde se coloca el código especial para la
 instalación, que puede hacer cualquier cosa que se necesite dentro del portal.
 Para prevenir la ejecución de este código durante la instalación de otros
 productos, se agrega un archivo de texto vacío, llamado
-ejemplo.policy_various.txt, dentro de profiles/setup y se verifica su
+``ejemplo.policy_various.txt``, dentro de profiles/setup y se verifica su
 existencia dentro de este método.
 
 Para enlazar este código con los pasos de importación, existe un paso especial
 en Generic Setup, llamado import_steps. Para activarlo, debemos agregar el
-siguiente código dentro del archivo import_steps.xml, dentro del directorio
+siguiente código dentro del archivo ``import_steps.xml``, dentro del directorio
 profiles/default:
 
 .. code-block:: xml
