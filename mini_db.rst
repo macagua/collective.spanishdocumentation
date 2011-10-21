@@ -140,6 +140,7 @@ Referencia
 ==========
 
 - `Presentar información de una base de datos relacional`_
+- Ejemplo para agregar y consultar desde una base de datos con la herramienta `Manage Python Brasil Association Members`_
 
 .. _Presentar información de una base de datos relacional: http://www.plone.mx/docs/mini_db.html
-
+.. _Manage Python Brasil Association Members: https://github.com/pythonbrasil/apyb.members
