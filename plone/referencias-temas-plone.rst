@@ -4,15 +4,19 @@
 Referencias de Temas en Plone
 =============================
 
+.. contents :: :local:
+
+En esta referencia de Temas en Plone es la traducción al Español del `Plone Theme Reference`_ el cual explica los diversos enfoques de realizar temas y pieles en Plone, además de no ser una guía paso a paso simplemente es una referencias sobre estilos de trabajo.
+
 1. Introducción
-================
+===============
 
 Objetivos, prerrequisitos, visión general del manual y una definición rápida
 de lo que es un tema de Plone.
 
 
 1.1. Objetivos y Prerrequisitos
-===============================
+-------------------------------
 
 El objetivo de este manual es presentarle una vista general de la teoría,
 herramientas, y técnicas utilizadas en la personalización de la apariencia de
@@ -20,9 +24,9 @@ Plone o la creación de su propio tema.
 
 
 Objetivos
----------
+.........
 
-No lea este manual de principio a fin. V?alo como una guía o un libro de
+No lea este manual de principio a fin. Véalo como una guía o un libro de
 frases que le ayudaran a orientarse en el complejo mundo de temas de Plone.
 
 Le presentaremos la teoría, pero realmente no hay substituto para la
@@ -32,17 +36,17 @@ a través de los distintos aspectos de temas de Plone 3. Nosotros apuntamos a
 complementar esos recursos llenando los vacíos, proporcionando una visión
 general breve de la teoría, colocando las cosas en contexto, y dando un
 referencia rápida de esos detalles que son confusos o que no puede recordar
-desde la última vez que utiliz? algún elemento.
+desde la última vez que utilizó algún elemento.
 
 
 Prerrequisitos
---------------
+..............
 
-Este manual est? escrito para integradores y personas encargadas de la
+Este manual está escrito para integradores y personas encargadas de la
 personalización, y no asumimos todas las experiencias de desarrollo. Sin
 embargo sí imaginamos que tiene experiencia con XHTML y CCS, conoce algo de
 XML, y tiene algún conocimiento respecto a lenguajes scripting. Trabajamos de
-la premisa que usted no tiene experiencia con Plone, no obstante, si est?
+la premisa que usted no tiene experiencia con Plone, no obstante, si está
 familiarizado con Plone 2, descubrirá un par de cosas nuevas.
 
 será de ayuda si usted al instalar Plone le echó un vistazo a los directorios
@@ -53,7 +57,7 @@ de Zope) para una ojeada en el tras bambalinas.
 
 
 1.2. ¿Qué es un tema Plone?
-===========================
+---------------------------
 
 Breve descripción de lo que estamos hablando.
 
@@ -95,65 +99,73 @@ orientación.
 
 
 1.3. Resumen
-============
+------------
 
 Esta es una vista rápida de lo temas de este manual.
 
 .. image:: images/image_mini.png
-    :alt: Mapa conceptual del Manual de referencia
+  :alt: Mapa conceptual del Manual de referencia
 
 Mapa conceptual de este manual, haga clic para agrandar
 
-Sección 1: Introducción Un tema es una apariencia de diseño distinta para
-Plone, la cual es estructuralmente basada en el tema por defecto de Plone.
-Sección 2: Enfoques ¿Cual es la manera de aproximarse? ¿Cuales son los pros y
-contras de trabajar a través de la web o por el sistema de archivos?  Sección
-3: Herramientas ¿Qué herramientas se necesitan y que est? disponible para
-ayudarle a construir su tema? Sección 4: Bloques para Construcción Existen
-tres "bloques para construcción" principales en un tema de Plone 3. Si bien
-hay algunos solapamientos entre ellos, en general, ayuda a verlos como
-entidades separadas.
+  Sección 1: Introducción
+    Un tema es una apariencia de diseño distinta para
+    Plone, la cual es estructuralmente basada en el tema por defecto de Plone.
 
--   skin
--   componentes
--   configuración
+  Sección 2: Enfoques 
+    ¿Cual es la manera de aproximarse? ¿Cuales son los pros y
+    contras de trabajar a través de la web o por el sistema de archivos?
 
-Esta sección provee una vista general de
+  Sección 3: Herramientas 
+    ¿Qué herramientas se necesitan y que está disponible para ayudarle a 
+    construir su tema? 
 
--   la terminología relacionada a cada uno de estos bloques para
-    construcción
--   los lenguajes necesarios para trabajar con cada una de ellas
--   las técnicas y enfoques requeridos para personalizar estos bloques
-    para construcción o la creación de nuevos.
--   ¿cómo puede encontrar los archivos que necesita?
+  Sección 4: Bloques para Construcción 
+    Existen tres "bloques para construcción" 
+    principales en un tema de Plone 3. Si bien hay algunos solapamientos
+    entre ellos, en general, ayuda a verlos como entidades separadas.
+      - skin
+      - componentes
+      - configuración
 
-Sección 5: armar una página ¿Cómo se arregla y se junta todo para crear una
-página? Observaremos
+    Esta sección provee una vista general de
 
--   la construcción de una página
--   ¿cómo el contenido llega a la página?
--   ¿cómo las hojas de estilo y JavaScript se agregan a la página?
--   ¿cómo puede obtener información adicional de su sitio?
+      - la terminología relacionada a cada uno de estos bloques para
+        construcción
+      - los lenguajes necesarios para trabajar con cada una de ellas
+      - las técnicas y enfoques requeridos para personalizar estos bloques
+        para construcción o la creación de nuevos.
+      - ¿cómo puede encontrar los archivos que necesita?
 
-Sección 6: Referencia de Elementos Breve referencia a los elementos de
-páginas y resumen de como hacer frente a la personalización y creación de
-componentes. Sección 7: ¿Dónde está qué? A menudo es difícil identificar la
-ubicación de los archivos que necesita. Esta sección le ofrece una referencia
-rápida del esquema de archivos de un producto de tema. También hay algunos
-consejos para otros diagramas en la web, los cuales le ayudan a hacer un mapa
-de los elementos de contenido de página para componentes, plantillas y
-estilos.
+  Sección 5: armar una página 
+    ¿Cómo se arregla y se junta todo para crear una página? Observaremos
+
+      - la construcción de una página
+      - ¿cómo el contenido llega a la página?
+      - ¿cómo las hojas de estilo y JavaScript se agregan a la página?
+      - ¿cómo puede obtener información adicional de su sitio?
+
+  Sección 6: Referencia de Elementos 
+    Breve referencia a los elementos de páginas y resumen de como hacer 
+    frente a la personalización y creación de componentes. 
+
+  Sección 7: ¿Dónde está qué? 
+    A menudo es difícil identificar la ubicación de los archivos que necesita. 
+    Esta sección le ofrece una referencia rápida del esquema de archivos de 
+    un producto de tema. También hay algunos consejos para otros diagramas 
+    en la web, los cuales le ayudan a hacer un mapa de los elementos de 
+    contenido de página para componentes, plantillas y estilos.
 
 
 
 2. Comienzo rápido
-===================
+==================
 
 El inicio, y algunas técnicas para que se familiarice con las cosas básicas
 
 
 2.1. Resumen
-============
+------------
 
 Una vez que usted tenga su nuevo y deslumbrante sitio de Plone, lo primero
 que recomendamos es que se mueva un poco por las personalizaciones de web -
@@ -166,7 +178,7 @@ logotipo; son buenas maneras de comenzar a aprender las técnicas para temas.
 
 
 Prerrequisitos
---------------
+..............
 
 Hemos asumido que usted está familiarizado con HTML y CSS - sin embargo las
 personalizaciones básicas descritas aquí no necesitan de un conocimiento
@@ -175,31 +187,34 @@ oportunidad de conocer la sección Configuración del sitio de Plone.
 
 
 Descripción
-------------
+...........
 
-En primer lugar afile sus lápices Hay una serie de herramientas que
-facilitarán bastante el proceso de tematización, `estas herramientas las
-describiremos aquí`_. Para ver sus personalizaciones tiene que asegurarse que
-est? ejecutando su sitio en `modo depuración/desarrollo`_.  Ahora trate
-algunas personalizaciones de CCS  Lo acompañaremos en el `proceso de
-sustituir el estilo del título de la página`_, por medio de la
-personalización y edición del estilo de hoja ploneCustom.css Todo esto se
-hace en línea a través-de-la-web vía la Interfaz de Administración de Zope.
-Por último remplace el logotipo Revisaremos y desplegaremos las técnicas de
-personalización y edición CCS `reemplazando la imagen del logotipo de Plone`_
-con su propio logotipo.
+En primer lugar afile sus lápices 
+  Hay una serie de herramientas que facilitarán bastante el proceso de tematización,
+  `estas herramientas las describiremos aquí`_. Para ver sus personalizaciones 
+  tiene que asegurarse que está ejecutando su sitio en `modo depuración/desarrollo`_.  
+
+Ahora trate algunas personalizaciones de CCS
+  Lo acompañaremos en el `proceso de sustituir el estilo del título de la página`_, 
+  por medio de la personalización y edición del estilo de hoja ploneCustom.css 
+  Todo esto se hace en línea a través-de-la-web vía la Interfaz de Administración 
+  de Zope.
+
+Por último remplace el logotipo
+  Revisaremos y desplegaremos las técnicas de personalización y edición CCS 
+  `reemplazando la imagen del logotipo de Plone`_ con su propio logotipo.
 
 --
 
 
 2.2. Afilando sus lápices
-==========================
+-------------------------
 
 Breve recorrido de las herramientas que usted encontrará útiles
 
 
 2.2.1. Herramientas de la UI (Interfaz de Usuario) de Firefox/mozilla
-======================================================================
+.....................................................................
 
 Firefox y mozilla tienen un conjunto de extensiones que realmente le pueden
 ayudar en el trabajo de desarrollo en la Interfaz de Usuario. Un conjunto
@@ -210,65 +225,48 @@ depurar html de mala apariencia. Ahora hay extensiones de mozilla/firefox que
 resultan en un desarrollo html mucho más productivo. Un conjunto básico es
 listado aquí para que se ponga al día.
 
-Desarrollador WebEl `desarrollador web`_ agrega una barra de herramientas a
-su firefox con casi todo lo que quiera hacer o saber. Información de CSS,
-validación, cambio de tamaño para probar otras resoluciones de pantalla,
-conversión de POSTs a GETs. **Algo esencial**.AardvarkCuando se habilita
-`Aardvark`_ para una página, y pasa el cursor por un elemento se muestra
-información de clase/identificación Por ejemplo al presionar la tecla ``v``
-se mostrará el código fuente del elemento donde está posado el cursor.
-Comience el demo de su sitio y experimente con las funciones de teclas. Es
-una herramienta elegante y ligera.ColorZilla`ColorZilla`_ es
-sorprendentemente útil. Hace lo que el nombre sugiere: provee un selector de
-color que muestra el código hexadecimal del píxel por donde pase el cursor en
-la barra de estado. Aún hay más: se muestra el tamaño de caja del elemento
-actual de caja; mostrando el elemento, clase e identificación del elemento
-actual, y distancia entre dos puntos. Todo en la barra de
-estado.FireBug`FireBug`_ muestra constantemente el número de errores que
-encuentre en su página. Provechoso durante el desarrollo de encontrar clases
-CSS mal escritas o sentencias defectuosas de javascript. También incluye una
-revisión de CSS y código fuente, pero Aardvark tiende a ser un poco mejor
-para eso. X-rayLa `extensión x-ray de firefox`_ es bastante beneficiosa para
-entender el diseño del sitio Plone. Muestra las etiquetas, las
-identificaciones y clases en línea, concibiendole una sorprendente y buena
-idea de lo que est? pasando tras bambalinas. View formatted source`View
-formatted source`_ le da una buena vista del código fuente de la página. Más
-importante es que cuando pasa sobre una etiqueta desplegable, le muestra la
-CSS que se usa para esa etiqueta. Y con múltiples archivos CSS (¿alguien con
-Plone?) le muestra el orden en que estos son usados (y sobrescritos).View
-source with`View source with`_ le permite hacer clic derecho sobre cualquier
-área de texto o vista de código fuente y seleccionar un programa para
-editarlo/verlo. Parecido a ExternalEditor, pero sobre **cualquier** Área de
-texto. No es 100% orientada a desarrolladores, pero igualmente útil para
-cambios pequeños y evaluación de archivos CSS en la carpeta de skin por
-defecto.
-Otros tipos de gadgets (herramientas) útiles son los **bookmarklets**
-(marcadores).
---------------
+Desarrollador Web
+  El `desarrollador web`_ agrega una barra de herramientas a su firefox con casi todo lo que quiera hacer o saber. Información de CSS, validación, cambio de tamaño para probar otras resoluciones de pantalla, conversión de POSTs a GETs. **Algo esencial**.
+
+Aardvark
+  Cuando se habilita `Aardvark`_ para una página, y pasa el cursor por un elemento se muestra información de clase/identificación Por ejemplo al presionar la tecla ``v`` se mostrará el código fuente del elemento donde está posado el cursor. Comience el demo de su sitio y experimente con las funciones de teclas. Es una herramienta elegante y ligera.
+
+ColorZilla
+  `ColorZilla`_ es sorprendentemente útil. Hace lo que el nombre sugiere: provee un selector de color que muestra el código hexadecimal del píxel por donde pase el cursor en la barra de estado. Aún hay más: se muestra el tamaño de caja del elemento actual de caja; mostrando el elemento, clase e identificación del elemento actual, y distancia entre dos puntos. Todo en la barra de estado.
+
+FireBug
+  `FireBug`_ muestra constantemente el número de errores que encuentre en su página. Provechoso durante el desarrollo de encontrar clases CSS mal escritas o sentencias defectuosas de javascript. También incluye una revisión de CSS y código fuente, pero Aardvark tiende a ser un poco mejor para eso.
+
+X-ray
+  La `extensión x-ray de firefox`_ es bastante beneficiosa para entender el diseño del sitio Plone. Muestra las etiquetas, las identificaciones y clases en línea, concibiendole una sorprendente y buena idea de lo que est? pasando tras bambalinas.
+
+View formatted source
+  `View formatted source`_ le da una buena vista del código fuente de la página. Más importante es que cuando pasa sobre una etiqueta desplegable, le muestra la CSS que se usa para esa etiqueta. Y con múltiples archivos CSS (¿alguien con Plone?) le muestra el orden en que estos son usados (y sobrescritos).
+
+View source with
+  `View source with`_ le permite hacer clic derecho sobre cualquier área de texto o vista de código fuente y seleccionar un programa para editarlo/verlo. Parecido a ExternalEditor, pero sobre **cualquier** Área de texto. No es 100% orientada a desarrolladores, pero igualmente útil para cambios pequeños y evaluación de archivos CSS en la carpeta de skin por defecto. 
+
+Otros tipos de gadgets (herramientas) útiles son los **bookmarklets** (marcadores).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Dos fuentes de estos son http://squarefree.com y http://slayeroffice.com. Vea
 para ejemplos:
 
-Bookmarklets para desarrollo WebLos `Web development bookmarklets`_ proveen
-el mismo tipo de funcionalidad que la barra de herramientas Web para
-desarrolladores. El `JavaScript Shell`_ y el `JavaScript Development
-Environment`_ merecen ser mencionados.Mouse-over DOM (Modelo de Objetos del
-Documento) InspectorEl `Mouseover DOM Inspector`_ , o abreviado MODI , es un
-favelet (también conocido como bookmarklet) que le permite ver y manipular el
-DOM de una página web simplemente posicionándose con el cursor sobre todo el
-documento.Javascript Object Tree FaveletEl `Javascript Object Tree Favelet`_
-sobrepondr? su documento actual con un elemento DIV que contiene una lista
-contra?da de todos los tipos de objetos javascript actualmente referenciados
-por la página, desde funciones a cadenas de caracteres y booleanos y todo
-aquello que este en el medio.Favelet SuiteEsto es un `favelet que combina la
-mayoría de [slayeroffice] favelets de desarrollo`_ . Cuando se invoca, un
-elemento DIV aparecer? en la esquina superior izquierda del navegador Web con
-una lista de todos los favalets que se han mencionado. Simplemente haga clic
-en el enlace para invocar el favalet.
+Bookmarklets para desarrollo Web
+  Los `Web development bookmarklets`_ proveen el mismo tipo de funcionalidad que la barra de herramientas Web para desarrolladores. El `JavaScript Shell`_ y el `JavaScript Development Environment`_ merecen ser mencionados.
+
+Mouse-over DOM (Modelo de Objetos del Documento) Inspector
+  El `Mouseover DOM Inspector`_ , o abreviado MODI , es un favelet (también conocido como bookmarklet) que le permite ver y manipular el DOM de una página web simplemente posicionándose con el cursor sobre todo el documento.
+
+Javascript Object Tree Favelet
+  El `Javascript Object Tree Favelet`_ sobrepondrá su documento actual con un elemento DIV que contiene una lista contraída de todos los tipos de objetos javascript actualmente referenciados por la página, desde funciones a cadenas de caracteres y booleanos y todo aquello que este en el medio.
+
+Favelet Suite
+  Esto es un `favelet que combina la mayoría de [slayeroffice] favelets de desarrollo`_ . Cuando se invoca, un elemento DIV aparecerá en la esquina superior izquierda del navegador Web con una lista de todos los favalets que se han mencionado. Simplemente haga clic en el enlace para invocar el favalet.
 
 
 2.2.2. ¿Cómo hacer para que los cambios de CCS surtan efecto inmediatamente?
-============================================================================
+............................................................................
 
 Asegurarse que los cambios hechos de CCS puedan verse instantáneamente. Este
 es el problema más común que se le presenta a las personas nuevas en Plone,
@@ -276,7 +274,7 @@ que están tratando con el asunto de temas.
 
 
 Activación del modo de desarrollo
-----------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Antes de comenzar cualquier personalización CSS debería cambiarse a modo
 depuración/desarrollo. Esto garantizará que el almacenamiento en caché y la
@@ -299,27 +297,30 @@ En Plone 3:
 
 En Plone 4:
 
-1.  asegúrese que la casilla de verificación para el modo desarrollo est?
+1.  asegúrese que la casilla de verificación para el modo desarrollo está
     confirmada; si usted inició la instancia de Zope en modo desarrollo, pues
-    esta estar? automáticamente confirmada.
+    esta estará automáticamente confirmada.
 
 2.  haga clic en el botón Guardar
+
+----
 
 Cuando haya finalizado con las modificaciones de CSS debería desactivar el
 modo depuración/desarrollo, ya que este afecta el rendimiento de su sitio
 Plone.
 
+----
 
 2.3. Cambiar los colores de fuente
-==================================
+----------------------------------
 
 ¿Cómo cambiar los colores de fuente?: un enfoque a través-de-la-web.
 
-Aquí se presentar?n algunas técnicas sencillas para la personalización del
+Aquí se presentarán algunas técnicas sencillas para la personalización del
 CSS de Plone a través-de-la-web.
 
 -   ¿Cómo encontrar los estilos que usted quiere cambiar?
--   ¿Cómo en sustituir estos estilos mediante el uso del estilo de hoja
+-   ¿Cómo en sustituir estos estilos mediante el uso del estilo de hoja 
     ploneCustom.css?
 
 En este caso cambiaremos los títulos de las paginas de color negro a color
@@ -327,7 +328,7 @@ turquesa.
 
 
 Antes de comenzar
------------------
+.................
 
 Para mayor comodidad, los temas de Plone a menudo se comprimen en un conjunto
 de hojas de estilo separadas, pero para velocidad y eficiencia en modo de
@@ -355,12 +356,12 @@ Localizando la hoja de estilo ploneCustom.css
 Como algo natural, la hoja de estilo que se carga de último en cada página
 Plone es ploneCustom.css. Usted puede ver esto si inspecciona la etiqueta de
 encabezado HTML de su página usando Firebug. Si escarba un poco más,
-probablemente encontrará que esta hoja de estilo est? completamente vacía.
+probablemente encontrará que esta hoja de estilo está completamente vacía.
 Según las reglas de precedencia de la Cascada CSS, cualquier estilo
 especificado en esta hoja sustituir? esos estilos en la hoja precedente.
 Entonces aquí tiene una "hoja en blanco" para sus propias personalizaciones.
 
-El truco ahora es encontrar el archivo, para que est? disponible para su
+El truco ahora es encontrar el archivo, para que está disponible para su
 respectiva edición.
 
 -   Para hacer la vida más sencilla, quizás quiera abrir una segunda
@@ -374,7 +375,7 @@ respectiva edición.
 -   Escriba *ploneCustom.css* en la caja "with ids:" y haga clic en
     buscar
 -   Puede que obtenga más de un resultado, pero no es importante la que
-    elija, sin embargo la mejor manera es escoger aquella opción que est?
+    elija, sin embargo la mejor manera es escoger aquella opción que está
     marcada con un asterisco rojo.
 
 
@@ -388,10 +389,10 @@ texto, haga clic en el botón de Personalización y verá que el estilo de hoja
 se ha copiado automáticamente a portal_skins/custom.
 
 Ahora ya es libre de editar el archivo a su gusto. Para cambiar el color de
-los títulos de nuestra página, agregue:
+los títulos de nuestra página, agregue: ::
 
-::h1.documentFirstHeading {
-    ? ? ?  color: #0AAE95;
+    h1.documentFirstHeading {
+      color: #0AAE95;
     }
 
 
@@ -487,8 +488,7 @@ en la carpeta plone_images en portal_skins. La manera más rápida de remplazar
 esta imagen es simplemente subiendo su propia imagen y dandole el mismo
 nombre:
 
--   Vaya a la ZMI (Interfaz de Administración de Zope) (Configuración del
-    sitio > ZMI)
+-   Vaya a la ZMI (Interfaz de Administración de Zope) (Configuración del sitio > ZMI)
 -   Luego a portal_skins > plone_images
 -   Haga clic en logo.jpg (Plone 3) o logo.png (Plone 4) y después clic
     en el botón de Personalizar.
@@ -501,10 +501,9 @@ nombre:
 
 
 Enfoque alternativo (sólo Plone 3)
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-El nombre (ID: identificación) del logotipo est? especificado en
+El nombre (ID: identificación) del logotipo está especificado en
 base_properties (propiedades_básicas); una lista de valores útiles que en
 Plone 3 se seleccionan y se usan en las hojas de estilo del tema de Plone por
 defecto. Esto le da la posibilidad de subir su propria imagen de logotipo,
@@ -518,8 +517,8 @@ nombre.
 -   Vaya a portal_skins > custom y escoja Image en la lista desplegable a
     la derecha
 -   Escoja la imagen que quiera y le da una Identificación y un Título,
-    ej.:
-::ID (Identificación) = MyLogo.jpg
+    ej.: ::
+        ID (Identificación) = MyLogo.jpg
         Title (Título) = My Logo
 -   Vaya a portal_skins > plone_styles, haga clic base_properties y luego
     clic en el botón de Personalizar
@@ -542,7 +541,6 @@ pestaña de propiedades para retornar a la lista de propiedades.
 
 
 2. Cambiando el estilo de portal_logo
-
 -------------------------------------
 
 No hay ningunos estilos definidos para *#portal-logo*, pero hay algunos para
@@ -576,14 +574,14 @@ través de la web, necesitará usar portal_view_customizations.
 -   Haga clic en plone.logo en el botón de Personalizar
 
 -   Ahora tendrá una plantilla que puede rescribir. Hemos resaltado los
-    detalles importantes en la sección de teoría que est? más adelante,
+    detalles importantes en la sección de teoría que está más adelante,
     mostrándole algunos ejemplos para que comience.
 -   Guarde sus cambios y actualice o recargue su navegador Web para
     verlos
 
 **Nota**: si en algún momento quiere retornar y hacer más cambios, verá que
-plone.logo est? resaltado en la lista portal_view_customizations, haga clic
-en ?l para editarlo. Si quiere quitar completamente sus personalizaciones use
+plone.logo está resaltado en la lista portal_view_customizations, haga clic
+en él para editarlo. Si quiere quitar completamente sus personalizaciones use
 las pestaña de contenido de portal_view_customizations, marque la casilla al
 lado de su plantilla y haga clic en Eliminar.
 
@@ -1629,7 +1627,7 @@ En realidad, hay tres elementos principales en un tema. El siguiente diagrama
 le muestra cómo estas ranuras se comportan en conjunto:
 
 .. image:: images/image_large.png
-    :alt: diagrama de bloques para construcción usados para crear un tema
+  :alt: diagrama de bloques para construcción usados para crear un tema
 
 
 
@@ -3210,7 +3208,7 @@ ambos macros ``body`` y ``folderlisting``. ``footer`` Aquí es donde AT pone
 la línea de fondo.
 
 .. image:: images/at-folderish-screenshot.jpg
-    :alt: Esta imagen muestra las ?reas generadas por el header, el
+  :alt: Esta imagen muestra las ?reas generadas por el header, el
     cuerpo y macros folderlisting
 
 
@@ -3388,7 +3386,7 @@ Asegúrese de reiniciar Zope y reinstalar usando ``portal_quickinstaller``.
 Ahora cuando renderizamos StringField, se verá como este:
 
 .. image:: images/image_preview_004.jpeg
-    :alt: Widget personalizado
+  :alt: Widget personalizado
 
 
 Así es amigos, es *así de sencillo*.
@@ -3465,7 +3463,7 @@ apropiadamente) que contenga el siguiente código:
 Y como magia debería ver renderizado en ?rea de contenido:
 
 .. image:: images/image_preview_002.jpeg
-    :alt: The Infamous "Foo" View
+  :alt: The Infamous "Foo" View
 
 
 
@@ -3572,7 +3570,7 @@ incluye disponibles en la página. Nuestro resultado final seráa algo como
 esto:
 
 .. image:: images/image_preview_003.jpeg
-    :alt: Macro de cuerpo personalizado
+  :alt: Macro de cuerpo personalizado
 
 
 Si hemos creado plantillas widget personalizadas, estas también serán
@@ -3602,7 +3600,7 @@ comportamiento predeterminado se puede encontrar. El resultado final luce
 como este:
 
 .. image:: images/image_preview.jpeg
-    :alt: R?tulo personalizado
+  :alt: R?tulo personalizado
 
 
 No olvide tampoco que tiene el poder de omitir ``head (encabezado)``,``body
@@ -4081,7 +4079,7 @@ Dentro de su propio producto de tema
 ------------------------------------
 
 .. image:: images/your_theme_egg_skin_cutdown.gif
-    :alt: The skins folder in your theme product
+  :alt: The skins folder in your theme product
 /skins/[su espacio de nombre de tema].[su espacio de tema]_custom_templates |
 custom_images | styles Estos directorios formar?n las capas de skins. Sus
 plantillas, imágenes y hojas de estilo pueden ir aquí. Si usted pidi? por
@@ -4091,7 +4089,7 @@ instancia de Zope arranca, esto convierte sus directorios en las capas de
 skin. 
 
 .. image:: images/your_theme_egg_skin_cutdown1.gif
-    :alt: Subsidiary files used for installing and setting up the Skin
+  :alt: Subsidiary files used for installing and setting up the Skin
 /profiles/default/skins.xml | cssregistry.xml | jsregistry.xml Cuando su tema
 est? instalado en el sitio Plone, este configura la jerarqu?a de las capas de
 skin, y registra sus hojas de estilo y JavaScript con los registros
@@ -4401,7 +4399,7 @@ se acerca a representar los colores que se encuentran en nuestro objetivo.
 Vaya y realice estos cambios a su base_properties ahora.
 
 .. image:: images/neon_base_properties.png
-    :alt: neon_base_properties
+  :alt: neon_base_properties
 
 
 
@@ -5277,7 +5275,7 @@ también habrá capas que proveen plantillas desde productos adicionales
 específicos (por ejemplo, el editor visual kupu).
 
 .. image:: images/order_of_precedence.html
-    :alt: captura de las capas skins en la ZMI
+  :alt: captura de las capas skins en la ZMI
 
 Cuando se le pidi? para procesar una plantilla específica, Plone trabajar?
 desde arriba hacia abajo de la lista, buscando en cada capa a su vez para
@@ -5438,7 +5436,7 @@ necesita.
 Información sobre componentes y cómo están conectados entre sí.
 
 .. image:: images/component.gif
-    :alt: diagrama de un componente
+  :alt: diagrama de un componente
 
 Componentes son herramientas potentes y flexibles de Plone 3, pero un poco
 más abstracto que las plantillas de página o scripts de Python. Como el
@@ -6236,7 +6234,7 @@ Dentro de su propio producto de tema
 ------------------------------------
 
 .. image:: images/your_theme_egg_components_cutdown.gif
-    :alt: La carpeta del explorador en producto de tema
+  :alt: La carpeta del explorador en producto de tema
 /browser/viewlet.py | viewlet.pt Un ejemplo de un componente viewlet
 /browser/interfaces.py Esto se usa para crear la interfaz de su tema
 /profiles/default/viewlets.xml Utilice este archivo para ordenar sus viewlets
@@ -6325,7 +6323,7 @@ Así que en este caso, el sub-nodo representa una entrada en el registro
 JavaScripts y sus casillas de verificación.
 
 .. image:: images/portal_js_snippet.gif
-    :alt: screenshot of the javascripts registry in the ZMI
+  :alt: screenshot of the javascripts registry in the ZMI
 
 
 En el caso muy improbable de que sea necesario que averig?e por sí mismo que
@@ -6435,7 +6433,7 @@ Dentro de su propio producto de tema
 ------------------------------------
 
 .. image:: images/your_theme_egg_config_cutdown.gif
-    :alt: El directorio de configuración de su producto tema
+  :alt: El directorio de configuración de su producto tema
 /profiles/default/ Este directorio contiene el XML para Generic Setup La
 plantilla paster plone3_theme le proporcionar? algunos archivos ya hechos;
 para definir sus capas de skin, registrar sus hojas de estilo y JavaScript, y
@@ -7211,7 +7209,7 @@ La UI (interfaz de usuario) de composición-CSS
 
 
 .. image:: images/image_preview.html
-    :alt: La UI de composición de css-registry (registro-css)
+  :alt: La UI de composición de css-registry (registro-css)
 
 
 Cada recurso combinado tendrá un pequeño fragmento en el código identificando
@@ -7647,7 +7645,7 @@ personalizado para su uso en Kupu.
     editor visual Kupu, como se ve a continuación:
 
 .. image:: images/image_preview_003.png
-    :alt: Site-setup kupu
+  :alt: Site-setup kupu
 
 
 
@@ -7655,7 +7653,7 @@ personalizado para su uso en Kupu.
 3. Vaya a la caja de estilos de párrafo.
 
 .. image:: images/image_preview_011.png
-    :alt: Kupu paragraph styles
+  :alt: Kupu paragraph styles
 
 
 4. Agregue su nuevo estilo de párrafo en la caja. Format is title|tag or
@@ -9378,28 +9376,28 @@ Portal Top
 `viewlet`_
 
 .. image:: images/image_thumb_009.png
-    :alt: plone.site_actions
+  :alt: plone.site_actions
 
 Acciones del sitio<ul id="portal-siteactions">...</ul>`plone.site_actions`_
 plone.portalheader
 `viewlet`_
 
 .. image:: images/image_thumb_011.png
-    :alt: plone.searchbox
+  :alt: plone.searchbox
 
 Cuadro de b?squeda<div id="portal-searchbox">???</div>`plone.searchbox`_
 plone.portalheader
 `viewlet`_
 
 .. image:: images/image_thumb.png
-    :alt: plone.logo
+  :alt: plone.logo
 
 Logotipo<a id="portal-logo" ...>... </a>`plone.logo`_
 plone.portalheader
 `viewlet`_
 
 .. image:: images/image_thumb_005.png
-    :alt: plone.global_sections
+  :alt: plone.global_sections
 
 Secciones globales<h5 class="hiddenStructure">Sections</h5> <ul id="portal-
 globalnav"> ??? </ul>`plone.global_sections`_
@@ -9407,7 +9405,7 @@ plone.portalheader
 `viewlet`_
 
 .. image:: images/image_thumb_006.png
-    :alt: plone.personal_bar
+  :alt: plone.personal_bar
 
 Barra personal<div id="portal-personaltools-wrapper">
 ???</div>`plone.personal_bar`_
@@ -9429,7 +9427,7 @@ plone.contentviews
 `viewlet`_
 
 .. image:: images/image_thumb_016.png
-    :alt: plone.tableofcontents
+  :alt: plone.tableofcontents
 
 Tabla de contenidos<dl id="document-toc" class="portlet toc" style="display:
 none"> ??? </dl>`plone.tableofcontents`_
@@ -9437,7 +9435,7 @@ plone.abovecontentbody
 `viewlet`_
 
 .. image:: images/image_thumb_004.png
-    :alt: plone.presentation
+  :alt: plone.presentation
 
 Presentación<p id="link-presentation">...</p>`plone.presentation`_
 plone.abovecontentbody
@@ -9449,7 +9447,7 @@ plone.belowcontenttitle
 `viewlet`_
 
 .. image:: images/image_preview_009.png
-    :alt: plone.byline
+  :alt: plone.byline
 
 L?nea de fondo<div id="plone-document-byline" class="documentByLine">...
 </div>`plone.belowcontenttitle.documentbyline`_
@@ -9461,7 +9459,7 @@ plone.abovecontent
 `viewlet`_
 
 .. image:: images/image_thumb_018.png
-    :alt: plone.document_actions
+  :alt: plone.document_actions
 
 Acciones de documento<div class="documentActions"> ???
 </div>`plone.abovecontenttitle.documentactions`_
@@ -9469,7 +9467,7 @@ plone.belowcontentbody
 `viewlet`_
 
 .. image:: images/image_thumb_017.png
-    :alt: plone.comments
+  :alt: plone.comments
 
 Comentarios<div class="discussion"> ??? </div>`plone.comments`_
 plone.belowcontent
@@ -9481,7 +9479,7 @@ plone.belowcontentbody
 `viewlet`_
 
 .. image:: images/image_thumb_012.png
-    :alt: plone.nextprevious
+  :alt: plone.nextprevious
 
 Anterior Siguiente<div class="listingBar">???</div>`plone.nextprevious`_
 plone.belowcontent
@@ -9492,7 +9490,7 @@ plone.portalfooter
 `viewlet`_
 
 .. image:: images/image_preview_010.png
-    :alt: plone.colophon
+  :alt: plone.colophon
 
 Colof?n <div id="portal-colophon">???</div>`plone.colophon`_
 plone.portalfooter
@@ -9575,7 +9573,7 @@ Portal Top
 `viewlet`_
 
 .. image:: images/image_preview_007.png
-    :alt: plone.siteactions-sunburst
+  :alt: plone.siteactions-sunburst
 
 Acciones del sitio<ul id="portal-
 siteactions">...</ul>`plonetheme.sunburst.site_actions`_
@@ -9583,21 +9581,21 @@ plone.portalfooter
 `viewlet`_
 
 .. image:: images/image_thumb_020.png
-    :alt: plone.searchbox-sunburst
+  :alt: plone.searchbox-sunburst
 
 Cuadro de b?squeda<div id="portal-searchbox">???</div>`plone.searchbox`_
 plone.portalheader
 `viewlet`_
 
 .. image:: images/image_thumb_008.png
-    :alt: plone.logo-sunburst
+  :alt: plone.logo-sunburst
 
 Logotipo<a id="portal-logo" ...>... </a>`plone.logo`_
 plone.portalheader
 `viewlet`_
 
 .. image:: images/image_thumb_007.png
-    :alt: plone.global_sections-sunburst
+  :alt: plone.global_sections-sunburst
 
 Secciones globales<h5 class="hiddenStructure">Sections</h5> <ul id="portal-
 globalnav"> ??? </ul>`plone.global_sections`_
@@ -9605,7 +9603,7 @@ plone.portalheader
 `viewlet`_
 
 .. image:: images/image_thumb_015.png
-    :alt: plone.personal_bar-sunburst
+  :alt: plone.personal_bar-sunburst
 
 Barra personal<div id="portal-personaltools-wrapper">
 ???</div>`plonetheme.sunburst.personal_bar`_
@@ -9613,7 +9611,7 @@ plone.portaltop
 `viewlet`_
 
 .. image:: images/image_preview_005.png
-    :alt: plone.pathbar-sunburst
+  :alt: plone.pathbar-sunburst
 
 Barra de ruta (hilo de Ariadna del portal)<div id="portal-
 breadcrumbs">...</div>`plone.path_bar`_
@@ -9621,14 +9619,14 @@ plone.portaltop
 `viewlet`_
 
 .. image:: images/image_thumb_003.png
-    :alt: plone.contentviews-sunburst
+  :alt: plone.contentviews-sunburst
 
 Vistas de contenido<ul class="contentViews"> ??? </ul>`plone.contentviews`_
 plone.contentviews
 `viewlet`_
 
 .. image:: images/image_thumb_002.png
-    :alt: plone.contentactions-sunburst
+  :alt: plone.contentactions-sunburst
 
 Acciones de contenido
 `plone.contentactions`_
@@ -9636,7 +9634,7 @@ plone.contentviews
 `viewlet`_
 
 .. image:: images/image_preview.png
-    :alt: plone.toc-sunburst
+  :alt: plone.toc-sunburst
 
 Tabla de contenidos<dl id="document-toc" class="portlet toc" style="display:
 none"> ??? </dl>`plone.tableofcontents`_
@@ -9644,14 +9642,14 @@ plone.abovecontentbody
 `viewlet`_
 
 .. image:: images/image_preview_004.png
-    :alt: plone.presentation-sunburst
+  :alt: plone.presentation-sunburst
 
 Presentación<p id="link-presentation">...</p>`plone.presentation`_
 plone.abovecontentbody
 `viewlet`_
 
 .. image:: images/image_thumb_010.png
-    :alt: plone.keywords-sunburst
+  :alt: plone.keywords-sunburst
 
 Palabras clave<div id="category"
 class="documentByLine">???</div>`plone.belowcontenttitle.keywords`_
@@ -9659,7 +9657,7 @@ plone.belowcontenttitle
 `viewlet`_
 
 .. image:: images/image_preview_006.png
-    :alt: plone.byline-sunburst
+  :alt: plone.byline-sunburst
 
 L?nea de fondo<div id="plone-document-byline" class="documentByLine">...
 </div>`plone.belowcontenttitle.documentbyline`_
@@ -9676,7 +9674,7 @@ plone.belowcontentbody
 `viewlet`_
 
 .. image:: images/image_preview_008.png
-    :alt: plone.relateditems-sunburst
+  :alt: plone.relateditems-sunburst
 
 Elementos relacionados
 <div class="relatedItems"> ??? </div>`plone.belowcontentbody.relateditems`_
@@ -9684,14 +9682,14 @@ plone.belowcontentbody
 `viewlet`_
 
 .. image:: images/image_preview_012.png
-    :alt: plone.comment-sunburst
+  :alt: plone.comment-sunburst
 
 Comentarios<div class="discussion"> ??? </div>`plone.comments`_
 plone.belowcontent
 `viewlet`_
 
 .. image:: images/image_thumb_019.png
-    :alt: plone.contenthistory-sunburst
+  :alt: plone.contenthistory-sunburst
 
 Historial de contenido<div class="contentHistory" id="content-
 history">???</div>`plone.belowcontentbody.contenthistory`_
@@ -9699,21 +9697,21 @@ plone.belowcontentbody
 `viewlet`_
 
 .. image:: images/image_preview_002.png
-    :alt: plone.nextprevious-sunburst
+  :alt: plone.nextprevious-sunburst
 
 Anterior Siguiente<div class="listingBar">???</div>`plone.nextprevious`_
 plone.belowcontent
 `viewlet`_
 
 .. image:: images/image_thumb_013.png
-    :alt: plone.footer-sunburst
+  :alt: plone.footer-sunburst
 
 Pie de página<div id="portal-footer">???</div>`plone.footer`_
 plone.portalfooter
 `viewlet`_
 
 .. image:: images/image_thumb_014.png
-    :alt: plone.colophon-sunburst
+  :alt: plone.colophon-sunburst
 
 Colof?n <div id="portal-colophon">???</div>`plone.colophon`_
 plone.portalfooter
@@ -12636,7 +12634,7 @@ Si el diagrama no funciona, consulte las siguientes páginas donde las
 secciones del diagrama están combinadas con una explicación textual.
 
 .. image:: images/your_theme_egg.gif
-    :alt: su huevo de tema
+  :alt: su huevo de tema
 
 
 
@@ -12660,7 +12658,7 @@ capas de skin, y registra sus hojas de estilo y JavaScript con los
 registros
 
 .. image:: images/your_theme_egg_skin.gif
-    :alt: su huevo de tema; archivos del skin
+  :alt: su huevo de tema; archivos del skin
 
 
 
@@ -12682,7 +12680,7 @@ directorios pueden usarse para plantillas, estilos, e imágenes. Usted tendrá
 que registrar estos como directorios para recursos en configure.zcml.
 
 .. image:: images/your_theme_egg_components.gif
-    :alt: su huevo de tema; archivos de componentes
+  :alt: su huevo de tema; archivos de componentes
 
 
 
@@ -12702,7 +12700,7 @@ ordenar los viewlets.
 perfil est? disponible para el uso de Generic Setup.
 
 .. image:: images/your_theme_egg_config.gif
-    :alt: su huevo de tema; archivos de configuración
+  :alt: su huevo de tema; archivos de configuración
 
 
 
@@ -12715,7 +12713,7 @@ Estos son los archivos y directorios necesarios para instalar el huevo en la
 ruta de python y ponerlo a disposición en el arranque de Zope.
 
 .. image:: images/your_theme_egg_egg_installation.gif
-    :alt: su huevo de tema; archivos utilizados para la instalación de su
+  :alt: su huevo de tema; archivos utilizados para la instalación de su
     huevo
 
 
@@ -12734,7 +12732,7 @@ expresados como XML. /setuphandlers.py Esto contiene el "controlador" para
 pasos no gen?ricos de la instalación Generic Setup
 
 .. image:: images/your_theme_egg_qi_installation.gif
-    :alt: su huevo de tema; archivos utilizados por el quick installer
+  :alt: su huevo de tema; archivos utilizados por el quick installer
 
 
 
