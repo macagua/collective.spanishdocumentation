@@ -73,13 +73,15 @@ Para tener un ambiente de desarrollo productivo, en especial cuando se
 trabaje en equipo, es muy importante contar con un sistema de control de
 versiones. ``Subversion`` es el utilizado por plone.org y el plone collective,
 por lo que consideramos necesario conocerlo, aunque recientemente la
-popularidad de sistemas distribuidos como ``Git`` y ``Mercurial`` ha aumentado.
+popularidad de sistemas distribuidos como ``Git``, ``Mercurial`` y ``Bazaar``  ha aumentado.
 
 .. toctree::
    :maxdepth: 2
 
    subversion
-
+   Control de versiones utilizando Git <http://www-cs-students.stanford.edu/~blynn/gitmagic/intl/es/index.html>
+   Control de versiones utilizando Mercurial <http://mercurial.selenic.com/wiki/SpanishTutorial>
+   Control de versiones utilizando Bazaar <http://blog.malev.com.ar/2010/03/10/tutorial-de-bazaar/>
 
 Python
 ------
