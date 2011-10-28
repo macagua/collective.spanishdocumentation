@@ -6,7 +6,7 @@ Esta sección intenta recoger todo la documentación que hasta el momento esta t
 
 
 Instalación de Plone
---------------------
+====================
 
 Este sección se dedica a recopilar las diversas formas de instalación de Plone 
 en diversos Sistemas operativos como Windows, OS X, Linux, BSD (distribución de 
@@ -20,7 +20,7 @@ software Berkeley) y prácticamente cualquier otra plataforma.
 
 
 Uso de Plone
-------------
+============
 
 Plone es un Sistema de gestión de contenidos muy completo y útil,
 por lo que es muy importante conocerlo para poder tomar máxima ventaja de
@@ -42,7 +42,7 @@ Mejores Practicas de Plone
 Esta sección intenta recoger todo la documentación disponible en en Español, sobre las *Mejores Practicas de Plone*, esta es resultado de la iniciativa de *Carlos de la Guardia* que publica esta documentación en busca de promover la documentación en Español, desde entonces esta documentación es mantenida por miembros de la comunidad Plone Conosur. A continuación se listan los documentos traducidos hasta el momento:
 
 Introducción
-------------
+============
 
 Desarrollar un sitio con Plone requiere de la combinación de una serie de
 tecnologías y conocimientos, desde HTML hasta desarrollo avanzado con Python.
@@ -67,7 +67,7 @@ En particular, conoceremos:
 
 
 Tutorial de control de versiones
---------------------------------
+================================
 
 Para tener un ambiente de desarrollo productivo, en especial cuando se
 trabaje en equipo, es muy importante contar con un sistema de control de
@@ -84,7 +84,7 @@ popularidad de sistemas distribuidos como ``Git``, ``Mercurial`` y ``Bazaar``  h
    Control de versiones utilizando Bazaar <http://blog.malev.com.ar/2010/03/10/tutorial-de-bazaar/>
 
 Python
-------
+======
 
 Python es el lenguaje con el que están desarrollados tanto Zope como Plone,
 por lo que es muy importante conocerlo para poder tomar máxima ventaja de
@@ -159,7 +159,7 @@ practicas implementadas en sus proyectos.
 
 
 Buildout y sus complementos
----------------------------
+===========================
 
 Buildout es un sistema que permite definir ambientes de desarrollo
 que pueden ser replicados, incluyendo dependencias y configuración. Buildout se apoya
@@ -180,7 +180,7 @@ Plone que se quiera emprender.
 
 
 Administración de Zope
-----------------------
+======================
 
 Plone esta basado en el servidor de aplicaciones Zope y este requiere realizar tareas de hospedaje y administrativa para un servidor de aplicación Zope / sitio de Plone.
 
@@ -214,8 +214,8 @@ conocer diversas tecnologías provenientes de estos sistemas.
    workflow
    gs
 
-Temas varios de Plone
----------------------
+Temáticas diversas de Plone
+===========================
 
 Existen muchos temas importantes para el desarrollo con Plone, en esta
 sección tocaremos algunos de ellos.
