@@ -96,24 +96,22 @@ Términos importantes
     Un ``snapshot`` puede tomar la configuración actual en el ``portal_setup``.
     Este puede después ser usada para comparar a otro ``snapshot`` o perfil. Esto puede ser útil cuando usted hace cambios a su sitio y quiere saber como afecta a su perfil.
 
-Referring to Profiles
-=====================
+Referenciando a Perfiles
+========================
 
-GenericSetup refers to profiles in the following format:
+GenericSetup referencia a los perfiles con el siguiente formato:
 
 .. code-block:: text
 
   profile-<package name>:<profile name>
 
-An example would be the ‘plone’ profile from the CMFPlone product:
+Un ejemplo podría ser el perfil desde el producto CMFPlone:
 
 .. code-block:: text
 
   profile-Products.CMFPlone:plone
 
-This is the syntax that is used for dependencies in the metadata.xml.
-For example, if you always want to run the ‘my.dependency’ default 
-profile before your profile, you would use:
+Esta es la sintaxis que es usada para dependencias en el archivo  metadata.xml. Por ejemplo, si usted siempre quiere ejecutar por defecto la dependencia ‘my.dependency’ antes de su perfil, usted podría usar:
 
 .. code-block:: text
 
@@ -176,7 +174,7 @@ El programa ``GenericSetup`` le permite a usted importar y exportar contenido po
     todos los elementos listados serán removido y se agregaran 
     de nuevo.
 
-    Ejemplo de un archivo ``.objects`` que toma desde el perfil ``Products.CMFPlone:plone profile``:
+    Ejemplo de un archivo ``.objects`` que toma desde el perfil ``Products.CMFPlone:plone``:
 
       .. code-block:: ini
 
@@ -280,4 +278,4 @@ Referencias
 - `Generic Setup Quick Reference`_.
 
 .. _GenericSetup y Perfiles: http://www.plone.mx/docs/gs.html
-.. _Generic Setup Quick Reference: http://www.sixfeetup.com/
+.. _Generic Setup Quick Reference: http://www.sixfeetup.com/company/technologies/plone-content-management/swag/swag-images-files/generic_setup.pdf
