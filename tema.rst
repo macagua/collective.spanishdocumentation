@@ -1,8 +1,13 @@
 .. -*- coding: utf-8 -*-
 
-******************************
+==============================
 Creacion de un paquete de tema
-******************************
+==============================
+
+.. contents :: :local:
+
+Introducción
+============
 
 Un tema de Plone es un conjunto de templates, imágenes, estilos y código
 Python que dan la apariencia visual al sitio de Plone. Usualmente se le da
@@ -57,7 +62,9 @@ nombre del paquete que crearemos. El template utiliza una estructura de
 directorios de dos niveles, por lo que hay que usar un nombre compuesto. Por
 lo general, la primera parte del nombre define la `marca` o la categoría
 general del paquete y la segunda parte el nombre "verdadero" del mismo. En
-este ejemplo el nombre es `plonetheme.ejemplo`::
+este ejemplo el nombre es `plonetheme.ejemplo`:
+
+.. code-block:: sh
 
     $ paster create -t plone3_theme plonetheme.ejemplo
     Selected and implied templates:
@@ -140,3 +147,11 @@ Finalmente, las ultimas dos preguntas siempre ocuparan los valores defecto::
     Zip-Safe? (Can this project be used as a zipped egg? (true/false)) [False]: 
     Zope2 Product? (Are you creating a product for Zope2/Plone or an Archetypes Product?) [True]:
 
+Luego de responder a estas preguntas el programa ``paster`` creará las estructura inicial del paquete del tema de Plone.
+
+Referencia
+==========
+
+- `Creacion de un paquete de tema`_ desde la comunidad Plone Mexico.
+
+.. _Creacion de un paquete de tema: http://www.plone.mx/docs/tema.html
