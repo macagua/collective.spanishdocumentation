@@ -4,12 +4,15 @@
 Configurar puntos de montajes para Data.fs separadas
 ====================================================
 
+.. contents :: :local:
+
+
 El montaje de un sitio Plone con la base de datos objetos **Data.fs** separadas puede ser muy útil si se
 están ejecutando varios sitios Plone en una sola instancia de Zope.
 
 
 ¿Por qué?
-~~~~~~~~~
+=========
 
 Esto significa que usted puede tomar ese sitio y moverlo a otro lugar, o
 migrarlo, sin afectar a nadie más. También puede restaurarlo sólo este sitio
@@ -23,14 +26,14 @@ y así poder definir parámetros específicos para cada ZODB.
 
 
 Casos de usos
---------------
+=============
 
 Existen diversos procedimientos para establecer puntos de montajes que a
 continuación se describen:
 
 
 Establecer puntos de montaje a una instalación predeterminada
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------------------------------------------
 
 Este es el procedimiento para cambiar una configuración predeterminada en una
 instalación con un punto de montaje para un ZODB.
@@ -75,7 +78,7 @@ instalación con un punto de montaje para un ZODB.
 
 
 Establecer nuevos puntos de montajes
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------------
 
 Utilizando el récipe de zc.buildout llamado `collective.recipe.filestorage`_ es muy facil ya que solo necesita agregar una nueva linea en su configuración buildout, cada linea representa un punto de montaje para cada sitios, a continuación se muestra un ejemplo de esto:
 
@@ -98,7 +101,7 @@ Luego debe guardar los cambios y ejecutar de nuevo el script buildout, con el si
 
 
 Hacer copias de seguridad con Data.fs separadas
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------------------------
 
 Al hacer copias de seguridad es un poco complejo usando las
 herramientas generadas por el buildout del `Instalador Unificado`_ (por
@@ -114,13 +117,13 @@ punto trabaja en su configuración buildout de la siguiente forma:
 
 
 Consejos
---------
+========
 
 Los siguientes consejos le ofrecerán una serie de recomendaciones para evitar
 problemas al establecer puntos de montajes:
 
 Problemas de memoria
-~~~~~~~~~~~~~~~~~~~~
+--------------------
 
 El uso de archivos separados Data.fs requiere mucha memoria, en la que cada
 Data.fs, en cada cliente, se creará un objeto cache en la memoria RAM. Usted
@@ -139,7 +142,7 @@ buscar en el almacenamiento de blob (en el sistema de archivos) para cuando
 requiera almacenar objetos de gran tamaño en la ZODB.
 
 ¡Nunca jamás haga esto!
-~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------
 
 Nunca copiar y pegar objetos entre los puntos de montajes de sus sitios.
 Usted puede hacer esto a través de la ZMI y es muy tentador. Zope simplemente
@@ -159,7 +162,7 @@ marca "flag" que establezcan para evitar que esto no suceda, pero me gustaría
 tener cuidado.
 
 Referencias
------------
+===========
 
 - `How to mount a Plone Site as a separate Data.fs`_.
 - `Multiple Plone sites per zope instance - using separate Data.fs files for each one`_.
