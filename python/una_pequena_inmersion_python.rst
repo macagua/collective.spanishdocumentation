@@ -1,6 +1,12 @@
 .. -*- coding: utf-8 -*-
 
-=========================
+=======================================
+Inmersión al modo interactivo de Python
+=======================================
+
+.. contents:: :local:
+
+
 Características de Python
 =========================
 
@@ -17,6 +23,7 @@ Introspección en Python
 Según el libro Inmersión en Python ...Como usted sabe, `todo en Python es un objeto`_, 
 y la introspección es código que examina como objetos otros
 módulos y funciones en memoria, obtiene información sobre ellos y los maneja.
+
 De paso, usted podrá definir las funciones sin nombre, las llamará a
 funciones con argumentos sin orden, y podrá hacer referencia a funciones
 cuyos nombres desconocemos.
