@@ -1,10 +1,13 @@
 .. -*- coding: utf-8 -*-
 
+=========================
 Procesos de documentación
 =========================
 
+.. contents :: :local:
+
 Obtener y compilar la documentación
------------------------------------
+===================================
 
 El almacenamiento de este material está disponible en el servidor de Subversion
 `"collective" <https://svn.plone.org/svn/collective/>`_ de los contribuyentes a 
@@ -62,14 +65,14 @@ con sus programas de visor de PDF favorito (Evince, Acrobat Reader, ...)
 
 
 Reglas de redacción
--------------------
+===================
 
 En primer lugar, debe aprender los `fundamentos de Sphinx
 <http://sphinx.pocoo.org/contents.html>`_ que es un reStructuredText extendido.
 
 
-Codificación
-------------
+Codificación de caracteres
+==========================
 
 Su editor debe codificar el texto en **utf-8** si le gusta lo que está leyendo. 
 Si su editor de texto favorito no reconoce esta codificación 
@@ -86,7 +89,7 @@ Si su editor de texto favorito no reconoce esta codificación
 
 
 Desplazamientos y indentaciones
--------------------------------
+===============================
 
 El uso del carácter de tabulación en el texto fuente para las distintas
 desplazamientos y indentaciones está **estrictamente prohibido**. Utilice siempre
@@ -95,7 +98,7 @@ para insertar espacios al pulsar la tecla TAB. No tiene
 excusa si es necesario.
 
 Estilos de subrayado
---------------------
+====================
 
 Sphinx y ReStructuredText no imponer estilo de subrayado para
 diferentes niveles de secciones de un documento. Todo se deja a la discreción
@@ -124,7 +127,7 @@ documento. Para generar el HTML, no es un problema, pero en LaTeX limita
 la superposición de las secciones a 6 niveles.
 
 Contribuciones SVN
-------------------
+==================
 
 Wow, estás contento con tu excelente trabajo. Y le gustaría compartirlo con
 todo el mundo. Al igual que cuando "contribuidor" de código fuente, las pruebas
@@ -136,7 +139,7 @@ unitarias no deben mostrar ningún error, compruebe en primer lugar:
   externos explícitos, referencias a las secciones, ...) funcionan correctamente.
 
 Imágenes
---------
+========
 
 Aparte de las capturas de pantalla - ¡Uy, lo siento - las capturas de pantalla!, 
 las imágenes Sphinx se inserta en el documento debe ir acompañada de su versión
@@ -160,7 +163,7 @@ Diagramas : `Graphviz <http://www.graphviz.org/>`_
 
 
 Algunas de las herramientas recomendadas
-----------------------------------------
+========================================
 
 Emacs : usted puede agregar a emacs el módulo `rst.el
 <http://svn.berlios.de/svnroot/repos/docutils/trunk/docutils/tools/editors/emacs/rst.el>`_
@@ -169,7 +172,7 @@ simpatizantes de Sphinx y reStructuredText.
 
 
 FAQ
----
+===
 
 **Pregunta :** He añadido una entrada del índice o un nuevo término en el glosario y
 no se actualiza cuando compilo el documento.
