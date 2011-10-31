@@ -4,6 +4,8 @@
 Hola Mundo en Plone 3
 =====================
 
+.. contents :: :local:
+
 Introducción
 ============
 
@@ -11,7 +13,7 @@ Este es tutorial trata de explicar como crear un Plone Theme product para Plone 
 
 
 Instalación
------------
+===========
 
 Puedes instalar ZopeSkel usando `pip`_ (es recomendable hacerlo dentro de un `entorno virtual`_):
 
@@ -129,7 +131,7 @@ Y de esta forma ya tiene generado una vista generada desde Python y otra vista g
 
 
 Ejemplo de un viewlet básico
-----------------------------
+============================
 
 - Accede al archivo de la clase Python viewlet ``browser/viewlets.py``  generado en este paquete y descomenta la pieza de código disponible allí (clase de Python viewlet).
 
@@ -176,7 +178,7 @@ Ejemplo de un viewlet básico
 
 
 Descarga código fuente
-~~~~~~~~~~~~~~~~~~~~~~
+======================
 
 Para descargar el código fuente de este ejemplo ejecute el siguiente comando:
 
@@ -186,10 +188,9 @@ Para descargar el código fuente de este ejemplo ejecute el siguiente comando:
 
 
 Conclusiones
-~~~~~~~~~~~~
+============
 
 Este ejemplo ofrece un acercamiento a crear productos Plone desde una `Views`_ y un `Viewlets`_ dentro de un manager viewlet.
-
 
 
 Referencias
