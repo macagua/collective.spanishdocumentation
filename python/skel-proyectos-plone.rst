@@ -4,33 +4,58 @@
 Esqueletos de proyectos Zope/Plone
 ==================================
 
+.. contents:: :local:
+
+Introducción
+============
+
 Son una serie de colecciones de plantillas *esqueletos* que permiten iniciar
 rápidamente proyectos, existente diversos *esqueletos* orientados a tipos de
 desarrollos específicos, a continuación se muestran algunos esqueletos
 útiles:
 
-- `ZopeSkel`_, es una colección de esqueletos para crear
-  automáticamente paquetes e instancias en Zope.
-- `zopeproject`_, Tools and scripts for creating development
-  sandboxes for web applications that primarily use Zope.
-- `grokcore.startup`_,  Soporte a Paster para proyectos Grok.
-- `grokproject`_, Script that sets up a grok project directory,
-  installs Zope 3 and grok and creates a template for a grok application.
+- **Esqueletos de proyectos Plone**:
 
-Instalando paquete egg de esquetos
-==================================
+  - `ZopeSkel`_, es una colección de esqueletos para crear
+    automáticamente paquetes e instancias en Zope.
 
-Para ralizar este paso debe tener creado previamente y activado un entorno virtual creado, ejecutando el siguiente comando: 
+  - `zopeskel.dexterity`_, es una plantilla Paster para la 
+    herramienta de desarrollo de tipos de contenidos Dexterity para Plone.
+
+- **Esqueletos de proyectos Zope**:
+
+  - `zopeproject`_, Tools and scripts for creating development
+    sandboxes for web applications that primarily use Zope.
+
+
+- **Esqueletos de proyectos Grok**:
+
+  - `grokcore.startup`_,  Soporte a Paster para proyectos Grok.
+  
+  - `grokproject`_, Script that sets up a grok project directory,
+    installs Zope 3 and grok and creates a template for a grok application.
+
+
+
+Instalación
+===========
+
+Para realizar este paso debe tener creado previamente y activado un entorno virtual creado, ejecutando el siguiente comando: 
 
 .. code-block:: sh
 
   (python) pip install 'ZopeSkel==2.21.2'
 
-No olvidar que estos paquetes han sido instalados con el entorno virtual que
-previamente usted activo, eso quiere decir que los paquetes previamente
-instalados con Easy Install están instalados en el directorio
-``~/virtualenv/python/lib/python4/site-packages/`` en ves del directorio de
-su versión de Python de sistema ``/usr/lib/python2.x/site-packages/``
+.. note::
+
+  No olvidar que estos paquetes han sido instalados con el entorno virtual que
+  previamente usted activo, eso quiere decir que los paquetes previamente
+  instalados con Easy Install o PIP están instalados en el directorio
+  ``~/virtualenv/python/lib/python4/site-packages/`` en ves del directorio de
+  su versión de Python de sistema ``/usr/lib/python2.x/site-packages/``
+
+Uso de ZopeSkel
+===============
 
 Al finalizar la instalación podrá opcionalmente consultar cuales plantillas
 tiene disponible para usa, ejecutando el siguiente comando: 
@@ -61,6 +86,10 @@ tiene disponible para usa, ejecutando el siguiente comando:
       plone_pas:          A project for a Plone PAS plugin
       recipe:             A recipe project for zc.buildout
       silva_buildout:     A buildout for Silva projects
+
+
+Creando un proyecto Buildout de Plone 4
+---------------------------------------
 
 Usted debe usar el comando paster para crear el proyecto Buildout. 
 
@@ -137,7 +166,7 @@ Para iniciar el proyecto Plone ejecute los siguientes comandos:
   (python)$ cd cliente1-portal.buildout/
   (python)$ python bootstrap.py
 
-Y realice una importación del paquete mipaquetepython ejecutando el siguiente comando: 
+Observe la estructura de directorio creada ejecutando el siguiente comando: 
 
 .. code-block:: sh
 
@@ -263,23 +292,52 @@ Iniciar la construcción de proyecto Plone:
   (python)$ ./bin/buildout -vN
 
 
-Recomendaciones
-~~~~~~~~~~~~~~~
+De esta forma se inicia la construcción de proyecto Plone 4.
 
--   Si desea trabajar con algún proyecto de desarrollo basado en
-    esqueletos o plantillas paster y Buildout simplemente seleccione cual
-    esqueleto va a utilizar para su desarrollo y proceso a instalarlo con
-    Easy Install o PIP (como se explico anteriormente) y siga sus respectivas
-    instrucciones para lograr con éxito la tarea deseada.
+Esqueletos y estilos de trabajo
+===============================
+
+Una de las características interesante de los esqueletos es que usted puede crear sus propias plantillas de proyecto que apliquen sus propias estilos de desarrollo y configuraciones en sus proyectos de desarrollo. 
+
+Esto es muy útil cuando requieres trabajar con un equipo de desarrolladores a los cuales debes definir pautas sobre estilos de desarrollos, de sintaxis de código y otras más, a continuación muestro una lista de diversos esqueletos hecho por diversas compañías: 
+
+- `A collection of skeletons for quickstarting projects with Ingeniweb products`_.
+
+- `ifPeople's Additional templates for paster`_.
+
+- `Paster templates for standard NiteoWeb Plone projects`_.
+
+- `Simples Consultoria's skeleton for a buildout`_.
+
+- `Simples Consultoria's skeleton for a policy package`_.
+
+- `Simples Consultoria's skeleton for a package`_.
+
+- `Simples Consultoria's skeleton for a theme`_.
+
+- `Quintagroup theme template for Plone 3 with nested namespace`_.
+
+- `Project templates creating Web and Mobile themes for Plone`_.
+
+- `Zopeskel template for plone.app.theming based theme development`_.
+
+
+Recomendaciones
+===============
+
+Si desea trabajar con algún proyecto de desarrollo basado en esqueletos o plantillas paster y Buildout simplemente seleccione cual esqueleto va a utilizar para su desarrollo y proceso a instalarlo con Easy Install o PIP (como se explico anteriormente) y siga sus respectivas instrucciones para lograr con éxito la tarea deseada.
 
 Referencias
------------
+===========
+
+- `Gestión de proyectos con Buildout, instalando Zope/Plone con este mecanismo`_.
 
 .. _django-project-templates: http://pypi.python.org/pypi/django-project-templates
 .. _fez.djangoskel: http://pypi.python.org/pypi/fez.djangoskel
 .. _django-harness: http://pypi.python.org/pypi/django-harness
 .. _lfc-skel: http://pypi.python.org/pypi/lfc-skel/
 .. _ZopeSkel: http://pypi.python.org/pypi/ZopeSkel
+.. _zopeskel.dexterity: http://pypi.python.org/pypi/zopeskel.dexterity/
 .. _zopeproject: http://pypi.python.org/pypi/zopeproject/
 .. _grokcore.startup: http://pypi.python.org/pypi/grokcore.startup
 .. _grokproject: http://pypi.python.org/pypi/grokproject/
@@ -289,3 +347,14 @@ Referencias
 .. _CherryPaste: http://pypi.python.org/pypi/CherryPaste
 .. _TracLegosScript: http://trac-hacks.org/wiki/TracLegosScript
 .. _trac_project: http://trac-hacks.org/browser/traclegosscript/anyrelease/example/oss
+.. _Gestión de proyectos con Buildout, instalando Zope/Plone con este mecanismo: http://coactivate.org/projects/ploneve/gestion-de-proyectos-con-buildout
+.. _A collection of skeletons for quickstarting projects with Ingeniweb products: http://pypi.python.org/pypi/IngeniSkel/
+.. _ifPeople's Additional templates for paster: http://pypi.python.org/pypi/ifpeople.pastertemplates/
+.. _Paster templates for standard NiteoWeb Plone projects: http://pypi.python.org/pypi/zopeskel.niteoweb/
+.. _Simples Consultoria's skeleton for a buildout: http://pypi.python.org/pypi/sc.paster.buildout/
+.. _Simples Consultoria's skeleton for a policy package: http://pypi.python.org/pypi/sc.paster.policy/
+.. _Simples Consultoria's skeleton for a package: http://pypi.python.org/pypi/sc.paster.package/
+.. _Simples Consultoria's skeleton for a theme: http://pypi.python.org/pypi/sc.paster.theme/
+.. _Quintagroup theme template for Plone 3 with nested namespace: http://pypi.python.org/pypi/quintagroup.themetemplate/
+.. _Project templates creating Web and Mobile themes for Plone: http://pypi.python.org/pypi/gomobile.templates/
+.. _Zopeskel template for plone.app.theming based theme development: https://github.com/hexagonit/hexagonit.themeskel
