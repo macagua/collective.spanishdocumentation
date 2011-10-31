@@ -4,8 +4,10 @@
 Hola mundo en zc.buildout
 =========================
 
-Introducción
-------------
+.. contents :: :local:
+
+Descripción general
+===================
 
 Este es una configuración básica de `buildout`_ que explica como generar un
 programa típico `Hola Mundo`_ en Bash script llamado **"hola"** dentro del
@@ -14,7 +16,7 @@ necesarios para la ejecución de este programa.
 
 
 Instalación
-~~~~~~~~~~~
+===========
 
 Puedes instalar zc.buildout usando `pip`_ (es recomendable hacerlo dentro de
 un `entorno virtual`_):
@@ -90,7 +92,7 @@ script con `zc.buildout`_.
 
 
 Descarga código fuente
-~~~~~~~~~~~~~~~~~~~~~~
+======================
 
 Para descargar el código fuente de este ejemplo ejecute el siguiente comando:
 
@@ -100,16 +102,16 @@ Para descargar el código fuente de este ejemplo ejecute el siguiente comando:
 
 
 Conclusiones
-~~~~~~~~~~~~
+============
 
 Este ejemplo intenta mostrar las capacidades del `zc.buildout`_ como
 herramienta alternativa al `Makefile`_ y al `Apache Ant`_.
 
 
 Referencias
-~~~~~~~~~~~
+===========
 
--   `Buildout - How to maintain big app stacks without losing your mind`_.
+- `Buildout - How to maintain big app stacks without losing your mind`_.
 
 
 .. _buildout: http://coactivate.org/projects/ploneve/replicacion-de-proyectos-python
