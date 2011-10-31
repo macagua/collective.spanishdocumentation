@@ -4,6 +4,11 @@
 Esqueletos de proyectos Python
 ==============================
 
+.. contents:: :local:
+
+Introducción
+============
+
 Son una serie de colecciones de plantillas *esqueletos* que permiten iniciar
 rápidamente proyectos, existente diversos *esqueletos* orientados a tipos de
 desarrollos específicos.
@@ -140,34 +145,44 @@ Esqueletos en diversos proyectos Python
 A continuación se muestran algunos esqueletos útiles:
 
 - `Esqueletos de proyectos Zope/Plone`_.
-- Esqueletos de proyectos Django:
+- **Esqueletos de proyectos Django**:
+
   - `django-project-templates`_, plantillas Paster para crear proyectos Django.
+
   - `fez.djangoskel`_, es una colección de plantillas Paster para crear aplicaciones Django como paquetes eggs.
+
   - `django-harness`_, es una aplicación destinada a simplificar las tareas típicas relacionadas con la creación de un sitio web hechos con Django, el mantenimiento de varias instalaciones (local, producción, etc) y cuidando su instalación global y su estructura de "esqueleto" actualizado del sitio de manera fácil.
+
   - `lfc-skel`_, Plantillas Paster para django-lfc. lfc-skel provee una plantilla para crear una aplicación LFC.
-- Esqueletos de proyectos Pylons:
+
+- **Esqueletos de proyectos Pylons**:
+
   - `Pylons`_,  un Framework Web Pylons, que al instalarse con EasyInstall instala dos plantillas de proyectos Pylons.
+
   - `PylonsTemplates`_, Plantillas extras de paster para Pylons, incluyendo implementación de repoze.what. PylonsTemplates le ofrece plantillas adicionales paster para aplicaciones Pylons.
-  - `BlastOff`_, Una plantilla de aplicación Pylons que proporciona un esqueleto de entorno de trabajo configurado con SQLAlchemy, mako, repoze.who, ToscaWidgets, TurboMail, WebFlash y (opcionalmente)SchemaBot. La aplicación generada esta previamente configurada con autenticación, inicio de sesión y formularios de registro, y (opcionalmente) confirmación de correo electrónico. BlastOff ayudar a acelerar el desarrollo de aplicaciones en Pylons por que genera un proyecto con una serie de dependencias configuraciones previamente.
-- Esqueletos de proyectos CherryPy:
+
+  - `BlastOff`_, Una plantilla de aplicación Pylons que proporciona un esqueleto de entorno de trabajo configurado con SQLAlchemy, mako, repoze.who, ToscaWidgets, TurboMail, WebFlash y (opcionalmente) SchemaBot. La aplicación generada esta previamente configurada con autenticación, inicio de sesión y formularios de registro, y (opcionalmente) confirmación de correo electrónico. BlastOff ayudar a acelerar el desarrollo de aplicaciones en Pylons por que genera un proyecto con una serie de dependencias configuraciones previamente.
+
+- **Esqueletos de proyectos CherryPy**:
+
   - `CherryPaste`_, Usar CherryPy dentro Paste.
-- Esqueletos de proyectos Trac:
+
+- **Esqueletos de proyectos Trac**:
+
   - `TracLegosScript`_, TracLegos es un software diseñado para ofrecer plantillas para proyectos Trac y asiste con la creación de proyecto trac.
+
   - `trac_project`_, Plantilla de proyecto Trac de software de código abierto.
 
 
 Recomendaciones
----------------
+===============
 
--   Si desea trabajar con algún proyecto de desarrollo basado en
-    esqueletos o plantillas paster y Buildout simplemente seleccione cual
-    esqueleto va a utilizar para su desarrollo y proceso a instalarlo con
-    Easy Install o PIP (como se explico anteriormente) y siga sus respectivas
-    instrucciones para lograr con éxito la tarea deseada.
+Si desea trabajar con algún proyecto de desarrollo basado en esqueletos o plantillas paster y Buildout simplemente seleccione cual esqueleto va a utilizar para su desarrollo y proceso a instalarlo con Easy Install o PIP (como se explico anteriormente) y siga sus respectivas instrucciones para lograr con éxito la tarea deseada.
 
 Referencias
 ===========
 
+- `Gestión de proyectos con Buildout, instalando Zope/Plone con este mecanismo`_.
 
 .. _Esqueletos de proyectos Zope/Plone: http://readthedocs.org/docs/plone-spanish-docs/en/latest/python/skel-proyectos-plone.html
 .. _django-project-templates: http://pypi.python.org/pypi/django-project-templates
@@ -184,3 +199,4 @@ Referencias
 .. _CherryPaste: http://pypi.python.org/pypi/CherryPaste
 .. _TracLegosScript: http://trac-hacks.org/wiki/TracLegosScript
 .. _trac_project: http://trac-hacks.org/browser/traclegosscript/anyrelease/example/oss
+.. _Gestión de proyectos con Buildout, instalando Zope/Plone con este mecanismo: http://coactivate.org/projects/ploneve/gestion-de-proyectos-con-buildout
