@@ -6,6 +6,9 @@ Buildout y Plone 3
 
 .. contents :: :local:
 
+Descripción general
+===================
+
 Una herramienta para administrar, a través de un archivo de configuración
 declaratoria, las partes y componentes de un desarrollo con Python.  Dichas
 partes no están limitadas a componentes o código Python.
@@ -21,7 +24,7 @@ Algunos términos importantes
 
 .. glossary::
 
-  Paquete de Pythons.
+  Paquete de Python.
     Básicamente, una carpeta con código Python que contiene un archivo
     ``__init__.py``.
 
@@ -239,6 +242,6 @@ En los comentarios en el codigo se explican las secciones del buildout.
 Referencias
 ===========
 
--   `¿Qué es buildout?`_.
+-   `¿Qué es buildout?`_ desde la comunidad Plone Mexico.
 
 .. _¿Qué es buildout?: http://www.plone.mx/docs/buildout.html
