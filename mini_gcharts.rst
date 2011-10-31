@@ -4,6 +4,11 @@
 Crear gráficas a partir de datos de un tipo de contenido
 ========================================================
 
+.. contents :: :local:
+
+Introducción
+============
+
 En este ejemplo utilizaremos un tipo de contenido de Plone para capturar
 información y crearemos una vista para el tipo donde se muestre una gráfica
 de pastel que refleje los datos capturados.
@@ -168,7 +173,7 @@ Configuramos la vista para usarla solamente con nuestro tipo de ejemplo:
 Referencia
 ==========
 
-- `Crear gráficas a partir de datos de un tipo de contenido`_
+- `Crear gráficas a partir de datos de un tipo de contenido`_ desde la comunidad Plone Mexico.
 
 .. _Crear gráficas a partir de datos de un tipo de contenido: http://www.plone.mx/docs/mini_gcharts.html
 
