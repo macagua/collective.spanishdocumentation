@@ -4,6 +4,11 @@
 Traducir un documento a otro idioma automáticamente
 ===================================================
 
+.. contents :: :local:
+
+Introducción
+============
+
 Google ofrece un servicio de traducción de idiomas con el que podemos
 traducir automáticamente cualquier texto desde uno de los idiomas disponibles
 a cualquier otro de ellos. Agregaremos esta funcionalidad a cualquier tipo
@@ -99,7 +104,7 @@ La configuración de la vista es la siguiente:
 Referencia
 ==========
 
-- `Traducir un documento a otro idioma automáticamente`_
+- `Traducir un documento a otro idioma automáticamente`_ desde la comunidad Plone Mexico.
 
 .. _Traducir un documento a otro idioma automáticamente: http://www.plone.mx/docs/mini_translate.html
 
