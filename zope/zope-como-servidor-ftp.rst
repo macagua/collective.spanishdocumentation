@@ -4,8 +4,10 @@
 Configurar Zope como un servidor FTP
 ====================================
 
+.. contents :: :local:
+
 Descripción general
---------------------
+===================
 
 Zope tiene a disposición su propio servidor FTP, usted solo necesita
 activarlo y configurarlo.
@@ -16,7 +18,7 @@ desde un computador a otro. Muchos editores de texto y editores HTML soportan
 protocolo FTP.
 
 Configuración
---------------
+=============
 
 La forma más adecuada de configuración del servidor FTP de Zope va a depender
 del tipo de instalación de Zope/Plone realizada:
@@ -29,7 +31,7 @@ comando:
   ./bin/instance stop
 
 Instalaciones No-Buildout
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------
 
 Para instalaciones basadas en paquetes de distros, instalador de MS Windos,
 entre otros que no soporte Buildout:
@@ -50,8 +52,8 @@ Y luego asigna la siguiente definición:
     address 127.0.0.1:8021
   </ftp-server>
 
-Instalaciones Buildout
-~~~~~~~~~~~~~~~~~~~~~~~
+Instalaciones con Buildout
+--------------------------
 
 Para instalaciones de Zope/Plone basadas en Buildout, se configura de la
 siguiente forma:
@@ -82,7 +84,7 @@ buildout de asigna la siguiente definición:
 
 
 Ejecución del servidor FTP
----------------------------
+==========================
 
 Luego guarde los cambios y inicie de nuevo la instancia del servicio de
 Zope en modo depuración para verificar que inicio el servidor FTP, con el
@@ -125,7 +127,7 @@ conexión con los siguientes datos:
 
 
 Referencias
------------
+===========
 
 - `Authoring Content with WebDAV and FTP`_
 - `Managing Zope Objects Using External Tools`_
