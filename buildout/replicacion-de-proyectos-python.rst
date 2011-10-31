@@ -4,6 +4,8 @@
 Replicación de proyectos Python
 ===============================
 
+.. contents :: :local:
+
 ¿Qué es zc.buildout?
 ====================
 
