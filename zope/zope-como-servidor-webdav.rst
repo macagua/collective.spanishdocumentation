@@ -4,8 +4,10 @@
 Configurar Zope como un servidor WebDAV
 =======================================
 
+.. contents :: :local:
+
 Descripción general
---------------------
+===================
 
 Zope tiene a disposición su propio servidor WebDAV, usted solo necesita
 activarlo y configurarlo.
@@ -17,7 +19,7 @@ posible qu no sea soportado por muchos editores de texto y editores HTML como
 es el caso del protocolo FTP.
 
 Configuración
---------------
+=============
 
 La forma más adecuada de configuración del servidor WebDAV de Zope va a
 depender del tipo de instalación de Zope/Plone realizada:
@@ -30,7 +32,7 @@ comando:
   ./bin/instance stop
 
 Instalaciones No-Buildout
-~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------
 
 Para instalaciones basadas en paquetes de distros, instalador de MS Windos,
 entre otros que no soporte Buildout:
@@ -53,8 +55,8 @@ Y luego asigna la siguiente definición:
     # force-connection-close off
   </webdav-source-server>
 
-Instalaciones Buildout
-~~~~~~~~~~~~~~~~~~~~~~~
+Instalaciones con Buildout
+--------------------------
 
 Para instalaciones de Zope/Plone basadas en Buildout, se configura de la
 siguiente forma:
@@ -86,7 +88,7 @@ buildout de asigna la siguiente definición:
 
 
 Ejecución del servidor WebDAV
-------------------------------
+=============================
 
 Luego guarde los cambios y inicie de nuevo la instancia del servicio de
 Zope en modo depuración para verificar que inicio el servidor WebDAV, con el
@@ -169,7 +171,7 @@ WebDAV con Plone a través de GNOME
 
 
 Referencias
------------
+===========
 
 - `Authoring Content with WebDAV and FTP`_
 - `Managing Zope Objects Using External Tools`_
