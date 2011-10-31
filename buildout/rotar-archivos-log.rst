@@ -4,6 +4,8 @@
 Rotar archivos .log de Zope
 ===========================
 
+.. contents :: :local:
+
 Introducción
 ============
 
@@ -12,7 +14,7 @@ tarea de crontab de rotación de archivos log, para esto usará la misma configu
 del paquete Zope en Debian GNU/Linux que entenderá el programa crontab para realizar esta tarea.
 
 Instalación
------------
+===========
 
 Dentro de su directorio de buildout debe crear los la siguiente estructura de archivos:
 
@@ -112,7 +114,7 @@ Para descargar el código fuente de este ejemplo ejecute el siguiente comando:
 Referencias
 ===========
 
--   `Buildout - How to maintain big app stacks without losing your mind`_.
+-  `Buildout - How to maintain big app stacks without losing your mind`_.
 
 
 .. _buildout: http://coactivate.org/projects/ploneve/replicacion-de-proyectos-python
