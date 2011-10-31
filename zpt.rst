@@ -1,26 +1,28 @@
 .. -*- coding: utf-8 -*-
 
-*******************
+===================
 Zope Page Templates
-*******************
+===================
 
 .. contents :: :local:
 
-Qué es un Page Template de Zope:
+¿Qué es un Page Template de Zope?
+=================================
 
 * Herramienta para generar HTML dinámico.
 * Pensado para permitir a diseñadores y desarrolladores trabajar en conjunto.
 * Utiliza etiquetas de HTML con atributos extra.
 * Permite utilización de macros para reutilizar templates.
 
-Principios regidores de los ZPT:
+Principios regidores de los ZPT
+===============================
 
 * Permitir al diseñador trabajar con sus herramientas de edición.
-* Poder visualizar la página en edición tal como se verá en el sitio
-  (WYSIWYG).
+* Poder visualizar la página en edición tal como se verá en el sitio (WYSIWYG).
 * Mantener el código separado de los templates.
 
-Funcionamiento de los templates:
+Funcionamiento de los templates
+===============================
 
 * Ejemplo:
 
@@ -35,7 +37,8 @@ Funcionamiento de los templates:
 * Todas las instrucciones comienzan con tal: y son ignoradas por editores
   visuales.
 
-Primer page template:
+Primer page template
+--------------------
 
 .. code-block:: html
 
@@ -47,7 +50,8 @@ Primer page template:
       </body>
     </html>
 
-Tipos de expresiones:
+Tipos de expresiones
+--------------------
 
 * Expresiones Path, que siguen un camino a partir de un objeto inicial hasta
   un resultado:
@@ -144,7 +148,8 @@ Para reutilización de templates:
 * Permiten insertar elementos dinámicos dentro de los macros.
 * Utilizados ampliamente por Plone.
 
-Definición de un macro:
+Definición de un macro
+----------------------
 
 * Se definen utilizando atributos, en un lenguaje llamado METAL (Macro
   Expansion Tag Attribute Language).
@@ -157,7 +162,8 @@ Definición de un macro:
        Copyright 2007, <em>Biblioteca del Congreso Nacional de Chile</em> Inc.
     </p>
 
-Uso de un macro:
+Uso de un macro
+---------------
 
 * El atributo use-macro se incluye dentro de cualquier etiqueta de HTML con el
   macro apropiado.
@@ -194,7 +200,8 @@ template:
       <span metal:define-slot="additional_info"></span>
     </div>
 
-Utilización de slots:
+Utilización de slots
+--------------------
 
 .. code-block:: html
 
@@ -223,7 +230,8 @@ ZPT evalúa primero los macros y después cualquier expresión dentro de ellos.
       </li>
     </ul>
 
-Macros de página completa:
+Macros de página completa
+-------------------------
 
 .. code-block:: html
 
@@ -243,3 +251,10 @@ Macros de página completa:
       </body>
     </html>
 
+
+Referencias
+===========
+
+-   `Zope Page Templates`_ desde la comunidad Plone Mexico.
+
+.. _Zope Page Templates: http://www.plone.mx/docs/zpt.html
