@@ -51,12 +51,13 @@ Y su instancia principal de Zope stays en modo de producción:
 
   ./bin/instance
 
+.. note::
 
-**Nota:**
-  Usando el modo fg focus siempre de Zope a modo depuración, pero no registra en el nivel de log.
+    Usando el modo fg focus siempre de Zope a modo depuración, pero no registra en el nivel de log.
 
 Referencias
-~~~~~~~~~~~
+===========
+
 -   `Plone Hosting`_
 
 .. _Plone Hosting: http://collective-docs.readthedocs.org/en/latest/hosting/
