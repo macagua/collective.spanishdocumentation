@@ -1,7 +1,8 @@
 .. -*- coding: utf-8 -*-
 
+==========================================
 Importar y exportar contenido desde el ZMI
-------------------------------------------
+==========================================
 
 El servidor de aplicaciones Zope ofrece copia las partes de la estructura de árbol a través de
 de importación / exportación. Archivo exportado es básicamente un pickle Python que contiene
@@ -15,11 +16,9 @@ Tenga en cuenta que las estructura de carpetas ``parts`` se poda en cada ejecuci
 Cuando los archivos se colocan en el servidor en la carpeta correcta, la pestaña Import/Export 
 ZMI los recogerá en la selección de hacia abajo. No es necesario reiniciar Zope.
 
-**Más información**
+Más información
+===============
 
 -   `http://quintagroup.com/services/support/tutorials/import-export-plone/`_
-
-.. image:: ./images/plone-icon-64.png
-
 
 .. _http://quintagroup.com/services/support/tutorials/import-export-plone/: http://quintagroup.com/services/support/tutorials/import-export-plone/
