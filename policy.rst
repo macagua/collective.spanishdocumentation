@@ -4,6 +4,11 @@
 Creacion de un producto de configuración
 ========================================
 
+.. contents :: :local:
+
+Introducción
+============
+
 Se detallan los pasos para crear un producto de configuración y se describe
 cada uno de los directorios y archivos importantes generados.
 
@@ -21,8 +26,13 @@ de una organización y puede incluir:
 * Portlets utilizados en el sitio.
 * Workflows generales de la organización.
 
+Producto de configuración
+=========================
+
 El primer paso para la creación del producto se hace utilizando el esqueleto
-de paquete para Plone proporcionado por paster::
+de paquete para Plone proporcionado por paster:
+
+.. code-block:: sh
 
     $ paster create -t plone ejemplo.policy
     Selected and implied templates:
@@ -40,11 +50,9 @@ de paquete para Plone proporcionado por paster::
     Enter zope2product (Are you creating a Zope 2 Product?) [False]: True
     <siempre debe ser True para funcionar en Zope 2>
     Enter version (Version) ['0.1']:
-    <el número de versión que aparece en la sección de productos adicionales
-    de Plone>
+    <el número de versión que aparece en la sección de productos adicionales de Plone>
     Enter description (One-line description of the package) ['']:
-    <este y los datos que siguen son para los metadatos del proyecto en el
-    PyPI>
+    <este y los datos que siguen son para los metadatos del proyecto en el PyPI>
     Enter long_description (Multi-line description (in reST)) ['']:
     Enter author (Author name) ['Plone Foundation']:
     Enter author_email (Author email) ['plone-developers@lists.sourceforge.net']:
@@ -75,7 +83,9 @@ módulo para tests:
 * ``tests.py``, esqueleto de módulo para tests.
 
 Una vez generado el producto, debemos agregar un directorio para almacenar la
-configuración de Generic Setup::
+configuración de Generic Setup:
+
+.. code-block:: sh
 
     $ cd ejemplo.policy/ejemplo/policy
     $ mkdir profiles
@@ -105,7 +115,9 @@ administración de Zope (ZMI):
 Al seleccionar los pasos deseados y presionar el botón de 'export selected
 steps', se obtiene un archivo comprimido que contiene la configuración
 expresada en XML para todos los pasos seleccionados. Este archivo debe
-descomprimirse en el directorio del perfil creado en el paso anterior::
+descomprimirse en el directorio del perfil creado en el paso anterior:
+
+.. code-block:: sh
 
     $ cd profiles/default
     $ tar xzf setuptool_20080630134421.tar.gz
@@ -166,6 +178,6 @@ que nuestro código dependa de varios pasos.
 Referencia
 ==========
 
-- `Pasos para crear un producto de configuración`_
+- `Pasos para crear un producto de configuración`_ desde la comunidad Plone Mexico.
 
 .. _Pasos para crear un producto de configuración: http://www.plone.mx/docs/policy.html
