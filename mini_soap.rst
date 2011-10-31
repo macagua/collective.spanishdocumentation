@@ -4,6 +4,11 @@
 Obtener direcciones de manejo con SOAP
 ======================================
 
+.. contents :: :local:
+
+Introducción
+============
+
 Plone puede conectarse fácilmente a servicios SOAP utilizando el poder de
 Python. A continuación veremos como obtener direcciones de manejo dentro de
 los Estados Unidos utilizando un servicio web público.
@@ -172,6 +177,6 @@ Zolera. Para mayor información:
 Referencia
 ==========
 
-- `Obtener direcciones de manejo con SOAP`_
+- `Obtener direcciones de manejo con SOAP`_ desde la comunidad Plone Mexico.
 
 .. _Obtener direcciones de manejo con SOAP: http://www.plone.mx/docs/mini_soap.html
