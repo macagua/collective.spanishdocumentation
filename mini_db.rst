@@ -4,6 +4,11 @@
 Presentar información de una base de datos relacional
 =====================================================
 
+.. contents :: :local:
+
+Introducción
+============
+
 Demostración de como conectarse a una base de datos relacional desde una
 vista de Plone, utilizando ``SQLAlchemy`` y ``SQLite``.
 
@@ -139,7 +144,7 @@ La configuración de la vista es como sigue:
 Referencia
 ==========
 
-- `Presentar información de una base de datos relacional`_
+- `Presentar información de una base de datos relacional`_ desde la comunidad Plone Mexico.
 - Ejemplo para agregar y consultar desde una base de datos con la herramienta `Manage Python Brasil Association Members`_
 
 .. _Presentar información de una base de datos relacional: http://www.plone.mx/docs/mini_db.html
