@@ -4,15 +4,17 @@
 Utilizando formularios z3c.form en Plone
 ========================================
 
-El paquete `z3c.form`_ es un framework avanzado para construcción y
-utilización de formularios y widgets dentro de Zope / Plone. El provee una
-forma fácil y flexible para mostrar formularios y manejar sus etapas de
-creación, validación y posibles acciones posteriores.
+.. contents :: :local:
 
 Introducción
 ============
 
 ¿Qué es z3cform? y ¿por qué debo considerar el uso de la misma?.
+
+El paquete `z3c.form`_ es un framework avanzado para construcción y
+utilización de formularios y widgets dentro de Zope / Plone. El provee una
+forma fácil y flexible para mostrar formularios y manejar sus etapas de
+creación, validación y posibles acciones posteriores.
 
 
 ¿Qué es plone.app.z3cform?
@@ -596,7 +598,7 @@ funcione en todas las versiones de plone.z3cform:
 Referencias
 ===========
 
--   `Utilizando z3c.form`_.
+-   `Utilizando z3c.form`_ desde la comunidad Plone Brasil.
 
 
 .. _z3c.form: http://pypi.python.org/pypi/z3c.form
