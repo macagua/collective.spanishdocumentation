@@ -4,6 +4,10 @@
 Distribute y PIP
 ================
 
+.. contents:: :local:
+
+
+.. _que_es_distribute:
 
 ¿Qué es Distribute?
 ===================
@@ -54,27 +58,26 @@ información, por favor, consulte el `Futuro del Empaquetado`_.
   :alt: El estado actual de Empaquetado en Python
   :align: center
 
+.. note::
 
-ALTAMENTE RECOMENDADO
-~~~~~~~~~~~~~~~~~~~~~
+  Ver el vídeo de la `PyCon 2011 - Packaging, from Distutils to Distutils2`_,
+  Packaging or installing a Python application can be extremely painful por
+  `Tarek Ziadé`_ esta charla le sumergiera dentro de las nuevas características
+  de Distutils2 y explica como usted puede usarlo en su proyecto *hoy* para
+  hacer más fácil la vida para todo el mundo (usuarios, administradores de
+  paquetes de Sistemas operativos, programadores, etc.).
 
-Ver el vídeo de la `PyCon 2011 - Packaging, from Distutils to Distutils2`_,
-Packaging or installing a Python application can be extremely painful por
-`Tarek Ziadé`_ esta charla le sumergiera dentro de las nuevas características
-de Distutils2 y explica como usted puede usarlo en su proyecto *hoy* para
-hacer más fácil la vida para todo el mundo (usuarios, administradores de
-paquetes de Sistemas operativos, programadores, etc.).
+  Para descargar el vídeo haga clic `aquí`_ (Tamaño 294 mb) y para ver por
+  vídeo Stream consulte la siguiente `página`_.
 
-Para descargar el vídeo haga clic `aquí`_ (Tamaño 294 mb) y para ver por
-Stream consulte la siguiente `página`_.
-
+.. _que_es_pip:
 
 ¿Qué es PIP?
 ============
 
 `pip`_ es una herramienta para instalar y administrar paquetes Python, como
 los que podemos encontrar en el Índice de Paquetes de Python - `PYPI`_. Esta
-herramienta es el remplazo para la famosa herramienta `easy_install`_. En su
+herramienta es el remplazo para la famosa herramienta :ref:`que_es_easyinstall` - `easy_install`_. En su
 mayoría se utiliza las mismas técnicas para encontrar los paquetes, por lo
 que los paquetes que se instalaban usando la herramienta easy_install deben
 ser instalables con la herramienta pip también. Esto significa que usted
@@ -90,7 +93,7 @@ con `virtualenv`_, y se recomienda que utilice `virtualenv para aislar a su inst
 Pip comparado con easy_install
 ------------------------------
 
-pip tiene por objeto mejorar el easy_install. Algunas de las mejoras son:
+``pip`` tiene por objeto mejorar el easy_install. Algunas de las mejoras son:
 
 -   Todos los paquetes se descargan antes de iniciar la instalación. Una
     instalación parcialmente completada no se produce como resultado.
@@ -128,6 +131,7 @@ PIP no hacer todo lo que se easy_install. En concreto:
     personalizaciones  ``distutils`` o  ``setuptools`` en sus archivos
     setup.py.
 
+.. _instalacion_pip:
 
 Instrucciones de Instalación
 ============================
@@ -154,6 +158,7 @@ También para instalar PIP ejecute el siguiente comando:
 
   # easy_install -U pip
 
+.. _uso_pip:
 
 Ejemplos de uso de PIP
 ======================
@@ -240,8 +245,10 @@ ejecutando el siguiente comando:
     $ pip help
 
 
+.. _distribute_buildout:
+
 Distribute en zc.buildout
--------------------------
+=========================
 
 Puede usar Distribute en zc.buildout, habilitando el uso de este por medio de
 un parámetro adicional en su archivo bootstrap.py de la siguiente manera: 
@@ -251,8 +258,10 @@ un parámetro adicional en su archivo bootstrap.py de la siguiente manera:
     $ python bootstrap.py --distribute
 
 
+.. _pip_buildout:
+
 PIP en zc.buildout
-~~~~~~~~~~~~~~~~~~
+==================
 
 Existen varias estrategias para integrar PIP en zc.buildout, a continuación
 se describen algunas formas:
@@ -329,7 +338,7 @@ Un ejemplo del archivo :file:`requirements.txt` puede ser el siguiente: ::
 
 
 Referencias
------------
+===========
 
 -   `Installing the Package Tools`_.
 -   `pip v1.0.2 documentation`_.
