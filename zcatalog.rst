@@ -1,12 +1,13 @@
 .. -*- coding: utf-8 -*-
 
-********
+========
 ZCatalog
-********
+========
 
 .. contents :: :local:
 
-Uso del ZCatalog de Zope:
+Uso del ZCatalog de Zope
+========================
 
 * Permite indexar contenido y realizar búsquedas.
 * Todos los objetos de Zope son potencialmente catalogables.
@@ -17,37 +18,39 @@ Uso del ZCatalog de Zope:
 Tipos de índices
 ================
 
-`ZCTextIndex`
+.. glossary::
+
+  ZCTextIndex
     Texto, para búsquedas de texto completo.
 
-`FieldIndex`
+  FieldIndex
     Almacena valores específicos, para búsquedas más exactas.
 
-`KeywordIndex`
+  KeywordIndex
     Similar a FieldIndex, pero permite buscar listas de valores, como
     palabras clave.
 
-`PathIndex`
+  PathIndex
     Para hacer búsquedas por path absoluto de los objetos.
 
-`TopicIndex`
+  TopicIndex
     Índice especial para buscar en colecciones previamente filtradas.
 
-`DateIndex`
+  DateIndex
     Parecido a FieldIndex, pero especializado para buscar fechas.
 
-`DateRangeIndex`
+  DateRangeIndex
     Especial para buscar entre dos fechas dadas.
 
-`ExtendedPathIndex`
+  ExtendedPathIndex
     Similar al PathIndex default de Zope, pero con extensiones pensadas para
     Plone. Permite las siguientes operaciones:
 
-    * catalog(path="some/path") - buscar todos los objetos bajo un path.
-    * catalog(path={"query":"some/path", "depth":2) - igual que la expresión
+    * `catalog(path="some/path")` - buscar todos los objetos bajo un path.
+    * `catalog(path={"query":"some/path", "depth":2)` - igual que la expresión
       anterior pero limitando los resultados a dos niveles de profundidad bajo
       el path.
-    * catalog(path={"query":"some/path", "navtree":1) - igual que la expresión
+    * `catalog(path={"query":"some/path", "navtree":1)` - igual que la expresión
       anterior pero regresa también los parientes de ese path, para formar un
       árbol de navegación.
 
@@ -118,3 +121,10 @@ Otros datos acerca del ZCatalog
   resultados más controlados.
 * Un objeto no necesariamente tiene que estar en la ZODB para ser catalogado.
 
+
+Referencias
+===========
+
+-   `ZCatalog`_ desde la comunidad Plone Mexico.
+
+.. _ZCatalog: http://www.plone.mx/docs/zcatalog.html
