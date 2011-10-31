@@ -4,6 +4,11 @@
 Diversos productos a desarrollar con Plone 3
 ============================================
 
+.. contents :: :local:
+
+Introducción
+============
+
 Un sitio basado en Plone es muy complejo y se compone de una colección de
 elementos como contenido, configuración y recursos de presentación. La
 tendencia en Plone 3 es separar lo más posible todas estas áreas, para
@@ -70,7 +75,7 @@ La estructura del código que se recomienda incluye las siguientes partes:
 Referencia
 ==========
 
-- `Desarrollo avanzado de sitios con Plone 3`_
+- `Desarrollo avanzado de sitios con Plone 3`_ desde la comunidad Plone Mexico.
 
 .. _Desarrollo avanzado de sitios con Plone 3: http://www.plone.mx/docs/productos.html
 
