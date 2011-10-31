@@ -1,12 +1,15 @@
 .. -*- coding: utf-8 -*-
 
-******************************************
+==========================================
 Control de versiones utilizando Subversion
-******************************************
+==========================================
 
 .. contents :: :local:
 
-Subversion es un sistema centralizado de control de versiones. En otras
+Introducción
+============
+
+`Subversion`_ es un sistema centralizado de control de versiones. En otras
 palabras, es un sistema que permite llevar el control de los cambios 
 realizados por una o mas personas a una serie de documentos a través del
 tiempo.
@@ -549,3 +552,10 @@ x
 x
 
 
+Referencia
+==========
+
+- `Control de versiones utilizando Subversion`_ desde la comunidad Plone Mexico.
+
+.. _Subversion: http://subversion.tigris.org
+.. _Control de versiones utilizando Subversion: http://www.plone.mx/docs/subversion.html
