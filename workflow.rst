@@ -1,10 +1,13 @@
 .. -*- coding: utf-8 -*-
 
-****************
+================
 Flujo de trabajo
-****************
+================
 
 .. contents :: :local:
+
+Introducción
+============
 
 Esta es una introducción al flujo de trabajo de Plone y explicación de las opciones
 básicas de configuración y creación de flujo de trabajos.
@@ -214,3 +217,11 @@ discuten a continuación.
     Python. Solo cuando la expresión definida sea verdadera se tendrá derecho
     a ejecutar la transición protegida por ella.
 
+
+
+Referencias
+===========
+
+-   `Flujo de trabajo`_ desde la comunidad Plone Mexico.
+
+.. _Flujo de trabajo: http://www.plone.mx/docs/workflow.html
