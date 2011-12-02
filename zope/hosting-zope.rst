@@ -1,5 +1,11 @@
 .. -*- coding: utf-8 -*-
 
+=========================
+Configuraciones generales
+=========================
+
+La siguientes son configuraciones adicionales al servidor Zope que son de gran utilidad:
+
 Zona horaria
 ============
 
