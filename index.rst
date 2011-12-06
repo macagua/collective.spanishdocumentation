@@ -13,7 +13,7 @@ en diversos Sistemas operativos como Windows, OS X, Linux, BSD (distribución de
 software Berkeley) y prácticamente cualquier otra plataforma.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    instalando_plone
 
@@ -30,7 +30,7 @@ En esta sección tenemos el tutorial traducción oficial a los manuales de usuar
 y administración de elementos de Plone.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    Manual de Usuario de Plone 3 <manual-usuario/plone3/index>
 
@@ -43,10 +43,9 @@ Plone es un Sistema de gestión de contenidos muy completo y útil,
 por lo que es muy importante conocer las técnicas y tecnologías que agilicen nuestro desarrollo.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    Referencias de Temas en Plone <plone/referencias-temas-plone>
-
 
 
 ==========================
@@ -90,7 +89,7 @@ por lo que consideramos necesario conocerlo, aunque recientemente la
 popularidad de sistemas distribuidos como ``Git``, ``Mercurial`` y ``Bazaar``  ha aumentado.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    subversion
    Control de versiones utilizando Git <http://www-cs-students.stanford.edu/~blynn/gitmagic/intl/es/index.html>
@@ -109,7 +108,7 @@ En esta sección tenemos el tutorial oficial de Python, preparado por la
 asociación de Python de Argentina y la fundación de Python.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    Tutorial de Python <python/python-tutorial/index>
 
@@ -152,7 +151,7 @@ utilidades para la gestión de estos paquetes, por eso está sección que se ded
 explicar sus diferencias.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    setuptools
    python/distribute-y-pip
@@ -166,7 +165,7 @@ ofrecen mecanismo de plantilla de proyectos y tipos de módulos que cumplen con 
 practicas implementadas en sus proyectos.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    python/skel-proyectos-python
    python/skel-proyectos-plone
@@ -182,7 +181,7 @@ de Internet. Es recomendable utilizar buildout para cualquier proyecto de
 Plone que se quiera emprender.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    buildout/replicacion-de-proyectos-python
    buildout/hola-mundo-en-zc-buildout
@@ -199,7 +198,7 @@ Administración de Zope
 Plone esta basado en el servidor de aplicaciones Zope y este requiere realizar tareas de hospedaje y administrativa para un servidor de aplicación Zope / sitio de Plone.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    zope/zope-cli
    zope/hosting-zope
@@ -221,13 +220,14 @@ desarrollo de portales llamado CMF. Para trabajar con Plone es necesario
 conocer diversas tecnologías provenientes de estos sistemas.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    zca/zca-es
    zpt
    zcatalog
    workflow
    gs
+
 
 Temáticas diversas de Plone
 ===========================
@@ -236,7 +236,7 @@ Existen muchos temas importantes para el desarrollo con Plone, en esta
 sección tocaremos algunos de ellos.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    productos
    policy
