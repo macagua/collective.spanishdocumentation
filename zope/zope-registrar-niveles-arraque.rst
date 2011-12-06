@@ -1,12 +1,16 @@
 .. -*- coding: utf-8 -*-
 
-======================================================================
-Registrar programa de inicio de Plone desde una instalación unificada
-======================================================================
+==============================================================
+Registrar niveles de arranque en el programa de inicio a Plone
+==============================================================
 
+.. contents :: :local:
 
-Cuando se realizan `instalaciones unificadas de Plone`_ como usuario
-**"root"** en `Debian GNU/Linux`_ o distribuciones basadas en Debian como
+Introducción
+============
+
+Cuando se realizan `instalaciones unificadas de Plone`_ o desde **proyectos de Buildout** 
+como usuario **"root"** en `Debian GNU/Linux`_ o distribuciones basadas en Debian como
 `Ubuntu Linux`_, `Canaima GNU/Linux`_, entre otras, es muy común hay que
 configurar tu instalación como servicio para cada ves que arranque el sistema
 operativo inicie el servicio de Zope que sirve a nuestro(s) portal(es) de
@@ -14,7 +18,7 @@ Plone.
 
 
 Paso a paso
-~~~~~~~~~~~
+===========
 
 Para este caso de uso es necesario seguir los siguientes pasos:
 
@@ -61,7 +65,7 @@ Plone.
 
 
 Referencias
-~~~~~~~~~~~
+===========
 
 -   `How-To Managing services with update-rc.d`_
 -   `Editor de niveles de ejecución en Debian`_
