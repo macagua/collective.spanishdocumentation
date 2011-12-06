@@ -1,11 +1,14 @@
 .. -*- coding: utf-8 -*-
 
+====================
 Instalación de Plone
 ====================
 
 Información básica para la instalación de Plone en Windows, OS X, Linux, BSD
 (distribución de software Berkeley) y prácticamente cualquier otra
 plataforma.
+
+.. contents :: :local:
 
 
 1. Guía rápida de Instalación
