@@ -6,8 +6,8 @@ Récipes Buildout
 
 .. contents:: :local:
 
-Introducción
-============
+Descripción general
+===================
 
 Los récipes son los mecanismos de plugin proveídos por Buildout para agregar
 nuevas funcionalidades para construir su software. 
