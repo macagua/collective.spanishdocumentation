@@ -381,3 +381,17 @@ escribir:
 
 
 Si es necesario en su prueba.
+
+
+Consejos y trucos para doctest
+------------------------------
+
+Así como lo es para el tema de pruebas, igualmente mejorará en el asunto de
+doctests con la practica. A continuación se presentan algunos consejos que
+pueden ayudarle a empezar.
+
+.. glossary::
+
+  Lea la documentación 
+    los doctests han estado en Python desde hace mucho tiempo. 
+    El `modulo de doctest`_ viene con más documentación sobre cómo funcionan. 
