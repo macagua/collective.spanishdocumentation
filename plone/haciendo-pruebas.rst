@@ -396,7 +396,7 @@ pueden ayudarle a empezar.
     los doctests han estado en Python desde hace mucho tiempo. 
     El `modulo de doctest`_ viene con más documentación sobre cómo funcionan. 
 
-  ¿una prueba es sólo un montón de sentencias Python!
+  ¿una prueba es sólo un montón de sentencias Python?
     Nunca olvide eso. Usted puede, por ejemplo, hacer referencia a métodos 
     de ayuda (helper methods) en su propio producto, por ejemplo imagine 
     que usted tiene un método en **Products.MyProduct.tests.utils** que a su 
@@ -412,3 +412,25 @@ pueden ayudarle a empezar.
     Un conjunto de pruebas puede tener controladores **setUp()** y/o **tearDown()**
     que realicen acciones adicionales de configuración o limpieza. Veremos
     ejemplos de esto más adelante. 
+
+  PDB sigue siendo su amigo 
+    Usted puede colocar en una línea en doctest el siguiente código Python:
+
+    .. code-block:: python
+
+      >>> import pdb
+      >>> pdb.set_trace\(\)
+    
+    Lamentablemente, no se puede ir línea por línea a través de un doctest,
+    pero puede imprimir variables y examinar el estado de la prueba fixture.
+    Usted puede capturar las excepciones Si necesita depurar un doctest que
+    está arrojando una excepción, esta sentencia es a menudo útil:
+
+    .. code-block:: python
+
+      >>> try:
+      ...     someOperation()
+      ... except:
+      ...     import pdb;
+      ...     pdb.set_trace\(\)
+      >>> # continue as normal
