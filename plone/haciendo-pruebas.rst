@@ -395,3 +395,15 @@ pueden ayudarle a empezar.
   Lea la documentación 
     los doctests han estado en Python desde hace mucho tiempo. 
     El `modulo de doctest`_ viene con más documentación sobre cómo funcionan. 
+
+  ¿una prueba es sólo un montón de sentencias Python!
+    Nunca olvide eso. Usted puede, por ejemplo, hacer referencia a métodos 
+    de ayuda (helper methods) en su propio producto, por ejemplo imagine 
+    que usted tiene un método en **Products.MyProduct.tests.utils** que a su 
+    vez tiene un método **setUpSite()** para llenar previamente su sitio con 
+    unos cuantos directorios y usuarios. Su doctest podría contener:
+
+    .. code-block:: python
+
+      >>> from Products.MyProduct.tests.utils import setUpSite
+      >>> setUpSite()
