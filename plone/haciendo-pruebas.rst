@@ -236,3 +236,148 @@ unitarias y funcionamiento. Lo importante a destacar es que las buenas
 pruebas a menudo sirven como documentación describiendo cómo su componente se
 supone es utilizado. Pensar en la historia que cuentan es tan importante como
 pensar en el número de estados de entrada y salida que cubren.
+
+
+Contando historias con doctests
+===============================
+
+Los Doctests ponen el código y prueba junto, y hace más fácil describir que
+hace una prueba, y por qué.
+
+Por su naturaleza, la pruebas deberían ejercitar un API (Interfaz de
+programación de aplicaciones) y demostrar cómo se usa. Por lo tanto, para
+otros desarrolladores tratando de entender cómo un módulo o biblioteca
+debería ser utilizado, las pruebas pueden ser la mejor forma de
+documentación. Python soporta la noción de **doctests**, también conocida
+como **documentación ejecutable**.
+
+Los Doctests se asemejan a sesiones de Python interpreter. Ellos contienen
+texto plano (normalmente en reStructedText, el cual puede ser renderizado a
+HTML o PDF fácilmente) así como **ejemplos**. La idea es mostrar algo que
+podría haber sido escrito en una sesión interpreter (de intérprete) y lo que
+el resultado esperado debería ser. En el mundo de Zope 3, los doctests son
+muy frecuentes y se utilizan para la mayoría de pruebas unitarias e de
+integración.
+
+Los doctests vienen principalmente en dos sabores: puede escribir un simple
+archivo como ``README.txt``, explicando su código junto a ejemplos verificables,
+o puede agregar doctests para un método o clase determinado dentro de la
+docstring (cadena de documentación) de ese método o clase.
+
+El enfoque de archivo-completo, también conocido como **desarrollo dirigido
+por documentación (documentation-driven development)** es el más común. Este
+tipo de prueba es muy apropiado para explicar cómo una API se debe utilizar y
+al mismo tiempo asegurar que funciona como se espera. Sin embargo, note que
+estas técnicamente no son pruebas unitarias como tal, porque no hay ninguna
+garantía de aislamiento entre los steps del "script" que doctest describa. La
+versión de cadena de documentación utiliza la misma sintaxis básica, pero
+cada una se ejecuta como su propia prueba fixture, garantizando el
+aislamiento total entre las pruebas.
+
+Aquí hay un ejemplo trivial de un doctest. Aprenderemos cómo configurar tal
+prueba en breve. 
+
+.. code-block:: python
+
+    Las interfaces se definen mediante sentencias de clases Python::
+
+      >>> import zope.interface
+      >>> class IFoo(zope.interface.Interface):
+      ...    """Foo blah blah"""
+      ...
+      ...    x = zope.interface.Attribute("""X blah blah""")
+      ...
+      ...    def bar(q, r=None):
+      ...        """bar blah blah"""
+
+    En el ejemplo anterior, hemos creado una interfaz::
+
+      >>> type(IFoo)
+      <class 'zope.interface.interface.InterfaceClass'>
+
+    Podemos pedir la documentación de la interfaz::
+
+      >>> IFoo.__doc__
+      'Foo blah blah'
+
+    Se podría crear un objeto arbitrario; por supuesto esto no
+    proporcionará la interfaz.
+
+      >>> o = object()
+      >>> o # doctest: +ELLIPSIS
+      <object at ....>
+      >>> IFoo.providedBy(o)
+      False
+      >>> o.bar() # doctest: +ELLIPSIS
+      Traceback (most recent call last):
+      ...
+      AttributeError: 'object' object has no attribute 'bar'
+
+
+
+Cada vez que el runner de doctest se ejecuta y encuentra un línea que
+comienza con **>>>**, el indicador (línea de comandos) del Python interpreter
+(esto es, lo que obtiene al ejecutar ``python`` sin argumentos en una terminal),
+ejecutará entonces esa línea de código. Si esa sentencia es inmediatamente
+seguida por una línea con el mismo nivel de sangría que **>>>** que no es una
+línea en blanco y no comienza con **>>>**, esto se toma como el resultado
+esperado de la sentencia. El runner de prueba comparará la salida que obtuvo
+mediante la ejecución de la sentencia de Python con la salida especificada en
+el doctest, e identificará un error si no coinciden.
+
+Note que *no* escribir un valor de salida es equivalente a afirmar que el
+método no posee salida. Por lo tanto, se trata de una falla:
+
+.. code-block:: python
+
+      >>> foo = 'hello'
+      >>> foo
+      >>> # do something else
+
+
+La referencia a **foo** por sí misma imprimirá el valor de foo. El doctest
+correcto será el siguiente:
+
+.. code-block:: python
+
+      >>> foo = 'hello'
+      >>> foo
+      'hello'
+      >>> # do something else
+
+
+Note también el elemento **...** (puntos suspensivos) en la salida esperada.
+Estos significan "cualquier número de caracteres" (análogo a una sentencia **.***
+en una expresión regular, si usted está familiarizado con ellas). Usualmente
+es taquigrafía convenida, pero en ocasiones es necesaria. Por ejemplo:
+
+.. code-block:: python
+
+      >>> class Foo:
+      ...     pass
+      >>> Foo()
+      <__main__.Foo instance at ...>
+
+
+Aquí los **...** en la salida esperada remplaza una dirección de memoria
+hexadecimal (**0x0x4523a0** en la computadora del autor al momento de escribir),
+lo cual no se puede predecir de antemano. Cuando se escriben doctests en
+particular (pero también cuando se escriben pruebas unitarias regulares),
+usted necesita tener cuidado con los valores no puede predecir, como las
+identificaciones auto-generadas basadas en la hora actual o un número al
+azar. El operador ellipsis (de puntos suspensivos) le puede ayudar a trabajar
+con esos.
+
+No confunda el operador ellipsis en la salida esperada con la sintaxis de
+usar **...** debajo de una línea **>>>**. Esta es la sintaxis estándar de Python
+interpreter usada para designar sentencias que se ejecuten sobre líneas
+múltiples, normalmente como el resultado de sangría. Usted puede por ejemplo
+escribir:
+
+.. code-block:: python
+
+      >>> if a == b:
+      ...     foo = bar
+
+
+Si es necesario en su prueba.
