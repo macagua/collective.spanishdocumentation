@@ -15,7 +15,7 @@ software Berkeley) y prácticamente cualquier otra plataforma.
 .. toctree::
    :maxdepth: 1
 
-   instalando_plone
+   plone/instalando_plone
 
 
 
@@ -153,7 +153,7 @@ explicar sus diferencias.
 .. toctree::
    :maxdepth: 1
 
-   setuptools
+   python/setuptools
    python/distribute-y-pip
 
 
@@ -185,10 +185,10 @@ Plone que se quiera emprender.
 
    buildout/replicacion-de-proyectos-python
    buildout/hola-mundo-en-zc-buildout
-   buildout
    buildout/recipes-buildout
    buildout/programar-tareas-con-crontab
    buildout/rotar-archivos-log
+   buildout/plone3
    buildout/plone-esquema-alta-disponibilidad
 
 
@@ -200,17 +200,16 @@ Plone esta basado en el servidor de aplicaciones Zope y este requiere realizar t
 .. toctree::
    :maxdepth: 1
 
-   zope/zope-cli
-   zope/hosting-zope
-   zope/zope-registrar-niveles-arraque
+   zope/cli-zope
+   zope/configuraciones-generales
+   zope/configurar-zope-plone-como-demonio
    zope/zope-como-servidor-ftp
    zope/zope-como-servidor-webdav
    zope/puntos-montaje-zodb-sitios-plone
    zope/compactar-zodb
-   zope/instancia-debug-zope
    zope/importar-exportar-plone
+   zope/instancia-debug-zope
    zope/zope-plone-detras-servidor-web
-   zope/virtual-host-monster
 
 Tecnologías de Zope
 -------------------
@@ -222,11 +221,11 @@ conocer diversas tecnologías provenientes de estos sistemas.
 .. toctree::
    :maxdepth: 1
 
-   zca/zca-es
-   zpt
-   zcatalog
-   workflow
-   gs
+   zope/zca/zca-es
+   zope/zpt
+   zope/zcatalog
+   zope/workflow
+   zope/gs
 
 
 Temáticas diversas de Plone
@@ -238,11 +237,11 @@ sección tocaremos algunos de ellos.
 .. toctree::
    :maxdepth: 1
 
-   productos
-   policy
-   tema
+   plone/productos
+   plone/policy
+   plone/tema
    plone/agregando-productos-adicionales
-   minituts
+   plone/mini-tutoriales
 
 Otros recursos
 --------------
