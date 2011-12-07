@@ -260,13 +260,13 @@ Luego reinicie su servidor Nginx con el siguiente comando:
   # /etc/init.d/nginx reload
 
 
-Servidor Web Apache2 y Zope
-===========================
+Servidor Web Apache y Zope
+==========================
 
 A continuación se explica como instalar el servidor Web `Apache 2`_ y configurarlo como un **Proxy inverso** con Zope, además aplicando técnicas de **reescritura URL**.
 
-Terminología en Apache2
------------------------
+Terminología en Apache
+----------------------
 
 Hay que entender varios conceptos antes de continuar:
 
@@ -285,8 +285,8 @@ Hay que entender varios conceptos antes de continuar:
     Cifrado SSL con apache 2. Más información http://httpd.apache.org/docs/2.2/es/mod/mod_ssl.html
 
 
-Instalar y configurar Servidor Web Apache2
-------------------------------------------
+Instalar y configurar Servidor Web Apache
+-----------------------------------------
 
 Para instalar debe iniciar sesión como usuario "root" ejecute el siguiente
 comando: 
@@ -431,7 +431,7 @@ Agregue la siguiente configuración:
     </VirtualHost>
 
 
-Realice un enlace simbólico desde el directorio de Apache2 **sites-available/** al directorio **sites-enabled/**, para que su configuración previa este disponible 
+Realice un enlace simbólico desde el directorio de Apache 2.2 **sites-available/** al directorio **sites-enabled/**, para que su configuración previa este disponible 
 
 .. code-block:: sh
 
@@ -523,7 +523,7 @@ En el caso de que usted ha establecido reglas de virtual hosting de modo
 que ya no se Zope le permiten acceder a la interfaz de gestión, puede agregar
 ``_SUPPRESS_ACCESSRULE"`` a la dirección URL para desactivar VirtualHostMonster.
 
-
+https://plone.dcri.duke.edu/info/faq/vhm
 
 Ver también
 ===========
