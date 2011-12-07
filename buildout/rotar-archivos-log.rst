@@ -6,8 +6,8 @@ Rotar archivos .log de Zope
 
 .. contents :: :local:
 
-Introducción
-============
+Descripción general
+===================
 
 Este es una configuración básica de `buildout`_ que explica como configurar 
 tarea de crontab de rotación de archivos log, para esto usará la misma configuración 
