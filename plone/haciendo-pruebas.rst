@@ -155,3 +155,58 @@ arreglemos el código:
     escritura, mejor escribiendo pruebas
 -   con una decente cobertura de pruebas, usted termina ahorrándose
     grandes cantidades de tiempo cuando refactoriza
+
+
+Tipos de pruebas
+================
+Un poco de terminología con la cual debería estar familiarizado
+
+En términos generales, hay cuatro tipos principales de pruebas:
+
+.. glossary::
+
+  Pruebas unitarias
+    Estas son escritas desde la perspectiva del programador. Una
+    prueba unitaria debe probar un sólo método o función en aislamiento, para
+    asegurar que funciona correctamente. Por ejemplo, probar que un cálculo
+    determinado se realiza correctamente dado una variedad de entrada es una
+    buena prueba unitaria para ese método.
+
+  Pruebas de integración
+    Mientras que las pruebas unitarias tratan de eliminar o abstraer 
+    tantas dependencias como sea posible para asegurarse de que 
+    realmente sólo se preocupen por el método a probar, las pruebas 
+    de integración ejercitan los puntos de integración entre un método 
+    o componente y los demás componentes en los que este se basa. Por
+    ejemplo, probar que un método realiza un cálculo y luego almacena
+    correctamente el resultado en la ZODB (Base de datos de objetos Zope) 
+    es una prueba de integración, ya que prueba la integración entre el 
+    componente y la ZODB.
+
+  Pruebas funcionales
+    Una prueba funcional suele demostrar un caso de uso, realizando una 
+    "vertical" de la funcionalidad. Por ejemplo, probar que luego del llenado 
+    de un formulario y hacer clic en "Guardar" haga que el objeto resultante 
+    está disponible para su uso futuro, es una prueba funcional para
+    el caso de uso de la utilización de ese formulario para crear objetos 
+    de contenido.
+
+  Pruebas de sistema
+    Estas son escritas desde la perspectiva del usuario, y tratan el sistema
+    como una caja negra. Una prueba de sistema puede probar el caso de un usuario 
+    interactuando con el sistema de acuerdo con los patrones de uso esperados. 
+    Por su naturaleza, generalmente son menos sistemáticas que los otros 
+    tipos de pruebas.
+
+Adicionalmente, las pruebas funcionales pueden ser **caja blanca**, en cuyo
+caso pueden hacer afirmaciones sobre cosas como el almacenamiento de datos
+subyacentes (pero sólo si se especifica claramente; los detalles de
+implementación no deben afectar a las pruebas de funcionales). Estas pruebas
+también se denominan **pruebas de integración funcional** (puede ver que los
+limites comienzan a borrarse, pero no se preocupe demasiado por los nombres).
+Alternativamente, las pruebas funcionales pueden ser **caja negra**, en cuyo
+caso solo perciben el sistema desde el punto de vista de un actor (usualmente
+el usuario final) y hace afirmaciones basadas sólo en lo que es presentado en
+la interfaz de usuario para ese actor. Estas pruebas denominadas también
+**pruebas de aceptación** no harán suposiciones sobre la arquitectura
+subyacente en absoluto.
