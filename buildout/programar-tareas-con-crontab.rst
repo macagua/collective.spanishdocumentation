@@ -6,8 +6,8 @@ Programar tareas con crontab
 
 .. contents :: :local:
 
-Introducción
-============
+Descripción general
+===================
 
 Este es una configuración de `buildout`_ programar tareas con crontab 
 locales al usuario efectivo del proyecto a tu entorno de desarrollo.
