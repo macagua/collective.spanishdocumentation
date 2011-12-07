@@ -407,3 +407,8 @@ pueden ayudarle a empezar.
 
       >>> from Products.MyProduct.tests.utils import setUpSite
       >>> setUpSite()
+
+  El conjunto de pruebas puede llevar a cabo inicialización adicional
+    Un conjunto de pruebas puede tener controladores **setUp()** y/o **tearDown()**
+    que realicen acciones adicionales de configuración o limpieza. Veremos
+    ejemplos de esto más adelante. 
