@@ -47,3 +47,111 @@ escribiendo un producto complementario o alguna personalización; manteniendo
 los mismos altos estándares que el equipo core de Plone le dará una mejor
 confianza en su software y probablemente le ahorrará dolor considerable a lo
 largo del camino.
+
+
+Ejemplos
+--------
+
+Este tutorial contiene varios ejemplos de los distintos tipos de pruebas.
+Estas están disponibles en el paquete `example.tests`_, el cual puede
+instalar como un huevo de desarrollo en su buildout de Plone 3. Los ejemplos
+de pruebas de funcionamiento utilizan los comandos estándar para buildouts,
+ya que esta es la única forma que funcione de forma fiable en Windows (es
+decir zopectl test no funcionará en Windows).
+
+Revise el `tutorial de buildout`_ para más información.
+
+
+Un breve ejemplo
+================
+
+Sólo para que obtenga una idea de lo que estamos hablando.
+
+Trate de encontrar el error en el siguiente fragmente de código:
+
+.. code-block:: python
+
+  class Employee(object):
+      def __init__(self, name, position, employee_no=None):
+          self.name = name
+          self.position = position
+          self.employee_no = employee_no
+
+  salaries = {0: 12000,
+              1: 4000,
+              2: 8000,
+              3: 4000}
+
+  def print_salary(employee):
+      if employee.employee_no:
+         salary = salaries.get(employee.employee_no, 0)
+         print "You make EUR %s." % salary
+      else:
+         print "You're not an employee currently."
+
+
+¿Ya lo encontró? ¿tuvo que pasar más de unos segundos pensando en el error?
+Cualquier desarrollador podría haber escrito ese código y no haber visto el
+problema. Además, el error es un caso extremo que pudo no haber probado al
+hacer pruebas manual/a-través-de-la-Web.
+
+Escribamos una prueba (realmente una prueba doc/unit) para este código: No se
+preocupe demasiado acerca de cómo esto está configurado y ejecutado por el
+momento.
+
+.. code-block:: python
+
+  Employee w/o an employee number is ignored:
+
+    >>> print_salary(Employee('Adam', 'Developer'))
+    You\'re not an employee currently
+
+  Employee w/o a known employee number earns nothing:
+
+    >>> print_salary(Employee('Berta', 'Designer', 100))
+    You make EUR 0.
+
+  Employee w/ a valid employee number is found properly:
+
+    >>> print_salary(Employee('Chris', 'CTO', 2))
+    You make EUR 8000.
+
+  Zero is a valid employee number:
+
+    >>> print_salary(Employee('Devon', 'CEO', 0))
+    You make EUR 12000
+
+
+Durante el proceso, la última prueba fallará. Mostrará **You are not an
+employee currently**. (Actualmente usted no es un empleado), a menos que
+arreglemos el código:
+
+.. code-block:: python
+
+  class Employee(object):
+      def __init__(self, name, position, employee_no=None):
+          self.name = name
+          self.position = position
+          self.employee_no = employee_no
+
+  salaries = {0: 12000,
+              1: 4000,
+              2: 8000,
+              3: 4000}
+
+  def print_salary(employee):
+      if employee.employee_no is not None:
+          salary = salaries.get(employee.employee_no, 0)
+          print "You make EUR %s." % salary
+      else:
+          print "You're not an employee currently."
+
+
+¿Cuál es la moraleja de la historia?
+
+-   raramente se da cuenta de errores como este haciendo pruebas
+    manualmente
+-   pase el tiempo, que gasta en capturar errores tontos y errores de
+    escritura, mejor escribiendo pruebas
+-   con una decente cobertura de pruebas, usted termina ahorrándose
+    grandes cantidades de tiempo cuando refactoriza
