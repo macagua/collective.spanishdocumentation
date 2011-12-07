@@ -210,3 +210,29 @@ el usuario final) y hace afirmaciones basadas sólo en lo que es presentado en
 la interfaz de usuario para ese actor. Estas pruebas denominadas también
 **pruebas de aceptación** no harán suposiciones sobre la arquitectura
 subyacente en absoluto.
+
+
+Pruebas y documentación
+-----------------------
+
+En un mensaje a la lista de correos Zope 3, Jim Fulton explica la importancia
+de las pruebas y documentación, y la forma en que van mano a mano:
+
+   Una cosa importante acerca de esto es que la mayoría de doctests
+   debería escribirse como documentación. Cuando escribe nuevos
+   componentes
+   de software y necesita escribir pruebas para funcionalidad principal
+   de su software usted necesita:
+
+   - Ponga su mente en modo para escribir documentación
+     Esto es extremadamente importante.
+
+   - Usted necesita documentar cómo usar el software. Incluir ejemplos,
+     which are tests
+
+
+Más tarde aprenderemos más sobre doctests y como se usan para pruebas
+unitarias y funcionamiento. Lo importante a destacar es que las buenas
+pruebas a menudo sirven como documentación describiendo cómo su componente se
+supone es utilizado. Pensar en la historia que cuentan es tan importante como
+pensar en el número de estados de entrada y salida que cubren.
