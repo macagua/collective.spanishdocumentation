@@ -9,28 +9,26 @@ Procesos de documentación
 Obtener y compilar la documentación
 ===================================
 
-El almacenamiento de este material está disponible en el servidor de Subversion
-`"collective" <https://svn.plone.org/svn/collective/>`_ de los contribuyentes a 
-Plone. Si usted tiene una credenciales en este servidor y desea convertirse en 
+El almacenamiento de este material está disponible en un repositorio Git en la cuenta de macagua en GitHub.com
+`"macagua" <https://github.com/macagua/plone-spanish-documentations>`_. Si usted tiene una credenciales en este servidor y desea convertirse en 
 un colaborador ejecute el siguiente comando:
 
 .. code-block:: sh
 
-  $ svn co https://svn.plone.org/svn/collective/spanishdocs/buildout spanishdocs-buildout
+  $ git clone git@github.com:macagua/plone-spanish-documentations.git spanishdocs-buildout
 
-Si usted no tiene las credenciales de acceso al repositorio SVN `"collective"
-<https://svn.plone.org/svn/collective/>`_ de Plone o simplemente solo desea obtener 
+Si usted no tiene las credenciales de acceso al repositorio Git en la cuenta de macagua en GitHub.com `"macagua" <https://github.com/macagua/plone-spanish-documentations>`_ o simplemente solo desea obtener 
 y compilar esta documentación ejecute el siguiente comando:
 
 .. code-block:: sh
 
-  $ svn export http://svn.plone.org/svn/collective/spanishdocs/buildout spanishdocs-buildout
+  $ git clone git://github.com/macagua/plone-spanish-documentations.git spanishdocs-buildout
 
 Crear entorno virtual de Python para reconstruir este proyecto:
 
 .. code-block:: sh
 
-  # aptitude install python-setuptools subversion
+  # aptitude install python-setuptools git-core
   # easy_install virtualenv
   # exit
   $ cd $HOME ; mkdir $HOME/virtualenv ; cd $HOME/virtualenv
