@@ -45,6 +45,7 @@ por lo que es muy importante conocer las técnicas y tecnologías que agilicen n
 .. toctree::
    :maxdepth: 1
 
+   Realizando pruebas en Plone <plone/haciendo-pruebas>
    Referencias de Temas en Plone <plone/referencias-temas-plone>
 
 
