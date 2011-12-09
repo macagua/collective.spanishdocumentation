@@ -1,6 +1,0 @@
-# if you want to change externals, modify the relevant line in this
-# file. Afterwards, run:
-# svn propset svn:externals -F EXTERNALS.txt .
-
-python-tutorial http://trac.usla.org.ar/svn/python-tutorial/trunk/traducidos
-
