@@ -1,8 +1,14 @@
+.. -*- coding: utf-8 -*-
+
 =========================================
 Documentación oficial de Plone en Español
 =========================================
 
-Esta sección intenta recoger todo la documentación que hasta el momento esta traducida al Español, como resultado de la iniciativa llamada *traducciones plone* creada en 2008 en el sitio CoActivate.org por miembros de la comunidad Plone Conosur. A continuación se listan los documentos traducidos hasta el momento:
+Esta sección intenta recoger todo la documentación que hasta el momento 
+esta traducida al Español, como resultado de la iniciativa llamada 
+*traducciones plone* creada en 2008 en el sitio CoActivate.org por miembros 
+de la comunidad Plone Conosur. A continuación se listan los documentos 
+traducidos hasta el momento:
 
 
 Instalación de Plone
@@ -40,7 +46,8 @@ Desarrollo en Zope/Plone
 ========================
 
 Plone es un Sistema de gestión de contenidos muy completo y útil,
-por lo que es muy importante conocer las técnicas y tecnologías que agilicen nuestro desarrollo.
+por lo que es muy importante conocer las técnicas y tecnologías que 
+agilicen nuestro desarrollo.
 
 .. toctree::
    :maxdepth: 1
@@ -53,7 +60,12 @@ por lo que es muy importante conocer las técnicas y tecnologías que agilicen n
 Mejores Practicas de Plone
 ==========================
 
-Esta sección intenta recoger todo la documentación disponible en en Español, sobre las *Mejores Practicas de Plone*, esta es resultado de la iniciativa de *Carlos de la Guardia* que publica esta documentación en busca de promover la documentación en Español, desde entonces esta documentación es mantenida por miembros de la comunidad Plone Conosur. A continuación se listan los documentos traducidos hasta el momento:
+Esta sección intenta recoger todo la documentación disponible en en Español, 
+sobre las *Mejores Practicas de Plone*, esta es resultado de la iniciativa de 
+*Carlos de la Guardia* que publica esta documentación en busca de promover la 
+documentación en Español, desde entonces esta documentación es mantenida por 
+miembros de la comunidad Plone Conosur. A continuación se listan los documentos 
+traducidos hasta el momento:
 
 Introducción
 ============
@@ -87,15 +99,16 @@ Para tener un ambiente de desarrollo productivo, en especial cuando se
 trabaje en equipo, es muy importante contar con un sistema de control de
 versiones. ``Subversion`` es el utilizado por plone.org y el plone collective,
 por lo que consideramos necesario conocerlo, aunque recientemente la
-popularidad de sistemas distribuidos como ``Git``, ``Mercurial`` y ``Bazaar``  ha aumentado.
+popularidad de sistemas distribuidos como ``Git``, ``Mercurial`` y ``Bazaar`` 
+ha aumentado.
 
 .. toctree::
    :maxdepth: 1
 
-   subversion
+   rcs/subversion
    Control de versiones utilizando Git <http://www-cs-students.stanford.edu/~blynn/gitmagic/intl/es/index.html>
    Control de versiones utilizando Mercurial <http://mercurial.selenic.com/wiki/SpanishTutorial>
-   Control de versiones utilizando Bazaar <http://blog.malev.com.ar/2010/03/10/tutorial-de-bazaar/>
+   Control de versiones utilizando Bazaar <http://blog.malev.com.ar/tutorial-de-bazaar/>
 
 Python
 ======
@@ -111,7 +124,7 @@ asociación de Python de Argentina y la fundación de Python.
 .. toctree::
    :maxdepth: 1
 
-   Tutorial de Python <python/python-tutorial/index>
+   Tutorial de Python <python/tutorial-usla/index>
 
 
 Inmersión al modo interactivo de Python
@@ -133,9 +146,10 @@ básicos.
 Entornos virtuales en Python
 ----------------------------
 
-Python ofrece un mecanismo para poder experiementar con nuevas versiones de librerias Python 
-en formato Egg, sin afectar su sistema, o para crear un entorno de instalación Python aislado 
-al Python de su sistema operativo, por eso está sección que se dedica a explicar sus casos de uso.
+Python ofrece un mecanismo para poder experimentar con nuevas versiones de 
+librerías Python en formato Egg, sin afectar su sistema, o para crear un 
+entorno de instalación Python aislado al Python de su sistema operativo, por 
+eso está sección que se dedica a explicar sus casos de uso.
 
 .. toctree::
    :maxdepth: 2
@@ -161,9 +175,9 @@ explicar sus diferencias.
 Esqueletos de proyectos
 -----------------------
 
-Como parte de la filosofía de desarrollo ágil de aplicaciones, varios proyectos Python 
-ofrecen mecanismo de plantilla de proyectos y tipos de módulos que cumplen con las buenas 
-practicas implementadas en sus proyectos.
+Como parte de la filosofía de desarrollo ágil de aplicaciones, varios proyectos 
+Python ofrecen mecanismo de plantilla de proyectos y tipos de módulos que cumplen 
+con las buenas practicas implementadas en sus proyectos.
 
 .. toctree::
    :maxdepth: 1
@@ -176,10 +190,10 @@ Buildout y sus complementos
 ===========================
 
 Buildout es un sistema que permite definir ambientes de desarrollo
-que pueden ser replicados, incluyendo dependencias y configuración. Buildout se apoya
-fuertemente en setuptools, que permite instalar paquetes de Python a través
-de Internet. Es recomendable utilizar buildout para cualquier proyecto de
-Plone que se quiera emprender.
+que pueden ser replicados, incluyendo dependencias y configuración. Buildout 
+se apoya fuertemente en setuptools, que permite instalar paquetes de Python 
+a través de Internet. Es recomendable utilizar buildout para cualquier proyecto 
+de Plone que se quiera emprender.
 
 .. toctree::
    :maxdepth: 1
@@ -196,7 +210,9 @@ Plone que se quiera emprender.
 Administración de Zope
 ======================
 
-Plone esta basado en el servidor de aplicaciones Zope y este requiere realizar tareas de hospedaje y administrativa para un servidor de aplicación Zope / sitio de Plone.
+Plone esta basado en el servidor de aplicaciones Zope y este requiere realizar 
+tareas de hospedaje y administrativa para un servidor de aplicación Zope / 
+sitio de Plone.
 
 .. toctree::
    :maxdepth: 1
