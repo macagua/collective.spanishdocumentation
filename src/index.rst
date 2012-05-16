@@ -52,7 +52,7 @@ agilicen nuestro desarrollo.
 .. toctree::
    :maxdepth: 1
 
-   Realizando pruebas en Plone <plone/haciendo-pruebas>
+   Realizando pruebas en Plone <plone/haciendo-pruebas/index>
    Referencias de Temas en Plone <plone/referencias-temas-plone>
 
 
