@@ -1630,7 +1630,7 @@ Asumiendo que está corriendo su Zope en localhost:8080, ahora debería ser
 capaz de ir a ``http://localhost:8080/test-recorder/index.html``. Usted debería
 ver en la página algo como esto:
 
-.. image:: images/blank-testrecorder.png
+.. image:: ./blank-testrecorder.png
   :alt: Screenshot of blank test recorder
   :align: center
 
@@ -1648,7 +1648,7 @@ verificar si un texto aparece en la página, seleccione el texto, haga un
 shift-clic sobre él y seleccione "Check text appears on page" ("revisar si un
 texto aparece en la página"):
 
-.. image:: images/verify-testrecorder.png
+.. image:: ./verify-testrecorder.png
   :alt: Screenshot of text verification
   :align: center
 
@@ -1828,7 +1828,7 @@ reción creado. Vea lo siguiente:
 
 Ahora debería pode abrir ``$HOME/coverage/reports/all.html`` dentro de su navegador para obtener una salida muy similar a la siguiente.
 
-.. image:: images/coverage.png
+.. image:: ./coverage.png
   :alt: z3c.coverage test coverage screenshot
   :align: center
 
