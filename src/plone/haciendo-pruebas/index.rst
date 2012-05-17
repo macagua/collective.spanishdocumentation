@@ -1616,9 +1616,6 @@ instalar ``zope.testrecorder`` es simple. Primero obtenga una copia desde el rep
 
   svn co svn://svn.zope.org/repos/main/zope.testrecorder/trunk zope.testrecorder
 
-
-
-
 Vea ``INSTALL.txt`` para obtener más instrucciones, pero la manera más fácil de
 instalarla en una instancia Zope 2 es simplemente ponerla en su directorio
 Products: Copie ``zope.testrecorder/src/zope/testrecorder`` como un producto
