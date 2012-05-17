@@ -141,7 +141,7 @@ Ejemplo de uso
 
 Para ejemplificar estos conceptos previos, agregue el siguiente producto:
 
-.. image:: ./images/screenshot_007.png
+.. image:: ./screenshot_007.png
   :align: center
   :alt: El producto heddex.tranquility-theme
 
@@ -271,7 +271,7 @@ Luego reconstruye el el sitio con el siguiente comando:
 
 Este es un tema para Plone 3 y Plone 4 que aun esta en desarrollo:
 
-.. image:: ./images/canaina-website.png
+.. image:: ./canaina-website.png
   :alt: Canaima Aponwao Theme
   :align: center
 
@@ -307,13 +307,13 @@ como es Kupu.
 
 Editor de texto enriquecido
 
-.. image:: ./images/screenshot.jpeg
+.. image:: ./screenshot.jpeg
   :align: center
   :alt: TinyMCE
 
 ----
 
-.. image:: ./images/screenshot_004.jpeg
+.. image:: ./screenshot_004.jpeg
   :align: center
   :alt: Products.FCKeditor
 
@@ -334,7 +334,7 @@ Foros de discusión
 usted necesita realmente un foro avanzado usted más bien debe buscar fuera
 del sitio de Plone y tratarte de integrarlo a su sitio.
 
-.. image:: ./images/ploneboard04.png
+.. image:: ./ploneboard04.png
   :align: center
   :alt: Foro de discusión con el producto Ploneboard
 
@@ -373,13 +373,13 @@ Yo he probado los productos `Quills`_ y `Scrawl`_, el primero es muy parecido
 a las características que ofrece Wordpress y el segundo es muy minimalista.
 
 
-.. image:: ./images/screenshot_005.png
+.. image:: ./screenshot_005.png
   :align: center
   :alt: Bitácoras/Blogs con el producto Quills
 
 ----
 
-.. image:: ./images/screenshot_004.png
+.. image:: ./screenshot_004.png
   :align: center
   :alt: Bitácoras/Blogs con el producto Scrawl
 
@@ -398,7 +398,7 @@ Sistema de noticias
 
 Altamente recomendada es el producto `Singing and Dancing`_.
 
-.. image:: ./images/screenshot_003.png
+.. image:: ./screenshot_003.png
   :align: center
   :alt: Sistema de correo de noticias con el producto Singing and Dancing
 
@@ -426,7 +426,7 @@ Etiquetas
 
 `quintagroup.portlet.cumulus`_, es un portlet de nubes de etiquetas que rotan usando una animación de Flash 3D.
 
-.. image:: ./images/screenshot_002.jpeg
+.. image:: ./screenshot_002.jpeg
   :align: center
   :alt: Nube de etiquetas con el producto quintagroup.portlet.cumulus
 
@@ -449,7 +449,7 @@ Media
 `ATGoogleVideo`_, agrega un tipo de contenido que hace referencias a vídeos
 almacenados en Google Video o YouTube dentro de un sitio Plone
 
-.. image:: ./images/screenshot.png
+.. image:: ./screenshot.png
   :align: center
   :alt: ATGoogleVideo
 
@@ -463,7 +463,7 @@ Agregue la siguiente configuración del producto al archivo ``buildout.cfg``
 
 `Gallery portlet`_, un portlet para presentar galerías fotográficas.
 
-.. image:: ./images/screenshot_002.png
+.. image:: ./screenshot_002.png
   :align: center
   :alt: portlet de Galería de imágenes Gallery portlet
 
@@ -481,7 +481,7 @@ Agregue la siguiente configuración del producto al archivo ``buildout.cfg``
 `plone.app.imaging`_, le habilita declarativamente definir adicionales tamaños
 de imágenes inicialmente generadas cuando usted agrega imágenes en su portal.
 
-.. image:: ./images/screenshot_006.png
+.. image:: ./screenshot_006.png
   :align: center
   :alt: plone.app.imaging
 
@@ -534,7 +534,7 @@ páginas que estarán disponibles a usuarios anónimos.
 `collective.uploadify`_, si usted le gustaría subir varios archivos de una
 ves usted tiene que instalarlo.
 
-.. image:: ./images/screenshot_003.jpeg
+.. image:: ./screenshot_003.jpeg
   :align: center
   :alt: collective.uploadify
 
