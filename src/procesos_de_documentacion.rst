@@ -117,6 +117,15 @@ editores. Para mantener la coherencia nosotros adoptamos la siguiente convenció
   ...
   Sección del nivel 4
   ~~~~~~~~~~~~~~~~~~~
+  ...
+  Sección del nivel 5
+  :::::::::::::::::::
+  ...
+  Sección del nivel 6
+  *******************
+  ...
+  Sección del nivel 7
+  +++++++++++++++++++
 
 No es necesario ni deseable ir más allá del nivel 4. Cuando la generación del 
 documento allá completado, el nivel de las secciones básicas de un archivo
