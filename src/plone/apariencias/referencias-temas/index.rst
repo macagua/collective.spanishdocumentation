@@ -105,7 +105,7 @@ orientación.
 
 Esta es una vista rápida de lo temas de este manual.
 
-.. image:: images/image_mini.png
+.. image:: ./image_mini.png
   :alt: Mapa conceptual del Manual de referencia
   :width: 200px
   :align: center
@@ -1751,7 +1751,7 @@ para crear un tema.
 En realidad, hay tres elementos principales en un tema. El siguiente diagrama
 le muestra cómo estas ranuras se comportan en conjunto:
 
-.. image:: images/image_large.png
+.. image:: ./image_large.png
   :alt: Diagrama de bloques para construcción usados para crear un tema
   :width: 768px
   :align: center
@@ -3461,7 +3461,7 @@ pestaña ``vista`` muestra para objetos folderish. Objetos folderish usan
 ambos macros ``body`` y ``folderlisting``. ``footer`` Aquí es donde AT pone
 la línea de fondo.
 
-.. image:: images/at-folderish-screenshot.jpg
+.. image:: ./at-folderish-screenshot.jpg
   :alt: Esta imagen muestra las áreas generadas por el header, el cuerpo y macros folderlisting
 
 Como puede ver el macro ``header`` genera dentro del contorno marcado en rojo
@@ -3641,7 +3641,7 @@ plantilla
 Asegúrese de reiniciar Zope y reinstalar usando ``portal_quickinstaller``.
 Ahora cuando renderizamos StringField, se verá como este:
 
-.. image:: images/image_preview_004.jpeg
+.. image:: ./image_preview_004.jpeg
   :alt: Widget personalizado
 
 
@@ -3718,7 +3718,7 @@ apropiadamente) que contenga el siguiente código:
 
 Y como magia debería ver renderizado en área de contenido:
 
-.. image:: images/image_preview_002.jpeg
+.. image:: ./image_preview_002.jpeg
   :alt: The Infamous "Foo" View
 
 
@@ -3829,7 +3829,7 @@ renderizada, creando nuestro código CSS personalizado, archivos enlazados, e
 incluye disponibles en la página. Nuestro resultado final será algo como
 esto:
 
-.. image:: images/image_preview_003.jpeg
+.. image:: ./image_preview_003.jpeg
   :alt: Macro de cuerpo personalizado
 
 
@@ -3861,7 +3861,7 @@ Note que solo he sustituido el rótulo por defecto para los campos llamados
 comportamiento predeterminado se puede encontrar. El resultado final luce
 como este:
 
-.. image:: images/image_preview.jpeg
+.. image:: ./image_preview.jpeg
   :alt: rótulo personalizado
 
 
@@ -4249,7 +4249,7 @@ tendrá que buscar en plone_content.
 Dentro de su propio producto de tema
 ------------------------------------
 
-.. image:: images/your_theme_egg_skin_cutdown.gif
+.. image:: ./your_theme_egg_skin_cutdown.gif
   :alt: The skins folder in your theme product
 
 /skins/[su espacio de nombre de tema].
@@ -4262,7 +4262,7 @@ Dentro de su propio producto de tema
   instancia de Zope arranca, esto convierte sus directorios en las capas de
   skin. 
 
-.. image:: images/your_theme_egg_skin_cutdown1.gif
+.. image:: ./your_theme_egg_skin_cutdown1.gif
   :alt: Subsidiary files used for installing and setting up the Skin
 
 
@@ -4567,7 +4567,7 @@ describe en la sección 1. La siguiente captura muestra la base_properties que
 se acerca a representar los colores que se encuentran en nuestro objetivo.
 Vaya y realice estos cambios a su base_properties ahora.
 
-.. image:: images/neon_base_properties.png
+.. image:: ./neon_base_properties.png
   :alt: neon_base_properties
 
 
@@ -5393,7 +5393,7 @@ archivos, cada capa es un directorio. En la Interfaz de Administración de
 Zope (ZMI), cada capa aparece en portal_skins como una carpeta separada (con
 plantillas de páginas, hojas de estilos o scripts de Python).
 
-.. image:: images/portal_skins_zmi_snip.html
+.. image:: ./portal_skins_zmi_snip.html
 
 
 Estas tienen dos usos.
@@ -5464,7 +5464,7 @@ Capas como "plone_templates" provienen del tema principal de Plone, pero
 también habrá capas que proveen plantillas desde productos adicionales
 específicos (por ejemplo, el editor visual kupu).
 
-.. image:: images/order_of_precedence.html
+.. image:: ./order_of_precedence.html
   :alt: captura de las capas skins en la ZMI
 
 Cuando se le pidió para procesar una plantilla específica, Plone trabajará
@@ -5632,7 +5632,7 @@ necesita.
 
 Información sobre componentes y cómo están conectados entre sí.
 
-.. image:: images/component.gif
+.. image:: ./component.gif
   :alt: diagrama de un componente
 
 Componentes son herramientas potentes y flexibles de Plone 3, pero un poco
@@ -6371,7 +6371,7 @@ contiene los elementos de componentes que necesita.
 Dentro de su propio producto de tema
 ------------------------------------
 
-.. image:: images/your_theme_egg_components_cutdown.gif
+.. image:: ./your_theme_egg_components_cutdown.gif
   :alt: La carpeta del explorador en producto de tema
 
 .. glossary ::
@@ -6476,7 +6476,7 @@ a los atributos de esas clases.
 Así que en este caso, el sub-nodo representa una entrada en el registro
 JavaScripts y sus casillas de verificación.
 
-.. image:: images/portal_js_snippet.gif
+.. image:: ./portal_js_snippet.gif
   :alt: screenshot of the javascripts registry in the ZMI
 
 
@@ -6583,7 +6583,7 @@ la herramienta Generic Setup para exportar el perfil.
 Dentro de su propio producto de tema
 ------------------------------------
 
-.. image:: images/your_theme_egg_config_cutdown.gif
+.. image:: ./your_theme_egg_config_cutdown.gif
   :alt: El directorio de configuración de su producto tema
 
 /profiles/default/ 
@@ -6824,7 +6824,7 @@ completas en sí mismas, ella apenas proporcionan una parte de contenido
 situada dentro de un "slot" ("ranura") en el main_template, llamado "main"
 ("principal)
 
-.. image:: images/maintemplate.html
+.. image:: ./maintemplate.html
 
 
 Si no se siente seguro acerca de las ranuras, entonces vuelva a revisar
@@ -7372,7 +7372,7 @@ inspeccionar lo que se verá cuando sea servido.
 La UI (interfaz de usuario) de composición-CSS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: images/image_preview.html
+.. image:: ./image_preview.html
   :alt: La UI de composición de css-registry (registro-css)
 
 
@@ -7850,13 +7850,13 @@ personalizado para su uso en Kupu.
 2. Seleccione el icono de configuración del producto adicional para el
     editor visual Kupu, como se ve a continuación:
 
-.. image:: images/image_preview_003.png
+.. image:: ./image_preview_003.png
   :alt: Site-setup kupu
 
 
 3. Vaya a la caja de estilos de párrafo.
 
-.. image:: images/image_preview_011.png
+.. image:: ./image_preview_011.png
   :alt: Kupu paragraph styles
 
 
@@ -7884,7 +7884,7 @@ personalizado para su uso en Kupu.
 Nota: desplazarse por la página para revisar elementos disponibles. Vea
 *base_properties* para definiciones de estos elementos
 
-.. image:: images/copy_of_customcss.html
+.. image:: ./copy_of_customcss.html
 
 
 6.4. Utilizando otra información sobre su sitio en una página
@@ -9525,20 +9525,20 @@ la Web.
 |                                         | Selector de idiomas        | <ul id="portal-languageselector"> ... </ul>                | `plone.app.i18n.locales.languageselector`_ |
 |                                         |                            |                                                            | Portal Top `viewlet`_                                 |
 +------------------------------------------+---------------------------+------------------------------------------------------------+-----------------------------------------+
-| .. image:: images/image_thumb_009.png   | Acciones del sitio         | <ul id="portal-siteactions">...</ul>                       | `plone.site_actions`_ plone.portalheader   |
+| .. image:: ./image_thumb_009.png   | Acciones del sitio         | <ul id="portal-siteactions">...</ul>                       | `plone.site_actions`_ plone.portalheader   |
 |   :alt: plone.site_actions              |                            |                                                            | `viewlet`_                                 |
 +------------------------------------------+---------------------------+------------------------------------------------------------+-----------------------------------------+
-| .. image:: images/image_thumb_011.png   | Cuadro de búsqueda         | <div id="portal-searchbox">...</div>                       | `plone.searchbox`_ plone.portalheader      |
+| .. image:: ./image_thumb_011.png   | Cuadro de búsqueda         | <div id="portal-searchbox">...</div>                       | `plone.searchbox`_ plone.portalheader      |
 |   :alt: plone.searchbox                 |                            |                                                            | `viewlet`_                                 |
 +------------------------------------------+---------------------------+------------------------------------------------------------+-----------------------------------------+
-| .. image:: images/image_thumb.png       | Logotipo                   | <a id="portal-logo" ...>... </a>                           | `plone.logo`_ plone.portalheader                         |
+| .. image:: ./image_thumb.png       | Logotipo                   | <a id="portal-logo" ...>... </a>                           | `plone.logo`_ plone.portalheader                         |
 |   :alt: plone.logo                      |                            |                                                            | `viewlet`_                                 |
 +------------------------------------------+---------------------------+------------------------------------------------------------+-----------------------------------------+
-| .. image:: images/image_thumb_005.png   |                            | <h5 class="hiddenStructure">Sections</h5>                  | `plone.global_sections`_                   |
+| .. image:: ./image_thumb_005.png   |                            | <h5 class="hiddenStructure">Sections</h5>                  | `plone.global_sections`_                   |
 |   :alt: plone.global_sections           | Secciones globales         | <ul id="portal-globalnav"> ... </ul>                       | plone.portalheader                         |
 |                                         |                            |                                                            | `viewlet`_                                 |
 +------------------------------------------+---------------------------+------------------------------------------------------------+-----------------------------------------+
-| .. image:: images/image_thumb_006.png   | Barra personal             | <div id="portal-personaltools-wrapper">...</div>           | `plone.personal_bar`_                      |
+| .. image:: ./image_thumb_006.png   | Barra personal             | <div id="portal-personaltools-wrapper">...</div>           | `plone.personal_bar`_                      |
 |   :alt: plone.personal_bar              |                            |                                                            | plone.portaltop `viewlet`_                                 |
 +------------------------------------------+---------------------------+------------------------------------------------------------+-----------------------------------------+
 |                                         | Barra de ruta (hilo de     | <div id="portal-breadcrumbs">...</div>                     | `plone.path_bar`_                          |
@@ -9550,39 +9550,39 @@ la Web.
 |                                         | Acciones de contenido      |                                                            | `plone.contentactions`_                    |
 |                                         |                            |                                                            | plone.contentviews `viewlet`_              |
 +------------------------------------------+---------------------------+------------------------------------------------------------+-----------------------------------------+
-| .. image:: images/image_thumb_016.png   | Tabla de contenidos        | <dl id="document-toc" class="portlet toc"                  | `plone.tableofcontents`_                   |
+| .. image:: ./image_thumb_016.png   | Tabla de contenidos        | <dl id="document-toc" class="portlet toc"                  | `plone.tableofcontents`_                   |
 |   :alt: plone.tableofcontents           |                            |     style="display:none"> ... </dl>                        | plone.abovecontentbody `viewlet`_          |
 +------------------------------------------+---------------------------+------------------------------------------------------------+-----------------------------------------+
-| .. image:: images/image_thumb_004.png   | Presentación               | <p id="link-presentation">...</p>                          | `plone.presentation`_                      |
+| .. image:: ./image_thumb_004.png   | Presentación               | <p id="link-presentation">...</p>                          | `plone.presentation`_                      |
 |   :alt: plone.presentation              |                            |                                                            | plone.abovecontentbody `viewlet`_          |
 +------------------------------------------+---------------------------+------------------------------------------------------------+-----------------------------------------+
 |                                         | Palabras clave             | <div id="category" class="documentByLine">...</div>        | `plone.belowcontenttitle.keywords`_        |
 |                                         |                            |                                                            | plone.belowcontenttitle `viewlet`_         |
 +------------------------------------------+---------------------------+------------------------------------------------------------+-----------------------------------------+
-| .. image:: images/image_preview_009.png | Línea de fondo             | <div id="plone-document-byline"                            | `plone.belowcontenttitle.documentbyline`_  |
+| .. image:: ./image_preview_009.png | Línea de fondo             | <div id="plone-document-byline"                            | `plone.belowcontenttitle.documentbyline`_  |
 |   :alt: plone.byline                    |                            |      class="documentByLine">...</div>                      | plone.belowcontenttitle `viewlet`_         |
 +------------------------------------------+---------------------------+------------------------------------------------------------+-----------------------------------------+
 |                                         | Bloqueo                    | <div id="plone-lock-status" />                             | `plone.lockinfo`_                          |
 |                                         |                            |                                                            | plone.abovecontent `viewlet`_              |
 +------------------------------------------+---------------------------+------------------------------------------------------------+-----------------------------------------+
-| .. image:: images/image_thumb_018.png   |                            |                                                            |                                          |
+| .. image:: ./image_thumb_018.png   |                            |                                                            |                                          |
 |   :alt: plone.document_actions          |                            |                                                            |                                          |
 +------------------------------------------+---------------------------+------------------------------------------------------------+-----------------------------------------+
 |                                         | Acciones de documento      | <div class="documentActions"> ... </div>                   | `plone.abovecontenttitle.documentactions`_ |
 |                                         | Acciones de documento      | <div class="documentActions"> ... </div>                   |  plone.belowcontentbody `viewlet`_          |
 +------------------------------------------+---------------------------+------------------------------------------------------------+-----------------------------------------+
-| .. image:: images/image_thumb_017.png   | Comentarios                | <div class="discussion"> ... </div>                        | `plone.comments`_                          |
+| .. image:: ./image_thumb_017.png   | Comentarios                | <div class="discussion"> ... </div>                        | `plone.comments`_                          |
 |   :alt: plone.comments                  |                            |                                                            | plone.belowcontent `viewlet`_              |
 +------------------------------------------+---------------------------+------------------------------------------------------------+-----------------------------------------+
 |                                         | Historial de contenido     | <div class="contentHistory" id="content-history">...</div> | `plone.belowcontentbody.contenthistory`_   |
 |                                         |                            |      id="content-history">...</div>                        | plone.belowcontentbody `viewlet`_          |
 +------------------------------------------+---------------------------+------------------------------------------------------------+-----------------------------------------+
-| .. image:: images/image_thumb_012.png   | Anterior Siguiente         | <div class="listingBar">...</div>                          | `plone.nextprevious`_                      |
+| .. image:: ./image_thumb_012.png   | Anterior Siguiente         | <div class="listingBar">...</div>                          | `plone.nextprevious`_                      |
 |   :alt: plone.nextprevious              |                            |                                                            | plone.belowcontent `viewlet`_              |
 +------------------------------------------+---------------------------+------------------------------------------------------------+-----------------------------------------+
 |                                         | Pie de página              | <div id="portal-footer">...</div>                          | `plone.footer`_ plone.portalfooter `viewlet`_              |
 +------------------------------------------+---------------------------+------------------------------------------------------------+-----------------------------------------+
-| .. image:: images/image_preview_010.png | Colofon                    | <div id="portal-colophon">...</div>                        |  `plone.colophon`_                          |
+| .. image:: ./image_preview_010.png | Colofon                    | <div id="portal-colophon">...</div>                        |  `plone.colophon`_                          |
 |   :alt: plone.colophon                  |                            |                                                            | plone.portalfooter `viewlet`_              |
 +------------------------------------------+---------------------------+------------------------------------------------------------+-----------------------------------------+
 
@@ -9658,7 +9658,7 @@ Selector de idiomas<ul id="portal-languageselector"> ...
 Portal Top
 `viewlet`_
 
-.. image:: images/image_preview_007.png
+.. image:: ./image_preview_007.png
   :alt: plone.siteactions-sunburst
 
 Acciones del sitio<ul id="portal-
@@ -9666,21 +9666,21 @@ siteactions">...</ul>`plonetheme.sunburst.site_actions`_
 plone.portalfooter
 `viewlet`_
 
-.. image:: images/image_thumb_020.png
+.. image:: ./image_thumb_020.png
   :alt: plone.searchbox-sunburst
 
 Cuadro de búsqueda<div id="portal-searchbox">...</div>`plone.searchbox`_
 plone.portalheader
 `viewlet`_
 
-.. image:: images/image_thumb_008.png
+.. image:: ./image_thumb_008.png
   :alt: plone.logo-sunburst
 
 Logotipo<a id="portal-logo" ...>... </a>`plone.logo`_
 plone.portalheader
 `viewlet`_
 
-.. image:: images/image_thumb_007.png
+.. image:: ./image_thumb_007.png
   :alt: plone.global_sections-sunburst
 
 Secciones globales<h5 class="hiddenStructure">Sections</h5> <ul id="portal-
@@ -9688,7 +9688,7 @@ globalnav"> ... </ul>`plone.global_sections`_
 plone.portalheader
 `viewlet`_
 
-.. image:: images/image_thumb_015.png
+.. image:: ./image_thumb_015.png
   :alt: plone.personal_bar-sunburst
 
 Barra personal<div id="portal-personaltools-wrapper">
@@ -9696,7 +9696,7 @@ Barra personal<div id="portal-personaltools-wrapper">
 plone.portaltop
 `viewlet`_
 
-.. image:: images/image_preview_005.png
+.. image:: ./image_preview_005.png
   :alt: plone.pathbar-sunburst
 
 Barra de ruta (hilo de Ariadna del portal)<div id="portal-
@@ -9704,14 +9704,14 @@ breadcrumbs">...</div>`plone.path_bar`_
 plone.portaltop
 `viewlet`_
 
-.. image:: images/image_thumb_003.png
+.. image:: ./image_thumb_003.png
   :alt: plone.contentviews-sunburst
 
 Vistas de contenido<ul class="contentViews"> ... </ul>`plone.contentviews`_
 plone.contentviews
 `viewlet`_
 
-.. image:: images/image_thumb_002.png
+.. image:: ./image_thumb_002.png
   :alt: plone.contentactions-sunburst
 
 Acciones de contenido
@@ -9719,7 +9719,7 @@ Acciones de contenido
 plone.contentviews
 `viewlet`_
 
-.. image:: images/image_preview.png
+.. image:: ./image_preview.png
   :alt: plone.toc-sunburst
 
 Tabla de contenidos<dl id="document-toc" class="portlet toc" style="display:
@@ -9727,14 +9727,14 @@ none"> ... </dl>`plone.tableofcontents`_
 plone.abovecontentbody
 `viewlet`_
 
-.. image:: images/image_preview_004.png
+.. image:: ./image_preview_004.png
   :alt: plone.presentation-sunburst
 
 Presentación<p id="link-presentation">...</p>`plone.presentation`_
 plone.abovecontentbody
 `viewlet`_
 
-.. image:: images/image_thumb_010.png
+.. image:: ./image_thumb_010.png
   :alt: plone.keywords-sunburst
 
 Palabras clave<div id="category"
@@ -9742,7 +9742,7 @@ class="documentByLine">...</div>`plone.belowcontenttitle.keywords`_
 plone.belowcontenttitle
 `viewlet`_
 
-.. image:: images/image_preview_006.png
+.. image:: ./image_preview_006.png
   :alt: plone.byline-sunburst
 
 Línea de fondo<div id="plone-document-byline" class="documentByLine">...
@@ -9759,7 +9759,7 @@ Acciones de documento<div class="documentActions"> ...
 plone.belowcontentbody
 `viewlet`_
 
-.. image:: images/image_preview_008.png
+.. image:: ./image_preview_008.png
   :alt: plone.relateditems-sunburst
 
 Elementos relacionados
@@ -9767,14 +9767,14 @@ Elementos relacionados
 plone.belowcontentbody
 `viewlet`_
 
-.. image:: images/image_preview_012.png
+.. image:: ./image_preview_012.png
   :alt: plone.comment-sunburst
 
 Comentarios<div class="discussion"> ... </div>`plone.comments`_
 plone.belowcontent
 `viewlet`_
 
-.. image:: images/image_thumb_019.png
+.. image:: ./image_thumb_019.png
   :alt: plone.contenthistory-sunburst
 
 Historial de contenido<div class="contentHistory" id="content-
@@ -9782,21 +9782,21 @@ history">...</div>`plone.belowcontentbody.contenthistory`_
 plone.belowcontentbody
 `viewlet`_
 
-.. image:: images/image_preview_002.png
+.. image:: ./image_preview_002.png
   :alt: plone.nextprevious-sunburst
 
 Anterior Siguiente<div class="listingBar">...</div>`plone.nextprevious`_
 plone.belowcontent
 `viewlet`_
 
-.. image:: images/image_thumb_013.png
+.. image:: ./image_thumb_013.png
   :alt: plone.footer-sunburst
 
 Pie de página<div id="portal-footer">...</div>`plone.footer`_
 plone.portalfooter
 `viewlet`_
 
-.. image:: images/image_thumb_014.png
+.. image:: ./image_thumb_014.png
   :alt: plone.colophon-sunburst
 
 Colofón <div id="portal-colophon">...</div>`plone.colophon`_
@@ -13144,7 +13144,7 @@ un diseño de sistema de archivos muy similar a este diagrama.
 Si el diagrama no funciona, consulte las siguientes páginas donde las
 secciones del diagrama están combinadas con una explicación textual.
 
-.. image:: images/your_theme_egg.gif
+.. image:: ./your_theme_egg.gif
   :alt: su huevo de tema
 
 8.6. Archivos para el skin
@@ -13170,7 +13170,7 @@ del skin de su tema.
   jerarquía de las capas de skin, y registra sus hojas de estilo y JavaScript 
   con los registros
 
-.. image:: images/your_theme_egg_skin.gif
+.. image:: ./your_theme_egg_skin.gif
   :alt: su huevo de tema; archivos del skin
 
 8.7. Archivos para componentes
@@ -13199,7 +13199,7 @@ de Componentes de su tema.
   Estos directorios pueden usarse para plantillas, estilos, e imágenes. Usted 
   tendrá que registrar estos como directorios para recursos en configure.zcml.
 
-.. image:: images/your_theme_egg_components.gif
+.. image:: ./your_theme_egg_components.gif
   :alt: su huevo de tema; archivos de componentes
 
 8.8. Archivos para configuración
@@ -13220,7 +13220,7 @@ de Configuración de su tema.
   Cuando la instancia de Zope inicia, este archivo hace que el
   perfil esté disponible para el uso de Generic Setup.
 
-.. image:: images/your_theme_egg_config.gif
+.. image:: ./your_theme_egg_config.gif
   :alt: su huevo de tema; archivos de configuración
 
 8.9. Archivos para la instalación de su huevo
@@ -13229,7 +13229,7 @@ de Configuración de su tema.
 Estos son los archivos y directorios necesarios para instalar el huevo en la
 ruta de python y ponerlo a disposición en el arranque de Zope.
 
-.. image:: images/your_theme_egg_egg_installation.gif
+.. image:: ./your_theme_egg_egg_installation.gif
   :alt: su huevo de tema; archivos utilizados para la instalación de su huevo
 
 8.10. Archivos para la instalación de su tema
@@ -13249,7 +13249,7 @@ mediante :menuselection:`Configuración del sitio --> Agregar/Quitar productos` 
 /setuphandlers.py
   Esto contiene el "controlador" para pasos no genéricos de la instalación Generic Setup
 
-.. image:: images/your_theme_egg_qi_installation.gif
+.. image:: ./your_theme_egg_qi_installation.gif
   :alt: su huevo de tema; archivos utilizados por el quick installer
 
 
