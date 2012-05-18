@@ -1,5 +1,7 @@
 .. -*- coding: utf-8 -*-
 
+.. _zpt_lenguage:
+
 ===================
 Zope Page Templates
 ===================

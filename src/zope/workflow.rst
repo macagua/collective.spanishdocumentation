@@ -1,5 +1,7 @@
 .. -*- coding: utf-8 -*-
 
+.. _flujo_trabajo:
+
 ================
 Flujo de trabajo
 ================

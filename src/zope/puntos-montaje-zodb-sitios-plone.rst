@@ -1,5 +1,7 @@
 .. -*- coding: utf-8 -*-
 
+.. _puntos_montaje_zodb:
+
 ====================================================
 Configurar puntos de montajes para Data.fs separadas
 ====================================================
@@ -171,3 +173,4 @@ Referencias
 .. _Instalador Unificado: http://plone.org/countries/conosur/documentacion/instalando-plone-3-con-el-instalador-unificado
 .. _How to mount a Plone Site as a separate Data.fs: http://webteam.medsci.ox.ac.uk/integrators-developers/separatedatafs
 .. _Multiple Plone sites per zope instance - using separate Data.fs files for each one: http://plone.org/documentation/kb/multiple-plone-sites-per-zope-instance-using-separate-data-fs-files-for-each-one
+.. _Compacte la base de datos: http://readthedocs.org/docs/plone-spanish-docs/en/latest/zope/compactar-zodb.html

@@ -1,5 +1,7 @@
 .. -*- coding: utf-8 -*-
 
+.. _perfiles_genericsetup:
+
 =======================
 GenericSetup y Perfiles
 =======================

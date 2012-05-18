@@ -1,5 +1,7 @@
 .. -*- coding: utf-8 -*-
 
+.. _zope_como_webdav:
+
 =======================================
 Configurar Zope como un servidor WebDAV
 =======================================

@@ -1,5 +1,7 @@
 .. -*- coding: utf-8 -*-
 
+.. _configuraciones_generales:
+
 =========================
 Configuraciones generales
 =========================

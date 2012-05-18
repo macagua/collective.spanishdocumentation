@@ -1,5 +1,7 @@
 .. -*- coding: utf-8 -*-
 
+.. _compactar_zodb:
+
 =======================================
 ¿Como compactar la ZODB de sitio Plone?
 =======================================
