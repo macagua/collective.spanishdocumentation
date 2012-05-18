@@ -24,7 +24,6 @@ software Berkeley) y prácticamente cualquier otra plataforma.
    plone/instalando_plone
 
 
-
 Uso de Plone
 ============
 
@@ -38,8 +37,11 @@ y administración de elementos de Plone.
 .. toctree::
    :maxdepth: 1
 
-   Manual de Usuario de Plone 3 <manual-usuario/plone3/index>
 
+   Manual de Usuario de Plone 3 <manual-usuario/plone3/index>
+..
+   Manual de Usuario de Plone 2.5 (En proceso) 
+   Manual de Usuario de Plone 4 (En proceso) 
 
 
 Desarrollo en Zope/Plone
@@ -52,8 +54,8 @@ agilicen nuestro desarrollo.
 .. toctree::
    :maxdepth: 1
 
+   plone/apariencias/index
    Realizando pruebas en Plone <plone/haciendo-pruebas/index>
-   Referencias de Temas en Plone <plone/referencias-temas-plone>
 
 
 ==========================
@@ -257,7 +259,7 @@ sección tocaremos algunos de ellos.
    plone/productos
    plone/policy
    plone/tema
-   plone/agregando-productos-adicionales
+   plone/productos-adicionales/index
    plone/mini-tutoriales
 
 Otros recursos
