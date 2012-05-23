@@ -13,10 +13,11 @@ comunes en aplicaciones web con Plone.
 .. toctree::
    :maxdepth: 1
 
-   hola-mundo-plone
+   hola-mundo
    utilizando-z3c.form
-   mini_db
-   mini_gcharts
-   mini_translate
-   mini_soap
+   mostrar-data-sqlalchemy
+   aplicacion-crud
+   google-charts
+   google-translation
+   soap
 

@@ -296,7 +296,7 @@ recién creado Python. A su vez, el paquete se descargará automáticamente como
     ...
 
 
-Depues de esto, adiciona el paquete en su configuración en su buildout:
+Después de esto, adiciona el paquete en su configuración en su buildout:
 
 ``buildout.cfg``
 
