@@ -260,7 +260,7 @@ sección tocaremos algunos de ellos.
    plone/policy
    plone/tema
    plone/productos-adicionales/index
-   plone/mini-tutoriales
+   plone/tutoriales/index
 
 Otros recursos
 --------------
