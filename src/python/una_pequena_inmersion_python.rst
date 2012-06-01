@@ -758,7 +758,7 @@ Referencias
 .. _SciPy: http://en.wikipedia.org/wiki/SciPy
 .. _página principal de ipython: http://ipython.scipy.org/
 .. _paquete bpython: http://pypi.python.org/pypi/bpython/
-.. _página principal de bpython: http://ipython.scipy.org/
+.. _página principal de bpython: http://bpython-interpreter.org/
 .. _estilo de completación de lineas de comandos: http://en.wikipedia.org/wiki/Command_line_completion
 .. _Inmersión en Python: http://es.diveintopython.org/
 .. _Guía de aprendizaje de Python: http://pyspanishdoc.sourceforge.net/tut/tut.html
