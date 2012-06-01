@@ -6,6 +6,14 @@ Inmersión al modo interactivo de Python
 
 .. contents:: :local:
 
+Descripción general
+===================
+
+Este articulo se basa en el documento `Una pequeña inmersión al modo interactivo de Python`_ 
+generado por la fundación Cenditel y la idea principal de este tutorial es que alguien que 
+**NUNCA** ha trabajando con el interprete de `Python`_ pueda tener un primer acercamiento 
+**SIN PROGRAMAR**, solamente con conocer el uso del interprete y sus comandos básicos.
+
 
 Características de Python
 =========================
@@ -423,7 +431,7 @@ Ejecute el comando exit() para salir del interprete...
 
 
 Interprete interactivo de Python
-================================
+--------------------------------
 
 Para mejorar la experiencia con el interprete Python le sugerimos instalar el
 programa IPython, según su documentación:
@@ -436,7 +444,7 @@ Según Wikipedia
   mediante tabulador de variables, módulos y atributos; entre otras
   funcionalidades. Es un componente del paquete `SciPy`_."
 
-Para mayor información visite su `página principal`_ y si necesita instalar
+Para mayor información visite su `página principal de ipython`_ y si necesita instalar
 este programa ejecute el siguiente comando:
 
 .. code-block:: sh
@@ -668,6 +676,44 @@ Y para borrar la sesión con el IPython ejecute el siguiente comando:
     In [8]: exit()
     Do you really want to exit ([y]/n)? y
 
+Interprete interactivo con el paquete bpython
+---------------------------------------------
+
+Alternativamente puedes usar el `paquete bpython` que mejora aun mas la experiencia 
+de trabajo con el paquete `ipython`
+
+Para mayor información visite su `página principal de bpython`_ y si necesita instalar
+este programa ejecute el siguiente comando:
+
+.. code-block:: sh
+
+    # pip install bpython
+
+Luego cierra sesión de **root** y vuelve al usuario y sustituya el comando
+``python`` por ``ipython`` de la siguiente forma:
+
+.. code-block:: sh
+
+    usuario@pc:~$  bpython
+    
+
+Dentro de interprete Python puede apreciar que ofrece otra forma de presentar la documentación y la estructura del lenguaje, con los siguientes comandos de ejemplos:
+
+.. code-block:: python
+
+    >>> print 'Hola mundo'
+    Hola mundo
+    >>> for item in xrange(
+    ┌──────────────────────────────────────────────────────────────────────────────────────────────────┐
+    │ xrange: ([start, ] stop[, step])                                                                 │
+    │ xrange([start,] stop[, step]) -> xrange object                                                   │
+    │                                                                                                  │
+    │ Like range(), but instead of returning a list, returns an object that                            │
+    │ generates the numbers in the range on demand.  For looping, this is                              │
+    │ slightly faster than range() and more memory efficient.                                          │
+    └──────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+     <C-r> Rewind  <C-s> Save  <F8> Pastebin  <F9> Pager  <F2> Show Source
 
 
 Conclusiones
@@ -680,14 +726,20 @@ librerías estándar / propias de Python que tienes instalado en tu sistema.
 
 
 Ver también
------------
+===========
 
+-   `Python`_.
 -   `Inmersión en Python`_.
 -   `Guía de aprendizaje de Python`_.
 -   `La librería estándar de Python`_.
 -   `Guide to Python introspection`_.
 
+Referencias
+===========
 
+-   `Una pequeña inmersión al modo interactivo de Python`_ de la fundación Cenditel.
+
+.. _Python: http://www.python.org/ 
 .. _multiparadigma: http://es.wikipedia.org/wiki/Lenguaje_de_programaci%C3%B3n_multiparadigma
 .. _orientación a objetos: http://es.wikipedia.org/wiki/Programaci%C3%B3n_orientada_a_objetos
 .. _programación imperativa: http://es.wikipedia.org/wiki/Programaci%C3%B3n_imperativa
@@ -704,8 +756,11 @@ Ver también
 .. _librería del estándar: http://pyspanishdoc.sourceforge.net/tut/node12.html
 .. _modo interactivo: http://es.wikipedia.org/wiki/Python#Modo_interactivo
 .. _SciPy: http://en.wikipedia.org/wiki/SciPy
-.. _página principal: http://ipython.scipy.org/
+.. _página principal de ipython: http://ipython.scipy.org/
+.. _paquete bpython: http://pypi.python.org/pypi/bpython/
+.. _página principal de bpython: http://ipython.scipy.org/
 .. _estilo de completación de lineas de comandos: http://en.wikipedia.org/wiki/Command_line_completion
 .. _Inmersión en Python: http://es.diveintopython.org/
 .. _Guía de aprendizaje de Python: http://pyspanishdoc.sourceforge.net/tut/tut.html
 .. _Guide to Python introspection: http://www.ibm.com/developerworks/linux/library/l-pyint.html
+.. _Una pequeña inmersión al modo interactivo de Python: http://plataforma.cenditel.gob.ve/wiki/Plone%3AUnaPequenaInmersionPython
