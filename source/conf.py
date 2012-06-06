@@ -11,7 +11,7 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
-import sys, os
+import sys, os, time
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -41,7 +41,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Documentación oficial de Plone en Español'
-copyright = u'2010 - 2011, Equipo de Documentación en Español'
+copyright = u'2010 - %s, Equipo de Documentación en Español' % time.strftime('%Y')
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -58,26 +58,29 @@ language = 'es'
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
-#today = ''
+today = ''
 # Else, today_fmt is used as the format for a strftime call.
 #today_fmt = '%B %d, %Y'
+today_fmt = '%d de %b del %Y'
 
 # List of documents that shouldn't be included in the build.
 #unused_docs = []
 
 # List of directories, relative to source directory, that shouldn't be searched
 # for source files.
-exclude_trees = ['_build']
+exclude_trees = [
+    '_build'
+]
 
 # The reST default role (used for this markup: `text`) to use for all documents.
 #default_role = None
 
 # If true, '()' will be appended to :func: etc. cross-reference text.
-#add_function_parentheses = True
+add_function_parentheses = True
 
 # If true, the current module name will be prepended to all description
 # unit titles (such as .. function::).
-#add_module_names = True
+add_module_names = True
 
 # If true, sectionauthor and moduleauthor directives will be shown in the
 # output. They are ignored by default.
@@ -106,10 +109,10 @@ html_theme = 'default'
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-#html_title = None
+html_title = u'Documentación oficial de Plone en Español'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
-#html_short_title = None
+html_short_title = u'Documentación de Plone en Español'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
@@ -131,7 +134,7 @@ html_last_updated_fmt = '%d de %b del %Y'
 
 # If true, SmartyPants will be used to convert quotes and dashes to
 # typographically correct entities.
-#html_use_smartypants = True
+html_use_smartypants = True
 
 # Custom sidebar templates, maps document names to template names.
 #html_sidebars = {}
@@ -147,10 +150,10 @@ html_last_updated_fmt = '%d de %b del %Y'
 #html_use_index = True
 
 # If true, the index is split into individual pages for each letter.
-#html_split_index = False
+html_split_index = False
 
 # If true, links to the reST sources are added to the pages.
-#html_show_sourcelink = True
+html_show_sourcelink = True
 
 # If true, an OpenSearch description file will be output, and all pages will
 # contain a <link> tag referring to it.  The value of this option must be the
@@ -161,19 +164,20 @@ html_last_updated_fmt = '%d de %b del %Y'
 #html_file_suffix = ''
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'DocumentacionEspanolPlonedoc'
+htmlhelp_basename = 'DocumentacionEspanolPlone'
 
 
 # -- Options for LaTeX output --------------------------------------------------
 
 # The paper size ('letter' or 'a4').
-#latex_paper_size = 'a4'
+latex_paper_size = 'a4'
 
 # The font size ('10pt', '11pt' or '12pt').
-#latex_font_size = '10pt'
+latex_font_size = '10pt'
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
+_stdauthor = r'Leonardo J. Caballero G., editor'
 latex_documents = [
   ('index', 'DocumentacionEspanolPlone.tex', u'Documentación oficial de Plone en Español',
    u'Equipo de Documentación en Español', 'manual'),
@@ -197,7 +201,8 @@ latex_documents = [
 #latex_use_modindex = True
 
 pdf_documents = [
-    ('index', u'documentacion_espanol_plone', u'Documentación oficial de Plone en Español', u'Equipo de Documentación en Español'),
+    ('index', u'documentacion_espanol_plone', 
+     u'Documentación oficial de Plone en Español', u'Equipo de Documentación en Español'),
 ]
 pdf_stylesheets = ['sphinx','kerning','a4']
 pdf_extensions = ['vectorpdf']
