@@ -21,7 +21,7 @@ software Berkeley) y prácticamente cualquier otra plataforma.
 .. toctree::
    :maxdepth: 1
 
-   plone/instalando_plone
+   manuales/instalando_plone
 
 
 Uso de Plone
@@ -38,7 +38,7 @@ y administración de elementos de Plone.
    :maxdepth: 1
 
 
-   Manual de Usuario de Plone 3 <manual-usuario/plone3/index>
+   Manual de Usuario de Plone 3 <manuales/usando_plone3/index>
 ..
    Manual de Usuario de Plone 2.5 (En proceso) 
    Manual de Usuario de Plone 4 (En proceso) 
