@@ -4,6 +4,11 @@
 Instalación de Plone
 ====================
 
+:Autor(es): Leonardo J. Caballero G.
+:Correo(s): leonardocaballero@gmail.com
+:Lanzamiento: |version|
+:Fecha: |today|
+
 Información básica para la instalación de Plone en Windows, OS X, Linux, BSD
 (distribución de software Berkeley) y prácticamente cualquier otra
 plataforma.
@@ -948,6 +953,11 @@ Después de que su sitio se haya creado puede acceder a el mediante esta URL:
 *http://localhost:8080/Plone*, donde "Plone" es la identificación de su
 sitio.
 
+Referencias
+===========
+
+- `Instalando Plone con el Instalador Unificado`_.
+
 .. _esta pagina: http://plone.org/products
 .. _aquí: http://plone.org/documentation/kb/installing-plone-with-the-unified-installer/command-line-options
 .. _virtualenv: http://pypi.python.org/pypi/virtualenv/
@@ -955,3 +965,5 @@ sitio.
 .. _este documento: http://plone.org/documentation/kb/using-buildout-on-windows
 .. _Catapult Solutions: http://plone.org/documentation/manual/installing-plone/installing-on-windows-old/www.catapultsolutions.net
 .. _http://plone.org/products/plone: http://plone.org/products/plone
+.. _Instalando Plone con el Instalador Unificado : http://plone.org/countries/conosur/documentacion/instalando-plone-3-con-el-instalador-unificado
+
