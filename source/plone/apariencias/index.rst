@@ -15,3 +15,4 @@ Existen diversos enfoques de realizar temas y pieles y sus respectvas herramient
    :maxdepth: 2
 
    referencias-temas/index
+   deliverance/index
