@@ -85,17 +85,16 @@ deliverance http://localhost:5000/?deliv_log o bien reiniciando el servicio para
 
     $ ./bin/deliverance-proxy rules.xml
 
-* A continuación un ejemplo sobre como reemplazar el logo de ``Plone`` por el del ``tema`` para 
-esto identificaremos el atributo mediante selectores ``CSS`` a través de ``firebug`` *
+* A continuación un ejemplo sobre como reemplazar el logo de ``Plone`` por el del ``tema`` para esto identificaremos el atributo mediante selectores ``CSS`` a través de ``firebug`` *
 
 .. image:: ./apariencia_ident2.png
-   :align:   center
+   :align: center
    :alt: identificando selectores CSS
 
 *Identificando atributos mediante selectores CSS a través de firebug el identificador del logo del tema*
 
 .. image:: ./apariencia_ident1.png
-   :align:   center
+   :align: center
    :alt: identificando selectores CSS
 
 Esta regla nos permite reemplazar el logo
@@ -128,7 +127,7 @@ La aplicación de estas reglas dan como resultado que la integración con ``Plon
 el ``tema`` luzca de esta forma:
 
 .. image:: ./apariencia_plone.png
-   :align:   center
+   :align: center
    :alt: Integración de Plone con el Tema
 
 Como aplicar temas a diferentes secciones del contenido

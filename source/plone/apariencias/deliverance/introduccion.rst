@@ -78,11 +78,9 @@ Es recomendable poseer conocimiento en las siguientes conceptos/tecnologías/her
 
 Beneficios
 ==========
-- Los diseñadores Web no necesitan aprender el sistema manejador de contenidos ``CMS``, 
-el ``Framework`` o sistema de temas de un sitio/aplicación Web.
+- Los diseñadores Web no necesitan aprender el sistema manejador de contenidos ``CMS``, el ``Framework`` o sistema de temas de un sitio/aplicación Web.
 
-- Se puede unificar el diseño de múltiples aplicaciones Web con un diseño unificado 
-aplicado a wikis, blogs, contenido estático ``HTML``, entre otros.
+- Se puede unificar el diseño de múltiples aplicaciones Web con un diseño unificado aplicado a wikis, blogs, contenido estático ``HTML``, entre otros.
 
 .. note::
 
