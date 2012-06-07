@@ -21,15 +21,15 @@ paso simplemente es una referencias sobre estilos de trabajo.
    :maxdepth: 3
 
    intro
-   comienzo-rapido
+   comienzo_rapido
    enfoques
    herramientas
-   construyendo-bloques
+   construyendo_bloques
    pagina
    elementos
-   donde-esta-que
+   donde_esta_que
    imagenes
-   tema-basado-en-regla
+   tema_basado_en_regla
    
 
 Referencias

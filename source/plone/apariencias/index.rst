@@ -14,5 +14,5 @@ Existen diversos enfoques de realizar temas y pieles y sus respectvas herramient
 .. toctree::
    :maxdepth: 2
 
-   referencias-temas/index
+   referencias_temas/index
    deliverance/index
