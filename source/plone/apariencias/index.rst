@@ -3,8 +3,13 @@
 .. _introduccion_apariencias:
 
 ===================================
-Apariencias, Temas, Pieles en Plone 
+Apariencias, temas, pieles en Plone
 ===================================
+
+:Autor(es): Luis Sumoza, Mario Picca Montilla, Leonardo J. Caballero G.
+:Correo(s): lsumoza@gmail.com, mariopicca@gmail.com, leonardocaballero@gmail.com
+:Lanzamiento: |version|
+:Fecha: |today|
 
 Introducción
 ============
