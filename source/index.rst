@@ -200,13 +200,13 @@ de Plone que se quiera emprender.
 .. toctree::
    :maxdepth: 1
 
-   buildout/replicacion-de-proyectos-python
-   buildout/hola-mundo-en-zc-buildout
-   buildout/recipes-buildout
-   buildout/programar-tareas-con-crontab
-   buildout/rotar-archivos-log
-   buildout/plone3
-   buildout/plone-esquema-alta-disponibilidad
+   buildout/replicacion_proyectos_python
+   buildout/hola_mundo_zcbuildout
+   buildout/recipes_buildout
+   buildout/programar_tareas_crontabs
+   buildout/rotar_archivos_log
+   buildout/plone3_zcbuildout
+   buildout/plone_esquema_alta_disponibilidad
 
 
 Administración de Zope
