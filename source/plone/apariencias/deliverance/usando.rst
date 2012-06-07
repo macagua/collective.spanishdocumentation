@@ -6,15 +6,27 @@
 Guía de Uso
 ===========
 
+Esta es una guía rápida de uso de ``Deliverance``.
+
 Siete pasos para su uso
 =======================
- 1) Ejecutar el servicio de ``Deliverance``.
- 2) Preparar los archivos ``HTML/CSS`` de su tema.
- 3) Debe colocar los archivos en una carpeta, normalmente dentro del proyecto ``Deliverance`` llamada ``static``.
- 4) Identificar los selectores ``CSS`` de los elementos en el sitio/aplicación Web como fuente de datos que se desea mapear al tema estático.
- 5) Identificar los selectores ``CSS`` dentro del tema que servirán como marcadores de posición para los elementos dinámicos traídos desde la fuente de contenidos.
- 6) Crear un archivo de reglas que integre los elementos de la fuente de contenido en los marcadores de posición del tema.
- 7) Configurar el ``servidor host`` al ``Proxy inverso`` de ``Deliverance``.
+
+Esta secuencia de siete pasos le permite a usted usar ``Deliverance``, 
+como se describe a continuación:
+
+#. Ejecutar el servicio de ``Deliverance``.
+
+#. Preparar los archivos ``HTML/CSS`` de su tema.
+
+#. Debe colocar los archivos en una carpeta, normalmente dentro del proyecto ``Deliverance`` llamada ``static``.
+
+#. Identificar los selectores ``CSS`` de los elementos en el sitio/aplicación Web como fuente de datos que se desea mapear al tema estático.
+
+#. Identificar los selectores ``CSS`` dentro del tema que servirán como marcadores de posición para los elementos dinámicos traídos desde la fuente de contenidos.
+
+#. Crear un archivo de reglas que integre los elementos de la fuente de contenido en los marcadores de posición del tema.
+
+#. Configurar el ``servidor host`` al ``Proxy inverso`` de ``Deliverance``.
 
 Se recomienda el navegador ``Firefox`` e instalar el complemento llamado `Firebug`_, 
 el cual nos permitirá identificar de manera rápida y simple los identificadores ``CSS`` 
@@ -33,38 +45,31 @@ o como por ejemplo este documento. Se puede hacer uso de las reglas con los iden
 ``CSS`` o bien usando expresiones ``Xpath`` en el caso de que el elemento no tenga un 
 identificador ``CSS``.
 
-- Los atributos identificados con ``id`` se invocan con el siguiente carácter: ``#``
-- Los atributos identificados con una clase ``class`` se invocan con el siguiente carácter: ``.`` 
+ * Los atributos identificados con ``id`` se invocan con el siguiente carácter: ``#``
+ * Los atributos identificados con una clase ``class`` se invocan con el siguiente carácter: ``.`` 
 
-**Ejemplos de la aplicación de reglas usando un Plone como fuente de contenidos**.
+Usando un Plone como fuente de contenidos
+=========================================
 
-* Para esto debemos activar el entorno virtual ``Virtualenv``.
-
-.. code-block:: console
-
-    $ source $HOME/virtualenv/python2.4/bin/activate 
-
-* Luego de esto ubicarse en el directorio raíz del ``Deliverancedemo`` y realizar el 
-siguiente comando para levantar una instancia de ``Plone``.
+Para esto iniciar una instancia de ``Plone``, con el siguiente comando:
 
 .. code-block:: console
 
-    $ cd $HOME/proyectos/deliverancedemo/
     $ ./bin/instance start
 
-Usted debería ver algo como esto
+Usted debería ver algo como esto:
 
 .. code-block:: console
 
     . daemon process started, pid=2749
 
-* Ahora activaremos el servicio de ``Deliverance``.
+Ahora active el servicio de ``Deliverance``, con el siguiente comando:
 
 .. code-block:: console
 
     $ ./bin/deliverance-proxy rules.xml
 
-Usted debería ver algo como esto
+Usted debería ver algo como esto:
 
 .. code-block:: console
 
@@ -72,20 +77,23 @@ Usted debería ver algo como esto
         after login go to http://localhost:5000/?deliv_log
     serving on http://localhost:5000
 
-* Basándonos en la configuración anterior es recomendable abrir 2 ventanas del navegador 
-una con la fuente de contenido http://localhost:8080 y otra con el ``tema`` http://localhost:5000
-
-* Luego de realizar estos pasos ya se puede empezar a aplicar las reglas para ello debemos 
-modificar el archivo ``rules.xml``, se puede hacer modificándolo directamente y para ver los 
-cambios solo se debe actualizar la pagina http://localhost:5000 presionando ``f5`` o dando clic 
-en el navegador, también se pueden ver y aplicar las reglas desde la consola de depuración de 
-deliverance http://localhost:5000/?deliv_log o bien reiniciando el servicio para visualizarlos
+Basándonos en la configuración anterior es recomendable abrir 2 ventanas del 
+navegador una con la fuente de contenido http://localhost:8080 y otra con 
+el ``tema`` http://localhost:5000
+   
+Luego de realizar estos pasos ya se puede empezar a aplicar las reglas para ello 
+debemos modificar el archivo ``rules.xml``, se puede hacer modificándolo directamente 
+y para ver los cambios solo se debe actualizar la pagina http://localhost:5000 
+presionando ``f5`` o dando clic en el navegador, también se pueden ver y aplicar las 
+reglas desde la consola de depuración de deliverance http://localhost:5000/?deliv_log 
+o bien reiniciando el servicio para visualizarlos
 
 .. code-block:: console
 
     $ ./bin/deliverance-proxy rules.xml
 
-* A continuación un ejemplo sobre como reemplazar el logo de ``Plone`` por el del ``tema`` para esto identificaremos el atributo mediante selectores ``CSS`` a través de ``firebug`` *
+A continuación un ejemplo sobre como reemplazar el logo de ``Plone`` por el del ``tema`` 
+para esto identificaremos el atributo mediante selectores ``CSS`` a través de ``firebug`` *
 
 .. image:: ./apariencia_ident2.png
    :align: center
