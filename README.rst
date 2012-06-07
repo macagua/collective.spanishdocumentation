@@ -1,3 +1,5 @@
+.. -*- coding: utf-8 -*-
+
 =============================================
 Documentación comunitaria de Plone en Español
 =============================================
@@ -15,12 +17,12 @@ en GitHub.com "`collective.spanishdocumentation`_". Si usted tiene una
 credenciales en este servidor y desea convertirse en un colaborador ejecute 
 el siguiente comando: ::
 
-  $ git clone git@github.com:macagua/collective.spanishdocumentation.git collective.spanishdocumentation
+  $ git clone git@github.com:collective/collective.spanishdocumentation.git collective.spanishdocumentation
 
 Si usted no tiene las credenciales de acceso al repositorio Git en GitHub.com "`collective.spanishdocumentation`_" o simplemente solo desea obtener y compilar 
 esta documentación ejecute el siguiente comando: ::
 
-  $ git clone https://github.com/macagua/collective.spanishdocumentation.git collective.spanishdocumentation
+  $ git clone https://github.com/collective/collective.spanishdocumentation.git collective.spanishdocumentation
 
 Crear entorno virtual de Python para reconstruir este proyecto: ::
 
@@ -153,6 +155,12 @@ la imagen a tamaño del papel final.
    .. gs-map.mm: imagen de mapa mental de los servicios de GenericSetup. Creado con FreeMind
 
    .. image:: gs-map.png
+      :align: center
+      :alt: imagen de mapa mental de los servicios de GenericSetup
+
+   .. figure::  screenshot.jpg
+      :align:   center
+      :alt: Captura de pantalla del programa de mapa mental
 
 **Aplicaciones gráficas recomendadas**
 
@@ -187,7 +195,7 @@ a veces, mejor. Por lo tanto, todo se debe reiniciar ejecutando el comando ``mak
 dentro del directorio ``collective.spanishdocumentation/sphinx/build/``.
 
 
-.. _collective.spanishdocumentation: https://github.com/macagua/collective.spanishdocumentation
+.. _collective.spanishdocumentation: https://github.com/collective/collective.spanishdocumentation
 .. _fundamentos de Sphinx: http://sphinx.pocoo.org/contents.html
 .. _Graphviz: http://www.graphviz.org/
 .. _rst.el: http://svn.berlios.de/svnroot/repos/docutils/trunk/docutils/tools/editors/emacs/rst.el
