@@ -13,12 +13,12 @@ comunes en aplicaciones web con Plone.
 .. toctree::
    :maxdepth: 1
 
-   hola-mundo
-   utilizando-z3c.form
-   mostrar-data-sqlalchemy
-   aplicacion-crud
+   hola_mundo
+   utilizando_z3cform
+   mostrar_data_sqlalchemy
+   aplicacion_crud
    creando_temas_diazo
-   google-charts
-   google-translation
+   google_charts
+   google_translation
    soap
 
