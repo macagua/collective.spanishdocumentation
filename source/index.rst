@@ -219,16 +219,16 @@ sitio de Plone.
 .. toctree::
    :maxdepth: 1
 
-   zope/cli-zope
-   zope/configuraciones-generales
-   zope/configurar-zope-plone-como-demonio
-   zope/zope-como-servidor-ftp
-   zope/zope-como-servidor-webdav
-   zope/puntos-montaje-zodb-sitios-plone
-   zope/compactar-zodb
-   zope/importar-exportar-plone
-   zope/instancia-debug-zope
-   zope/zope-plone-detras-servidor-web
+   zope/cli_zope
+   zope/configuraciones_generales
+   zope/configurar_zope_como_demonio
+   zope/zope_como_servidor_ftp
+   zope/zope_como_servidor_webdav
+   zope/puntos_montaje_zodb
+   zope/compactar_zodb
+   zope/importar_exportar_plone
+   zope/instancia_debug_zope
+   zope/zope_plone_detras_servidor_web
 
 Tecnologías de Zope
 -------------------
@@ -241,10 +241,10 @@ conocer diversas tecnologías provenientes de estos sistemas.
    :maxdepth: 1
 
    zope/zca/zca-es
-   zope/zpt
-   zope/zcatalog
-   zope/workflow
-   zope/gs
+   zope/zope_page_templates
+   zope/herramienta_zcatalog
+   zope/flujo_de_trabajo
+   zope/perfiles_genericsetup
 
 
 Temáticas diversas de Plone
