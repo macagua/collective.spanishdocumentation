@@ -1,7 +1,9 @@
 .. -*- coding: utf-8 -*-
 
+.. _producto_policy:
+
 ========================================
-Creacion de un producto de configuración
+Creación de un producto de configuración
 ========================================
 
 .. contents :: :local:
@@ -24,7 +26,7 @@ de una organización y puede incluir:
 * Pasos adicionales a la instalación del producto, como creación de cuentas de
   usuarios y contenido personalizado.
 * Portlets utilizados en el sitio.
-* Workflows generales de la organización.
+* Flujo de trabajos generales de la organización.
 
 Producto de configuración
 =========================
@@ -34,19 +36,18 @@ de paquete para Plone proporcionado por paster:
 
 .. code-block:: sh
 
-    $ paster create -t plone ejemplo.policy
+    $ paster create -t plone cliente1.policy
     Selected and implied templates:
        ZopeSkel#basic_namespace A project with a namespace package
        ZopeSkel#plone                    A Plone project
     Variables:
-       egg:        ejemplo.policy
-       package: ejemplopolicy
-       project: ejemplo.policy
-    Enter namespace_package (Namespace package (like plone)) ['plone']: ejemplo
-    el espacio de nombres se usa para poder agrupar varios paquetes bajo un
-    mismo nombre
+       egg:     cliente1.policy
+       package: cliente1policy
+       project: cliente1.policy
+    Enter namespace_package (Namespace package (like plone)) ['plone']: cliente1
+    <el espacio de nombres se usa para poder agrupar varios paquetes bajo un mismo nombre>
     Enter package (The package contained namespace package (like example)) ['example']: policy
-    el nombre del paquete en sí
+    <el nombre del paquete en sí>
     Enter zope2product (Are you creating a Zope 2 Product?) [False]: True
     <siempre debe ser True para funcionar en Zope 2>
     Enter version (Version) ['0.1']:
@@ -59,8 +60,7 @@ de paquete para Plone proporcionado por paster:
     Enter keywords (Space-separated keywords/tags) ['']:
     Enter url (URL of homepage) ['http://svn.plone.org/svn/plone/plone.example']:
     Enter license_name (License name) ['GPL']:
-    Enter zip_safe (True/False: if the package can be distributed as a .zip file)
-    [False]:
+    Enter zip_safe (True/False: if the package can be distributed as a .zip file) [False]:
     <debe ser False para funcionar bien en Zope 2>
     Creating template basic_namespace
     ...
@@ -69,8 +69,8 @@ de paquete para Plone proporcionado por paster:
 Este comando genera un directorio de distribución donde se encuentra la
 información y código para distribuir el paquete resultante como egg. Dentro de
 ese directorio se encuentra un subdirectorio con el espacio de nombres general
-(en este ejemplo sería 'ejemplo') y dentro de ese último el verdadero directorio
-del producto para Zope (en este ejemplo, 'policy').
+(en este ejemplo sería 'cliente1') y dentro de ese último el verdadero directorio
+del producto para Zope (en este cliente1, 'policy').
 
 Dentro del directorio del producto se encuentran los dos archivos
 imprescindibles para crear un producto para Zope 2, junto con un esqueleto de
@@ -87,7 +87,7 @@ configuración de Generic Setup:
 
 .. code-block:: sh
 
-    $ cd ejemplo.policy/ejemplo/policy
+    $ cd cliente1.policy/cliente1/policy
     $ mkdir profiles
     $ mkdir profiles/default
 
@@ -98,9 +98,9 @@ configure.zcml:
 
     <genericsetup:registerProfile
          name="default"
-         title="UNAM site policy"
+         title="Cliente1 site policy"
          directory="profiles/default"
-         description="Turn a Plone site into the UNAM site."
+         description="Turn a Plone site into the Cliente1 site."
          provides="Products.GenericSetup.interfaces.EXTENSION"
          />
 
@@ -136,7 +136,7 @@ la raíz del producto, con el siguiente código:
     from Products.CMFCore.utils import getToolByName
 
     def setupVarious(context):
-        if context.readDataFile('ejemplo.policy_various.txt') is None:
+        if context.readDataFile('cliente1.policy_various.txt') is None:
             return
     site = context.getSite()
     # aquí va el código especial
@@ -145,7 +145,7 @@ El método setupVarious es donde se coloca el código especial para la
 instalación, que puede hacer cualquier cosa que se necesite dentro del portal.
 Para prevenir la ejecución de este código durante la instalación de otros
 productos, se agrega un archivo de texto vacío, llamado
-``ejemplo.policy_various.txt``, dentro de profiles/setup y se verifica su
+``cliente1.policy_various.txt``, dentro de profiles/setup y se verifica su
 existencia dentro de este método.
 
 Para enlazar este código con los pasos de importación, existe un paso especial
@@ -157,10 +157,10 @@ profiles/default:
 
     <?xml version="1.0"?>
     <import-steps>
-       <import-step id="ejemplo.policy.various"
+       <import-step id="cliente1.policy.various"
                     version="20080625-01"
-                    handler="ejemplo.policy.setuphandlers.setupVarious"
-                    title="UNAM Policy: miscellaneous import steps">
+                    handler="cliente1.policy.setuphandlers.setupVarious"
+                    title="Cliente1 Policy: miscellaneous import steps">
          <dependency step="plone-content" />
          Various import steps that are not handled by GS import/export
          handlers.

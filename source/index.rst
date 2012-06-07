@@ -256,10 +256,10 @@ sección tocaremos algunos de ellos.
 .. toctree::
    :maxdepth: 1
 
-   plone/productos
-   plone/policy
-   plone/tema
-   plone/productos-adicionales/index
+   plone/desarrollar_productos
+   plone/crear_producto_policy
+   plone/crear_producto_tema
+   plone/instalar_productos/index
    plone/tutoriales/index
 
 Otros recursos

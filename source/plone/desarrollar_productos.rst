@@ -1,5 +1,7 @@
 .. -*- coding: utf-8 -*-
 
+.. _productos_diversos:
+
 ============================================
 Diversos productos a desarrollar con Plone 3
 ============================================
@@ -31,13 +33,26 @@ La estructura del código que se recomienda incluye las siguientes partes:
     la presentación visual del sitio. Cada uno puede incluir:
 
       * Estilos de CSS.
-      * Javascript.
-      * Imágenes.
-      * Templates de Plone modificados.
-      * Templates originales del tema.
+      * Archivos de Javascript.
+      * Archivos de Imágenes.
+      * Plantillas de Plone modificados.
+      * Plantillas originales del tema.
       * Vistas y viewlets especiales.
+      
+    Para crear este producto consulte el articulo :ref:`Creación de un paquete de tema <producto_tema>`.
 
-  Producto guía (policy product)
+  Productos de contenido
+    Uno o varios productos que definen los tipos de contenido que representan
+    la base del sitio web.
+
+      * Definición de tipos y campos.
+      * Flujo de trabajos específicos para un tipo de contenido.
+      * Vistas y viewlets especiales para un tipo de contenido.
+      * Imágenes y estilos propios del contenido.
+      * Portlets propios del contenido.
+      * Índices y metadatos del catálogo para cada tipo utilizado.
+
+  Producto de configuración (policy product)
     Incluye toda la configuración general del sitio. Representa las reglas
     generales de manejo de sitios Plone de una organización y puede incluir:
 
@@ -49,24 +64,15 @@ La estructura del código que se recomienda incluye las siguientes partes:
       * Pasos adicionales a la instalación del producto, como creación de
         cuentas de usuarios y contenido personalizado.
       * Portlets utilizados en el sitio.
-      * Workflows generales de la organización.
-
-  Productos de contenido
-    Uno o varios productos que definen los tipos de contenido que representan
-    la base del sitio web.
-
-      * Definición de tipos y campos.
-      * Workflows específicos para un tipo de contenido.
-      * Vistas y viewlets especiales para un tipo de contenido.
-      * Imágenes y estilos propios del contenido.
-      * Portlets propios del contenido.
-      * Índices y metadatos del catálogo para cada tipo utilizado.
+      * Flujo de trabajos generales de la organización.
+      
+    Para crear este producto consulte el articulo :ref:`Creación de un producto de configuración <producto_policy>`.
 
   Productos de apoyo
     Uno o varios productos que realicen funciones no específicamente
     asociadas al contenido.
 
-      * Utilerías (herramientas tipo portal_xxx).
+      * Utilerías (herramientas tipo *portal_xxx*).
       * Portlets generales.
       * Vistas y viewlets especiales.
       * Funcionalidades que extiendan Plone.

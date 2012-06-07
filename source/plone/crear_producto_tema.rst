@@ -1,7 +1,9 @@
 .. -*- coding: utf-8 -*-
 
+.. _producto_tema:
+
 ==============================
-Creacion de un paquete de tema
+Creación de un paquete de tema
 ==============================
 
 .. contents :: :local:
@@ -62,20 +64,20 @@ nombre del paquete que crearemos. El template utiliza una estructura de
 directorios de dos niveles, por lo que hay que usar un nombre compuesto. Por
 lo general, la primera parte del nombre define la `marca` o la categoría
 general del paquete y la segunda parte el nombre "verdadero" del mismo. En
-este ejemplo el nombre es `plonetheme.ejemplo`:
+este ejemplo el nombre es `plonetheme.cliente1`:
 
 .. code-block:: sh
 
-    $ paster create -t plone3_theme plonetheme.ejemplo
+    $ paster create -t plone3_theme plonetheme.cliente1
     Selected and implied templates:
       ZopeSkel#basic_namespace  A basic Python project with a namespace package
       ZopeSkel#plone            A project for Plone products
       ZopeSkel#plone3_theme     A theme for Plone 3
 
     Variables:
-      egg:      plonetheme.ejemplo
-      package:  plonethemeejemplo
-      project:  plonetheme.ejemplo
+      egg:      plonetheme.cliente1
+      package:  plonethemecliente1
+      project:  plonetheme.cliente1
 
 A continuación, paster realiza algunas preguntas para personalizar la
 generación del paquete. La primera es si deseamos contestar todas las
@@ -89,12 +91,12 @@ valores por omisión son los mismos que pasamos arriba, basta presiona la
 tecla `enter`::
 
     Namespace Package Name (Name of outer namespace package) ['plonetheme']: 
-    Package Name (Name of the inner namespace package) ['ejemplo']: 
+    Package Name (Name of the inner namespace package) ['cliente1']: 
 
 A continuación necesitamos dar el nombre del skin que se mostrara en los
 paneles de control de Plone para referirse a nuestro paquete::
 
-    Skin Name (Name of the theme (human facing, added to portal_skins)) ['']: Tema de Ejemplo
+    Skin Name (Name of the theme (human facing, added to portal_skins)) ['']: Tema de cliente1
 
 La siguiente pregunta permite definir el skin base para el nuestro, desde
 donde se copiaran todas las capas registradas, de manera que no sea necesario
@@ -124,7 +126,7 @@ al usuario la versión instalada del producto::
 
 Después, se pide una corta descripción del tema::
 
-    Description (One-line description of the project) ['An installable theme for Plone 3']: Tema de Ejemplo
+    Description (One-line description of the project) ['An installable theme for Plone 3']: Tema de cliente1
 
 Algunos temas requieren además de la apariencia visual modificar la
 configuración del sitio de Plone, para lo que es necesario incluir un perfil
@@ -137,7 +139,7 @@ el paquete a un repositorio como el Python Package Index::
 
     Long Description (Multi-line description (in ReST)) ['']: 
     Author (Name of author for project) ['']: Juan Perez
-    Author Email (Email of author for project) ['']: jperez@ejemplo.com
+    Author Email (Email of author for project) ['']: jperez@cliente1.com
     Keywords (List of keywords, space-separated) ['web zope plone theme']: 
     Project URL (URL of the homepage for this project) ['http://svn.plone.org/svn/collective/']: 
     Project License (Name of license for the project) ['GPL']: 
