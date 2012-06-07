@@ -17,6 +17,7 @@ comunes en aplicaciones web con Plone.
    utilizando-z3c.form
    mostrar-data-sqlalchemy
    aplicacion-crud
+   creando_temas_diazo
    google-charts
    google-translation
    soap
