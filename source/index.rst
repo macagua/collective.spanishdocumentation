@@ -156,7 +156,7 @@ eso está sección que se dedica a explicar sus casos de uso.
 .. toctree::
    :maxdepth: 2
 
-   python/creacion-de-entornos-virtuales-python
+   python/creacion_entornos_virtuales_python
 
 
 Setuptools / Distribute
@@ -171,7 +171,7 @@ explicar sus diferencias.
    :maxdepth: 1
 
    python/setuptools
-   python/distribute-y-pip
+   python/distribute_pip
 
 
 Esqueletos de proyectos
@@ -184,8 +184,8 @@ con las buenas practicas implementadas en sus proyectos.
 .. toctree::
    :maxdepth: 1
 
-   python/skel-proyectos-python
-   python/skel-proyectos-plone
+   python/skel_proyectos_python
+   python/skel_proyectos_plone
 
 
 Buildout y sus complementos
