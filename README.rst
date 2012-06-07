@@ -11,16 +11,16 @@ Obtener y compilar la documentación
 ===================================
 
 El almacenamiento de este material está disponible en un repositorio Git 
-en GitHub.com "`collective.spanishdocumentacion`_". Si usted tiene una 
+en GitHub.com "`collective.spanishdocumentation`_". Si usted tiene una 
 credenciales en este servidor y desea convertirse en un colaborador ejecute 
 el siguiente comando: ::
 
-  $ git clone git@github.com:collective/collective.spanishdocumentacion.git collective.spanishdocumentacion
+  $ git clone git@github.com:macagua/collective.spanishdocumentation.git collective.spanishdocumentation
 
-Si usted no tiene las credenciales de acceso al repositorio Git en GitHub.com "`collective.spanishdocumentacion`_" o simplemente solo desea obtener y compilar 
+Si usted no tiene las credenciales de acceso al repositorio Git en GitHub.com "`collective.spanishdocumentation`_" o simplemente solo desea obtener y compilar 
 esta documentación ejecute el siguiente comando: ::
 
-  $ git clone https://github.com/collective/collective.spanishdocumentacion.git collective.spanishdocumentacion
+  $ git clone https://github.com/macagua/collective.spanishdocumentation.git collective.spanishdocumentation
 
 Crear entorno virtual de Python para reconstruir este proyecto: ::
 
@@ -34,22 +34,22 @@ Crear entorno virtual de Python para reconstruir este proyecto: ::
 Ahora puede generar la documentación de HTML, con los siguiente comandos: ::
 
   $ source virtualenv/sphinx/bin/activate
-  (sphinx)$ cd collective.spanishdocumentacion/
+  (sphinx)$ cd collective.spanishdocumentation/
   (sphinx)$ python bootstrap.py
   (sphinx)$ ./bin/buildout -vN
   (sphinx)$ ./bin/sphinx
 
-Ahora se puede abrir ``collective.spanishdocumentacion/build/html/index.html`` desde 
+Ahora se puede abrir ``collective.spanishdocumentation/build/html/index.html`` desde 
 su navegador Web favorito.
 
 Para obtener la documentación en PDF ejecute los siguientes comandos: ::
 
   $ source virtualenv/sphinx/bin/activate
-  (sphinx)$ cd ./collective.spanishdocumentacion/build
+  (sphinx)$ cd ./collective.spanishdocumentation/build
   (sphinx)$ make latex
   (sphinx)$ make latexpdf
 
-Ahora se puede abrir ``collective.spanishdocumentacion/build/latex/DocumentacionEspanolPlone.pdf`` 
+Ahora se puede abrir ``collective.spanishdocumentation/build/latex/DocumentacionEspanolPlone.pdf`` 
 con sus programas de visor de PDF favorito (Evince, Acrobat Reader, ...)
 
 
@@ -184,10 +184,10 @@ no se actualiza cuando compilo el documento.
 
 **Respuesta :** El índice de Sphinx es a veces es desorientado y la gestión de la dependencia
 a veces, mejor. Por lo tanto, todo se debe reiniciar ejecutando el comando ``make clean`` 
-dentro del directorio ``collective.spanishdocumentacion/sphinx/build/``.
+dentro del directorio ``collective.spanishdocumentation/sphinx/build/``.
 
 
-.. _collective.spanishdocumentacion: https://github.com/collective/collective.spanishdocumentacion
+.. _collective.spanishdocumentation: https://github.com/macagua/collective.spanishdocumentation
 .. _fundamentos de Sphinx: http://sphinx.pocoo.org/contents.html
 .. _Graphviz: http://www.graphviz.org/
 .. _rst.el: http://svn.berlios.de/svnroot/repos/docutils/trunk/docutils/tools/editors/emacs/rst.el
