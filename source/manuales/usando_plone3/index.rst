@@ -1,3 +1,5 @@
+.. -*- coding: utf-8 -*-
+
 Manual de Usuario de Plone 3
 ============================
 
