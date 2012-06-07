@@ -55,7 +55,7 @@ agilicen nuestro desarrollo.
    :maxdepth: 1
 
    plone/apariencias/index
-   Realizando pruebas en Plone <plone/haciendo-pruebas/index>
+   Realizando pruebas en Plone <plone/haciendo_pruebas/index>
 
 
 ==========================
