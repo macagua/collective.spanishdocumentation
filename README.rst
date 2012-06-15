@@ -178,9 +178,10 @@ de Sphinx y reStructuredText.
 Ejemplos de documentación en Sphinx
 ===================================
 
-* `Python documentation <http://docs.python.org/>`_
-* `Zope documentation <http://docs.zope.org/zope2/index.html>`_
-* `D:YAML documentation <http://dyaml.alwaysdata.net/static/html/doc_0.4/index.html>`_
+* `Python documentation`_
+* `Zope documentation`_
+* `Plone Developer Documentation`_
+* `D:YAML documentation`_
 
 
 
@@ -199,3 +200,8 @@ dentro del directorio ``collective.spanishdocumentation/sphinx/build/``.
 .. _fundamentos de Sphinx: http://sphinx.pocoo.org/contents.html
 .. _Graphviz: http://www.graphviz.org/
 .. _rst.el: http://svn.berlios.de/svnroot/repos/docutils/trunk/docutils/tools/editors/emacs/rst.el
+.. _Python documentation: http://docs.python.org/
+.. _Zope documentation: http://docs.zope.org/zope2/index.html
+.. _Plone Developer Documentation: http://collective-docs.plone.org/
+.. _D\:YAML documentation: http://dyaml.alwaysdata.net/static/html/doc_0.4/index.html
+.. _: 

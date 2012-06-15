@@ -1,11 +1,17 @@
 .. -*- coding: utf-8 -*-
 
+.. _distribute_pip:
+
 ================
 Distribute y PIP
 ================
 
-.. contents:: :local:
+:Autor(es): Leonardo J. Caballero G.
+:Correo(s): leonardocaballero@gmail.com
+:Lanzamiento: |version|
+:Fecha: |today|
 
+.. contents:: :local:
 
 .. _que_es_distribute:
 
@@ -18,15 +24,15 @@ las plataformas, plataformas de 64 bits requieren como mínimo de Python 2.4)
 que le permite crear con más facilidad la distribución de paquetes de Python,
 en especial los que tienen las dependencias de otros paquetes.
 
-``Distribute`` se creó porque el `paquete Setuptools`_ ya no se mantiene. Los
+``Distribute`` se creó porque el :ref:`paquete Setuptools <que_es_setuptools>` ya no se mantiene. Los
 paquetes de terceros, es probable que requieran setuptools, que es
 proporcionado por el paquete ``Distribute``. Por lo tanto, en cualquier
-momento si los paquetes dependen del paquete setuptools, ``Distribute``
+momento si los paquetes dependen del :ref:`paquete Setuptools <que_es_setuptools>`, ``Distribute``
 intervendrá para decir que ya ofrece el módulo de ``setuptools``.
 
 .. image:: ./pip_distribute.png
-  :alt: Move from Setuptools to Distribute
   :align: center
+  :alt: Move from Setuptools to Distribute
 
 Estado actual del Empaquetamiento en Python
 -------------------------------------------
@@ -44,9 +50,9 @@ por la cual un pequeño grupo de desarrolladores de Python están trabajando en
 recomienda que en el desarrollado o el uso paquete ``distutils`` puro o el
 paquete ``Distribute`` para empaquetar software Python.
 
-Al mismo tiempo, si un paquete requiere el paquete setuptools, la
+Al mismo tiempo, si un paquete requiere el :ref:`paquete Setuptools <que_es_setuptools>`, la
 recomendación es que instale el paquete ``Distribute``, el cual provee una
-versión más actualizada del paquete setuptools que el `paquete original de Setuptools`_.
+versión más actualizada del :ref:`paquete Setuptools <que_es_setuptools>` que el `paquete original de Setuptools`_.
 
 En el `futuro`_ ``distutils2`` remplazará a ``setuptools`` y ``distutils``,
 le cual también removerá la necesidad de ``Distribute``. El como del estado
@@ -67,8 +73,8 @@ información, por favor, consulte el `Futuro del Empaquetado`_.
   hacer más fácil la vida para todo el mundo (usuarios, administradores de
   paquetes de Sistemas operativos, programadores, etc.).
 
-  Para descargar el vídeo haga clic `aquí`_ (Tamaño 294 mb) y para ver por
-  vídeo Stream consulte la siguiente `página`_.
+  Para descargar el vídeo `haga clic aquí`_ (Tamaño 294 mb) y para ver por
+  vídeo Stream haga `clic aquí`_.
 
 .. _que_es_pip:
 
@@ -77,17 +83,19 @@ información, por favor, consulte el `Futuro del Empaquetado`_.
 
 `pip`_ es una herramienta para instalar y administrar paquetes Python, como
 los que podemos encontrar en el Índice de Paquetes de Python - `PYPI`_. Esta
-herramienta es el remplazo para la famosa herramienta :ref:`que_es_easyinstall` - `easy_install`_. En su
-mayoría se utiliza las mismas técnicas para encontrar los paquetes, por lo
+herramienta es el remplazo para la famosa herramienta :ref:`easy_install <que_es_easyinstall>`. 
+En su mayoría se utiliza las mismas técnicas para encontrar los paquetes, por lo
 que los paquetes que se instalaban usando la herramienta easy_install deben
 ser instalables con la herramienta pip también. Esto significa que usted
 puede utilizar ``pip install SomePackage`` en lugar de ``easy_install
 SomePackage``.
 
 Para poder utilizar el pip, primero debe instalar ``setuptools`` o
-``distribute``. Si utiliza virtualenv, una copia del pip será automáticamente
-instalados en cada entorno virtual que usted crea. pip se puede complementar
-con `virtualenv`_, y se recomienda que utilice `virtualenv para aislar a su instalación`_.
+``distribute``. Si utiliza :ref:`virtualenv <que_es_virtualenv>`, 
+una copia del pip será automáticamente instalados en cada entorno 
+virtual que usted crea. pip se puede complementar con ``virtualenv``, 
+y se recomienda que lo utilice 
+:ref:`para aislar a su instalación <creacion_entornos_virtuales>`.
 
 
 Pip comparado con easy_install
@@ -110,10 +118,6 @@ Pip comparado con easy_install
 -   Ofrece soporte nativo para otros sistemas de control de versiones
     (Git, Mercurial y Bazaar)
 -   Tiene un mecanismo de desinstalación de paquetes.
-
-Simple to define fixed sets of requirements and reliably reproduce a set of
-packages.
-
 -   Fácil de definir conjuntos de requerimientos y reproducir de forma
     fiable un conjunto de paquetes.
 
@@ -270,7 +274,7 @@ se describen algunas formas:
 instalar paquete python usando pip. A continuación se explica un ejemplo de
 configuración zc.buildout con este récipe se puede usar:
 
-1.  El récipe agrega un `virtualenv`_ en el directorio  parts/ de su
+1.  El récipe agrega un :ref:`virtualenv <que_es_virtualenv>` en el directorio  parts/ de su
     instalación buildout, entonces genera este binario para generar un
     scripts  ejecutable Python. Así que tienes un área de pruebas **limpia**
     de instalaciones previas.
@@ -279,7 +283,7 @@ configuración zc.buildout con este récipe se puede usar:
 3.  Por supuesto, usted puede instalar algunos archivos .pybundle .
 4.  Usted puede construir paquetes desde un repositorio SVN con la opción
     editables .
-5.  Cada linea encontrada en la opción install es la última parte de un
+5.  Cada linea encontrada en la opción ``install`` es la última parte de un
     comando de ``pip``. Esta le permitirá a usted construir paquetes eggs con
     sus dependencias. Por ejemplo, instalar la librería `lxml`_ en un área de
     prueba pura, sin tener  instalado libxml2 y libxslt, usted  necesita
@@ -340,25 +344,22 @@ Un ejemplo del archivo :file:`requirements.txt` puede ser el siguiente: ::
 Referencias
 ===========
 
+-   El articulo `Distribute y pip`_ desde la comunidad Plone Venezuela.
 -   `Installing the Package Tools`_.
 -   `pip v1.0.2 documentation`_.
 -   `Combine zc.buildout and pip benefits`_.
 
 .. _Distribute: http://packages.python.org/distribute
-.. _paquete Setuptools: http://pypi.python.org/pypi/setuptools/
 .. _librería estándar: http://guide.python-distribute.org/glossary.html#term-standard-library
 .. _paquete original de Setuptools: http://guide.python-distribute.org/distribute_info_
 .. _futuro: http://guide.python-distribute.org/future.html
 .. _Futuro del Empaquetado: http://guide.python-distribute.org/future.html
 .. _PyCon 2011 - Packaging, from Distutils to Distutils2: http://us.pycon.org/2011/schedule/presentations/81/
 .. _Tarek Ziadé: http://tarekziade.wordpress.com/
-.. _aquí: http://blip.tv/file/get/Pycon-PyCon2011PackagingFromDistutilsToDistutils2191.mp4
-.. _página: http://pycon.blip.tv/file/4880990
+.. _haga clic aquí: http://blip.tv/file/get/Pycon-PyCon2011PackagingFromDistutilsToDistutils2191.mp4
+.. _clic aquí: http://pycon.blip.tv/file/4880990
 .. _pip: http://pypi.python.org/pypi/pip
 .. _PYPI: http://pypi.python.org/pypi
-.. _easy_install: http://peak.telecommunity.com/DevCenter/EasyInstall
-.. _virtualenv: http://pypi.python.org/pypi/virtualenv
-.. _virtualenv para aislar a su instalación: http://www.coactivate.org/projects/ploneve/creacion-de-entornos-virtuales-python
 .. _replica del repositorio PYPI: http://www.coactivate.org/projects/ploneve/instalar-y-configurar-su-propio-repositorio-de-pypi
 .. _gp.recipe.pip: http://pypi.python.org/pypi/gp.recipe.pip
 .. _zc.recipe.egg#scripts: http://pypi.python.org/pypi/zc.recipe.egg#id23
@@ -368,4 +369,4 @@ Referencias
 .. _Installing the Package Tools: http://guide.python-distribute.org/installation.html
 .. _pip v1.0.2 documentation: http://www.pip-installer.org/en/latest/index.html
 .. _Combine zc.buildout and pip benefits: http://www.gawel.org/weblog/en/2008/12/combine-zc.buildout-an-pip-benefits
-
+.. _Distribute y pip: http://www.coactivate.org/projects/ploneve/distribute-y-pip

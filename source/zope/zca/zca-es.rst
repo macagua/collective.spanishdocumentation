@@ -1,3 +1,7 @@
+.. -*- coding: utf-8 -*-
+
+.. _zca-es:
+
 ===================================
 Arquitectura de Componentes de Zope
 ===================================
@@ -4358,3 +4362,11 @@ Ejemplo::
 
   >>> print queryUtility(ISaludador)
   None
+
+
+Referencias
+===========
+
+-   `Arquitectura de componentes Zope`_.
+
+.. _Arquitectura de componentes Zope: http://www.muthukadan.net/docs/zca-es.html

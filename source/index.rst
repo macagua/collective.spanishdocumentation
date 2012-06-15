@@ -156,7 +156,7 @@ eso está sección que se dedica a explicar sus casos de uso.
 .. toctree::
    :maxdepth: 2
 
-   python/creacion_entornos_virtuales_python
+   python/creacion_entornos_virtuales
 
 
 Setuptools / Distribute
@@ -203,7 +203,7 @@ de Plone que se quiera emprender.
    buildout/replicacion_proyectos_python
    buildout/hola_mundo_zcbuildout
    buildout/recipes_buildout
-   buildout/programar_tareas_crontabs
+   buildout/programar_tareas_crontab
    buildout/rotar_archivos_log
    buildout/plone3_zcbuildout
    buildout/plone_esquema_alta_disponibilidad

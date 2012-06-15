@@ -47,7 +47,7 @@ instalación con un punto de montaje para un ZODB.
 2.  Elimine el sitio por defecto de Plone que creado en esta instancia y
     crear un nuevo sitio Plone - le da un **identificador**. (Es posible que
     desee agregar un usuario administrador para el sitio en este punto).
-3.  `Compacte la base de datos`_ y detenga la instancia.
+3.  :ref:`Compacte la base de datos <compactar_zodb>` y detenga la instancia.
 4.  Copie el archivo *Data.fs* de esta instancia en un directorio con el
     mismo **identificador** como el sitio que ha creado.
 5.  Acceda a este directorio creado en la carpeta *var/filestorage* en su
@@ -173,4 +173,3 @@ Referencias
 .. _Instalador Unificado: http://plone.org/countries/conosur/documentacion/instalando-plone-3-con-el-instalador-unificado
 .. _How to mount a Plone Site as a separate Data.fs: http://webteam.medsci.ox.ac.uk/integrators-developers/separatedatafs
 .. _Multiple Plone sites per zope instance - using separate Data.fs files for each one: http://plone.org/documentation/kb/multiple-plone-sites-per-zope-instance-using-separate-data-fs-files-for-each-one
-.. _Compacte la base de datos: http://readthedocs.org/docs/plone-spanish-docs/en/latest/zope/compactar-zodb.html

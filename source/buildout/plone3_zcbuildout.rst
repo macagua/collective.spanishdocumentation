@@ -1,8 +1,15 @@
 .. -*- coding: utf-8 -*-
 
+.. _buildout_plone3:
+
 ==================
 Buildout y Plone 3
 ==================
+
+:Autor(es): Leonardo J. Caballero G.
+:Correo(s): leonardocaballero@gmail.com
+:Lanzamiento: |version|
+:Fecha: |today|
 
 .. contents :: :local:
 
@@ -236,12 +243,20 @@ Un ejemplo de un buildout funcional se muestra a continuación:
   extra-paths = ${zope2:location}/lib/python
   scripts = zopepy
 
-En los comentarios en el codigo se explican las secciones del buildout.
+En los comentarios en el código se explican las secciones del buildout.
+
+
+Artículos relacionados
+======================
+
+.. seealso:: Artículos sobre :ref:`replicación de proyectos Python <python_buildout>`.
 
 
 Referencias
 ===========
 
--   `¿Qué es buildout?`_ desde la comunidad Plone Mexico.
+-   `¿Qué es buildout?`_ desde la comunidad Plone México.
+-   `Replicación de proyectos Python`_ desde la comunidad Plone Venezuela.
 
 .. _¿Qué es buildout?: http://www.plone.mx/docs/buildout.html
+.. _Replicación de proyectos Python: http://coactivate.org/projects/ploneve/replicacion-de-proyectos-python

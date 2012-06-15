@@ -1,8 +1,15 @@
 .. -*- coding: utf-8 -*-
 
+.. _recipe_buildout:
+
 ================
 Récipes Buildout
 ================
+
+:Autor(es): Leonardo J. Caballero G.
+:Correo(s): leonardocaballero@gmail.com
+:Lanzamiento: |version|
+:Fecha: |today|
 
 .. contents:: :local:
 
@@ -41,12 +48,9 @@ Python/Zope/Plone:
   .. code-block:: cfg
 
     [buildout]
-    ...
     parts =
-        ...
         mkdir-config
-        ...
-    ...
+        
     # For options see http://pypi.python.org/pypi/plone.recipe.command
     [mkdir-config]
     recipe = plone.recipe.command
@@ -67,19 +71,16 @@ Python/Zope/Plone:
   .. code-block:: cfg
 
     [buildout]
-    ...
     parts =
-        ...
         plonesite
-        ...
-    ...
+        
     # For options see http://pypi.python.org/pypi/collective.recipe.plonesite
     [plonesite]
     recipe = collective.recipe.plonesite
     site-id = Plone
     instance = instance
     profiles =
-        collective.flowplayer:default
+        collective.myapp:default
 
 
 - `collective.recipe.updateplone`_, es un récipe buildout para actualizar sitios Plone, 
@@ -88,12 +89,9 @@ Python/Zope/Plone:
   .. code-block:: cfg
 
     [buildout]
-    ...
     parts =
-        ...
         update-site
-        ...
-    ...
+        
     # For options see http://pypi.python.org/pypi/collective.recipe.updateplone
     [update-site]
     recipe = collective.recipe.updateplone
@@ -104,7 +102,7 @@ Python/Zope/Plone:
     backup-db = True
     pack-db = True
 
-- `mr.developer`_, es una extensión de **zc.buildout** la cual
+- `mr.developer`_, es una extensión de :ref:`zc.buildout <python_buildout>` la cual
   hace fácil trabajar con buildouts que contiene muchos paquetes que
   contienen gran cantidad de paquetes de los cuales sólo desea desarrollar
   algunos, a continuación un ejemplo de configuración: 
@@ -114,15 +112,15 @@ Python/Zope/Plone:
     [buildout]
     # For options see http://pypi.python.org/pypi/mr.developer
     extensions = mr.developer
-
+    
     auto-checkout =
         my.package
         some.other.package
-    ...
+        
     eggs =
         my.package
         some.other.package
-    ...
+        
     [sources]
     my.package = svn http://example.com/svn/my.package/trunk update=true
     some.other.package = git git://example.com/git/some.other.package.git
@@ -150,10 +148,16 @@ Existe una lista de récipes buildout disponibles en los siguientes enlaces:
 - `Récipes Buidout disponibles en PYPI`_.
 
 
+Artículos relacionados
+======================
+
+.. seealso:: Artículos sobre :ref:`replicación de proyectos Python <python_buildout>`.
+
+
 Referencias
 ===========
 
-- `Gestión de proyectos con Buildout`_.
+- `Gestión de proyectos con Buildout`_ desde la comunidad Plone Venezuela.
 
 .. _collective.recipe.plonesite: http://pypi.python.org/pypi/collective.recipe.plonesite
 .. _collective.recipe.backup: http://pypi.python.org/pypi/collective.recipe.backup

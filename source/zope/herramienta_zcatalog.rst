@@ -1,6 +1,6 @@
 .. -*- coding: utf-8 -*-
 
-.. _zcatalog:
+.. _herramienta_zcatalog:
 
 ========
 ZCatalog

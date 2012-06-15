@@ -596,17 +596,20 @@ Para descargar el código fuente de este ejemplo ejecute el siguiente comando:
 Conclusiones
 ============
 
-Este ejemplo demuestra las capacidades del `zc.buildout`_ como 
+Este ejemplo demuestra las capacidades del :ref:`zc.buildout <python_buildout>` como 
 herramienta para la construcción de la las diversas partes del 
 sitio web en entornos de producción.
+
+
+Artículos relacionados
+======================
+
+.. seealso:: Artículos sobre :ref:`replicación de proyectos Python <python_buildout>`.
 
 
 Referencias
 ===========
 
--   `¿Qué es buildout?`_.
+-   `¿Qué es buildout?`_ desde la comunidad Plone México.
 
-.. _zc.buildout: http://coactivate.org/projects/ploneve/replicacion-de-proyectos-python
-.. _Makefile: http://es.wikipedia.org/wiki/Makefile
-.. _Apache Ant: http://es.wikipedia.org/wiki/Apache_Ant
 .. _¿Qué es buildout?: http://www.plone.mx/docs/buildout.html

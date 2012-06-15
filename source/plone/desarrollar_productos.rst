@@ -1,10 +1,10 @@
 .. -*- coding: utf-8 -*-
 
-.. _productos_diversos:
+.. _desarrollar_productos:
 
-============================================
-Diversos productos a desarrollar con Plone 3
-============================================
+==========================================
+Desarrollar diversos productos con Plone 3
+==========================================
 
 .. contents :: :local:
 

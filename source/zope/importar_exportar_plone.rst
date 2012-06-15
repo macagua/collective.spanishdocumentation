@@ -6,6 +6,11 @@
 Importar y exportar contenido desde el ZMI
 ==========================================
 
+:Autor(es): Leonardo J. Caballero G.
+:Correo(s): leonardocaballero@gmail.com
+:Lanzamiento: |version|
+:Fecha: |today|
+
 El servidor de aplicaciones Zope ofrece copia las partes de la estructura de árbol a través de
 de importación / exportación. Archivo exportado es básicamente un pickle Python que contiene
 el nodo seleccionado y todos los nodos secundarios.

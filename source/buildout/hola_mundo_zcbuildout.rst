@@ -1,15 +1,22 @@
 .. -*- coding: utf-8 -*-
 
+.. _buildout_holamundo:
+
 =========================
 Hola mundo en zc.buildout
 =========================
+
+:Autor(es): Leonardo J. Caballero G.
+:Correo(s): leonardocaballero@gmail.com
+:Lanzamiento: |version|
+:Fecha: |today|
 
 .. contents :: :local:
 
 Descripción general
 ===================
 
-Este es una configuración básica de `buildout`_ que explica como generar un
+Este es una configuración básica de :ref:`buildout <python_buildout>` que explica como generar un
 programa típico `Hola Mundo`_ en Bash script llamado **"hola"** dentro del
 directorio ``bin/`` local a tu entorno de desarrollo y otorgar permisos
 necesarios para la ejecución de este programa.
@@ -18,8 +25,8 @@ necesarios para la ejecución de este programa.
 Instalación
 ===========
 
-Puedes instalar zc.buildout usando `pip`_ (es recomendable hacerlo dentro de
-un `entorno virtual`_):
+Puedes instalar zc.buildout usando :ref:`pip <que_es_pip>` (es recomendable 
+hacerlo dentro de un :ref:`entorno virtual <creacion_entornos_virtuales>`):
 
 .. code-block:: sh
 
@@ -88,7 +95,7 @@ el programa Bash script generado con el siguiente comando:
     hola mundo
 
 Y de esta forma ya tiene generado un programa típico `Hola Mundo`_ en Bash
-script con `zc.buildout`_.
+script con :ref:`zc.buildout <que_es_zcbuildout>`.
 
 
 Descarga código fuente
@@ -104,8 +111,14 @@ Para descargar el código fuente de este ejemplo ejecute el siguiente comando:
 Conclusiones
 ============
 
-Este ejemplo intenta mostrar las capacidades del `zc.buildout`_ como
+Este ejemplo intenta mostrar las capacidades del :ref:`zc.buildout <que_es_zcbuildout>` como
 herramienta alternativa al `Makefile`_ y al `Apache Ant`_.
+
+
+Artículos relacionados
+======================
+
+.. seealso:: Artículos sobre :ref:`replicación de proyectos Python <python_buildout>`.
 
 
 Referencias
@@ -114,11 +127,7 @@ Referencias
 - `Buildout - How to maintain big app stacks without losing your mind`_.
 
 
-.. _buildout: http://coactivate.org/projects/ploneve/replicacion-de-proyectos-python
 .. _Hola Mundo: http://es.wikipedia.org/wiki/Hola_Mundo
-.. _pip: http://coactivate.org/projects/ploneve/distribute-y-pip
-.. _entorno virtual: http://coactivate.org/projects/ploneve/creacion-de-entornos-virtuales-python
 .. _Makefile: http://es.wikipedia.org/wiki/Makefile
 .. _Apache Ant: http://es.wikipedia.org/wiki/Apache_Ant
 .. _Buildout - How to maintain big app stacks without losing your mind: http://www.slideshare.net/djay/buildout-how-to-maintain-big-app-stacks-without-losing-your-mind
-.. _zc.buildout: http://coactivate.org/projects/ploneve/replicacion-de-proyectos-python

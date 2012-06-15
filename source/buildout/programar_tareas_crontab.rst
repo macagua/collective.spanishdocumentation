@@ -1,23 +1,30 @@
 .. -*- coding: utf-8 -*-
 
+.. _buildout_crontab:
+
 ============================
 Programar tareas con crontab
 ============================
+
+:Autor(es): Leonardo J. Caballero G.
+:Correo(s): leonardocaballero@gmail.com
+:Lanzamiento: |version|
+:Fecha: |today|
 
 .. contents :: :local:
 
 Descripción general
 ===================
 
-Este es una configuración de `buildout`_ programar tareas con crontab 
-locales al usuario efectivo del proyecto a tu entorno de desarrollo.
+Este es una configuración de :ref:`zc.buildout <python_buildout>` programar 
+tareas con ``crontab`` locales al usuario efectivo del proyecto a tu entorno de desarrollo.
 
 
 Instalación
 ===========
 
-Puedes instalar zc.buildout usando `pip`_ (es recomendable hacerlo dentro de
-un `entorno virtual`_):
+Puedes instalar zc.buildout usando :ref:`pip <que_es_pip>` (es recomendable hacerlo dentro de
+un :ref:`entorno virtual <creacion_entornos_virtuales>`):
 
 .. code-block:: sh
 
@@ -51,11 +58,8 @@ Puedes cambiarlo a:
   [buildout]
 
   parts =
-      ...
       restart-zope-daily
-      ...
-
-
+      
   # Este récipe ayuda a configurar una tarea de crontab de rotación de archivos log.
   # Para mayor información ver http://pypi.python.org/pypi/z3c.recipe.usercrontab
   [restart-zope-daily]
@@ -65,7 +69,7 @@ Puedes cambiarlo a:
 
 
 Ahora ejecuta el comando buildout disponible dentro del directorio
-*tareas-crontab/bin* con el argumento -v (verbose mode), esto ayudará a que
+``tareas-crontab/bin`` con el argumento -v (verbose mode), esto ayudará a que
 muestre todo los detalles de la construcción del mismo:
 
 .. code-block:: sh
@@ -85,7 +89,7 @@ Ejecute el programa Bash script generado con el siguiente comando:
 
 
 Y de esta forma se ha generado la tarea del ``crontab`` que reinicia 
-la instancia de Zope diariamiente a ls `3 am`.
+la instancia de Zope diariamente a ls `3 am`.
 
 
 Descarga código fuente
@@ -98,14 +102,15 @@ Para descargar el código fuente de este ejemplo ejecute el siguiente comando:
   $ svn co https://svn.plone.org/svn/collective/spanishdocs/trunk/src/buildout/leccion2 tareas-crontab
 
 
+Artículos relacionados
+======================
+
+.. seealso:: Artículos sobre :ref:`replicación de proyectos Python <python_buildout>`.
+
+
 Referencias
 ===========
 
 -   `Buildout - How to maintain big app stacks without losing your mind`_.
 
-
-.. _buildout: http://coactivate.org/projects/ploneve/replicacion-de-proyectos-python
-.. _pip: http://coactivate.org/projects/ploneve/distribute-y-pip
-.. _entorno virtual: http://coactivate.org/projects/ploneve/creacion-de-entornos-virtuales-python
 .. _Buildout - How to maintain big app stacks without losing your mind: http://www.slideshare.net/djay/buildout-how-to-maintain-big-app-stacks-without-losing-your-mind
-.. _zc.buildout: http://coactivate.org/projects/ploneve/replicacion-de-proyectos-python

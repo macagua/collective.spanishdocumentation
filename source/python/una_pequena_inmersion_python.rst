@@ -1,8 +1,15 @@
 .. -*- coding: utf-8 -*-
 
+.. _python_interactivo:
+
 =======================================
 Inmersión al modo interactivo de Python
 =======================================
+
+:Autor(es): Leonardo J. Caballero G.
+:Correo(s): leonardocaballero@gmail.com
+:Lanzamiento: |version|
+:Fecha: |today|
 
 .. contents:: :local:
 

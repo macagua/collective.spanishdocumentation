@@ -1,10 +1,19 @@
 .. -*- coding: utf-8 -*-
 
+.. _python_buildout:
+
 ===============================
 Replicación de proyectos Python
 ===============================
 
+:Autor(es): Leonardo J. Caballero G.
+:Correo(s): leonardocaballero@gmail.com
+:Lanzamiento: |version|
+:Fecha: |today|
+
 .. contents :: :local:
+
+.. _que_es_zcbuildout:
 
 ¿Qué es zc.buildout?
 ====================
@@ -32,16 +41,18 @@ Vocabulario
 
   buildout
     Un conjunto de partes que describe como ensamblar una aplicación.
+
   part
     Un conjunto opciones que le permite a usted construir una pieza de la aplicación.
+
   recipe
     El software usado para crear una parte basada en sus opciones. 
 
 
 Instalación
 ===========
-Puedes instalar `zc.buildout`_ usando `pip`_ (es recomendable hacerlo dentro
-de un `entorno virtual`_):
+Puedes instalar zc.buildout usando :ref:`pip <que_es_pip>` (es recomendable 
+hacerlo dentro de un :ref:`entorno virtual <creacion_entornos_virtuales>`):
 
 .. code-block:: sh
 
@@ -50,14 +61,16 @@ de un `entorno virtual`_):
 
 Configuraciones genéricas
 =========================
-Usted puede agregar las configuraciones genéricas para todos sus proyectos Buildout, para esto debe ejecutar los siguientes comandos:
+Usted puede agregar las configuraciones genéricas para todos sus proyectos 
+Buildout, para esto debe ejecutar los siguientes comandos:
 
 .. code-block:: sh
 
   $ mkdir $HOME/.buildout ; mkdir $HOME/.buildout/{eggs,downloads,zope}
   $ nano $HOME/.buildout/default.cfg
 
-Luego de crear el archivo ``default.cfg`` defina algunas configuraciones de usuario predeterminadas para cualquier parte de su configuración **buildout**:
+Luego de crear el archivo ``default.cfg`` defina algunas configuraciones de 
+usuario predeterminadas para cualquier parte de su configuración :term:`buildout`:
 
 .. code-block:: cfg
 
@@ -118,15 +131,15 @@ Esto creará un nuevo intérprete Python dentro del directorio
 
   $ ./bin/python
 
-Y luego tendrá a disposición en su PythonPath el paquete que instalo
+Y luego tendrá a disposición en su :term:`PYTHONPATH` el paquete que instalo
 `zope.component`_, como se demuestra a continuación: 
 
 .. code-block:: python
 
   >>> import zope.component
 
-Utilizando ``zc.buildout`` con la receta `zc.recipe.egg`_ se puede crear un
-intérprete de Python con los huevos Python especificados.
+Utilizando ``zc.buildout`` con la :term:`recipe` llamado `zc.recipe.egg`_ se puede crear un
+intérprete de Python con los paquetes Egg Python especificados.
 
 
 Este comando ejecutará un intérprete de Python que puedes usar para ejecutar
@@ -153,11 +166,8 @@ interprete Python de su entorno de desarrollo.
 Referencias
 ===========
 
--   `Arquitectura de componentes Zope`_.
+-   :ref:`Arquitectura de componentes Zope <zca-es>`.
 
 .. _zc.buildout: http://pypi.python.org/pypi/zc.buildout/
-.. _pip: http://coactivate.org/projects/ploneve/distribute-y-pip
-.. _entorno virtual: http://coactivate.org/projects/ploneve/creacion-de-entornos-virtuales-python
 .. _zope.component: http://pypi.python.org/pypi/zope.component
 .. _zc.recipe.egg: http://pypi.python.org/pypi/zc.recipe.egg
-.. _Arquitectura de componentes Zope: http://www.muthukadan.net/docs/zca-es.html

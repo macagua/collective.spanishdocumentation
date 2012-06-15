@@ -1,8 +1,15 @@
 .. -*- coding: utf-8 -*-
 
+.. _creacion_entornos_virtuales:
+
 =====================================
 Creación de entornos virtuales Python
 =====================================
+
+:Autor(es): Leonardo J. Caballero G.
+:Correo(s): leonardocaballero@gmail.com
+:Lanzamiento: |version|
+:Fecha: |today|
 
 .. contents:: :local:
 
@@ -145,7 +152,7 @@ Crear entorno virtual del Python 2.6 de tu sistema al directorio
 Usar distribute en virtualenv
 -----------------------------
 
-Opcionalmente puede usar `distribute`_ en ``virtualenv`` para esto debe
+Opcionalmente puede usar :ref:`distribute <que_es_distribute>` en ``virtualenv`` para esto debe
 ejecutar el siguiente comando: 
 
 .. code-block:: sh
@@ -175,8 +182,8 @@ esto debido a que su shell de comando inicia con el siguiente prefijo
 **(python2.6)**, entiendo que este prefijo es el nombre de entorno virtual que
 usted acaba de activar.
 
-Aquí ya puede usar herramientas como `easy_install`_ o `pip`_ para instalar
-paquetes Egg....
+Aquí ya puede usar herramientas como :ref:`easy_install <easyinstall_setuptools>` 
+o :ref:`pip <que_es_pip>` para instalar paquetes Egg....
 
 .. note::
 
@@ -215,12 +222,8 @@ Referencias
 
 - `Creating a "Virtual" Python`_.
 - `Virtualenv, a Virtual Python Environment builder`_.
-- `Distribute y pip`_ desde la comunidad Plone Venezuela.
+- :ref:`Distribute y pip <distribute_pip>`.
 
 .. _virtualenv: http://pypi.python.org/pypi/virtualenv/
-.. _distribute: http://readthedocs.org/docs/plone-spanish-docs/en/latest/python/distribute-y-pip.html#que-es-distribute
-.. _easy_install: http://plone.org/countries/mx/instalacion-de-setuptools-y-easyinstall-para-python
-.. _pip: http://readthedocs.org/docs/plone-spanish-docs/en/latest/python/distribute-y-pip.html#que-es-pip
 .. _Creating a "Virtual" Python: http://peak.telecommunity.com/DevCenter/EasyInstall#creating-a-virtual-python
 .. _Virtualenv, a Virtual Python Environment builder: http://pypi.python.org/pypi/virtualenv
-.. _Distribute y pip: http://www.coactivate.org/projects/ploneve/distribute-y-pip

@@ -3,7 +3,7 @@
 .. _easyinstall_setuptools:
 
 ========================
-EasyInstall y Setuptools
+Setuptools y EasyInstall
 ========================
 
 .. contents :: :local:
@@ -146,7 +146,7 @@ disponibles, se utiliza la opción ``--list-templates``:
 Referencia
 ==========
 
-- `Instalación de setuptools y EasyInstall para Python`_ desde la comunidad Plone Mexico.
+- `Instalación de setuptools y EasyInstall para Python`_ desde la comunidad Plone México.
 
 .. _Setuptools: http://pypi.python.org/pypi/setuptools/
 .. _easy_install: http://peak.telecommunity.com/DevCenter/EasyInstall

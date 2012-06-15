@@ -1,8 +1,15 @@
 .. -*- coding: utf-8 -*-
 
+.. _skel_plone:
+
 ==================================
 Esqueletos de proyectos Zope/Plone
 ==================================
+
+:Autor(es): Leonardo J. Caballero G.
+:Correo(s): leonardocaballero@gmail.com
+:Lanzamiento: |version|
+:Fecha: |today|
 
 .. contents:: :local:
 
@@ -327,10 +334,15 @@ Recomendaciones
 
 Si desea trabajar con algún proyecto de desarrollo basado en esqueletos o plantillas paster y Buildout simplemente seleccione cual esqueleto va a utilizar para su desarrollo y proceso a instalarlo con Easy Install o PIP (como se explico anteriormente) y siga sus respectivas instrucciones para lograr con éxito la tarea deseada.
 
+Articulos relacionados
+======================
+
+.. seealso:: Articulos sobre :ref:`Esqueletos de proyectos Python <skel_python>`.
+
 Referencias
 ===========
 
-- `Gestión de proyectos con Buildout, instalando Zope/Plone con este mecanismo`_.
+- `Gestión de proyectos con Buildout, instalando Zope/Plone con este mecanismo`_ desde la comunidad Plone Venezuela.
 
 .. _django-project-templates: http://pypi.python.org/pypi/django-project-templates
 .. _fez.djangoskel: http://pypi.python.org/pypi/fez.djangoskel

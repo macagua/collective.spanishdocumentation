@@ -1,8 +1,15 @@
 .. -*- coding: utf-8 -*-
 
+.. _skel_python:
+
 ==============================
 Esqueletos de proyectos Python
 ==============================
+
+:Autor(es): Leonardo J. Caballero G.
+:Correo(s): leonardocaballero@gmail.com
+:Lanzamiento: |version|
+:Fecha: |today|
 
 .. contents:: :local:
 
@@ -13,8 +20,8 @@ Son una serie de colecciones de plantillas *esqueletos* que permiten iniciar
 rápidamente proyectos, existente diversos *esqueletos* orientados a tipos de
 desarrollos específicos.
 
-Instalar dependencias de esqueletos Python
-==========================================
+Instalación
+===========
 
 Dentro de su entorno virtual activado debe instalar el paquete ``PasteScript``, ejecutando el siguiente comando: 
 
@@ -22,11 +29,13 @@ Dentro de su entorno virtual activado debe instalar el paquete ``PasteScript``, 
 
   (python) pip install PasteScript
 
-No olvidar que estos paquetes han sido instalados con el entorno virtual que
-previamente usted activo, eso quiere decir que los paquetes previamente
-instalados con Easy Install están instalados en el directorio
-``~/virtualenv/python/lib/python2.x/site-packages/`` en ves del directorio de
-su versión de Python de sistema ``/usr/lib/python2.x/site-packages/``
+.. note::
+
+  No olvidar que estos paquetes han sido instalados con el entorno virtual que
+  previamente usted activo, eso quiere decir que los paquetes previamente
+  instalados con Easy Install están instalados en el directorio
+  ``~/virtualenv/python/lib/python2.x/site-packages/`` en ves del directorio de
+  su versión de Python de sistema ``/usr/lib/python2.x/site-packages/``
 
 Al finalizar la instalación podrá opcionalmente consultar cuales plantillas
 tiene disponible para usa, ejecutando el siguiente comando: 
@@ -130,7 +139,7 @@ Y realice una importación del paquete mipaquetepython ejecutando el siguiente c
 
 
 Descarga código fuente
-~~~~~~~~~~~~~~~~~~~~~~
+======================
 
 Para descargar el código fuente de este ejemplo ejecute el siguiente comando:
 
@@ -144,7 +153,7 @@ Esqueletos en diversos proyectos Python
 
 A continuación se muestran algunos esqueletos útiles:
 
-- `Esqueletos de proyectos Zope/Plone`_.
+- :ref:`Esqueletos de proyectos Zope/Plone <skel_plone>`.
 - **Esqueletos de proyectos Django**:
 
   - `django-project-templates`_, plantillas Paster para crear proyectos Django.
@@ -184,7 +193,6 @@ Referencias
 
 - `Gestión de proyectos con Buildout, instalando Zope/Plone con este mecanismo`_.
 
-.. _Esqueletos de proyectos Zope/Plone: http://readthedocs.org/docs/plone-spanish-docs/en/latest/python/skel-proyectos-plone.html
 .. _django-project-templates: http://pypi.python.org/pypi/django-project-templates
 .. _fez.djangoskel: http://pypi.python.org/pypi/fez.djangoskel
 .. _django-harness: http://pypi.python.org/pypi/django-harness

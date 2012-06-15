@@ -6,14 +6,20 @@
 Comando de control de Zope
 ==========================
 
+:Autor(es): Leonardo J. Caballero G.
+:Correo(s): leonardocaballero@gmail.com
+:Lanzamiento: |version|
+:Fecha: |today|
+
 .. contents :: :local:
 
 Descripción general
 ===================
 
-El comando para las tareas de Zope tasks es ``./bin/instance`` en su instalaciones Plone basada en configuraciones buildout.
+El comando para las tareas de Zope tasks es ``./bin/instance`` en su instalaciones 
+Plone basada en configuraciones buildout.
 
-La lista de comandos disponible: 
+Para mostrar la lista de comandos disponible ejecute el siguiente comando: 
 
 .. code-block:: sh
 
@@ -52,13 +58,16 @@ Para cancelar este modo de ejecución use **Ctrl-D** (ej. EOF) para salir.
 Iniciar la instancia Zope en modo debug
 =======================================
 
-En este modo se ejecuta el servidor Zope en modo *depuración* para inspeccionar su base de datos objeto manualmente usando el shell interactivo de Python
+En este modo se ejecuta el servidor Zope en modo *depuración* para inspeccionar su 
+base de datos objeto manualmente usando el shell interactivo de Python, con el 
+siguiente comando:
 
 .. code-block:: sh
 
   ./bin/instance debug
 
-Al ejecutar este comando debe mostrar un interprete interactivo de Python al contexto de Zope y Plone
+Al ejecutar este comando debe mostrar un interprete interactivo de Python al 
+contexto de Zope y Plone
 
 .. code-block:: python
 
@@ -77,7 +86,8 @@ Para salir de la consola interactiva ejecute la siguiente instrucción:
 Iniciar la instancia Zope en modo servicio / demonio
 ====================================================
 
-En este modo se ejecuta el servidor Zope *demonio* en este modo se utiliza para entornos de producción
+En este modo se ejecuta el servidor Zope *demonio* en este modo se utiliza para 
+entornos de producción, ejecute con el siguiente comando:
 
 .. code-block:: sh
 
@@ -99,8 +109,8 @@ Para esto debió previamente iniciado el servidor Zope *en modo servicio / demon
 Agregando usuarios desde la linea de comandos
 =============================================
 
-Usted necesita hacer esto cuando usted olvido la contraseña del usuario 'admin' de Zope 
-o la base de datos esta dañada.
+Usted necesita hacer esto cuando usted olvido la contraseña del usuario 'admin' 
+de Zope o la base de datos esta dañada.
 
 Agregar usuario con permisos de Administración en Zope: 
 

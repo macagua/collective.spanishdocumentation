@@ -1,15 +1,22 @@
 .. -*- coding: utf-8 -*-
 
+.. _buildout_logrotate:
+
 ===========================
 Rotar archivos .log de Zope
 ===========================
+
+:Autor(es): Leonardo J. Caballero G.
+:Correo(s): leonardocaballero@gmail.com
+:Lanzamiento: |version|
+:Fecha: |today|
 
 .. contents :: :local:
 
 Descripción general
 ===================
 
-Este es una configuración básica de `buildout`_ que explica como configurar 
+Este es una configuración básica de :ref:`zc.buildout <python_buildout>` que explica como configurar 
 tarea de crontab de rotación de archivos log, para esto usará la misma configuración 
 del paquete Zope en Debian GNU/Linux que entenderá el programa crontab para realizar esta tarea.
 
@@ -54,22 +61,17 @@ Ahora edite su archivo de configuración ``buildout.cfg`` y agregue nuevas secci
 .. code-block:: cfg
 
   [buildout]
-
-  ...
-
   parts =
       logrotate
       logrotate-daily
-
-  ...
-
+      
   # Este récipe ayuda a inicializar un archivo de configuración de logrotate
   # Para mayor información ver http://pypi.python.org/pypi/collective.recipe.template
   [logrotate]
   recipe = collective.recipe.template
   input = ${buildout:directory}/templates/logrotate.conf.tmpl
   output = ${buildout:directory}/etc/logrotate.conf
-
+  
   # Este récipe ayuda a configurar una tarea de crontab de rotación de archivos log.
   # Para mayor información ver http://pypi.python.org/pypi/z3c.recipe.usercrontab
   [logrotate-daily]
@@ -111,17 +113,15 @@ Para descargar el código fuente de este ejemplo ejecute el siguiente comando:
   $ svn co https://svn.plone.org/svn/collective/spanishdocs/trunk/src/buildout/leccion3 rotar-log-zope
 
 
+Artículos relacionados
+======================
+
+.. seealso:: Artículos sobre :ref:`replicación de proyectos Python <python_buildout>`.
+
+
 Referencias
 ===========
 
 -  `Buildout - How to maintain big app stacks without losing your mind`_.
 
-
-.. _buildout: http://coactivate.org/projects/ploneve/replicacion-de-proyectos-python
-.. _Hola Mundo: http://es.wikipedia.org/wiki/Hola_Mundo
-.. _pip: http://coactivate.org/projects/ploneve/distribute-y-pip
-.. _entorno virtual: http://coactivate.org/projects/ploneve/creacion-de-entornos-virtuales-python
-.. _Makefile: http://es.wikipedia.org/wiki/Makefile
-.. _Apache Ant: http://es.wikipedia.org/wiki/Apache_Ant
 .. _Buildout - How to maintain big app stacks without losing your mind: http://www.slideshare.net/djay/buildout-how-to-maintain-big-app-stacks-without-losing-your-mind
-.. _zc.buildout: http://coactivate.org/projects/ploneve/replicacion-de-proyectos-python
