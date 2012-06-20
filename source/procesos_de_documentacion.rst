@@ -9,64 +9,62 @@ Procesos de documentación
 Obtener y compilar la documentación
 ===================================
 
-El almacenamiento de este material está disponible en un repositorio Git en la cuenta de macagua en GitHub.com
-`"macagua" <https://github.com/macagua/plone-spanish-documentations>`_. Si usted tiene una credenciales en este servidor y desea convertirse en 
+El almacenamiento de este material está disponible en un repositorio Git 
+`collective.spanishdocumentation`_ en la cuenta de `collective`_ en GitHub.com. 
+Si usted tiene una credenciales en este servidor y desea convertirse en 
 un colaborador ejecute el siguiente comando:
 
 .. code-block:: sh
 
-  $ git clone git@github.com:macagua/plone-spanish-documentations.git spanishdocs-buildout
+  $ git clone git@github.com:collective/collective.spanishdocumentation.git collective.spanishdocumentation
 
-Si usted no tiene las credenciales de acceso al repositorio Git en la cuenta de macagua en GitHub.com `"macagua" <https://github.com/macagua/plone-spanish-documentations>`_ o simplemente solo desea obtener 
-y compilar esta documentación ejecute el siguiente comando:
+Si usted no tiene las credenciales de acceso al repositorio Git 
+`collective.spanishdocumentation`_ en la cuenta de `collective`_ 
+en GitHub.com o simplemente solo desea obtener y compilar esta 
+documentación ejecute el siguiente comando:
 
 .. code-block:: sh
 
-  $ git clone git://github.com/macagua/plone-spanish-documentations.git spanishdocs-buildout
+  $ git clone git://github.com/collective/collective.spanishdocumentation.git collective.spanishdocumentation
 
 Crear entorno virtual de Python para reconstruir este proyecto:
 
 .. code-block:: sh
 
-  # aptitude install python-setuptools git-core
+  # aptitude install git-core build-essential python-dev python-setuptools texlive-full
   # easy_install virtualenv
-  # exit
   $ cd $HOME ; mkdir $HOME/virtualenv ; cd $HOME/virtualenv
-  $ virtualenv --no-site-packages --python=/usr/bin/python sphinx
-  $ cd -
+  $ virtualenv --python=/usr/bin/python sphinx
+  $ source virtualenv/sphinx/bin/activate
 
 Ahora puede generar la documentación de HTML, con los siguiente comandos:
 
 .. code-block:: sh
 
-  $ source virtualenv/sphinx/bin/activate
-  (sphinx)$ cd spanishdocs-buildout/
+  (sphinx)$ cd collective.spanishdocumentation/
   (sphinx)$ python bootstrap.py
   (sphinx)$ ./bin/buildout -vN
   (sphinx)$ ./bin/sphinx
 
-Ahora se puede abrir ``spanishdocs-buildout/build/html/index.html`` desde 
+Ahora se puede abrir ``collective.spanishdocumentation/build/html/index.html`` desde 
 su navegador Web favorito.
 
 Para obtener la documentación en PDF:
 
 .. code-block:: sh
 
-  $ source virtualenv/sphinx/bin/activate
-  (sphinx)$ cd ./spanishdocs-buildout/build
+  (sphinx)$ cd ./collective.spanishdocumentation/build
   (sphinx)$ make latex
-  (sphinx)$ cd ./latex
-  (sphinx)$ make all-pdf
+  (sphinx)$ make latexpdf
 
-Ahora se puede abrir ``spanishdocs-buildout/sphinx/build/latex/DocumentacionEspanolPlone.pdf`` 
+Ahora se puede abrir ``collective.spanishdocumentation/sphinx/build/latex/DocumentacionEspanolPlone.pdf`` 
 con sus programas de visor de PDF favorito (Evince, Acrobat Reader, ...)
 
 
 Reglas de redacción
 ===================
 
-En primer lugar, debe aprender los `fundamentos de Sphinx
-<http://sphinx.pocoo.org/contents.html>`_ que es un reStructuredText extendido.
+En primer lugar, debe aprender los `fundamentos de Sphinx`_ que es un reStructuredText extendido.
 
 
 Codificación de caracteres
@@ -163,10 +161,26 @@ la imagen a tamaño del papel final.
    .. gs-map.mm: imagen de mapa mental de los servicios de GenericSetup. Creado con FreeMind
 
    .. image:: gs-map.png
+      :align: center
+      :alt: imagen de mapa mental de los servicios de GenericSetup
+
+   .. figure::  screenshot.jpg
+      :align:   center
+      :alt: Captura de pantalla del programa de mapa mental
+
 
 **Aplicaciones gráficas recomendadas**
 
-Diagramas : `Graphviz <http://www.graphviz.org/>`_
+Diagramas : `Graphviz`_
+
+
+Ejemplos de documentación en Sphinx
+===================================
+
+* `Python documentation`_
+* `Zope documentation`_
+* `Plone Developer Documentation`_
+* `D:YAML documentation`_
 
 
 Algunas de las herramientas recomendadas
@@ -186,5 +200,15 @@ no se actualiza cuando compilo el documento.
 
 **Respuesta :** El índice de Sphinx es a veces es desorientado y la gestión de la dependencia
 a veces, mejor. Por lo tanto, todo se debe reiniciar ejecutando el comando ``make clean`` 
-dentro del directorio ``spanishdocs-buildout/sphinx/build/``.
+dentro del directorio ``collective.spanishdocumentation/sphinx/build/``.
 
+
+.. _collective.spanishdocumentation: https://github.com/collective/collective.spanishdocumentation
+.. _collective: https://github.com/collective/
+.. _fundamentos de Sphinx: http://sphinx.pocoo.org/contents.html
+.. _Graphviz: http://www.graphviz.org/
+.. _rst.el: http://svn.berlios.de/svnroot/repos/docutils/trunk/docutils/tools/editors/emacs/rst.el
+.. _Python documentation: http://docs.python.org/
+.. _Zope documentation: http://docs.zope.org/zope2/index.html
+.. _Plone Developer Documentation: http://collective-docs.plone.org/
+.. _D\:YAML documentation: http://dyaml.alwaysdata.net/static/html/doc_0.4/index.html
