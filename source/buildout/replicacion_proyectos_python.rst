@@ -153,7 +153,7 @@ Para descargar el código fuente de este ejemplo ejecute el siguiente comando:
 
 .. code-block:: sh
 
-  $ svn co https://svn.plone.org/svn/collective/spanishdocs/trunk/src/buildout/leccion1 mibuildout
+  $ git clone https://github.com/plone-ve/buildout.basic.git
 
 
 Conclusiones
