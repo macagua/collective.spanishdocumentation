@@ -1,30 +1,51 @@
 .. -*- coding: utf-8 -*-
 
+.. _aplicacion_crud:
+
 =========================
 Base de datos SQL y Plone
 =========================
 
+:Autor(es): Leonardo J. Caballero G.
+:Correo(s): leonardocaballero@gmail.com
+:Lanzamiento: |version|
+:Fecha: |today|
+
 .. contents :: :local:
 
-Existen muchos mecanismos de conexión a base de datos SQL desde Plone CMS, en este articulo se enfoca en la amplia usada libreria `SQLAlchemy`_ y sus mecanismos de integracion.
+Existen muchos mecanismos de conexión a base de datos SQL desde Plone CMS, 
+en este articulo se enfoca en la amplia usada librería `SQLAlchemy`_ y 
+sus mecanismos de integración.
 
 ¿Qué es SQLAlchemy?
 ===================
 
-`SQLAlchemy`_, es un toolkit de SQL en Python para hacer mapas de objetos relacionales (`ORM`_ - Object Relational Mapper) que le permite a los desarrolladores de aplicaciones incorporar toda la potencia e flexibilidad del estándar SQL.
+`SQLAlchemy`_, es un toolkit de SQL en Python para hacer mapas de objetos 
+relacionales (`ORM`_ - Object Relational Mapper) que le permite a los 
+desarrolladores de aplicaciones incorporar toda la potencia e flexibilidad 
+del estándar SQL.
 
 ¿Qué son los ZSQL Methods?
 ==========================
 
-Del ingles `ZSQL Methods`_, los métodos ZSQL son un objeto similar a un método `DTML`_ de `Zope`_ o scripts de Python especializados para su uso con bases de datos relacionales. Son la forma más fácil de conectar `RDBMS`_ en Zope. Contiene comandos SQL y DTML en combinación.
+Del ingles `ZSQL Methods`_, los métodos ZSQL son un objeto similar a un 
+método `DTML`_ de `Zope`_ o scripts de Python especializados para su uso 
+con bases de datos relacionales. Son la forma más fácil de conectar 
+`RDBMS`_ en Zope. Contiene comandos SQL y DTML en combinación.
 
 Productos disponibles en Plone
 ==============================
 
- * Alchemist
- * collective.saconnect
- * collective.lead
- * **z3c.saconfig**
+Existen varios productos disponibles para integrar `SQLAlchemy`_ con 
+Plone como se describen a continuación:
+
+ * `Alchemist`_, utiliza la librería `SQLAlchemy`_, :ref:`Zope 3 component architecture <zca-es>`, y Zope 3 formlib/schema/widgets le permite el desarrollo rápido de aplicaciones orientadas a base de datos objetos con Zope 2, Zope 3, y Plone.
+ * `collective.saconnect`_, es una panel de control Plone para configurar la conexión `SQLAlchemy`_.
+ * `collective.lead`_, este es otro paquete de integración transaccional SQLAlchemy/Zope2.
+ * `z3c.saconfig`_, ofrece una simple pero flexible forma de configurar un ámbito de sesión de `SQLAlchemy`_ soportada usando la :ref:`Zope component architecture <zca-es>`.
+ 
+En el producto elegido para esta labor es ``z3c.saconfig`` a continuación 
+se describe su configuración:
 
 Configuración
 =============
@@ -164,10 +185,10 @@ widget
 action
     API para definición e manipulación de actions handlers
 
-procesamento del formulario
----------------------------
+procesamiento del formulario
+----------------------------
 
-A continuacion los elementos principales del procesamento del formulario:
+A continuación los elementos principales del procesamiento del formulario:
 
 self.request
     objeto que representa la actual solicitud HTTP
@@ -185,7 +206,7 @@ updateWidgets
     actualizaciones de todos los widgets de acuerdo a los datos enviados.
     
 updateActions
-    invoca los actions handlers del formulariode acuerdo con el boton presionado
+    invoca los actions handlers del formulario de acuerdo con el botón presionado
     
 render
     invoca la plantilla Padre que genera el formulario HTML y devuelve dicho contenido
@@ -195,7 +216,9 @@ render
 Creación de la base de datos
 ============================
 
-Para esto se usa la receta zc.buildout llamada collective.recipe.pgcreatedb el cual crea una base de datos Postgresql a través de SQLAlchemy, a continuación ejemplo de su configuración:
+Para esto se usa la receta zc.buildout llamada ``collective.recipe.pgcreatedb`` 
+el cual crea una base de datos Postgresql a través de SQLAlchemy, a continuación 
+ejemplo de su configuración:
 
 .. code-block:: cfg
 
@@ -228,14 +251,18 @@ Para esto se usa la receta zc.buildout llamada collective.recipe.pgcreatedb el c
     extra-paths  =  ${buildout:parts-directory}/
     ...
 
-En la sección buildout llamada ``rdbs-requeriments`` instala el servidor postgresql con sus librerías de desarrollo y adicionalmente instala phppgadmin para la gestion remota del mismo.
+En la sección buildout llamada ``rdbs-requeriments`` instala el servidor 
+``postgresql`` con sus librerías de desarrollo y adicionalmente instala 
+``phppgadmin`` para la gestión remota del mismo.
 
-En la sección buildout llamada ``rdbs-createdb`` crea crea una base de datos Postgresql a través de SQLAlchemy.
+En la sección buildout llamada ``rdbs-createdb`` crea crea una base de datos 
+Postgresql a través de SQLAlchemy.
 
 Creación de las tablas
 ======================
 
-A continuación se demuestra un ejemplo del archivo ``import_steps.xml`` para la creación de las tablas:
+A continuación se demuestra un ejemplo del archivo ``import_steps.xml`` 
+para la creación de las tablas:
 
 Perfil de importación Generic Setup
 -----------------------------------
@@ -276,9 +303,17 @@ A continuación un ejemplo del archivo ``setuphandlers.py``:
         
         Base.metadata.create_all(bind=Session.bind)
         
+
+Artículos relacionados
+======================
+
+.. seealso:: 
+
+    Artículos sobre :ref:`Presentar información de una base de datos relacional <mostrar_data_sqlalchemy>` y :ref:`Utilizando formularios z3c.form en Plone <utilizando_z3cform>`.
+
 Referencias
 ===========
- * http://readthedocs.org/docs/plone-spanish-docs/en/latest/plone/mini_db.html
+ * :ref:`Presentar información de una base de datos relacional <mostrar_data_sqlalchemy>`.
  * https://github.com/pythonbrasil/apyb.members
  * http://www.slideshare.net/simplesconsultoria/sqlalchemy-e-plone-no-more-zsql-methods
  * http://www.slideshare.net/rudaporto/formulrios-para-plone-um-passeio-pelo-framework-z3cform
@@ -289,6 +324,7 @@ Referencias
 .. _ZSQL Methods: http://wiki.zope.org/zope2/ZSQLMethods
 .. _DTML: http://wiki.zope.org/zope2/DTML
 .. _Zope: http://www.zope.org/
-
-..
-  .. _: 
+.. _Alchemist: http://plone.org/products/alchemist
+.. _collective.saconnect: http://pypi.python.org/pypi/collective.saconnect
+.. _collective.lead: http://pypi.python.org/pypi/collective.lead
+.. _z3c.saconfig: http://pypi.python.org/pypi/z3c.saconfig

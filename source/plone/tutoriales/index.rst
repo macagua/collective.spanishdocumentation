@@ -1,5 +1,7 @@
 .. -*- coding: utf-8 -*-
 
+.. _mini_tutoriales:
+
 ===============
 Mini Tutoriales
 ===============

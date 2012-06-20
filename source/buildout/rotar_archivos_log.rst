@@ -17,8 +17,8 @@ Descripción general
 ===================
 
 Este es una configuración básica de :ref:`zc.buildout <python_buildout>` que explica como configurar 
-tarea de crontab de rotación de archivos log, para esto usará la misma configuración 
-del paquete Zope en Debian GNU/Linux que entenderá el programa crontab para realizar esta tarea.
+tarea de `crontab`_  de `rotación de archivos log`_, para esto usará la misma configuración 
+del paquete Zope en Debian GNU/Linux que entenderá el programa ``crontab`` para realizar esta tarea.
 
 Instalación
 ===========
@@ -29,7 +29,7 @@ Dentro de su directorio de buildout debe crear los la siguiente estructura de ar
 
   $ mkdir ./templates ; mkdir ./etc ; 
 
-Luego creamos una plantilla del archivo de configuración crontab:
+Luego creamos una plantilla del archivo de configuración ``crontab``:
 
 .. code-block:: sh
 
@@ -56,12 +56,12 @@ Y debe agrega la siguiente configuración al archivo ``logrotate.conf.tmpl`` :
   }
 
 
-Ahora edite su archivo de configuración ``buildout.cfg`` y agregue nuevas secciones como se muestra a continuación:
+Cree un archivo de configuración ``logrotate.cfg`` y agregue nuevas secciones como se muestra a continuación:
 
 .. code-block:: cfg
 
   [buildout]
-  parts =
+  parts +=
       logrotate
       logrotate-daily
       
@@ -79,13 +79,19 @@ Ahora edite su archivo de configuración ``buildout.cfg`` y agregue nuevas secci
   times = 0 6 * * *
   command = /usr/sbin/logrotate --state ${buildout:directory}/var/logrotate.status ${logrotate:output}
 
+Luego edite su archivo de configuración ``buildout.cfg`` y agregue en la declarativa `extends` la siguiente linea:
 
-Ahora ejecuta el comando buildout con el argumento ``-v`` (verbose mode), esto ayudará a que
+.. code-block:: cfg
+
+  extends = 
+    logrotate.cfg
+
+Ahora ejecuta el comando ``buildout`` con el argumento ``-v`` (verbose mode), esto ayudará a que
 muestre todo los detalles de la construcción del mismo.
 
 .. code-block:: sh
 
-  $ ./bin/buildout -v
+  $ ./bin/buildout -vN
 
 
 Muestre la lista de las tareas del programa ``crontab`` con el siguiente comando:
@@ -99,9 +105,7 @@ Muestre la lista de las tareas del programa ``crontab`` con el siguiente comando
   # END /home/macagua/Plone/zinstance [logrotate-daily]
 
 
-
 Y de esta forma podrá ver registrado la tarea de rotas los archivos semanalmente.
-
 
 Descarga código fuente
 ======================
@@ -110,7 +114,7 @@ Para descargar el código fuente de este ejemplo ejecute el siguiente comando:
 
 .. code-block:: sh
 
-  $ svn co https://svn.plone.org/svn/collective/spanishdocs/trunk/src/buildout/leccion3 rotar-log-zope
+  $ git clone https://github.com/plone-ve/buildout.logrotate.git
 
 
 Artículos relacionados
@@ -124,4 +128,6 @@ Referencias
 
 -  `Buildout - How to maintain big app stacks without losing your mind`_.
 
+.. _crontab: http://es.wikipedia.org/wiki/Cron_%28Unix%29
+.. _rotación de archivos log: http://administradores.educarex.es/wiki/index.php/Logrotate
 .. _Buildout - How to maintain big app stacks without losing your mind: http://www.slideshare.net/djay/buildout-how-to-maintain-big-app-stacks-without-losing-your-mind

@@ -1,5 +1,7 @@
 .. -*- coding: utf-8 -*-
 
+.. _creando_temas_diazo:
+
 =======================
 Creando Temas con Diazo
 =======================

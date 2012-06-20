@@ -1,5 +1,7 @@
 .. -*- coding: utf-8 -*-
 
+.. _hola_mundo_plone3:
+
 =====================
 Hola Mundo en Plone 3
 =====================
@@ -9,24 +11,30 @@ Hola Mundo en Plone 3
 Introducción
 ============
 
-Este es tutorial trata de explicar como crear un Plone Theme product para Plone 3 usando las plantillas de ZopeSkel y explica como generar un programa típico `Hola Mundo`_ para Plone como una ``view`` llamado ``hello`` como una vista de aplicación.
+Este es tutorial trata de explicar como crear un :ref:`Plone Theme product <producto_tema>` 
+para Plone 3 usando las :ref:`plantillas de ZopeSkel <skel_plone>` y explica como generar 
+un programa típico `Hola Mundo`_ para Plone como una ``view`` llamado 
+``hello`` como una vista de aplicación.
 
 
 Instalación
 ===========
 
-Puedes instalar ZopeSkel usando `pip`_ (es recomendable hacerlo dentro de un `entorno virtual`_):
+Puedes instalar ZopeSkel usando :ref:`pip <que_es_pip>` (es recomendable 
+hacerlo dentro de un :ref:`entorno virtual <creacion_entornos_virtuales>`):
 
 .. code-block:: sh
 
     $ pip install 'ZopeSkel==2.21.2'
 
-Crear instancia de Zope para Plone 3 usando el comando ``paster``, ejecutando los siguientes comandos:
+Debe crear una configuración :ref:`zc.buildout <buildout_plone3>` para una 
+instancia de Zope para Plone 3 usando el comando ``paster``, 
+ejecutando los siguientes comandos:
 
 .. code-block:: sh
 
-    $ paster create --template plone3_buildout plone3pythonguys
-    $ cd plone3pythonguys
+    $ paster create --template plone3_buildout plone3.buildout
+    $ cd plone3.buildout
     $ python bootstrap.py
     $ ./bin/buildout -vN
 
@@ -37,7 +45,8 @@ Más opciones con el siguiente comando:
 
     $ paster create --list-template
 
-Cree un Plone Theme en su carpeta ``src/`` dentro de su proyecto plone 3 llamado ``plone3pythonguys``
+Cree un :ref:`Plone Theme <producto_tema>` en su carpeta ``src/`` dentro de su proyecto 
+plone 3 llamado ``plone3.buildout``, con los siguientes comandos:
 
 .. code-block:: sh
 
@@ -45,7 +54,8 @@ Cree un Plone Theme en su carpeta ``src/`` dentro de su proyecto plone 3 llamado
     $ paster create --template plone3_theme collective.mydemoapp
 
 
-Acceder a la carpeta ``browser/`` de su paquete ``collective.mydemoapp`` y cree un archivo python con el nombre ``hello.py``
+Acceder a la carpeta ``browser/`` de su paquete ``collective.mydemoapp`` 
+y cree un archivo python con el nombre ``hello.py``
 
 .. code-block:: sh
 
@@ -133,7 +143,9 @@ Y de esta forma ya tiene generado una vista generada desde Python y otra vista g
 Ejemplo de un viewlet básico
 ============================
 
-- Accede al archivo de la clase Python viewlet ``browser/viewlets.py``  generado en este paquete y descomenta la pieza de código disponible allí (clase de Python viewlet).
+- Accede al archivo de la clase Python viewlet ``browser/viewlets.py`` 
+generado en este paquete y quiete el comentario la pieza de código disponible 
+allí (clase de Python viewlet).
 
   .. code-block:: python
 
@@ -144,7 +156,9 @@ Ejemplo de un viewlet básico
               self.computed_value = 'Hello world'
               self.company = 'Plone Fundation'
 
-- Renombra el archivo plantilla viewlet ubicado en ``browser/viewlet.pt`` a  ``browser/myviewlet.pt`` y si es necesario edite el código python acorde a la plantilla viewlet.
+- Renombra el archivo plantilla viewlet ubicado en ``browser/viewlet.pt`` a 
+``browser/myviewlet.pt`` y si es necesario edite el código python acorde a 
+la plantilla viewlet.
 
   .. code-block:: html
 
@@ -190,7 +204,8 @@ Para descargar el código fuente de este ejemplo ejecute el siguiente comando:
 Conclusiones
 ============
 
-Este ejemplo ofrece un acercamiento a crear productos Plone desde una `Views`_ y un `Viewlets`_ dentro de un manager viewlet.
+Este ejemplo ofrece un acercamiento a crear productos Plone desde una 
+`Views`_ y un `Viewlets`_ dentro de un manager viewlet.
 
 
 Referencias
@@ -200,10 +215,7 @@ Referencias
 -   `Hello World in Plone`_.
 
 .. _Hola Mundo: http://es.wikipedia.org/wiki/Hola_Mundo
-.. _pip: http://coactivate.org/projects/ploneve/distribute-y-pip
-.. _entorno virtual: http://coactivate.org/projects/ploneve/creacion-de-entornos-virtuales-python
 .. _Views: http://collective-docs.readthedocs.org/en/latest/views/browserviews.html
 .. _Viewlets: http://collective-docs.readthedocs.org/en/latest/views/viewlets.html
-.. _zc.buildout: http://coactivate.org/projects/ploneve/replicacion-de-proyectos-python
 .. _Plone for python programmers: http://www.slideshare.net/djay/plone-for-python-programmers
 .. _Hello World in Plone: https://github.com/aclark4life/hello_plone

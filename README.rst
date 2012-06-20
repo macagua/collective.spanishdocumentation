@@ -28,14 +28,13 @@ Crear entorno virtual de Python para reconstruir este proyecto: ::
 
   # aptitude install python-setuptools git-core
   # easy_install virtualenv
-  # exit
   $ cd $HOME ; mkdir $HOME/virtualenv ; cd $HOME/virtualenv
-  $ virtualenv --no-site-packages --python=/usr/bin/python sphinx
-  $ cd -
-
+  $ virtualenv --python=/usr/bin/python sphinx
+  $ source virtualenv/sphinx/bin/activate
+  
 Ahora puede generar la documentación de HTML, con los siguiente comandos: ::
 
-  $ source virtualenv/sphinx/bin/activate
+
   (sphinx)$ cd collective.spanishdocumentation/
   (sphinx)$ python bootstrap.py
   (sphinx)$ ./bin/buildout -vN
@@ -204,4 +203,3 @@ dentro del directorio ``collective.spanishdocumentation/sphinx/build/``.
 .. _Zope documentation: http://docs.zope.org/zope2/index.html
 .. _Plone Developer Documentation: http://collective-docs.plone.org/
 .. _D\:YAML documentation: http://dyaml.alwaysdata.net/static/html/doc_0.4/index.html
-.. _: 

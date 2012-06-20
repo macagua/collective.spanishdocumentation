@@ -6,6 +6,11 @@
 Setuptools y EasyInstall
 ========================
 
+:Autor(es): Carlos de la Guardia
+:Correo(s): carlos.delaguardia@gmail.com
+:Lanzamiento: |version|
+:Fecha: |today|
+
 .. contents :: :local:
 
 .. _que_es_setuptools:

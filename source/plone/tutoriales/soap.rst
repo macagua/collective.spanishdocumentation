@@ -1,8 +1,15 @@
 .. -*- coding: utf-8 -*-
 
+.. _soap:
+
 ======================================
 Obtener direcciones de manejo con SOAP
 ======================================
+
+:Autor(es): Carlos de la Guardia
+:Correo(s): carlos.delaguardia@gmail.com
+:Lanzamiento: |version|
+:Fecha: |today|
 
 .. contents :: :local:
 
@@ -54,7 +61,7 @@ asignación del template se hacen de la manera usual:
 
     class Rutas(BrowserView):
         """
-        Obtener ruta de manejo de una direccion a otra
+        Obtener ruta de manejo de una dirección a otra
         """
 
         template = ViewPageTemplateFile('rutas.pt')
@@ -167,8 +174,8 @@ fácil. Para utilizar otro servicio simplemente hay que cambiar el URL y
 conocer la especificación para saber qué clase de servicios existen y qué
 valores regresan.
 
-Plone también puede utilizarse para publicar servicios, utilizando z3c.soap y
-Zolera. Para mayor información:
+Plone también puede utilizarse para publicar servicios, utilizando las 
+librerías ``z3c.soap`` y ``Zolera``. Para mayor información:
 
  * `z3c.soap <http://pypi.python.org/pypi/z3c.soap>`_
  * `Zolera <http://pypi.python.org/pypi/ZSI>`_

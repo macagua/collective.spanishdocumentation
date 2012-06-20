@@ -1,8 +1,15 @@
 .. -*- coding: utf-8 -*-
 
+.. _mostrar_data_sqlalchemy:
+
 =====================================================
 Presentar información de una base de datos relacional
 =====================================================
+
+:Autor(es): Carlos de la Guardia
+:Correo(s): carlos.delaguardia@gmail.com
+:Lanzamiento: |version|
+:Fecha: |today|
 
 .. contents :: :local:
 
@@ -144,7 +151,7 @@ La configuración de la vista es como sigue:
 Referencia
 ==========
 
-- `Presentar información de una base de datos relacional`_ desde la comunidad Plone Mexico.
+- `Presentar información de una base de datos relacional`_ desde la comunidad Plone México.
 - Ejemplo para agregar y consultar desde una base de datos con la herramienta `Manage Python Brasil Association Members`_
 
 .. _Presentar información de una base de datos relacional: http://www.plone.mx/docs/mini_db.html

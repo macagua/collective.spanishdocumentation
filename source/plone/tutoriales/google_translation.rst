@@ -1,8 +1,15 @@
 .. -*- coding: utf-8 -*-
 
+.. _google_translation:
+
 ===================================================
 Traducir un documento a otro idioma automáticamente
 ===================================================
+
+:Autor(es): Carlos de la Guardia
+:Correo(s): carlos.delaguardia@gmail.com
+:Lanzamiento: |version|
+:Fecha: |today|
 
 .. contents :: :local:
 
@@ -104,7 +111,7 @@ La configuración de la vista es la siguiente:
 Referencia
 ==========
 
-- `Traducir un documento a otro idioma automáticamente`_ desde la comunidad Plone Mexico.
+- `Traducir un documento a otro idioma automáticamente`_ desde la comunidad Plone México.
 
 .. _Traducir un documento a otro idioma automáticamente: http://www.plone.mx/docs/mini_translate.html
 

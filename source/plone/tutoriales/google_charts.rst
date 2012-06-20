@@ -1,8 +1,15 @@
 .. -*- coding: utf-8 -*-
 
+.. _google_charts:
+
 ========================================================
 Crear gráficas a partir de datos de un tipo de contenido
 ========================================================
+
+:Autor(es): Carlos de la Guardia
+:Correo(s): carlos.delaguardia@gmail.com
+:Lanzamiento: |version|
+:Fecha: |today|
 
 .. contents :: :local:
 
@@ -173,7 +180,7 @@ Configuramos la vista para usarla solamente con nuestro tipo de ejemplo:
 Referencia
 ==========
 
-- `Crear gráficas a partir de datos de un tipo de contenido`_ desde la comunidad Plone Mexico.
+- `Crear gráficas a partir de datos de un tipo de contenido`_ desde la comunidad Plone México.
 
 .. _Crear gráficas a partir de datos de un tipo de contenido: http://www.plone.mx/docs/mini_gcharts.html
 
