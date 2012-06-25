@@ -6,6 +6,11 @@
 Utilizando formularios z3c.form en Plone
 ========================================
 
+:Traductor(es): Leonardo J. Caballero G.
+:Correo(s): leonardocaballero@gmail.com
+:Lanzamiento: |version|
+:Fecha: |today|
+
 .. contents :: :local:
 
 Introducción
