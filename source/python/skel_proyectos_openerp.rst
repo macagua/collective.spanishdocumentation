@@ -21,7 +21,7 @@ Dispone de interfaces XML-RPC, y SOAP. Emplea a Postgresql como sistema manejado
 datos y ha sido programado con Python, lo cual permite que su adecuación e implantación sea 
 limpia y pueda tener una curva bastante menor que otras soluciones ERP existentes. 
 
-Entonces para su desarrollo existen una serie de colecciones de plantillas *esqueletos* de modulos 
+Entonces para su desarrollo existen una serie de colecciones de plantillas *esqueletos* de módulos 
 y temas basados en :ref:`Paster <skel_python>`, para proyectos que permiten iniciar rápidamente 
 el desarrollo en OpenERP.
 
@@ -31,7 +31,7 @@ Se requiere instalar las siguientes dependencias con el siguiente comando:
 
 .. code-block:: sh
 
-  # aptitude install bzr bzr-gtk bzrtools bzr-explorer python-dev python-setuptools
+  # aptitude install bzr bzr-gtk bzrtools bzr-explorer python-dev python-setuptools tree
 
 Instalación
 ===========
@@ -42,11 +42,13 @@ Dentro de su entorno virtual activado debe instalar el paquete `openerp_bootstra
 
   (python) pip install openerp_bootstrap
 
-No olvidar que estos paquetes han sido instalados con el entorno virtual que
-previamente usted activo, eso quiere decir que los paquetes previamente
-instalados con Easy Install están instalados en el directorio
-``~/virtualenv/python/lib/python2.x/site-packages/`` en ves del directorio de
-su versión de Python de sistema ``/usr/lib/python2.x/site-packages/``
+.. note::
+
+  No olvidar que estos paquetes han sido instalados con el :ref:`entorno virtual <por_que_virtualenv>` 
+  que previamente usted activo, eso quiere decir que los paquetes previamente instalados con 
+  :ref:`Easy Install <que_es_easyinstall>` o :ref:`PIP <que_es_pip>` están instalados en el directorio 
+  ``~/virtualenv/python/lib/python2.x/site-packages/`` en ves del directorio de su versión de Python 
+  del sistema ``/usr/lib/python2.x/site-packages/``
 
 Al finalizar la instalación podrá opcionalmente consultar cuales plantillas
 tiene disponible para usa, ejecutando el siguiente comando: 
@@ -95,7 +97,9 @@ Usted puede verificar el paquete previamente creado con el siguiente comando:
     |-- __init__.py
     `-- __openerp__.py
 
-And, here we go! We’ll find all the data we need into our module’s manifest (__openerp__.py):
+Hasta este punto tiene creado la estructura del nuestro modulo y puede 
+consultar la información del manifiesto de su modulo en el archivo 
+``__openerp__.py``, con el siguiente comando:
 
 .. code-block:: python
 
@@ -118,7 +122,7 @@ And, here we go! We’ll find all the data we need into our module’s manifest 
       'installable': True,
   }
 
-Let’s create a theme now:
+Ahora proceda a crear un nuevo tema, con el siguiente comando:
 
 .. code-block:: sh
 
@@ -173,7 +177,7 @@ Usted puede verificar el paquete previamente creado con el siguiente comando:
         `-- js
             `-- openerp_mitema.js
 
-This will create a web module with all the static resources you need ready to be customized.
+Este creara un modulo Web con todos los archivos estáticos que usted ya tiene listo para personalizar.
 
 .. code-block:: python
 
@@ -223,7 +227,7 @@ y Buildout simplemente seleccione cual esqueleto va a utilizar para su desarroll
 instalarlo con Easy Install o PIP (como se explico anteriormente) y siga sus respectivas 
 instrucciones para lograr con éxito la tarea deseada.
 
-.. seealso:: Articulos sobre :ref:`Esqueletos de proyectos Python <skel_python>`.
+.. seealso:: Artículos sobre :ref:`Esqueletos de proyectos Python <skel_python>`.
 
 Referencias
 ===========
