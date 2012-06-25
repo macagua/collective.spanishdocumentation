@@ -53,7 +53,7 @@ En este modo se ejecuta el servidor Zope *foreground* y tiene un alias *fg*
 
   ./bin/instance fg
 
-Para cancelar este modo de ejecución use **Ctrl-D** (ej. EOF) para salir.
+Para cancelar este modo de ejecución use **Ctrl-C** (ej. EOF) para salir.
 
 Iniciar la instancia Zope en modo debug
 =======================================
@@ -80,7 +80,7 @@ Para salir de la consola interactiva ejecute la siguiente instrucción:
 .. code-block:: python
 
   >>> quit
-  'Use Ctrl-D (i.e. EOF) to exit.'
+Use quit() or Ctrl-D (i.e. EOF) to exit
 
 
 Iniciar la instancia Zope en modo servicio / demonio
