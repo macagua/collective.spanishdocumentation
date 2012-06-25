@@ -185,6 +185,7 @@ con las buenas practicas implementadas en sus proyectos.
    :maxdepth: 1
 
    python/skel_proyectos_python
+   python/skel_proyectos_openerp
    python/skel_proyectos_plone
 
 
