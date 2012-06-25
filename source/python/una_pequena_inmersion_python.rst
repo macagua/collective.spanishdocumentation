@@ -21,6 +21,7 @@ generado por la fundación Cenditel y la idea principal de este tutorial es que 
 **NUNCA** ha trabajando con el interprete de `Python`_ pueda tener un primer acercamiento 
 **SIN PROGRAMAR**, solamente con conocer el uso del interprete y sus comandos básicos.
 
+.. _python_caracteristicas:
 
 Características de Python
 =========================
@@ -31,6 +32,7 @@ Características de Python
 -   Es un `lenguaje interpretado`_, usa `tipado dinámico`_, es 
     `fuertemente tipado`_ y es `multiplataforma`_.
 
+.. _python_introspeccion:
 
 Introspección en Python
 =======================
@@ -436,6 +438,7 @@ Ejecute el comando exit() para salir del interprete...
 
     >>> exit()
 
+.. _python_interprete_interactivo:
 
 Interprete interactivo de Python
 --------------------------------
@@ -731,15 +734,13 @@ aprender a conocer como manejarse en el modo interactivo de Python/IPython
 con el fin de conocer a través de la introspección del lenguaje, las
 librerías estándar / propias de Python que tienes instalado en tu sistema.
 
-
-Ver también
-===========
-
--   `Python`_.
--   `Inmersión en Python`_.
--   `Guía de aprendizaje de Python`_.
--   `La librería estándar de Python`_.
--   `Guide to Python introspection`_.
+.. seealso:: 
+  
+  -   `Python`_.
+  -   `Inmersión en Python`_.
+  -   `Guía de aprendizaje de Python`_.
+  -   `La librería estándar de Python`_.
+  -   `Guide to Python introspection`_.
 
 Referencias
 ===========
