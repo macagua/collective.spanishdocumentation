@@ -229,11 +229,37 @@ sitio de Plone.
    zope/importar_exportar_plone
    zope/instancia_debug_zope
    zope/zope_plone_detras_servidor_web
+   
+
+Administración de Plone
+=======================
+
+Desde el CMS Plone puede realizar labores administrativas propias del sitio web, 
+este apartado busca aglomerar una serie de artículos útiles sobre estas labores.
+
+.. toctree::
+   :maxdepth: 1
+
+   plone/instalar_productos/index
+
+Desarrollo en Plone
+===================
+
+Existen muchos temas importantes para el desarrollo con Plone, en esta
+sección tocaremos algunos de ellos.
+
+.. toctree::
+   :maxdepth: 1
+
+   plone/desarrollar_productos
+   plone/crear_producto_policy
+   plone/crear_producto_tema
+   plone/inmersion_interactiva_plone3
 
 Tecnologías de Zope
 -------------------
 
-Plone esta basado en el servidor de aplicaciones Zope y en un toolkit de
+Plone esta basado en el servidor de aplicaciones Zope y en un ``toolkit`` de
 desarrollo de portales llamado CMF. Para trabajar con Plone es necesario
 conocer diversas tecnologías provenientes de estos sistemas.
 
@@ -246,20 +272,18 @@ conocer diversas tecnologías provenientes de estos sistemas.
    zope/flujo_de_trabajo
    zope/perfiles_genericsetup
 
+Diversos tutoriales en Plone
+============================
 
-Temáticas diversas de Plone
-===========================
-
-Existen muchos temas importantes para el desarrollo con Plone, en esta
-sección tocaremos algunos de ellos.
+En esta sección agrupamos una serie de mini tutoriales acerca de algunas de
+las demostraciones más solicitadas por participantes en cursos de Plone.
+Muchas demuestran el poder de Python o de APIs de Javascript más que el
+manejo de Plone, pero por lo menos permiten conocer como enfocar situaciones
+comunes en aplicaciones web con Plone.
 
 .. toctree::
-   :maxdepth: 1
-
-   plone/desarrollar_productos
-   plone/crear_producto_policy
-   plone/crear_producto_tema
-   plone/instalar_productos/index
+   :maxdepth: 2
+   
    plone/tutoriales/index
 
 Otros recursos
