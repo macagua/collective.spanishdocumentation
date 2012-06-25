@@ -55,11 +55,11 @@ Para realizar este paso debe tener creado previamente y activado un entorno virt
 
 .. note::
 
-  No olvidar que estos paquetes han sido instalados con el entorno virtual que
-  previamente usted activo, eso quiere decir que los paquetes previamente
-  instalados con Easy Install o PIP están instalados en el directorio
-  ``~/virtualenv/python/lib/python4/site-packages/`` en ves del directorio de
-  su versión de Python de sistema ``/usr/lib/python2.x/site-packages/``
+  No olvidar que estos paquetes han sido instalados con el :ref:`entorno virtual <por_que_virtualenv>` 
+  que previamente usted activo, eso quiere decir que los paquetes previamente instalados con 
+  :ref:`Easy Install <que_es_easyinstall>` o :ref:`PIP <que_es_pip>` están instalados en el directorio 
+  ``~/virtualenv/python/lib/python2.x/site-packages/`` en ves del directorio de su versión de Python 
+  del sistema ``/usr/lib/python2.x/site-packages/``
 
 Uso de ZopeSkel
 ===============
