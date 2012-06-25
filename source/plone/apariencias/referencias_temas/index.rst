@@ -6,7 +6,7 @@
 Referencias de Temas en Plone
 =============================
 
-:Autor(es): Luis Sumoza, Leonardo J. Caballero G.
+:Traductor(es): Luis Sumoza, Leonardo J. Caballero G.
 :Correo(s): lsumoza@gmail.com, leonardocaballero@gmail.com
 :Lanzamiento: |version|
 :Fecha: |today|
