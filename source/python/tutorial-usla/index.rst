@@ -1,3 +1,7 @@
+.. -*- coding: utf-8 -*-
+
+.. _python_tutorial_usla:
+
 .. toctree::
    :numbered:
 
