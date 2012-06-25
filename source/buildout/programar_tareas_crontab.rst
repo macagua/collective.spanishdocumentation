@@ -17,7 +17,7 @@ Descripción general
 ===================
 
 Este es una configuración de :ref:`zc.buildout <python_buildout>` programar 
-tareas con ``crontab`` locales al usuario efectivo del proyecto a tu entorno de desarrollo.
+tareas con `crontab`_ locales al usuario efectivo del proyecto.
 
 
 Instalación
@@ -40,7 +40,7 @@ Inicializar el proyecto
 
 .. code-block:: sh
 
-  $ buildout init
+  $ python bootstrap.py
 
 Ahora el nuevo directorio ``tareas-crontab`` es un proyecto zc.buildout. El archivo de
 configuración predeterminado de buildout es ``buildout.cfg``. Después de la
@@ -113,4 +113,5 @@ Referencias
 
 -   `Buildout - How to maintain big app stacks without losing your mind`_.
 
+.. _crontab: http://es.wikipedia.org/wiki/Cron_%28Unix%29
 .. _Buildout - How to maintain big app stacks without losing your mind: http://www.slideshare.net/djay/buildout-how-to-maintain-big-app-stacks-without-losing-your-mind
