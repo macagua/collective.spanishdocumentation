@@ -1,13 +1,17 @@
 .. -*- coding: utf-8 -*-
 
-================
-Pruebas en Plone
-================
+.. haciendo_pruebas_plone3:
 
-:Traductor(es): Leonardo J. Caballero G.
-:Correo(s): leonardocaballero@gmail.com
+==================
+Pruebas en Plone 3
+==================
+
+:Traductor(es): Luis Sumoza, Leonardo J. Caballero G.
+:Correo(s): lsumoza@gmail.com, leonardocaballero@gmail.com
 :Lanzamiento: |version|
 :Fecha: |today|
+
+Esta es la traducción al Español del articulo `Testing in Plone`_.
 
 En este tutorial se explica cómo escribir código mejor y más seguro para
 darle un aspecto más profesional. Así es, es hora de escribir pruebas, para
