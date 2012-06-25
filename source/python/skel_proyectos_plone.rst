@@ -334,9 +334,6 @@ Recomendaciones
 
 Si desea trabajar con algún proyecto de desarrollo basado en esqueletos o plantillas paster y Buildout simplemente seleccione cual esqueleto va a utilizar para su desarrollo y proceso a instalarlo con Easy Install o PIP (como se explico anteriormente) y siga sus respectivas instrucciones para lograr con éxito la tarea deseada.
 
-Articulos relacionados
-======================
-
 .. seealso:: Articulos sobre :ref:`Esqueletos de proyectos Python <skel_python>`.
 
 Referencias
