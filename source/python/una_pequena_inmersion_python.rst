@@ -17,7 +17,7 @@ Descripción general
 ===================
 
 Este articulo se basa en el documento `Una pequeña inmersión al modo interactivo de Python`_ 
-generado por la fundación Cenditel y la idea principal de este tutorial es que alguien que 
+generado por la `fundación Cenditel`_ y la idea principal de este tutorial es para alguien que 
 **NUNCA** ha trabajando con el interprete de `Python`_ pueda tener un primer acercamiento 
 **SIN PROGRAMAR**, solamente con conocer el uso del interprete y sus comandos básicos.
 
@@ -68,7 +68,7 @@ el comando ``python`` de la siguiente forma:
 
 .. code-block:: python
 
-    usuario@pc:~$ python
+    $ python
     Python 2.5.2 (r252:60911, Jan  4 2009, 17:40:26)
     [GCC 4.3.2] on linux2
     Type "help", "copyright", "credits" or "license" for more
@@ -87,22 +87,16 @@ Pidiendo la ayudar del interprete de Python
     Welcome to Python 2.5!  This is the online help utility.
 
     If this is your first time using Python, you should definitely check
-    out
-    the tutorial on the Internet at http://www.python.org/doc/tut/.
+    out the tutorial on the Internet at http://www.python.org/doc/tut/.
 
     Enter the name of any module, keyword, or topic to get help on
-    writing
-    Python programs and using Python modules.  To quit this help utility
-    and
-    return to the interpreter, just type "quit".
+    writing Python programs and using Python modules. To quit this help 
+    utility and return to the interpreter, just type "quit".
 
     To get a list of available modules, keywords, or topics, type
-    "modules",
-    "keywords", or "topics".  Each module also comes with a one-line
-    summary
-    of what it does; to list the modules whose summaries contain a given
-    word
-    such as "spam", type "modules spam".
+    "modules", "keywords", or "topics".  Each module also comes with 
+    a one-line summary of what it does; to list the modules whose 
+    summaries contain a given word such as "spam", type "modules spam".
     help>
 
 
@@ -290,8 +284,7 @@ siguiente comando:
       _csv                gettext             pkgutil
 
       Enter any module name to get more help.  Or, type "modules spam" to
-      search
-      for modules whose descriptions contain the word "spam".
+      search for modules whose descriptions contain the word "spam".
 
       help> os
       Help on module os:
@@ -308,35 +301,24 @@ siguiente comando:
 
       DESCRIPTION
           This exports:
-            - all functions from posix, nt, os2, mac, or ce, e.g.
-            unlink, stat, etc.
-            - os.path is one of the modules posixpath, ntpath, or
-            macpath
-            - os.name is 'posix', 'nt', 'os2', 'mac', 'ce' or
-            'riscos'
-            - os.curdir is a string representing the current
-            directory ('.' or ':')
-            - os.pardir is a string representing the parent directory
-            ('..' or '::')
-            - os.sep is the (or a most common) pathname separator
-            ('/' or ':' or '\\')
+            - all functions from posix, nt, os2, mac, or ce, e.g. unlink, stat, etc.
+            - os.path is one of the modules posixpath, ntpath, or macpath
+            - os.name is 'posix', 'nt', 'os2', 'mac', 'ce' or 'riscos'
+            - os.curdir is a string representing the current directory ('.' or ':')
+            - os.pardir is a string representing the parent directory ('..' or '::')
+            - os.sep is the (or a most common) pathname separator ('/' or ':' or '\\')
             - os.extsep is the extension separator ('.' or '/')
-            - os.altsep is the alternate pathname separator (None or
-            '/')
+            - os.altsep is the alternate pathname separator (None or '/')
             - os.pathsep is the component separator used in $PATH etc
-            - os.linesep is the line separator in text files ('\r' or
-            '\n' or '\r\n')
+            - os.linesep is the line separator in text files ('\r' or '\n' or '\r\n')
             - os.defpath is the default search path for executables
-            - os.devnull is the file path of the null device
-            ('/dev/null', etc.)
+            - os.devnull is the file path of the null device ('/dev/null', etc.)
 
           Programs that import and use 'os' stand a better chance of
-          being
-          portable between different platforms.  Of course, they must
-          then
-          only use functions that are defined by all platforms (e.g.,
-          unlink
-          and opendir), and leave all pathname manipulation to os.path
+          being portable between different platforms.  Of course, 
+          they must then only use functions that are defined by all 
+          platforms (e.g., unlink and opendir), and leave all pathname 
+          manipulation to os.path
       :
 
 
@@ -459,7 +441,7 @@ este programa ejecute el siguiente comando:
 
 .. code-block:: sh
 
-    # aptitude install ipython
+    # aptitude install ipython python-pip
 
 
 Luego cierra sesión de **root** y vuelve al usuario y sustituya el comando
@@ -467,7 +449,7 @@ Luego cierra sesión de **root** y vuelve al usuario y sustituya el comando
 
 .. code-block:: sh
 
-    usuario@pc:~$  ipython
+    $  ipython
     Python 2.5.2 (r252:60911, Jan 24 2010, 17:44:40)
     Type "copyright", "credits" or "license" for more information.
 
@@ -494,17 +476,15 @@ Un ejemplo de uso del comando ``help`` es consultar la ayuda del comando
         dir([object]) -> list of strings
 
         Return an alphabetized list of names comprising (some of) the
-        attributes
-        of the given object, and of attributes reachable from it:
+        attributes of the given object, and of attributes reachable 
+        from it:
 
         No argument:  the names in the current scope.
         Module object:  the module attributes.
         Type or class object:  its attributes, and recursively the
-        attributes of
-            its bases.
+        attributes of its bases.
         Otherwise:  its attributes, its class's attributes, and
-        recursively the
-            attributes of its class's base classes.
+        recursively the attributes of its class's base classes.
 
 
 Entonces presione la tecla **q** para salir de la ayuda
@@ -533,36 +513,24 @@ la librería ``os`` ejecutando el siguiente comando:
         we're on.
 
         This exports:
-          - all functions from posix, nt, os2, mac, or ce, e.g.
-          unlink, stat, etc.
-          - os.path is one of the modules posixpath, ntpath, or
-          macpath
-          - os.name is 'posix', 'nt', 'os2', 'mac', 'ce' or
-          'riscos'
-          - os.curdir is a string representing the current
-          directory ('.' or ':')
-          - os.pardir is a string representing the parent directory
-          ('..' or '::')
-          - os.sep is the (or a most common) pathname separator
-          ('/' or ':' or '\\')
+          - all functions from posix, nt, os2, mac, or ce, e.g. unlink, stat, etc.
+          - os.path is one of the modules posixpath, ntpath, or macpath
+          - os.name is 'posix', 'nt', 'os2', 'mac', 'ce' or 'riscos'
+          - os.curdir is a string representing the current directory ('.' or ':')
+          - os.pardir is a string representing the parent directory ('..' or '::')
+          - os.sep is the (or a most common) pathname separator ('/' or ':' or '\\')
           - os.extsep is the extension separator ('.' or '/')
-          - os.altsep is the alternate pathname separator (None or
-          '/')
+          - os.altsep is the alternate pathname separator (None or '/')
           - os.pathsep is the component separator used in $PATH etc
-          - os.linesep is the line separator in text files ('\r' or
-          '\n' or '\r\n')
+          - os.linesep is the line separator in text files ('\r' or '\n' or '\r\n')
           - os.defpath is the default search path for executables
-          - os.devnull is the file path of the null device
-          ('/dev/null', etc.)
+          - os.devnull is the file path of the null device ('/dev/null', etc.)
 
         Programs that import and use 'os' stand a better chance of
-        being
-        portable between different platforms.  Of course, they must
-        then
-        only use functions that are defined by all platforms (e.g.,
-        unlink
-        and opendir), and leave all pathname manipulation to os.path
-        (e.g., split and join).
+        being portable between different platforms.  Of course, 
+        they must then only use functions that are defined by all 
+        platforms (e.g., unlink and opendir), and leave all pathname 
+        manipulation to os.path (e.g., split and join).
 
 
 Escriba la librería *os.* y luego escribe dos **underscore** y presione *dos
@@ -645,35 +613,24 @@ ejecutando el siguiente comando:
 
     DESCRIPTION
         This exports:
-          - all functions from posix, nt, os2, mac, or ce, e.g.
-          unlink, stat, etc.
-          - os.path is one of the modules posixpath, ntpath, or
-          macpath
-          - os.name is 'posix', 'nt', 'os2', 'mac', 'ce' or
-          'riscos'
-          - os.curdir is a string representing the current
-          directory ('.' or ':')
-          - os.pardir is a string representing the parent directory
-          ('..' or '::')
-          - os.sep is the (or a most common) pathname separator
-          ('/' or ':' or '\\')
+          - all functions from posix, nt, os2, mac, or ce, e.g. unlink, stat, etc.
+          - os.path is one of the modules posixpath, ntpath, or macpath
+          - os.name is 'posix', 'nt', 'os2', 'mac', 'ce' or 'riscos'
+          - os.curdir is a string representing the current directory ('.' or ':')
+          - os.pardir is a string representing the parent directory ('..' or '::')
+          - os.sep is the (or a most common) pathname separator ('/' or ':' or '\\')
           - os.extsep is the extension separator ('.' or '/')
-          - os.altsep is the alternate pathname separator (None or
-          '/')
+          - os.altsep is the alternate pathname separator (None or '/')
           - os.pathsep is the component separator used in $PATH etc
-          - os.linesep is the line separator in text files ('\r' or
-          '\n' or '\r\n')
+          - os.linesep is the line separator in text files ('\r' or '\n' or '\r\n')
           - os.defpath is the default search path for executables
-          - os.devnull is the file path of the null device
-          ('/dev/null', etc.)
+          - os.devnull is the file path of the null device ('/dev/null', etc.)
 
         Programs that import and use 'os' stand a better chance of
-        being
-        portable between different platforms.  Of course, they must
-        then
-        only use functions that are defined by all platforms (e.g.,
-        unlink
-        and opendir), and leave all pathname manipulation to os.path
+        being portable between different platforms.  Of course, 
+        they must then only use functions that are defined by all 
+        platforms (e.g., unlink and opendir), and leave all pathname 
+        manipulation to os.path
     :
 
 
@@ -704,24 +661,25 @@ Luego cierra sesión de **root** y vuelve al usuario y sustituya el comando
 
 .. code-block:: sh
 
-    usuario@pc:~$  bpython
+    $  bpython
     
 
-Dentro de interprete Python puede apreciar que ofrece otra forma de presentar la documentación y la estructura del lenguaje, con los siguientes comandos de ejemplos:
+Dentro de interprete Python puede apreciar que ofrece otra forma de presentar 
+la documentación y la estructura del lenguaje, con los siguientes comandos de ejemplos:
 
 .. code-block:: python
 
     >>> print 'Hola mundo'
     Hola mundo
     >>> for item in xrange(
-    ┌──────────────────────────────────────────────────────────────────────────────────────────────────┐
-    │ xrange: ([start, ] stop[, step])                                                                 │
-    │ xrange([start,] stop[, step]) -> xrange object                                                   │
-    │                                                                                                  │
-    │ Like range(), but instead of returning a list, returns an object that                            │
-    │ generates the numbers in the range on demand.  For looping, this is                              │
-    │ slightly faster than range() and more memory efficient.                                          │
-    └──────────────────────────────────────────────────────────────────────────────────────────────────┘
+    ┌───────────────────────────────────────────────────────────────────────┐
+    │ xrange: ([start, ] stop[, step])                                      │
+    │ xrange([start,] stop[, step]) -> xrange object                        │
+    │                                                                       │
+    │ Like range(), but instead of returning a list, returns an object that │
+    │ generates the numbers in the range on demand.  For looping, this is   │
+    │ slightly faster than range() and more memory efficient.               │
+    └───────────────────────────────────────────────────────────────────────┘
 
      <C-r> Rewind  <C-s> Save  <F8> Pastebin  <F9> Pager  <F2> Show Source
 
@@ -772,3 +730,4 @@ Referencias
 .. _Guía de aprendizaje de Python: http://pyspanishdoc.sourceforge.net/tut/tut.html
 .. _Guide to Python introspection: http://www.ibm.com/developerworks/linux/library/l-pyint.html
 .. _Una pequeña inmersión al modo interactivo de Python: http://plataforma.cenditel.gob.ve/wiki/Plone%3AUnaPequenaInmersionPython
+.. _fundación Cenditel: https://twitter.com/cenditel
