@@ -133,19 +133,21 @@ Iniciar instancia Zope
 
     ./bin/instance fg
 
-Acceda a su **sitio Plone** luego *Configuración del sitio > Complementos > Custom Theme > Activar*
+Acceda a su **sitio Plone** :menuselection:`Configuración del sitio --> Complementos --> Custom Theme --> Activar`
 
 Para finalizar acceda por su navegador a la siguiente dirección: ``http://localhost:8080/Plone/hello``
 
-Y de esta forma ya tiene generado una vista generada desde Python y otra vista generada de Python y incrustada en la diagramación de Plone generado con los ``localcommand`` de la plantilla ``plone3_theme`` del paquete ``ZopeSkel``.
+Y de esta forma ya tiene generado una vista generada desde Python y otra 
+vista generada de Python y incrustada en la diagramación de Plone generado 
+con los ``localcommand`` de la plantilla ``plone3_theme`` del paquete ``ZopeSkel``.
 
 
 Ejemplo de un viewlet básico
 ============================
 
 - Accede al archivo de la clase Python viewlet ``browser/viewlets.py`` 
-generado en este paquete y quiete el comentario la pieza de código disponible 
-allí (clase de Python viewlet).
+  generado en este paquete y quiete el comentario la pieza de código disponible 
+  allí (clase de Python viewlet).
 
   .. code-block:: python
 
@@ -157,8 +159,8 @@ allí (clase de Python viewlet).
               self.company = 'Plone Fundation'
 
 - Renombra el archivo plantilla viewlet ubicado en ``browser/viewlet.pt`` a 
-``browser/myviewlet.pt`` y si es necesario edite el código python acorde a 
-la plantilla viewlet.
+  ``browser/myviewlet.pt`` y si es necesario edite el código python acorde a 
+  la plantilla viewlet.
 
   .. code-block:: html
 
@@ -180,15 +182,18 @@ la plantilla viewlet.
           permission="zope2.View"
           />
 
-- Si usted necesito que aparezca en un orden especifico dentro de un viewlet manager, entonces edite ``profiles/default/viewlets.xml`` acordemente.
+- Si usted necesito que aparezca en un orden especifico dentro de un viewlet manager, 
+  entonces edite ``profiles/default/viewlets.xml`` acordemente.
 - Reinicie su instancia Zope, ejecutando el siguiente comando:
 
   .. code-block:: sh
 
       $ ./bin/buildout -vN
 
-- Si usted edito algún archivo en la carpeta ``profiles/default/``, debe reiniciar su paquete.
-- Una ves que este feliz con su implementación viewlet, remueva cualquier documentación relacionada en su clase y plantilla viewlet.
+- Si usted edito algún archivo en la carpeta ``profiles/default/``, debe reiniciar su 
+  paquete.
+- Una ves que este feliz con su implementación viewlet, remueva cualquier documentación 
+  relacionada en su clase y plantilla viewlet.
 
 
 Descarga código fuente
