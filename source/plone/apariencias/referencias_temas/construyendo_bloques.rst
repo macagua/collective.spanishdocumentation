@@ -401,7 +401,7 @@ por la Sintaxis de Expresiones TAL (TALES). Manda a buscar la propiedad del
     objetos que están en la misma Carpeta de las plantillas.
 
 Cada ruta comienza con una nombre variable. Si la variable contiene el valor
-que usted quiere, detengase allí. Caso contrario, agregue una barra (``/``) y
+que usted quiere, deténgase allí. Caso contrario, agregue una barra (``/``) y
 el nombre de un sub-objeto o propiedad. Es posible que tenga que pasar a
 través de varios sub-objetos para llegar al valor que usted está buscando.
 
@@ -561,9 +561,8 @@ del cero, y cadenas con cualquier cosa dentro de ellas (¡incluso espacios!).
 Definiendo variables
 ::::::::::::::::::::
 
-Nota: de Plone 4 en adelante, use *container/values* en lugar de
-*container/objectValues* de abajo..
-
+.. note:
+    de Plone 4 en adelante, use *container/values* en lugar de *container/objectValues* de abajo.
 
 La plantilla mostrará siempre al menos una fila, ya que la propia plantilla
 es uno de los objetos listados. En otras circunstancias, puede existir la
@@ -1091,9 +1090,10 @@ En cambio, podría escribir una de las siguientes:
             <b tal:content="ph">Phrase</b>".</span>
           </p>
 
-Nota: la definición de "n" en realidad no es muy útil en este ejemplo porque
-podríamos haber utilizado directamente "repeat/ph/number" en el atributo de
-sustituir el cual sólo ocurre una vez,pero sirve para nuestro propósito.
+.. note:
+    la definición de "n" en realidad no es muy útil en este ejemplo porque
+    podríamos haber utilizado directamente "repeat/ph/number" en el atributo de
+    sustituir el cual sólo ocurre una vez,pero sirve para nuestro propósito.
 
 
 Sentencias con partes múltiples
@@ -1121,8 +1121,9 @@ Aquí hay una mezcla de definiciones de variables:
           <span tal:define="global logo context/logo.gif; 
                             ids context/objectIds">
 
-**Nota:** de Plone 4 en adelante usted puede utilizar *context/items* en
-lugar de *context/objectIds*.
+.. note:
+    de Plone 4 en adelante usted puede utilizar *context/items* en
+    lugar de *context/objectIds*.
 
 
 Expresiones de cadena
@@ -1565,7 +1566,7 @@ se renderizará como:
 
     <input type="checkbox">
 
-This article contains information and examples from the `Zope Book`_, (C) `Zope Developers Community.`_
+Este articulo contiene información y ejemplos del `Zope Book`_, (C) `Zope Developers Community.`_
 
 
 Variables globales de plantillas
@@ -1606,7 +1607,7 @@ son:
   here_url
     El URL del objeto actual.
 
-Para ver la lista completa de estas variables revise the docstring for ``globalize()`` in the interface `Products.CMFPlone.browser.interfaces.IPlone`_.
+Para ver la lista completa de estas variables revise la docstring para la función ``globalize()`` en la interfaz `Products.CMFPlone.browser.interfaces.IPlone`_.
 
 
 Personalizando plantillas AT
@@ -1952,8 +1953,6 @@ eso, pero yo encuentro más conveniente y inteligible añadir ``_widget`` a los
 nombres de mi plantillas widget.
 
 
-
-
 Control total: La plantilla de Vista
 ::::::::::::::::::::::::::::::::::::
 
@@ -2043,8 +2042,6 @@ macro ``footer`` en la siguiente plantilla es copiado directamente desde
 
 ::
 
-
-
     Get the byline - contains details about author and modification date.
 
 
@@ -2055,8 +2052,6 @@ información importante que se aplique a cada instancia de su tipo
 personalizado:
 
 ::
-
-
 
     Get the byline - contains details about author and modification date.
 
@@ -2543,7 +2538,7 @@ skin por defecto de Plone se pueden encontrar en el producto CMFPlone:
 
 .. glossary::
 
-  [your products directory]/CMFPlone/skins
+  [su directorio de productos]/CMFPlone/skins
     Usted verá que hay una serie de directorios correspondientes a las capas 
     de skin específicas. La mayoría de esto debería ser auto-explicativo, pero 
     vale la pena recordar que únicamente las plantillas genéricas están almacenadas 
@@ -2554,7 +2549,7 @@ Dentro de su propio producto de tema
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: ./your_theme_egg_skin_cutdown.gif
-  :alt: The skins folder in your theme product
+  :alt: La carpeta skins en su producto de tema
 
 /skins/[su espacio de nombre de tema].
 
@@ -2590,7 +2585,7 @@ Hay stylesheet (hojas de estilo) disponibles sólo para este propósito.
 
 Usted encontrará una stylesheet vacía llamada ploneCustom.css en
 
--   [your products directory]/CMFPlone/skins/plone_styles or
+-   [su directorio de productos]/CMFPlone/skins/plone_styles o
 -   :menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_skins --> plone_styles`
 
 Este stylesheet está siempre cargado de último en una página, y por lo tanto
@@ -2665,7 +2660,7 @@ puede ayudar a clarificar como la CSS es usada en Plone.
 Usando las herramientas adecuadas
 *********************************
 
-Por mucho, la herramienta instrospector CSS más popular de sitios web es
+Por mucho, la herramienta introspector CSS más popular de sitios web es
 `Firebug`_ de Mozilla. No importa el nivel de su experiencia, Firebug es la
 última herramienta de depuración CSS y todos los personalizadores deberían
 utilizarla.
@@ -2785,8 +2780,8 @@ los elementos HTML en una página web. Cualquiera de estas proporciona una
 forma fácil de acceso a los selectores CSS e información de estilo requerida
 para la creación de stylesheets personalizadas.
 
-Note que los archivos .css en :menuselection:`Interfaz de Administración de Zope --> portal_skins --> plone_styles` son realmente
-plantillas dtml, lo que significa que pueden utilizar base_properties para
+Note que los archivos .css en :menuselection:`Interfaz de Administración de Zope --> portal_skins --> plone_styles` 
+son realmente plantillas dtml, lo que significa que pueden utilizar base_properties para
 hacer cambios globales vía variables.  Esto quiere decir que pueden contener
 referencias a base_properties junto con CSS estándar, como en el siguiente
 ejemplo de public.css:
@@ -2815,7 +2810,9 @@ Las secciones 4 y 5 de este tutorial describen las stylesheets (hojas de
 estilo) de Plone y los selectores CSS asociados con los distintos elementos
 de la interfaz de Plone.
 
-LEO1
+.. 
+   LEO1
+   
 Restableciendo los estilos por defecto
 ++++++++++++++++++++++++++++++++++++++
 
@@ -2853,8 +2850,8 @@ algunos cambios que imiten el estilo del objetivo. Terminar el estilo lo
 dejaremos como ejercicio para el estudiante.
 
 
-Ejemplo 1: estilo *"Austin Neon"*
----------------------------------
+Ejemplo 1: estilo "Austin Neon"
+-------------------------------
 
 Una de las maneras más fáciles de ver el control de base_properties es crear
 un estilo "oscuro" para su sitio. Como ejemplo de donde es apropiado este
@@ -2884,7 +2881,7 @@ Dar más estilo con CSS
 TODO (marcador de código)
 
 
-Example 2: estilo *'New York Times'*
+Ejemplo 2: estilo *'New York Times'*
 ------------------------------------
 
 ¿alguien desea hacer alguna contribución?
@@ -2902,33 +2899,86 @@ de Plone. Estas pueden editarse mediante la ZMI en
 Plone 3.0.x base_properties
 ---------------------------
 
-logoNamenombre del archivo del logotipo del portal fontFamilyfamilia de
-fuente usada para todo el texto que no es encabezado fontBaseSizeel tamaño de
-la fuente base de donde todo es calculado fontColorel color de fuente
-principal fontSmallSizeusado para varios elementos como botones y texto
-discreto discreetColorcolor de fuente para el texto discreto
-backgroundColorcolor de fondo linkColorcolor utilizado en los enlaces
-normales linkActiveColorcolor que se utiliza en enlaces activos
-linkVisitedColorcolor que se utiliza en los enlaces ya visitados
-borderWidthancho de la mayoría de los márgenes en Plone borderStyleestilo de
-las líneas de borde, normalmente sólido borderStyleAnnotationsestilo de las
-líneas de márgenes de los comentarios, etc globalBorderColorcolor del borde
-utilizadas en las pestañas principales, portlets, etc
-globalBackgroundColorcolor de fondo para las pestañas seleccionadas, títulos
-de portlets, etc. globalFontColorcolor de la fuente en las pestañas y en los
-encabezados de portlets headingFontFamilyfamilia de fuente para los
-encabezados h1/h2/h3/h4/h5/h6 contentViewBorderColorcolor de las pestañas de
-vista de contenidos contentViewBackgroundColorcolor del fondo de las pestañas
-de vista de contenidos contentViewFontColorcolor de la fuente usada en las
-pestañas de vista de contenidos inputFontColorcolor de fuente usado para los
-elementos de entrada  textTransformtransformación de texto a minúsculas en
-portlets, pestañas, etc evenRowBackgroundColorcolor de fondo de las filas
-impares en los listados oddRowBackgroundColorcolor de fondo de las filas
-impares en los listados notifyBorderColorcolor del borde de los elementos de
-notificación tal como el mensaje de estado, el enfoque del calendario
-notifyBackgroundColorcolor de fondo de los elementos de notificación como el
-mensaje de estado, el enfoque del calendario lpBackgroundColorcolor de fondo
-de la información en ventanas emergente (en la actualidad no se utiliza)
+logoName
+    nombre del archivo del logotipo del portal
+    
+fontFamily
+    familia de fuente usada para todo el texto que no es encabezado
+    
+fontBaseSize
+    el tamaño de la fuente base de donde todo es calculado 
+    
+fontColor
+    el color de fuente principal 
+    
+fontSmallSize
+    usado para varios elementos como botones y texto discreto
+
+discreetColor
+    color de fuente para el texto discreto
+
+backgroundColor
+    color de fondo 
+
+linkColor
+    color utilizado en los enlaces normales 
+
+linkActiveColor
+    color que se utiliza en enlaces activos
+    
+linkVisitedColor
+    color que se utiliza en los enlaces ya visitados
+    
+borderWidth
+    ancho de la mayoría de los márgenes en Plone 
+    
+borderStyle
+    estilo de las líneas de borde, normalmente sólido
+    
+borderStyleAnnotations
+    estilo de las líneas de márgenes de los comentarios, etc
+    
+globalBorderColorcolor del borde
+    utilizadas en las pestañas principales, portlets, etc
+    
+globalBackgroundColor
+    color de fondo para las pestañas seleccionadas, títulos de portlets, etc.
+    
+globalFontColor
+    color de la fuente en las pestañas y en losencabezados de portlets 
+
+headingFontFamily
+    familia de fuente para los encabezados h1/h2/h3/h4/h5/h6
+
+contentViewBorderColor
+    color de las pestañas de vista de contenidos 
+
+contentViewBackgroundColor
+    color del fondo de las pestañas de vista de contenidos 
+
+contentViewFontColor
+    color de la fuente usada en las pestañas de vista de contenidos 
+
+inputFontColor
+    color de fuente usado para los elementos de entrada
+
+textTransform
+    transformación de texto a minúsculas en portlets, pestañas, etc 
+
+evenRowBackgroundColor
+    color de fondo de las filas impares en los listados 
+
+oddRowBackgroundColor
+    color de fondo de las filas impares en los listados
+
+notifyBorderColor
+    color del borde de los elementos de notificación tal como el mensaje de estado, el enfoque del calendario
+
+notifyBackgroundColor
+    color de fondo de los elementos de notificación como el mensaje de estado, el enfoque del calendario 
+
+lpBackgroundColor
+    color de fondo de la información en ventanas emergente (en la actualidad no se utiliza)
 
 
 5.2.3.2.4. Stylesheets CSS por defecto
@@ -2938,8 +2988,8 @@ Descripción de los stylesheets CSS por defecto en Plone 3.0.x.
 
 Las stylesheets por defecto están descritas más abajo junto con las listas de
 los selectores CSS definidos en cada una.  Las stylesheets son presentadas en
-el mismo orden en que están definidas en :menuselection:`Interfaz de Administración de Zope --> portal_css` para que el
-estilo definido en las stylesheets de más abajo sustituyan el estilo definido
+el mismo orden en que están definidas en :menuselection:`Interfaz de Administración de Zope --> portal_css` 
+para que el estilo definido en las stylesheets de más abajo sustituyan el estilo definido
 en las de más arriba.
 
 
@@ -3691,8 +3741,8 @@ Skin layers
 Plantillas, scripts, imágenes, CSS y archivos JavaScript se organizan con las
 capas del skin
 
-> Nota: en el contexto de componentes, "capa" tiene un significado
-ligeramente distinto.
+.. note:
+    en el contexto de componentes, "capa" tiene un significado ligeramente distinto.
 
 A la piel se compone de una serie de capas del skin. En el sistema de
 archivos, cada capa es un directorio. En la Interfaz de Administración de
@@ -3718,29 +3768,27 @@ skin. También tendrá que agregar una pequeña cantidad de configuración para
 asegurarse de que su directorio es encontrado y registrado como una capa skin
 en la instalación.
 
-Primero en [your theme package]/skins.zcml
+Primero en [su paquete tema]/skins.zcml
 
 .. code-block:: xml
 
-    <cmf:registerDirectory
-           name="[Your Skin Directory Name]"/>
+    <cmf:registerDirectory name="[Su nombre del directorio skin]"/>
 
 
-Luego en [your theme package]/profiles/default/skins.xml
+Luego en [su paquete tema]/profiles/default/skins.xml
 
 .. code-block:: xml
 
-    <object name="[Your Skin Directory Name]"
+    <object name="[Su nombre del directorio skin]"
         meta_type="Filesystem Directory View"
-        directory="[your namespace].[your theme name]:skins/[Your
-        Skin Directory Name]"/>
+        directory="[su nombre de espacio].[su nombre del tema]:skins/[Su nombre del directorio skin]"/>
 
 y
 
 .. code-block:: xml
 
-    <skin-path name="[your skin name]" based-on="Plone Default">
-      <layer name="[Your Skin Directory Name]"
+    <skin-path name="[su nombre de skin]" based-on="Plone Default">
+      <layer name="[Su nombre del directorio skin]"
              insert-after="custom"/>
     </skin-path>
 
@@ -3837,36 +3885,33 @@ Los pasos clave son:
 
 1.  Registre los directorios de su skin como Filesystem Directory Views
     "Vistas de directorios del sistema de archivos", para que se puedan
-    convertir en capas skin. Esto ocurre en dos sitios:[your theme
-    package]/skins.zcml and [your theme package]/profiles/default/skins.xml
+    convertir en capas skin. Esto ocurre en dos sitios:[su paquete del tema]/skins.zcml 
+    y [su paquete tema]/profiles/default/skins.xml
 
     .. code-block:: xml
 
-        <cmf:registerDirectory name="[Your Skin Directory Name]"/>
+        <cmf:registerDirectory name="[Su nombre del directorio skin]"/>
 
-         <object name="[Your Skin Directory Name]"
+         <object name="[Su nombre del directorio skin]"
             meta_type="Filesystem Directory View"
-            directory="[your namespace].[your theme
-            name]:skins/[Your Skin Directory Name]"/>
+            directory="[su nombre de espacio].[su nombre del tema]:skins/[Su nombre del directorio skin]"/>
 
-2.  Agregue y organice sus capas skins dentro de una sola skin [your
-    theme package]/profiles/default/skins.xml
+2.  Agregue y organice sus capas skins dentro de una sola skin [su paquete del tema]/profiles/default/skins.xml
 
     .. code-block:: xml
 
-        <skin-path name="[your skin name" based-on="Plone Default">
-          <layer name="[Your Skin Directory Name]"
+        <skin-path name="[su nombre de skin" based-on="Plone Default">
+          <layer name="[Su nombre del directorio skin]"
              insert-after="custom"/>
         </skin-path>
 
-3.  Defina su skin como la skin por defecto [your theme
-    package]/profiles/default/skins.xml empaquetando este nodo alrededor de
-    los nodos de los dos ejemplos anteriores.
+3.  Defina su skin como la skin por defecto [su paquete del tema]/profiles/default/skins.xml 
+    empaquetando este nodo alrededor de los nodos de los dos ejemplos anteriores.
 
     .. code-block:: xml
 
         <object name="portal_skins" allow_any="False" cookie_persistence="False"
-           default_skin="[your skin name]">
+                default_skin="[su nombre de skin]">
             .........
         </object>
 
@@ -3877,45 +3922,27 @@ El nombre de su skin es requerido en algunos sitios en su producto de tema.
 Vale la pena conocer dónde y por qué, para referencia, las ocurrencias
 figuran en esta lista.
 
-Dónde
++-------------------------------+---------------------------------------+---------------------------------------+
+|              Dónde            |   Atributos/Directivas utilizados/as  |                  Uso                  |
++===============================+=======================================+=======================================+
+| profiles/default/skins.xml    | <skin_path name="[su nombre de skin]" | Usado para nombrar el conjunto        |
+|                               |                                       | de capas skin                         |
++-------------------------------+---------------------------------------+---------------------------------------+
+| profiles/default/skins.xml    | <object name="portal_skins"           | Usado para definir su grupo de capas  |
+|                               |   default_skin="[su nombre de skin]"> | skin como el skin por defecto.        |
++-------------------------------+---------------------------------------+---------------------------------------+
+| browser/configure.zcml        | <interface ...                        | Usado para nombrar la interfaz        |
+|                               | name="[su nombre de skin]" />         | específica de tema (vea la sección    |
+|                               |                                       | de :ref:`Componentes  <53_seccion>`)  |
++-------------------------------+---------------------------------------+---------------------------------------+
+| profiles/default/viewlets.xml | <order manager="plone.portalfooter"   | Usado para especificar el tema cuando |
+|                               |  skinname="[su nombre de skin]">      | ordena los viewlets en el             |
+|                               |                                       | administrador de estos.               |
+|                               |                                       | (Vea la sección de                    |
+|                               |                                       | :ref:`Componentes <53_seccion>`)      |
++-------------------------------+---------------------------------------+---------------------------------------+
 
-Atributos/Directivas utilizados/as
 
-Uso
-
-profiles/default/skins.xml
-
-<skin_path name="[your skin name]"
-
-Usado para nombrar el conjunto de capas skin
-
-profiles/default/skins.xml
-
-<object name="portal_skins"
-
-default_skin="[your skin name]">
-
-Usado para definir su grupo de capas skin como el skin por defecto.
-
-browser/configure.zcml
-
-<interface ... 
-
-name="[your skin name]"
-
-/>
-
-Usado para nombrar la interfaz específica de tema (vea la sección de
-:ref:`Componentes <53_seccion>`)
-
-profiles/default/viewlets.xml
-
-<order manager="plone.portalfooter" skinname="[your skin name]">
-
-Usado para especificar el tema cuando ordena los viewlets en el administrador
-de estos.
-
-(Vea la sección de :ref:`Componentes <53_seccion>`)
 
 .. _53_seccion:
 
@@ -4012,10 +4039,12 @@ Hay tres cosas que destacar:
     de nombre o espaciosnombre); atento de estos si usted está escribiendo su
     propio archivo ZCML. Para componentes de tema, mayormente usará el
     namespace del explorador.
+    
 -   Los atributos ZCML generalmente se refieren más a la interfaces que
     de los tipos de contenido. clases o componentes (vea los atributos *for*
     y *manager* en el ejemplo anterior). Encontrará más información sobre las
     interfaces en una :ref:`sección más adelante <5341_seccion>`.
+    
 -   Mira el atributo de clase y verá que comienza con un punto inicial.
     Esto significa que puede encontrarlo en el mismo directorio que el
     archivo ZCML como tal. Si no se encuentra dentro del mismo directorio
@@ -4026,8 +4055,6 @@ de Referencia de ZCML de la API (Interfaz de programación de aplicaciones)
 para Zope 3 - `http://apidoc.zope.org/++apidoc++/`_. Si usted quiere ser muy
 disciplinado y ordenado, consulte la ZCMLStyleGuide
 `http://wiki.zope.org/zope3/ZCMLStyleGuide`_ .
-
-
 
 
 5.3.2. Viewlets, portlets y otros componentes
@@ -4126,8 +4153,8 @@ usadas por componentes a través de Interfaz de Administración de Zope.
 
 -   :menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`
 
-Usted necesitará saber el nombre de su componente (por ejemplo
-plone.presentation). La sección :ref:`Elementos <7_seccion>` de este manual le ayudará en el
+Usted necesitará saber el nombre de su componente (por ejemplo plone.presentation). 
+La sección :ref:`Elementos <7_seccion>` de este manual le ayudará en el
 caso de que el nombre no sea obvio. Solo puede reescribir las plantillas, lo
 cual puede ser limitante.
 
@@ -4163,10 +4190,10 @@ nuevo nombre y conéctelo a su propia clase.
 .. code-block:: xml
 
     <browser:viewlet
-          name="[your namespace].[your presentation viewlet]"
+          name="[su nombre de espacio].[su viewlet de presentación]"
           for="Products.ATContentTypes.interface.IATDocument"
           manager="plone.app.layout.viewlets.interfaces.IAboveContentBody"
-          class=".[your viewlet module].[your viewlet class]"
+          class=".[su modulo de viewlet].[su clase viewlet]"
           permission="zope2.View"
           />
 
@@ -4236,10 +4263,9 @@ el administrador de viewlet es referido por su interfaz, y no por su Nombre:
     manager="plone.app.layout.viewlets.interfaces.IAboveContentBody"
 
 Para localizar el componente, busque en el archivo configure.zcml en el mismo
-directorio que las interfaces. Por ejemplo en
-plone/app/layout/viewlets/configure.zcml verá que la interfaz ha sido
-conectada con una clase Python para crear un componente de administrador de
-viewlet:
+directorio que las interfaces. Por ejemplo en plone/app/layout/viewlets/configure.zcml 
+verá que la interfaz ha sido conectada con una clase Python para crear un componente de 
+administrador de viewlet:
 
 .. code-block:: xml
 
@@ -4328,7 +4354,7 @@ información (self.logo_tag, self.portal_title) usando la variable "view":
 .. code-block:: html
     
     <img src="logo.jpg" alt=""
-             tal:replace="structure view/logo_tag" />
+         tal:replace="structure view/logo_tag" />
 
 ¿Tengo que usar clases?
 -----------------------
@@ -4336,9 +4362,9 @@ información (self.logo_tag, self.portal_title) usando la variable "view":
 Los viewlets tienden a estar conectados con una clase Python que apunta a una
 plantilla. Así que, aunque es posible que sólo desea crear una nueva
 plantilla, usted descubrirá que tiene que escribir una clase para que apunte
-a su nueva plantilla. La sección :ref:`Elementos <7_seccion>` de este manual debería ayudarlo
-dándole un fragmento de código para que cada elemento copie y pegue dentro de
-su propio producto.
+a su nueva plantilla. La sección :ref:`Elementos <7_seccion>` de este manual 
+debería ayudarlo dándole un fragmento de código para que cada elemento copie 
+y pegue dentro de su propio producto.
 
 Aquí hay un ejemplo: La plantilla de logotipo estándar en realidad no hace
 uso de view/portal_title. Así que si usted quería incorporar esto de alguna
@@ -4350,7 +4376,7 @@ plantilla y también su propia clase:
     from plone.app.layout.viewlets.common import LogoViewlet
     from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
-    class [your class name](LogoViewlet):
+    class [su nombre de clase](LogoViewlet):
         render = ViewPageTemplateFile('[nombre de su plantilla]')
     
 
@@ -4519,16 +4545,17 @@ versión re-conectada (reestructurada) del viewlet de presentación:
 .. code-block:: xml
 
     <browser:viewlet
-          name="[your namespace].[your presentation viewlet]"
+          name="[su nombre de espacio].[su viewlet de presentación]"
           for="Products.ATContentTypes.interface.IATDocument"
           manager="plone.app.layout.viewlets.interfaces.IAboveContentBody"
-          class=".[your viewlet module].[your viewlet class]"
+          class=".[su modulo de viewlet].[su clase viewlet]"
           layer=".interfaces.IThemeSpecific"
           permission="zope2.View"
           />
 
-Nota: no confunda el atributo de capa con una capa de skin. Aquí, capa se
-refiere al tema completo y no a una sola parte de él.
+.. note:
+    no confunda el atributo de capa con una capa de skin. Aquí, capa se
+    refiere al tema completo y no a una sola parte de él.
 
 Hay dos métodos para crear una interfaz de tema:
 
@@ -4555,11 +4582,12 @@ En Plone 3.0, plone.theme es usado:
     <interface
             interface=".interfaces.IThemeSpecific"
             type="zope.publisher.interfaces.browser.IBrowserSkinType"
-            name="[your skin name]"
+            name="[su nombre de skin]"
             />
 
-Nota: [el nombre de skin] surge aquí; revise de nuevo la sección de skins si
-se está preguntando que es esto.
+.. note:
+    [el nombre de skin] surge aquí; revise de nuevo la sección de skins si 
+    se está preguntando que es esto.
 
 
 Usando plone.browserlayer
@@ -4581,9 +4609,8 @@ En Plone 3.1, plone.browserlayer está disponible para usted.
 .. code-block:: xml
 
     <layers>
-     <layer name="[your skin name]"
-       interface="[your namespace].[your theme
-       name].browser.interfaces.IThemeSpecific"
+     <layer name="[su nombre de skin]"
+       interface="[su nombre de espacio].[su nombre del tema].browser.interfaces.IThemeSpecific"
      />
     </layers>
 
@@ -4592,7 +4619,7 @@ plantilla paster plone3_theme, pues lo básico estará hecho para usted (usando
 el método plone.theme), simplemente tendrá que localizar la interfaz para
 encontrar su respectivo nombre. Busque en
 
--   [su paquete de tema]/browser/interfaces.py or configure.zcml
+-   [su paquete de tema]/browser/interfaces.py o configure.zcml
 
 Y debería encontrara el nombre IThemeSpecific. Cuando se refiera a ella, use
 esta ruta
@@ -4637,7 +4664,7 @@ resolver esta pregunta.
 Si usted quiere quitar los recursos del explorador fuera del producto creado
 por la plantilla paster plone3_theme
 
--   remove the images and stylesheets directories in the [your theme package]/browser
+-   remove the images and stylesheets directories in the [su paquete tema]/browser
 -   elimine las entradas <browser:resourceDirectory /> en [su paquete de tema]/browser/configure.zcml
 -   elimine la entrada de la stylesheet de registro para main.css en [su paquete de tema]/profiles/default/cssregistry.xml
 -   si ya ha instalado el producto es posible que tenga que consultar el
@@ -4744,9 +4771,9 @@ creada por la plantilla de paster plone3_theme:
 
     <genericsetup:registerProfile
      name="default"
-     title="[your skin name]"
+     title="[su nombre de skin]"
      directory="profiles/default"
-     description='Extension profile for the "[your skin name]" Plone theme.'
+     description='Extension profile for the "[su nombre de skin]" Plone theme.'
      provides="Products.GenericSetup.interfaces.EXTENSION"
     />
 
@@ -4885,8 +4912,7 @@ en:
 Sin embargo, tenga en cuenta que algunos archivos de configuración pueden
 estar ubicados en productos de terceros. Por ejemplo, si desea añadir algunos
 estilos al editor visual Kupu, como parte de su tema, entonces necesitará
-kupu.xml el cual encontrará en [su locación de
-producto]/kupu/plone/profiles/default.
+kupu.xml el cual encontrará en [su locación de producto]/kupu/plone/profiles/default.
 
 Hay una alternativa para cazar en el sistema de archivos, y esta es utilizar
 la herramienta Generic Setup para exportar el perfil.

@@ -65,7 +65,7 @@ De Plone 3.1.2 en adelante
 
 Buildout  En una instalación basada en Buildout, no tiene que preocuparse
 mucho acerca de su instancia Zope. Si realmente quiere investigar encontrará
-su instancia en [your buildout]/parts/instance. Sin embargo la mayoría de los
+su instancia en [su buildout]/parts/instance. Sin embargo la mayoría de los
 detalles clave (sus productos Plone, productos de terceros , y Data.fs) no se
 alojan allá. Todos ellos están reunidos de varias partes de su sistema de
 archivos por el archivo zope.conf que se genera cuando ejecuta Buildout.

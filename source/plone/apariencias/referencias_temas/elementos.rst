@@ -29,32 +29,44 @@ Las partes que construyen un componente viewlet.
 Directiva en ZCML
 -----------------
 
-<browser:viewlet />
+.. code-block:: xml
+
+    <browser:viewlet />
 
 
 Atributos en ZCML
 -----------------
 
-name ejemplo [su namespace].[nombre de su viewlet] manager una interfaz de
-administrador layer una interfaz de marcador para su tema en particular class
-una clase de Python. Esta clase requiere un atributo "render" (renderizar),
-sobre el cual, en la mayoría de los casos, apunta a una plantilla. No es
-necesario especificar la plantilla en el ZCML, sin embargo, en versiones de
-Plone 3.1.3 en adelante, se puede sustituir esta plantilla usando el atributo
-de plantilla más abajo
-template En la versión de Plone 3.1.2 o anteriores, sólo se puede usar esta
-opción si no está utilizando una clase, en la versión de Plone 3.1.3 o
-posteriores, puede utilizar esto para sustituir la plantilla que ha definido
-en la clase que usted ha especificado anteriormente
-permission en la mayoría de los casos será Zope.Public for especificar una
-interfaz marcando a un grupo de tipos de contenido, si lo desea. El viewlet
-luego se limitará a aquellos tipos de contenido (por ejemplo, vea el 
-:ref:`Viewlet de presentación <7911_seccion>` en la sección de Elementos) 
-view (vista) especifique una interfaz que marca una vista del navegador 
-específica, si lo desea. El viewlet se limitará a elementos con esa vista 
-específica (por ejemplo investigar el código fuente del viewlet de acciones 
-de contenido; usted encontrará las instrucciones sobre la ubicación de este 
-código en la página `Acciones de contenido`_ de la sección de Elementos)
+  name 
+    ejemplo [su namespace].[nombre de su viewlet] 
+
+  manager
+    una interfaz de administrador layer una interfaz de marcador para su tema en particular 
+  
+  class
+    una clase de Python. Esta clase requiere un atributo "render" (renderizar), sobre el cual, 
+    en la mayoría de los casos, apunta a una plantilla. No es necesario especificar la plantilla 
+    en el ZCML, sin embargo, en versiones de Plone 3.1.3 en adelante, se puede sustituir esta 
+    plantilla usando el atributo de plantilla más abajo
+    
+  template
+    En la versión de Plone 3.1.2 o anteriores, sólo se puede usar esta opción si no está utilizando 
+    una clase, en la versión de Plone 3.1.3 o posteriores, puede utilizar esto para sustituir la 
+    plantilla que ha definido en la clase que usted ha especificado anteriormente
+    
+  permission
+    en la mayoría de los casos será Zope.Public
+    
+  for
+    especificar una interfaz marcando a un grupo de tipos de contenido, si lo desea. El viewlet luego 
+    se limitará a aquellos tipos de contenido (por ejemplo, vea el :ref:`Viewlet de presentación <7911_seccion>` 
+    en la sección de Elementos) 
+  
+  view (vista)
+    especifique una interfaz que marca una vista del navegador específica, si lo desea. 
+    El viewlet se limitará a elementos con esa vista específica (por ejemplo investigar 
+    el código fuente del viewlet de acciones de contenido; usted encontrará las instrucciones 
+    sobre la ubicación de este código en la página `Acciones de contenido`_ de la sección de Elementos)
 
 
 7.1.2. Mover, quitar u ocultar un viewlet
@@ -119,8 +131,8 @@ No se puede hacer más que ocultar su viewlet en el administrador de viewlet
 .. code-block:: xml
 
     <object>
-        <hidden manager="[Viewlet Manager Name]" skinname="[your skin name]">
-            <viewlet name="[Viewlet Name]" />
+        <hidden manager="[Viewlet Manager Name]" skinname="[su nombre del skin]">
+            <viewlet name="[Nombre de Viewlet]" />
         </hidden>
     </object>
 
@@ -135,10 +147,10 @@ Moviendo un viewlet dentro de un administrador de viewlet
 .. code-block:: xml
 
     <object>
-        <order manager="[Viewlet Manager Name]" skinname="[your skin name]">
+        <order manager="[Viewlet Manager Name]" skinname="[su nombre del skin]">
     <!-- Specify all the viewlets you want to see in this viewlet 
     in the order you want them with this directive: -->
-            <viewlet name="[Viewlet Name]">
+            <viewlet name="[Nombre de Viewlet]">
         </order>
     </object>
 
@@ -162,21 +174,21 @@ pasos
 
     <object>
     <!-- Hide it from the current viewlet manager -->
-        <hidden manager="[current Viewlet Manager Name]"
-        skinname="[your skin name]">
-            <viewlet name="[Viewlet Name]" />
+        <hidden manager="[actual nombre del administrador Viewlet]"
+        skinname="[su nombre del skin]">
+            <viewlet name="[Nombre de Viewlet]" />
         </hidden>
     <!-- Add it to a different viewlet manager -->
-        <order manager="[a different Viewlet Manager]"
-        skinname="[your skin name]"
+        <order manager="[un administrador Viewlet diferente]"
+        skinname="[su nombre del skin]"
                based-on="Plone Default">
-            <viewlet name="[Viewlet Name]"
+            <viewlet name="[Nombre de Viewlet]"
                      insert-before="[Name of Viewlet
                      Below]" />
         </order>
     <!-- OR Add it to your own viewlet manager -->
-        <order manager="[Your Viewlet Manager]" skinname="[your skin name]">
-            <viewlet name="[Viewlet Name]"/>
+        <order manager="[Su Administrador Viewlet]" skinname="[su nombre del skin]">
+            <viewlet name="[Nombre de Viewlet]"/>
         </order>
     </object>
 
@@ -243,10 +255,10 @@ Usted tendrá que saber el nombre de:
 
 4. archivo de configuración [su paquete de tema]/profiles/default/viewlets.xml
 
-5. página de la plantilla[su paquete de tema]/browser/[your template name].pt
+5. página de la plantilla[su paquete de tema]/browser/[su nombre de plantilla].pt
 
 6. Clase PythonEsto es opcional (pero vea la nota de abajo para la versión de Plone 3.1.2 
-   o anteriores) coloque esto en [su paquete de tema]/browser/[your module].py
+   o anteriores) coloque esto en [su paquete de tema]/browser/[su modulo].py
 
 Muestra de directiva de configuration.zcml
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -260,8 +272,8 @@ Re-conectando un viewlet de Plone Default para utilizar su propia plantilla
      name="plone.[viewlet name]"
      manager="[viewlet manager interface]"
      class="plone.app.layout.viewlets.common.[viewlet class name]"
-     template="templates/[your template name]"
-     layer="[your theme specific interface]"
+     template="templates/[su nombre de plantilla]"
+     layer="[su interfaz especifica del tema]"
      permission="zope2.View"
      />
 
@@ -271,11 +283,11 @@ Conectando un nuevo viewlet pero prestando una clase de viewlet de Plone Default
 .. code-block:: xml
 
     <browser:viewlet
-     name=[your namespace].[your viewlet name]"
+     name=[su nombre de espacio].[su nombre de viewlet]"
      manager="[viewlet manager interface]"
      class="plone.app.layout.viewlets.common.[viewlet class name]"
-     template="templates/[your template name]"
-     layer="[your theme specific interface]"
+     template="templates/[su nombre de plantilla]"
+     layer="[su interfaz especifica del tema]"
      permission="zope2.View"
      />
 
@@ -285,11 +297,11 @@ Conectando con un viewlet nuevo con su propia clase o su propia plantilla
 .. code-block:: xml
 
     <browser:viewlet
-     name=[your namespace].[your viewlet name]"
+     name=[su nombre de espacio].[su nombre de viewlet]"
      manager="[viewlet manager interface]"
-     class=".[your module].[your class name]"
-     (or: template="templates/[your template name]")
-     layer="[your theme specific interface]"
+     class=".[su modulo].[su nombre de clase]"
+     (or: template="templates/[su nombre de plantilla]")
+     layer="[su interfaz especifica del tema]"
      permission="zope2.View"
      />
 
@@ -308,7 +320,7 @@ plantilla de página.
     from [element namespace] import [element class name]
     from Products.Five.browser.pagetemplatefile import ViewPageTemplateFileclass
 
-    [your class name]([element class name]): render = ViewPageTemplateFile("[your template name]")
+    [su nombre de clase]([element class name]): render = ViewPageTemplateFile("[su nombre de plantilla]")
 
 
 7.2. Portlet
@@ -333,16 +345,24 @@ personalización.
 Directiva en ZCML
 -----------------
 
-<plone:portletRenderer />
+.. code-block:: xml
+
+    <plone:portletRenderer />
 
 
 Atributos en ZCML
 -----------------
 
-layer una interfaz de marcador para su tema en particular portlet la interfaz
-del portlet que desea personalizar template ubicación de la plantilla que
-desea sustituir class su clase personalizada (use esta opción si no
-especifica una plantilla) para la renderización del portlet
+  layer
+    una interfaz de marcador para su tema en particular portlet la interfaz 
+    del portlet que desea personalizar
+
+  template
+    ubicación de la plantilla que desea sustituir
+
+  class
+    su clase personalizada (use esta opción si no especifica una plantilla) 
+    para la renderización del portlet
 
 
 7.2.2. Mover, quitar u ocultar un portlet
@@ -470,7 +490,7 @@ plone3_theme, el nombre probablemente será IThemeSpecific.
 Usted tendrá que crear los siguientes (debe ser capaz de localizar los
 originales para copiar revisando la sección de Elementos):
 
-directiva del renderizador de portlet de plone [su paquete de tema]/browser/configure.zcml página de la plantilla [su paquete de tema]/browser/[your template name].pt Clase Python * [su paquete de tema]/browser/[your module name].py
+directiva del renderizador de portlet de plone [su paquete de tema]/browser/configure.zcml página de la plantilla [su paquete de tema]/browser/[su nombre de plantilla].pt Clase Python * [su paquete de tema]/browser/[su modulo name].py
 
 * En la mayoría de los casos no será necesario una clase Python
 
@@ -485,9 +505,9 @@ Muestra de directiva de configuration.zcml
         <include package="plone.app.portlets"  />
         <plone:portletRenderer
            portlet="[element interface]"
-           template="[your template name].pt"
-          (or class=".[your module].[your class name]")
-          layer="[your theme specific interface]"
+           template="[su nombre de plantilla].pt"
+          (or class=".[su modulo].[su nombre de clase]")
+          layer="[su interfaz especifica del tema]"
          />
     </configure>
 
@@ -506,9 +526,9 @@ método recursivo en la clase.
     from plone.app.portlets.portlets.navigation import Renderer
     from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
-    class [your class name](Renderer):
-        _template = ViewPageTemplateFile([your template name].pt)
-        recurse = ViewPageTemplateFile([your recurse template name])
+    class [su nombre de clase](Renderer):
+        _template = ViewPageTemplateFile([su nombre de plantilla].pt)
+        recurse = ViewPageTemplateFile([su nombre del recursivo de plantilla])
 
 
 7.2.4. Sustituir los portlets de Plone 3.0
@@ -814,21 +834,29 @@ Las partes que construyen un administrador de viewlet.
 Directiva en ZCML
 -----------------
 
-<browser:viewletManager />
+.. code-block:: xml
+
+    <browser:viewletManager />
 
 
 Atributos en ZCML
 -----------------
 
-name ejemplo [su namespace].[nombre del administrador de su viewlet] provides
-una interfaz de marcador que define lo que este gerente hace layer una
+  name
+    ejemplo [su namespace].[nombre del administrador de su viewlet] 
+  
+  provides
+    una interfaz de marcador que define lo que este gerente hace layer una
 interfaz de marcador para su tema en particular class esto será
 plone.app.viewletmanager.manager.OrderedViewletManager permission en la
 mayoría de los casos será Zope.Public for especificar una interfaz marcando a
 un grupo de tipos de contenido, si lo desea. El administrador de viewlet se
-limitará a esos tipos de contenido view (vista) especificar una interfaz que
-marca una vista, si lo desea. El administrador de viewlet se limitará a los
-artículos con esas de vista.
+limitará a esos tipos de contenido 
+
+
+  view (vista)
+    especificar una interfaz que marca una vista, si lo desea. El administrador 
+    de viewlet se limitará a los artículos con esas de vista.
 
 
 7.3.2. Mover, quitar u ocultar un administrador de viewlet
@@ -917,8 +945,8 @@ Muestra de la interfaz
 
     from zope.viewlet.interfaces import IViewletManager
 
-    class [your viewlet manager interface](IViewletManager):
-        """ [A description of your viewlet manager goes here]  """
+    class [su interfaz de administrador viewlet](IViewletManager):
+        """ [Una descripción de su administrador viewlet va aquí]  """
 
 Muestra de la directiva configure.zcml
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -926,10 +954,10 @@ Muestra de la directiva configure.zcml
 .. code-block:: xml
 
     <browser:viewletManager
-     name=[your namespace].[your element name]"
-     provides=".interfaces.[your viewlet manager interface]"
+     name=[su nombre de espacio].[su nombre de elemento]"
+     provides=".interfaces.[su interfaz de administrador viewlet]"
      class="plone.app.viewletmanager.manager.OrderedViewletManager"
-     layer="[your theme interface]"
+     layer="[su interfaz del tema]"
      permission="zope2.View"
      />
 
@@ -1057,7 +1085,7 @@ Muestra de la interfaz
 
     from plone.portlets.interfaces import IPortletManager
 
-    class [your portlet manager interface](IPortletManager):
+    class [su interfaz del administrador portlet](IPortletManager):
      """A description goes here    """
 
 Muestra de portlets.xml
@@ -1068,9 +1096,8 @@ Muestra de portlets.xml
     <?xml version="1.0"?>
     <portlets>
      <portletmanager
-        name="[your namespace].[your portlet manager]"
-        type="[your namespace].[your theme
-        name].browser.interfaces.[your portlet manager interface]"
+        name="[su nombre de espacio].[su administrador de portlet]"
+        type="[su nombre de espacio].[su nombre del tema].browser.interfaces.[su interfaz del administrador portlet]"
      />
     </portlets>
 
@@ -1082,8 +1109,8 @@ Muestra de directiva configure.zcml (para la vista del administrador)
     <browser:page
      for="plone.portlets.interfaces.ILocalPortletAssignable"
      class="plone.app.portlets.browser.manage.ManageContextualPortlets"
-     name="[your view name]"
-     template="[your template name].pt"
+     name="[su nombre de vista]"
+     template="[su nombre de plantilla].pt"
      permission="plone.app.portlets.ManagePortlets"
     />
 
@@ -1351,43 +1378,43 @@ la Web.
 |                     |                     |               |                                            |
 |                     |                     |               | plone.portalheader                         |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     |                     | |peihtml2|    | `plone.htmlhead.title`_                    |
 |                     | Título de           |               |                                            |
 |                     | Cabecera HTML       |               | plone.htmlhead                             |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     | Enlaces             | |peihtml3|    | `plone.nextprevious.links`_                |
 |                     | anterior/siguiente  |               |                                            |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     | Enlace Favicon      | |peihtml4|    | `plone.links.favicon`_                     |
 |                     |                     |               |                                            |
 |                     |                     |               | plone.htmlhead.links                       |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     | Enlace de búsqueda  | |peihtml5|    | `plone.links.search`_                      |
 |                     |                     |               |                                            |
 |                     |                     |               | plone.htmlhead.links                       |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     | Enlace de autor     | |peihtml6|    | `plone.links.author`_                      |
 |                     |                     |               |                                            |
 |                     |                     |               | plone.htmlhead.links                       |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     | Enlace de           | |peihtml7|    | `plone.links.navigation`_                  |
 |                     | navegación          |               |                                            |
 |                     |                     |               |                                            |
 |                     |                     |               | plone.htmlhead.links                       |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     | Analytics           | (Fragmento    |                                            |
 |                     |                     | de código     |                                            |
@@ -1398,133 +1425,133 @@ la Web.
 |                     |                     |               |                                            |
 |                     |                     |               | plone.portalfooter                         |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     | Encabezado          | |peihtml8|    | `plone.header`_                            |
 |                     |                     |               |                                            |
 |                     |                     |               | plone.portaltop                            |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     | Selector de idiomas | |peihtml9|    | `plone.app.i18n.locales.languageselector`_ |
 |                     |                     |               |                                            |
 |                     |                     |               | Portal Top                                 |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     | Acciones del sitio  | |peihtml11|   | `plone.site_actions`_                      |
 |                     |                     |               |                                            |
 | |peihtml10|         |                     |               | plone.portalheader                         |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     | Cuadro de búsqueda  | |peihtml13|   | `plone.searchbox`_                         |
 |                     |                     |               |                                            |
 | |peihtml12|         |                     |               | plone.portalheader                         |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     | Logotipo            | |peihtml15|   | `plone.logo`_                              |
 |                     |                     |               |                                            |
 | |peihtml14|         |                     |               | plone.portalheader                         |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     |                     | |peihtml17|   | `plone.global_sections`_                   |
 |                     |                     |               |                                            |
 | |peihtml16|         | Secciones globales  |               | plone.portalheader                         |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     |                     | |peihtml19|   | `plone.personal_bar`_                      |
 |                     |                     |               |                                            |
 | |peihtml18|         | Barra personal      |               | plone.portaltop                            |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     | Barra de ruta       | |peihtml20|   | `plone.path_bar`_                          |
 |                     | (hilo de Ariadna    |               |                                            |
 |                     | del portal)         |               | plone.portaltop                            |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     |                     | |peihtml21|   | `plone.contentviews`_                      |
 |                     |                     |               |                                            |
 |                     | Vistas de contenido |               | plone.contentviews                         |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     |                     |               | `plone.contentactions`_                    |
 |                     | Acciones de         |               |                                            |
 |                     | contenido           |               | plone.contentviews                         |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     |                     | |peihtml23|   | `plone.tableofcontents`_                   |
 |                     |                     |               |                                            |
 | |peihtml22|         | Tabla de contenidos |               | plone.abovecontentbody                     |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     |                     | |peihtml25|   | `plone.presentation`_                      |
 |                     |                     |               |                                            |
 | |peihtml24|         | Presentación        |               | plone.abovecontentbody                     |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     |                     | |peihtml26|   | `plone.belowcontenttitle.keywords`_        |
 |                     |                     |               |                                            |
 |                     | Palabras clave      |               | plone.belowcontenttitle                    |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     |                     | |peihtml28|   | `plone.presentation`_                      |
 |                     |                     |               |                                            |
 | |peihtml27|         | Línea de fondo      |               | plone.abovecontentbody                     |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     |                     | |peihtml29|   | `plone.lockinfo`_                          |
 |                     |                     |               |                                            |
 |                     | Bloqueo             |               | plone.abovecontent                         |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     |                     | |peihtml31|   | `plone.abovecontenttitle.documentactions`_ |
 |                     |                     |               |                                            |
 | |peihtml30|         | Acciones de         |               | plone.belowcontentbody                     |
 |                     | documento           |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     |                     | |peihtml33|   | `plone.comments`_                          |
 |                     |                     |               |                                            |
 | |peihtml32|         | Comentarios         |               | plone.belowcontent                         |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     |                     | |peihtml34|   | `plone.belowcontentbody.contenthistory`_   |
 |                     | Historial de        |               |                                            |
 |                     | contenido           |               | plone.belowcontentbody                     |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     |                     | |peihtml36|   | `plone.nextprevious`_                      |
 |                     |                     |               |                                            |
 | |peihtml35|         | Anterior Siguiente  |               | plone.belowcontent                         |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     |                     | |peihtml37|   | `plone.footer`_                            |
 |                     |                     |               |                                            |
 |                     | Pie de página       |               | plone.portalfooter                         |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     |                     | |peihtml39|   | `plone.colophon`_                          |
 |                     |                     |               |                                            |
 | |peihtml38|         | Colofon             |               | plone.portalfooter                         |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 
 
@@ -1667,61 +1694,61 @@ la Web.
 |                     |                     |               |                                            |
 |                     |                     |               | plone.portalheader                         |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     | Título de           | |peihtml41|   | `plone.htmlhead.title`_                    |
 |                     | Cabecera HTML       |               |                                            |
 |                     |                     |               | plone.htmlhead                             |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     | Dublin Core         | |peihtml42|   | `plone.htmlhead.dublincore`_               |
 |                     | Metadata            |               |                                            |
 |                     |                     |               | plone.htmlhead                             |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     |                     | |peihtml43|   | `plone.htmlhead.kss-base-url`_             |
 |                     | KSS Base Url        |               |                                            |
 |                     |                     |               | plone.htmlhead                             |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     |                     | |peihtml44|   | `plone.nextprevious.links`_                |
 |                     | Enlaces             |               |                                            |
 |                     | anterior/siguiente  |               | plone.htmlhead.links                       |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     |                     | |peihtml45|   | `plone.links.favicon`_                     |
 |                     |                     |               |                                            |
 |                     | Enlace Favicon      |               | plone.htmlhead.links                       |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     |                     | |peihtml46|   | `plone.links.search`_                      |
 |                     |                     |               |                                            |
 |                     | Enlace de búsqueda  |               | plone.htmlhead.links                       |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     |                     | |peihtml47|   | `plone.links.author`_                      |
 |                     |                     |               |                                            |
 |                     | Enlace de autor     |               | plone.htmlhead.links                       |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     |                     | |peihtml48|   | `plone.links.navigation`_                  |
 |                     | Enlace de           |               |                                            |
 |                     | navegación          |               | plone.htmlhead.links                       |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     |                     | |peihtml49|   | `plone.links.RSS`_                         |
 |                     |                     |               |                                            |
 |                     | Enlace RSS          |               | plone.htmlhead.links                       |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     | Analytics           | (Fragmento    |                                            |
 |                     |                     | de código     |                                            |
@@ -1732,139 +1759,139 @@ la Web.
 |                     |                     |               |                                            |
 |                     |                     |               | plone.portalfooter                         |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     |                     | |peihtml50|   | `plone.header`_                            |
 |                     |                     |               |                                            |
 |                     | Encabezado          |               | plone.portaltop                            |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     |                     | |peihtml51|   | `plone.app.i18n.locales.languageselector`_ |
 |                     |                     |               |                                            |
 |                     | Selector de idiomas |               | Portal Top                                 |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     | Acciones del sitio  | |peihtml53|   | `plonetheme.sunburst.site_actions`_        |
 |                     |                     |               |                                            |
 | |peihtml52|         |                     |               | plone.portalfooter                         |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     |                     | |peihtml55|   | `plone.searchbox`_                         |
 |                     |                     |               |                                            |
 | |peihtml54|         | Cuadro de búsqueda  |               | plone.portalheader                         |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     |                     | |peihtml57|   | `plone.logo`_                              |
 |                     |                     |               |                                            |
 | |peihtml56|         | Logotipo            |               | plone.portalheader                         |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     |                     | |peihtml59|   | `plone.global_sections`_                   |
 |                     |                     |               |                                            |
 | |peihtml58|         | Secciones globales  |               | plone.portalheader                         |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     |                     | |peihtml61|   | `plonetheme.sunburst.personal_bar`_        |
 |                     |                     |               |                                            |
 | |peihtml60|         | Barra personal      |               | plone.portaltop                            |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     | Barra de ruta       | |peihtml63|   | `plone.path_bar`_                          |
 |                     | (hilo de Ariadna    |               |                                            |
 | |peihtml62|         | del portal)         |               | plone.portaltop                            |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     |                     | |peihtml65|   | `plone.contentviews`_                      |
 |                     |                     |               |                                            |
 | |peihtml64|         | Vistas de contenido |               | plone.contentviews                         |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     |                     |               | `plone.contentactions`_                    |
 |                     |                     |               |                                            |
 | |peihtml66|         | Accions de          |               | plone.contentviews                         |
 |                     | contenido           |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     |                     | |peihtml68|   | `plone.tableofcontents`_                   |
 |                     |                     |               |                                            |
 | |peihtml67|         | Tabla de contenidos |               | plone.abovecontentbody                     |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     |                     | |peihtml70|   | `plone.presentation`_                      |
 |                     |                     |               |                                            |
 | |peihtml69|         | Presentación        |               | plone.abovecontentbody                     |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     |                     | |peihtml72|   | `plone.belowcontenttitle.keywords`_        |
 |                     |                     |               |                                            |
 | |peihtml71|         | Palabras clave      |               | plone.belowcontenttitle                    |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     |                     | |peihtml74|   | `plone.belowcontenttitle.documentbyline`_  |
 |                     |                     |               |                                            |
 | |peihtml73|         | Línea de fondo      |               | plone.belowcontenttitle                    |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     |                     | |peihtml75|   | `plone.lockinfo`_                          |
 |                     |                     |               |                                            |
 |                     | Bloqueo             |               | plone.abovecontent                         |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     |                     | |peihtml76|   | `plone.abovecontenttitle.documentactions`_ |
 |                     | Acciones de         |               |                                            |
 |                     | documento           |               | plone.belowcontentbody                     |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     |                     | |peihtml78|   | `plone.belowcontentbody.relateditems`_     |
 |                     |                     |               |                                            |
 | |peihtml77|         | Elementos           |               | plone.belowcontentbody                     |
 |                     | relacionados        |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     |                     | |peihtml80|   | `plone.comments`_                          |
 |                     |                     |               |                                            |
 | |peihtml79|         | Comentarios         |               | plone.belowcontent                         |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     |                     | |peihtml82|   | `plone.belowcontentbody.contenthistory`_   |
 |                     | Historial de        |               |                                            |
 | |peihtml81|         | contenido           |               | plone.belowcontentbody                     |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     |                     | |peihtml84|   | `plone.nextprevious`_                      |
 |                     |                     |               |                                            |
 | |peihtml83|         | Anterior Siguiente  |               | plone.belowcontent                         |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     |                     | |peihtml86|   | `plone.footer`_                            |
 |                     |                     |               |                                            |
 | |peihtml85|         | Pie de página       |               | plone.portalfooter                         |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     |                     | |peihtml88|   | `plone.colophon`_                          |
 |                     |                     |               |                                            |
 | |peihtml87|         | Pie de página       |               | plone.portalfooter                         |
 |                     |                     |               |                                            |
-|                     |                     |               | `viewlet`_                                 |
+|                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
 
 
@@ -1888,7 +1915,7 @@ Llama los administradores de viewlets para el encabezado del sitio
     plone.header
 
   **Tipo:** 
-    `viewlet`_
+    :ref:`viewlet <721_seccion>`
 
 Personalización a través de la Interfaz de Administración de Zope
 -----------------------------------------------------------------
@@ -1896,7 +1923,8 @@ Personalización a través de la Interfaz de Administración de Zope
 .. glossary ::
 
   **Uso:**
-    menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    :menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    
   **Ir a:**
     plone.header
 
@@ -1906,7 +1934,7 @@ Personalizando de su propio producto
 Los siguientes detalles le ayudarán a localizar los archivos que usted tendrá
 que copiar en su propio producto. También le ayudarán a proporcionar la
 información correcta para crear sus propias directivas ZCML, clases Python, y
-interfaces. Vea `Viewlet`_ para más información.
+interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
 .. glossary ::
 
@@ -1936,10 +1964,10 @@ Conecte su viewlet [su paquete de tema]/browser/configure.zcml
 .. code-block:: xml
 
     <browser:viewlet
-        name="[your namespace].[your viewlet name]"
+        name="[su nombre de espacio].[su nombre de viewlet]"
         manager="plone.app.layout.viewlets.interfaces.IPortalTop"
-        template="templates/[your template name].pt"
-        layer=".interfaces.[your theme specific interface]"
+        template="templates/[su nombre de plantilla].pt"
+        layer=".interfaces.[su interfaz especifica del tema]"
         permission="zope2.View"
     />
 
@@ -1951,7 +1979,7 @@ Oculte el viewlet original (si lo desea)
 .. code-block:: xml
 
     <object>
-        <hidden manager="plone.portaltop" skinname="[your skin name]">
+        <hidden manager="plone.portaltop" skinname="[su nombre del skin]">
             <viewlet name="plone.header" />
         </hidden>
 
@@ -1959,9 +1987,9 @@ Inserte su nuevo viewlet en un administrador de viewlet
 
 .. code-block:: xml
 
-        <order manager="plone.portaltop" skinname="[your skin name]"
+        <order manager="plone.portaltop" skinname="[su nombre del skin]"
                based-on="Plone Default">
-            <viewlet name="[your namespace].[your viewlet name]"
+            <viewlet name="[su nombre de espacio].[su nombre de viewlet]"
                      insert-before="*" />
         </order>
     </object>
@@ -1994,7 +2022,7 @@ la navegación.
     plone.skip_links
 
   **Tipo:** 
-    `viewlet`_
+    :ref:`viewlet <721_seccion>`
 
 Personalización a través de la Interfaz de Administración de Zope
 -----------------------------------------------------------------
@@ -2002,7 +2030,8 @@ Personalización a través de la Interfaz de Administración de Zope
 .. glossary ::
 
   **Uso:**
-    menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    :menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    
   **Ir a:**
     plone.skip_links
 
@@ -2013,7 +2042,7 @@ Personalizando de su propio producto
 Los siguientes detalles le ayudarán a localizar los archivos que usted tendrá
 que copiar en su propio producto. También le ayudarán a proporcionar la
 información correcta para crear sus propias directivas ZCML, clases Python, y
-interfaces. Vea `Viewlet`_ para más información.
+interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
 .. glossary ::
 
@@ -2037,16 +2066,16 @@ interfaces. Vea `Viewlet`_ para más información.
 Ejemplos de archivos & directivas
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Coloque una versión de skip_links.pt en [your theme package]/browser/templates)
+Coloque una versión de skip_links.pt en [su paquete de tema]/browser/templates)
 
-Cree su propia versión de la clase en [su paquete de tema]/browser/[sumodulo].py
+Cree su propia versión de la clase en [su paquete de tema]/browser/[su modulo].py
 
 .. code-block:: python
 
     from plone.app.layout.viewlets.common import SkipLinksViewlet
     from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-    class [your class name](SkipLinksViewlet):
-        render = ViewPageTemplateFile("[your template name]")
+    class [su nombre de clase](SkipLinksViewlet):
+        render = ViewPageTemplateFile("[su nombre de plantilla]")
 
 
 Conecte su viewlet [su paquete de tema]/browser/configure.zcml
@@ -2054,10 +2083,10 @@ Conecte su viewlet [su paquete de tema]/browser/configure.zcml
 .. code-block:: xml
 
     <browser:viewlet
-        name="[your namespace].[your viewlet name]"
+        name="[su nombre de espacio].[su nombre de viewlet]"
         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-        class=".[your module].[your class name]"
-        layer=".interfaces.[your theme specific interface]"
+        class=".[su modulo].[su nombre de clase]"
+        layer=".interfaces.[su interfaz especifica del tema]"
         permission="zope2.View"
     />
 
@@ -2069,7 +2098,7 @@ Oculte el viewlet original (si lo desea)
 .. code-block:: xml
 
     <object>
-        <hidden manager="plone.portalheader" skinname="[your skin name]">
+        <hidden manager="plone.portalheader" skinname="[su nombre del skin]">
             <viewlet name="plone.skip_links" />
         </hidden>
 
@@ -2078,9 +2107,9 @@ Inserte su nuevo viewlet en un administrador de viewlet
 
 .. code-block:: xml
 
-    <order manager="plone.portalheader" skinname="[your skin name]"
+    <order manager="plone.portalheader" skinname="[su nombre del skin]"
                based-on="Plone Default">
-            <viewlet name="[your namespace].[your viewlet name]"
+            <viewlet name="[su nombre de espacio].[su nombre de viewlet]"
                      insert-before="*" />
         </order>
     </object>
@@ -2103,7 +2132,7 @@ El título de la página HTML en la cabecera.
     plone.htmlhead.title
 
   **Tipo:** 
-    `viewlet`_
+    :ref:`viewlet <721_seccion>`
 
 Personalización a través de la Interfaz de Administración de Zope
 -----------------------------------------------------------------
@@ -2111,7 +2140,8 @@ Personalización a través de la Interfaz de Administración de Zope
 .. glossary ::
 
   **Uso:**
-    menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    :menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    
   **Ir a:**
     plone.htmlhead.title
 
@@ -2121,7 +2151,7 @@ Personalizando de su propio producto
 Los siguientes detalles le ayudarán a localizar los archivos que usted tendrá
 que copiar en su propio producto. También le ayudarán a proporcionar la
 información correcta para crear sus propias directivas ZCML, clases Python, y
-interfaces. Vea `Viewlet`_ para más información.
+interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
 .. glossary ::
 
@@ -2144,15 +2174,15 @@ interfaces. Vea `Viewlet`_ para más información.
 Ejemplos de archivos & directivas
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Cree su propia versión de la clase en [su paquete de tema]/browser/[sumodulo].py
+Cree su propia versión de la clase en [su paquete de tema]/browser/[su modulo].py
 
 .. code-block:: python
 
     from plone.app.layout.viewlets.common import TitleViewlet
     from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
-    class [your class name](TitleViewlet):
-        [your code here]
+    class [su nombre de clase](TitleViewlet):
+        [su código aquí]
 
 
 Conecte su viewlet [su paquete de tema]/browser/configure.zcml
@@ -2160,10 +2190,10 @@ Conecte su viewlet [su paquete de tema]/browser/configure.zcml
 .. code-block:: xml
 
     <browser:viewlet
-        name="[your namespace].[your viewlet name]"
+        name="[su nombre de espacio].[su nombre de viewlet]"
         manager="plone.app.layout.viewlets.interfaces.IHtmlHead"
-        class=".[your module].[your class name]"
-        layer=".interfaces.[your theme specific interface]"
+        class=".[su modulo].[su nombre de clase]"
+        layer=".interfaces.[su interfaz especifica del tema]"
         permission="zope2.View"
     />
 
@@ -2175,7 +2205,7 @@ Oculte el viewlet original (si lo desea)
 .. code-block:: xml
 
     <object>
-        <hidden manager="plone.htmlhead" skinname="[your skin name]">
+        <hidden manager="plone.htmlhead" skinname="[su nombre del skin]">
             <viewlet name="plone.htmlhead.title" />
         </hidden>
 
@@ -2184,9 +2214,9 @@ Inserte su nuevo viewlet en un administrador de viewlet
 
 .. code-block:: xml
 
-        <order manager="plone.htmlhead" skinname="[your skin name]"
+        <order manager="plone.htmlhead" skinname="[su nombre del skin]"
                based-on="Plone Default">
-            <viewlet name="[your namespace].[your viewlet name]"
+            <viewlet name="[su nombre de espacio].[su nombre de viewlet]"
                      insert-before="*" />
         </order>
     </object>
@@ -2209,7 +2239,7 @@ Proporciona enlaces anterior/siguiente en la cabecera HTML.
     plone.nextprevious.links
 
   **Tipo:** 
-    `viewlet`_
+    :ref:`viewlet <721_seccion>`
 
 Personalización a través de la Interfaz de Administración de Zope
 -----------------------------------------------------------------
@@ -2217,7 +2247,8 @@ Personalización a través de la Interfaz de Administración de Zope
 .. glossary ::
 
   **Uso:**
-    menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    :menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    
   **Ir a:**
     plone.nextprevious.links
 
@@ -2227,7 +2258,7 @@ Personalizando de su propio producto
 Los siguientes detalles le ayudarán a localizar los archivos que usted tendrá
 que copiar en su propio producto. También le ayudarán a proporcionar la
 información correcta para crear sus propias directivas ZCML, clases Python, y
-interfaces. Vea `Viewlet`_ para más información.
+interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
 .. glossary ::
 
@@ -2250,16 +2281,16 @@ interfaces. Vea `Viewlet`_ para más información.
 Ejemplos de archivos & directivas
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Put a version of links.pt in [your theme package]/browser/templates)
+Put a version of links.pt in [su paquete de tema]/browser/templates)
 
-Cree su propia versión de la clase en [su paquete de tema]/browser/[sumodulo].py
+Cree su propia versión de la clase en [su paquete de tema]/browser/[su modulo].py
 
 .. code-block:: python
 
     from plone.app.layout.nextprevious.view import NextPreviousLinksViewlet
     from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-    class [your class name](NextPreviousLinksViewlet):
-        render = ViewPageTemplateFile("[your template name]")
+    class [su nombre de clase](NextPreviousLinksViewlet):
+        render = ViewPageTemplateFile("[su nombre de plantilla]")
 
 
 Conecte su viewlet [su paquete de tema]/browser/configure.zcml
@@ -2267,10 +2298,10 @@ Conecte su viewlet [su paquete de tema]/browser/configure.zcml
 .. code-block:: xml
 
     <browser:viewlet
-        name="[your namespace].[your viewlet name]"
+        name="[su nombre de espacio].[su nombre de viewlet]"
         manager="plone.app.layout.viewlets.interfaces.IHtmlHeadLinks"
-        class=".[your module].[your class name]"
-        layer=".interfaces.[your theme specific interface]"
+        class=".[su modulo].[su nombre de clase]"
+        layer=".interfaces.[su interfaz especifica del tema]"
         permission="zope2.View"
     />
 
@@ -2282,7 +2313,7 @@ Oculte el viewlet original (si lo desea)
 .. code-block:: xml
 
     <object>
-        <hidden manager="plone.htmlhead.links" skinname="[your skin name]">
+        <hidden manager="plone.htmlhead.links" skinname="[su nombre del skin]">
             <viewlet name="plone.nextprevious.links" />
         </hidden>
 
@@ -2290,9 +2321,9 @@ Inserte su nuevo viewlet en un administrador de viewlet
 
 .. code-block:: xml
 
-        <order manager="plone.htmlhead.links" skinname="[your skin name]"
+        <order manager="plone.htmlhead.links" skinname="[su nombre del skin]"
                based-on="Plone Default">
-            <viewlet name="[your namespace].[your viewlet name]"
+            <viewlet name="[su nombre de espacio].[su nombre de viewlet]"
                      insert-before="*" />
         </order>
     </object>
@@ -2317,7 +2348,7 @@ El enlace favicon en la cabecera HTML.
     plone.links.favicon
 
   **Tipo:**
-    `viewlet`_
+    :ref:`viewlet <721_seccion>`
 
 Personalización a través de la Interfaz de Administración de Zope
 -----------------------------------------------------------------
@@ -2326,6 +2357,7 @@ Personalización a través de la Interfaz de Administración de Zope
 
   **Uso:**
     :menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    
   **Ir a:**
     plone.links.favicon
 
@@ -2335,7 +2367,7 @@ Personalizando de su propio producto
 Los siguientes detalles le ayudarán a localizar los archivos que usted tendrá
 que copiar en su propio producto. También le ayudarán a proporcionar la
 información correcta para crear sus propias directivas ZCML, clases Python, y
-interfaces. Vea `Viewlet`_ para más información.
+interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
 .. glossary ::
 
@@ -2360,14 +2392,14 @@ Ejemplos de archivos & directivas
 
 Ponga una versión de favicon.pt en [su paquete de tema]/browser/templates)
 
-Cree su propia versión de la clase en [su paquete de tema]/browser/[sumodulo].py
+Cree su propia versión de la clase en [su paquete de tema]/browser/[su modulo].py
 
 .. code-block:: python
 
     from plone.app.layout.links.viewlets import FaviconViewlet
     from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-    class [your class name](FaviconViewlet):
-        render = ViewPageTemplateFile("[your template name]")
+    class [su nombre de clase](FaviconViewlet):
+        render = ViewPageTemplateFile("[su nombre de plantilla]")
 
 
 Conecte su viewlet [su paquete de tema]/browser/configure.zcml
@@ -2375,10 +2407,10 @@ Conecte su viewlet [su paquete de tema]/browser/configure.zcml
 .. code-block:: xml
 
     <browser:viewlet
-        name="[your namespace].[your viewlet name]"
+        name="[su nombre de espacio].[su nombre de viewlet]"
         manager="plone.app.layout.viewlets.interfaces.IHtmlHeadLinks"
-        class=".[your module].[your class name]"
-        layer=".interfaces.[your theme specific interface]"
+        class=".[su modulo].[su nombre de clase]"
+        layer=".interfaces.[su interfaz especifica del tema]"
         permission="zope2.View"
     />
 
@@ -2390,7 +2422,7 @@ Oculte el viewlet original (si lo desea)
 .. code-block:: xml
 
     <object>
-        <hidden manager="plone.htmlhead.links" skinname="[your skin name]">
+        <hidden manager="plone.htmlhead.links" skinname="[su nombre del skin]">
             <viewlet name="plone.links.favicon" />
         </hidden>
 
@@ -2398,9 +2430,9 @@ Inserte su nuevo viewlet en un administrador de viewlet
 
 .. code-block:: xml
 
-        <order manager="plone.htmlhead.links" skinname="[your skin name]"
+        <order manager="plone.htmlhead.links" skinname="[su nombre del skin]"
                based-on="Plone Default">
-            <viewlet name="[your namespace].[your viewlet name]"
+            <viewlet name="[su nombre de espacio].[su nombre de viewlet]"
                      insert-before="*" />
         </order>
     </object>
@@ -2421,7 +2453,7 @@ El enlace de búsqueda en la cabecera HTML.
     plone.links.search
 
   **Tipo:** 
-    `viewlet`_
+    :ref:`viewlet <721_seccion>`
 
 Personalización a través de la Interfaz de Administración de Zope
 -----------------------------------------------------------------
@@ -2429,7 +2461,8 @@ Personalización a través de la Interfaz de Administración de Zope
 .. glossary ::
 
   **Uso:**
-    menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    :menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    
   **Ir a:**
     plone.links.search
 
@@ -2439,7 +2472,7 @@ Personalizando de su propio producto
 Los siguientes detalles le ayudarán a localizar los archivos que usted tendrá
 que copiar en su propio producto. También le ayudarán a proporcionar la
 información correcta para crear sus propias directivas ZCML, clases Python, y
-interfaces. Vea `Viewlet`_ para más información.
+interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
 .. glossary ::
 
@@ -2465,14 +2498,14 @@ Ejemplos de archivos & directivas
 
 Ponga una versión de search.pt en [su paquete de tema]/browser/templates)
 
-Cree su propia versión de la clase en [su paquete de tema]/browser/[sumodulo].py
+Cree su propia versión de la clase en [su paquete de tema]/browser/[su modulo].py
 
 .. code-block:: python
 
     from plone.app.layout.links.viewlets import SearchViewlet
     from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-    class [your class name](SearchViewlet):
-        render = ViewPageTemplateFile("[your template name]")
+    class [su nombre de clase](SearchViewlet):
+        render = ViewPageTemplateFile("[su nombre de plantilla]")
 
 
 Conecte su viewlet [su paquete de tema]/browser/configure.zcml
@@ -2480,10 +2513,10 @@ Conecte su viewlet [su paquete de tema]/browser/configure.zcml
 .. code-block:: xml
 
     <browser:viewlet
-        name="[your namespace].[your viewlet name]"
+        name="[su nombre de espacio].[su nombre de viewlet]"
         manager="plone.app.layout.viewlets.interfaces.IHtmlHeadLinks"
-        class=".[your module].[your class name]"
-        layer=".interfaces.[your theme specific interface]"
+        class=".[su modulo].[su nombre de clase]"
+        layer=".interfaces.[su interfaz especifica del tema]"
         permission="zope2.View"
     />
 
@@ -2495,7 +2528,7 @@ Oculte el viewlet original (si lo desea)
 .. code-block:: xml
 
     <object>
-        <hidden manager="plone.htmlhead.links" skinname="[your skin name]">
+        <hidden manager="plone.htmlhead.links" skinname="[su nombre del skin]">
             <viewlet name="plone.links.search" />
         </hidden>
 
@@ -2503,9 +2536,9 @@ Inserte su nuevo viewlet en un administrador de viewlet
 
 .. code-block:: xml
 
-        <order manager="plone.htmlhead.links" skinname="[your skin name]"
+        <order manager="plone.htmlhead.links" skinname="[su nombre del skin]"
                based-on="Plone Default">
-            <viewlet name="[your namespace].[your viewlet name]"
+            <viewlet name="[su nombre de espacio].[su nombre de viewlet]"
                      insert-before="*" />
         </order>
     </object>
@@ -2527,7 +2560,7 @@ El enlace de autor en la cabecera HTML.
     plone.links.author
 
   **Tipo:** 
-    `viewlet`_
+    :ref:`viewlet <721_seccion>`
 
 Personalización a través de la Interfaz de Administración de Zope
 -----------------------------------------------------------------
@@ -2535,7 +2568,8 @@ Personalización a través de la Interfaz de Administración de Zope
 .. glossary ::
 
   **Uso:**
-    menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    :menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    
   **Ir a:**
     plone.links.author
 
@@ -2546,7 +2580,7 @@ Personalizando de su propio producto
 Los siguientes detalles le ayudarán a localizar los archivos que usted tendrá
 que copiar en su propio producto. También le ayudarán a proporcionar la
 información correcta para crear sus propias directivas ZCML, clases Python, y
-interfaces. Vea `Viewlet`_ para más información.
+interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
 .. glossary ::
 
@@ -2573,24 +2607,24 @@ Ejemplos de archivos & directivas
 
 Ponga una versión de author.pt en [su paquete de tema]/browser/templates)
 
-Cree su propia versión de la clase en [su paquete de tema]/browser/[sumodulo].py
+Cree su propia versión de la clase en [su paquete de tema]/browser/[su modulo].py
 
 .. code-block:: python
 
     from plone.app.layout.links.viewlets import AuthorViewlet
     from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-    class [your class name](AuthorViewlet):
-        render = ViewPageTemplateFile("[your template name]")
+    class [su nombre de clase](AuthorViewlet):
+        render = ViewPageTemplateFile("[su nombre de plantilla]")
 
 Conecte su viewlet [su paquete de tema]/browser/configure.zcml
 
 .. code-block:: xml
 
     <browser:viewlet
-        name="[your namespace].[your viewlet name]"
+        name="[su nombre de espacio].[su nombre de viewlet]"
         manager="plone.app.layout.viewlets.interfaces.IHtmlHeadLinks"
-        class=".[your module].[your class name]"
-        layer=".interfaces.[your theme specific interface]"
+        class=".[su modulo].[su nombre de clase]"
+        layer=".interfaces.[su interfaz especifica del tema]"
         permission="zope2.View"
     />
 
@@ -2602,7 +2636,7 @@ Oculte el viewlet original (si lo desea)
 .. code-block:: xml
 
     <object>
-        <hidden manager="plone.htmlhead.links" skinname="[your skin name]">
+        <hidden manager="plone.htmlhead.links" skinname="[su nombre del skin]">
             <viewlet name="plone.links.author" />
         </hidden>
 
@@ -2610,9 +2644,9 @@ Inserte su nuevo viewlet en un administrador de viewlet
 
 .. code-block:: xml
 
-        <order manager="plone.htmlhead.links" skinname="[your skin name]"
+        <order manager="plone.htmlhead.links" skinname="[su nombre del skin]"
                based-on="Plone Default">
-            <viewlet name="[your namespace].[your viewlet name]"
+            <viewlet name="[su nombre de espacio].[su nombre de viewlet]"
                      insert-before="*" />
         </order>
     </object>
@@ -2635,7 +2669,7 @@ El enlace de navegación en la cabecera HTML.
     plone.links.navigation
 
   **Tipo:** 
-    `viewlet`_
+    :ref:`viewlet <721_seccion>`
 
 Personalización a través de la Interfaz de Administración de Zope
 -----------------------------------------------------------------
@@ -2643,7 +2677,8 @@ Personalización a través de la Interfaz de Administración de Zope
 .. glossary ::
 
   **Uso:**
-    menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    :menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    
   **Ir a:**
     plone.links.navigation
 
@@ -2654,7 +2689,7 @@ Personalizando de su propio producto
 Los siguientes detalles le ayudarán a localizar los archivos que usted tendrá
 que copiar en su propio producto. También le ayudarán a proporcionar la
 información correcta para crear sus propias directivas ZCML, clases Python, y
-interfaces. Vea `Viewlet`_ para más información.
+interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
 .. glossary ::
 
@@ -2679,24 +2714,24 @@ Ejemplos de archivos & directivas
 
 Ponga una versión de navigation.pt en [su paquete de tema]/browser/templates)
 
-Cree su propia versión de la clase en [su paquete de tema]/browser/[sumodulo].py
+Cree su propia versión de la clase en [su paquete de tema]/browser/[su modulo].py
 
 .. code-block:: python
 
     from plone.app.layout.links.viewlets import NavigationViewlet
     from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-    class [your class name](NavigationViewlet):
-        render = ViewPageTemplateFile("[your template name]")
+    class [su nombre de clase](NavigationViewlet):
+        render = ViewPageTemplateFile("[su nombre de plantilla]")
 
 Conecte su viewlet [su paquete de tema]/browser/configure.zcml
 
 .. code-block:: xml
 
     <browser:viewlet
-        name="[your namespace].[your viewlet name]"
+        name="[su nombre de espacio].[su nombre de viewlet]"
         manager="plone.app.layout.viewlets.interfaces.IHtmlHeadLinks"
-        class=".[your module].[your class name]"
-        layer=".interfaces.[your theme specific interface]"
+        class=".[su modulo].[su nombre de clase]"
+        layer=".interfaces.[su interfaz especifica del tema]"
         permission="zope2.View"
     />
 
@@ -2708,7 +2743,7 @@ Oculte el viewlet original (si lo desea)
 .. code-block:: xml
 
     <object>
-        <hidden manager="plone.htmlhead.links" skinname="[your skin name]">
+        <hidden manager="plone.htmlhead.links" skinname="[su nombre del skin]">
             <viewlet name="plone.links.navigation" />
         </hidden>
 
@@ -2716,9 +2751,9 @@ Inserte su nuevo viewlet en un administrador de viewlet
 
 .. code-block:: xml
 
-        <order manager="plone.htmlhead.links" skinname="[your skin name]"
+        <order manager="plone.htmlhead.links" skinname="[su nombre del skin]"
                based-on="Plone Default">
-            <viewlet name="[your namespace].[your viewlet name]"
+            <viewlet name="[su nombre de espacio].[su nombre de viewlet]"
                      insert-before="*" />
         </order>
     </object>
@@ -2745,7 +2780,7 @@ Fragmento de código de Google Analytics.
     plone.analytics
 
   **Tipo:** 
-    `viewlet`_
+    :ref:`viewlet <721_seccion>`
 
 Personalización a través de la Interfaz de Administración de Zope
 -----------------------------------------------------------------
@@ -2753,7 +2788,8 @@ Personalización a través de la Interfaz de Administración de Zope
 .. glossary ::
 
   **Uso:**
-    menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    :menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    
   **Ir a:**
     plone.analytics
 
@@ -2764,7 +2800,7 @@ Personalizando de su propio producto
 Los siguientes detalles le ayudarán a localizar los archivos que usted tendrá
 que copiar en su propio producto. También le ayudarán a proporcionar la
 información correcta para crear sus propias directivas ZCML, clases Python, y
-interfaces. Vea `Viewlet`_ para más información.
+interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
 .. glossary ::
 
@@ -2788,25 +2824,25 @@ interfaces. Vea `Viewlet`_ para más información.
 Ejemplos de archivos & directivas
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Cree su propia versión de la clase en [su paquete de tema]/browser/[sumodulo].py
+Cree su propia versión de la clase en [su paquete de tema]/browser/[su modulo].py
 
 .. code-block:: python
 
     from plone.app.layout.analytics.view import AnalyticsViewlet
     from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
-    class [your class name](AnalyticsViewlet):
-        [your code here]
+    class [su nombre de clase](AnalyticsViewlet):
+        [su código aquí]
 
 Conecte su viewlet [su paquete de tema]/browser/configure.zcml
 
 .. code-block:: xml
 
     <browser:viewlet
-        name="[your namespace].[your viewlet name]"
+        name="[su nombre de espacio].[su nombre de viewlet]"
         manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
-        class=".[your module].[your class name]"
-        layer=".interfaces.[your theme specific interface]"
+        class=".[su modulo].[su nombre de clase]"
+        layer=".interfaces.[su interfaz especifica del tema]"
         permission="zope2.View"
     />
 
@@ -2818,7 +2854,7 @@ Oculte el viewlet original (si lo desea)
 .. code-block:: xml
 
     <object>
-        <hidden manager="plone.portalfooter" skinname="[your skin name]">
+        <hidden manager="plone.portalfooter" skinname="[su nombre del skin]">
             <viewlet name="plone.analytics" />
         </hidden>
 
@@ -2827,9 +2863,9 @@ Inserte su nuevo viewlet en un administrador de viewlet
 
 .. code-block:: xml
 
-        <order manager="plone.portalfooter" skinname="[your skin name]"
+        <order manager="plone.portalfooter" skinname="[su nombre del skin]"
                based-on="Plone Default">
-            <viewlet name="[your namespace].[your viewlet name]"
+            <viewlet name="[su nombre de espacio].[su nombre de viewlet]"
                      insert-before="*" />
         </order>
     </object>
@@ -2852,7 +2888,7 @@ Metadatos Dublin Core en la cabecera HTML.
     plone.htmlhead.dublincore
 
   **Tipo:** 
-    `viewlet`_
+    :ref:`viewlet <721_seccion>`
 
 Personalización a través de la Interfaz de Administración de Zope
 -----------------------------------------------------------------
@@ -2860,7 +2896,8 @@ Personalización a través de la Interfaz de Administración de Zope
 .. glossary ::
 
   **Uso:**
-    menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    :menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    
   **Ir a:**
     plone.htmlhead.dublincore
 
@@ -2871,7 +2908,7 @@ Personalizando de su propio producto
 Los siguientes detalles le ayudarán a localizar los archivos que usted tendrá
 que copiar en su propio producto. También le ayudarán a proporcionar la
 información correcta para crear sus propias directivas ZCML, clases Python, y
-interfaces. Vea `Viewlet`_ para más información.
+interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
 .. glossary ::
 
@@ -2882,6 +2919,7 @@ interfaces. Vea `Viewlet`_ para más información.
 
   **Nombre de la plantilla:**
     dublin_core.pt
+
   **Nombre de la clase:** 
     plone.app.layout.viewlets.common.DublinCoreViewlet
 
@@ -2894,15 +2932,15 @@ interfaces. Vea `Viewlet`_ para más información.
 Ejemplos de archivos & directivas
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Cree su propia versión de la clase en [su paquete de tema]/browser/[sumodulo].py
+Cree su propia versión de la clase en [su paquete de tema]/browser/[su modulo].py
 
 .. code-block:: python
 
     from plone.app.layout.viewlets.common import DublinCoreViewlet
     from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
-    class [your class name](DublinCoreViewlet):
-        [your code here]
+    class [su nombre de clase](DublinCoreViewlet):
+        [su código aquí]
 
 
 Conecte su viewlet [su paquete de tema]/browser/configure.zcml
@@ -2910,10 +2948,10 @@ Conecte su viewlet [su paquete de tema]/browser/configure.zcml
 .. code-block:: xml
 
     <browser:viewlet
-        name="[your namespace].[your viewlet name]"
+        name="[su nombre de espacio].[su nombre de viewlet]"
         manager="plone.app.layout.viewlets.interfaces.IHtmlHead"
-        class=".[your module].[your class name]"
-        layer=".interfaces.[your theme specific interface]"
+        class=".[su modulo].[su nombre de clase]"
+        layer=".interfaces.[su interfaz especifica del tema]"
         permission="zope2.View"
     />
 
@@ -2925,7 +2963,7 @@ Oculte el viewlet original (si lo desea)
 .. code-block:: xml
 
     <object>
-        <hidden manager="plone.htmlhead" skinname="[your skin name]">
+        <hidden manager="plone.htmlhead" skinname="[su nombre del skin]">
             <viewlet name="plone.htmlhead.dublincore" />
         </hidden>
 
@@ -2934,9 +2972,9 @@ Inserte su nuevo viewlet en un administrador de viewlet
 
 .. code-block:: xml
 
-        <order manager="plone.htmlhead" skinname="[your skin name]"
+        <order manager="plone.htmlhead" skinname="[su nombre del skin]"
                based-on="Plone Default">
-            <viewlet name="[your namespace].[your viewlet name]"
+            <viewlet name="[su nombre de espacio].[su nombre de viewlet]"
                      insert-before="*" />
         </order>
     </object>
@@ -2960,7 +2998,7 @@ Enlace rel tag en la cabecera HTML con el URL real de la página publicada.
 
 
   **Tipo:** 
-    `viewlet`_
+    :ref:`viewlet <721_seccion>`
 
 Personalización a través de la Interfaz de Administración de Zope
 -----------------------------------------------------------------
@@ -2968,7 +3006,8 @@ Personalización a través de la Interfaz de Administración de Zope
 .. glossary ::
 
   **Uso:**
-    menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    :menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    
   **Ir a:**
     plone.htmlhead.kss-base-url
 
@@ -2979,7 +3018,7 @@ Personalizando de su propio producto
 Los siguientes detalles le ayudarán a localizar los archivos que usted tendrá
 que copiar en su propio producto. También le ayudarán a proporcionar la
 información correcta para crear sus propias directivas ZCML, clases Python, y
-interfaces. Vea `Viewlet`_ para más información.
+interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
 .. glossary ::
 
@@ -3003,15 +3042,15 @@ interfaces. Vea `Viewlet`_ para más información.
 Ejemplos de archivos & directivas
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Cree su propia versión de la clase en [su paquete de tema]/browser/[sumodulo].py
+Cree su propia versión de la clase en [su paquete de tema]/browser/[su modulo].py
 
 .. code-block:: python
 
     from plone.app.kss.headerViewlet import KSSBaseUrlViewlet
     from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
-    class [your class name](KSSBaseUrlViewlet):
-        [your code here]
+    class [su nombre de clase](KSSBaseUrlViewlet):
+        [su código aquí]
 
 
 Conecte su viewlet [su paquete de tema]/browser/configure.zcml
@@ -3019,10 +3058,10 @@ Conecte su viewlet [su paquete de tema]/browser/configure.zcml
 .. code-block:: xml
 
     <browser:viewlet
-        name="[your namespace].[your viewlet name]"
+        name="[su nombre de espacio].[su nombre de viewlet]"
         manager="plone.app.layout.viewlets.interfaces.IHtmlHead"
-        class=".[your module].[your class name]"
-        layer=".interfaces.[your theme specific interface]"
+        class=".[su modulo].[su nombre de clase]"
+        layer=".interfaces.[su interfaz especifica del tema]"
         permission="zope2.View"
     />
 
@@ -3034,7 +3073,7 @@ Oculte el viewlet original (si lo desea)
 .. code-block:: xml
 
     <object>
-        <hidden manager="plone.htmlhead" skinname="[your skin name]">
+        <hidden manager="plone.htmlhead" skinname="[su nombre del skin]">
             <viewlet name="plone.htmlhead.kss-base-url" />
         </hidden>
 
@@ -3042,9 +3081,9 @@ Inserte su nuevo viewlet en un administrador de viewlet
 
 .. code-block:: xml
 
-        <order manager="plone.htmlhead" skinname="[your skin name]"
+        <order manager="plone.htmlhead" skinname="[su nombre del skin]"
                based-on="Plone Default">
-            <viewlet name="[your namespace].[your viewlet name]"
+            <viewlet name="[su nombre de espacio].[su nombre de viewlet]"
                      insert-before="*" />
         </order>
     </object>
@@ -3067,7 +3106,7 @@ El enlace RSS en la cabecera HTML.
     plone.links.RSS
 
   **Tipo:** 
-    `viewlet`_
+    :ref:`viewlet <721_seccion>`
 
 Personalización a través de la Interfaz de Administración de Zope
 -----------------------------------------------------------------
@@ -3075,7 +3114,8 @@ Personalización a través de la Interfaz de Administración de Zope
 .. glossary ::
 
   **Uso:**
-    menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    :menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    
   **Ir a:**
     plone.links.RSS
 
@@ -3086,7 +3126,7 @@ Personalizando de su propio producto
 Los siguientes detalles le ayudarán a localizar los archivos que usted tendrá
 que copiar en su propio producto. También le ayudarán a proporcionar la
 información correcta para crear sus propias directivas ZCML, clases Python, y
-interfaces. Vea `Viewlet`_ para más información.
+interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
 .. glossary ::
 
@@ -3111,14 +3151,14 @@ Ejemplos de archivos & directivas
 
 Ponga una versión de navigation.pt en [su paquete de tema]/browser/templates)
 
-Cree su propia versión de la clase en [su paquete de tema]/browser/[sumodulo].py
+Cree su propia versión de la clase en [su paquete de tema]/browser/[su modulo].py
 
 .. code-block:: python
 
     from plone.app.layout.links.viewlets import RSSViewlet
     from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-    class [your class name](RSSViewlet):
-        render = ViewPageTemplateFile("[your template name]")
+    class [su nombre de clase](RSSViewlet):
+        render = ViewPageTemplateFile("[su nombre de plantilla]")
 
 
 Conecte su viewlet [su paquete de tema]/browser/configure.zcml
@@ -3126,10 +3166,10 @@ Conecte su viewlet [su paquete de tema]/browser/configure.zcml
 .. code-block:: xml
 
     <browser:viewlet
-        name="[your namespace].[your viewlet name]"
+        name="[su nombre de espacio].[su nombre de viewlet]"
         manager="plone.app.layout.viewlets.interfaces.IHtmlHeadLinks"
-        class=".[your module].[your class name]"
-        layer=".interfaces.[your theme specific interface]"
+        class=".[su modulo].[su nombre de clase]"
+        layer=".interfaces.[su interfaz especifica del tema]"
         permission="zope2.View"
     />
 
@@ -3141,7 +3181,7 @@ Oculte el viewlet original (si lo desea)
 .. code-block:: xml
 
     <object>
-        <hidden manager="plone.htmlhead.links" skinname="[your skin name]">
+        <hidden manager="plone.htmlhead.links" skinname="[su nombre del skin]">
             <viewlet name="plone.links.RSS" />
         </hidden>
 
@@ -3150,9 +3190,9 @@ Inserte su nuevo viewlet en un administrador de viewlet
 
 .. code-block:: xml
 
-        <order manager="plone.htmlhead.links" skinname="[your skin name]"
+        <order manager="plone.htmlhead.links" skinname="[su nombre del skin]"
                based-on="Plone Default">
-            <viewlet name="[your namespace].[your viewlet name]"
+            <viewlet name="[su nombre de espacio].[su nombre de viewlet]"
                      insert-before="*" />
         </order>
     </object>
@@ -3180,7 +3220,7 @@ Proporciona una lista desplegable para seleccionar un idioma.
     plone.app.i18n.locales.languageselector
 
   **Tipo:** 
-    `viewlet`_
+    :ref:`viewlet <721_seccion>`
 
 Personalización a través de la Interfaz de Administración de Zope
 -----------------------------------------------------------------
@@ -3188,7 +3228,8 @@ Personalización a través de la Interfaz de Administración de Zope
 .. glossary ::
 
   **Uso:**
-    menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    :menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    
   **Ir a:**
     plone.app.i18n.locales.languageselector
 
@@ -3198,7 +3239,7 @@ Personalizando de su propio producto
 Los siguientes detalles le ayudarán a localizar los archivos que usted tendrá
 que copiar en su propio producto. También le ayudarán a proporcionar la
 información correcta para crear sus propias directivas ZCML, clases Python, y
-interfaces. Vea `Viewlet`_ para más información.
+interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
 .. glossary ::
 
@@ -3223,14 +3264,14 @@ Ejemplos de archivos & directivas
 
 Ponga una versión de languageselector.pt en [su paquete de tema]/browser/templates)
 
-Cree su propia versión de la clase en [su paquete de tema]/browser/[sumodulo].py
+Cree su propia versión de la clase en [su paquete de tema]/browser/[su modulo].py
 
 .. code-block:: python
 
     from plone.app.i18n.locales.browser.selector import LanguageSelector
     from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-    class [your class name](LanguageSelector):
-        render = ViewPageTemplateFile("[your template name]")
+    class [su nombre de clase](LanguageSelector):
+        render = ViewPageTemplateFile("[su nombre de plantilla]")
 
 
 Conecte su viewlet [su paquete de tema]/browser/configure.zcml
@@ -3238,10 +3279,10 @@ Conecte su viewlet [su paquete de tema]/browser/configure.zcml
 .. code-block:: xml
 
     <browser:viewlet
-        name="[your namespace].[your viewlet name]"
+        name="[su nombre de espacio].[su nombre de viewlet]"
         manager="plone.app.layout.viewlets.interfaces.IPortalTop"
-        class=".[your module].[your class name]"
-        layer=".interfaces.[your theme specific interface]"
+        class=".[su modulo].[su nombre de clase]"
+        layer=".interfaces.[su interfaz especifica del tema]"
         permission="zope2.View"
     />
 
@@ -3253,7 +3294,7 @@ Oculte el viewlet original (si lo desea)
 .. code-block:: xml
 
     <object>
-        <hidden manager="Portal Top" skinname="[your skin name]">
+        <hidden manager="Portal Top" skinname="[su nombre del skin]">
             <viewlet
             name="plone.app.i18n.locales.languageselector" />
         </hidden>
@@ -3262,9 +3303,9 @@ Inserte su nuevo viewlet en un administrador de viewlet
 
 .. code-block:: xml
 
-        <order manager="Portal Top" skinname="[your skin name]"
+        <order manager="Portal Top" skinname="[su nombre del skin]"
                based-on="Plone Default">
-            <viewlet name="[your namespace].[your viewlet name]"
+            <viewlet name="[su nombre de espacio].[su nombre de viewlet]"
                      insert-before="*" />
         </order>
     </object>
@@ -3294,7 +3335,7 @@ información específica.
     plone.site_actions
 
   **Tipo:** 
-    `viewlet`_
+    :ref:`viewlet <721_seccion>`
 
 Personalización a través de la Interfaz de Administración de Zope
 -----------------------------------------------------------------
@@ -3302,7 +3343,8 @@ Personalización a través de la Interfaz de Administración de Zope
 .. glossary ::
 
   **Uso:**
-    menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    :menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    
   **Ir a:**
     plone.site_actions
 
@@ -3312,7 +3354,7 @@ Personalizando de su propio producto
 Los siguientes detalles le ayudarán a localizar los archivos que usted tendrá
 que copiar en su propio producto. También le ayudarán a proporcionar la
 información correcta para crear sus propias directivas ZCML, clases Python, y
-interfaces. Vea `Viewlet`_ para más información.
+interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
 .. glossary ::
 
@@ -3337,14 +3379,14 @@ Ejemplos de archivos & directivas
 
 Ponga una versión de site_actions.pt en [su paquete de tema]/browser/templates)
 
-Cree su propia versión de la clase en [su paquete de tema]/browser/[sumodulo].py
+Cree su propia versión de la clase en [su paquete de tema]/browser/[su modulo].py
 
 .. code-block:: python
 
     from plone.app.layout.viewlets.common import SiteActionsViewlet
     from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-    class [your class name](SiteActionsViewlet):
-        render = ViewPageTemplateFile("[your template name]")
+    class [su nombre de clase](SiteActionsViewlet):
+        render = ViewPageTemplateFile("[su nombre de plantilla]")
 
 
 Conecte su viewlet [su paquete de tema]/browser/configure.zcml
@@ -3352,10 +3394,10 @@ Conecte su viewlet [su paquete de tema]/browser/configure.zcml
 .. code-block:: xml
 
     <browser:viewlet
-        name="[your namespace].[your viewlet name]"
+        name="[su nombre de espacio].[su nombre de viewlet]"
         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-        class=".[your module].[your class name]"
-        layer=".interfaces.[your theme specific interface]"
+        class=".[su modulo].[su nombre de clase]"
+        layer=".interfaces.[su interfaz especifica del tema]"
         permission="zope2.View"
     />
 
@@ -3367,7 +3409,7 @@ Oculte el viewlet original (si lo desea)
 .. code-block:: xml
 
     <object>
-        <hidden manager="plone.portalheader" skinname="[your skin name]">
+        <hidden manager="plone.portalheader" skinname="[su nombre del skin]">
             <viewlet name="plone.site_actions" />
         </hidden>
 
@@ -3376,9 +3418,9 @@ Inserte su nuevo viewlet en un administrador de viewlet
 
 .. code-block:: xml
 
-        <order manager="plone.portalheader" skinname="[your skin name]"
+        <order manager="plone.portalheader" skinname="[su nombre del skin]"
                based-on="Plone Default">
-            <viewlet name="[your namespace].[your viewlet name]"
+            <viewlet name="[su nombre de espacio].[su nombre de viewlet]"
                      insert-before="*" />
         </order>
     </object>
@@ -3407,7 +3449,7 @@ Facilidad de búsqueda en el sitio
     plone.searchbox
 
   **Tipo:** 
-    `viewlet`_
+    :ref:`viewlet <721_seccion>`
 
 Personalización a través de la Interfaz de Administración de Zope
 -----------------------------------------------------------------
@@ -3415,7 +3457,8 @@ Personalización a través de la Interfaz de Administración de Zope
 .. glossary ::
 
   **Uso:**
-    menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    :menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    
   **Ir a:**
     plone.searchbox 
 
@@ -3427,7 +3470,7 @@ Personalizando de su propio producto
 Los siguientes detalles le ayudarán a localizar los archivos que usted tendrá
 que copiar en su propio producto. También le ayudarán a proporcionar la
 información correcta para crear sus propias directivas ZCML, clases Python, y
-interfaces. Vea `Viewlet`_ para más información.
+interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
 .. glossary ::
 
@@ -3452,14 +3495,14 @@ Ejemplos de archivos & directivas
 
 Ponga una versión de searchbox.pt en [su paquete de tema]/browser/templates)
 
-Cree su propia versión de la clase en [su paquete de tema]/browser/[sumodulo].py
+Cree su propia versión de la clase en [su paquete de tema]/browser/[su modulo].py
 
 .. code-block:: python
 
     from plone.app.layout.viewlets.common import SearchBoxViewlet
     from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-    class [your class name](SearchBoxViewlet):
-        render = ViewPageTemplateFile("[your template name]")
+    class [su nombre de clase](SearchBoxViewlet):
+        render = ViewPageTemplateFile("[su nombre de plantilla]")
 
 
 Conecte su viewlet [su paquete de tema]/browser/configure.zcml
@@ -3467,10 +3510,10 @@ Conecte su viewlet [su paquete de tema]/browser/configure.zcml
 .. code-block:: xml
 
     <browser:viewlet
-        name="[your namespace].[your viewlet name]"
+        name="[su nombre de espacio].[su nombre de viewlet]"
         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-        class=".[your module].[your class name]"
-        layer=".interfaces.[your theme specific interface]"
+        class=".[su modulo].[su nombre de clase]"
+        layer=".interfaces.[su interfaz especifica del tema]"
         permission="zope2.View"
     />
 
@@ -3482,7 +3525,7 @@ Oculte el viewlet original (si lo desea)
 .. code-block:: xml
 
     <object>
-        <hidden manager="plone.portalheader" skinname="[your skin name]">
+        <hidden manager="plone.portalheader" skinname="[su nombre del skin]">
             <viewlet name="plone.searchbox" />
         </hidden>
 
@@ -3491,9 +3534,9 @@ Inserte su nuevo viewlet en un administrador de viewlet
 
 .. code-block:: xml
 
-        <order manager="plone.portalheader" skinname="[your skin name]"
+        <order manager="plone.portalheader" skinname="[su nombre del skin]"
                based-on="Plone Default">
-            <viewlet name="[your namespace].[your viewlet name]"
+            <viewlet name="[su nombre de espacio].[su nombre de viewlet]"
                      insert-before="*" />
         </order>
     </object>
@@ -3516,7 +3559,7 @@ El logotipo del sitio.
     plone.logo
 
   **Tipo:** 
-    `viewlet`_
+    :ref:`viewlet <721_seccion>`
 
 Personalización a través de la Interfaz de Administración de Zope
 -----------------------------------------------------------------
@@ -3524,7 +3567,8 @@ Personalización a través de la Interfaz de Administración de Zope
 .. glossary ::
 
   **Uso:**
-    menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    :menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    
   **Ir a:**
     plone.logo
 
@@ -3537,7 +3581,7 @@ Personalizando de su propio producto
 Los siguientes detalles le ayudarán a localizar los archivos que usted tendrá
 que copiar en su propio producto. También le ayudarán a proporcionar la
 información correcta para crear sus propias directivas ZCML, clases Python, y
-interfaces. Vea `Viewlet`_ para más información.
+interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
 .. glossary ::
 
@@ -3576,27 +3620,26 @@ y estilo #header en el archivo mytheme.css.
         <!-- <img src="logo.jpg" alt=""
              tal:replace="structure view/logo_tag" /> --> <!--
              commenting out the code that normally looks for logo.jpg -->
-        <div id="banner"><!-- style this div in your mytheme.css
-        --></div></a>
+        <div id="banner"><!-- style this div in your mytheme.css --></div></a>
 
-Cree su propia versión de la clase en [su paquete de tema]/browser/[sumodulo].py
+Cree su propia versión de la clase en [su paquete de tema]/browser/[su modulo].py
 
 .. code-block:: python
 
     from plone.app.layout.viewlets.common import LogoViewlet
     from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-    class [your class name](LogoViewlet):
-        render = ViewPageTemplateFile("[your template name]")
+    class [su nombre de clase](LogoViewlet):
+        render = ViewPageTemplateFile("[su nombre de plantilla]")
 
 Conecte su viewlet [su paquete de tema]/browser/configure.zcml
 
 .. code-block:: xml
 
     <browser:viewlet
-        name="[your namespace].[your viewlet name]"
+        name="[su nombre de espacio].[su nombre de viewlet]"
         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-        class=".[your module].[your class name]"
-        layer=".interfaces.[your theme specific interface]"
+        class=".[su modulo].[su nombre de clase]"
+        layer=".interfaces.[su interfaz especifica del tema]"
         permission="zope2.View"
     />
 
@@ -3607,7 +3650,7 @@ Oculte el viewlet original (si lo desea)
 .. code-block:: xml
 
     <object>
-        <hidden manager="plone.portalheader" skinname="[your skin name]">
+        <hidden manager="plone.portalheader" skinname="[su nombre del skin]">
             <viewlet name="plone.logo" />
         </hidden>
 
@@ -3615,9 +3658,9 @@ Inserte su nuevo viewlet en un administrador de viewlet
 
 .. code-block:: xml
 
-        <order manager="plone.portalheader" skinname="[your skin name]"
+        <order manager="plone.portalheader" skinname="[su nombre del skin]"
                based-on="Plone Default">
-            <viewlet name="[your namespace].[your viewlet name]"
+            <viewlet name="[su nombre de espacio].[su nombre de viewlet]"
                      insert-before="*" />
         </order>
     </object> '
@@ -3632,7 +3675,7 @@ Las secciones de nivel superior del sitio.
     Las secciones son generadas automáticamente a partir de los elementos
     de contenido de nivel superior o pueden configurarse manualmente
 
--   a través de la Web: :menuselection:`Configuración del sitio --> Navegación‘ (para auto-generación) o :menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_tabs` (para definir manualmente las secciones)
+-   a través de la Web: :menuselection:`Configuración del sitio --> Navegación` (para auto-generación) o :menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_tabs` (para definir manualmente las secciones)
 -   En su producto: profiles/default/actions.xml and propertiestool.xml
 
 .. glossary ::
@@ -3646,7 +3689,7 @@ Las secciones de nivel superior del sitio.
     plone.global_sections
 
   **Tipo:** 
-    `viewlet`_
+    :ref:`viewlet <721_seccion>`
 
 Personalización a través de la Interfaz de Administración de Zope
 -----------------------------------------------------------------
@@ -3654,7 +3697,8 @@ Personalización a través de la Interfaz de Administración de Zope
 .. glossary ::
 
   **Uso:**
-    menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    :menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    
   **Ir a:**
     plone.global_sections
 
@@ -3666,7 +3710,7 @@ Personalizando de su propio producto
 Los siguientes detalles le ayudarán a localizar los archivos que usted tendrá
 que copiar en su propio producto. También le ayudarán a proporcionar la
 información correcta para crear sus propias directivas ZCML, clases Python, y
-interfaces. Vea `Viewlet`_ para más información.
+interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
 .. glossary ::
 
@@ -3691,24 +3735,24 @@ Ejemplos de archivos & directivas
 
 Ponga una versión de sections.pt en [su paquete de tema]/browser/templates)
 
-Cree su propia versión de la clase en [su paquete de tema]/browser/[sumodulo].py
+Cree su propia versión de la clase en [su paquete de tema]/browser/[su modulo].py
 
 .. code-block:: python
 
     from plone.app.layout.viewlets.common import GlobalSectionsViewlet
     from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-    class [your class name](GlobalSectionsViewlet):
-        render = ViewPageTemplateFile("[your template name]")
+    class [su nombre de clase](GlobalSectionsViewlet):
+        render = ViewPageTemplateFile("[su nombre de plantilla]")
 
 Conecte su viewlet [su paquete de tema]/browser/configure.zcml
 
 .. code-block:: xml
 
     <browser:viewlet
-        name="[your namespace].[your viewlet name]"
+        name="[su nombre de espacio].[su nombre de viewlet]"
         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-        class=".[your module].[your class name]"
-        layer=".interfaces.[your theme specific interface]"
+        class=".[su modulo].[su nombre de clase]"
+        layer=".interfaces.[su interfaz especifica del tema]"
         permission="zope2.View"
     />
 
@@ -3719,7 +3763,7 @@ Oculte el viewlet original (si lo desea)
 .. code-block:: xml
 
     <object>
-        <hidden manager="plone.portalheader" skinname="[your skin name]">
+        <hidden manager="plone.portalheader" skinname="[su nombre del skin]">
             <viewlet name="plone.global_sections" />
         </hidden>
 
@@ -3727,9 +3771,9 @@ Inserte su nuevo viewlet en un administrador de viewlet
 
 .. code-block:: xml
 
-        <order manager="plone.portalheader" skinname="[your skin name]"
+        <order manager="plone.portalheader" skinname="[su nombre del skin]"
                based-on="Plone Default">
-            <viewlet name="[your namespace].[your viewlet name]"
+            <viewlet name="[su nombre de espacio].[su nombre de viewlet]"
                      insert-before="*" />
         </order>
     </object>
@@ -3758,7 +3802,7 @@ usuario ha iniciado sesión.
     plone.personal_bar
 
   **Tipo:** 
-    `viewlet`_
+    :ref:`viewlet <721_seccion>`
 
 Personalización a través de la Interfaz de Administración de Zope
 -----------------------------------------------------------------
@@ -3766,7 +3810,8 @@ Personalización a través de la Interfaz de Administración de Zope
 .. glossary ::
 
   **Uso:**
-    menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    :menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    
   **Ir a:**
     plone.personal_bar
 
@@ -3778,7 +3823,7 @@ Personalizando de su propio producto
 Los siguientes detalles le ayudarán a localizar los archivos que usted tendrá
 que copiar en su propio producto. También le ayudarán a proporcionar la
 información correcta para crear sus propias directivas ZCML, clases Python, y
-interfaces. Vea `Viewlet`_ para más información.
+interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
 .. glossary ::
 
@@ -3803,24 +3848,24 @@ Ejemplos de archivos & directivas
 
 Ponga una versión de personal_bar.pt en [su paquete de tema]/browser/templates)
 
-Cree su propia versión de la clase en [su paquete de tema]/browser/[sumodulo].py
+Cree su propia versión de la clase en [su paquete de tema]/browser/[su modulo].py
 
 .. code-block:: python
 
     from plone.app.layout.viewlets.common import PersonalBarViewlet
     from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-    class [your class name](PersonalBarViewlet):
-        render = ViewPageTemplateFile("[your template name]")
+    class [su nombre de clase](PersonalBarViewlet):
+        render = ViewPageTemplateFile("[su nombre de plantilla]")
 
 Conecte su viewlet [su paquete de tema]/browser/configure.zcml
 
 .. code-block:: xml
 
     <browser:viewlet
-        name="[your namespace].[your viewlet name]"
+        name="[su nombre de espacio].[su nombre de viewlet]"
         manager="plone.app.layout.viewlets.interfaces.IPortalTop"
-        class=".[your module].[your class name]"
-        layer=".interfaces.[your theme specific interface]"
+        class=".[su modulo].[su nombre de clase]"
+        layer=".interfaces.[su interfaz especifica del tema]"
         permission="zope2.View"
     />
 
@@ -3831,7 +3876,7 @@ Oculte el viewlet original (si lo desea)
 .. code-block:: xml
 
     <object>
-        <hidden manager="plone.portaltop" skinname="[your skin name]">
+        <hidden manager="plone.portaltop" skinname="[su nombre del skin]">
             <viewlet name="plone.personal_bar" />
         </hidden>
 
@@ -3839,9 +3884,9 @@ Inserte su nuevo viewlet en un administrador de viewlet
 
 .. code-block:: xml
 
-    <order manager="plone.portaltop" skinname="[your skin name]"
+    <order manager="plone.portaltop" skinname="[su nombre del skin]"
                based-on="Plone Default">
-            <viewlet name="[your namespace].[your viewlet name]"
+            <viewlet name="[su nombre de espacio].[su nombre de viewlet]"
                      insert-before="*" />
         </order>
     </object>
@@ -3868,7 +3913,7 @@ Proporciona el hilo de Ariadna
     plone.path_bar
 
   **Tipo:** 
-    `viewlet`_
+    :ref:`viewlet <721_seccion>`
 
 Personalización a través de la Interfaz de Administración de Zope
 -----------------------------------------------------------------
@@ -3876,7 +3921,8 @@ Personalización a través de la Interfaz de Administración de Zope
 .. glossary ::
 
   **Uso:**
-    menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    :menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    
   **Ir a:**
     plone.path_bar
 
@@ -3888,7 +3934,7 @@ Personalizando de su propio producto
 Los siguientes detalles le ayudarán a localizar los archivos que usted tendrá
 que copiar en su propio producto. También le ayudarán a proporcionar la
 información correcta para crear sus propias directivas ZCML, clases Python, y
-interfaces. Vea `Viewlet`_ para más información.
+interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
 .. glossary ::
 
@@ -3913,20 +3959,20 @@ Ejemplos de archivos & directivas
 
 Ponga una versión de path_bar.pt en [su paquete de tema]/browser/templates)
 
-Cree su propia versión de la clase en [su paquete de tema]/browser/[sumodulo].py ::
+Cree su propia versión de la clase en [su paquete de tema]/browser/[su modulo].py ::
 
     from plone.app.layout.viewlets.common import PathBarViewlet
     from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-    class [your class name](PathBarViewlet):
-        render = ViewPageTemplateFile("[your template name]")
+    class [su nombre de clase](PathBarViewlet):
+        render = ViewPageTemplateFile("[su nombre de plantilla]")
 
 Conecte su viewlet [su paquete de tema]/browser/configure.zcml: ::
 
     <browser:viewlet
-        name="[your namespace].[your viewlet name]"
+        name="[su nombre de espacio].[su nombre de viewlet]"
         manager="plone.app.layout.viewlets.interfaces.IPortalTop"
-        class=".[your module].[your class name]"
-        layer=".interfaces.[your theme specific interface]"
+        class=".[su modulo].[su nombre de clase]"
+        layer=".interfaces.[su interfaz especifica del tema]"
         permission="zope2.View"
     />
 
@@ -3935,15 +3981,15 @@ En [su paquete de tema]/profiles/default/viewlets.xml
 Oculte el viewlet original (si lo desea): ::
 
         <object>
-            <hidden manager="plone.portaltop" skinname="[your skin name]">
+            <hidden manager="plone.portaltop" skinname="[su nombre del skin]">
             <viewlet name="plone.path_bar" />
         </hidden>
 
 Inserte su nuevo viewlet en un administrador de viewlet: ::
 
-    <order manager="plone.portaltop" skinname="[your skin name]"
+    <order manager="plone.portaltop" skinname="[su nombre del skin]"
                based-on="Plone Default">
-            <viewlet name="[your namespace].[your viewlet name]"
+            <viewlet name="[su nombre de espacio].[su nombre de viewlet]"
                      insert-before="*" />
         </order>
     </object> '
@@ -3958,13 +4004,14 @@ La vista, edición, y las otras pestañas en la interfaz de edición.
 
   **Fragmento:** ``<ul class="contentViews"> ...</ul>``
 
-CSS:authoring.css
+  **CSS:**
+    authoring.css 
 
   **Nombre:** 
     plone.contentviews
 
   **Tipo:** 
-    `viewlet`_
+    :ref:`viewlet <721_seccion>`
 
 Personalización a través de la Interfaz de Administración de Zope
 -----------------------------------------------------------------
@@ -3972,7 +4019,8 @@ Personalización a través de la Interfaz de Administración de Zope
 .. glossary ::
 
   **Uso:**
-    menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    :menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    
   **Ir a:**
     plone.contentviews
 
@@ -3982,7 +4030,7 @@ Personalizando de su propio producto
 Los siguientes detalles le ayudarán a localizar los archivos que usted tendrá
 que copiar en su propio producto. También le ayudarán a proporcionar la
 información correcta para crear sus propias directivas ZCML, clases Python, y
-interfaces. Vea `Viewlet`_ para más información.
+interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
 .. glossary ::
 
@@ -4012,10 +4060,10 @@ Conecte su viewlet [su paquete de tema]/browser/configure.zcml
 .. code-block:: xml
 
     <browser:viewlet
-        name="[your namespace].[your viewlet name]"
+        name="[su nombre de espacio].[su nombre de viewlet]"
         manager="plone.app.layout.viewlets.interfaces.IContentViews"
-        template="templates/[your template name].pt"
-        layer=".interfaces.[your theme specific interface]"
+        template="templates/[su nombre de plantilla].pt"
+        layer=".interfaces.[su interfaz especifica del tema]"
         permission="zope2.View"
     />
 
@@ -4027,7 +4075,7 @@ Oculte el viewlet original (si lo desea)
 .. code-block:: xml
 
     <object>
-        <hidden manager="plone.contentviews" skinname="[your skin name]">
+        <hidden manager="plone.contentviews" skinname="[su nombre del skin]">
             <viewlet name="plone.contentviews" />
         </hidden>
 
@@ -4036,9 +4084,9 @@ Inserte su nuevo viewlet en un administrador de viewlet
 
 .. code-block:: xml
 
-        <order manager="plone.contentviews" skinname="[your skin name]"
+        <order manager="plone.contentviews" skinname="[su nombre del skin]"
                based-on="Plone Default">
-            <viewlet name="[your namespace].[your viewlet name]"
+            <viewlet name="[su nombre de espacio].[su nombre de viewlet]"
                      insert-before="*" />
         </order>
     </object>
@@ -4057,7 +4105,7 @@ necesarios en diferentes contextos).
     plone.contentactions
 
   **Tipo:** 
-    `viewlet`_
+    :ref:`viewlet <721_seccion>`
 
 Personalización a través de la Interfaz de Administración de Zope
 -----------------------------------------------------------------
@@ -4065,7 +4113,8 @@ Personalización a través de la Interfaz de Administración de Zope
 .. glossary ::
 
   **Uso:**
-    menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    :menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    
   **Ir a:**
     plone.contentactions
 
@@ -4075,7 +4124,7 @@ Personalizando de su propio producto
 Los siguientes detalles le ayudarán a localizar los archivos que usted tendrá
 que copiar en su propio producto. También le ayudarán a proporcionar la
 información correcta para crear sus propias directivas ZCML, clases Python, y
-interfaces. Vea `Viewlet`_ para más información.
+interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
 .. glossary ::
 
@@ -4101,14 +4150,14 @@ Ejemplos de archivos & directivas
 Ponga una versión de contentactions_blank.pt & contentactions.pt en [su
 paquete de tema]/browser/templates)
 
-Cree su propia versión de la clase en [su paquete de tema]/browser/[sumodulo].py
+Cree su propia versión de la clase en [su paquete de tema]/browser/[su modulo].py
 
 .. code-block:: python
 
     from plone.app.layout.viewlets.common import ContentActionsViewlet
     from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-    class [your class name](ContentActionsViewlet):
-        render = ViewPageTemplateFile("[your template name]")
+    class [su nombre de clase](ContentActionsViewlet):
+        render = ViewPageTemplateFile("[su nombre de plantilla]")
 
 
 Conecte su viewlet [su paquete de tema]/browser/configure.zcml
@@ -4116,10 +4165,10 @@ Conecte su viewlet [su paquete de tema]/browser/configure.zcml
 .. code-block:: xml
 
     <browser:viewlet
-        name="[your namespace].[your viewlet name]"
+        name="[su nombre de espacio].[su nombre de viewlet]"
         manager="plone.app.layout.viewlets.interfaces.IContentViews"
-        class=".[your module].[your class name]"
-        layer=".interfaces.[your theme specific interface]"
+        class=".[su modulo].[su nombre de clase]"
+        layer=".interfaces.[su interfaz especifica del tema]"
         permission="zope2.View"
     />
 
@@ -4131,7 +4180,7 @@ Oculte el viewlet original (si lo desea)
 .. code-block:: xml
 
     <object>
-        <hidden manager="plone.contentviews" skinname="[your skin name]">
+        <hidden manager="plone.contentviews" skinname="[su nombre del skin]">
             <viewlet name="plone.contentactions" />
         </hidden>
 
@@ -4140,9 +4189,9 @@ Inserte su nuevo viewlet en un administrador de viewlet
 
 .. code-block:: xml
 
-        <order manager="plone.contentviews" skinname="[your skin name]"
+        <order manager="plone.contentviews" skinname="[su nombre del skin]"
                based-on="Plone Default">
-            <viewlet name="[your namespace].[your viewlet name]"
+            <viewlet name="[su nombre de espacio].[su nombre de viewlet]"
                      insert-before="*" />
         </order>
     </object>
@@ -4167,7 +4216,7 @@ CSS:portlets.css
     plone.tableofcontents
 
   **Tipo:** 
-    `viewlet`_
+    :ref:`viewlet <721_seccion>`
 
 Personalización a través de la Interfaz de Administración de Zope
 -----------------------------------------------------------------
@@ -4175,7 +4224,8 @@ Personalización a través de la Interfaz de Administración de Zope
 .. glossary ::
 
   **Uso:**
-    menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    :menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    
   **Ir a:**
     plone.tableofcontents
 
@@ -4185,7 +4235,7 @@ Personalizando de su propio producto
 Los siguientes detalles le ayudarán a localizar los archivos que usted tendrá
 que copiar en su propio producto. También le ayudarán a proporcionar la
 información correcta para crear sus propias directivas ZCML, clases Python, y
-interfaces. Vea `Viewlet`_ para más información.
+interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
 .. glossary ::
 
@@ -4210,14 +4260,14 @@ Ejemplos de archivos & directivas
 
 Ponga una versión de toc.pt en [su paquete de tema]/browser/templates)
 
-Cree su propia versión de la clase en [su paquete de tema]/browser/[sumodulo].py
+Cree su propia versión de la clase en [su paquete de tema]/browser/[su modulo].py
 
 .. code-block:: python
 
     from plone.app.layout.viewlets.common import TableOfContentsViewlet
     from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-    class [your class name](TableOfContentsViewlet):
-        render = ViewPageTemplateFile("[your template name]")
+    class [su nombre de clase](TableOfContentsViewlet):
+        render = ViewPageTemplateFile("[su nombre de plantilla]")
 
 
 Conecte su viewlet [su paquete de tema]/browser/configure.zcml
@@ -4225,11 +4275,11 @@ Conecte su viewlet [su paquete de tema]/browser/configure.zcml
 .. code-block:: xml
 
     <browser:viewlet
-        name="[your namespace].[your viewlet name]"
+        name="[su nombre de espacio].[su nombre de viewlet]"
         manager="plone.app.layout.viewlets.interfaces.IAboveContentBody"
-        class=".[your module].[your class name]"
+        class=".[su modulo].[su nombre de clase]"
         for="Products.ATContentTypes.interface.IATDocument"
-        layer=".interfaces.[your theme specific interface]"
+        layer=".interfaces.[su interfaz especifica del tema]"
         permission="zope2.View"
     />
 
@@ -4241,7 +4291,7 @@ Oculte el viewlet original (si lo desea)
 .. code-block:: xml
 
     <object>
-        <hidden manager="plone.abovecontentbody" skinname="[your skin name]">
+        <hidden manager="plone.abovecontentbody" skinname="[su nombre del skin]">
             <viewlet name="plone.tableofcontents" />
         </hidden>
 
@@ -4250,9 +4300,9 @@ Inserte su nuevo viewlet en un administrador de viewlet
 
 .. code-block:: xml
 
-        <order manager="plone.abovecontentbody" skinname="[your skin name]"
+        <order manager="plone.abovecontentbody" skinname="[su nombre del skin]"
                based-on="Plone Default">
-            <viewlet name="[your namespace].[your viewlet name]"
+            <viewlet name="[su nombre de espacio].[su nombre de viewlet]"
                      insert-before="*" />
         </order>
     </object>
@@ -4281,7 +4331,7 @@ Proporciona un enlace a una vista de presentación de un documento.
     plone.presentation
 
   **Tipo:** 
-    `viewlet`_
+    :ref:`viewlet <721_seccion>`
 
 Personalización a través de la Interfaz de Administración de Zope
 -----------------------------------------------------------------
@@ -4289,7 +4339,7 @@ Personalización a través de la Interfaz de Administración de Zope
 .. glossary ::
 
   **Uso:**
-    menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    :menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
     
   **Ir a:**
     plone.presentation
@@ -4300,7 +4350,7 @@ Personalizando de su propio producto
 Los siguientes detalles le ayudarán a localizar los archivos que usted tendrá
 que copiar en su propio producto. También le ayudarán a proporcionar la
 información correcta para crear sus propias directivas ZCML, clases Python, y
-interfaces. Vea `Viewlet`_ para más información.
+interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
 .. glossary ::
 
@@ -4323,15 +4373,15 @@ interfaces. Vea `Viewlet`_ para más información.
 Ejemplos de archivos & directivas
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Cree su propia versión de la clase en [su paquete de tema]/browser/[sumodulo].py
+Cree su propia versión de la clase en [su paquete de tema]/browser/[su modulo].py
 
 .. code-block:: python
 
     from plone.app.presentation import PresentationViewlet
     from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
-    class [your class name](PresentationViewlet):
-        [your code here]
+    class [su nombre de clase](PresentationViewlet):
+        [su código aquí]
 
 
 Conecte su viewlet [su paquete de tema]/browser/configure.zcml
@@ -4339,11 +4389,11 @@ Conecte su viewlet [su paquete de tema]/browser/configure.zcml
 .. code-block:: xml
 
     <browser:viewlet
-        name="[your namespace].[your viewlet name]"
+        name="[su nombre de espacio].[su nombre de viewlet]"
         manager="plone.app.layout.viewlets.interfaces.IAboveContentBody"
-        class=".[your module].[your class name]"
+        class=".[su modulo].[su nombre de clase]"
         for="Products.ATContentTypes.interface.IATDocument"
-        layer=".interfaces.[your theme specific interface]"
+        layer=".interfaces.[su interfaz especifica del tema]"
         permission="zope2.View"
     />
 
@@ -4355,7 +4405,7 @@ Oculte el viewlet original (si lo desea)
 .. code-block:: xml
 
     <object>
-        <hidden manager="plone.abovecontentbody" skinname="[your skin name]">
+        <hidden manager="plone.abovecontentbody" skinname="[su nombre del skin]">
             <viewlet name="plone.presentation" />
         </hidden>
 
@@ -4363,9 +4413,9 @@ Inserte su nuevo viewlet en un administrador de viewlet
 
 .. code-block:: xml
 
-        <order manager="plone.abovecontentbody" skinname="[your skin name]"
+        <order manager="plone.abovecontentbody" skinname="[su nombre del skin]"
                based-on="Plone Default">
-            <viewlet name="[your namespace].[your viewlet name]"
+            <viewlet name="[su nombre de espacio].[su nombre de viewlet]"
                      insert-before="*" />
         </order>
     </object>
@@ -4393,7 +4443,7 @@ que han sido asignadas al elemento.
     plone.belowcontenttitle.keywords
 
   **Tipo:** 
-    `viewlet`_
+    :ref:`viewlet <721_seccion>`
 
 Personalización a través de la Interfaz de Administración de Zope
 -----------------------------------------------------------------
@@ -4401,7 +4451,8 @@ Personalización a través de la Interfaz de Administración de Zope
 .. glossary ::
 
   **Uso:**
-    menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    :menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    
   **Ir a:**
     plone.belowcontenttitle.keywords
 
@@ -4411,7 +4462,7 @@ Personalizando de su propio producto
 Los siguientes detalles le ayudarán a localizar los archivos que usted tendrá
 que copiar en su propio producto. También le ayudarán a proporcionar la
 información correcta para crear sus propias directivas ZCML, clases Python, y
-interfaces. Vea `Viewlet`_ para más información.
+interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
 .. glossary ::
 
@@ -4441,10 +4492,10 @@ Conecte su viewlet [su paquete de tema]/browser/configure.zcml
 .. code-block:: xml
 
     <browser:viewlet
-        name="[your namespace].[your viewlet name]"
+        name="[su nombre de espacio].[su nombre de viewlet]"
         manager="plone.app.layout.viewlets.interfaces.IBelowContentTitle"
-        template="templates/[your template name].pt"
-        layer=".interfaces.[your theme specific interface]"
+        template="templates/[su nombre de plantilla].pt"
+        layer=".interfaces.[su interfaz especifica del tema]"
         permission="zope2.View"
     />
 
@@ -4456,7 +4507,7 @@ Oculte el viewlet original (si lo desea)
 .. code-block:: xml
 
     <object>
-        <hidden manager="plone.belowcontenttitle" skinname="[your skin name]">
+        <hidden manager="plone.belowcontenttitle" skinname="[su nombre del skin]">
             <viewlet name="plone.belowcontenttitle.keywords" />
         </hidden>
 
@@ -4464,9 +4515,9 @@ Inserte su nuevo viewlet en un administrador de viewlet
 
 .. code-block:: xml
 
-        <order manager="plone.belowcontenttitle" skinname="[your skin name]"
+        <order manager="plone.belowcontenttitle" skinname="[su nombre del skin]"
                based-on="Plone Default">
-            <viewlet name="[your namespace].[your viewlet name]"
+            <viewlet name="[su nombre de espacio].[su nombre de viewlet]"
                      insert-before="*" />
         </order>
     </object>
@@ -4496,7 +4547,7 @@ fue la última vez que modificá).
     plone.belowcontenttitle.documentbyline
 
   **Tipo:** 
-    `viewlet`_
+    :ref:`viewlet <721_seccion>`
 
 Personalización a través de la Interfaz de Administración de Zope
 -----------------------------------------------------------------
@@ -4504,7 +4555,7 @@ Personalización a través de la Interfaz de Administración de Zope
 .. glossary ::
 
   **Uso:**
-    menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`
+    :menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`
 
   **Ir a:**
     plone.belowcontenttitle.documentbyline
@@ -4516,7 +4567,7 @@ Personalizando de su propio producto
 Los siguientes detalles le ayudarán a localizar los archivos que usted tendrá
 que copiar en su propio producto. También le ayudarán a proporcionar la
 información correcta para crear sus propias directivas ZCML, clases Python, y
-interfaces. Vea `Viewlet`_ para más información.
+interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
 .. glossary ::
 
@@ -4541,14 +4592,14 @@ Ejemplos de archivos & directivas
 
 Ponga una versión de document_byline.pt en [su paquete de tema]/browser/templates)
 
-Cree su propia versión de la clase en [su paquete de tema]/browser/[sumodulo].py
+Cree su propia versión de la clase en [su paquete de tema]/browser/[su modulo].py
 
 .. code-block:: python
 
     from plone.app.layout.viewlets.content import DocumentBylineViewlet
     from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-    class [your class name](DocumentBylineViewlet):
-        render = ViewPageTemplateFile("[your template name]")
+    class [su nombre de clase](DocumentBylineViewlet):
+        render = ViewPageTemplateFile("[su nombre de plantilla]")
 
 
 Conecte su viewlet [su paquete de tema]/browser/configure.zcml
@@ -4556,10 +4607,10 @@ Conecte su viewlet [su paquete de tema]/browser/configure.zcml
 .. code-block:: xml
 
     <browser:viewlet
-        name="[your namespace].[your viewlet name]"
+        name="[su nombre de espacio].[su nombre de viewlet]"
         manager="plone.app.layout.viewlets.interfaces.IBelowContentTitle"
-        class=".[your module].[your class name]"
-        layer=".interfaces.[your theme specific interface]"
+        class=".[su modulo].[su nombre de clase]"
+        layer=".interfaces.[su interfaz especifica del tema]"
         permission="zope2.View"
     />
 
@@ -4571,7 +4622,7 @@ Oculte el viewlet original (si lo desea)
 .. code-block:: xml
 
     <object>
-        <hidden manager="plone.belowcontenttitle" skinname="[your skin name]">
+        <hidden manager="plone.belowcontenttitle" skinname="[su nombre del skin]">
             <viewlet
             name="plone.belowcontenttitle.documentbyline" />
         </hidden>
@@ -4581,9 +4632,9 @@ Inserte su nuevo viewlet en un administrador de viewlet
 
 .. code-block:: xml
 
-        <order manager="plone.belowcontenttitle" skinname="[your skin name]"
+        <order manager="plone.belowcontenttitle" skinname="[su nombre del skin]"
                based-on="Plone Default">
-            <viewlet name="[your namespace].[your viewlet name]"
+            <viewlet name="[su nombre de espacio].[su nombre de viewlet]"
                      insert-before="*" />
         </order>
     </object>
@@ -4606,7 +4657,7 @@ Indica que el elemento de contenido está bloqueado para su edición.
     plone.lockinfo
 
   **Tipo:** 
-    `viewlet`_
+    :ref:`viewlet <721_seccion>`
 
 Personalización a través de la Interfaz de Administración de Zope
 -----------------------------------------------------------------
@@ -4614,7 +4665,8 @@ Personalización a través de la Interfaz de Administración de Zope
 .. glossary ::
 
   **Uso:**
-    menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    :menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    
   **Ir a:**
     plone.lockinfo
 
@@ -4624,7 +4676,7 @@ Personalizando de su propio producto
 Los siguientes detalles le ayudarán a localizar los archivos que usted tendrá
 que copiar en su propio producto. También le ayudarán a proporcionar la
 información correcta para crear sus propias directivas ZCML, clases Python, y
-interfaces. Vea `Viewlet`_ para más información.
+interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
 .. glossary ::
 
@@ -4649,14 +4701,14 @@ Ejemplos de archivos & directivas
 
 Ponga una versión de info.pt en [su paquete de tema]/browser/templates)
 
-Cree su propia versión de la clase en [su paquete de tema]/browser/[sumodulo].py
+Cree su propia versión de la clase en [su paquete de tema]/browser/[su modulo].py
 
 .. code-block:: python
 
     from plone.locking.browser.info import LockInfoViewlet
     from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-    class [your class name](LockInfoViewlet):
-        render = ViewPageTemplateFile("[your template name]")
+    class [su nombre de clase](LockInfoViewlet):
+        render = ViewPageTemplateFile("[su nombre de plantilla]")
 
 
 Conecte su viewlet [su paquete de tema]/browser/configure.zcml
@@ -4664,11 +4716,11 @@ Conecte su viewlet [su paquete de tema]/browser/configure.zcml
 .. code-block:: xml
 
     <browser:viewlet
-        name="[your namespace].[your viewlet name]"
+        name="[su nombre de espacio].[su nombre de viewlet]"
         manager="plone.app.layout.viewlets.interfaces.IAboveContent"
-        class=".[your module].[your class name]"
+        class=".[su modulo].[su nombre de clase]"
         for="plone.locking.interfaces.ITTWLockable"
-        layer=".interfaces.[your theme specific interface]"
+        layer=".interfaces.[su interfaz especifica del tema]"
         permission="zope2.View"
     />
 
@@ -4680,7 +4732,7 @@ Oculte el viewlet original (si lo desea)
 .. code-block:: xml
 
     <object>
-        <hidden manager="plone.abovecontent" skinname="[your skin name]">
+        <hidden manager="plone.abovecontent" skinname="[su nombre del skin]">
             <viewlet name="plone.lockinfo" />
         </hidden>
 
@@ -4689,9 +4741,9 @@ Inserte su nuevo viewlet en un administrador de viewlet
 
 .. code-block:: xml
 
-        <order manager="plone.abovecontent" skinname="[your skin name]"
+        <order manager="plone.abovecontent" skinname="[su nombre del skin]"
                based-on="Plone Default">
-            <viewlet name="[your namespace].[your viewlet name]"
+            <viewlet name="[su nombre de espacio].[su nombre de viewlet]"
                      insert-before="*" />
         </order>
     </object>
@@ -4708,13 +4760,14 @@ contenido.
 
   **Fragmento:** ``<div class="reviewHistory" id="review-history">...</div>``
 
-CSS:authoring.css
+  **CSS:**
+    authoring.css
 
   **Nombre:** 
     plone.belowcontentbody.workflowhistory
 
   **Tipo:** 
-    `viewlet`_
+    :ref:`viewlet <721_seccion>`
 
 Personalización a través de la Interfaz de Administración de Zope
 -----------------------------------------------------------------
@@ -4722,7 +4775,8 @@ Personalización a través de la Interfaz de Administración de Zope
 .. glossary ::
 
   **Uso:**
-    menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    :menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+
   **Ir a:**
     plone.belowcontentbody.workflowhistory
 
@@ -4732,7 +4786,7 @@ Personalizando de su propio producto
 Los siguientes detalles le ayudarán a localizar los archivos que usted tendrá
 que copiar en su propio producto. También le ayudarán a proporcionar la
 información correcta para crear sus propias directivas ZCML, clases Python, y
-interfaces. Vea `Viewlet`_ para más información.
+interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
 .. glossary ::
 
@@ -4757,24 +4811,24 @@ Ejemplos de archivos & directivas
 
 Ponga una versión de review_history.pt en [su paquete de tema]/browser/templates)
 
-Cree su propia versión de la clase en [su paquete de tema]/browser/[sumodulo].py
+Cree su propia versión de la clase en [su paquete de tema]/browser/[su modulo].py
 
 .. code-block:: python
 
     from plone.app.layout.viewlets.content import WorkflowHistoryViewlet
     from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-    class [your class name](WorkflowHistoryViewlet):
-        render = ViewPageTemplateFile("[your template name]")
+    class [su nombre de clase](WorkflowHistoryViewlet):
+        render = ViewPageTemplateFile("[su nombre de plantilla]")
 
 Conecte su viewlet [su paquete de tema]/browser/configure.zcml
 
 .. code-block:: xml
 
     <browser:viewlet
-        name="[your namespace].[your viewlet name]"
+        name="[su nombre de espacio].[su nombre de viewlet]"
         manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
-        class=".[your module].[your class name]"
-        layer=".interfaces.[your theme specific interface]"
+        class=".[su modulo].[su nombre de clase]"
+        layer=".interfaces.[su interfaz especifica del tema]"
         permission="zope2.View"
     />
 
@@ -4786,7 +4840,7 @@ Oculte el viewlet original (si lo desea)
 .. code-block:: xml
 
     <object>
-        <hidden manager="plone.belowcontentbody" skinname="[your skin name]">
+        <hidden manager="plone.belowcontentbody" skinname="[su nombre del skin]">
             <viewlet
             name="plone.belowcontentbody.workflowhistory" />
         </hidden>
@@ -4796,9 +4850,9 @@ Inserte su nuevo viewlet en un administrador de viewlet
 
 .. code-block:: xml
 
-        <order manager="plone.belowcontentbody" skinname="[your skin name]"
+        <order manager="plone.belowcontentbody" skinname="[su nombre del skin]"
                based-on="Plone Default">
-            <viewlet name="[your namespace].[your viewlet name]"
+            <viewlet name="[su nombre de espacio].[su nombre de viewlet]"
                      insert-before="*" />
         </order>
     </object>
@@ -4816,13 +4870,14 @@ Plone 3.3).
 
   **Fragmento:** ``<div class="contentHistory" id="content-history">...</div>``
 
-CSS:authoring.css
+  **CSS:**
+    authoring.css 
 
   **Nombre:** 
     plone.belowcontentbody.contenthistory
 
   **Tipo:** 
-    `viewlet`_
+    :ref:`viewlet <721_seccion>`
 
 Personalización a través de la Interfaz de Administración de Zope
 -----------------------------------------------------------------
@@ -4830,7 +4885,8 @@ Personalización a través de la Interfaz de Administración de Zope
 .. glossary ::
 
   **Uso:**
-    menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    :menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    
   **Ir a:**
     plone.belowcontentbody.contenthistory
 
@@ -4840,7 +4896,7 @@ Personalizando de su propio producto
 Los siguientes detalles le ayudarán a localizar los archivos que usted tendrá
 que copiar en su propio producto. También le ayudarán a proporcionar la
 información correcta para crear sus propias directivas ZCML, clases Python, y
-interfaces. Vea `Viewlet`_ para más información.
+interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
 .. glossary ::
 
@@ -4865,14 +4921,14 @@ Ejemplos de archivos & directivas
 
 Ponga una versión de review_history.pt en [su paquete de tema]/browser/templates)
 
-Cree su propia versión de la clase en [su paquete de tema]/browser/[sumodulo].py
+Cree su propia versión de la clase en [su paquete de tema]/browser/[su modulo].py
 
 .. code-block:: python
 
     from plone.app.layout.viewlets.content import ContentHistoryViewlet
     from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-    class [your class name](ContentHistoryViewlet):
-        render = ViewPageTemplateFile("[your template name]")
+    class [su nombre de clase](ContentHistoryViewlet):
+        render = ViewPageTemplateFile("[su nombre de plantilla]")
 
 
 Conecte su viewlet [su paquete de tema]/browser/configure.zcml
@@ -4880,10 +4936,10 @@ Conecte su viewlet [su paquete de tema]/browser/configure.zcml
 .. code-block:: xml
 
     <browser:viewlet
-        name="[your namespace].[your viewlet name]"
+        name="[su nombre de espacio].[su nombre de viewlet]"
         manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
-        class=".[your module].[your class name]"
-        layer=".interfaces.[your theme specific interface]"
+        class=".[su modulo].[su nombre de clase]"
+        layer=".interfaces.[su interfaz especifica del tema]"
         permission="zope2.View"
     />
 
@@ -4895,7 +4951,7 @@ Oculte el viewlet original (si lo desea)
 .. code-block:: xml
 
     <object>
-        <hidden manager="plone.belowcontentbody" skinname="[your skin name]">
+        <hidden manager="plone.belowcontentbody" skinname="[su nombre del skin]">
             <viewlet name="plone.belowcontentbody.contenthistory"
             />
         </hidden>
@@ -4904,9 +4960,9 @@ Inserte su nuevo viewlet en un administrador de viewlet
 
 .. code-block:: xml
 
-        <order manager="plone.belowcontentbody" skinname="[your skin name]"
+        <order manager="plone.belowcontentbody" skinname="[su nombre del skin]"
                based-on="Plone Default">
-            <viewlet name="[your namespace].[your viewlet name]"
+            <viewlet name="[su nombre de espacio].[su nombre de viewlet]"
                      insert-before="*" />
         </order>
     </object>
@@ -4935,7 +4991,7 @@ Los enlaces para impresión y RSS
     plone.abovecontenttitle.documentactions
 
   **Tipo:** 
-    `viewlet`_
+    :ref:`viewlet <721_seccion>`
 
 Personalización a través de la Interfaz de Administración de Zope
 -----------------------------------------------------------------
@@ -4943,7 +4999,8 @@ Personalización a través de la Interfaz de Administración de Zope
 .. glossary ::
 
   **Uso:**
-    menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    :menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+
   **Ir a:**
     plone.abovecontenttitle.documentactions
 
@@ -4955,7 +5012,7 @@ Personalizando de su propio producto
 Los siguientes detalles le ayudarán a localizar los archivos que usted tendrá
 que copiar en su propio producto. También le ayudarán a proporcionar la
 información correcta para crear sus propias directivas ZCML, clases Python, y
-interfaces. Vea `Viewlet`_ para más información.
+interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
 .. glossary ::
 
@@ -4980,24 +5037,24 @@ Ejemplos de archivos & directivas
 
 Ponga una versión de document_actions.pt en [su paquete de tema]/browser/templates)
 
-Cree su propia versión de la clase en [su paquete de tema]/browser/[sumodulo].py
+Cree su propia versión de la clase en [su paquete de tema]/browser/[su modulo].py
 
 .. code-block:: python
 
     from plone.app.layout.viewlets.content import DocumentActionsViewlet
     from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-    class [your class name](DocumentActionsViewlet):
-        render = ViewPageTemplateFile("[your template name]")
+    class [su nombre de clase](DocumentActionsViewlet):
+        render = ViewPageTemplateFile("[su nombre de plantilla]")
 
 Conecte su viewlet [su paquete de tema]/browser/configure.zcml
 
 .. code-block:: xml
 
     <browser:viewlet
-        name="[your namespace].[your viewlet name]"
+        name="[su nombre de espacio].[su nombre de viewlet]"
         manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
-        class=".[your module].[your class name]"
-        layer=".interfaces.[your theme specific interface]"
+        class=".[su modulo].[su nombre de clase]"
+        layer=".interfaces.[su interfaz especifica del tema]"
         permission="zope2.View"
     />
 
@@ -5008,7 +5065,7 @@ Oculte el viewlet original (si lo desea)
 .. code-block:: xml
 
     <object>
-        <hidden manager="plone.belowcontentbody" skinname="[your skin name]">
+        <hidden manager="plone.belowcontentbody" skinname="[su nombre del skin]">
             <viewlet
             name="plone.abovecontenttitle.documentactions" />
         </hidden>
@@ -5017,9 +5074,9 @@ Inserte su nuevo viewlet en un administrador de viewlet
 
 .. code-block:: xml
 
-        <order manager="plone.belowcontentbody" skinname="[your skin name]"
+        <order manager="plone.belowcontentbody" skinname="[su nombre del skin]"
                based-on="Plone Default">
-            <viewlet name="[your namespace].[your viewlet name]"
+            <viewlet name="[su nombre de espacio].[su nombre de viewlet]"
                      insert-before="*" />
         </order>
     </object> '
@@ -5046,7 +5103,7 @@ Los elementos relacionados al contenido
     plone.belowcontentbody.relateditems
 
   **Tipo:** 
-    `viewlet`_
+    :ref:`viewlet <721_seccion>`
 
 Personalización a través de la Interfaz de Administración de Zope
 -----------------------------------------------------------------
@@ -5054,7 +5111,8 @@ Personalización a través de la Interfaz de Administración de Zope
 .. glossary ::
 
   **Uso:**
-    menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    :menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+
   **Ir a:**
     plone.belowcontentbody.relateditems
 
@@ -5064,7 +5122,7 @@ Personalizando de su propio producto
 Los siguientes detalles le ayudarán a localizar los archivos que usted tendrá
 que copiar en su propio producto. También le ayudarán a proporcionar la
 información correcta para crear sus propias directivas ZCML, clases Python, y
-interfaces. Vea `Viewlet`_ para más información.
+interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
 .. glossary ::
 
@@ -5089,24 +5147,24 @@ Ejemplos de archivos & directivas
 
 Ponga una versión dedocument_relateditems.pt en [su paquete de tema]/browser/templates)
 
-Cree su propia versión de la clase en [su paquete de tema]/browser/[sumodulo].py
+Cree su propia versión de la clase en [su paquete de tema]/browser/[su modulo].py
 
 .. code-block:: python
 
     from plone.app.layout.viewlets.content import ContentRelatedItems
     from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-    class [your class name](ContentRelatedItems):
-        render = ViewPageTemplateFile("[your template name]")
+    class [su nombre de clase](ContentRelatedItems):
+        render = ViewPageTemplateFile("[su nombre de plantilla]")
 
 Conecte su viewlet [su paquete de tema]/browser/configure.zcml
 
 .. code-block:: xml
 
     <browser:viewlet
-        name="[your namespace].[your viewlet name]"
+        name="[su nombre de espacio].[su nombre de viewlet]"
         manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
-        class=".[your module].[your class name]"
-        layer=".interfaces.[your theme specific interface]"
+        class=".[su modulo].[su nombre de clase]"
+        layer=".interfaces.[su interfaz especifica del tema]"
         permission="zope2.View"
     />
 
@@ -5117,7 +5175,7 @@ Oculte el viewlet original (si lo desea)
 .. code-block:: xml
 
     <object>
-        <hidden manager="plone.belowcontentbody" skinname="[your skin name]">
+        <hidden manager="plone.belowcontentbody" skinname="[su nombre del skin]">
             <viewlet name="plone.belowcontentbody.relateditems"
             />
         </hidden>
@@ -5126,9 +5184,9 @@ Inserte su nuevo viewlet en un administrador de viewlet
 
 .. code-block:: xml
 
-        <order manager="plone.belowcontentbody" skinname="[your skin name]"
+        <order manager="plone.belowcontentbody" skinname="[su nombre del skin]"
                based-on="Plone Default">
-            <viewlet name="[your namespace].[your viewlet name]"
+            <viewlet name="[su nombre de espacio].[su nombre de viewlet]"
                      insert-before="*" />
         </order>
     </object> '
@@ -5156,7 +5214,7 @@ Proporciona una interfaz de comentarios.
     plone.comments
 
   **Tipo:** 
-    `viewlet`_
+    :ref:`viewlet <721_seccion>`
 
 Personalización a través de la Interfaz de Administración de Zope
 -----------------------------------------------------------------
@@ -5164,7 +5222,8 @@ Personalización a través de la Interfaz de Administración de Zope
 .. glossary ::
 
   **Uso:**
-    menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    :menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+
   **Ir a:**
     plone.comments
 
@@ -5174,7 +5233,7 @@ Personalizando de su propio producto
 Los siguientes detalles le ayudarán a localizar los archivos que usted tendrá
 que copiar en su propio producto. También le ayudarán a proporcionar la
 información correcta para crear sus propias directivas ZCML, clases Python, y
-interfaces. Vea `Viewlet`_ para más información.
+interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
 .. glossary ::
 
@@ -5199,25 +5258,25 @@ Ejemplos de archivos & directivas
 
 Ponga una versión de comments.pt en [su paquete de tema]/browser/templates)
 
-Cree su propia versión de la clase en [su paquete de tema]/browser/[sumodulo].py
+Cree su propia versión de la clase en [su paquete de tema]/browser/[su modulo].py
 
 .. code-block:: python
 
     from plone.app.layout.viewlets.comments import CommentsViewlet
     from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-    class [your class name](CommentsViewlet):
-        render = ViewPageTemplateFile("[your template name]")
+    class [su nombre de clase](CommentsViewlet):
+        render = ViewPageTemplateFile("[su nombre de plantilla]")
 
 Conecte su viewlet [su paquete de tema]/browser/configure.zcml
 
 .. code-block:: xml
 
     <browser:viewlet
-        name="[your namespace].[your viewlet name]"
+        name="[su nombre de espacio].[su nombre de viewlet]"
         manager="plone.app.layout.viewlets.interfaces.IBelowContent"
-        class=".[your module].[your class name]"
+        class=".[su modulo].[su nombre de clase]"
         for="Products.CMFCore.interfaces.IContentish"
-        layer=".interfaces.[your theme specific interface]"
+        layer=".interfaces.[su interfaz especifica del tema]"
         permission="zope2.View"
     />
 
@@ -5229,7 +5288,7 @@ Oculte el viewlet original (si lo desea)
 .. code-block:: xml
 
     <object>
-        <hidden manager="plone.belowcontent" skinname="[your skin name]">
+        <hidden manager="plone.belowcontent" skinname="[su nombre del skin]">
             <viewlet name="plone.comments" />
         </hidden>
 
@@ -5237,9 +5296,9 @@ Inserte su nuevo viewlet en un administrador de viewlet
 
 .. code-block:: xml
 
-        <order manager="plone.belowcontent" skinname="[your skin name]"
+        <order manager="plone.belowcontent" skinname="[su nombre del skin]"
                based-on="Plone Default">
-            <viewlet name="[your namespace].[your viewlet name]"
+            <viewlet name="[su nombre de espacio].[su nombre de viewlet]"
                      insert-before="*" />
         </order>
     </object>
@@ -5260,11 +5319,12 @@ Proporciona la funcionalidad anterior/siguiente para una carpeta.
 
   **CSS:** 
     public.css
+
   **Nombre:** 
     plone.nextprevious
 
   **Tipo:** 
-    `viewlet`_
+    :ref:`viewlet <721_seccion>`
 
 Personalización a través de la Interfaz de Administración de Zope
 -----------------------------------------------------------------
@@ -5272,7 +5332,8 @@ Personalización a través de la Interfaz de Administración de Zope
 .. glossary ::
 
   **Uso:**
-    menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    :menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+
   **Ir a:**
     plone.nextprevious
 
@@ -5282,7 +5343,7 @@ Personalizando de su propio producto
 Los siguientes detalles le ayudarán a localizar los archivos que usted tendrá
 que copiar en su propio producto. También le ayudarán a proporcionar la
 información correcta para crear sus propias directivas ZCML, clases Python, y
-interfaces. Vea `Viewlet`_ para más información.
+interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
 .. glossary ::
 
@@ -5307,24 +5368,24 @@ Ejemplos de archivos & directivas
 
 Ponga una versión de nextprevious.pt en [su paquete de tema]/browser/templates)
 
-Cree su propia versión de la clase en [su paquete de tema]/browser/[sumodulo].py
+Cree su propia versión de la clase en [su paquete de tema]/browser/[su modulo].py
 
 .. code-block:: python
 
     from plone.app.layout.nextprevious.view import NextPreviousViewlet
     from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-    class [your class name](NextPreviousViewlet):
-        render = ViewPageTemplateFile("[your template name]")
+    class [su nombre de clase](NextPreviousViewlet):
+        render = ViewPageTemplateFile("[su nombre de plantilla]")
 
 Conecte su viewlet [su paquete de tema]/browser/configure.zcml
 
 .. code-block:: xml
 
     <browser:viewlet
-        name="[your namespace].[your viewlet name]"
+        name="[su nombre de espacio].[su nombre de viewlet]"
         manager="plone.app.layout.viewlets.interfaces.IBelowContent"
-        class=".[your module].[your class name]"
-        layer=".interfaces.[your theme specific interface]"
+        class=".[su modulo].[su nombre de clase]"
+        layer=".interfaces.[su interfaz especifica del tema]"
         permission="zope2.View"
     />
 
@@ -5336,7 +5397,7 @@ Oculte el viewlet original (si lo desea)
 .. code-block:: xml
 
     <object>
-        <hidden manager="plone.belowcontent" skinname="[your skin name]">
+        <hidden manager="plone.belowcontent" skinname="[su nombre del skin]">
             <viewlet name="plone.nextprevious" />
         </hidden>
 
@@ -5345,9 +5406,9 @@ Inserte su nuevo viewlet en un administrador de viewlet
 
 .. code-block:: xml
 
-        <order manager="plone.belowcontent" skinname="[your skin name]"
+        <order manager="plone.belowcontent" skinname="[su nombre del skin]"
                based-on="Plone Default">
-            <viewlet name="[your namespace].[your viewlet name]"
+            <viewlet name="[su nombre de espacio].[su nombre de viewlet]"
                      insert-before="*" />
         </order>
     </object>
@@ -5370,7 +5431,7 @@ Contiene la información sobre los derechos de autor.
     plone.footer
 
   **Tipo:** 
-    `viewlet`_
+    :ref:`viewlet <721_seccion>`
 
 Personalización a través de la Interfaz de Administración de Zope
 -----------------------------------------------------------------
@@ -5378,7 +5439,8 @@ Personalización a través de la Interfaz de Administración de Zope
 .. glossary ::
 
   **Uso:**
-    menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    :menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+
   **Ir a:**
     plone.footer
 
@@ -5388,7 +5450,7 @@ Personalizando de su propio producto
 Los siguientes detalles le ayudarán a localizar los archivos que usted tendrá
 que copiar en su propio producto. También le ayudarán a proporcionar la
 información correcta para crear sus propias directivas ZCML, clases Python, y
-interfaces. Vea `Viewlet`_ para más información.
+interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
 .. glossary ::
 
@@ -5399,6 +5461,7 @@ interfaces. Vea `Viewlet`_ para más información.
 
   **Nombre de la plantilla:**
     footer.pt
+
   **Nombre de la clase:** 
     none
 
@@ -5417,11 +5480,11 @@ Conecte su viewlet [su paquete de tema]/browser/configure.zcml
 .. code-block:: xml
 
     <browser:viewlet
-        name="[your namespace].[your viewlet name]"
+        name="[su nombre de espacio].[su nombre de viewlet]"
         manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
-        template="templates/[your template name].pt"
+        template="templates/[su nombre de plantilla].pt"
         for="*"
-        layer=".interfaces.[your theme specific interface]"
+        layer=".interfaces.[su interfaz especifica del tema]"
         permission="zope2.View"
     />
 
@@ -5433,7 +5496,7 @@ Oculte el viewlet original (si lo desea)
 .. code-block:: xml
 
     <object>
-        <hidden manager="plone.portalfooter" skinname="[your skin name]">
+        <hidden manager="plone.portalfooter" skinname="[su nombre del skin]">
             <viewlet name="plone.footer" />
         </hidden>
 
@@ -5441,9 +5504,9 @@ Inserte su nuevo viewlet en un administrador de viewlet
 
 .. code-block:: xml
 
-        <order manager="plone.portalfooter" skinname="[your skin name]"
+        <order manager="plone.portalfooter" skinname="[su nombre del skin]"
                based-on="Plone Default">
-            <viewlet name="[your namespace].[your viewlet name]"
+            <viewlet name="[su nombre de espacio].[su nombre de viewlet]"
                      insert-before="*" />
         </order>
     </object>
@@ -5466,7 +5529,7 @@ Contiene enlaces a plone.org, etc.
     plone.colophon
 
   **Tipo:** 
-    `viewlet`_
+    :ref:`viewlet <721_seccion>`
 
 Personalización a través de la Interfaz de Administración de Zope
 -----------------------------------------------------------------
@@ -5474,7 +5537,8 @@ Personalización a través de la Interfaz de Administración de Zope
 .. glossary ::
 
   **Uso:**
-    menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+    :menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`.
+
   **Ir a:**
     plone.colophon
 
@@ -5484,7 +5548,7 @@ Personalizando de su propio producto
 Los siguientes detalles le ayudarán a localizar los archivos que usted tendrá
 que copiar en su propio producto. También le ayudarán a proporcionar la
 información correcta para crear sus propias directivas ZCML, clases Python, y
-interfaces. Vea `Viewlet`_ para más información.
+interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
 .. glossary ::
 
@@ -5514,11 +5578,11 @@ Conecte su viewlet [su paquete de tema]/browser/configure.zcml
 .. code-block:: xml
 
     <browser:viewlet
-        name="[your namespace].[your viewlet name]"
+        name="[su nombre de espacio].[su nombre de viewlet]"
         manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
-        template="templates/[your template name].pt"
+        template="templates/[su nombre de plantilla].pt"
         for="*"
-        layer=".interfaces.[your theme specific interface]"
+        layer=".interfaces.[su interfaz especifica del tema]"
         permission="zope2.View"
     />
 
@@ -5529,7 +5593,7 @@ Oculte el viewlet original (si lo desea)
 .. code-block:: xml
 
     <object>
-        <hidden manager="plone.portalfooter" skinname="[your skin name]">
+        <hidden manager="plone.portalfooter" skinname="[su nombre del skin]">
             <viewlet name="plone.colophon" />
         </hidden>
 
@@ -5538,9 +5602,9 @@ Inserte su nuevo viewlet en un administrador de viewlet
 
 .. code-block:: xml
 
-        <order manager="plone.portalfooter" skinname="[your skin name]"
+        <order manager="plone.portalfooter" skinname="[su nombre del skin]"
                based-on="Plone Default">
-            <viewlet name="[your namespace].[your viewlet name]"
+            <viewlet name="[su nombre de espacio].[su nombre de viewlet]"
                      insert-before="*" />
         </order>
     </object>
@@ -5557,7 +5621,6 @@ Inserte su nuevo viewlet en un administrador de viewlet
 .. _http://plone.org/products/plone/roadmap/203/: http://plone.org/products/plone/roadmap/203/
 .. _Personalización de viewlets en main_template: http://plone.org/how-to/override-the-portlets-in-plone-3.0/.org/documentation/tutorial/customizing-main-template-viewlets
 .. _plone.skip_links: http://plone.org/documentation/manual/theme-reference/elements/hiddenelements/plone.skip_links
-.. _viewlet: http://plone.org/documentation/manual/theme-reference/elements/viewlet
 .. _plone.htmlhead.title: http://plone.org/documentation/manual/theme-reference/elements/hiddenelements/plone.htmlhead.title
 .. _plone.nextprevious.links: http://plone.org/documentation/manual/theme-reference/elements/hiddenelements/plone.nextprevious.links
 .. _plone.links.favicon: http://plone.org/documentation/manual/theme-reference/elements/hiddenelements/plone.links.favicon
