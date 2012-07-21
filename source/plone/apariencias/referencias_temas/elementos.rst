@@ -37,6 +37,8 @@ Directiva en ZCML
 Atributos en ZCML
 -----------------
 
+.. glossary::
+
   name 
     ejemplo [su namespace].[nombre de su viewlet] 
 
@@ -66,7 +68,7 @@ Atributos en ZCML
     especifique una interfaz que marca una vista del navegador específica, si lo desea. 
     El viewlet se limitará a elementos con esa vista específica (por ejemplo investigar 
     el código fuente del viewlet de acciones de contenido; usted encontrará las instrucciones 
-    sobre la ubicación de este código en la página `Acciones de contenido`_ de la sección de Elementos)
+    sobre la ubicación de este código en la página :ref:`Acciones de contenido <799_seccion>` de la sección de Elementos)
 
 
 7.1.2. Mover, quitar u ocultar un viewlet
@@ -84,7 +86,7 @@ página, como también quitarlos u ocultarlos de su página.
 Encontrará información detallada y un tutorial sobre cómo mover viewlets
 aquí:
 
--   `http://plone.org/documentation/tutorial/customizing-main-template-viewlets/reordering-and-hiding-viewlets`_
+-   `http://plone.org/documentation/kb/customizing-main-template-viewlets/reordering-and-hiding-viewlets`_
 
 
 Hoja breve de trucos para lo básico
@@ -148,8 +150,8 @@ Moviendo un viewlet dentro de un administrador de viewlet
 
     <object>
         <order manager="[Viewlet Manager Name]" skinname="[su nombre del skin]">
-    <!-- Specify all the viewlets you want to see in this viewlet 
-    in the order you want them with this directive: -->
+        <!-- Specify all the viewlets you want to see in this viewlet 
+            in the order you want them with this directive: -->
             <viewlet name="[Nombre de Viewlet]">
         </order>
     </object>
@@ -173,20 +175,21 @@ pasos
 .. code-block:: xml
 
     <object>
-    <!-- Hide it from the current viewlet manager -->
+        <!-- Hide it from the current viewlet manager -->
         <hidden manager="[actual nombre del administrador Viewlet]"
-        skinname="[su nombre del skin]">
+                skinname="[su nombre del skin]">
             <viewlet name="[Nombre de Viewlet]" />
         </hidden>
-    <!-- Add it to a different viewlet manager -->
+        
+        <!-- Add it to a different viewlet manager -->
         <order manager="[un administrador Viewlet diferente]"
-        skinname="[su nombre del skin]"
+               skinname="[su nombre del skin]"
                based-on="Plone Default">
             <viewlet name="[Nombre de Viewlet]"
-                     insert-before="[Name of Viewlet
-                     Below]" />
+                     insert-before="[Nombre del Viewlet siguiente]" />
         </order>
-    <!-- OR Add it to your own viewlet manager -->
+        
+        <!-- OR Add it to your own viewlet manager -->
         <order manager="[Su Administrador Viewlet]" skinname="[su nombre del skin]">
             <viewlet name="[Nombre de Viewlet]"/>
         </order>
@@ -219,7 +222,7 @@ puede alterar la base de la clase Python.
 En el sistema de archivos, en lugar de personalizar, el proceso es conectar
 un nuevo viewlet, o re-conectar un viewlet existente.
 
-Encontrará un tutorial detallado sobre la creación de un viewlet en `este artículo`_ .
+Encontrará un tutorial detallado sobre la creación de un viewlet en `este artículo`_.
 
 
 Breve hoja de trucos
@@ -269,13 +272,13 @@ Re-conectando un viewlet de Plone Default para utilizar su propia plantilla
 .. code-block:: xml
 
     <browser:viewlet
-     name="plone.[viewlet name]"
-     manager="[viewlet manager interface]"
-     class="plone.app.layout.viewlets.common.[viewlet class name]"
-     template="templates/[su nombre de plantilla]"
-     layer="[su interfaz especifica del tema]"
-     permission="zope2.View"
-     />
+        name="plone.[nombre de viewlet]"
+        manager="[interfaz de administrador viewlet]"
+        class="plone.app.layout.viewlets.common.[nombre de clase viewlet]"
+        template="templates/[su nombre de plantilla]"
+        layer="[su interfaz especifica del tema]"
+        permission="zope2.View"
+        />
 
 
 Conectando un nuevo viewlet pero prestando una clase de viewlet de Plone Default
@@ -283,27 +286,26 @@ Conectando un nuevo viewlet pero prestando una clase de viewlet de Plone Default
 .. code-block:: xml
 
     <browser:viewlet
-     name=[su nombre de espacio].[su nombre de viewlet]"
-     manager="[viewlet manager interface]"
-     class="plone.app.layout.viewlets.common.[viewlet class name]"
-     template="templates/[su nombre de plantilla]"
-     layer="[su interfaz especifica del tema]"
-     permission="zope2.View"
-     />
-
+        name=[su nombre de espacio].[su nombre de viewlet]"
+        manager="[interfaz de administrador viewlet]"
+        class="plone.app.layout.viewlets.common.[nombre de clase viewlet]"
+        template="templates/[su nombre de plantilla]"
+        layer="[su interfaz especifica del tema]"
+        permission="zope2.View"
+        />
 
 Conectando con un viewlet nuevo con su propia clase o su propia plantilla
 
 .. code-block:: xml
 
     <browser:viewlet
-     name=[su nombre de espacio].[su nombre de viewlet]"
-     manager="[viewlet manager interface]"
-     class=".[su modulo].[su nombre de clase]"
-     (or: template="templates/[su nombre de plantilla]")
-     layer="[su interfaz especifica del tema]"
-     permission="zope2.View"
-     />
+        name=[su nombre de espacio].[su nombre de viewlet]"
+        manager="[interfaz de administrador viewlet]"
+        class=".[su modulo].[su nombre de clase]"
+        (o: template="templates/[su nombre de plantilla]")
+        layer="[su interfaz especifica del tema]"
+        permission="zope2.View"
+        />
 
 Notas de la versión de Plone 3.1.2 o anteriores:
 -------------------------------------------------
@@ -317,10 +319,10 @@ plantilla de página.
 
 .. code-block:: python
 
-    from [element namespace] import [element class name]
+    from [namespace de clase elemento] import [nombre de clase elemento]
     from Products.Five.browser.pagetemplatefile import ViewPageTemplateFileclass
 
-    [su nombre de clase]([element class name]): render = ViewPageTemplateFile("[su nombre de plantilla]")
+    [su nombre de clase]([nombre de clase elemento]): render = ViewPageTemplateFile("[su nombre de plantilla]")
 
 
 7.2. Portlet
@@ -353,6 +355,8 @@ Directiva en ZCML
 Atributos en ZCML
 -----------------
 
+.. glossary::
+
   layer
     una interfaz de marcador para su tema en particular portlet la interfaz 
     del portlet que desea personalizar
@@ -374,7 +378,7 @@ Sea que los portlets aparezcan o no en su sitio es altamente personalizable a
 través de la web, usted puede utilizar el enlace para el administrador de
 portlets en la mayoría de contextos. Para más información:
 
--   `http://plone.org/documentation/tutorial/where-is-what/portlets-1/`_
+-   `http://plone.org/documentation/kb/where-is-what/portlets-1`_
 
 Se asume que usted no quiere *arreglar* portlets en una página (de lo
 contrario, probablemente serán viewlets). Sin embargo, si desea establecer
@@ -433,14 +437,20 @@ portlets de reseñas y noticias para la columna de la derecha.
 Los atributos para la directiva de asignación son descritos en detalle
 aquí: `http://plone.org/products/plone/roadmap/203/`_ . En pocas palabras:
 
-manager y type Los nombres de estos se pueden consultar en
-plone.app.portlets.portlets.configure.zcml (para el tipo de portlet) o en el
-archivo profiles/default/portlets.xml de Plone Default. category Este puede
-ser uno de los cuatro valores de "context" (contexto), "content_type" (tipo
-de contenido), "group" (grupo) o "user" (usuario) - dependiendo de donde
-desea asignar los portlets.key Esto dependerá del valor dado en la categoría
-anterior. En el caso de "context", la ubicación en el sitio es indicada (los
-ejemplos anteriores especifican el root del sitio).
+.. glossary::
+
+  manager y type
+    Los nombres de estos se pueden consultar en plone.app.portlets.portlets.configure.zcml 
+    (para el tipo de portlet) o en el archivo profiles/default/portlets.xml de Plone Default.
+    
+  category
+    Este puede ser uno de los cuatro valores de "context" (contexto), "content_type" 
+    (tipo de contenido), "group" (grupo) o "user" (usuario) - dependiendo de donde
+    desea asignar los portlets.
+    
+  key
+    Esto dependerá del valor dado en la categoría anterior. En el caso de "context", la ubicación 
+    en el sitio es indicada (los ejemplos anteriores especifican el root del sitio).
 
 Si desea configurar el portlet con más detalle, se puede nidificar directivas
 de propiedad dentro de la directiva de asignación. Aquí está un detalle para
@@ -449,7 +459,7 @@ asegurar que el portlet de navegación aparezca en el root del sitio:
 .. code-block:: xml
 
     <assignment name="navigation" category="context" key="/"
-        manager="plone.leftcolumn" type="portlets.Navigation">
+                manager="plone.leftcolumn" type="portlets.Navigation">
          <property name="topLevel">0</property>
      </assignment>
 
@@ -483,17 +493,27 @@ Breve hoja de trucos
 
 Usted tendrá que saber el nombre de
 
-La interfaz específica de su tema Esto es opcional pero le asegura que su
-portlet sólo está disponible para su tema. Si utiliza la plantilla de paster
-plone3_theme, el nombre probablemente será IThemeSpecific.
 
-Usted tendrá que crear los siguientes (debe ser capaz de localizar los
-originales para copiar revisando la sección de Elementos):
+.. glossary::
 
-directiva del renderizador de portlet de plone [su paquete de tema]/browser/configure.zcml página de la plantilla [su paquete de tema]/browser/[su nombre de plantilla].pt Clase Python * [su paquete de tema]/browser/[su modulo name].py
+  La interfaz específica de su tema
+    Esto es opcional pero le asegura que su portlet sólo está disponible 
+    para su tema. Si utiliza la plantilla de paster plone3_theme, el nombre 
+    probablemente será IThemeSpecific.
+    
+    Usted tendrá que crear los siguientes (debe ser capaz de localizar los 
+    originales para copiar revisando la sección de Elementos):
+
+  directiva del renderizador de portlet de plone
+    [su paquete de tema]/browser/configure.zcml
+
+  página de la plantilla
+    [su paquete de tema]/browser/[su nombre de plantilla].pt
+
+  Clase Python *
+    [su paquete de tema]/browser/[su modulo name].py
 
 * En la mayoría de los casos no será necesario una clase Python
-
 
 Muestra de directiva de configuration.zcml
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -502,13 +522,16 @@ Muestra de directiva de configuration.zcml
 
     <configure
         xmlns:plone="http://namespaces.plone.org/plone">
+        
         <include package="plone.app.portlets"  />
+        
         <plone:portletRenderer
            portlet="[element interface]"
            template="[su nombre de plantilla].pt"
-          (or class=".[su modulo].[su nombre de clase]")
+          (o class=".[su modulo].[su nombre de clase]")
           layer="[su interfaz especifica del tema]"
          />
+         
     </configure>
 
 Ejemplo de clase Python para la sustitución de portlet de navegación
@@ -589,8 +612,7 @@ generadores DIYPloneStyle o ZopeSkel. Aquí no cubrimos las explicaciones de
 todos los aspectos de la creación de un tema para Plone 3.0. Para obtener más
 información acerca de las ideas centrales en la elaboración de un tema,
 administración de viewlets en Plone 3.0 y muchos más, revise un excelente
-tutorial por David Convent, `Personalización de viewlets en main_template`_
-.
+tutorial por David Convent, `Personalización de viewlets en main_template`_.
 
 El concepto clave en el trabajo con portlets en Plone 3.0 es el uso de la
 capa de skin de Zope 3, la misma que tenemos cuando se reemplaza un viewlet.
@@ -842,16 +864,18 @@ Directiva en ZCML
 Atributos en ZCML
 -----------------
 
+.. glossary::
+
   name
     ejemplo [su namespace].[nombre del administrador de su viewlet] 
   
   provides
     una interfaz de marcador que define lo que este gerente hace layer una
-interfaz de marcador para su tema en particular class esto será
-plone.app.viewletmanager.manager.OrderedViewletManager permission en la
-mayoría de los casos será Zope.Public for especificar una interfaz marcando a
-un grupo de tipos de contenido, si lo desea. El administrador de viewlet se
-limitará a esos tipos de contenido 
+    interfaz de marcador para su tema en particular class esto será
+    plone.app.viewletmanager.manager.OrderedViewletManager permission en la
+    mayoría de los casos será Zope.Public for especificar una interfaz marcando a
+    un grupo de tipos de contenido, si lo desea. El administrador de viewlet se
+    limitará a esos tipos de contenido 
 
 
   view (vista)
@@ -892,9 +916,8 @@ A través de la Web
 En su propio producto
 ~~~~~~~~~~~~~~~~~~~~~
 
--   Ponga su propia versión de main_template o de vistas de contenido en
-
-[su paquete de tema]/skins.
+-   Ponga su propia versión de main_template o de vistas de contenido en 
+    [su paquete de tema]/skins.
 
 
 7.3.3. Creando un nuevo administrador de viewlet
@@ -938,6 +961,7 @@ originales para copiar revisando la sección de Elementos):
   directivas del archivo de configuración
     [su paquete de tema]/profiles/default/viewlets.xml
 
+
 Muestra de la interfaz
 ~~~~~~~~~~~~~~~~~~~~~~
 
@@ -954,11 +978,11 @@ Muestra de la directiva configure.zcml
 .. code-block:: xml
 
     <browser:viewletManager
-     name=[su nombre de espacio].[su nombre de elemento]"
-     provides=".interfaces.[su interfaz de administrador viewlet]"
-     class="plone.app.viewletmanager.manager.OrderedViewletManager"
-     layer="[su interfaz del tema]"
-     permission="zope2.View"
+        name=[su nombre de espacio].[su nombre de elemento]"
+        provides=".interfaces.[su interfaz de administrador viewlet]"
+        class="plone.app.viewletmanager.manager.OrderedViewletManager"
+        layer="[su interfaz del tema]"
+        permission="zope2.View"
      />
 
 
@@ -995,9 +1019,7 @@ A través de la Web
 En su propio producto
 ~~~~~~~~~~~~~~~~~~~~~
 
--   Coloque su propia versión de main_template en
-
-[su producto de tema]/skins.
+-   Coloque su propia versión de main_template en [su producto de tema]/skins.
 
 
 7.4.2. Ocultando un administrador de portlet
@@ -1107,12 +1129,12 @@ Muestra de directiva configure.zcml (para la vista del administrador)
 .. code-block:: xml
 
     <browser:page
-     for="plone.portlets.interfaces.ILocalPortletAssignable"
-     class="plone.app.portlets.browser.manage.ManageContextualPortlets"
-     name="[su nombre de vista]"
-     template="[su nombre de plantilla].pt"
-     permission="plone.app.portlets.ManagePortlets"
-    />
+        for="plone.portlets.interfaces.ILocalPortletAssignable"
+        class="plone.app.portlets.browser.manage.ManageContextualPortlets"
+        name="[su nombre de vista]"
+        template="[su nombre de plantilla].pt"
+        permission="plone.app.portlets.ManagePortlets"
+       />
 
 
 7.4.4. Práctico
@@ -1127,10 +1149,12 @@ Práctico
 Usted necesita portlets en otro lugar en su Plone. En este ejemplo colocamos
 portlets contextuales sobre el contenido (aportado por Jens Klein)
 
-> Esto se trata de agregar ADMINISTRADORES de portlets, pista: **
-PortletManager! = Portlet. ** Un PortletManager es una especie de contenedor
-para los portlets, tal como es el ViewletManager para viewlets. Bueno,
-después de reducir el mom?ntum de malentedimiento, comencemos:
+.. note:: 
+
+    Esto se trata de agregar ADMINISTRADORES de portlets, pista: 
+    **PortletManager! = Portlet**.  Un PortletManager es una especie de contenedor
+    para los portlets, tal como es el ViewletManager para viewlets. Bueno, después 
+    de reducir el mom?ntum de malentedimiento, comencemos:
 
 
 Prerrequisitos
@@ -1147,14 +1171,13 @@ propio skin (basado en DIYPloneStyle funciona bien).
 Estrategia
 ----------
 
-En mi ejemplo, yo no quiero personalizar la plantilla principal. Por lo tanto
-la idea es agregar un viewlet a
-*plone.app.layout.viewlets.interfaces.IContentViews* viewletmanager. Así que
-los pasos que hay que hacer son
+En mi ejemplo, yo no quiero personalizar la plantilla principal. 
+Por lo tanto la idea es agregar un viewlet al viewletmanager 
+*plone.app.layout.viewlets.interfaces.IContentViews*. Así que
+los pasos que hay que hacer son:
 
 1.  Añada un viewlet al viewlet-manager
 2.  Añada un portlet-manager
-
 3.  Añada una vista de administrador para el portlet-manager.
 
 
@@ -1266,9 +1289,8 @@ Y finalmente, necesitamos la plantilla, así que agregue un archivo *managemyabo
     </html>
 
 
-    Eso es todo. Después de reiniciar su Zope puede llamar
-    *http://DOMAIN.TLD/plone/path/to/some/context/@@manage-myabove*
-
+Eso es todo. Después de reiniciar su Zope puede llamar 
+*http://DOMINIO.TLD/plone/ruta/a/algun/contexto/@@manage-myabove* 
 y asignar portlets sobre su contenido.
 
 
@@ -1291,54 +1313,105 @@ la Web.
   Yes, |reST| is a long word, 
 
 .. |peihtml1| replace:: <p class="hiddenStructure"> ... </p>
+
+.. |peihtml1-1| replace:: :ref:`plone.skip_links <781_seccion>`
+
 .. |peihtml2| replace:: <title> ...</title>
+
+.. |peihtml2-1| replace:: :ref:`plone.htmlhead.title <782_seccion>`
+
 .. |peihtml3| replace:: <link title="Go to previous item" />
+
+.. |peihtml3-1| replace:: :ref:`plone.nextprevious.links <783_seccion>`
+
 .. |peihtml4| replace:: <link rel="shortcut icon" />
+
+.. |peihtml4-1| replace:: :ref:`plone.links.favicon <784_seccion>`
+
 .. |peihtml5| replace:: <link rel="search" ... />
+
+.. |peihtml5-1| replace:: :ref:`plone.links.search <785_seccion>`
+
 .. |peihtml6| replace:: <link rel="author" ... />
+
+.. |peihtml6-1| replace:: :ref:`plone.links.author <786_seccion>`
+
 .. |peihtml7| replace:: <link title="Front Page" ...> and <link title="Site Map"..>
+
+.. |peihtml7-1| replace:: :ref:`plone.links.navigation <787_seccion>`
+
+.. |peihtml7-2| replace:: :ref:`plone.analytics <788_seccion>`
+
 .. |peihtml8| replace:: <div id="portal-header"> ... </div>
+
+.. |peihtml8-1| replace:: :ref:`plone.header <771_seccion>`
+
 .. |peihtml9| replace:: <ul id="portal-languageselector"> ... </ul>
+
+.. |peihtml9-1| replace:: :ref:`plone.app.i18n.locales.languageselector <791_seccion>`
 
 .. |peihtml10| image:: ./image_thumb_009.png
     :alt: plone.site_actions
 
 .. |peihtml11| replace:: <ul id="portal-siteactions">...</ul>
 
+.. |peihtml11-1| replace:: :ref:`plone.site_actions <792_seccion>`
+
 .. |peihtml12| image:: ./image_thumb_011.png
     :alt: plone.searchbox
     
 .. |peihtml13| replace:: <div id="portal-searchbox">...</div>
+    
+.. |peihtml13-1| replace:: :ref:`plone.searchbox <793_seccion>`
 
 .. |peihtml14| image:: ./image_thumb.png
     :alt: plone.logo
     
 .. |peihtml15| replace:: <a id="portal-logo" ...>... </a>
+    
+.. |peihtml15-1| replace:: :ref:`plone.logo <794_seccion>`
 
 .. |peihtml16| image:: ./image_thumb_005.png
     :alt: plone.global_sections
     
 .. |peihtml17| replace:: <h5 class="hiddenStructure">Sections</h5> <ul id="portal-globalnav"> ... </ul>
+    
+.. |peihtml17-1| replace:: :ref:`plone.global_sections <795_seccion>`
 
 .. |peihtml18| image:: ./image_thumb_006.png
     :alt: plone.personal_bar
     
 .. |peihtml19| replace:: <div id="portal-personaltools-wrapper">...</div>
+    
+.. |peihtml19-1| replace:: :ref:`plone.personal_bar <796_seccion>`
 
 .. |peihtml20| replace:: <div id="portal-breadcrumbs">...</div>
+
+.. |peihtml20-1| replace:: :ref:`plone.path_bar <797_seccion>`
+
 .. |peihtml21| replace:: <ul class="contentViews"> ... </ul>
+
+.. |peihtml21-1| replace:: :ref:`plone.contentviews <798_seccion>`
+
+.. |peihtml21-2| replace:: ref:`plone.contentactions <799_seccion>`
 
 .. |peihtml22| image:: ./image_thumb_016.png
     :alt: plone.tableofcontents
     
 .. |peihtml23| replace:: <dl id="document-toc" class="portlet toc" style="display:none"> ... </dl>
+    
+.. |peihtml23-1| replace:: :ref:`plone.tableofcontents <7910_seccion>`
 
 .. |peihtml24| image:: ./image_thumb_004.png
     :alt: plone.presentation
     
 .. |peihtml25| replace:: <p id="link-presentation">...</p>
+    
+.. |peihtml25-1| replace:: :ref:`plone.presentation <7911_seccion>`
 
 .. |peihtml26| replace:: <div id="category" class="documentByLine">...</div>
+
+.. |peihtml26-1| replace:: :ref:`plone.belowcontenttitle.keywords <7912_seccion>`
 
 .. |peihtml27| image:: ./image_preview_009.png
     :alt: plone.byline
@@ -1347,22 +1420,32 @@ la Web.
 
 .. |peihtml29| replace:: <div id="plone-lock-status" />
 
+.. |peihtml29-1| replace:: :ref:`plone.lockinfo <7914_seccion>`
+
 .. |peihtml30| image:: ./image_thumb_018.png
     :alt: plone.document_actions
     
 .. |peihtml31| replace:: <div class="documentActions"> ... </div>
+    
+.. |peihtml31-1| replace:: :ref:`plone.abovecontenttitle.documentactions <7917_seccion>`
 
 .. |peihtml32| image:: ./image_thumb_017.png
     :alt: plone.comments
     
 .. |peihtml33| replace:: <div class="discussion"> ... </div>
+    
+.. |peihtml33-1| replace:: :ref:`plone.comments <7919_seccion>`
 
 .. |peihtml34| replace:: <div class="contentHistory" id="content-history">...</div>
+
+.. |peihtml34-1| replace:: :ref:`plone.belowcontentbody.contenthistory <7916_seccion>`
 
 .. |peihtml35| image:: ./image_thumb_012.png
     :alt: plone.nextprevious
     
 .. |peihtml36| replace:: <div class="listingBar">...</div>
+    
+.. |peihtml36-1| replace:: :ref:`plone.nextprevious <7920_seccion>`
 
 .. |peihtml37| replace:: <div id="portal-footer">...</div>
 
@@ -1371,45 +1454,47 @@ la Web.
     
 .. |peihtml39| replace:: <div id="portal-colophon">...</div>
 
+.. |peihtml391| replace:: :ref:`plone.colophon <7922_seccion>`
+
 +---------------------+---------------------+---------------+--------------------------------------------+
 |        Clave        |       Título        |  Código HTML  |  Nombre del Tipo de Administrador          |
 +=====================+=====================+===============+============================================+
-|                     | Enlaces para salto  | |peihtml1|    | `plone.skip_links`_                        |
+|                     | Enlaces para salto  | |peihtml1|    | |peihtml1-1|                               |
 |                     |                     |               |                                            |
 |                     |                     |               | plone.portalheader                         |
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     |                     | |peihtml2|    | `plone.htmlhead.title`_                    |
+|                     |                     | |peihtml2|    | |peihtml2-1|                               |
 |                     | Título de           |               |                                            |
 |                     | Cabecera HTML       |               | plone.htmlhead                             |
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     | Enlaces             | |peihtml3|    | `plone.nextprevious.links`_                |
+|                     | Enlaces             | |peihtml3|    | |peihtml3-1|                               |
 |                     | anterior/siguiente  |               |                                            |
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     | Enlace Favicon      | |peihtml4|    | `plone.links.favicon`_                     |
+|                     | Enlace Favicon      | |peihtml4|    | |peihtml4-1|                               |
 |                     |                     |               |                                            |
 |                     |                     |               | plone.htmlhead.links                       |
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     | Enlace de búsqueda  | |peihtml5|    | `plone.links.search`_                      |
+|                     | Enlace de búsqueda  | |peihtml5|    | |peihtml5-1|                               |
 |                     |                     |               |                                            |
 |                     |                     |               | plone.htmlhead.links                       |
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     | Enlace de autor     | |peihtml6|    | `plone.links.author`_                      |
+|                     | Enlace de autor     | |peihtml6|    | |peihtml6-1|                               |
 |                     |                     |               |                                            |
 |                     |                     |               | plone.htmlhead.links                       |
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     | Enlace de           | |peihtml7|    | `plone.links.navigation`_                  |
+|                     | Enlace de           | |peihtml7|    | |peihtml7-1|                               |
 |                     | navegación          |               |                                            |
 |                     |                     |               |                                            |
 |                     |                     |               | plone.htmlhead.links                       |
@@ -1418,7 +1503,7 @@ la Web.
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     | Analytics           | (Fragmento    |                                            |
 |                     |                     | de código     |                                            |
-|                     |                     | definido por  | `plone.analytics`_                         |
+|                     |                     | definido por  | |peihtml7-2|                               |
 |                     |                     | el            |                                            |
 |                     |                     | administrador |                                            |
 |                     |                     | del sitio)    |                                            |
@@ -1427,127 +1512,127 @@ la Web.
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     | Encabezado          | |peihtml8|    | `plone.header`_                            |
+|                     | Encabezado          | |peihtml8|    | |peihtml8-1|                               |
 |                     |                     |               |                                            |
 |                     |                     |               | plone.portaltop                            |
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     | Selector de idiomas | |peihtml9|    | `plone.app.i18n.locales.languageselector`_ |
+|                     | Selector de idiomas | |peihtml9|    | |peihtml9-1|                               |
 |                     |                     |               |                                            |
 |                     |                     |               | Portal Top                                 |
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     | Acciones del sitio  | |peihtml11|   | `plone.site_actions`_                      |
+|                     | Acciones del sitio  | |peihtml11|   | |peihtml11-1|                              |
 |                     |                     |               |                                            |
 | |peihtml10|         |                     |               | plone.portalheader                         |
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     | Cuadro de búsqueda  | |peihtml13|   | `plone.searchbox`_                         |
+|                     | Cuadro de búsqueda  | |peihtml13|   | |peihtml13-1|                              |
 |                     |                     |               |                                            |
 | |peihtml12|         |                     |               | plone.portalheader                         |
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     | Logotipo            | |peihtml15|   | `plone.logo`_                              |
+|                     | Logotipo            | |peihtml15|   | |peihtml15-1|                              |
 |                     |                     |               |                                            |
 | |peihtml14|         |                     |               | plone.portalheader                         |
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     |                     | |peihtml17|   | `plone.global_sections`_                   |
+|                     |                     | |peihtml17|   | |peihtml17-1|                              |
 |                     |                     |               |                                            |
 | |peihtml16|         | Secciones globales  |               | plone.portalheader                         |
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     |                     | |peihtml19|   | `plone.personal_bar`_                      |
+|                     |                     | |peihtml19|   | |peihtml19-1|                              |
 |                     |                     |               |                                            |
 | |peihtml18|         | Barra personal      |               | plone.portaltop                            |
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     | Barra de ruta       | |peihtml20|   | `plone.path_bar`_                          |
+|                     | Barra de ruta       | |peihtml20|   | |peihtml20-1|                              |
 |                     | (hilo de Ariadna    |               |                                            |
 |                     | del portal)         |               | plone.portaltop                            |
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     |                     | |peihtml21|   | `plone.contentviews`_                      |
+|                     |                     | |peihtml21|   | |peihtml21-1|                              |
 |                     |                     |               |                                            |
 |                     | Vistas de contenido |               | plone.contentviews                         |
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     |                     |               | `plone.contentactions`_                    |
+|                     |                     |               | |peihtml21-2|                              |
 |                     | Acciones de         |               |                                            |
 |                     | contenido           |               | plone.contentviews                         |
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     |                     | |peihtml23|   | `plone.tableofcontents`_                   |
+|                     |                     | |peihtml23|   | |peihtml23-1|                              |
 |                     |                     |               |                                            |
 | |peihtml22|         | Tabla de contenidos |               | plone.abovecontentbody                     |
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     |                     | |peihtml25|   | `plone.presentation`_                      |
+|                     |                     | |peihtml25|   | |peihtml25-1|                              |
 |                     |                     |               |                                            |
 | |peihtml24|         | Presentación        |               | plone.abovecontentbody                     |
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     |                     | |peihtml26|   | `plone.belowcontenttitle.keywords`_        |
+|                     |                     | |peihtml26|   | |peihtml26-1|                              |
 |                     |                     |               |                                            |
 |                     | Palabras clave      |               | plone.belowcontenttitle                    |
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     |                     | |peihtml28|   | `plone.presentation`_                      |
+|                     |                     | |peihtml28|   | |peihtml25-1|                              |
 |                     |                     |               |                                            |
 | |peihtml27|         | Línea de fondo      |               | plone.abovecontentbody                     |
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     |                     | |peihtml29|   | `plone.lockinfo`_                          |
+|                     |                     | |peihtml29|   | |peihtml29-1|                              |
 |                     |                     |               |                                            |
 |                     | Bloqueo             |               | plone.abovecontent                         |
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     |                     | |peihtml31|   | `plone.abovecontenttitle.documentactions`_ |
+|                     |                     | |peihtml31|   | |peihtml31-1|                              |
 |                     |                     |               |                                            |
 | |peihtml30|         | Acciones de         |               | plone.belowcontentbody                     |
 |                     | documento           |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     |                     | |peihtml33|   | `plone.comments`_                          |
+|                     |                     | |peihtml33|   | |peihtml33-1|                              |
 |                     |                     |               |                                            |
 | |peihtml32|         | Comentarios         |               | plone.belowcontent                         |
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     |                     | |peihtml34|   | `plone.belowcontentbody.contenthistory`_   |
+|                     |                     | |peihtml34|   | |peihtml34-1|                              |
 |                     | Historial de        |               |                                            |
 |                     | contenido           |               | plone.belowcontentbody                     |
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     |                     | |peihtml36|   | `plone.nextprevious`_                      |
+|                     |                     | |peihtml36|   | |peihtml36-1|                              |
 |                     |                     |               |                                            |
 | |peihtml35|         | Anterior Siguiente  |               | plone.belowcontent                         |
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     |                     | |peihtml37|   | `plone.footer`_                            |
+|                     |                     | |peihtml37|   | |peihtml86-1|                              |
 |                     |                     |               |                                            |
 |                     | Pie de página       |               | plone.portalfooter                         |
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     |                     | |peihtml39|   | `plone.colophon`_                          |
+|                     |                     | |peihtml39|   | |peihtml391|                               |
 |                     |                     |               |                                            |
 | |peihtml38|         | Colofon             |               | plone.portalfooter                         |
 |                     |                     |               |                                            |
@@ -1577,7 +1662,11 @@ la Web.
 
 .. |peihtml42| replace:: <meta ... />
 
+.. |peihtml421| replace:: :ref:`plone.htmlhead.dublincore <789_seccion>`
+
 .. |peihtml43| replace:: <link rel="kss-base-url" ... />
+
+.. |peihtml431| replace:: :ref:`plone.htmlhead.kss-base-url <7810_seccion>`
 
 .. |peihtml44| replace:: <link title="Go to previous item" ... />
 
@@ -1590,6 +1679,8 @@ la Web.
 .. |peihtml48| replace:: <link title="Front Page" ...> y <link title="Site Map" ...>
 
 .. |peihtml49| replace:: <link rel="alternate" title="RSS 1.0" .. />
+
+.. |peihtml491| replace:: :ref:`plone.links.RSS <7811_seccion>`
 
 .. |peihtml50| replace:: <div id="portal-header"> ... </div>
 
@@ -1652,6 +1743,8 @@ la Web.
     :alt: plone.byline-sunburst
     
 .. |peihtml74| replace:: <div id="plone-document-byline" class="documentByLine">...</div>
+    
+.. |peihtml74-1| replace:: :ref:`plone.belowcontenttitle.documentbyline <7913_seccion>`
 
 .. |peihtml75| replace:: <div id="plone-lock-status" />
 
@@ -1661,6 +1754,8 @@ la Web.
     :alt: plone.relateditems-sunburst
     
 .. |peihtml78| replace:: <div class="relatedItems"> ... </div>
+    
+.. |peihtml781| replace:: :ref:`plone.belowcontentbody.relateditems <7918_seccion>`
 
 .. |peihtml79| image:: ./image_preview_012.png
     :alt: plone.comment-sunburst
@@ -1681,6 +1776,7 @@ la Web.
     :alt: plone.footer-sunburst
     
 .. |peihtml86| replace:: <div id="portal-footer">...</div>
+.. |peihtml86-1| replace:: :ref:`plone.footer <7921_seccion>`
 
 .. |peihtml87| image:: ./image_thumb_014.png
     :alt: plone.colophon-sunburst
@@ -1690,61 +1786,61 @@ la Web.
 +---------------------+---------------------+---------------+--------------------------------------------+
 |        Clave        |       Título        |  Código HTML  |  Nombre del Tipo de Administrador          |
 +=====================+=====================+===============+============================================+
-|                     | Enlaces para salto  | |peihtml40|   | `plone.skip_links`_                        |
+|                     | Enlaces para salto  | |peihtml40|   | |peihtml1-1|                               |
 |                     |                     |               |                                            |
 |                     |                     |               | plone.portalheader                         |
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     | Título de           | |peihtml41|   | `plone.htmlhead.title`_                    |
+|                     | Título de           | |peihtml41|   | |peihtml2-1|                               |
 |                     | Cabecera HTML       |               |                                            |
 |                     |                     |               | plone.htmlhead                             |
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     | Dublin Core         | |peihtml42|   | `plone.htmlhead.dublincore`_               |
+|                     | Dublin Core         | |peihtml42|   | |peihtml421|                               |
 |                     | Metadata            |               |                                            |
 |                     |                     |               | plone.htmlhead                             |
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     |                     | |peihtml43|   | `plone.htmlhead.kss-base-url`_             |
+|                     |                     | |peihtml43|   | |peihtml431|                               |
 |                     | KSS Base Url        |               |                                            |
 |                     |                     |               | plone.htmlhead                             |
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     |                     | |peihtml44|   | `plone.nextprevious.links`_                |
+|                     |                     | |peihtml44|   | |peihtml3-1|                               |
 |                     | Enlaces             |               |                                            |
 |                     | anterior/siguiente  |               | plone.htmlhead.links                       |
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     |                     | |peihtml45|   | `plone.links.favicon`_                     |
+|                     |                     | |peihtml45|   | |peihtml4-1|                               |
 |                     |                     |               |                                            |
 |                     | Enlace Favicon      |               | plone.htmlhead.links                       |
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     |                     | |peihtml46|   | `plone.links.search`_                      |
+|                     |                     | |peihtml46|   | |peihtml5-1|                               |
 |                     |                     |               |                                            |
 |                     | Enlace de búsqueda  |               | plone.htmlhead.links                       |
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     |                     | |peihtml47|   | `plone.links.author`_                      |
+|                     |                     | |peihtml47|   | |peihtml6-1|                               |
 |                     |                     |               |                                            |
 |                     | Enlace de autor     |               | plone.htmlhead.links                       |
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     |                     | |peihtml48|   | `plone.links.navigation`_                  |
+|                     |                     | |peihtml48|   | |peihtml7-1|                               |
 |                     | Enlace de           |               |                                            |
 |                     | navegación          |               | plone.htmlhead.links                       |
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     |                     | |peihtml49|   | `plone.links.RSS`_                         |
+|                     |                     | |peihtml49|   | |peihtml491|                               |
 |                     |                     |               |                                            |
 |                     | Enlace RSS          |               | plone.htmlhead.links                       |
 |                     |                     |               |                                            |
@@ -1752,7 +1848,7 @@ la Web.
 +---------------------+---------------------+---------------+--------------------------------------------+
 |                     | Analytics           | (Fragmento    |                                            |
 |                     |                     | de código     |                                            |
-|                     |                     | definido por  | `plone.analytics`_                         |
+|                     |                     | definido por  | |peihtml7-2|                               |
 |                     |                     | el            |                                            |
 |                     |                     | administrador |                                            |
 |                     |                     | del sitio)    |                                            |
@@ -1761,13 +1857,13 @@ la Web.
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     |                     | |peihtml50|   | `plone.header`_                            |
+|                     |                     | |peihtml50|   | |peihtml8-1|                               |
 |                     |                     |               |                                            |
 |                     | Encabezado          |               | plone.portaltop                            |
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     |                     | |peihtml51|   | `plone.app.i18n.locales.languageselector`_ |
+|                     |                     | |peihtml51|   | |peihtml9-1|                               |
 |                     |                     |               |                                            |
 |                     | Selector de idiomas |               | Portal Top                                 |
 |                     |                     |               |                                            |
@@ -1779,19 +1875,19 @@ la Web.
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     |                     | |peihtml55|   | `plone.searchbox`_                         |
+|                     |                     | |peihtml55|   | |peihtml13-1|                              |
 |                     |                     |               |                                            |
 | |peihtml54|         | Cuadro de búsqueda  |               | plone.portalheader                         |
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     |                     | |peihtml57|   | `plone.logo`_                              |
+|                     |                     | |peihtml57|   | |peihtml15-1|                              |
 |                     |                     |               |                                            |
 | |peihtml56|         | Logotipo            |               | plone.portalheader                         |
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     |                     | |peihtml59|   | `plone.global_sections`_                   |
+|                     |                     | |peihtml59|   | |peihtml17-1|                              |
 |                     |                     |               |                                            |
 | |peihtml58|         | Secciones globales  |               | plone.portalheader                         |
 |                     |                     |               |                                            |
@@ -1803,91 +1899,91 @@ la Web.
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     | Barra de ruta       | |peihtml63|   | `plone.path_bar`_                          |
+|                     | Barra de ruta       | |peihtml63|   | |peihtml20-1|                              |
 |                     | (hilo de Ariadna    |               |                                            |
 | |peihtml62|         | del portal)         |               | plone.portaltop                            |
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     |                     | |peihtml65|   | `plone.contentviews`_                      |
+|                     |                     | |peihtml65|   | |peihtml21-1|                              |
 |                     |                     |               |                                            |
 | |peihtml64|         | Vistas de contenido |               | plone.contentviews                         |
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     |                     |               | `plone.contentactions`_                    |
+|                     |                     |               | |peihtml21-2|                              |
 |                     |                     |               |                                            |
 | |peihtml66|         | Accions de          |               | plone.contentviews                         |
 |                     | contenido           |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     |                     | |peihtml68|   | `plone.tableofcontents`_                   |
+|                     |                     | |peihtml68|   | |peihtml23-1|                              |
 |                     |                     |               |                                            |
 | |peihtml67|         | Tabla de contenidos |               | plone.abovecontentbody                     |
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     |                     | |peihtml70|   | `plone.presentation`_                      |
+|                     |                     | |peihtml70|   | |peihtml25-1|                              |
 |                     |                     |               |                                            |
 | |peihtml69|         | Presentación        |               | plone.abovecontentbody                     |
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     |                     | |peihtml72|   | `plone.belowcontenttitle.keywords`_        |
+|                     |                     | |peihtml72|   | |peihtml26-1|                              |
 |                     |                     |               |                                            |
 | |peihtml71|         | Palabras clave      |               | plone.belowcontenttitle                    |
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     |                     | |peihtml74|   | `plone.belowcontenttitle.documentbyline`_  |
+|                     |                     | |peihtml74|   | |peihtml74-1|                              |
 |                     |                     |               |                                            |
 | |peihtml73|         | Línea de fondo      |               | plone.belowcontenttitle                    |
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     |                     | |peihtml75|   | `plone.lockinfo`_                          |
+|                     |                     | |peihtml75|   | |peihtml29-1|                              |
 |                     |                     |               |                                            |
 |                     | Bloqueo             |               | plone.abovecontent                         |
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     |                     | |peihtml76|   | `plone.abovecontenttitle.documentactions`_ |
+|                     |                     | |peihtml76|   | |peihtml31-1|                              |
 |                     | Acciones de         |               |                                            |
 |                     | documento           |               | plone.belowcontentbody                     |
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     |                     | |peihtml78|   | `plone.belowcontentbody.relateditems`_     |
+|                     |                     | |peihtml78|   | |peihtml781|                               |
 |                     |                     |               |                                            |
 | |peihtml77|         | Elementos           |               | plone.belowcontentbody                     |
 |                     | relacionados        |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     |                     | |peihtml80|   | `plone.comments`_                          |
+|                     |                     | |peihtml80|   | |peihtml33-1|                              |
 |                     |                     |               |                                            |
 | |peihtml79|         | Comentarios         |               | plone.belowcontent                         |
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     |                     | |peihtml82|   | `plone.belowcontentbody.contenthistory`_   |
+|                     |                     | |peihtml82|   | |peihtml34-1|                              |
 |                     | Historial de        |               |                                            |
 | |peihtml81|         | contenido           |               | plone.belowcontentbody                     |
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     |                     | |peihtml84|   | `plone.nextprevious`_                      |
+|                     |                     | |peihtml84|   | |peihtml36-1|                              |
 |                     |                     |               |                                            |
 | |peihtml83|         | Anterior Siguiente  |               | plone.belowcontent                         |
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     |                     | |peihtml86|   | `plone.footer`_                            |
+|                     |                     | |peihtml86|   | |peihtml86-1|                              |
 |                     |                     |               |                                            |
 | |peihtml85|         | Pie de página       |               | plone.portalfooter                         |
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     |                     | |peihtml88|   | `plone.colophon`_                          |
+|                     |                     | |peihtml88|   | |peihtml391|                               |
 |                     |                     |               |                                            |
 | |peihtml87|         | Pie de página       |               | plone.portalfooter                         |
 |                     |                     |               |                                            |
@@ -1901,6 +1997,7 @@ la Web.
 Elementos que forman la estructura de página subyacente (administradores de
 viewlet y portlet).
 
+.. _771_seccion:
 
 7.7.1. Encabezado
 =================
@@ -1909,7 +2006,8 @@ Llama los administradores de viewlets para el encabezado del sitio
 
 .. glossary ::
 
-  **Fragmento:** ``<div id="portal-header"> ...</div>``
+  **Fragmento:** 
+    ``<div id="portal-header"> ...</div>``
 
   **Nombre:** 
     plone.header
@@ -1940,8 +2038,8 @@ interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
   **Ubicado en:**
 
-    -   [locación de su huevo]]/plone/app/layout/viewlets/
-    -   [locación de su huevo]]/plone.app.layout-[version].egg/plone/app/layout/viewlets/
+    -   [locación de su paquete egg]/plone/app/layout/viewlets/
+    -   [locación de su paquete egg]/plone.app.layout-[version].egg/plone/app/layout/viewlets/
 
   **Nombre de la plantilla:**
     portal_header.pt
@@ -2002,6 +2100,7 @@ Inserte su nuevo viewlet en un administrador de viewlet
 Elementos ocultos de página (que aparecen en la HTMLhead o con css
 configurado a display:none).
 
+.. _781_seccion:
 
 7.8.1. Enlaces para salto
 =========================
@@ -2048,8 +2147,8 @@ interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
   **Ubicado en:**
 
-    -   [locación de su huevo]]/plone/app/layout/viewlets/
-    -   [locación de su huevo]]/plone.app.layout-[version].egg/plone/app/layout/viewlets/
+    -   [locación de su paquete egg]/plone/app/layout/viewlets/
+    -   [locación de su paquete egg]/plone.app.layout-[version].egg/plone/app/layout/viewlets/
 
   **Nombre de la plantilla:**
     skip_links.pt
@@ -2114,7 +2213,7 @@ Inserte su nuevo viewlet en un administrador de viewlet
         </order>
     </object>
 
-
+.. _782_seccion:
 
 7.8.2. Título de Cabecera HTML
 ===============================
@@ -2123,7 +2222,8 @@ El título de la página HTML en la cabecera.
 
 .. glossary ::
 
-  **Fragmento:** ``<title>...</title>``
+  **Fragmento:** 
+    ``<title>...</title>``
 
   **CSS:** 
     none
@@ -2157,8 +2257,8 @@ interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
   **Ubicado en:**
 
-    -   [locación de su huevo]]/plone/app/layout/viewlets/
-    -   [locación de su huevo]]/plone.app.layout-[version].egg/plone/app/layout/viewlets/
+    -   [locación de su paquete egg]/plone/app/layout/viewlets/
+    -   [locación de su paquete egg]/plone.app.layout-[version].egg/plone/app/layout/viewlets/
 
   **Nombre de la plantilla:**
     none
@@ -2221,7 +2321,7 @@ Inserte su nuevo viewlet en un administrador de viewlet
         </order>
     </object>
 
-
+.. _783_seccion:
 
 7.8.3. Enlaces anterior/siguiente
 =================================
@@ -2230,7 +2330,8 @@ Proporciona enlaces anterior/siguiente en la cabecera HTML.
 
 .. glossary ::
 
-  **Fragmento:** ``<link title="Go to previous item" ... />``
+  **Fragmento:** 
+    ``<link title="Go to previous item" ... />``
 
   **CSS:** 
     none
@@ -2264,8 +2365,8 @@ interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
   **Ubicado en:**
 
-    -   [locación de su huevo]]/plone/app/layout/nextprevious/
-    -   [locación de su huevo]]/plone.app.layout-[version].egg/plone/app/layout/nextprevious/
+    -   [locación de su paquete egg]/plone/app/layout/nextprevious/
+    -   [locación de su paquete egg]/plone.app.layout-[version].egg/plone/app/layout/nextprevious/
 
   **Nombre de la plantilla:**
     links.pt
@@ -2328,7 +2429,7 @@ Inserte su nuevo viewlet en un administrador de viewlet
         </order>
     </object>
 
-
+.. _784_seccion:
 
 7.8.4. Enlace Favicon
 =====================
@@ -2341,7 +2442,6 @@ El enlace favicon en la cabecera HTML.
     ``<link rel="shortcut icon" .../>``
 
   **CSS:** 
-    
     none
 
   **Nombre:**
@@ -2373,8 +2473,8 @@ interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
   **Ubicado en:**
 
-    -   [locación de su huevo]]/plone/app/layout/links/
-    -   [locación de su huevo]]/plone.app.layout-[version].egg/plone/app/layout/links/
+    -   [locación de su paquete egg]/plone/app/layout/links/
+    -   [locación de su paquete egg]/plone.app.layout-[version].egg/plone/app/layout/links/
 
   **Nombre de la plantilla:**
     favicon.pt
@@ -2437,6 +2537,8 @@ Inserte su nuevo viewlet en un administrador de viewlet
         </order>
     </object>
 
+.. _785_seccion:
+
 7.8.5. Enlace de búsqueda
 ==========================
 
@@ -2444,7 +2546,8 @@ El enlace de búsqueda en la cabecera HTML.
 
 .. glossary ::
 
-  **Fragmento:** ``<link rel="search" ... />``
+  **Fragmento:** 
+    ``<link rel="search" ... />``
 
   **CSS:** 
     none
@@ -2478,8 +2581,8 @@ interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
   **Ubicado en:**
 
-    -   [locación de su huevo]]/plone/app/layout/links/
-    -   [locación de su huevo]]/plone.app.layout-[version].egg/plone/app/layout/links/
+    -   [locación de su paquete egg]/plone/app/layout/links/
+    -   [locación de su paquete egg]/plone.app.layout-[version].egg/plone/app/layout/links/
 
   **Nombre de la plantilla:**
     search.pt
@@ -2543,6 +2646,7 @@ Inserte su nuevo viewlet en un administrador de viewlet
         </order>
     </object>
 
+.. _786_seccion:
 
 7.8.6. Enlace de autor
 ======================
@@ -2551,7 +2655,8 @@ El enlace de autor en la cabecera HTML.
 
 .. glossary ::
 
-  **Fragmento:** ``<link rel="author" .../>``
+  **Fragmento:** 
+    ``<link rel="author" .../>``
 
   **CSS:** 
     none
@@ -2586,8 +2691,8 @@ interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
   **Ubicado en:**
 
-    -   [locación de su huevo]]/plone/app/layout/links/
-    -   [locación de su huevo]]/plone.app.layout-[version].egg/plone/app/layout/links/
+    -   [locación de su paquete egg]/plone/app/layout/links/
+    -   [locación de su paquete egg]/plone.app.layout-[version].egg/plone/app/layout/links/
 
   **Nombre de la plantilla:**
     author.pt
@@ -2651,7 +2756,7 @@ Inserte su nuevo viewlet en un administrador de viewlet
         </order>
     </object>
 
-
+.. _787_seccion:
 
 7.8.7. Enlace de navegación
 ============================
@@ -2660,7 +2765,8 @@ El enlace de navegación en la cabecera HTML.
 
 .. glossary ::
 
-  **Fragmento:** ``<link title="Front Page" ...> and <link title="Site Map"..>``
+  **Fragmento:** 
+    ``<link title="Front Page" ...> and <link title="Site Map"..>``
 
   **CSS:** 
     none
@@ -2695,8 +2801,8 @@ interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
   **Ubicado en:**
 
-    -   [locación de su huevo]]/plone/app/layout/links/
-    -   [locación de su huevo]]/plone.app.layout-[version].egg/plone/app/layout/links/
+    -   [locación de su paquete egg]/plone/app/layout/links/
+    -   [locación de su paquete egg]/plone.app.layout-[version].egg/plone/app/layout/links/
 
   **Nombre de la plantilla:**
     navigation.pt
@@ -2758,7 +2864,7 @@ Inserte su nuevo viewlet en un administrador de viewlet
         </order>
     </object>
 
-
+.. _788_seccion:
 
 7.8.8. Analytics
 ================
@@ -2771,7 +2877,8 @@ Fragmento de código de Google Analytics.
 
 .. glossary ::
 
-  **Fragmento:** ``(Fragmento de código definido por el administrador del sitio)``
+  **Fragmento:** 
+    ``(Fragmento de código definido por el administrador del sitio)``
 
   **CSS:** 
     none
@@ -2806,8 +2913,8 @@ interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
   **Ubicado en:**
 
-    -   [locación de su huevo]]/plone/app/layout/analytics/
-    -   [locación de su huevo]]/plone.app.layout-[version].egg/plone/app/layout/analytics/
+    -   [locación de su paquete egg]/plone/app/layout/analytics/
+    -   [locación de su paquete egg]/plone.app.layout-[version].egg/plone/app/layout/analytics/
 
   **Nombre de la plantilla:**
     none
@@ -2870,7 +2977,7 @@ Inserte su nuevo viewlet en un administrador de viewlet
         </order>
     </object>
 
-
+.. _789_seccion:
 
 7.8.9. Dublin Core Metadata
 ============================
@@ -2879,7 +2986,8 @@ Metadatos Dublin Core en la cabecera HTML.
 
 .. glossary ::
 
-  **Fragmento:** ``<meta ..../>``
+  **Fragmento:** 
+    ``<meta ..../>``
 
   **CSS:** 
     none
@@ -2914,8 +3022,8 @@ interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
   **Ubicado en:**
 
-    -   [locación de su huevo]]/plone/app/layout/viewlets/
-    -   [locación de su huevo]]/plone.app.layout-[version].egg/plone/app/layout/viewlets/
+    -   [locación de su paquete egg]/plone/app/layout/viewlets/
+    -   [locación de su paquete egg]/plone.app.layout-[version].egg/plone/app/layout/viewlets/
 
   **Nombre de la plantilla:**
     dublin_core.pt
@@ -2980,6 +3088,7 @@ Inserte su nuevo viewlet en un administrador de viewlet
     </object>
 
 
+.. _7810_seccion:
 
 7.8.10. KSS Base Url
 =====================
@@ -2988,7 +3097,8 @@ Enlace rel tag en la cabecera HTML con el URL real de la página publicada.
 
 .. glossary ::
 
-  **Fragmento:** ``<link rel="kss-base-url" .... />``
+  **Fragmento:** 
+    ``<link rel="kss-base-url" .... />``
 
   **CSS:** 
     none
@@ -3024,8 +3134,8 @@ interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
   **Ubicado en:**
 
-    -   [locación de su huevo]]/plone/app/kss/
-    -   [locación de su huevo]]/plone.app.kss-[version].egg/plone/app/kss/
+    -   [locación de su paquete egg]/plone/app/kss/
+    -   [locación de su paquete egg]/plone.app.kss-[version].egg/plone/app/kss/
 
   **Nombre de la plantilla:**
     none
@@ -3088,7 +3198,7 @@ Inserte su nuevo viewlet en un administrador de viewlet
         </order>
     </object>
 
-
+.. _7811_seccion:
 
 7.8.11. Enlace RSS
 ==================
@@ -3097,7 +3207,8 @@ El enlace RSS en la cabecera HTML.
 
 .. glossary ::
 
-  **Fragmento:** ``<link rel="alternate" title="RSS 1.0" .../>``
+  **Fragmento:** 
+    ``<link rel="alternate" title="RSS 1.0" .../>``
 
   **CSS:** 
     none
@@ -3132,8 +3243,8 @@ interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
   **Ubicado en:**
 
-    -   [locación de su huevo]]/plone/app/layout/links/
-    -   [locación de su huevo]]/plone.app.layout-[version].egg/plone/app/layout/links/
+    -   [locación de su paquete egg]/plone/app/layout/links/
+    -   [locación de su paquete egg]/plone.app.layout-[version].egg/plone/app/layout/links/
 
   **Nombre de la plantilla:**
     rsslink.pt
@@ -3205,6 +3316,7 @@ Inserte su nuevo viewlet en un administrador de viewlet
 Elementos de página visibles en la página (logotipo, acciones de sitio,
 cuadro de búsqueda, etc.)
 
+.. _791_seccion:
 
 7.9.1. Selector de idiomas
 ==========================
@@ -3245,8 +3357,8 @@ interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
   **Ubicado en:**
 
-    -   [locación de su huevo]]/plone/app/i18n/locales/browser/
-    -   [locación de su huevo]]/plone.app.i18n-[version].egg/plone/app/i18n/locales/browser/
+    -   [locación de su paquete egg]/plone/app/i18n/locales/browser/
+    -   [locación de su paquete egg]/plone.app.i18n-[version].egg/plone/app/i18n/locales/browser/
 
   **Nombre de la plantilla:**
     languageselector.pt
@@ -3310,7 +3422,7 @@ Inserte su nuevo viewlet en un administrador de viewlet
         </order>
     </object>
 
-
+.. _792_seccion:
 
 7.9.2. Acciones del sitio
 =========================
@@ -3326,7 +3438,8 @@ información específica.
 
 .. glossary ::
 
-  **Fragmento:** ``<ul id="portal-siteactions">...</ul>``
+  **Fragmento:** 
+    ``<ul id="portal-siteactions">...</ul>``
 
   **CSS:**
     public.css
@@ -3360,8 +3473,8 @@ interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
   **Ubicado en:**
 
-    -   [locación de su huevo]]/plone/app/layout/viewlets/
-    -   [locación de su huevo]]/plone.app.layout-[version].egg/plone/app/layout/viewlets/
+    -   [locación de su paquete egg]/plone/app/layout/viewlets/
+    -   [locación de su paquete egg]/plone.app.layout-[version].egg/plone/app/layout/viewlets/
 
   **Nombre de la plantilla:**
     site_actions.pt
@@ -3425,7 +3538,7 @@ Inserte su nuevo viewlet en un administrador de viewlet
         </order>
     </object>
 
-
+.. _793_seccion:
 
 7.9.3. Cuadro de búsqueda
 ==========================
@@ -3440,7 +3553,8 @@ Facilidad de búsqueda en el sitio
 
 .. glossary ::
 
-  **Fragmento:** ``<div id="portal-searchbox">...</div>``
+  **Fragmento:** 
+    ``<div id="portal-searchbox">...</div>``
 
   **CSS:**
     public.css 
@@ -3476,8 +3590,8 @@ interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
   **Ubicado en:**
 
-    -   [locación de su huevo]]/plone/app/layout/viewlets/
-    -   [locación de su huevo]]/plone.app.layout-[version].egg/plone/app/layout/viewlets/
+    -   [locación de su paquete egg]/plone/app/layout/viewlets/
+    -   [locación de su paquete egg]/plone.app.layout-[version].egg/plone/app/layout/viewlets/
 
   **Nombre de la plantilla:**
     searchbox.pt
@@ -3541,7 +3655,7 @@ Inserte su nuevo viewlet en un administrador de viewlet
         </order>
     </object>
      '
-
+.. _794_seccion:
 
 7.9.4. Logotipo
 ===============
@@ -3550,7 +3664,8 @@ El logotipo del sitio.
 
 .. glossary ::
 
-  **Fragmento:** ``<a id="portal-logo" ...>...</a>``
+  **Fragmento:** 
+    ``<a id="portal-logo" ...>...</a>``
 
   **CSS:**
     public.css 
@@ -3587,8 +3702,8 @@ interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
   **Ubicado en:**
 
-    -   [locación de su huevo]]/plone/app/layout/viewlets/
-    -   [locación de su huevo]]/plone.app.layout-[version].egg/plone/app/layout/viewlets/
+    -   [locación de su paquete egg]/plone/app/layout/viewlets/
+    -   [locación de su paquete egg]/plone.app.layout-[version].egg/plone/app/layout/viewlets/
 
   **Nombre de la plantilla:**
     logo.pt
@@ -3665,6 +3780,7 @@ Inserte su nuevo viewlet en un administrador de viewlet
         </order>
     </object> '
 
+.. _795_seccion:
 
 7.9.5. Secciones globales
 =========================
@@ -3680,7 +3796,8 @@ Las secciones de nivel superior del sitio.
 
 .. glossary ::
 
-  **Fragmento:** ``<h5 class="hiddenStructure">Sections</h5> <ul id="portal-globalnav"> ...</ul>``
+  **Fragmento:** 
+    ``<h5 class="hiddenStructure">Sections</h5> <ul id="portal-globalnav"> ...</ul>``
 
   **CSS:**
     public.css 
@@ -3716,8 +3833,8 @@ interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
   **Ubicado en:**
 
-    -   [locación de su huevo]]/plone/app/layout/viewlets/
-    -   [locación de su huevo]]/plone.app.layout-[version].egg/plone/app/layout/viewlets/
+    -   [locación de su paquete egg]/plone/app/layout/viewlets/
+    -   [locación de su paquete egg]/plone.app.layout-[version].egg/plone/app/layout/viewlets/
 
   **Nombre de la plantilla:**
     sections.pt
@@ -3778,6 +3895,7 @@ Inserte su nuevo viewlet en un administrador de viewlet
         </order>
     </object>
 
+.. _796_seccion:
 
 7.9.6. Barra personal
 =====================
@@ -3793,7 +3911,8 @@ usuario ha iniciado sesión.
 
 .. glossary ::
 
-  **Fragmento:** ``<div id="portal-personaltools-wrapper">...</div>``
+  **Fragmento:** 
+    ``<div id="portal-personaltools-wrapper">...</div>``
 
   **CSS:**
     public.css 
@@ -3829,8 +3948,8 @@ interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
   **Ubicado en:**
 
-    -   [locación de su huevo]]/plone/app/layout/viewlets/
-    -   [locación de su huevo]]/plone.app.layout-[version].egg/plone/app/layout/viewlets/
+    -   [locación de su paquete egg]/plone/app/layout/viewlets/
+    -   [locación de su paquete egg]/plone.app.layout-[version].egg/plone/app/layout/viewlets/
 
   **Nombre de la plantilla:**
     personal_bar.pt
@@ -3891,6 +4010,7 @@ Inserte su nuevo viewlet en un administrador de viewlet
         </order>
     </object>
 
+.. _797_seccion:
 
 7.9.7. Barra de ruta (hilo de Ariadna del portal)
 =================================================
@@ -3940,8 +4060,8 @@ interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
   **Ubicado en:**
 
-    -   [locación de su huevo]]/plone/app/layout/viewlets/
-    -   [locación de su huevo]]/plone.app.layout-[version].egg/plone/app/layout/viewlets/
+    -   [locación de su paquete egg]/plone/app/layout/viewlets/
+    -   [locación de su paquete egg]/plone.app.layout-[version].egg/plone/app/layout/viewlets/
 
   **Nombre de la plantilla:**
     path_bar.pt
@@ -3959,14 +4079,18 @@ Ejemplos de archivos & directivas
 
 Ponga una versión de path_bar.pt en [su paquete de tema]/browser/templates)
 
-Cree su propia versión de la clase en [su paquete de tema]/browser/[su modulo].py ::
+Cree su propia versión de la clase en [su paquete de tema]/browser/[su modulo].py 
+
+.. code-block:: python
 
     from plone.app.layout.viewlets.common import PathBarViewlet
     from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
     class [su nombre de clase](PathBarViewlet):
         render = ViewPageTemplateFile("[su nombre de plantilla]")
 
-Conecte su viewlet [su paquete de tema]/browser/configure.zcml: ::
+Conecte su viewlet [su paquete de tema]/browser/configure.zcml: 
+
+.. code-block:: xml
 
     <browser:viewlet
         name="[su nombre de espacio].[su nombre de viewlet]"
@@ -3978,22 +4102,28 @@ Conecte su viewlet [su paquete de tema]/browser/configure.zcml: ::
 
 En [su paquete de tema]/profiles/default/viewlets.xml
 
-Oculte el viewlet original (si lo desea): ::
+Oculte el viewlet original (si lo desea):
+
+.. code-block:: xml
 
         <object>
             <hidden manager="plone.portaltop" skinname="[su nombre del skin]">
-            <viewlet name="plone.path_bar" />
-        </hidden>
+                <viewlet name="plone.path_bar" />
+            </hidden>
 
-Inserte su nuevo viewlet en un administrador de viewlet: ::
+Inserte su nuevo viewlet en un administrador de viewlet:
 
-    <order manager="plone.portaltop" skinname="[su nombre del skin]"
-               based-on="Plone Default">
-            <viewlet name="[su nombre de espacio].[su nombre de viewlet]"
-                     insert-before="*" />
-        </order>
-    </object> '
+.. code-block:: xml
 
+           <order manager="plone.portaltop" skinname="[su nombre del skin]"
+                  based-on="Plone Default">
+               
+               <viewlet name="[su nombre de espacio].[su nombre de viewlet]"
+                        insert-before="*" />
+           </order>
+        </object>
+
+.. _798_seccion:
 
 7.9.8. Vistas de contenido
 ==========================
@@ -4002,7 +4132,8 @@ La vista, edición, y las otras pestañas en la interfaz de edición.
 
 .. glossary ::
 
-  **Fragmento:** ``<ul class="contentViews"> ...</ul>``
+  **Fragmento:** 
+    ``<ul class="contentViews"> ...</ul>``
 
   **CSS:**
     authoring.css 
@@ -4036,8 +4167,8 @@ interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
   **Ubicado en:**
 
-    -   [locación de su huevo]]/plone/app/layout/viewlets/
-    -   [locación de su huevo]]/plone.app.layout-[version].egg/plone/app/layout/viewlets/
+    -   [locación de su paquete egg]/plone/app/layout/viewlets/
+    -   [locación de su paquete egg]/plone.app.layout-[version].egg/plone/app/layout/viewlets/
 
   **Nombre de la plantilla:**
     contentviews.pt
@@ -4091,7 +4222,7 @@ Inserte su nuevo viewlet en un administrador de viewlet
         </order>
     </object>
 
-
+.. _799_seccion:
 
 7.9.9. Acciones de contenido
 ============================
@@ -4130,8 +4261,8 @@ interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
   **Ubicado en:**
 
-    -   [locación de su huevo]]/plone/app/layout/viewlets/
-    -   [locación de su huevo]]/plone.app.layout-[version].egg/plone/app/layout/viewlets/
+    -   [locación de su paquete egg]/plone/app/layout/viewlets/
+    -   [locación de su paquete egg]/plone.app.layout-[version].egg/plone/app/layout/viewlets/
 
   **Nombre de la plantilla:**
     contentactions_blank.pt & contentactions.pt 
@@ -4196,7 +4327,7 @@ Inserte su nuevo viewlet en un administrador de viewlet
         </order>
     </object>
 
-
+.. _7910_seccion:
 
 7.9.10. Tabla de contenidos
 ===========================
@@ -4208,9 +4339,11 @@ Proporciona un conjunto de marcadores en la página actual.
 
 .. glossary ::
 
-  **Fragmento:** ``<dl id="document-toc" class="portlet toc" style="display: none"> ... </dl>``
+  **Fragmento:** 
+    ``<dl id="document-toc" class="portlet toc" style="display: none"> ... </dl>``
 
-CSS:portlets.css
+  **CSS:**
+    portlets.css
 
   **Nombre:** 
     plone.tableofcontents
@@ -4241,8 +4374,8 @@ interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
   **Ubicado en:**
 
-    -   [locación de su huevo]]/plone/app/layout/viewlets/
-    -   [locación de su huevo]]/plone.app.layout-[version].egg/plone/app/layout/viewlets/
+    -   [locación de su paquete egg]/plone/app/layout/viewlets/
+    -   [locación de su paquete egg]/plone.app.layout-[version].egg/plone/app/layout/viewlets/
 
   **Nombre de la plantilla:**
     toc.pt
@@ -4322,7 +4455,8 @@ Proporciona un enlace a una vista de presentación de un documento.
 
 .. glossary ::
 
-  **Fragmento:** ``<p id="link-presentation">...</p>``
+  **Fragmento:** 
+    ``<p id="link-presentation">...</p>``
 
   **CSS:** 
     none
@@ -4356,8 +4490,8 @@ interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
   **Ubicado en:**
 
-    -   [locación de su huevo]]/plone/app/layout/presentation/
-    -   [locación de su huevo]]/plone.app.layout-[version].egg/plone/app/layout/presentation/
+    -   [locación de su paquete egg]/plone/app/layout/presentation/
+    -   [locación de su paquete egg]/plone.app.layout-[version].egg/plone/app/layout/presentation/
 
   **Nombre de la plantilla:**
     none
@@ -4420,7 +4554,7 @@ Inserte su nuevo viewlet en un administrador de viewlet
         </order>
     </object>
 
-
+.. _7912_seccion:
 
 7.9.12. Palabras clave
 ======================
@@ -4434,7 +4568,8 @@ que han sido asignadas al elemento.
 
 .. glossary ::
 
-  **Fragmento:** ``<div id="category" class="documentByLine">...</div>``
+  **Fragmento:** 
+    ``<div id="category" class="documentByLine">...</div>``
 
   **CSS:**
     public.css 
@@ -4468,8 +4603,8 @@ interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
   **Ubicado en:**
 
-    -   [locación de su huevo]]/plone/app/layout/viewlets/
-    -   [locación de su huevo]]/plone.app.layout-[version].egg/plone/app/layout/viewlets/
+    -   [locación de su paquete egg]/plone/app/layout/viewlets/
+    -   [locación de su paquete egg]/plone.app.layout-[version].egg/plone/app/layout/viewlets/
 
   **Nombre de la plantilla:**
     keywords.pt
@@ -4522,7 +4657,7 @@ Inserte su nuevo viewlet en un administrador de viewlet
         </order>
     </object>
 
-
+.. _7913_seccion:
 
 7.9.13. Línea de fondo
 =======================
@@ -4538,7 +4673,8 @@ fue la última vez que modificá).
 
 .. glossary ::
 
-  **Fragmento:** ``<div id="plone-document-byline" class="documentByLine">... </div>``
+  **Fragmento:** 
+    ``<div id="plone-document-byline" class="documentByLine">... </div>``
 
   **CSS:**
     public.css 
@@ -4573,8 +4709,8 @@ interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
   **Ubicado en:**
 
-    -   [locación de su huevo]]/plone/app/layout/viewlets/
-    -   [locación de su huevo]]/plone.app.layout-[version].egg/plone/app/layout/viewlets/
+    -   [locación de su paquete egg]/plone/app/layout/viewlets/
+    -   [locación de su paquete egg]/plone.app.layout-[version].egg/plone/app/layout/viewlets/
 
   **Nombre de la plantilla:**
     document_byline.pt
@@ -4639,7 +4775,7 @@ Inserte su nuevo viewlet en un administrador de viewlet
         </order>
     </object>
 
-
+.. _7914_seccion:
 
 7.9.14. Bloqueo
 ===============
@@ -4648,7 +4784,8 @@ Indica que el elemento de contenido está bloqueado para su edición.
 
 .. glossary ::
 
-  **Fragmento:** ``<div id="plone-lock-status"/>``
+  **Fragmento:** 
+    ``<div id="plone-lock-status"/>``
 
   **CSS:**
     public.css 
@@ -4682,8 +4819,8 @@ interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
   **Ubicado en:**
 
-    -   [locación de su huevo]]/plone/locking/browser/
-    -   [locación de su huevo]]/plone.locking-[version].egg/plone/locking/browser/
+    -   [locación de su paquete egg]/plone/locking/browser/
+    -   [locación de su paquete egg]]]/plone.locking-[version].egg/plone/locking/browser/
 
   **Nombre de la plantilla:**
     info.pt
@@ -4758,7 +4895,8 @@ contenido.
 
 .. glossary ::
 
-  **Fragmento:** ``<div class="reviewHistory" id="review-history">...</div>``
+  **Fragmento:** 
+    ``<div class="reviewHistory" id="review-history">...</div>``
 
   **CSS:**
     authoring.css
@@ -4792,8 +4930,8 @@ interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
   **Ubicado en:**
 
-    -   [locación de su huevo]]/plone/app/layout/viewlets/
-    -   [locación de su huevo]]/plone.app.layout-[version].egg/plone/app/layout/viewlets/
+    -   [locación de su paquete egg]/plone/app/layout/viewlets/
+    -   [locación de su paquete egg]/plone.app.layout-[version].egg/plone/app/layout/viewlets/
 
   **Nombre de la plantilla:**
     review_history.pt
@@ -4857,7 +4995,7 @@ Inserte su nuevo viewlet en un administrador de viewlet
         </order>
     </object>
 
-
+.. _7916_seccion:
 
 7.9.16. Historial de contenido
 ==============================
@@ -4868,7 +5006,8 @@ Plone 3.3).
 
 .. glossary ::
 
-  **Fragmento:** ``<div class="contentHistory" id="content-history">...</div>``
+  **Fragmento:** 
+    ``<div class="contentHistory" id="content-history">...</div>``
 
   **CSS:**
     authoring.css 
@@ -4902,8 +5041,8 @@ interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
   **Ubicado en:**
 
-    -   [locación de su huevo]]/plone/app/layout/viewlets/
-    -   [locación de su huevo]]/plone.app.layout-[version].egg/plone/app/layout/viewlets/
+    -   [locación de su paquete egg]/plone/app/layout/viewlets/
+    -   [locación de su paquete egg]/plone.app.layout-[version].egg/plone/app/layout/viewlets/
 
   **Nombre de la plantilla:**
     content_history.pt
@@ -4967,7 +5106,7 @@ Inserte su nuevo viewlet en un administrador de viewlet
         </order>
     </object>
 
-
+.. _7917_seccion:
 
 7.9.17. Acciones de documento
 =============================
@@ -4982,7 +5121,8 @@ Los enlaces para impresión y RSS
 
 .. glossary ::
 
-  **Fragmento:** ``<div class="documentActions"> ... </div>``
+  **Fragmento:** 
+    ``<div class="documentActions"> ... </div>``
 
   **CSS:**
     public.css 
@@ -5018,8 +5158,8 @@ interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
   **Ubicado en:**
 
-    -   [locación de su huevo]]/plone/app/layout/viewlets/
-    -   [locación de su huevo]]/plone.app.layout-[version].egg/plone/app/layout/viewlets/
+    -   [locación de su paquete egg]/plone/app/layout/viewlets/
+    -   [locación de su paquete egg]/plone.app.layout-[version].egg/plone/app/layout/viewlets/
 
   **Nombre de la plantilla:**
     document_actions.pt
@@ -5081,6 +5221,7 @@ Inserte su nuevo viewlet en un administrador de viewlet
         </order>
     </object> '
 
+.. _7918_seccion:
 
 7.9.18. Elementos relacionados
 ==============================
@@ -5128,8 +5269,8 @@ interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
   **Ubicado en:**
 
-    -   [locación de su huevo]]/plone/app/layout/viewlets/
-    -   [locación de su huevo]]/plone.app.layout-[version].egg/plone/app/layout/viewlets/
+    -   [locación de su paquete egg]/plone/app/layout/viewlets/
+    -   [locación de su paquete egg]/plone.app.layout-[version].egg/plone/app/layout/viewlets/
 
   **Nombre de la plantilla:**
     document_relateditems.pt
@@ -5190,7 +5331,7 @@ Inserte su nuevo viewlet en un administrador de viewlet
                      insert-before="*" />
         </order>
     </object> '
-
+.. _7919_seccion:
 
 7.9.19. Comentarios
 ===================
@@ -5205,7 +5346,8 @@ Proporciona una interfaz de comentarios.
 
 .. glossary ::
 
-  **Fragmento:** ``<div class="discussion"> ...</div>``
+  **Fragmento:** 
+    ``<div class="discussion"> ...</div>``
 
   **CSS:**
     public.css 
@@ -5239,8 +5381,8 @@ interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
   **Ubicado en:**
 
-    -   [locación de su huevo]]/plone/app/layout/viewlets/
-    -   [locación de su huevo]]/plone.app.layout-[version].egg/plone/app/layout/viewlets/
+    -   [locación de su paquete egg]/plone/app/layout/viewlets/
+    -   [locación de su paquete egg]/plone.app.layout-[version].egg/plone/app/layout/viewlets/
 
   **Nombre de la plantilla:**
     comments.pt
@@ -5303,7 +5445,7 @@ Inserte su nuevo viewlet en un administrador de viewlet
         </order>
     </object>
 
-
+.. _7920_seccion:
 
 7.9.20. Anterior Siguiente
 ==========================
@@ -5315,7 +5457,8 @@ Proporciona la funcionalidad anterior/siguiente para una carpeta.
 
 .. glossary ::
 
-  **Fragmento:** ``<div class="listingBar">...</div>``
+  **Fragmento:** 
+    ``<div class="listingBar">...</div>``
 
   **CSS:** 
     public.css
@@ -5349,8 +5492,8 @@ interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
   **Ubicado en:**
 
-    -   [locación de su huevo]]/plone/app/layout/nextprevious/
-    -   [locación de su huevo]]/plone.app.layout-[version].egg/plone/app/layout/nextprevious/
+    -   [locación de su paquete egg]/plone/app/layout/nextprevious/
+    -   [locación de su paquete egg]/plone.app.layout-[version].egg/plone/app/layout/nextprevious/
 
   **Nombre de la plantilla:**
     nextprevious.pt
@@ -5413,7 +5556,7 @@ Inserte su nuevo viewlet en un administrador de viewlet
         </order>
     </object>
 
-
+.. _7921_seccion:
 
 7.9.21. Pie de página
 ======================
@@ -5422,7 +5565,8 @@ Contiene la información sobre los derechos de autor.
 
 .. glossary ::
 
-  **Fragmento:** ``<div id="portal-footer">...</div>``
+  **Fragmento:**
+    ``<div id="portal-footer">...</div>``
 
   **CSS:** 
     public.css
@@ -5456,8 +5600,8 @@ interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
   **Ubicado en:**
 
-    -   [locación de su huevo]]/plone/app/layout/viewlets/
-    -   [locación de su huevo]]/plone.app.layout-[version].egg/plone/app/layout/viewlets/
+    -   [locación de su paquete egg]/plone/app/layout/viewlets/
+    -   [locación de su paquete egg]/plone.app.layout-[version].egg/plone/app/layout/viewlets/
 
   **Nombre de la plantilla:**
     footer.pt
@@ -5511,7 +5655,7 @@ Inserte su nuevo viewlet en un administrador de viewlet
         </order>
     </object>
 
-
+.. _7922_seccion:
 
 7.9.22. Colofón
 ===============
@@ -5520,7 +5664,8 @@ Contiene enlaces a plone.org, etc.
 
 .. glossary ::
 
-  **Fragmento:** `` <div id="portal-colophon">...</div>``
+  **Fragmento:** 
+    ``<div id="portal-colophon">...</div>``
 
   **CSS:** 
     public.css
@@ -5554,8 +5699,8 @@ interfaces. Vea :ref:`Viewlet <721_seccion>` para más información.
 
   **Ubicado en:**
 
-    -   [locación de su huevo]]/plone/app/layout/viewlets/
-    -   [locación de su huevo]]/plone.app.layout-[version].egg/plone/app/layout/viewlets/
+    -   [locación de su paquete egg]/plone/app/layout/viewlets/
+    -   [locación de su paquete egg]/plone.app.layout-[version].egg/plone/app/layout/viewlets/
 
   **Nombre de la plantilla:**
     colophon.pt
@@ -5610,52 +5755,15 @@ Inserte su nuevo viewlet en un administrador de viewlet
     </object>
 
 
-.. _Acciones de contenido: http://plone.org/documentation/manual/theme-reference/elements/visibleelements/plone.contentactions
-.. _plone.contentactions: http://plone.org/documentation/manual/theme-reference/elements/visibleelements/plone.contentactions
-.. _http://plone.org/documentation/tutorial/customizing-main-template-viewlets/reordering-and-hiding-viewlets: 
-    http://plone.org/documentation/manual/tutorial/customizing-main-template-viewlets/reordering-and-hiding-viewlets
+.. _http://plone.org/documentation/kb/customizing-main-template-viewlets/reordering-and-hiding-viewlets: http://plone.org/documentation/kb/customizing-main-template-viewlets/reordering-and-hiding-viewlets
 .. _Configuración: http://plone.org/documentation/manual/theme-reference/elements/buildingblocks/configuration
 .. _GloWorm: http://plone.org/products/gloworm
 .. _este artículo: http://plone.org/documentation/kb/customizing-main-template-viewlets/adding-a-viewlet/
-.. _http://plone.org/documentation/tutorial/where-is-what/portlets-1/: http://plone.org/documentation/tutorial/where-is-what/portlets-1/
+.. _http://plone.org/documentation/kb/where-is-what/portlets-1: http://plone.org/documentation/kb/where-is-what/portlets-1
 .. _http://plone.org/products/plone/roadmap/203/: http://plone.org/products/plone/roadmap/203/
-.. _Personalización de viewlets en main_template: http://plone.org/how-to/override-the-portlets-in-plone-3.0/.org/documentation/tutorial/customizing-main-template-viewlets
-.. _plone.skip_links: http://plone.org/documentation/manual/theme-reference/elements/hiddenelements/plone.skip_links
-.. _plone.htmlhead.title: http://plone.org/documentation/manual/theme-reference/elements/hiddenelements/plone.htmlhead.title
-.. _plone.nextprevious.links: http://plone.org/documentation/manual/theme-reference/elements/hiddenelements/plone.nextprevious.links
-.. _plone.links.favicon: http://plone.org/documentation/manual/theme-reference/elements/hiddenelements/plone.links.favicon
-.. _plone.links.search: http://plone.org/documentation/manual/theme-reference/elements/hiddenelements/plone.links.search
-.. _plone.links.author: http://plone.org/documentation/manual/theme-reference/elements/hiddenelements/plone.links.author
-.. _plone.links.navigation: http://plone.org/documentation/manual/theme-reference/elements/hiddenelements/plone.links.navigation
-.. _plone.analytics: http://plone.org/documentation/manual/theme-reference/elements/hiddenelements/plone.analytics
-.. _plone.header: http://plone.org/documentation/manual/theme-reference/elements/structuralelements/plone.header
-.. _plone.app.i18n.locales.languageselector:
-    http://plone.org/documentation/manual/theme-reference/elements/visibleelements/plone.app.i18n.locales.languageselector
-.. _plonetheme.sunburst.site_actions:
-    http://plone.org/documentation/manual/theme-reference/elements/visibleelements/plonetheme.sunburst.site_actions
-.. _plone.site_actions: http://plone.org/documentation/manual/theme-reference/elements/visibleelements/plone.site_actions
-.. _plone.searchbox: http://plone.org/documentation/manual/theme-reference/elements/visibleelements/plone.searchbox
-.. _plone.logo: http://plone.org/documentation/manual/theme-reference/elements/visibleelements/plone.logo
-.. _plone.global_sections: http://plone.org/documentation/manual/theme-reference/elements/visibleelements/plone.global_sections
+.. _Personalización de viewlets en main_template: http://plone.org/documentation/tutorial/customizing-main-template-viewlets
+.. _plonetheme.sunburst.site_actions: http://plone.org/documentation/manual/theme-reference/elements/visibleelements/plonetheme.sunburst.site_actions
 .. _plonetheme.sunburst.personal_bar: http://plone.org/documentation/manual/theme-reference/elements/visibleelements/plonetheme.sunburst.personal_bar
-.. _plone.personal_bar: http://plone.org/documentation/manual/theme-reference/elements/visibleelements/plone.personal_bar
-.. _plone.path_bar: http://plone.org/documentation/manual/theme-reference/elements/visibleelements/plone.path_bar
-.. _plone.contentviews: http://plone.org/documentation/manual/theme-reference/elements/visibleelements/plone.contentviews
-.. _plone.tableofcontents: http://plone.org/documentation/manual/theme-reference/elements/visibleelements/plone.tableofcontents
-.. _plone.presentation: http://plone.org/documentation/manual/theme-reference/elements/visibleelements/plone.presentation
-.. _plone.belowcontenttitle.keywords: http://plone.org/documentation/manual/theme-reference/elements/visibleelements/plone.belowcontenttitle.keywords
-.. _plone.belowcontenttitle.documentbyline: http://plone.org/documentation/manual/theme-reference/elements/visibleelements/plone.belowcontenttitle.documentbyline
-.. _plone.lockinfo: http://plone.org/documentation/manual/theme-reference/elements/visibleelements/plone.lockinfo
-.. _plone.abovecontenttitle.documentactions: http://plone.org/documentation/manual/theme-reference/elements/visibleelements/plone.abovecontenttitle.documentactions
-.. _plone.comments: http://plone.org/documentation/manual/theme-reference/elements/visibleelements/plone.comments
-.. _plone.belowcontentbody.contenthistory: http://plone.org/documentation/manual/theme-reference/elements/visibleelements/plone.belowcontentbody.contenthistory
-.. _plone.nextprevious: http://plone.org/documentation/manual/theme-reference/elements/visibleelements/plone.nextprevious
-.. _plone.footer: http://plone.org/documentation/manual/theme-reference/elements/visibleelements/plone.footer
-.. _plone.colophon: http://plone.org/documentation/manual/theme-reference/elements/visibleelements/plone.colophon
-.. _plone.htmlhead.dublincore: http://plone.org/documentation/manual/theme-reference/elements/hiddenelements/plone.htmlhead.dublincore
-.. _plone.htmlhead.kss-base-url: http://plone.org/documentation/manual/theme-reference/elements/hiddenelements/plone.htmlhead.kss-base-url
-.. _plone.links.RSS: http://plone.org/documentation/manual/theme-reference/elements/hiddenelements/plone.links.RSS
-.. _plone.belowcontentbody.relateditems: http://plone.org/documentation/manual/theme-reference/elements/visibleelements/plone.belowcontentbody.relateditems
 .. _http://plone.org/documentation/kb/the-search-box: http://plone.org/documentation/tutorial/where-is-what/the-search-box
 .. _http://plone.org/documentation/kb/where-is-what/the-logo: http://plone.org/documentation/kb/where-is-what/the-logo
 .. _http://plone.org/documentation/kb/where-is-what/the-navigation-tabs: http://plone.org/documentation/kb/where-is-what/the-navigation-tabs%27

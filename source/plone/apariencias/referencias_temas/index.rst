@@ -17,8 +17,6 @@ realizar temas y pieles en Plone, además de no ser una guía paso a
 paso simplemente es una referencias sobre estilos de trabajo.
 
 .. toctree::
-   :numbered:
-   :maxdepth: 3
 
    intro
    comienzo_rapido

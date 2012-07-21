@@ -64,8 +64,8 @@ tiene un montón de opciones, aunque estas están directamente orientadas al
 desarrollo de Python más que a la escritura de plantillas para
 personalización:
 
--   `http://plone.org/documentation/how-to/developing-plone-with-eclipse-ide`_
--   `http://plone.org/documentation/tutorial/debugging-plone-products-with-pida`_
+-   `http://plone.org/documentation/kb/developing-plone-with-eclipse`_
+-   `http://plone.org/documentation/kb/debugging-plone-products-with-pida`_
 
 Otros IDE incluyen Wing (`http://www.wingware.com/`_), BoaConstructor y
 Komodo (`http://www.activestate.com/Products/komodo_ide/index.mhtml`_).
@@ -82,7 +82,7 @@ Modo de depuración CSS
 
 Plone empaqueta todos su archivos CSS dentro de uno o dos archivos para
 eficiencia mediante el uso de un registro de recurso (para más información de
-cómo funciona revise :ref:`CSS and JavaScript to Page section <63_seccion>`). Es mucho más
+cómo funciona revise la sección :ref:`CSS y JavaScript a la página <63_seccion>`). Es mucho más
 fácil ver lo que está haciendo, si usted desactiva esta función cuando está
 diseñando. Puede hacer lo mismo para JavaScript.
 
@@ -233,11 +233,11 @@ vino con su instalación Plone (de la versión 3.2 en adelante)
 
 .. code-block:: sh
 
-    $ [path to your buildout]/python-[version]/paster create --list-templates
+    $ [ruta a su buildout]/python-[version]/paster create --list-templates
 
 
 Si "plone3_theme" no está en la lista de plantillas disponibles, tendrá
-entonces que `instalar Paster y/o ZopeSkel`_, como lo explica Daniel Nouri.
+entonces que :ref:`instalar Paster y/o ZopeSkel <skel_plone>`, como lo explica Daniel Nouri.
 
 Cree su producto de Tema
 ::::::::::::::::::::::::
@@ -254,7 +254,7 @@ o si tiene Paster en su instalación Plone:
 
 .. code-block:: sh
 
-    $ [path to your buildout]/python-[version]/paster create -t plone3_theme plonetheme.mytheme
+    $ [ruta a su buildout]/python-[version]/paster create -t plone3_theme plonetheme.mytheme
 
 Esto iniciará una serie de preguntas por el script de Paster. Las
 predeterminadas son verdaderamente apropiadas para su primer tema, así en la
@@ -337,10 +337,11 @@ Algunas de estas preguntas requieren una explicación más detallada:
     través de la herramienta de Instalación ("portal_setup"). Estudiaremos esto más adelante,
     por ahora basta con decir que aquí siempre responderá "true" cuando quiera
     generar un tema de Plone.
+
   Enter zip_safe
     Quédese con el valor por defecto aquí.
 
-  `Creando nuevos huevos y paquetes rápidamente con Paster`_
+  :ref:`Creando nuevos huevos y paquetes rápidamente con Paster <skel_python>`
     Cómo utilizar el comando Paster para crear nuevos paquetes con las apropiadas setuptools
     (herramientas de configuración) y diseños filesystem (archivos de sistema) huevo-compatible 
     e manera rápida y fácil.
@@ -602,14 +603,14 @@ Zope 3
     tema es instalado como un paquete Python (en nuestro caso no lo será).
 
   configure.zcml
+    TODO
     
-
   skins.zcml
    Registrar capas skin (imágenes, estilos, plantillas) como vistas de
    directorios de filesystem (archivos de sistema)
 
   browser/
-    
+    TODO
 
 Stylesheets (hojas de estilo), Plantillas y más
 :::::::::::::::::::::::::::::::::::::::::::::::
@@ -751,7 +752,7 @@ instalar el tema. Ahora veamos cómo distinguir la diferencia entre ambos.
 
 Primero tenemos que entender el significado de base-huevo. Si el tema, cuando
 se descomprime, es nombrado "plonetheme.loquesea", o si genera un tema nuevo
-usando la receta `Paster`_ y responde "yes" a la pregunta "is this a Zope2
+usando la receta :ref:`Paster <skel_python>` y responde "yes" a la pregunta "is this a Zope2
 product" (¿Es este un producto Zope2?), pues su producto es base-huevo. O
 incluso una manera más sencilla es saber si su carpeta root contiene
 setup.py, si está el archivo entonces es un huevo. En un típico producto de
@@ -834,19 +835,16 @@ de tema configure.zcml para luego reiniciar su instancia Zope.
 .. _http://www.e-texteditor.com/: http://www.e-texteditor.com/
 .. _http://docs.neuroinf.de/PloneBook/ch6.rst#conducting-syntax-checks: http://docs.neuroinf.de/PloneBook/ch6.rst#conducting-syntax-checks
 .. _http://wiki.python.org/moin/PythonEditors: http://wiki.python.org/moin/PythonEditors
-.. _http://plone.org/documentation/how-to/developing-plone-with-eclipse-ide : http://plone.org/documentation/how-to/developing-plone-with-eclipse-ide
-.. _http://plone.org/documentation/tutorial/debugging-plone-products-with-pida : http://plone.org/documentation/tutorial/debugging-plone-products-with-pida
+.. _http://plone.org/documentation/kb/developing-plone-with-eclipse : http://plone.org/documentation/kb/developing-plone-with-eclipse
+.. _http://plone.org/documentation/kb/debugging-plone-products-with-pida : http://plone.org/documentation/kb/debugging-plone-products-with-pida
 .. _http://www.wingware.com/: http://www.wingware.com/
 .. _http://www.activestate.com/Products/komodo_ide/index.mhtml: http://www.activestate.com/Products/komodo_ide/index.mhtml
 .. _plone.reload: http://pypi.python.org/pypi/plone.reload/0.9
 .. _http://paster.joelburton.com/: http://paster.joelburton.com/
-.. _instalar Paster y/o ZopeSkel: http://plone.org/documentation/how-to/how-to-create-a-plone-3-theme-product-on-the-filesystem/use-paster
 .. _Guía rápida para los huevos Python: http://peak.telecommunity.com/DevCenter/PythonEggs
 .. _Hatch Python Eggs (Huevos Python) con SetupTools: http://www.ibm.com/developerworks/library/l-cppeak3.html
-.. _Comprensión y uso de GenericSetup en Plone: http://plone.org/documentation/tutorial/genericsetup
+.. _Comprensión y uso de GenericSetup en Plone: http://plone.org/documentation/kb/genericsetup
 .. _Mejoras de GenericSetup: http://theploneblog.org/blog/archive/2007/06/21/genericsetup-improvements
-.. _Aproveche AHORA el uso de GenericSetup y Tecnologías Z3: http://plone.org/documentation/tutorial/benefit-now-from-using-genericsetup-and-zope-3-technologies/?searchterm=benefit%20NOW
-.. _Personalización para desarrolladores: http://plone.org/documentation/how-to/how-to-create-a-plone-3-theme-product-on-the-filesystem/plone.org/documentation/tutorial/customization-for-developers
-.. _lea esta tutorial: http://plone.org/documentation/tutorial/customizing-main-template-viewlets
-.. _Paster: http://plone.org/how-to/use-paster
-.. _Creando nuevos huevos y paquetes rápidamente con Paster: http://plone.org/documentation/how-to/how-to-create-a-plone-3-theme-product-on-the-filesystem/use-paster
+.. _Aproveche AHORA el uso de GenericSetup y Tecnologías Z3: http://plone.org/documentation/kb/benefit-now-from-using-genericsetup-and-zope-3-technologies?searchterm=benefit%20NOW
+.. _Personalización para desarrolladores: http://plone.org/documentation/kb/customization-for-developers
+.. _lea esta tutorial: http://plone.org/documentation/kb/customizing-main-template-viewlets

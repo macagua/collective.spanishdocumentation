@@ -146,14 +146,10 @@ Aquí está la estructuración o conexión en ZCML que crea @@sitemap_view:
 .. code-block:: xml
 
     <browser:page
-         for="*"
-    (there's no restriction on where I can be used)
-         name="sitemap_view"
-    (this is my name)
-         class=".sitemap.SitemapView"
-    (this is where you can find the code to deliver my content)
-         permission="zope.Public"
-    (you can see me if you have the Public permission)
+         for="*" <!-- there's no restriction on where I can be used -->
+         name="sitemap_view" <!-- this is my name -->
+         class=".sitemap.SitemapView" <!-- this is where you can find the code to deliver my content -->
+         permission="zope.Public" <!-- you can see me if you have the Public permission -->
          allowed_interface=".interfaces.ISitemapView"
     />
 
@@ -456,7 +452,7 @@ por defecto:
 
     sizes = {'thumb': (80,80)}
 
- Donde ATImage define un montón:
+Donde ATImage define un montón:
 
 .. code-block:: python
 
@@ -520,8 +516,8 @@ error bizarro como "Unauthorized" o "TypeError:a float is required"
 
 TAMBIÉN VEA:
 
-`http://plone.org/documentation/manual/archetypes-developer-manual/fields/fields-reference`_
-`http://plone.org/documentation/tutorial/richdocument/pil`_
+ * `http://plone.org/kb/manual/archetypes-developer-manual/fields/fields-reference`_
+ * `http://plone.org/documentation/kb/richdocument/pil`_
 
 .. _63_seccion:
 
@@ -823,93 +819,102 @@ JavaScript).
 Cada entrada en los registros de CSS y JavaScript tiene algunos parámetros
 que pueden ser ajustados.
 
-id
-La id de la hoja de estilo o JavaScript que será utilizada. De Plone 3.3 en
-adelante, puede especificar un recurso alojado externamente mediante la
-introducción de la URL completa aquí.
+.. glossary::
 
-expression
-Una expresión `TALES`_ a ser evaluada para comprobar si la hoja de
-estilo o JavaScript debe ser incluida en la producción o no. Puede usar
-`global template variables (variables globales de plantilla)`_ aquí.
+  id
+    La id de la hoja de estilo o JavaScript que será utilizada. De Plone 3.3 
+    en adelante, puede especificar un recurso alojado externamente mediante 
+    la introducción de la URL completa aquí.
 
-conditionalcomment (disponible de Plone 3.3 en adelante)
-Una pequeña cadena para ser incluida en un comentario condicional alrededor
-del recurso. Por ejemplo, si escribe simplemente "IE" en el campo se
-traducirá en un comentario condicional de:
+  expression
+    Una expresión `TALES`_ a ser evaluada para comprobar si la hoja de
+    estilo o JavaScript debe ser incluida en la producción o no. Puede usar
+    `global template variables (variables globales de plantilla)`_ aquí.
 
-:: <!--[if IE]>...<![endif]--
+  conditionalcomment (disponible de Plone 3.3 en adelante)
+    Una pequeña cadena para ser incluida en un comentario condicional alrededor
+    del recurso. Por ejemplo, si escribe simplemente "IE" en el campo se
+    traducirá en un comentario condicional de: ::
+    
+      <!--[if IE]>...<![endif]--
+    
+    Este comportamiento está actualmente habilitado para los registros de CSS y 
+    JavaScript. El registro KSS es el único registro que no tiene soporte completo 
+    para comentarios condicionales. 
+    
+    Para más información vea: `http://msdn.microsoft.com/en-us/library/ms537512.aspx`_ 
+    
+  media
+    Los medios (media) para los cuales la hoja de estilo se debería aplicar, 
+    normalmente vacía o "all" (todos). otros posibles valores son "screen" (pantalla), 
+    "print" (impresión) etc. `Lea más acerca de las configuraciones de medios de CSS en w3.org`_ 
 
-Este comportamiento está actualmente habilitado para los registros de CSS y 
-JavaScript. El registro KSS es el único registro que no tiene soporte completo 
-para comentarios condicionales. 
+  rel
+    Relación de enlace. defaults to 'stylesheet', y casi siempre debería permanecer de esa manera.
+    Para la designación de las hojas de estilo alternativas. Esto se utiliza para
+    alternar entre las fuentes grandes, medianas y pequeñas, en Plone por
+    defecto. No cambie esto a menos que sepa realmente lo que está
+    haciendo.
 
-Para más información vea: `http://msdn.microsoft.com/en-us/library/ms537512.aspx`_ 
+  title
+    el título de una hoja de estilo alternativa.
 
-media Los medios (media) para los cuales la hoja de estilo se debería aplicar, 
-normalmente vacía o "all" (todos). otros posibles valores son "screen" (pantalla), 
-"print" (impresión) etc. 
+  rendering
+    Cómo la hoja de estilo es enlazada desde la página html. Esta es una configuración
+    avanzada. Deje su valor por defecto "import" a menos que conozca los efectos
+    que tienen las diferentes formas de renderizar y vincular hojas de estilo
 
-`Lea más acerca de las configuraciones de medios de CSS en w3.org`_ 
+  import
+    El predeterminado. normal importación css
+    
+  link funciona mejor con
+    navegadores antiguos y es necesario para alternar hojas de estilo
+    
+  inline
+    renderizar la stylesheet en línea en lugar de vincularla de forma
+    externa. ¡No se debería utilizar en absoluto! no es posible crear sitios que
+    la validen si lo hace.
+    
+    Para más información: `http://developer.mozilla.org/en/docs/Properly_Using_CSS_and_JavaScript_in_XHTML_Documents`_ 
+    
+  compression
+    Si y en qué medida el recurso debería ser comprimido
+    
+  none
+    el contenido original no se modificará safe el contenido se comprime de una 
+    manera que debe ser seguro para cualquier método de solución alternativa para 
+    errores en el explorador. El código condicional para Internet Explorer se 
+    mantiene desde ResourceRegistries 1.2.3 y 1.3.1.
+  
+  full
+    el contenido se comprime con algunas reglas adicionales. Para css todos
+    los comentarios y la mayoría de saltos de línea se eliminan, esto puede
+    romper hacks de navegador especiales, así que utilice con cuidado. Para
+    JavaScript esto codifica variables con prefijos especiales de acuerdo a las
+    reglas descritas aquí (caracteres especiales):
+    ` http://dean.edwards.name/packer/usage/`_ El código fuente tiene que estar
+    escrito de acuerdo a esas reglas, de lo contrario, es más que probable que se rompa.
 
-rel Relación de enlace.
-defaults to 'stylesheet', y casi siempre debería permanecer de esa manera.
-Para la designación de las hojas de estilo alternativas. Esto se utiliza para
-alternar entre las fuentes grandes, medianas y pequeñas, en Plone por
-defecto. No cambie esto a menos que sepa realmente lo que está
-haciendo.
-
-title el título de una hoja de estilo alternativa.
-
-rendering
-
-Cómo la hoja de estilo es enlazada desde la página html. Esta es una configuración
-avanzada. Deje su valor por defecto "import" a menos que conozca los efectos
-que tienen las diferentes formas de renderizar y vincular hojas de estilo
-
-import
-
-El predeterminado. normal importación csslink funciona mejor con
-navegadores antiguos y es necesario para alternar hojas de
-estilo inline renderizar la stylesheet en línea en lugar de vincularla de forma
-externa. ¡No se debería utilizar en absoluto! no es posible crear sitios que
-la validen si lo hace.
-
-Para más información: `http://developer.mozilla.org/en/docs/Properly_Using_CSS_and_JavaScript_in_XHTML_Documents`_ 
-
-compression Si y en qué medida el
-recurso debería ser comprimido none el contenido original no se
-modificará safe el contenido se comprime de una manera que debe ser seguro para
-cualquier método de solución alternativa para errores en el explorador. El
-código condicional para Internet Explorer se mantiene desde
-ResourceRegistries 1.2.3 y 1.3.1.
-full el contenido se comprime con algunas reglas adicionales. Para css todos
-los comentarios y la mayoría de saltos de línea se eliminan, esto puede
-romper hacks de navegador especiales, así que utilice con cuidado. Para
-JavaScript esto codifica variables con prefijos especiales de acuerdo a las
-reglas descritas aquí (caracteres especiales):
-` http://dean.edwards.name/packer/usage/`_ El código fuente tiene que estar
-escrito de acuerdo a esas reglas, de lo contrario, es más que probable que se
-rompa.
-safe-encode- sólo disponible para JavaScript
-- 'full-encode' - sólo disponible para JavaScript. Además codifica palabras
-clave. Esto en gran medida comprime el JavaScript, pero necesita ser
-decodificado en el proceso en el navegador en cada carga. Dependiendo del
-tamaño de los scripts esto podría conducir a timeouts en Firefox. ¡Use con
-especial cuidado!applyPrefix - sólo disponible para CSS.
-- Si su stylesheet usa URL relativas en una sentencia ``url()``, por ejemplo
-para hacer referencia a otro stylesheet o imagen, puede experimentar
-problemas cuando utiliza el registro en modo-no-depuración, ya que
-*portal_css* altera la URL que se ve en el explorador. Si es así, configure
-esta opción a *True (Verdadero)* o marque la opción de "Replace relative
-paths in url() statements with absolute paths? (?reemplazar rutas relativas
-en sentencias url () con rutas absoluta sí" en la pantalla de administración
-*portal_css* para remplazar cualquier ruta alternativa dentro de una
-sentencia ``url()`` con una ruta absoluta (con el prefijo de la ruta de root
-del sitio Plone) durante la etapa de fusión de recursos. Esto no modifica la
-stylesheet original. Puede tener un ligero impacto en el rendimiento, pero no
-debería ser un problema si los recursos se almacenan en caché de manera
-apropiada. No tiene ningún efecto en modo de depuración.
+  safe-encode
+    - sólo disponible para JavaScript.
+    - 'full-encode' - sólo disponible para JavaScript. Además codifica palabras
+      clave. Esto en gran medida comprime el JavaScript, pero necesita ser
+      decodificado en el proceso en el navegador en cada carga. Dependiendo del
+      tamaño de los scripts esto podría conducir a timeouts en Firefox. ¡Use con
+      especial cuidado!applyPrefix - sólo disponible para CSS.
+    - Si su stylesheet usa URL relativas en una sentencia ``url()``, por ejemplo
+      para hacer referencia a otro stylesheet o imagen, puede experimentar
+      problemas cuando utiliza el registro en modo-no-depuración, ya que
+      *portal_css* altera la URL que se ve en el explorador. Si es así, configure
+      esta opción a *True (Verdadero)* o marque la opción de "Replace relative
+      paths in url() statements with absolute paths? (reemplazar rutas relativas
+      en sentencias url () con rutas absoluta sí" en la pantalla de administración
+      *portal_css* para remplazar cualquier ruta alternativa dentro de una
+      sentencia ``url()`` con una ruta absoluta (con el prefijo de la ruta de root
+      del sitio Plone) durante la etapa de fusión de recursos. Esto no modifica la
+      stylesheet original. Puede tener un ligero impacto en el rendimiento, pero no
+      debería ser un problema si los recursos se almacenan en caché de manera
+      apropiada. No tiene ningún efecto en modo de depuración.
 
 
 6.3.2.4. Práctico: Agregar una hoja de estilo al registro a través de la Web
@@ -1028,7 +1033,7 @@ de tema, se verá así:
     <?xml version="1.0"?>
     <object name="portal_css" meta_type="Stylesheets Registry">
      <stylesheet title="" cacheable="True" compression="safe"
-     cookable="True"
+        cookable="True"
         enabled="1" expression="" id="mytheme.css" media="screen"
         rel="stylesheet" rendering="import"/>
     </object>
@@ -1073,8 +1078,7 @@ comentarios condicionales alrededor del stylesheet:
 
     <stylesheet title="" cacheable="False" compression="none" cookable="False"
      rel="stylesheet" expression="" id="IEFixes.css" media="all"
-     enabled="1"
-     rendering="import" **conditionalcomment="IE"** />
+     enabled="1" rendering="import" **conditionalcomment="IE"** />
 
 También puede especificar un recurso externo:
 
@@ -1361,7 +1365,7 @@ Estas son llamadas main_template:
 
 Si quiere investigarlas más a fondo, las encontrará en
 
--   [your products directory]/CMFPlone/browser/ploneview.py.
+-   [su directorio de productos]/CMFPlone/browser/ploneview.py.
 
 Estas variables se utilizan en un número de plantillas de Plone Default en
 Plone 3 y a continuación son listadas junto a sus equivalentes en las vistas
@@ -1385,19 +1389,38 @@ Acerca del sitio
 
 View @@plone_portal_state
 
-Método Lo que se obtiene global define
-portal Portal Object portal
-portal_title El título de su sitio portal_title
-portal_url La dirección URL de su sitio portal_url
-navigation_root_path Ruta del root de navegación
-navigation_root_url La dirección URL del root de navegación navigation_root_url
-default_language El idioma por defecto del sitio
-language El idioma actual
-locale La localización actual
-is_rtl Si el sitio se está viendo en un lenguaje RTLisRTL
-member El actual miembro autenticado member
-anonymous Si el visitante actual es anónimo isAnon
-friendly_types Obtener una lista de tipos que se pueden implementar por un usuario
++----------------------+---------------------------------+---------------------+
+| Método               |  Lo que se obtiene              | global define       |
++======================+=================================+=====================+
+| portal               | Portal Object                   | portal              |
++----------------------+---------------------------------+---------------------+
+| portal_title         | El título de su sitio           | portal_title        |
++----------------------+---------------------------------+---------------------+
+| portal_url           | La dirección URL de su sitio    | portal_url          |
++----------------------+---------------------------------+---------------------+
+| navigation_root_path | Ruta del root de navegación     |                     |
++----------------------+---------------------------------+---------------------+
+| navigation_root_url  | La dirección URL del root de    | navigation_root_url |
+|                      | navegación                      |                     |
++----------------------+---------------------------------+---------------------+
+| default_language     | El idioma por defecto del sitio |                     |
++----------------------+---------------------------------+---------------------+
+| language             | El idioma actual                |                     |
++----------------------+---------------------------------+---------------------+
+| locale               | La localización actual          |                     |
++----------------------+---------------------------------+---------------------+
+| is_rtl               | Si el sitio se está viendo en   | RTLisRTL            |
+|                      | un lenguaje                     |                     |
++----------------------+---------------------------------+---------------------+
+| member               | El actual miembro autenticado   | member              |
++----------------------+---------------------------------+---------------------+
+| anonymous            | Si el visitante actual es       | isAnon              |
+|                      | anónimo                         |                     |
++----------------------+---------------------------------+---------------------+
+| friendly_types       | Obtener una lista de tipos que  |                     |
+|                      | se pueden implementar por un    |                     |
+|                      | usuario                         |                     |
++----------------------+---------------------------------+---------------------+
 
 
 Sobre el contexto actual
@@ -1405,159 +1428,105 @@ Sobre el contexto actual
 
 View @@plone_context_state
 
-Método
++----------------------+---------------------------------+---------------------+
+| Método               |  Lo que se obtiene              | global define       |
++======================+=================================+=====================+
+| current_page_url     | La dirección URL de la página   | current_page_url    |
+|                      | actual                          |                     |
++----------------------+---------------------------------+---------------------+
+| current_base_url     | La dirección URL real de la     |                     |
+|                      | página actual                   |                     |
++----------------------+---------------------------------+---------------------+
+| canonical_object     | El objeto actual en sí          |                     |
++----------------------+---------------------------------+---------------------+
+| canonical_object_url | La dirección URL del objeto     |                     |
+|                      | actual                          |                     |
++----------------------+---------------------------------+---------------------+
+| view_url             | La URL utilizada para           |                     |
+|                      | visualizar el objeto            |                     |
++----------------------+---------------------------------+---------------------+
+| view_template_id     | La id de la plantilla de vista  |                     |
++----------------------+---------------------------------+---------------------+
+| is_view_template     | Verdadero si el URL actual se   |                     |
+|                      | refiere a la vista estándar     |                     |
++----------------------+---------------------------------+---------------------+
+| object_url           | La dirección URL del objeto     |                     |
+|                      | actual                          |                     |
++----------------------+---------------------------------+---------------------+
+| object_title         | El título "embellecido" del     |                     |
+|                      | objeto actual                   |                     |
++----------------------+---------------------------------+---------------------+
+| member               | El actual miembro autenticado   | member              |
++----------------------+---------------------------------+---------------------+
+| workflow_state       | El estado de flujo de trabajo   | wf_state            |
+|                      | del objeto actual               |                     |
++----------------------+---------------------------------+---------------------+
+| friendly_types       | Obtener una lista de tipos que  |                     |
+|                      | se pueden implementar por un    |                     |
+|                      | usuario                         |                     |
++----------------------+---------------------------------+---------------------+
+| parent               | El "padre" directo del objeto   |                     |
+|                      | actual                          |                     |
++----------------------+---------------------------------+---------------------+
+| folder               | La carpeta actual               |                     |
++----------------------+---------------------------------+---------------------+
+| is_folderish         | Verdadero si es un objeto       | isFolderish         |
+|                      | "folderish"                     |                     |
++----------------------+---------------------------------+---------------------+
+| is_structural_folder | Verdadero si es una carpeta     | isStructuralFolder  |
+|                      | estructural                     |                     |
++----------------------+---------------------------------+---------------------+
+| is_default_page      | Verdadero si es la página por   |                     |
+|                      | defecto en una carpeta          |                     |
++----------------------+---------------------------------+---------------------+
+| is_portal_root       | Verdadero si este es el root    |                     |
+|                      | del portal o la página por      |                     |
+|                      | defecto en el root del portal   |                     |
++----------------------+---------------------------------+---------------------+
+| is_editable          | Verdadero si el objeto actual   | is_editable         |
+|                      | es editable                     |                     |
++----------------------+---------------------------------+---------------------+
+| is_locked            | Verdadero si el objeto actual   | isLocked            |
+|                      | está bloqueado                  |                     |
++----------------------+---------------------------------+---------------------+
+| actions              | Las acciones de filtrado en el  |                     |
+| (Plone 4)            | contexto. Puede restringir las  |                     |
+|                      | acciones a una sola categoría.  |                     |
++----------------------+---------------------------------+---------------------+
+| portlet_assignable   | Si el contexto es capaz de      |                     |
+| (Plone 4)            | tener  portlets localmente      |                     |
+|                      | asignados.                      |                     |
++----------------------+---------------------------------+---------------------+
 
-Lo que se obtiene
-
-global define
-
-current_page_url
-
-La dirección URL de la página actual
-
-current_page_url
-
-current_base_url
-
-La dirección URL real de la página actual
-
-canonical_object
-
-El objeto actual en sí
-
-canonical_object_url
-
-La dirección URL del objeto actual
-
-view_url
-
-La URL utilizada para visualizar el objeto
-
-view_template_id
-
-La id de la plantilla de vista
-
-is_view_template
-
-Verdadero si el URL actual se refiere a la vista estándar
-
-object_url
-
-La dirección URL del objeto actual
-
-object_title
-
-El título "embellecido" del objeto actual
-
-workflow_state
-
-El estado de flujo de trabajo del objeto actual
-
-wf_state
-
-parent
-
-El "padre" directo del objeto actual
-
-folder
-
-La carpeta actual
-
-is_folderish
-
-Verdadero si es un objeto "folderish"
-
-isFolderish
-
-is_structural_folder
-
-Verdadero si es una carpeta estructural
-
-isStructuralFolder
-
-is_default_page
-
-Verdadero si es la página por defecto en una carpeta
-
-is_portal_root
-
-Verdadero si este es el root del portal o la página por defecto en el root
-del portal
-
-is_editable
-
-Verdadero si el objeto actual es editable
-
-is_editable
-
-is_locked
-
-Verdadero si el objeto actual está bloqueado
-
-isLocked
-
-actions
-(Plone 4)
-Las acciones de filtrado en el contexto. Puede restringir las acciones a una sola categoría.
-
-portlet_assignable
-(Plone 4)
-Si el contexto es capaz de tener portlets localmente asignados.
 
 Herramientas
 ~~~~~~~~~~~~
 
 view @@plone_tools
 
-Método
 
-Lo que se obtiene
-
-global define
-
-actions
-
-La herramienta de portal para acciones
-
-atool
-
-catalog
-
-La herramienta portal_catalog
-
-membership
-
-La herramienta portal_membership
-
-mtool
-
-properties
-
-La herramienta portal_properties
-
-syndication
-
-La herramienta portal_syndication
-
-syntool
-
-types
-
-La herramienta portal_types
-
-url
-
-La herramienta portal_url
-
-utool
-
-workflow
-
-La herramienta portal_workflow
-
-wtool
-
-
++----------------------+-----------------------------------+---------------------+
+| Método               |  Lo que se obtiene                | global define       |
++======================+===================================+=====================+
+| actions              | La herramienta de portal para     | atool               |
+|                      | acciones                          |                     |
++----------------------+-----------------------------------+---------------------+
+| catalog              | La herramienta portal_catalog     |                     |
++----------------------+-----------------------------------+---------------------+
+| membership           | La herramienta portal_membership  | mtool               |
++----------------------+-----------------------------------+---------------------+
+| properties           | La herramienta portal_properties  |                     |
++----------------------+-----------------------------------+---------------------+
+| syndication          | La herramienta portal_syndication | syntool             |
++----------------------+-----------------------------------+---------------------+
+| types                | La herramienta portal_types       |                     |
++----------------------+-----------------------------------+---------------------+
+| url                  | La herramienta portal_url         | utool               |
++----------------------+-----------------------------------+---------------------+
+| workflow             | La herramienta portal_workflow    | wtool               |
++----------------------+-----------------------------------+---------------------+
+| types                | La herramienta portal_types       |                     |
++----------------------+-----------------------------------+---------------------+
 
 
 6.5. Utilizando las herramientas jQuery y jQuery
@@ -1627,13 +1596,13 @@ página `plone.app.jquerytools`_ pypi para documentación y ejemplos.
 .. _Zope book: http://www.plope.com/Books/2_7Edition/SearchingZCatalog.stx
 .. _The Definitive Guide to Plone: http://docs.neuroinf.de/PloneBook/ch11.rst#searching-and-categorizing-content
 .. _Plantillas y el lenguaje de plantillas: http://plone.org/documentation/manual/theme-reference/page/buildingblocks/skin/templates
-.. _http://plone.org/documentation/manual/archetypes-developer-manual/fields/fields-reference: http://plone.org/kb/manual/archetypes-developer-manual/fields/fields-reference
-.. _http://plone.org/documentation/tutorial/richdocument/pil: http://plone.org/kb/tutorial/richdocument/pil
+.. _http://plone.org/kb/manual/archetypes-developer-manual/fields/fields-reference: http://plone.org/kb/manual/archetypes-developer-manual/fields/fields-reference
+.. _http://plone.org/documentation/kb/richdocument/pil: http://plone.org/kb/tutorial/richdocument/pil
 .. _Skin: http://plone.org/documentation/manual/theme-reference/page/buildingblocks/skin
 .. _Skin o Componentes: http://plone.org/documentation/manual/theme-reference/page/buildingblocks/components/skinorcomponents
 .. _siguiente sección: http://plone.org/documentation/manual/theme-reference/page/css/resource-registries
 .. _TALES: http://docs.zope.org/zope2/zope2book/source/AppendixC.html#tales-overview
-.. _global template variables (variables globales de plantilla): http://plone.org/documentation/tutorial/zpt/global-template-variables/
+.. _global template variables (variables globales de plantilla): http://plone.org/documentation/manual/theme-reference/buildingblocks/skin/templates/global-template-variables
 .. _dentro de ellas.: http://plone.org/documentation/how-to/cmf-expressions
 .. _http://msdn.microsoft.com/en-us/library/ms537512.aspx: http://msdn.microsoft.com/en-us/library/ms537512.aspx
 .. _Lea más acerca de las configuraciones de medios de CSS en w3.org: http://www.w3.org/TR/CSS21/media.html

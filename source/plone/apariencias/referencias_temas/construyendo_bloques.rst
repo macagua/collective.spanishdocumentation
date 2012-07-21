@@ -608,8 +608,7 @@ siguiente encima de la tabla:
 
 .. code-block:: html
 
-          <h4 tal:condition="not:container/objectValues">There
-          Are No Items (No hay elementos)</h4>
+          <h4 tal:condition="not:container/objectValues">There Are No Items</h4>
 
 La variable ``items`` no la puede usar todavía, ya que no está definida. Si
 usted mueve la definición a la etiqueta ``h4``, no la puede usar más en la
@@ -658,7 +657,7 @@ completos de la celda, incluyendo las imágenes con le texto meta-type, este
 tiene que ser eliminado. En su lugar, se inserta el meta-type en línea de la
 misma manera como la dirección URL en la parte superior de la página.
 
-Based on the `Zope Book`_, (C) `Zope Corporation`_
+Basado en el `Zope Book`_, (C) `Zope Corporation`_
 
 
 Macros y ranuras
@@ -1034,7 +1033,7 @@ usted puede poner el cuerpo de la página en una tabla y agregar una barra
 lateral a la izquierda y la plantilla de notas de prensa automáticamente
 usará estos elementos nuevos de presentación.
 
-Based on the `Zope Book`_, (C) `Zope Corporation`_
+Basado en el `Zope Book`_, (C) `Zope Corporation`_
 
 
 Uso avanzado
@@ -1062,8 +1061,8 @@ que debería conocer:
 
 3.  El orden en el que usted escribe atributos TAL en una etiqueta no
     afecta el orden en que se ejecutan. No importa cómo las ordene, las
-    sentencias TAL en una etiqueta siempre se ejecutaran de la siguiente
     manera : ``define (definir)``, ``condition (condición)``, ``repeat
+    sentencias TAL en una etiqueta siempre se ejecutaran de la siguiente
     (repetir)``, ``content (contenido)`` / ``replace (remplazar)``,
     ``attributes (atributos)``.
 
@@ -1504,10 +1503,10 @@ expresión "string", así que tiene que entrar a través de la variable
 ``modules``. Usted puede hacer esto directamente con una expresión que lo
 use, o definir una variable global para él, de esta manera:
 
-.. code-block:: html
+.. code-block:: xml
 
-          tal:define="global mstring modules/string"
-          tal:replace="python:mstring.join(slist, ':')"
+    tal:define="global mstring modules/string"
+    tal:replace="python:mstring.join(slist, ':')"
 
 Los módulos se pueden agrupar en paquetes, que son simplemente una forma de
 organizar y nombrar los módulos relacionados. Por ejemplo, los scripts de
@@ -1518,10 +1517,10 @@ para formato útiles que son estándares en la etiqueta DTML "Var". El nombre
 completo de este módulo es "Products.PythonScripts.standard", así que puede
 obtener acceso a él usando cualquiera de la siguientes sentencias:
 
-.. code-block:: html
+.. code-block:: xml
 
-          tal:define="pps modules/Products.PythonScripts.standard"
-          tal:define="pps python:modules['Products.PythonScripts.standard']"
+    tal:define="pps modules/Products.PythonScripts.standard"
+    tal:define="pps python:modules['Products.PythonScripts.standard']"
 
 La mayoría de los módulos Python no se pueden acceder desde Plantillas de
 página, DTML, o scripts a menos que agregue a ellos las declaraciones de
@@ -2175,11 +2174,11 @@ Ahora ya debería saber toda la información siguiente:
 
 -   Cómo identificar cuales partes de una plantilla de vista en
     Arquetipos son generadas por los macros de ``header (encabezado)``,
-    ``body (cuerpo)``,``folderlisting (listado de carpetas)``, y ``footer 
+    ``body (cuerpo)``, ``folderlisting (listado de carpetas)``, y ``footer 
     (pié de página)``
 
 -   Cómo crear una plantilla de vista personalizada que sustituya uno o
-    más de los macros ``header ``,``body``,``folderlisting``, y ``footer``
+    más de los macros ``header``, ``body``, ``folderlisting``, y ``footer``
 
 -   Cómo crear una plantilla de widget personalizada que funcione en el
     marco Arquetipos
@@ -2251,20 +2250,34 @@ acuerdo a los pasos anteriores, y hará uso de las macros definidos dentro de
 la plantilla. Plantillas de vista puede definir uno o más de las siguientes
 macros:
 
-``css`` Un macro para insertar código CSS de tipo-específico, incluyendo
-etiquetas de ``<link>`` apuntando a archivos CSS personalizados. No hay
-ningún macro por defecto dentro de los Arquetipos, este utiliza los actuales
-estilos CSS en Plone para renderizar objetos de base-AT. ``header`` Este
-macro, por defecto, genera la etiqueta ``<h1>`` conteniendo el título del
-objeto y las acciones sobre el documento (imprimir, RSS, etc.) ``body`` El
-lugar donde los campos y los valores se muestran por defecto. Cuando se
-renderiza campos usando el mecanismo widget existente, asegúrese de definir
-con ``tal:define`` la variable de ``field`` como el campo actual; las
-plantillas widget dependen de que esta variable se configure.
-``folderlisting`` Este es el listado de carpetas cuando se esta viendo la
-etiqueta de ``vista`` de un objeto folderish. Esta **no** es lo misma que la
-vista de ``contenido``. ``footer`` Por defecto, aquí es donde Arquetipos
-coloca la línea de fondo. ``label`` Esta plantilla genera rótulos de campo.
+.. glossary::
+
+  ``css``
+    Un macro para insertar código CSS de tipo-específico, incluyendo etiquetas 
+    de ``<link>`` apuntando a archivos CSS personalizados. No hay ningún macro 
+    por defecto dentro de los Arquetipos, este utiliza los actuales estilos CSS 
+    en Plone para renderizar objetos de base-AT.
+    
+  ``header``
+    Este macro, por defecto, genera la etiqueta ``<h1>`` conteniendo el título del 
+    objeto y las acciones sobre el documento (imprimir, RSS, etc.)
+    
+  ``body``
+    El lugar donde los campos y los valores se muestran por defecto. Cuando se renderiza 
+    campos usando el mecanismo widget existente, asegúrese de definir con ``tal:define`` 
+    la variable de ``field`` como el campo actual; las plantillas widget dependen de que 
+    esta variable se configure.
+    
+  ``folderlisting``
+    Este es el listado de carpetas cuando se esta viendo la etiqueta de ``vista`` de un 
+    objeto folderish. Esta **no** es lo misma que la vista de ``contenido``.
+    
+  ``footer`` 
+    Por defecto, aquí es donde Arquetipos coloca la línea de fondo. 
+    
+  ``label`` 
+    Esta plantilla genera rótulos de campo.
+
 
 Para cualquiera de estos macros que no este definido en la plantilla de vista
 personalizada. Arquetipos usará el comportamiento por defecto en este lugar,
@@ -2335,7 +2348,7 @@ macros correctos usará esos en lugar de los predeterminados "view_macros"
 
 A continuación se muestra un ejemplo del esqueleto de una plantilla de vista
 personalizada que muestra las diferentes cosas que se pueden personalizar.
-See base.pt
+Ver base.pt
 
 .. code-block:: html
 
@@ -2378,7 +2391,7 @@ See base.pt
 
 Abajo hay un esqueleto de una plantilla de edición personalizada:
 
-.. code-block:: html
+.. code-block:: xml
 
     <html xmlns="http://www.w3.org/1999/xhtml"
           xml:lang="en" lang="en"
@@ -2551,24 +2564,25 @@ Dentro de su propio producto de tema
 .. image:: ./your_theme_egg_skin_cutdown.gif
   :alt: La carpeta skins en su producto de tema
 
-/skins/[su espacio de nombre de tema].
+.. glossary::
 
-  [su espacio de tema]_custom_templates | custom_images | styles 
-  Estos directorios formarán las capas de skins. Sus
-  plantillas, imágenes y hojas de estilo pueden ir aquí. Si usted pidió por
-  esto, la plantilla de pegado plone3_theme proveerá una hoja de estilo en
-  blanco para sustituir los por defecto de Plone. /skins.zcml Cuando la
-  instancia de Zope arranca, esto convierte sus directorios en las capas de
-  skin. 
+  /skins/[su espacio de nombre de tema].[su espacio de tema]_custom_templates | custom_images | styles 
+    Estos directorios formarán las capas de skins. Sus
+    plantillas, imágenes y hojas de estilo pueden ir aquí. Si usted pidió por
+    esto, la plantilla de pegado plone3_theme proveerá una hoja de estilo en
+    blanco para sustituir los por defecto de Plone. /skins.zcml Cuando la
+    instancia de Zope arranca, esto convierte sus directorios en las capas de skin. 
+
 
 .. image:: ./your_theme_egg_skin_cutdown1.gif
   :alt: Subsidiary files used for installing and setting up the Skin
 
+.. glossary::
 
-/profiles/default/skins.xml | cssregistry.xml | jsregistry.xml 
+  /profiles/default/skins.xml | cssregistry.xml | jsregistry.xml 
+    Cuando su tema está instalado en el sitio Plone, este configura la jerarquía 
+    de las capas de skin, y registra sus hojas de estilo y JavaScript con los registros
 
-  Cuando su tema está instalado en el sitio Plone, este configura la jerarquía 
-  de las capas de skin, y registra sus hojas de estilo y JavaScript con los registros
 
 
 Hojas de estilo
@@ -3902,7 +3916,7 @@ Los pasos clave son:
 
         <skin-path name="[su nombre de skin" based-on="Plone Default">
           <layer name="[Su nombre del directorio skin]"
-             insert-after="custom"/>
+                 insert-after="custom"/>
         </skin-path>
 
 3.  Defina su skin como la skin por defecto [su paquete del tema]/profiles/default/skins.xml 
@@ -4074,9 +4088,9 @@ Para más información puede revisar:
 
 -   Sección :ref:`Anatomía de un Viewlet <711_seccion>` en este manual de referencia
 
--   `http://plone.org/documentation/tutorial/customizing-main-template-viewlets`_
+-   `http://plone.org/documentation/kb/customizing-main-template-viewlets`_
 
--   `http://plone.org/documentation/tutorial/customization-for-developers/viewlets/`_
+-   `http://plone.org/documentation/kb/customization-for-developers/viewlets`_
 
 
 Portlet
@@ -4092,9 +4106,9 @@ Administrador de Portlet.
 
 Para más información echa un vistazo a:
 
--   The :ref:`Anatomy of a Portlet <721_seccion>` section of this manual
+-   La sección :ref:`Anatomía de un portlet <721_seccion>` de este manual.
 -   `http://plone.org/documentation/how-to/override-the-portlets-in-plone-3.0/`_
--   `http://plone.org/documentation/tutorial/customization-for-developers/portlet-renderers/`_ (for a much more technical explanation)
+-   `http://plone.org/documentation/kb/customization-for-developers/portlet-renderers`_ (para una explicación mucho mas técnica)
 -   `http://plone.org/documentation/how-to/adding-portlet-managers`_
 
 
@@ -4114,10 +4128,11 @@ A veces verá que es referida como BrowserView (Vista de Explorador) o
 precedido por @@. Nos fijamos en las vistas del explorador una vez más en la
 sección de :ref:`armar una página <6_seccion>`.
 
-> Note que el término explorador y namespace del explorador son usados para
-demarcar componentes de presentación; esto es, esas partes de códigos que se
-usan para crear elementos las cuales encontrarán el camino al navegador Web
-en algún momento.
+.. note::
+    Tenga en cuenta que el término explorador y namespace del explorador son usados para 
+    demarcar componentes de presentación; esto es, esas partes de códigos que se
+    usan para crear elementos las cuales encontrarán el camino al navegador Web
+    en algún momento.
 
 
 Recurso (Recurso de Explorador) y ResourceDirectory (Directorio de Recurso)
@@ -4270,11 +4285,11 @@ administrador de viewlet:
 .. code-block:: xml
 
           <browser:viewletManager
-            name="plone.abovecontentbody"
-            provides=".interfaces.IAboveContentBody"
-            permission="zope2.View"
-            class="plone.app.viewletmanager.manager.OrderedViewletManager"
-            />
+              name="plone.abovecontentbody"
+              provides=".interfaces.IAboveContentBody"
+              permission="zope2.View"
+              class="plone.app.viewletmanager.manager.OrderedViewletManager"
+              />
 
 ¿Cómo detectar una interfaz?
 ----------------------------
@@ -4378,7 +4393,6 @@ plantilla y también su propia clase:
 
     class [su nombre de clase](LogoViewlet):
         render = ViewPageTemplateFile('[nombre de su plantilla]')
-    
 
 -   Primero traiga ("import" ("importar")) todas las partes y detalles
     mediante los cuales construirá su clase por...... import......
@@ -4418,7 +4432,7 @@ permisos, que otorgan derechos particulares sobre ciertos aspectos del sitio.
 Para saber más sobre permisos consulte el tutorial para el entendimiento de
 permisos y seguridad:
 
--   `http://plone.org/documentation/tutorial/understanding-permissions/`_
+-   `http://plone.org/documentation/kb/understanding-permissions`_
 
 En el caso de componentes, el atributo de permiso permite al sitio decidir si
 un usuario tiene un derecho (permiso) para ver o interactuar con un
@@ -4610,7 +4624,7 @@ En Plone 3.1, plone.browserlayer está disponible para usted.
 
     <layers>
      <layer name="[su nombre de skin]"
-       interface="[su nombre de espacio].[su nombre del tema].browser.interfaces.IThemeSpecific"
+            interface="[su nombre de espacio].[su nombre del tema].browser.interfaces.IThemeSpecific"
      />
     </layers>
 
@@ -4770,12 +4784,12 @@ creada por la plantilla de paster plone3_theme:
 .. code-block:: xml
 
     <genericsetup:registerProfile
-     name="default"
-     title="[su nombre de skin]"
-     directory="profiles/default"
-     description='Extension profile for the "[su nombre de skin]" Plone theme.'
-     provides="Products.GenericSetup.interfaces.EXTENSION"
-    />
+        name="default"
+        title="[su nombre de skin]"
+        directory="profiles/default"
+        description='Extension profile for the "[su nombre de skin]" Plone theme.'
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+        />
 
 verá que apunta a un directorio para la ubicación de los archivos XML e
 indica que se trata de un perfil de extensión mediante el uso de una
@@ -4954,8 +4968,8 @@ Dentro de su propio producto de tema
 
 .. _Zope Page Templates tutorial on plone.org (Tutorial de Plantillas de página Zope en plone.org): http://plone.org/documentation/tutorial/zpt/
 .. _ZPT Reference on Zope.org (Referencia de ZPT en Zope.org): http://www.zope.org/Documentation/Books/ZopeBook/2_6Edition/AppendixC.stx
-.. _Zope Page Template Tutorial on plone.org - Advanced Usage (Tutorial de Plantillas de página Zope en plone.org; uso avanzado): http://plone.org/documentation/tutorial/zpt/advanced-usage
-.. _útil introducción: http://plone.org/documentation/plone-2.5-user-manual/managing-content/folder-view/
+.. _Zope Page Template Tutorial on plone.org - Advanced Usage (Tutorial de Plantillas de página Zope en plone.org; uso avanzado): http://plone.org/documentation/manual/theme-reference/buildingblocks/skin/templates/advanced-usage
+.. _útil introducción: http://plone.org/documentation/manual/plone-2.5-user-manual/managing-content/folder-view/
 .. _The Zope Book (el Libro de Zope): http://www.zope.org/Documentation/Books/ZopeBook/current/ExternalTools.stx
 .. _artículo WebDAV: http://www.zope.org/Documentation/Articles/WebDAV
 .. _Emacs: http://www.gnu.org/software/emacs/
@@ -4969,8 +4983,8 @@ Dentro de su propio producto de tema
 .. _Zope Developers Community.: http://docs.zope.org/zope2/zope2book/source/Contributions.html
 .. _Products.CMFPlone.browser.interfaces.IPlone: http://dev.plone.org/plone/browser/Plone/branches/3.2/Products/CMFPlone/browser/interfaces.py#L199
 .. _The ATViewTutorial product: http://plone.org/documentation/manual/theme-reference/buildingblocks/skin/templates/customizing-at-templates/atviewtutorial.tgz
-.. _Archetypes Quick Reference Manual (Manual rápido de referencia para Arquetipos): http://plone.org/products/archetypes/documentation/manual/quickref
-.. _RichDocument tutorial: http://plone.org/tutorial/richdocument
+.. _Archetypes Quick Reference Manual (Manual rápido de referencia para Arquetipos): http://plone.org/products/archetypes/documentation/old/quickref
+.. _RichDocument tutorial: http://plone.org/documentation/kb/richdocument
 .. _[1]: http://localhost:8080/samplecontent/test-page#ref1
 .. _[2]: http://localhost:8080/samplecontent/test-page#ref2
 .. _http://plone.org/documentation/tutorial/working-with-css: http://plone.org/documentation/manual/tutorial/working-with-css
@@ -4981,16 +4995,16 @@ Dentro de su propio producto de tema
 .. _Five Tutorial on WorldCookery.com: http://worldcookery.com/files/ploneconf05-five/step2.html
 .. _http://apidoc.zope.org/++apidoc++/: http://apidoc.zope.org/++apidoc++/
 .. _http://wiki.zope.org/zope3/ZCMLStyleGuide: http://wiki.zope.org/zope3/ZCMLStyleGuide
-.. _http://plone.org/documentation/tutorial/customization-for-developers/viewlets/: http://plone.org/documentation/tutorial/customization-for-developers/viewlets/
+.. _http://plone.org/documentation/kb/customization-for-developers/viewlets: http://plone.org/documentation/kb/customization-for-developers/viewlets
 .. _http://plone.org/documentation/how-to/override-the-portlets-in-plone-3.0/: http://plone.org/documentation/how-to/override-the-portlets-in-plone-3.0/
-.. _http://plone.org/documentation/tutorial/customization-for-developers/portlet-renderers/: http://plone.org/documentation/tutorial/customization-for-developers/portlet-renderers/
+.. _http://plone.org/documentation/kb/customization-for-developers/portlet-renderers: http://plone.org/documentation/kb/customization-for-developers/portlet-renderers
 .. _http://plone.org/documentation/how-to/adding-portlet-managers: http://plone.org/documentation/how-to/adding-portlet-managers
 .. _explicación técnica: http://plone.org/plone-developer-reference/patterns/views/
 .. _http://wiki.python.org/moin/HowToEditPythonCode: http://wiki.python.org/moin/HowToEditPythonCode
 .. _Dive Into Python - Defining Classes: http://www.diveintopython.org/object_oriented_framework/defining_classes.html
-.. _http://plone.org/documentation/tutorial/understanding-permissions/: http://plone.org/documentation/tutorial/understanding-permissions/
+.. _http://plone.org/documentation/kb/understanding-permissions: http://plone.org/documentation/kb/understanding-permissions
 .. _gran discusión: http://www.openplans.org/projects/ootb-plone-themes/lists/ootb-plone-themes-discussion/archive/2008/05/1209686168874/forum_view
 .. _http://api.plone.org: http://api.plone.org/
-.. _Understanding and Using Generic Setup on plone.org: http://plone.org/tutorial/genericsetup/exports-snapshots-and-comparisons
+.. _Understanding and Using Generic Setup on plone.org: http://plone.org/documentation/kb/genericsetup/exports-snapshots-and-comparisons
 .. _Firebug: http://getfirebug.com/
-.. _http://plone.org/documentation/tutorial/customizing-main-template-viewlets: http://plone.org/documentation/tutorial/customizing-main-template-viewlets
+.. _http://plone.org/documentation/kb/customizing-main-template-viewlets: http://plone.org/documentation/kb/customizing-main-template-viewlets

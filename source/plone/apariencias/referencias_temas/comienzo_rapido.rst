@@ -39,7 +39,8 @@ En primer lugar afile sus lápices
   Hay una serie de herramientas que facilitarán bastante el proceso de 
   tematización, :ref:`estas herramientas las describiremos aquí <221_firefox-mozilla-ui-development-tools>`. 
   Para ver sus personalizaciones tiene que asegurarse que está ejecutando su sitio 
-  en :ref:`modo depuración/desarrollo <222_seccion>`.  
+  en :ref:`modo depuración/desarrollo <222_seccion>`.
+  
 Ahora trate algunas personalizaciones de CCS
   Lo acompañaremos en el :ref:`proceso de sustituir el estilo del título de la página <23_seccion>`, 
 
@@ -218,7 +219,7 @@ uno o dos archivos.
 
 Usted necesitará desactivar esto al momento de hacer cambios o personalizar
 la CSS. Así que asegúrese completamente que ha seguido las instrucciones de
-cómo poner su sitio en `modo depuración/desarrollo <222_seccion>`.
+cómo poner su sitio en :ref:`modo depuración/desarrollo <222_seccion>`.
 
 
 Encontrando los estilos que quiere cambiar
@@ -347,10 +348,10 @@ es que en Plone 3 se llama logo.jpg y en Plone 4 logo.png).
 
 .. code-block:: html
 
-    <a id="portal-logo" href="http://[your site]" accesskey="1">
+    <a id="portal-logo" href="http://[su sitio web]" accesskey="1">
 
         <img width="252" height="57" title="Plone" alt=""
-             src="http://[your site]/logo.jpg"/>
+             src="http://[su sitio web]/logo.jpg"/>
 
     </a>
 
@@ -468,7 +469,8 @@ El HTML para el logotipo es generado mediante logo.pt; una plantilla de
 página parte del viewlet denominado plone.logo. Para personalizar esto a
 través de la web, necesitará usar portal_view_customizations.
 
--   Vaya a portal_view_customizations en la ZMI (Interfaz de Administración de Zope) (:menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`)
+-   Vaya a portal_view_customizations en la ZMI (Interfaz de Administración de Zope) 
+    (:menuselection:`Configuración del sitio --> Interfaz de Administración de Zope --> portal_view_customizations`)
 
 -   Haga clic en plone.logo en el botón de Personalizar
 
@@ -582,8 +584,8 @@ No tiene que utilizar logo_tag si no lo desea:
        accesskey="1"
        tal:attributes="href view/navigation_root_url"
        i18n:domain="plone">
-        <img src="[My logo ID]" alt="[My Logo]"
-             width="[My Width]" height="[My Height]"
+        <img src="[Mi ID del logo]" alt="[Mi Logo]"
+             width="[Mi ancho del logo]" height="[Mi alto del logo]"
              tal:attributes="title view/portal_title" />
     </a>
 
