@@ -1,5 +1,7 @@
 .. -*- coding: utf-8 -*-
 
+.. _flujo_de_trabajo:
+
 ==================================
 4. Colaboración y flujo de trabajo
 ==================================
@@ -40,7 +42,11 @@ Además, y esto sera muy importante, ciertos tipos de contenidos tales como
 noticias y eventos, no aparecerán en el sitio web como usted espera, hasta
 que hayan sido explícitamente *publicados*.
 
+----
+
 Recuerde esto: **¡el Estado de Publicación es importantísimo!**
+
+----
 
 El Estado de Publicación solo puede ser cambiado por aquellos usuarios que
 tengan las autorizaciones necesarias. El menú Estado mostrara solo aquellas
@@ -152,12 +158,15 @@ elemento ya esta publicado aparecerán las siguientes opciones al final del
 panel *Retirar* y *Echar atrás* para "privatizar" el elemento,
 estableciéndolo a *borrador publico* o luego para Estado *Privado*.
 
-.. image:: images/lightscameraaction.png
-  :alt: 
-  :align: center
+----
 
-Ver un vídeo sobre como `controlar el Estado de Publicación`_ en Plone 2
+.. figure:: images/lightscameraaction.png
+    :alt: 
+    :align: center
 
+Ver un vídeo sobre como `controlar el Estado de Publicación`_ en Plone 2.
+
+----
 
 4.3. Políticas de flujo de trabajo
 ==================================
@@ -278,7 +287,7 @@ Si observamos detenidamente los permisos disponibles, vemos que hay:
     agregar nuevos elementos de contenido. Y debido a que este usuario
     también es el creador de elementos de contenidos, igualmente sera capaz
     de editarlos.
--   **Puede editar **- Cuando este permiso es otorgado en una carpeta, el
+-   **Puede editar** - Cuando este permiso es otorgado en una carpeta, el
     usuario no solo puede editar la carpeta (titulo y descripción) sino que
     también puede editar cualquiera de los elementos contenidos en la
     carpeta. Sin embargo, el usuario no tiene el permiso de eliminar
@@ -315,7 +324,7 @@ Documentation. Ella le dará el permiso "Puede agregar" y luego hará clic en
   :alt: 
   :align: center
 
- ¡Eso es todo! Ahora veamos como ve George el sitio.
+¡Eso es todo! Ahora veamos como ve George el sitio.
 
 Nota: George NO necesita salir e iniciar sesión nuevamente. Los permisos
 siempre se mantienen al día ya que se revisan cada vez que un usuario acede a
@@ -453,10 +462,12 @@ necesitado la dirección URL completa para poder llegar al documento que tenia
 permiso de editar. ¡Los permisos son muy específicos en Plone!
 
 
-Créditos de esta sección
-------------------------
+.. _controlar el Estado de Publicación: http://media.plone.org/LearnPlone/Publishing%20States.swf
 
-.. sectionauthor:: Leonardo J. Caballero G. <lcaballero@cenditel.gob.ve>, 
+Créditos de esta traducción
+---------------------------
+
+.. sectionauthor:: Leonardo J. Caballero G. <leonardocaballero@gmail.com>,
 .. codeauthor:: 
     Luis Sumoza <lsumoza@gmail.com>, 
     Victor Terán <vteran93@yahoo.es>

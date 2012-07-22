@@ -1,5 +1,7 @@
 .. -*- coding: utf-8 -*-
 
+.. _agregando_contenido:
+
 ======================
 2. Agregando Contenido
 ======================
@@ -34,57 +36,77 @@ usar el tipo de contenido **Imagen**. La siguiente es una lista de tipos de
 contenidos disponibles en el orden de su aparición, y para que se usa cada
 uno:
 
-Colección Las Colecciones son usadas para agrupar y mostrar contenido basado
-en una serie de **criterios** los cuales puede definir. Estas trabajan como
-una consulta a una base de datos.
-Evento Un evento es un tipo de contenido como una pagina especial para
-publicar información acerca de un evento (como una recaudación de fondos,
-parrillada, etc). Este tipo de contenido tiene una función que le permite al
-visitante del sitio agregar el evento a su calendario de escritorio con el
-estándar iCal o vCal. Este formato es soportado por aplicaciones como: Google
-Calendar, Outlook, Sunbird y otros.
-Para agregar un evento a su calendario, haga clic en el enlace vCal o iCal al
-lado del texto "Agregar evento al calendario" en la vista principal de un
-elemento de evento.
+.. glossary::
 
-.. image:: images/image_preview.jpeg
-  :alt: Tabla resumen de Eventos
-  :align: center
+  Colección
+    Las Colecciones son usadas para agrupar y mostrar contenido basado
+    en una serie de **criterios** los cuales puede definir. Estas trabajan 
+    como una consulta a una base de datos.
 
-Desde Plone 3.3 usted puede obtener también todos los eventos en una carpeta
-en un solo paso (actualmente solo disponible en formato iCal). Para descargar
-el archivo iCal, agregue *@@ics_view* al final de la dirección URL de la
-carpeta que contiene los eventos. Por ejemplo, si usted quiere obtener todos
-los eventos dentro de la carpeta *Eventos* en el raíz de su sitio, vaya a
-*http://misitio.com/events/@@ics_view*. Hay maneras para proveer un enlace a
-este calendario iCal dentro de la Interfaz de usuario en futuras
-publicaciones.Archivo Un archivo en Plone es cualquier archivo binario que
-usted desee subir con la intención de que este sea descargado por los
-visitantes de su sitio. Ejemplos comunes son archivos PDF, Documentos de
-ofimática como MS Word y Hojas de Calculo.
-Carpeta La carpetas trabajan en Plone muy parecido a como lo hacen las
-carpetas en su computadora. Usted puede usar carpetas para organizar su
-contenido, y dar a su sitio web Plone una estructura de navegación.
-Imagen El tipo de contenido Imagen es usado para subir archivos de imagen
-(JPG, GIF, PNG) que usted puede insertarlas dentro de paginas u otro tipos de
-contenidos de tipo pagina.
-Enlace También asociado como el 'Objeto enlace'; no confundirlos con los
-enlaces que usted crea vía Kupu, editor visual de paginas Plone. El tipo de
-contenido Enlace es regularmente usado para incluir un enlace a un sitio web
-externo en la navegación y otros usos especializados.
-Noticia Este tipo de contenido es similar al Evento, solamente que estos
-elementos son especialmente para publicar noticias. Usted puede también
-adjuntar una imagen miniatura a una Noticia, la cual aparecerá en la vista de
-resumen en la carpeta al lado del resumen de la Noticia.
-Pagina
-Una Pagina en Plone es uno contenidos disponibles mas simples. uselas para
-escribir la mayor parte de sus paginas web en el sitio Web Plone.
+  Evento
+    Un evento es un tipo de contenido como una pagina especial para
+    publicar información acerca de un evento (como una recaudación de 
+    fondos, parrillada, etc). Este tipo de contenido tiene una función 
+    que le permite al visitante del sitio agregar el evento a su calendario 
+    de escritorio con el estándar iCal o vCal. Este formato es soportado 
+    por aplicaciones como: Google Calendar, Outlook, Sunbird y otros.
+    
+    Para agregar un evento a su calendario, haga clic en el enlace vCal o 
+    iCal al lado del texto "Agregar evento al calendario" en la vista principal 
+    de un elemento de evento.
+    
+    .. image:: images/image_preview.jpeg
+      :alt: Tabla resumen de Eventos
+      :align: center
+    
+    Desde Plone 3.3 usted puede obtener también todos los eventos en una carpeta
+    en un solo paso (actualmente solo disponible en formato iCal). Para descargar
+    el archivo iCal, agregue *@@ics_view* al final de la dirección URL de la
+    carpeta que contiene los eventos. Por ejemplo, si usted quiere obtener todos
+    los eventos dentro de la carpeta *Eventos* en el raíz de su sitio, vaya a
+    *http://misitio.com/events/@@ics_view*. Hay maneras para proveer un enlace a
+    este calendario iCal dentro de la Interfaz de usuario en futuras publicaciones.
 
+  Archivo
+    Un archivo en Plone es cualquier archivo binario que usted desee subir 
+    con la intención de que este sea descargado por los visitantes de su 
+    sitio. Ejemplos comunes son archivos PDF, Documentos de ofimática como 
+    MS Word y Hojas de Calculo.
 
-Nota: Dependiendo de que productos adicionales tenga usted instalado, tendrá
-mas opciones en su menú desplegable **Agregar elemento** de las que
-aparecen aquí. Para mas información acerca de esos tipos de contenidos
-adicionales, consulte la documentación del Producto adicional a utilizar.
+  Carpeta
+    La carpetas trabajan en Plone muy parecido a como lo hacen las
+    carpetas en su computadora. Usted puede usar carpetas para organizar 
+    su contenido, y dar a su sitio web Plone una estructura de navegación.
+
+  Imagen
+    El tipo de contenido Imagen es usado para subir archivos de imagen
+    (JPG, GIF, PNG) que usted puede insertarlas dentro de paginas u otro 
+    tipos de contenidos de tipo pagina.
+
+  Enlace
+    También asociado como el 'Objeto enlace'; no confundirlos con los
+    enlaces que usted crea vía Kupu, editor visual de paginas Plone. 
+    El tipo de contenido Enlace es regularmente usado para incluir un 
+    enlace a un sitio web externo en la navegación y otros usos 
+    especializados.
+
+  Noticia
+    Este tipo de contenido es similar al Evento, solamente que estos
+    elementos son especialmente para publicar noticias. Usted puede 
+    también adjuntar una imagen miniatura a una Noticia, la cual 
+    aparecerá en la vista de resumen en la carpeta al lado del resumen 
+    de la Noticia.
+
+  Pagina
+    Una Pagina en Plone es uno contenidos disponibles mas simples. 
+    uselas para escribir la mayor parte de sus paginas web en el 
+    sitio Web Plone.
+
+.. note::
+    Dependiendo de que productos adicionales tenga usted instalado, tendrá
+    mas opciones en su menú desplegable **Agregar elemento** de las que
+    aparecen aquí. Para mas información acerca de esos tipos de contenidos
+    adicionales, consulte la documentación del Producto adicional a utilizar.
 
 
 Titulo
@@ -184,12 +206,15 @@ manual de usuario.
 Asegúrese de hacer clic en el botón **Guardar** al final de la pagina cuando
 haya terminado. Esto completara el proceso de creación de una carpeta.
 
-.. image:: images/lights-camera-action_002.png
-  :alt: lights-camera-action.png
-  :align: center
+----
 
-Ver un vídeo sobre como `agregar una carpeta`_ en Plone 2 (significativamente diferente).
+.. figure:: images/lights-camera-action_002.png
+    :alt: lights-camera-action.png
+    :align: center
+    
+    Ver un vídeo sobre como `agregar una carpeta`_ en Plone 2 (significativamente diferente).
 
+----
 
 2.3. ¿Que hay en un nombre web?
 ===============================
@@ -278,9 +303,13 @@ involucrar un poco de trabajo en su computadora local, pero es esencial
 porque las fotografías, mapas y gráficos personalizados son muy importantes
 en los sitios web.
 
-     :ref:`preparando-imagenes-para-la-web`
+:ref:`Preparando imágenes para la Web <preparando-imagenes-para-la-web>`
 
-    **Recuerde usar formatos de archivos que sean estándares para la web para cada una de las imágenes. Los formatos aceptados incluyen: JPG, JPEG, GIF, y PNG. No use formatos BMP o TIFF ya que estos no son completamente compatibles con los navegadores web.**
+.. tip::
+    **Recuerde usar formatos de archivos que sean estándares para la web para 
+    cada una de las imágenes. Los formatos aceptados incluyen: JPG, JPEG, GIF, 
+    y PNG. No use formatos BMP o TIFF ya que estos no son completamente compatibles 
+    con los navegadores web.**
 
 Cuando este listo para agregar una imagen use el menú desplegable *Agregar
 elemento* (usted solo vera el menú *Agregar elemento* después de iniciar
@@ -376,9 +405,10 @@ Ver un vídeo de Plone 2 donde se `usa el editor visual para editar el texto de 
 Descripción de la barra de herramientas y iconos en el editor Kupu 1.4.x
 ------------------------------------------------------------------------
 
-Nota: Kupu es una pieza de software incrustada en Plone que se usa como
-editor visual predeterminado -- usted no vera el nombre de Kupu en ningún
-lado cuando este editando contenidos.
+.. note::
+    Kupu es una pieza de software incrustada en Plone que se usa como
+    editor visual predeterminado -- usted no vera el nombre de Kupu en 
+    ningún lado cuando este editando contenidos.
 
 Una barra de herramientas típica de Kupu luce como esta:
 
@@ -738,11 +768,15 @@ nombre de archivo usado en su computadora local si así lo desea). Provea una
 **descripción** si usted quiere. Cuando haga clic en el botón Guardar el
 archivo sera subido a la carpeta.
 
-.. image:: images/lights-camera-action_002.png
-  :alt: lights-camera-action.png
-  :align: center
+----
+
+.. figure:: images/lights-camera-action_002.png
+    :alt: lights-camera-action.png
+    :align: center
 
 Ver un vídeo sobre como `agregar un archivo`_ en Plone 2.
+
+----
 
 Ejemplos de tipos de archivo incluyen archivos PDF, documentos Word, archivos
 de base de datos, archivos comprimidos zip... -- bueno, prácticamente
@@ -822,7 +856,7 @@ evento:
   :align: center
 
 
-Usted podrá ver el panel *Agregar Evento*que es algo grande:
+Usted podrá ver el panel *Agregar Evento* que es algo grande:
 
 .. image:: images/addevent.png
   :alt:
@@ -878,16 +912,20 @@ Solo haga clic en el día y este sera establecido. Rellene los campos para los
 cuales tiene información y presione el botón Guardar, pero recuerde:
 
 
-**IMPORTANTE: ***Este evento no se mostrara en el calendario principal del
-sitio web hasta que no sea **publicado*****.
-**
+.. note:: 
+    **IMPORTANTE:**
+    *Este evento no se mostrara en el calendario principal del
+    sitio web hasta que no sea* **publicado**.
 
-.. image:: images/lights-camera-action_002.png
-  :alt: lights-camera-action.png
-  :align: center
+----
+
+.. figure:: images/lights-camera-action_002.png
+    :alt: lights-camera-action.png
+    :align: center
 
 Ver un vídeo sobre como `agregar un evento`_ en Plone 2.
 
+----
 
 2.9. Agregar Noticias
 =====================
@@ -924,15 +962,20 @@ la lista de noticias. A la imagen se le cambiara automáticamente su
 dimensiones y sera posicionada. Use el **Cuerpo del Texto** para insertar una
 imagen en el actual cuerpo de la Noticia.
 
-**IMPORTANTE**: Las noticias no se mostraran en la lista principal de noticia
-del sitio web o en el porlet de noticias hasta que esta no sea **publicada.**
+.. note:: 
+    **IMPORTANTE:**
+    Las noticias no se mostraran en la lista principal de noticia del sitio web 
+    o en el porlet de noticias hasta que esta no sea **publicada.**
 
-.. image:: images/lights-camera-action_002.png
-  :alt: lights-camera-action.png
-  :align: center
+----
+
+.. figure:: images/lights-camera-action_002.png
+    :alt: lights-camera-action.png
+    :align: center
 
 Ver un vídeo sobre como `agregar una noticia`_ en Plone 2.
 
+----
 
 2.10. Definiendo Propiedades Básicas
 ====================================
@@ -961,7 +1004,7 @@ Las pestañas de propiedades básicas son:
 -   *Propietario* - muestra un panel para definir los usuarios creadores,
     colaboradores, y cualquier información de derechos de autor para el
     elemento
--   * Configuración * - Muestra un pequeño panel para establecer si el
+-   *Configuración* - Muestra un pequeño panel para establecer si el
     elemento aparecerá o no en los menús de navegación y si se permiten
     comentarios sobre el mismo.
 
@@ -978,8 +1021,9 @@ pagina (podría ser el mismo para otros tipos de contenidos):
   :align: center
 
 
-*Nota: Las categorías fueron formalmente llamadas palabras claves en Plone,
-previo a la version 3.0.*
+.. note::
+    *Las categorías fueron formalmente llamadas palabras claves en Plone, 
+    previo a la version 3.0.*
 
 El campo principal de entrada en el panel sirve para especificar
 *categorías*. Para crearlas nuevamente, simplemente introduzca palabras o
@@ -1190,14 +1234,12 @@ cuando las suba a su sitio web Plone.
 .. _agregar un archivo: http://media.plone.org/LearnPlone/Adding%20a%20File.swf
 .. _agregar un evento: http://media.plone.org/LearnPlone/Creating%20an%20Event.swf
 .. _agregar una noticia: http://media.plone.org/LearnPlone/Creating%20a%20News%20Item.swf
-.. _: http://media.plone.org/LearnPlone/Copy,%20Paste,%20Cut,%20etc.swf
-.. _  : http://media.plone.org/LearnPlone/Choosing%20a%20default%20page.swf
 
 
-Créditos de esta sección
-------------------------
+Créditos de esta traducción
+---------------------------
 
 .. sectionauthor:: Emanuel Sartor <emanuel@menttes.com>
 .. codeauthor:: 
     Luis Sumoza <lsumoza@gmail.com>, 
-    Leonardo J. Caballero G. <lcaballero@cenditel.gob.ve>, 
+    Leonardo J. Caballero G. <leonardocaballero@gmail.com>,

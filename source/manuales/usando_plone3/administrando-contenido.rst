@@ -1,5 +1,7 @@
 .. -*- coding: utf-8 -*-
 
+.. _administrando_contenido:
+
 ==========================
 3. Administrando Contenido
 ==========================
@@ -85,12 +87,15 @@ Una operación de *copiar*/*pegar* es idéntica a la operación de
 *cortar*/*pegar*, con la excepción de que no es eliminado el contenido de la
 carpeta original. Funciona como es esperado que funcione.
 
-.. image:: images/lights-camera-action.png
-  :alt: lights-camera-action.png
-  :align: center
+----
+
+.. figure:: images/lights-camera-action.png
+    :alt: lights-camera-action.png
+    :align: center
 
 Ver un vídeo sobre como `ejecutar esas operaciones`_ en Plone 2.
 
+----
 
 3.2. Editando Contenido
 =======================
@@ -171,7 +176,10 @@ iguales a los paneles de creación.
 Edición rápida (*opcional*)
 ---------------------------
 
-    Edición rápida esta deshabilitada por defecto en versiones superiores de Plone (3.3+). Esta puede ser habilitada a través del panel de control por un Administrador del sitio (Configuración del sitio -> Sitio -> casilla Habilitar edición rápida).
+.. tip:: 
+    La edición rápida esta deshabilitada por defecto en versiones superiores de Plone (3.3+). 
+    Esta puede ser habilitada a través del panel de control por un Administrador 
+    del sitio (Configuración del sitio -> Sitio -> casilla Habilitar edición rápida).
 
 El procedimiento normal para editar un elemento de contenido es hacer clic en
 la pestaña *Editar* y usar los campos de ingreso específicos de información
@@ -324,11 +332,15 @@ carpetas, desde actuar como un simple contenedor a actuar como un enlace
 directo a contenido. En lugar de eso, usualmente puede lograr lo que quiera
 únicamente utilizando Colecciones, las cuales se describirán mas adelante.
 
-.. image:: images/lights-camera-action.png
-  :alt: lights-camera-action.png
-  :align: center
+----
+
+.. figure:: images/lights-camera-action.png
+    :alt: lights-camera-action.png
+    :align: center
 
 Ver un vídeo sobre como `definir la pagina en la vista mostrar`_ en Plone 2.
+
+----
 
 Lo próximo sera movernos a la pestaña *Contenidos* para ver las funciones
 importantes para accesar a los contenidos en una lista de contenido de
@@ -387,15 +399,19 @@ elemento, la dirección Web, se mantendría al día con el actual elemento de
 contenido. Note que el nombre corto no puede contener espacios blancos. Use
 guiones para cualquier espacio en blanco en el titulo, si no haga una copia
 exacta del titulo. También, use caracteres en minúsculas para el nombre
-corto. También vea la pagina "`¿Que hay en un nombre Web?`_" para una
+corto. También vea la pagina "`¿Que hay en un nombre Web?`_" para una 
 descripción de como Plone manipula las direcciones Web y el nombre corto. El
 siguiente vídeo también incluye una ilustración de la operación de renombrar:
 
-.. image:: images/lights-camera-action.png
-  :alt: lights-camera-action.png
-  :align: center
+----
+
+.. figure:: images/lights-camera-action.png
+    :alt: lights-camera-action.png
+    :align: center
 
 Ver un vídeo que incluye `renombrar un elemento`_ en Plone 2.
+
+----
 
 La operación *eliminar* es sencilla. Haga clic para seleccionar uno o mas
 elementos en sus casillas de comprobación, y luego haga clic en el botón
@@ -959,8 +975,7 @@ El "Modo presentación" es una característica especial del tipo de contenido
 Pagina. Usted puede habilitar el "Modo presentación" editando la pagina,
 luego dirijase a la pestaña **Configuración**. Note que la casilla de "Modo
 presentación" este disponible. Una ves marcada, un enlace aparecerá en la
-vista de la pagina para que los usuarios vean la pagina en "Modo
-presentación."
+vista de la pagina para que los usuarios vean la pagina en "Modo presentación."
 
 
 ¿Como crear laminas?
@@ -1005,10 +1020,15 @@ Párrafo Normal. Ejemplos de esos estilos incluye:
 -   Resaltar
 
 
-Créditos de esta sección
-------------------------
+.. _ejecutar esas operaciones: http://media.plone.org/LearnPlone/Copy,%20Paste,%20Cut,%20etc.swf
+.. _definir la pagina en la vista mostrar: http://media.plone.org/LearnPlone/Choosing%20a%20default%20page.swf
+.. _¿Que hay en un nombre Web?: http://plone.org/documentation/manual/plone-3-user-manual/adding-content/whats-in-a-web-name
+.. _renombrar un elemento: http://media.plone.org/LearnPlone/Copy,%20Paste,%20Cut,%20etc.swf
+
+Créditos de esta traducción
+---------------------------
 
 .. sectionauthor::  Hugo Salgado <hsalgado@vulcano.cl>
 .. codeauthor:: 
     Luis Sumoza <lsumoza@gmail.com>, 
-    Leonardo J. Caballero G. <lcaballero@cenditel.gob.ve>, 
+    Leonardo J. Caballero G. <leonardocaballero@gmail.com>,

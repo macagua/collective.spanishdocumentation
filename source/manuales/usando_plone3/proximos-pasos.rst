@@ -1,5 +1,7 @@
 .. -*- coding: utf-8 -*-
 
+.. _proximos_pasos:
+
 =================
 7. Próximos pasos
 =================
@@ -17,10 +19,9 @@ de una documentación mas avanzada.
 Plone.org tiene paginas individuales de documentación que están dedicadas
 para tareas especificas.
 
-El área de documentación tiene una sección dedicada al `uso básico para
-editores de contenido`_. Ahí encontrara documentación de ayuda adicional,
-algunos elementos repetidos de este manual y otros con enfoque a la solución
-de problemas mas específicos.
+El área de documentación tiene una sección dedicada al `uso básico para editores de contenido`_.
+Ahí encontrara documentación de ayuda adicional, algunos elementos repetidos de este manual 
+y otros con enfoque a la solución de problemas mas específicos.
 
 Quizás quiera navegar a través de la otra documentación para la
 administración de sitios, modificar el diseño visual, y programar; pero
@@ -275,16 +276,18 @@ y desarrollo de software especializado solo son agregados en una base llena
 de funciones.
 
 Por lo tanto, cualquiera que sea su experiencia y perspectiva, cuando tenga
-la necesidad o deseo de expandir su conocimiento use el `área de
-documentación de Plone.org`_, o adquiera un libro de Plone o Zope para
-adentrarse en aguas mas profundas en cuanto administraciones de sitios y
+la necesidad o deseo de expandir su conocimiento use el 
+`área de documentación de Plone.org`_, o adquiera un libro de Plone o Zope 
+para adentrarse en aguas mas profundas en cuanto administraciones de sitios y
 programación.
 
+.. _uso básico para editores de contenido: http://plone.org/documentation/phc_topic_area?topic=Basic+Use
+.. _área de documentación de Plone.org: http://plone.org/documentation/
 
-Créditos de esta sección
-------------------------
+Créditos de esta traducción
+---------------------------
 
 .. sectionauthor:: Israel Saeta Pérez <dukebody@gmail.com>, José Subero <arawako@gmail.com>
 .. codeauthor:: 
     Luis Sumoza <lsumoza@gmail.com>, 
-    Leonardo J. Caballero G. <lcaballero@cenditel.gob.ve>, 
+    Leonardo J. Caballero G. <leonardocaballero@gmail.com>,

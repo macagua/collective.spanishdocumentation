@@ -1,5 +1,7 @@
 .. -*- coding: utf-8 -*-
 
+.. _administracion_porlets:
+
 ============================
 6. Administración de Porlets
 ============================
@@ -112,7 +114,7 @@ muestran los Portlets en su pagina.
 Removiendo Portlets
 -------------------
 
-Para remover un Portlet. haga clic en la **"X" roja **asociada a su nombre.
+Para remover un Portlet. haga clic en la **"X" roja** asociada a su nombre.
 
 
 Como puede observar en la pantalla de Administrar Portlets, usted puede
@@ -143,7 +145,7 @@ disponible.
 Navegación
 ----------
 
-El Portlet de Navegación **le permite a los usuarios navegar su sitio ** con
+El Portlet de Navegación **le permite a los usuarios navegar su sitio** con
 facilidad por medio de un "mapa estructurado del sitio" o un árbol de
 navegación. Usted tiene la opción de mostrar la navegación general del sitio
 o mostrar solo el contenido de la carpeta actual. En LearnPlone.Org usted
@@ -164,7 +166,7 @@ evento correspondiente de su sitio.
 
 
 Clásico
-------
+-------
 
 Un Portlet Clásico se refiere a la forma en que los Portlets eran usados en
 versiones mas viejas de Plone: antes de Plone 3. Usted debe crear una
@@ -176,12 +178,11 @@ TALES.
 Colección
 ---------
 
-El Portlet de Colección le permitirá **mostrar los resultados de una
-Colección**. Usted debe tener una Colección previamente creada para agregar
-este portlet, luego debe especificar la Colección que quiera usar. Esta es
-una manera genial de resumir los resultados de una Colección importante, de
-modo que sea fácilmente visible para el publico. Para instrucciones de como
-crear un Portlet de Colección siga este `Como-hacer`_.
+El Portlet de Colección le permitirá **mostrar los resultados de una Colección**. 
+Usted debe tener una Colección previamente creada para agregar este portlet, luego 
+debe especificar la Colección que quiera usar. Esta es una manera genial de resumir 
+los resultados de una Colección importante, de modo que sea fácilmente visible para 
+el publico. Para instrucciones de como crear un Portlet de Colección siga este `Como-hacer`_.
 
 Eventos
 -------
@@ -257,10 +258,12 @@ este Portlet seria el "Still Stumped?" ("¿Aun no entiende?") ubicado en la
 parte derecha de este sitio. Para información en Portlets de texto estático
 vea el Como-hacer de `Portlets estáticos`_.
 
+.. _Como-hacer: http://plone.org/documentation/kb/collection-portlets
+.. _Portlets estáticos: http://plone.org/documentation/kb/creating-static-text-portlets-in-plone-3.0
 
-Créditos de esta sección
-------------------------
+Créditos de esta traducción
+---------------------------
 
 .. sectionauthor:: Luis Sumoza <lsumoza@gmail.com>
-.. codeauthor:: Leonardo J. Caballero G. <lcaballero@cenditel.gob.ve>
+.. codeauthor:: Leonardo J. Caballero G. <leonardocaballero@gmail.com>,
 

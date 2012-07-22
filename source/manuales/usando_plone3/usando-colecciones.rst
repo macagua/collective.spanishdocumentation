@@ -1,5 +1,7 @@
 .. -*- coding: utf-8 -*-
 
+.. _usando_colecciones:
+
 =====================
 5. Usando Colecciones
 =====================
@@ -22,7 +24,7 @@ contenidas en el titulo, descripción, o contenido.
 
 Digamos que usted tiene una gran cantidad de fotografías y mapas en su sitio
 web. Usted fácilmente las puede mostrar todas de una sola vez creando un
-`hiperenlace`_ a la `carpeta`_ donde están guardadas.. Usted podría incluso
+`hiperenlace`_ a la `carpeta`_ donde están guardadas. Usted podría incluso
 crear distintos enlaces a sub-carpetas si ha organizado los elementos de esa
 manera. Sin embargo, si sus fotografías y mapas están repartidas por todo el
 sitio, esto rápidamente se podría convertir en algo engorroso. Además no hay
@@ -88,7 +90,7 @@ para agregar otros tipos de contenido:
   :align: center
 
 
-Usted vera el panel de Agregar* Colección *:
+Usted vera el panel de *Agregar Colección*:
 
 .. image:: images/addcollection.png
   :alt:
@@ -149,12 +151,15 @@ Nota: una Colección no se comporta como una carpeta regular -- usted no puede
 agregar elementos de contenido a través del menú de agregar elemento, tal
 como lo podría hacer en una carpeta regular.
 
-.. image:: images/lights-camera-action_003.png
-  :alt: lights-camera-action.png
-  :align: center
+----
 
-Ver un vídeo sobre como `anadir una smart folder (ahora llamada Colección).`_ en Plone 2
+.. figure:: images/lights-camera-action_003.png
+    :alt: lights-camera-action.png
+    :align: center
 
+Ver un vídeo sobre como `anadir una smart folder (ahora llamada Colección)`_ en Plone 2.
+
+----
 
 5.3. Ajustando las opciones de vista
 ====================================
@@ -165,7 +170,7 @@ pagina de Colección.
 Mientras que el poder principal de las Colecciones yace en los Criterios, las
 opciones de vista pueden hacer una gran diferencia en la forma en que su
 Colección se muestra. Las tres opciones que apuntaremos en esta sección se
-pueden encontrar haciendo clic en la **pestaña Editar **de una Colección.
+pueden encontrar haciendo clic en la **pestaña Editar** de una Colección.
 
 **Herencia de Criterios**
 
@@ -175,21 +180,22 @@ Colecciones. Si esta opción es activada, usted puede crear otra Colección que
 sea mas especifica que la "Padre" igualmente conservando sus criterios
 básicos. Un ejemplo simple podría ser una Colección padre que muestre todos
 los Eventos en un sitio, y una Sub-Colección que también muestre los Eventos
-(por medio de Herencia de Criterios) *pero solo *aquellos eventos con una
+(por medio de Herencia de Criterios) *pero solo* aquellos eventos con una
 palabra clave en particular.
 
-**Limitar Resultados de Búsqueda
+**Limitar Resultados de Búsqueda**
+
 Se puede usar la opción Limitar Resultados de Búsqueda para (como su nombre
-lo indica) limitar el numero de resultados que una Colección mostrara *por
-pagina*. De esta manera si se tiene una Colección que muestra Noticias, se
-pueden limitar los resultados a cinco o diez, en vez de mostrar todos los
+lo indica) limitar el numero de resultados que una Colección mostrara 
+*por pagina*. De esta manera si se tiene una Colección que muestra Noticias, 
+se pueden limitar los resultados a cinco o diez, en vez de mostrar todos los
 elementos en una sola y larga lista.
 
 **Mostrar como Tabla**
 
 Mostrar como Tabla es una manera sencilla de mostrar los resultados de una
 Colección. En lugar de que una Colección arroje los resultados en forma de
-una lista, se puede **generar una tabla **con ellos, y establecer exactamente
+una lista, se puede **generar una tabla** con ellos, y establecer exactamente
 que información acerca de los resultados se quiere mostrar. Se puede
 personalizar la tabla seleccionando las **Columnas de la Tabla** de la lista
 en la izquierda y haciendo clic en el botón de flechas que apuntan a la
@@ -467,14 +473,16 @@ Definición de Fechas
 --------------------
 
 **Fecha de Creación**
+
 La Fecha de Creación es aquella cuando el documento fue hecho. Puede pensar
 en ella como la fecha de cumpleaños o el día de nacimiento; esta fecha no se
 puede cambiar.
 
 **Fecha de Efectividad**
+
 La Fecha de Efectividad es aquella cuando el elemento es publicado. Esta
 fecha se puede cambiar a través de la **pestaña Editar** de los elementos
-bajo la **pestaña Fechas **. Sin embargo ahí se encuentra referida como Fecha
+bajo la **pestaña Fechas**. Sin embargo ahí se encuentra referida como Fecha
 de Publicación (una discrepancia menor en la nomenclatura de Plone).
 
 La **Fecha de Creación** y la **Fecha de Efectividad** son muy similares, ya
@@ -491,14 +499,16 @@ resultados basados en cuando se volvieron disponibles para el publico, lo
 cual es mas relevante para la audiencia de su Colección. Además manualmente
 se puede cambiar la Fecha de Efectividad para controlar el orden de
 ordenación, cosa que no se puede hacer con la Fecha de Creación.
-**
-Fecha de Caducidad**
+
+**Fecha de Caducidad**
+
 La Fecha de Caducidad se refiere al día en que el elemento dejara de estar
 disponible para el publico. Esta fecha también es personalizable a través de
 la pestaña Editar (como se muestra arriba), al igual que la Fecha de
 Efectividad. Por defecto los elementos no tienen Fecha de Caducidad.
-**
-Fecha de Modificación**
+
+**Fecha de Modificación**
+
 La Fecha de Modificación es la fecha en que el objeto fue editado por ultima
 vez. Note que esta fecha es primero establecida de acuerdo al día en que fue
 creado el elemento, y cambiara automáticamente cada vez que el elemento sea
@@ -511,17 +521,18 @@ como el Criterio de Fecha. De esta manera los nuevos documentos creados *y*
 aquellos que han sido actualizados aparecerán listados.
 
 
-
-**Fechas especificas de Eventos
-**Las siguientes dos Fechas **solo **se aplican a aquellos elementos que
-son** Eventos. **Estas dos Fechas son muy efectivas para crear Colecciones de
+**Fechas especificas de Eventos**
+Las siguientes dos Fechas **solo** se aplican a aquellos elementos que
+son **Eventos**. Estas dos Fechas son muy efectivas para crear Colecciones de
 Eventos recientes y Eventos próximos que le permitirán a su audiencia saber
 que esta haciendo su organización actualmente y que hará en el futuro.
 
 **Fecha de Inicio**
+
 La Fecha de Inicio es simplemente la fecha cuando el Evento empieza.
 
 **Fecha de Finalización**
+
 La Fecha de Finalización es simplemente la fecha cuando el Evento termina.
 
 
@@ -556,14 +567,12 @@ la opción *Ahora* los otros dos menús no serán importantes.
 El segundo menú tiene dos opciones **en el pasado o en el futuro**. Esto
 permite saber si se tiene que mirar al pasado o al futuro.
 
-
-
 El ultimo menú muestra **Mas que o Menor que**. De aquí podemos escoger entre
 tres opciones. *Menor que* permite incluir todo aquello dentro de un periodo
-de tiempo igual o menor a los días configurados en el menú **Que día **, ya
+de tiempo igual o menor a los días configurados en el menú **Que día**, ya
 sea en el pasado o en el futuro. *Mas que* permite incluir todo aquello que
 se encuentre igual o mas alla del numero especificado de días en el menú
-**Que día**. Finalmente *En el día *solo incluye todo aquello que se
+**Que día**. Finalmente *En el día* solo incluye todo aquello que se
 encuentre en el día especificado en el menú **Que día**. Si se toma el
 ejemplo de la imagen de arriba y se hubiese seleccionado *En el día* en vez
 de *Menor que* nuestra colección mostrara elementos que hayan sido
@@ -588,11 +597,15 @@ especificas de Eventos!) El Rango de Fechas le permite entrar dentro de un
 periodo con inicio y fin y mostrar todo el contenido dentro de este plazo.
 Note que también le permite establecer horas especificas de los días.
 
+.. _hiperenlace: http://learnplone.org/documentation/glossary/hyperlink
+.. _carpeta: http://learnplone.org/documentation/glossary/folder
+.. _anadir una smart folder (ahora llamada Colección): http://media.plone.org/LearnPlone/creating-smart-folders.swf
 
-Créditos de esta sección
-------------------------
+
+Créditos de esta traducción
+---------------------------
 
 .. sectionauthor:: Carlos de la Guardia <carlos.delaguardia@gmail.com>
 .. codeauthor:: 
     Luis Sumoza <lsumoza@gmail.com>, 
-    Leonardo J. Caballero G. <lcaballero@cenditel.gob.ve>, 
+    Leonardo J. Caballero G. <leonardocaballero@gmail.com>,
