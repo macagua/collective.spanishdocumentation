@@ -452,16 +452,17 @@ script de control equivalente.
   $ ./bin/zopectl test -s Products.RichDocument
 
 
-Este ejecutará todas las pruebas en el módulo **Products.RichDocument**. Si usted
-está usando `buildout`_ con un script de control de instancia llamado
+Este ejecutará todas las pruebas en el módulo **Products.RichDocument**. Si 
+usted está usando `buildout`_ con un script de control de instancia llamado
 ``instance``, esto será:
 
 .. code-block:: sh
 
   $ ./bin/instance test -s Products.RichDocument
 
-Usar buildout es probablemente una buena idea (vea `el tutorial de buildout`_) para empezar porque es la única forma que funcione de forma
-fiable en Windows. Usaremos esta sintaxis de ahora en adelante.
+Usar buildout es probablemente una buena idea (vea `el tutorial de buildout`_) 
+para empezar porque es la única forma que funcione de forma fiable en Windows. 
+Usaremos esta sintaxis de ahora en adelante.
 
 Para ejecutar una sola prueba o un conjunto de pruebas acompañada de
 expresiones regulares, puede utilizar:
@@ -648,12 +649,12 @@ Aquí está el código tras la prueba, en ``context.py``:
 
     class Context(object):
         """Un objeto usado para hacer pruebas. Vamos a registrar un
-        adaptador de esta
-        interfaz para IUpperCaser en la configuración de la prueba.
+        adaptador de esta interfaz para IUpperCaser en la 
+        configuración de la prueba.
 
         Aquí está cómo usarla. Primero, importe la clase
 
-            >>> de Contexto de importación example.tests.context
+            >>> from example.tests.context example.tests.context
 
         Luego haga una instanciación (¿sigue conmigo?):
 
@@ -720,9 +721,9 @@ En el paquete ``example.tests``, tenemos la siguiente configuración de prueba e
     """Esta es la configuración para un doctest que prueba un componente de Zope 3.
 
     Realmente no hay nada muy diferente a una prueba "plain Python".
-    Nosotros no estamos analizando ZCML, por ejemplo: Sin embargo, usamos algunos de los
-    helpers de Zope 3 para asegurar que la Component Architecture (Arquitectura de
-    Componente) este debidamente creada y desmontada.
+    Nosotros no estamos analizando ZCML, por ejemplo: Sin embargo, usamos algunos de 
+    los helpers de Zope 3 para asegurar que la Component Architecture (Arquitectura 
+    de Componente) este debidamente creada y desmontada.
     """
 
     import unittest
@@ -773,15 +774,13 @@ Esto se refiere al archivo ``zope3.txt``, que luce como este:
     ===============================
 
     Este es el tipo de prueba que se encuentran más comúnmente en Zope 3.
-    Tenemos un método de configuración personalizado (in
-    test_zope3_doctest.py) el cual registra los componentes que necesitamos
-    para la prueba. A continuación podemos utilizar esos aquí. El ZCML no es
-    procesado directamente,
-    tampoco tenemos un entorno completo Zope 2/Plone disponible. Esto
-    hace que la prueba esté
-    más asilada (¡y más rápida!). A menudo, se puede optar por utilizar
-    las implementaciones simuladas de ciertos componentes a fin de hacer la
-    prueba correctamente aislada.
+    Tenemos un método de configuración personalizado (en test_zope3_doctest.py) 
+    el cual registra los componentes que necesitamos para la prueba. A 
+    continuación podemos utilizar esos aquí. El ZCML no es procesado directamente, 
+    tampoco tenemos un entorno completo Zope 2/Plone disponible. Esto hace que 
+    la prueba esté más asilada (¡y más rápida!). A menudo, se puede optar por 
+    utilizar las implementaciones simuladas de ciertos componentes a fin de hacer 
+    la prueba correctamente aislada.
 
     Por supuesto, igual deberíamos contar una historia con esta
     documentación.
@@ -789,7 +788,7 @@ Esto se refiere al archivo ``zope3.txt``, que luce como este:
     Digamos que teníamos uno de nuestros objetos de contexto realmente
     emocionantes:
 
-        >>> de Contexto de importación example.tests.context
+        >>> from example.tests.context example.tests.context
         >>> context = Context()
         >>> context.title = u"cualquier título"
 
@@ -916,7 +915,7 @@ fixture:
 
         ztc.installPackage('example.tests')
 
-    # # El orden aquí es importante: En primer lugar llama la función (diferida) que
+    # El orden aquí es importante: En primer lugar llama la función (diferida) que
     # instala los productos que necesita para este producto. Luego dejamos PloneTestCase
     # configure este producto en la instalación.
 
@@ -1174,7 +1173,7 @@ pistas aquí para empezar a pensar acerca de cómo enfocar sus propias pruebas:
 
 
 Doctests de integración usando PloneTestCase
-=============================================
+============================================
 
 El setup de prueba de integración PloneTestCase también puede usarse en
 doctests
@@ -1456,14 +1455,14 @@ Zope 2 empaquetado alrededor de ``zope.testbrowser.Browser``:
 Toda la acción ocurre con el objeto ``browser``. Este simula un navegador Web
 (aunque como se ha dicho, uno que no soporta JavaScript), y tiene una API
 agradable para encontrar los controles de formulario y enlaces y acciones por
-clic sobre ellos. Las variables ``browser.url`` y ``browser.contents`` representan lo
-que habría estado en la barra URL y la vista renderizada de la página
+clic sobre ellos. Las variables ``browser.url`` y ``browser.contents`` representan 
+lo que habría estado en la barra URL y la vista renderizada de la página
 respectivamente, y pueden ser examinadas como cualquier otra variable.
 
 ``zope.testbrowser`` tiene documentación bastante completa en su archivo
-`README.txt de zope.testbrowser`_ - que es, por supuesto, una doctest ejecutable. En resumen, los
-métodos más importantes del `IBrowser interface`_ (y por lo tanto de la clase
-``Browser``) son:
+`README.txt de zope.testbrowser`_ - que es, por supuesto, una doctest ejecutable. 
+En resumen, los métodos más importantes del `IBrowser interface`_ (y por lo tanto 
+de la clase ``Browser``) son:
 
 .. glossary::
 
@@ -1477,10 +1476,15 @@ métodos más importantes del `IBrowser interface`_ (y por lo tanto de la clase
     Simular la acción del número de ``veces`` por el botón Atrás o Retroceder. 
 
   getLink(text=None, url=None, id=None) 
-    Obtener un ILink (el cual puede luego llamar para un ``click()``), ya sea por el texto dentro de la <a> etiqueta, por el URL en el atributo ``href``, o la id del enlace.
+    Obtener un ILink (el cual puede luego llamar para un ``click()``), ya sea por el texto dentro de la 
+    <a> etiqueta, por el URL en el atributo ``href``, o la id del enlace.
 
   getControl(label=None, name=None, index=None) 
-    Obtener un ``IControl``, representando un control de formulario, mediante una etiqueta (ya sea el valor de un botón de envío o el contenido de etiqueta ``<label>`` asociada) o nombre del formulario. El argumento index (índice) se utiliza para eliminar la ambigüedad de si hay más de un control (ejemplo ``index=0`` obtiene el primero.). Una vez más, usted puede llamar un ``click()`` en el objeto de control para simular las acciones por clic en él.
+    Obtener un ``IControl``, representando un control de formulario, mediante una etiqueta (ya sea el 
+    valor de un botón de envío o el contenido de etiqueta ``<label>`` asociada) o nombre del formulario. 
+    El argumento index (índice) se utiliza para eliminar la ambigüedad de si hay más de un control (ejemplo 
+    ``index=0`` obtiene el primero.). Una vez más, usted puede llamar un ``click()`` en el objeto de control 
+    para simular las acciones por clic en él.
 
 La interfaz iBrowser también proporciona algunas propiedades que se pueden
 utilizar para examinar el estado de la página actual. Las más importantes
@@ -1489,7 +1493,8 @@ son:
 .. glossary::
 
   url
-    La dirección URL completa de la página actual. contents Los contenidos completos de la página actual, como una cadena (por lo general contienen etiquetas HTML) headers Un diccionario de los cabeceras HTTP
+    La dirección URL completa de la página actual. contents Los contenidos completos de la página actual, 
+    como una cadena (por lo general contienen etiquetas HTML) headers Un diccionario de los cabeceras HTTP
 
 Por favor revise `interfaces`_ y el `archivo README`_ para más detalles sobre
 los otros métodos y atributos, las interfaces para distintos tipos de enlaces
@@ -1500,7 +1505,7 @@ Depurando pruebas funcionales
 -----------------------------
 
 A veces obtendrá errores de Zope provenientes de un comando ejecutado
-utilizando el testbrowser. En este caso, a veces puede ser difácil saber cuál
+utilizando el testbrowser. En este caso, a veces puede ser difícil saber cuál
 es la causa subyacente. Dos ayudas de depuración existentes para hacer esto
 un poco más fácil.
 
@@ -1575,10 +1580,10 @@ el que testbrowser está trabajando, en un navegador real.
 Pruebas funcionales vs. Pruebas de sistema
 ------------------------------------------
 
-A system test is one which treats the entire system as a black box,
-interacting with it as a user would. Una prueba funcional se centra más en
-una sola "vertical" de funcionalidad, por lo general vinculada a un caso de
-uso en particular.
+Una prueba del sistema es el que trata a todo el sistema como una caja negra 
+(black box), interactuando con él como lo haría un usuario. Una prueba funcional 
+se centra más en una sola "vertical" de funcionalidad, por lo general vinculada 
+a un caso de uso en particular.
 
 Para una prueba funcional *puede* que sea aceptable examinar el estado
 interno del portal (usando ``self.portal`` y la clase
@@ -1619,7 +1624,8 @@ navegador frente a sus ojos) y por lo tanto compatibles con JavaScript, pero
 no se pueden ejecutar como parte de una prueba automatizada ejecutándose sin
 un navegador.
 
-instalar ``zope.testrecorder`` es simple. Primero obtenga una copia desde el repositorio de subversión de Zope:
+instalar ``zope.testrecorder`` es simple. Primero obtenga una copia desde 
+el repositorio de subversión de Zope:
 
 .. code-block:: sh
 
@@ -1642,7 +1648,8 @@ ver en la página algo como esto:
 
 .. note::
 
-  Como la mayoría de las cosas, ``zope.testrecorder`` pareciera trabajar mejor en Firefox que en otros navegadores.
+  Como la mayoría de las cosas, ``zope.testrecorder`` pareciera trabajar mejor 
+  en Firefox que en otros navegadores.
 
 Ahora introduzca la dirección de su sitio Plone (o de hecho cualquier sitio
 web), ejemplo: ``http://localhost:8080/Plone`` y haga clic en ``Go``. Usted puede
@@ -1687,16 +1694,35 @@ Consejos al usar zope.testrecorder
 .. glossary::
 
   Plan, plan, plan
-    Es mejor si tiene un guión así sea un borrador, delante de usted antes de empezar las pruebas de grabación, o puede perderse después. Haga un buen uso del botón para ``Añadir comentarios`` para indicar lo que usted probará antes de probarlo, para que el doctest resultante tenga sentido.
+    Es mejor si tiene un guión así sea un borrador, delante de usted antes 
+    de empezar las pruebas de grabación, o puede perderse después. Haga un 
+    buen uso del botón para ``Añadir comentarios`` para indicar lo que usted 
+    probará antes de probarlo, para que el doctest resultante tenga sentido.
 
   Cuidado donde hace clic
-    Algunas partes de la interfaz de usuario de Plone son más efímeras que otras. Puede que no sea buena idea contar con enlaces en el portlet ``Recientes``, por ejemplo. Piense en que operaciones proporcionarán la prueba más general y válida. Esto le ahorrará tiempo a largo plazo. 
+    Algunas partes de la interfaz de usuario de Plone son más efímeras que otras. 
+    Puede que no sea buena idea contar con enlaces en el portlet ``Recientes``, 
+    por ejemplo. Piense en que operaciones proporcionarán la prueba más general 
+    y válida. Esto le ahorrará tiempo a largo plazo. 
 
   Configure su sitio de antemano
-    Recordemos la sección sobre ``zope.testbrowser`` donde definimos usuarios y estructura básica del sitio, con llamadas a los API de Python en lugar de usar testbrowser para manipular las pantallas de "Configuración de sitio". Cuando usa ``zope.testrecorder`` es posible que desee para definir los mismos usuarios con los mismos nombres de usuario y contraseñas, y la misma estructura del sitio antes de iniciar la grabación para pruebas. De lo contrario, puede que tenga que cambiar algunos de los valores de la prueba. 
+    Recordemos la sección sobre ``zope.testbrowser`` donde definimos usuarios y 
+    estructura básica del sitio, con llamadas a los API de Python en lugar de 
+    usar testbrowser para manipular las pantallas de "Configuración de sitio". 
+    Cuando usa ``zope.testrecorder`` es posible que desee para definir los 
+    mismos usuarios con los mismos nombres de usuario y contraseñas, y la misma 
+    estructura del sitio antes de iniciar la grabación para pruebas. De lo contrario, 
+    puede que tenga que cambiar algunos de los valores de la prueba. 
 
   Revisar el doctest
-    ``zope.testrecorder`` es una herramienta para ahorrar tiempo. A veces, puede terminar haciendo referencia a partes de la página que no se puede garantizar que sean consistentes (por ejemplo, generación aleatoria de identificadores para objetos de contenido), y a veces puede haber tomado un desvío y terminado con una prueba que contiene secciones duplicada o irrelevante. Siempre arregle su prueba ¡y ejecútela! después, para asegurarse de que la prueba sigue siendo válida para el futuro, de lo contrario, terminará haciendo clics con rabia por la interfaz de usuario nuevamente.
+    ``zope.testrecorder`` es una herramienta para ahorrar tiempo. A veces, puede 
+    terminar haciendo referencia a partes de la página que no se puede garantizar 
+    que sean consistentes (por ejemplo, generación aleatoria de identificadores 
+    para objetos de contenido), y a veces puede haber tomado un desvío y terminado 
+    con una prueba que contiene secciones duplicada o irrelevante. Siempre arregle 
+    su prueba ¡y ejecútela! después, para asegurarse de que la prueba sigue siendo 
+    válida para el futuro, de lo contrario, terminará haciendo clics con rabia por 
+    la interfaz de usuario nuevamente.
 
 
 Determinando la cobertura del código de su conjunto de pruebas.
@@ -1755,7 +1781,10 @@ se vería así:
 
 .. note::
 
-  La ejecución de pruebas con la opción de cobertura activada toma mucho más tiempo (aproximadamente 10 veces o más) que si no estuviera activada, así que esto es algo que se hace de vez en cuando para calibrar su trabajo, en lugar hacerlo cada vez que ejecute sus pruebas.
+  La ejecución de pruebas con la opción de cobertura activada toma mucho más 
+  tiempo (aproximadamente 10 veces o más) que si no estuviera activada, así 
+  que esto es algo que se hace de vez en cuando para calibrar su trabajo, 
+  en lugar hacerlo cada vez que ejecute sus pruebas.
 
 Al final de la ejecución de su conjunto de pruebas, obtendrá un resultado
 inmediato como el siguiente, que incluye líneas de código y su porcentaje de
@@ -1783,7 +1812,8 @@ opción ``--coverage``.
 
 .. note::
 
-  Los archivos pueden ser precedidos por puntos, lo que requiere un ``ls -a`` con el fin de llegar a los archivos de cobertura.
+  Los archivos pueden ser precedidos por puntos, lo que requiere un ``ls -a`` 
+  con el fin de llegar a los archivos de cobertura.
 
 Un ejemplo de archivo puede lucir de la siguiente manera:
 
@@ -1807,7 +1837,16 @@ Un ejemplo de archivo puede lucir de la siguiente manera:
     >>>>>>         if len(sObject.keys()) > 1:
 
 
-Esto es realmente sólo su archivo con algunos datos significativos procediendo cada línea. Cualquier cosa con un ``1:`` significa que su código fue por lo menos tanteado durante la ejecución del conjunto de pruebas. Cuanto mayor sea el número, más a menudo su código fue tanteado. Tal vez esto sea intencional y represente una cobertura muy buena en otros casos, puede que sea inevitable e incluso podría significar que el alto nivel de cobertura en realidad no será necesario. La ``>>>>>>`` significa que se ha pasado una línea y debería considerar un escenario de prueba o más para revisar esta línea de código en cuestión. El número de líneas no probadas dividido por el total de líneas le da el porcentaje de cobertura.
+Esto es realmente sólo su archivo con algunos datos significativos procediendo 
+cada línea. Cualquier cosa con un ``1:`` significa que su código fue por lo 
+menos tanteado durante la ejecución del conjunto de pruebas. Cuanto mayor sea 
+el número, más a menudo su código fue tanteado. Tal vez esto sea intencional y 
+represente una cobertura muy buena en otros casos, puede que sea inevitable e 
+incluso podría significar que el alto nivel de cobertura en realidad no será 
+necesario. La ``>>>>>>`` significa que se ha pasado una línea y debería considerar 
+un escenario de prueba o más para revisar esta línea de código en cuestión. 
+El número de líneas no probadas dividido por el total de líneas le da el 
+porcentaje de cobertura.
 
 Si lo que quiere es algo vistoso
 --------------------------------
@@ -1832,7 +1871,8 @@ reción creado. Vea lo siguiente:
   mkdir $HOME/coverage/reports
   python z3c.coverage/src/z3c/coverage/coveragereport.py $HOME/coverage $HOME/coverage/reports
 
-Ahora debería pode abrir ``$HOME/coverage/reports/all.html`` dentro de su navegador para obtener una salida muy similar a la siguiente.
+Ahora debería pode abrir ``$HOME/coverage/reports/all.html`` dentro de su 
+navegador para obtener una salida muy similar a la siguiente.
 
 .. image:: ./coverage.png
   :alt: z3c.coverage test coverage screenshot
@@ -1860,13 +1900,12 @@ aprender lo que prueban, lo que no y cómo escriben sus pruebas.
 -   `Plone per se`_ cuenta con más de 1.600 pruebas al momento de la
     escritura. La mayoría de estas son pruebas de integración utilizando
     sintaxis prueba-unitaria con PloneTestCase.
--   `RichDocument`_ tiene una básica ``test_setup.py`` prueba de integración.
+-   `RichDocument`_ tiene una básica ``testSetup.py`` prueba de integración.
     Este es un buen ejemplo de la clase de prueba que es posible que desee
     hacer para asegurar que su paquete instale limpiamente.
 -   `borg.project`_ contiene un archivo `README.txt`_ con un doctest de
-    integración demostrando como usarle. Tiene un sólo modulo de prueba
-    `tests.py`_, el cual realiza el mismo setup que ``base.py`` y
-    ``test_integration_doctest.py`` de ``example.tests``.
+    integración demostrando como usarle. Este, realiza el mismo setup que 
+    ``base.py`` de ``example.tests``.
 -   La mayoría de pruebas en el paquete `plone.app.controlpanel`_
     utilizan pruebas test-browser (prueba-navegador) funcionales para
     verificar que los paneles de control en Plone funcionen correctamente.
@@ -1882,24 +1921,24 @@ Referencias
 - `Testing in Plone`_.
 - `unittest — Unit testing framework`_.
 
-.. _example.tests: http://dev.plone.org/collective/browser/examples/example.tests/trunk
-.. _tutorial de buildout: http://plone.org/documentation/kb/buildout
-.. _el tutorial de buildout: http://plone.org/documentation/kb/buildout
-.. _buildout: http://plone.org/documentation/kb/buildout
+.. _example.tests: http://svn.plone.org/svn/collective/examples/example.tests/trunk/
+.. _tutorial de buildout: http://collective-docs.plone.org/en/latest/buildout/index.html
+.. _el tutorial de buildout: http://collective-docs.plone.org/en/latest/buildout/index.html
+.. _buildout: http://collective-docs.plone.org/en/latest/buildout/index.html
 .. _modulo de doctest: http://docs.python.org/lib/module-doctest.html
-.. _más sobre el uso de pdb con Plone: http://plone.org/documentation/how-to/using-pdb/
+.. _más sobre el uso de pdb con Plone: http://plone.org/documentation/kb/using-pdb
 .. _Selenium: http://www.openqa.org/selenium/
 .. _README.txt de zope.testbrowser: http://svn.zope.org/zope.testbrowser/trunk/src/zope/testbrowser/README.txt?view=auto
 .. _archivo README: http://svn.zope.org/zope.testbrowser/trunk/src/zope/testbrowser/README.txt?view=auto
 .. _IBrowser interface: http://svn.zope.org/zope.testbrowser/trunk/src/zope/testbrowser/interfaces.py?view=auto
 .. _interfaces: http://svn.zope.org/zope.testbrowser/trunk/src/zope/testbrowser/interfaces.py?view=auto
-.. _pruebas Selenium: http://plone.org/documentation/kb/testing/zope.org/Members/tseaver/Zelenium
-.. _Plone per se: http://dev.plone.org/plone/browser/Plone/trunk/Products/CMFPlone/tests
-.. _RichDocument: http://dev.plone.org/collective/browser/RichDocument/trunk/tests/testSetup.py
-.. _borg.project: http://dev.plone.org/collective/browser/borg/components/borg.project/trunk
-.. _README.txt: http://dev.plone.org/collective/browser/borg/components/borg.project/trunk/borg/project/README.txt
-.. _tests.py: http://dev.plone.org/collective/browser/borg/components/borg.project/trunk/borg/project/tests.py
-.. _plone.app.controlpanel: http://dev.plone.org/plone/browser/plone.app.controlpanel/trunk/plone/app/controlpanel/tests
+.. _pruebas Selenium: http://old.zope.org/Members/tseaver/Zelenium/
+.. _Plone per se: https://github.com/plone/Products.CMFPlone/tree/master/Products/CMFPlone/tests
+.. _RichDocument: http://svn.plone.org/svn/collective/Products.RichDocument/trunk/Products/RichDocument/tests/testSetup.py
+.. _borg.project: http://svn.plone.org/svn/collective/borg/components/borg.project/trunk
+.. _README.txt: http://svn.plone.org/svn/collective/borg/components/borg.project/trunk/src/borg/project/README.txt
+.. _tests.py: http://svn.plone.org/svn/collective/borg/components/borg.project/trunk/src/borg/project/tests/test_doctests.py
+.. _plone.app.controlpanel: http://svn.plone.org/svn/plone/plone.app.controlpanel/trunk/plone/app/controlpanel/tests/
 .. _Latest changes: http://dev.plone.org/plone/timeline
 .. _Testing in Plone: http://plone.org/documentation/kb/testing
 .. _unittest — Unit testing framework: http://docs.python.org/library/unittest.html
