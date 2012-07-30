@@ -17,7 +17,7 @@ Introducción
 Existen diversos enfoques de realizar temas y pieles y sus respectvas herramientas para crear apariencias personalizadas en Plone. Cada una ha resultado como respuesta a momento históricos en el desarrollo Plone y por consiguiente se describirá a continuación:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
-   referencias_temas/index
-   deliverance/index
+    Traducción oficial de la Referencias de Temas en Plone <referencias_temas/index>
+    Documentación acerca de Deliverance <deliverance/index>
