@@ -151,6 +151,9 @@ Ejemplo de un viewlet básico
 
   .. code-block:: python
 
+      from plone.app.layout.viewlets.common import ViewletBase
+      from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+      
       class MyHelloWorldViewlet(ViewletBase):
           render = ViewPageTemplateFile('myhelloworldviewlet.pt')
 
