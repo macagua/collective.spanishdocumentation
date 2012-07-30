@@ -6,6 +6,11 @@
 Creación de un paquete de tema
 ==============================
 
+:Autor(es): Carlos de la Guardia, Leonardo J. Caballero G.
+:Correo(s): carlos.delaguardia@gmail.com, leonardocaballero@gmail.com
+:Lanzamiento: |version|
+:Fecha: |today|
+
 .. contents :: :local:
 
 Introducción
@@ -85,7 +90,7 @@ preguntas (all) o solo algunas (easy). Contestemos `all`::
 
     Expert Mode? (What question mode would you like? (easy/expert/all)?) ['easy']: all
 
-Después nos pregunta el los nombres del paquete Namespace (primera parte del
+Después nos pregunta los nombres del paquete Namespace (primera parte del
 nombre pasado al template) y el nombre del paquete (segunda parte). Como los
 valores por omisión son los mismos que pasamos arriba, basta presiona la
 tecla `enter`::
@@ -119,8 +124,8 @@ comentarios::
 
     Include Documentation? (Include in-line documentation in generated code?) [True]: 
 
-La versión del paquete se utiliza en el panel de control de Plone para mostrar
-al usuario la versión instalada del producto::
+La versión del paquete se utiliza en el :menuselection:`Configuración del sitio --> Productos adicionales` 
+para mostrar al usuario la versión instalada del producto ::
 
     Version (Version number for project) ['1.0']: 
 
@@ -140,20 +145,24 @@ el paquete a un repositorio como el Python Package Index::
     Long Description (Multi-line description (in ReST)) ['']: 
     Author (Name of author for project) ['']: Juan Perez
     Author Email (Email of author for project) ['']: jperez@cliente1.com
-    Keywords (List of keywords, space-separated) ['web zope plone theme']: 
-    Project URL (URL of the homepage for this project) ['http://svn.plone.org/svn/collective/']: 
+    Keywords (List of keywords, space-separated) ['web zope plone theme']: web zope plone theme cliente1
+    Project URL (URL of the homepage for this project) ['http://svn.plone.org/svn/collective/']: http://svn.plone.org/svn/collective/plonetheme.cliente1
     Project License (Name of license for the project) ['GPL']: 
 
-Finalmente, las ultimas dos preguntas siempre ocuparan los valores defecto::
+Finalmente, las ultimas dos preguntas siempre ocuparan los valores por defecto::
 
     Zip-Safe? (Can this project be used as a zipped egg? (true/false)) [False]: 
     Zope2 Product? (Are you creating a product for Zope2/Plone or an Archetypes Product?) [True]:
 
 Luego de responder a estas preguntas el programa ``paster`` creará las estructura inicial del paquete del tema de Plone.
 
+
+.. seealso:: Artículos sobre la :ref:`Referencias de Temas en Plone <referencias_temas_plone>`, Sistema de plantillas con :ref:`Deliverance <apariencias_deliverance>`.
+
+
 Referencia
 ==========
 
-- `Creacion de un paquete de tema`_ desde la comunidad Plone Mexico.
+- `Creacion de un paquete de tema`_ desde la comunidad Plone México.
 
 .. _Creacion de un paquete de tema: http://www.plone.mx/docs/tema.html

@@ -6,7 +6,13 @@
 Creación de un producto de configuración
 ========================================
 
-.. contents :: :local:
+:Autor(es): Carlos de la Guardia, Leonardo J. Caballero G.
+:Correo(s): carlos.delaguardia@gmail.com, leonardocaballero@gmail.com
+:Lanzamiento: |version|
+:Fecha: |today|
+
+En esta articulo busca explicar como crear paquetes de configuración general de 
+un sitio representando las reglas generales de manejo de sitios para Plone 3.
 
 Introducción
 ============
@@ -44,24 +50,52 @@ de paquete para Plone proporcionado por paster:
        egg:     cliente1.policy
        package: cliente1policy
        project: cliente1.policy
+
+A continuación, paster realiza algunas preguntas para personalizar la
+generación del paquete. La primera es si deseamos contestar todas las
+preguntas (all) o solo algunas (easy). Contestemos `all`::
+
+Después nos pregunta el los nombres del paquete Namespace (primera parte del
+nombre pasado al template) y el nombre del paquete (segunda parte). Como los
+valores por omisión son los mismos que pasamos arriba, basta presiona la
+tecla `enter`::
+
     Enter namespace_package (Namespace package (like plone)) ['plone']: cliente1
-    <el espacio de nombres se usa para poder agrupar varios paquetes bajo un mismo nombre>
     Enter package (The package contained namespace package (like example)) ['example']: policy
-    <el nombre del paquete en sí>
+
+.. tip::
+    #. el espacio de nombres se usa para poder agrupar varios paquetes bajo un mismo nombre
+    #. el nombre del paquete en sí
+    
+Siempre debe ser True para funcionar en Zope 2::
+    
     Enter zope2product (Are you creating a Zope 2 Product?) [False]: True
-    <siempre debe ser True para funcionar en Zope 2>
-    Enter version (Version) ['0.1']:
-    <el número de versión que aparece en la sección de productos adicionales de Plone>
-    Enter description (One-line description of the package) ['']:
-    <este y los datos que siguen son para los metadatos del proyecto en el PyPI>
-    Enter long_description (Multi-line description (in reST)) ['']:
-    Enter author (Author name) ['Plone Foundation']:
+    
+La versión del paquete se utiliza en el :menuselection:`Configuración del sitio --> Productos adicionales` 
+para mostrar al usuario la versión instalada del producto ::
+
+    Enter version (Version) ['1.0']: 0.1
+
+Después, se pide una corta descripción del paquete; este y los datos que siguen son para los 
+metadatos del proyecto en el PyPI.
+
+.. tip::
+    los metadatos del paquete es para definir un perfil de registro para subir el paquete a un 
+    repositorio como el Python Package Index.
+
+::
+
+    Enter description (One-line description of the package) ['']: Plone site policy for Cliente1 website
+    Enter long_description (Multi-line description (in reST)) ['']: a Plone site policy package for Cliente1 website
+    Enter author (Author name) ['Plone Foundation']: Leonardo J. Caballero G.
     Enter author_email (Author email) ['plone-developers@lists.sourceforge.net']:
-    Enter keywords (Space-separated keywords/tags) ['']:
-    Enter url (URL of homepage) ['http://svn.plone.org/svn/plone/plone.example']:
+    Enter keywords (Space-separated keywords/tags) ['']: plone policy package cliente1 website
+    Enter url (URL of homepage) ['http://svn.plone.org/svn/collective/cliente1.policy']:
     Enter license_name (License name) ['GPL']:
+    
+Finalmente, esta ultima pregunta siempre ocupara el valor por defecto, debe ser ``False`` 
+para funcionar bien en Zope 2::
     Enter zip_safe (True/False: if the package can be distributed as a .zip file) [False]:
-    <debe ser False para funcionar bien en Zope 2>
     Creating template basic_namespace
     ...
     Running /usr/bin/python2.4 setup.py egg_info
@@ -178,6 +212,6 @@ que nuestro código dependa de varios pasos.
 Referencia
 ==========
 
-- `Pasos para crear un producto de configuración`_ desde la comunidad Plone Mexico.
+- `Pasos para crear un producto de configuración`_ desde la comunidad Plone México.
 
 .. _Pasos para crear un producto de configuración: http://www.plone.mx/docs/policy.html
