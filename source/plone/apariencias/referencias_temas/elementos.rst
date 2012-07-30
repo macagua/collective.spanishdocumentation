@@ -100,7 +100,7 @@ A través de la Web
 -   Si solo quiere mover viewlets que solo aparezcan en una página,
     asegúrese de agregar @@manage-viewlets al URL de esa página.
 -   Usted encontrará que puede mover, ocultar o eliminar viewlets
-    mediante este método, pero no puede moverlos de un adminitrador de
+    mediante este método, pero no puede moverlos de un administrador de
     viewlet a otro.
 
 
@@ -112,7 +112,7 @@ Mover o desplazar viewlets es parte de la configuración de su sitio:
 -   Agregue o edite [su paquete de tema]/profiles/default/viewlets.xml
 
 Encontrará información general sobre la configuración del sitio en la sección
-`Configuración`_ de este manual. Vale la pena leer esto antes de iniciar
+:ref:`Configuración <513_seccion>` de este manual. Vale la pena leer esto antes de iniciar
 aquí, ya que la configuración de viewlets y administradores de viewlets puede
 ser un poco complicado. aquí se mostrará
 
@@ -133,7 +133,7 @@ No se puede hacer más que ocultar su viewlet en el administrador de viewlet
 .. code-block:: xml
 
     <object>
-        <hidden manager="[Viewlet Manager Name]" skinname="[su nombre del skin]">
+        <hidden manager="[Nombre de administrador de viewlet]" skinname="[su nombre del skin]">
             <viewlet name="[Nombre de Viewlet]" />
         </hidden>
     </object>
@@ -149,7 +149,7 @@ Moviendo un viewlet dentro de un administrador de viewlet
 .. code-block:: xml
 
     <object>
-        <order manager="[Viewlet Manager Name]" skinname="[su nombre del skin]">
+        <order manager="[Nombre de administrador de viewlet]" skinname="[su nombre del skin]">
         <!-- Specify all the viewlets you want to see in this viewlet 
             in the order you want them with this directive: -->
             <viewlet name="[Nombre de Viewlet]">
@@ -196,7 +196,7 @@ pasos
     </object>
 
 
--   También puede usar "insert-after='[Name of Viewlet Above]'"' o
+-   También puede usar "insert-after='[Nombre de viewlet por encima]'" o
     utilizar un asterisco para colocar el viewlet en la parte superior o
     inferior del administrador (e.g 'insert-after'=*).
 -   based-on="Plone Default" significa que va a tomar la orden de Plone
@@ -260,7 +260,8 @@ Usted tendrá que saber el nombre de:
 
 5. página de la plantilla[su paquete de tema]/browser/[su nombre de plantilla].pt
 
-6. Clase PythonEsto es opcional (pero vea la nota de abajo para la versión de Plone 3.1.2 
+6. Clase Python
+   Esto es opcional (pero vea la nota de abajo para la versión de Plone 3.1.2 
    o anteriores) coloque esto en [su paquete de tema]/browser/[su modulo].py
 
 Muestra de directiva de configuration.zcml
@@ -482,7 +483,7 @@ En su propio producto
 
 Hay un tutorial detallado disponible aquí:
 
--   `http://plone.org/documentation/manual/theme-reference/elements/portlet/override-the-portlets-in-plone-3.0`_
+-   :ref:`sustituir los portlets de Plone 3.0 <724_seccion>`
 
 También puede consultar los detalles del portlet que desee reemplazar en la
 sección Elementos de este manual.
@@ -553,6 +554,7 @@ método recursivo en la clase.
         _template = ViewPageTemplateFile([su nombre de plantilla].pt)
         recurse = ViewPageTemplateFile([su nombre del recursivo de plantilla])
 
+.. _724_seccion:
 
 7.2.4. Sustituir los portlets de Plone 3.0
 ==========================================
@@ -675,11 +677,10 @@ deshacernos de ellas en el XHTML sólo para ejemplificar.
 
 Los portlets por defecto de Plone se declaran en el paquete
 **plone.app.portlets.portlets**. Los portlets de núcleo en Plone 3.0 se
-pueden encontrar en
-**$INSTANCE_HOME/lib/python/plone/app/portlets/portlets/**. Aunque se pueden
-ubicar en otro lugar en $PYTHONPATH. Dependiendo de la instalación de Zope
-(win32 o UNIX como sistema operativo, instalación desde el código fuente, por
-el instalador, huevos u otros...), puede que tenga que utilizar las
+pueden encontrar en **$INSTANCE_HOME/lib/python/plone/app/portlets/portlets/**. 
+Aunque se pueden ubicar en otro lugar en $PYTHONPATH. Dependiendo de la instalación 
+de Zope (win32 o UNIX como sistema operativo, instalación desde el código fuente, 
+por el instalador, huevos u otros...), puede que tenga que utilizar las
 herramientas de búsqueda disponibles en su sistema operativo para localizar
 el paquete.
 
@@ -907,7 +908,7 @@ A través de la Web
 
     .. code-block:: xml
 
-        <div tal:replace="structure provider:[viewlet manager name]" />
+        <div tal:replace="structure provider:[nombre de administrador de viewlet]" />
 
 -   (Use la clave de Elementos para identificar exactamente qué
     administrador le interesa)
@@ -5756,7 +5757,6 @@ Inserte su nuevo viewlet en un administrador de viewlet
 
 
 .. _http://plone.org/documentation/kb/customizing-main-template-viewlets/reordering-and-hiding-viewlets: http://plone.org/documentation/kb/customizing-main-template-viewlets/reordering-and-hiding-viewlets
-.. _Configuración: http://plone.org/documentation/manual/theme-reference/elements/buildingblocks/configuration
 .. _GloWorm: http://plone.org/products/gloworm
 .. _este artículo: http://plone.org/documentation/kb/customizing-main-template-viewlets/adding-a-viewlet/
 .. _http://plone.org/documentation/kb/where-is-what/portlets-1: http://plone.org/documentation/kb/where-is-what/portlets-1
@@ -5770,5 +5770,4 @@ Inserte su nuevo viewlet en un administrador de viewlet
 .. _http://plone.org/documentation/kb/where-is-what/the-personal-bar: http://plone.org/documentation/kb/where-is-what/the-personal-bar%27
 .. _http://plone.org/documentation/kb/where-is-what/the-path-bar: http://plone.org/documentation/kb/where-is-what/the-path-bar%27
 .. _http://plone.org/documentation/kb/where-is-what/document-actions: http://plone.org/documentation/kb/where-is-what/document-actions%27
-.. _http://plone.org/documentation/manual/theme-reference/elements/portlet/override-the-portlets-in-plone-3.0: http://plone.org/documentation/manual/theme-reference/elements/portlet/override-the-portlets-in-plone-3.0
 .. _http://plone.org/documentation/how-to/adding-portlet-managers: http://plone.org/documentation/how-to/adding-portlet-managers

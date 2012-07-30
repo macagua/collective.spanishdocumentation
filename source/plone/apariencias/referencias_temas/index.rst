@@ -1,6 +1,6 @@
 .. -*- coding: utf-8 -*-
 
-.. referencias_temas_plone:
+.. _referencias_temas_plone:
 
 =============================
 Referencias de Temas en Plone
@@ -17,6 +17,7 @@ realizar temas y pieles en Plone, además de no ser una guía paso a
 paso simplemente es una referencias sobre estilos de trabajo.
 
 .. toctree::
+   :maxdepth: 2
 
    intro
    comienzo_rapido

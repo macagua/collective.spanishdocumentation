@@ -2,16 +2,16 @@
 
 .. _4_seccion:
 
-4. Herramientas
-===============
+Herramientas
+============
 
 Llegó el momento de afilar sus lapices. Herramientas de autor, poniendo su
 sitio Plone en modo de depuración, cómo crear un producto de tema (para
 trabajar en el sistema de archivos).
 
 
-4.1. Herramientas de autor
---------------------------
+Herramientas de autor
+---------------------
 
 Si está trabajando con el sistema de archivos, puede usar cualquier editor de
 texto para escribir las plantillas, archivos de configuración (xml, zcml) y

@@ -535,8 +535,8 @@ Cómo las hojas de estilo y JavaScript llegan a la página.
 Los archivos JavaScript y hojas de estilo están incluidos en la sección skin
 del tema Plone Default, así que el proceso de personalización o reescritura
 en general sigue el concepto de orden de precedencia descrito en la sección
-`Skin`_ de este manual (es decir, situar un remplazo en una capa más alta del
-Skin).
+:ref:`Skin <52_seccion>` de este manual (es decir, situar un remplazo en una 
+capa más alta del Skin).
 
 Si crea su propia hoja de estilo, puede ponerla en la carpeta personalizada
 de portal_skins a través de la web o en el directorio de skins de su tema en
@@ -546,8 +546,8 @@ Si gusta, y se siente ambicioso, puede activar la hoja de estilos en un
 componente de tipo de recurso al ponerlo en el directorio del navegador y
 registrandolo en ZCML. De hecho, esto se hace por usted si crea su propio
 producto de tema usando el plone3_template. Con respecto al último enfoque
-existen pros y contras, revise de nuevo la sección `Skin o Componentes`_ si
-quiere explorar estos un poco más..
+existen pros y contras, revise de nuevo la sección :ref:`Skin o Componentes <536_seccion>` 
+si quiere explorar estos un poco más..
 
 
 Registros de recursos
@@ -709,7 +709,8 @@ usted está en la sección "Recursos Humanos" de su intranet o si el tipo de
 contenido es un elemento de noticias.
 
 Las Condiciones tienen que ser expresiones `TALES`_. Y puede usar 
-`global template variables (variables globales de plantilla)`_ dentro de ellas.
+:ref:`variables globales de plantilla <5_variables_globales_plantilla_seccion>` 
+dentro de ellas.
 
 
 Fusionando
@@ -829,7 +830,8 @@ que pueden ser ajustados.
   expression
     Una expresión `TALES`_ a ser evaluada para comprobar si la hoja de
     estilo o JavaScript debe ser incluida en la producción o no. Puede usar
-    `global template variables (variables globales de plantilla)`_ aquí.
+    :ref:`variables globales de plantilla <5_variables_globales_plantilla_seccion>` 
+    aquí.
 
   conditionalcomment (disponible de Plone 3.3 en adelante)
     Una pequeña cadena para ser incluida en un comentario condicional alrededor
@@ -1598,11 +1600,8 @@ página `plone.app.jquerytools`_ pypi para documentación y ejemplos.
 .. _Plantillas y el lenguaje de plantillas: http://plone.org/documentation/manual/theme-reference/page/buildingblocks/skin/templates
 .. _http://plone.org/kb/manual/archetypes-developer-manual/fields/fields-reference: http://plone.org/kb/manual/archetypes-developer-manual/fields/fields-reference
 .. _http://plone.org/documentation/kb/richdocument/pil: http://plone.org/kb/tutorial/richdocument/pil
-.. _Skin: http://plone.org/documentation/manual/theme-reference/page/buildingblocks/skin
-.. _Skin o Componentes: http://plone.org/documentation/manual/theme-reference/page/buildingblocks/components/skinorcomponents
 .. _siguiente sección: http://plone.org/documentation/manual/theme-reference/page/css/resource-registries
 .. _TALES: http://docs.zope.org/zope2/zope2book/source/AppendixC.html#tales-overview
-.. _global template variables (variables globales de plantilla): http://plone.org/documentation/manual/theme-reference/buildingblocks/skin/templates/global-template-variables
 .. _dentro de ellas.: http://plone.org/documentation/how-to/cmf-expressions
 .. _http://msdn.microsoft.com/en-us/library/ms537512.aspx: http://msdn.microsoft.com/en-us/library/ms537512.aspx
 .. _Lea más acerca de las configuraciones de medios de CSS en w3.org: http://www.w3.org/TR/CSS21/media.html

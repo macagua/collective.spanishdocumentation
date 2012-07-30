@@ -69,6 +69,8 @@ Componentes
     -   the browser directory in a file system product
 
 
+.. _513_seccion:
+
 Configuración
 .............
 
@@ -96,6 +98,7 @@ Skin
 Plantillas, hojas de estilo, archivos Javascript, el modo de personalizarlos,
 dónde encontrarlos.
 
+.. _521_seccion:
 
 Plantillas y el lenguaje de plantillas
 ......................................
@@ -130,7 +133,7 @@ TAL es el único idioma que realmente recomendamos para que aprenda
 correctamente. Para el resto puede escoger su camino o familiarizarse a
 medida que avanza.
 
--   `Zope Page Template Tutorial on plone.org - Advanced Usage (Tutorial de Plantillas de página Zope en plone.org; uso avanzado)`_
+-   :ref:`Tutorial de Plantillas de página Zope en plone.org; uso avanzado <5_advanced_usage_seccion>`
 
 Una página Web Plone se realiza mediante la agregación de plantillas, en
 lugar de una sola, y hay un par de aspectos de las Plantillas de página Zope
@@ -441,8 +444,8 @@ Recuerde que tiene que tener cuidado cuando este editando y no destruir el
 ``span`` o ingresar etiquetas de formato tales como ``b`` o ``fuente`` dentro
 de este, ya que también serán remplazadas.
 
-Si quiere insertar texto en una etiqueta sin modificarla como tal,
-use``tal:content``. Para definir el título de su página de prueba al título
+Si quiere insertar texto en una etiqueta sin modificarla como tal, use 
+``tal:content``. Para definir el título de su página de prueba al título
 de propiedad de la plantilla, agregue las líneas siguientes encima del otro
 texto:
 
@@ -576,10 +579,9 @@ quiere en este caso, omitir toda la tabla. Esto lo puede hacer agregando
                  tal:condition="container/objectValues">
 
 Ahora cuando no haya objetos, ninguna parte de la tabla será incluida en el
-diseño. Sin embargo cuando haya objetos, la expresión
-"container/objectValues" será evaluada dos veces, lo cual es un poco
-ineficiente. Además, si usted quiere cambiar la expresión, tendrá que
-cambiarla en ambos lugares.
+diseño. Sin embargo cuando haya objetos, la expresión "container/objectValues"
+será evaluada dos veces, lo cual es un poco ineficiente. Además, si usted quiere 
+cambiar la expresión, tendrá que cambiarla en ambos lugares.
 
 Para evitar estos problemas, puede definir una variable para que contenga la
 lista y luego usarla en ambos casos: ``tal:condition`` y ``tal:repeat``.
@@ -1036,6 +1038,8 @@ usará estos elementos nuevos de presentación.
 Basado en el `Zope Book`_, (C) `Zope Corporation`_
 
 
+.. _5_advanced_usage_seccion:
+
 Uso avanzado
 ~~~~~~~~~~~~
 
@@ -1102,7 +1106,7 @@ Si usted necesita definir múltiples atributos en una etiqueta, no puede
 hacerlo mediante la colocación de múltiples sentencias ``tal:attributes`` en
 la etiqueta, y dividiéndolas de manera inservible por las etiquetas.
 
-Ambas sentencias ``tal:attributes`` y ``tal:define``pueden tener partes
+Ambas sentencias ``tal:attributes`` y ``tal:define`` pueden tener partes
 múltiples en una sola sentencia. Para separar partes se utiliza el punto y
 coma (``;``), así que cualquier expresión que contenga punto en coma en estas
 sentencias debe repetirse dos veces (``;;``). Aquí hay un ejemplo de
@@ -1567,6 +1571,7 @@ se renderizará como:
 
 Este articulo contiene información y ejemplos del `Zope Book`_, (C) `Zope Developers Community.`_
 
+.. _5_variables_globales_plantilla_seccion:
 
 Variables globales de plantillas
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1811,8 +1816,8 @@ qué tipo de ingeniosos trucos se pueden hacer con la personalización de
 widgets.
 
 Como ya hemos dicho, los widgets son lo que Arquetipos utiliza para mostrar
-los campos individuales. Las plantillas integradas en Arquetipos,
-``base_view``,``base``, y ``widgets/field`` usan cada campo y widget de campo
+los campos individuales. Las plantillas integradas en Arquetipos, ``base_view``, 
+``base``, y ``widgets/field`` usan cada campo y widget de campo
 asociado (especificado en el esquema) para determinar cual plantilla de
 widget usar. No obstante, puede sustituir un plantilla de widget, como
 mostraremos más abajo. Además, puede crear una clase completamente nueva de
@@ -1891,14 +1896,13 @@ personalizando *view (vista)*. Empecemos por crear una nueva plantilla
 llamada ``my_string_widget`` `[2]`_. Comience de esta manera:
 
 Observe cómo se utiliza la misma llamada de "pase-a través" macro en el macro
-``edit`` que la plantilla ``string`` originalmente utiliza en el macro de ``
-búsqueda ``. Es importante recordar el siguiente concepto: **las plantillas
-widget necesitan tener definidos los tres macros:** ``view``, ``edit``, y
-``search``. También note cómo no existe un código de visualización para el
-rótulo, como es de costumbre en otras partes. Si se está preguntando de dónde
-viene la variable ``accessor``, pues es parte del código de visualización del
-widget. La clase widget define las siguiente variables locales que son
-accesibles dentro de las plantillas widget:
+``edit`` que la plantilla ``string`` originalmente utiliza en el macro de ``search``. 
+Es importante recordar el siguiente concepto: **las plantillas widget necesitan tener 
+definidos los tres macros:** ``view``, ``edit``, y ``search``. También note cómo no 
+existe un código de visualización para el rótulo, como es de costumbre en otras partes. 
+Si se está preguntando de dónde viene la variable ``accessor``, pues es parte del código 
+de visualización del widget. La clase widget define las siguiente variables locales que 
+son accesibles dentro de las plantillas widget:
 
 .. glossary::
 
@@ -2064,7 +2068,7 @@ personalizado:
 
 
 Note que todo lo que tuvimos que hacer fue copiar el macro desde ``base`` , y
-añadir la etiqueta `` <p>`` con algún texto contenido en él. Note por
+añadir la etiqueta ``<p>`` con algún texto contenido en él. Note por
 ejemplo, que podríamos haber usado ``tal:content="here/getCustomFooterData"``
 en la etiqueta ``</p> <p>`` si hubiéramos definido un método
 ``getCustomFooterData()`` en nuestra clase.
@@ -2149,7 +2153,7 @@ hará la magia por nosotros:
     <label>Now presenting... Field1!</label>
 
 Note que solo he sustituido el rótulo por defecto para los campos llamados
-"myfield". El macro ``label (rótulo)l`` en ``widgets/field`` es donde el
+"myfield". El macro ``label (rótulo)`` en ``widgets/field`` es donde el
 comportamiento predeterminado se puede encontrar. El resultado final luce
 como este:
 
@@ -2157,11 +2161,11 @@ como este:
   :alt: rótulo personalizado
 
 
-No olvide tampoco que tiene el poder de omitir ``head (encabezado)``,``body
-(cuerpo)``,``folderlisting (listado de carpetas)``, y ``footer (pié de
-página)`` simplemente escribiendo en macros sin-acción dentro de su plantilla
-de vista. Además, se puede llegar a su objeto y recuperar los valores de
-campo sin necesidad de utilizar el marco de widget.
+No olvide tampoco que tiene el poder de omitir ``head (encabezado)``, ``body (cuerpo)``,
+``folderlisting (listado de carpetas)``, y ``footer (pié de página)`` simplemente 
+escribiendo en macros sin-acción dentro de su plantilla de vista. Además, se puede 
+llegar a su objeto y recuperar los valores de campo sin necesidad de utilizar el 
+marco de widget.
 
 
 Conclusión
@@ -4145,8 +4149,8 @@ verá referidas así ++resource++[nombre del recurso]. Lo mismo se puede hacer
 para un directorio que contiene las plantillas y hojas de estilo.
 
 En este momento puedo escuchar que está diciendo "Genial" y "¿cual debería
-usar, componentes o skins?", vaya a la sección :ref:`¿Skin o Componentes? <536_seccion>` para
-una discusión de los pros y contras. Al momento de escritura sugerimos la
+usar, componentes o skins?", vaya a la sección :ref:`¿Skin o Componentes? <536_seccion>` 
+para una discusión de los pros y contras. Al momento de escritura sugerimos la
 opción más sencilla que es mantener sus plantillas, imágenes y hojas de
 estilo en su skin. Estamos mencionando los recursos del explorador para que
 sepa que son en el caso de encontrárselos.
@@ -4968,7 +4972,6 @@ Dentro de su propio producto de tema
 
 .. _Zope Page Templates tutorial on plone.org (Tutorial de Plantillas de página Zope en plone.org): http://plone.org/documentation/tutorial/zpt/
 .. _ZPT Reference on Zope.org (Referencia de ZPT en Zope.org): http://www.zope.org/Documentation/Books/ZopeBook/2_6Edition/AppendixC.stx
-.. _Zope Page Template Tutorial on plone.org - Advanced Usage (Tutorial de Plantillas de página Zope en plone.org; uso avanzado): http://plone.org/documentation/manual/theme-reference/buildingblocks/skin/templates/advanced-usage
 .. _útil introducción: http://plone.org/documentation/manual/plone-2.5-user-manual/managing-content/folder-view/
 .. _The Zope Book (el Libro de Zope): http://www.zope.org/Documentation/Books/ZopeBook/current/ExternalTools.stx
 .. _artículo WebDAV: http://www.zope.org/Documentation/Articles/WebDAV
