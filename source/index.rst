@@ -21,6 +21,7 @@ software Berkeley) y prácticamente cualquier otra plataforma.
 .. toctree::
    :maxdepth: 1
 
+   manuales/requerimientos_sistema_plone
    manuales/instalando_plone
 
 
@@ -55,7 +56,7 @@ agilicen nuestro desarrollo.
    :maxdepth: 1
 
    plone/apariencias/index
-   Realizando pruebas en Plone <plone/haciendo_pruebas/index>
+   Realizando pruebas en Plone 3 <plone/haciendo_pruebas/index>
 
 
 ==========================
@@ -252,10 +253,9 @@ sección tocaremos algunos de ellos.
 .. toctree::
    :maxdepth: 1
 
-   plone/desarrollar_productos
+   plone/tipos_productos
    plone/crear_producto_policy
    plone/crear_producto_tema
-   plone/inmersion_interactiva_plone3
 
 Tecnologías de Zope
 -------------------
@@ -293,6 +293,7 @@ Otros recursos
 .. toctree::
    :maxdepth: 2
 
+   glosario
    links
    presentaciones
 
@@ -305,8 +306,9 @@ Instrucciones acerca de esta documentación.
 .. toctree::
    :maxdepth: 2
 
-   procesos_de_documentacion
-   traducciones_de_contenidos
+   documentando
+   traduciendo
+   copyright
 
 
    

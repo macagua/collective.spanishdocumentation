@@ -6,7 +6,13 @@
 Desarrollar diversos productos con Plone 3
 ==========================================
 
-.. contents :: :local:
+:Autor(es): Carlos de la Guardia, Leonardo J. Caballero G.
+:Correo(s): carlos.delaguardia@gmail.com, leonardocaballero@gmail.com
+:Lanzamiento: |version|
+:Fecha: |today|
+
+En esta articulo busca explicar los tipos desarrollos de productos / módulos 
+disponibles para Plone 3.
 
 Introducción
 ============
@@ -28,30 +34,6 @@ La estructura del código que se recomienda incluye las siguientes partes:
 
 .. glossary::
 
-  Producto de tema
-    Incluye uno o más productos que definan un "skin" de Plone que especifique
-    la presentación visual del sitio. Cada uno puede incluir:
-
-      * Estilos de CSS.
-      * Archivos de Javascript.
-      * Archivos de Imágenes.
-      * Plantillas de Plone modificados.
-      * Plantillas originales del tema.
-      * Vistas y viewlets especiales.
-      
-    Para crear este producto consulte el articulo :ref:`Creación de un paquete de tema <producto_tema>`.
-
-  Productos de contenido
-    Uno o varios productos que definen los tipos de contenido que representan
-    la base del sitio web.
-
-      * Definición de tipos y campos.
-      * Flujo de trabajos específicos para un tipo de contenido.
-      * Vistas y viewlets especiales para un tipo de contenido.
-      * Imágenes y estilos propios del contenido.
-      * Portlets propios del contenido.
-      * Índices y metadatos del catálogo para cada tipo utilizado.
-
   Producto de configuración (policy product)
     Incluye toda la configuración general del sitio. Representa las reglas
     generales de manejo de sitios Plone de una organización y puede incluir:
@@ -67,6 +49,30 @@ La estructura del código que se recomienda incluye las siguientes partes:
       * Flujo de trabajos generales de la organización.
       
     Para crear este producto consulte el articulo :ref:`Creación de un producto de configuración <producto_policy>`.
+
+  Producto de tema (plone theme)
+    Incluye uno o más productos que definan un "skin" de Plone que especifique
+    la presentación visual del sitio. Cada uno puede incluir:
+
+      * Estilos de CSS.
+      * Archivos de Javascript.
+      * Archivos de Imágenes.
+      * Plantillas de Plone modificados.
+      * Plantillas originales del tema.
+      * Vistas y viewlets especiales.
+      
+    Para crear este producto consulte el articulo :ref:`Creación de un paquete de tema <producto_tema>`.
+
+  Productos de contenido (content types)
+    Uno o varios productos que definen los tipos de contenido que representan
+    la base del sitio web.
+
+      * Definición de tipos y campos.
+      * Flujo de trabajos específicos para un tipo de contenido.
+      * Vistas y viewlets especiales para un tipo de contenido.
+      * Imágenes y estilos propios del contenido.
+      * Portlets propios del contenido.
+      * Índices y metadatos del catálogo para cada tipo utilizado.
 
   Productos de apoyo
     Uno o varios productos que realicen funciones no específicamente
