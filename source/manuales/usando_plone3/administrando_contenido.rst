@@ -239,6 +239,7 @@ un simple campo de edición con los botones Guardar y Cancelar:
 Cambie el titulo y guarde. El beneficio en rapidez de la edición rápida se
 nota especialmente en algo tan simple como el titulo.
 
+.. _33_seccion:
 
 3.3. Vistas de carpeta
 ======================
