@@ -206,7 +206,7 @@ situada dentro de un "slot" ("ranura") en el main_template, llamado "main"
 ("principal)
 
 Si no se siente seguro acerca de las ranuras, entonces vuelva a revisar
-`Plantillas y el lenguaje de plantillas`_.
+:ref:`Plantillas y el lenguaje de plantillas <521_seccion>`.
 
 Alrededor del la ranura (slot) principal, los componentes; viewlets y
 portlets entran en juego, suministrando los elementos de decoración para el
@@ -516,7 +516,7 @@ error bizarro como "Unauthorized" o "TypeError:a float is required"
 
 TAMBIÉN VEA:
 
- * `http://plone.org/kb/manual/archetypes-developer-manual/fields/fields-reference`_
+ * `http://plone.org/documentation/kb/manual/archetypes-developer-manual/fields/fields-reference`_
  * `http://plone.org/documentation/kb/richdocument/pil`_
 
 .. _63_seccion:
@@ -710,7 +710,7 @@ contenido es un elemento de noticias.
 
 Las Condiciones tienen que ser expresiones `TALES`_. Y puede usar 
 :ref:`variables globales de plantilla <5_variables_globales_plantilla_seccion>` 
-dentro de ellas.
+`dentro de ellas`_.
 
 
 Fusionando
@@ -1597,12 +1597,11 @@ página `plone.app.jquerytools`_ pypi para documentación y ejemplos.
 
 .. _Zope book: http://www.plope.com/Books/2_7Edition/SearchingZCatalog.stx
 .. _The Definitive Guide to Plone: http://docs.neuroinf.de/PloneBook/ch11.rst#searching-and-categorizing-content
-.. _Plantillas y el lenguaje de plantillas: http://plone.org/documentation/manual/theme-reference/page/buildingblocks/skin/templates
-.. _http://plone.org/kb/manual/archetypes-developer-manual/fields/fields-reference: http://plone.org/kb/manual/archetypes-developer-manual/fields/fields-reference
-.. _http://plone.org/documentation/kb/richdocument/pil: http://plone.org/kb/tutorial/richdocument/pil
+.. _http://plone.org/documentation/kb/manual/archetypes-developer-manual/fields/fields-reference: http://plone.org/documentation/kb/manual/archetypes-developer-manual/fields/fields-reference
+.. _http://plone.org/documentation/kb/richdocument/pil: http://plone.org/documentation/kb/tutorial/richdocument/pil
 .. _siguiente sección: http://plone.org/documentation/manual/theme-reference/page/css/resource-registries
 .. _TALES: http://docs.zope.org/zope2/zope2book/source/AppendixC.html#tales-overview
-.. _dentro de ellas.: http://plone.org/documentation/how-to/cmf-expressions
+.. _dentro de ellas: http://plone.org/documentation/how-to/cmf-expressions
 .. _http://msdn.microsoft.com/en-us/library/ms537512.aspx: http://msdn.microsoft.com/en-us/library/ms537512.aspx
 .. _Lea más acerca de las configuraciones de medios de CSS en w3.org: http://www.w3.org/TR/CSS21/media.html
 .. _http://developer.mozilla.org/en/docs/Properly_Using_CSS_and_JavaScript_in_XHTML_Documents: http://developer.mozilla.org/en/docs/Properly_Using_CSS_and_JavaScript_in_XHTML_Documents

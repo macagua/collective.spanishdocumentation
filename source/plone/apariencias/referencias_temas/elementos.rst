@@ -841,6 +841,7 @@ métodos de Python dentro de esa clase.
 
 ¡Disfrute!
 
+.. _73_seccion:
 
 7.3. Administrador de viewlet
 =============================
@@ -986,6 +987,8 @@ Muestra de la directiva configure.zcml
         permission="zope2.View"
      />
 
+
+.. _74_seccion:
 
 7.4. Administrador de portlet
 =============================
@@ -1691,6 +1694,8 @@ la Web.
     :alt: plone.siteactions-sunburst
     
 .. |peihtml53| replace:: <ul id="portal-siteactions">...</ul>
+    
+.. |peihtml53-1| replace:: :ref:`plonetheme.sunburst.site_actions <792_seccion>`
 
 .. |peihtml54| image:: ./image_thumb_020.png
     :alt: plone.searchbox-sunburst
@@ -1711,6 +1716,8 @@ la Web.
     :alt: plone.personal_bar-sunburst
     
 .. |peihtml61| replace:: <div id="portal-personaltools-wrapper">...</div>
+    
+.. |peihtml61-1| replace:: :ref:`plonetheme.sunburst.personal_bar <796_seccion>`
 
 .. |peihtml62| image:: ./image_preview_005.png
     :alt: plone.pathbar-sunburst
@@ -1870,7 +1877,7 @@ la Web.
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     | Acciones del sitio  | |peihtml53|   | `plonetheme.sunburst.site_actions`_        |
+|                     | Acciones del sitio  | |peihtml53|   | |peihtml53-1|                              |
 |                     |                     |               |                                            |
 | |peihtml52|         |                     |               | plone.portalfooter                         |
 |                     |                     |               |                                            |
@@ -1894,7 +1901,7 @@ la Web.
 |                     |                     |               |                                            |
 |                     |                     |               | :ref:`viewlet <721_seccion>`               |
 +---------------------+---------------------+---------------+--------------------------------------------+
-|                     |                     | |peihtml61|   | `plonetheme.sunburst.personal_bar`_        |
+|                     |                     | |peihtml61|   | |peihtml61-1|                              |
 |                     |                     |               |                                            |
 | |peihtml60|         | Barra personal      |               | plone.portaltop                            |
 |                     |                     |               |                                            |
@@ -5762,8 +5769,6 @@ Inserte su nuevo viewlet en un administrador de viewlet
 .. _http://plone.org/documentation/kb/where-is-what/portlets-1: http://plone.org/documentation/kb/where-is-what/portlets-1
 .. _http://plone.org/products/plone/roadmap/203/: http://plone.org/products/plone/roadmap/203/
 .. _Personalización de viewlets en main_template: http://plone.org/documentation/tutorial/customizing-main-template-viewlets
-.. _plonetheme.sunburst.site_actions: http://plone.org/documentation/manual/theme-reference/elements/visibleelements/plonetheme.sunburst.site_actions
-.. _plonetheme.sunburst.personal_bar: http://plone.org/documentation/manual/theme-reference/elements/visibleelements/plonetheme.sunburst.personal_bar
 .. _http://plone.org/documentation/kb/the-search-box: http://plone.org/documentation/tutorial/where-is-what/the-search-box
 .. _http://plone.org/documentation/kb/where-is-what/the-logo: http://plone.org/documentation/kb/where-is-what/the-logo
 .. _http://plone.org/documentation/kb/where-is-what/the-navigation-tabs: http://plone.org/documentation/kb/where-is-what/the-navigation-tabs%27

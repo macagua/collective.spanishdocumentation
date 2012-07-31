@@ -159,7 +159,7 @@ Un proyecto veloz y en curso para generar temas que se incluirán con el Plone
 de caja, y aportes mediante lluvias de ideas para mejorar las historia de
 temas en Plone:
 
--   `http://www.openplans.org/projects/ootb-plone-themes/summary`_
+-   `http://www.coactivate.org/projects/ootb-plone-themes/summary`_
 
 
 Deliverance
@@ -168,11 +168,11 @@ Deliverance
 Deliverance es un programa ligero que aplica un tema a contenido de acuerdo a
 un conjunto de reglas.
 
--   `http://www.openplans.org/projects/deliverance/summary`_
+-   `http://www.coactivate.org/projects/deliverance/summary`_
 
 -   `http://blog.repoze.org/setting-up-deliverance-screencast-20071025.html`_
 
 
-.. _http://www.openplans.org/projects/ootb-plone-themes/summary: http://www.openplans.org/projects/ootb-plone-themes/summary
-.. _http://www.openplans.org/projects/deliverance/summary : http://www.openplans.org/projects/deliverance/summary
+.. _http://www.coactivate.org/projects/ootb-plone-themes/summary: http://www.coactivate.org/projects/ootb-plone-themes/summary
+.. _http://www.coactivate.org/projects/deliverance/summary : http://www.coactivate.org/projects/deliverance/summary
 .. _http://blog.repoze.org/setting-up-deliverance-screencast-20071025.html: http://blog.repoze.org/setting-up-deliverance-screencast-20071025.html

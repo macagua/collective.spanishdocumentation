@@ -179,7 +179,8 @@ de este manual le muestra un ejemplo.
 
 Desde la perspectiva del usuario, contribuyente, o la del visitante, una
 vista es la forma en que un elemento de contenido es presentado en la página.
-Hay una `útil introducción`_ a este tema en el manual de usuario de Plone.
+Hay una :ref:`útil introducción <33_seccion>` a este tema en el manual de 
+usuario de Plone.
 
 la plantillas que se utilizan para representar un elemento de contenido para
 una vista poseen _view anexadas a sus nombres (ej., document_view.pt) y
@@ -4972,7 +4973,6 @@ Dentro de su propio producto de tema
 
 .. _Zope Page Templates tutorial on plone.org (Tutorial de Plantillas de página Zope en plone.org): http://plone.org/documentation/tutorial/zpt/
 .. _ZPT Reference on Zope.org (Referencia de ZPT en Zope.org): http://www.zope.org/Documentation/Books/ZopeBook/2_6Edition/AppendixC.stx
-.. _útil introducción: http://plone.org/documentation/manual/plone-2.5-user-manual/managing-content/folder-view/
 .. _The Zope Book (el Libro de Zope): http://www.zope.org/Documentation/Books/ZopeBook/current/ExternalTools.stx
 .. _artículo WebDAV: http://www.zope.org/Documentation/Articles/WebDAV
 .. _Emacs: http://www.gnu.org/software/emacs/
