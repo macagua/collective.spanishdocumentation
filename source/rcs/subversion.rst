@@ -1,8 +1,15 @@
 .. -*- coding: utf-8 -*-
 
+.. _rcs_subversion:
+
 ==========================================
 Control de versiones utilizando Subversion
 ==========================================
+
+:Autor(es): Carlos de la Guardia, Leonardo J. Caballero G.
+:Correo(s): carlos.delaguardia@gmail.com, leonardocaballero@gmail.com
+:Lanzamiento: |version|
+:Fecha: |today|
 
 .. contents :: :local:
 
@@ -555,7 +562,7 @@ x
 Referencia
 ==========
 
-- `Control de versiones utilizando Subversion`_ desde la comunidad Plone Mexico.
+- `Control de versiones utilizando Subversion`_ desde la comunidad Plone México.
 
 .. _Subversion: http://subversion.tigris.org
 .. _Control de versiones utilizando Subversion: http://www.plone.mx/docs/subversion.html
