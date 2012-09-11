@@ -54,10 +54,10 @@ Existe una serie de terminologías que debe conocer para entender el proceso de 
     parte de los usuarios.
 
   Extractores de terminología
-    Según el termino `Extractores de terminología en Wikipedia <http://es.wikipedia.org/wiki/Extractores_de_terminología>`_, son herramientas que permiten la identificación y extracción de candidatos a 
-    términos de los textos explorados. Estas herramientas están abocadas a generar material para las bases
-    terminológicas y que requieren del análisis y evaluación del usuario para la inclusión definitiva en la 
-    base de datos.
+    Según el termino `Extractores de terminología en Wikipedia <http://es.wikipedia.org/wiki/Extractores_de_terminología>`_, 
+    son herramientas que permiten la identificación y extracción de candidatos a términos de los textos explorados. 
+    Estas herramientas están abocadas a generar material para las bases terminológicas y que requieren del análisis y 
+    evaluación del usuario para la inclusión definitiva en la base de datos.
 
   Glosarios
     Según el termino `Glosario en Wikipedia <http://es.wikipedia.org/wiki/Glosario>`_, Glosario (del latín 
@@ -72,7 +72,7 @@ Existe una serie de terminologías que debe conocer para entender el proceso de 
     el lenguaje SMS, pesos y medidas o abreviaturas, etc. Proporcionan breve información sobre el significado 
     de tales palabras o términos. Pueden ser también diccionarios de idiomas en los que se indica la traducción 
     a otra lengua o a otras lenguas de las palabras o términos que incluyen.
-
+    
 
 Obtener y memorias de traducción
 ================================
@@ -96,6 +96,34 @@ y compilar esta documentación ejecute el siguiente comando:
   $ svn export http://svn.plone.org/svn/collective/spanishdocs/cat spanishdocs-omegat
 
 
+Acerca de OmegaT
+================
+
+Según Wikipedia `OmegaT <http://es.wikipedia.org/wiki/OmegaT>`_, es una herramienta de memoria de traducción, 
+es decir, un programa CAT que registra equivalencias entre lenguas. Está herramienta pensada para ser utilizada 
+por traductores profesionales. 
+
+Sus características incluyen la segmentación personalizable utilizando expresiones regulares, memorias de traducción con 
+coincidencia aproximada y búsqueda de material de referencia, coincidencia del glosario, coincidencia del diccionario, y 
+en línea con la corrección ortográfica usa los diccionarios ortográficos de Hunspell.
+
+Mas información en http://omegat.org/
+
+
+Herramientas CAT en Python
+==========================
+
+Una de las mas maduras herramientas CAT es Virtaal la cual es una herramienta gráfica de traducción diseñada para unir 
+potencia y facilidad de uso. Aunque la meta inicial se centra en la traducción de programas (localización o l10n), tenemos 
+la intención de que también sirva como una herramienta para varios propósitos. Virtaal se construye sobre la poderosa API 
+de Translate Toolkit.
+
+Mas información en http://translate.sourceforge.net/wiki/es/virtaal/index
+
+.. tip::
+    La herramienta actual usado es OmegaT, se recomienda usarla si desea que sus contribuciones en traducciones se 
+    apliquen directamente a los proyectos actuales de trabajo.
+
 Instalando OmegaT
 =================
 
@@ -103,8 +131,8 @@ Para instalarlo debe ejecutar los siguientes comandos:
 
 .. code-block:: sh
 
-  $ wget http://ufpr.dl.sourceforge.net/project/omegat/OmegaT%20-%20Standard/OmegaT%202.3.0/OmegaT_2.3.0_Linux.tar.bz2
-  $ tar -xjvvf OmegaT_2.3.0_Linux.tar.bz2 -C $HOME
+  $ wget http://hivelocity.dl.sourceforge.net/project/omegat/OmegaT%20-%20Standard/OmegaT%202.5.5%20update%202/OmegaT_2.5.5_02_Linux.tar.bz2
+  $ tar -xjvvf OmegaT_2.5.5_02_Linux.tar.bz2 -C $HOME
 
 
 Ejecutando OmegaT
@@ -129,10 +157,42 @@ Debes cuidar los siguientes aspectos:
 FAQ
 ===
 
-**Pregunta :** He añadido una entrada del índice o un nuevo término en el glosario y
-no se actualiza cuando compilo el documento.
+**Pregunta :** ¿Por que usar OmegaT en ves de Virtaal?
 
-**Respuesta :** El índice de Sphinx es a veces es desorientado y la gestión de la dependencia
-a veces, mejor. Por lo tanto, todo se debe reiniciar ejecutando el comando ``make clean`` 
-dentro del directorio ``spanishdocs-buildout/sphinx/build/``.
+**Respuesta :** La razones son muchas y están orientadas en dos aspectos principales que describo a continuación: 
 
+**Productividad de trabajo**
+
+  OmegaT debido a que es una herramienta con mas tiempo que Virtaal, el nivel de madures y estabilidad que ofrece hacen 
+  el proceso de traducción mas productivo y ágil ya que todo lo tengo en una misma interfaz de usuario.
+
+**Filosofía de gestión de proyectos**
+
+  **OmegaT** le ofrece un mecanismo gestión de proyectos mas amigable al usuario, debido a que al crear un 
+  proyecto usted puede: 
+  
+  * **Importar sus archivos a traducir** en el directorio "sources" del proyecto creado y el software 
+    lo analiza, genera las segmentaciones de traducciones automáticamente y generar el archivo de memorias 
+    de traducción al cual usted va a alimentar con sus traducciones.
+  
+  * **Gestionar los recursos de traducción** usted puede colocar sus glosarios de términos en el directorio 
+    "glossary", esto es muy útil para mantener un estándar terminológico y opcionalmente puedes usar archivos 
+    de diccionarios de glosarios o dialectos específicos para la corrección ortográfica ubicando estos en el 
+    directorio "dictionary".
+  
+  * **Agilizar la traducción**, usando las memorias de traducción con coincidencia aproximada o exacta puede 
+    marcar al diferencia en los tiempo de culminación de la traducción de documento extenso. Además del apoyo 
+    de los glosarios terminológicos existe la posibilidad de usar traducciones automáticas generadas desde 
+    maquinas de traducción desde los servicios en la Web como Google translate o Aperteium.
+  
+  * **Generación de documentos finales** en cualquier momento de su trabajo de traducción usted puede generar 
+    los documentos traducidos en el mismo formato original, estoy es una funcionalidad genial debido a que por 
+    lo general usted no le interesa cambiar el formato del documento en que se esta traduciendo y la herramienta 
+    simplemente aplica sus cambios en la memoria de traducción.
+  
+  En cambios en **Virtaal** esta pensada para proyectos en los cuales los archivos están generados en formatos 
+  de memoria de traducción TMX, catálogos .POT / .PO, entre otros. en base a estos formatos es que usted puede 
+  hacer el trabajo de traducción y no genera los documentos finales debido a que no se basa en formatos 
+  manipulables por seres humanos sino que las traducciones realizadas son generadas en formatos que tienen que 
+  se procesadas por otros programas que se encargan de presentar estas traducciones en base a las configuraciones 
+  de los *locales* del sistema operativo que lo esta ejecutando.
