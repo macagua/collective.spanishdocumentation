@@ -85,7 +85,7 @@ en un colaborador ejecute el siguiente comando:
 
 .. code-block:: sh
 
-  $ svn co https://svn.plone.org/svn/collective/spanishdocs/cat spanishdocs-omegat
+  $ svn co https://svn.plone.org/svn/collective/spanishdocs/branches/cat spanishdocs-omegat
 
 Si usted no tiene las credenciales de acceso al repositorio SVN `"collective"
 <https://svn.plone.org/svn/collective/>`_ de Plone o simplemente solo desea obtener 
@@ -93,7 +93,7 @@ y compilar esta documentación ejecute el siguiente comando:
 
 .. code-block:: sh
 
-  $ svn export http://svn.plone.org/svn/collective/spanishdocs/cat spanishdocs-omegat
+  $ svn export http://svn.plone.org/svn/collective/spanishdocs/branches/cat spanishdocs-omegat
 
 
 Acerca de OmegaT
