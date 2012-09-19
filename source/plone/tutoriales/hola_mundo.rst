@@ -206,7 +206,7 @@ Para descargar el código fuente de este ejemplo ejecute el siguiente comando:
 
 .. code-block:: sh
 
-  $ svn co https://svn.plone.org/svn/collective/spanishdocs/trunk/src/mini-tutoriales/collective.mydemoapp collective.mydemoapp
+  $ svn co https://svn.plone.org/svn/collective/spanishdocs/tags/0.1rc/src/mini-tutoriales/collective.mydemoapp/ collective.mydemoapp
 
 
 Conclusiones
