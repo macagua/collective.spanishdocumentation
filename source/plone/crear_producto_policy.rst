@@ -40,6 +40,10 @@ Producto de configuración
 El primer paso para la creación del producto se hace utilizando el esqueleto
 de paquete para Plone proporcionado por paster:
 
+.. tip::
+    Debe tener instalado el paquete :ref:`ZopeSkel <skel_plone>` para poder 
+    usar el comando ``paster``.
+
 .. code-block:: sh
 
     $ paster create -t plone cliente1.policy

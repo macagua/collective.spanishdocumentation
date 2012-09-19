@@ -64,6 +64,10 @@ Un tema es un conjunto de skins, vistas y viewlets definidos dentro de un
 paquete de Python. La manera mas fácil de crear uno es utilizar los templates
 para paster del paquete ZopeSkel:
 
+.. tip::
+    Debe tener instalado el paquete :ref:`ZopeSkel <skel_plone>` para poder 
+    usar el comando ``paster``.
+
 Lo primero que hacemos es mandar llamar el template plone3_theme, pasándole el
 nombre del paquete que crearemos. El template utiliza una estructura de
 directorios de dos niveles, por lo que hay que usar un nombre compuesto. Por
