@@ -1255,8 +1255,7 @@ edite el archivo ``installer.cfg`` del recipe buildout. Ejecute de nuevo buildou
 con el parámetro de la siguiente forma ``bin\buildout -c installer.cfg`` y usted 
 conseguirá un nuevo instalador de Windows ejecutable en el directorio actual de trabajo.
 
-Vea el enlace sobre los "Detalles de los paquetes Windows" a continuación
-para mayor información.
+Para mayor información vea el enlace sobre los `Detalles de los paquetes Windows`_.
 
 Accediendo a Plone
 ------------------
@@ -1284,7 +1283,6 @@ Referencias
 
 - `Instalando Plone con el Instalador Unificado`_.
 - `Installing Plone`_.
-- `Detalles de los paquetes Windows`_.
 - `Sitio Web de Buildout`_.
 
 .. _esta página: http://plone.org/products
