@@ -14,6 +14,9 @@ A continuación una serie de terminos usados en las tecnologías Python / Zope /
     PYTHONPATH
         Una lista de nombre de directorios, con la misma sintaxis como la variable ``PATH`` del shell de su sistema.
     
+    PyPI
+        Es el servidor central de paquetes Egg Python.
+    
     buildout
         En la herramienta buildout, es un conjunto de partes que describe como ensamblar una aplicación.
     
@@ -47,7 +50,7 @@ A continuación una serie de terminos usados en las tecnologías Python / Zope /
         de Plone. Se puede decir que son productos que su ámbito de uso es solo en el
         desde la interfaz gráfica de Plone.
 
-    Paquete Egg de Python
+    paquetes Egg
         Es una forma de empaquetar y distribuir paquetes Python. Cada Egg contiene
         un archivo ``setup.py`` con metadata (como el nombre del autor y la correo
         electrónico y información sobre el licenciamiento), como las dependencias del
