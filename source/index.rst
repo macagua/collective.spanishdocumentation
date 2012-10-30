@@ -160,8 +160,8 @@ eso está sección que se dedica a explicar sus casos de uso.
    python/creacion_entornos_virtuales
 
 
-Setuptools / Distribute
------------------------
+Sistema de paquetes Python
+--------------------------
 
 Python ofrece un sistema de paquetes para aplicaciones Python en formato Egg, 
 para la cual posee dos especificaciones de como hacer paquetes Egg y sus respectivas
@@ -173,6 +173,7 @@ explicar sus diferencias.
 
    python/setuptools
    python/distribute_pip
+   python/instalar_config_propio_mirror_pypi
 
 
 Esqueletos de proyectos

@@ -24,11 +24,11 @@ las plataformas, plataformas de 64 bits requieren como mínimo de Python 2.4)
 que le permite crear con más facilidad la distribución de paquetes de Python,
 en especial los que tienen las dependencias de otros paquetes.
 
-``Distribute`` se creó porque el :ref:`paquete Setuptools <que_es_setuptools>` ya no se mantiene. Los
-paquetes de terceros, es probable que requieran setuptools, que es
-proporcionado por el paquete ``Distribute``. Por lo tanto, en cualquier
-momento si los paquetes dependen del :ref:`paquete Setuptools <que_es_setuptools>`, ``Distribute``
-intervendrá para decir que ya ofrece el módulo de ``setuptools``.
+``Distribute`` se creó porque el :ref:`paquete Setuptools <que_es_setuptools>` 
+ya no se mantiene. Los paquetes de terceros, es probable que requieran setuptools, 
+que es proporcionado por el paquete ``Distribute``. Por lo tanto, en cualquier
+momento si los paquetes dependen del :ref:`paquete Setuptools <que_es_setuptools>`, 
+``Distribute`` intervendrá para decir que ya ofrece el módulo de ``setuptools``.
 
 .. image:: ./pip_distribute.png
   :align: center
@@ -50,9 +50,9 @@ por la cual un pequeño grupo de desarrolladores de Python están trabajando en
 recomienda que en el desarrollado o el uso paquete ``distutils`` puro o el
 paquete ``Distribute`` para empaquetar software Python.
 
-Al mismo tiempo, si un paquete requiere el :ref:`paquete Setuptools <que_es_setuptools>`, la
-recomendación es que instale el paquete ``Distribute``, el cual provee una
-versión más actualizada del :ref:`paquete Setuptools <que_es_setuptools>` que el `paquete original de Setuptools`_.
+Al mismo tiempo, si un paquete requiere el :ref:`paquete Setuptools <que_es_setuptools>`, 
+la recomendación es que instale el paquete ``Distribute``, el cual provee una versión más 
+actualizada del :ref:`paquete Setuptools <que_es_setuptools>` que el `paquete original de Setuptools`_.
 
 En el `futuro`_ ``distutils2`` remplazará a ``setuptools`` y ``distutils``,
 le cual también removerá la necesidad de ``Distribute``. El como del estado
@@ -82,7 +82,7 @@ información, por favor, consulte el `Futuro del Empaquetado`_.
 ============
 
 `pip`_ es una herramienta para instalar y administrar paquetes Python, como
-los que podemos encontrar en el Índice de Paquetes de Python - `PYPI`_. Esta
+los que podemos encontrar en el Índice de Paquetes de Python - `PyPI`_. Esta
 herramienta es el remplazo para la famosa herramienta :ref:`easy_install <que_es_easyinstall>`. 
 En su mayoría se utiliza las mismas técnicas para encontrar los paquetes, por lo
 que los paquetes que se instalaban usando la herramienta easy_install deben
@@ -126,7 +126,7 @@ PIP no hacer todo lo que se easy_install. En concreto:
 ------------------------------------------------------
 
 -   No se puede instalar a partir de huevos. Sólo se instala desde el
-    código fuente. (En el futuro seráa bueno si se pudiera instalar los
+    código fuente. (En el futuro será bueno si se pudiera instalar los
     binarios de Windows EXE o MSI -.. pero instalar paquetes binarios para
     otras plataformas no es una prioridad).
 -   No entiende la sección *SetupTools Extras* (como package[test]). Esto
@@ -170,23 +170,19 @@ Ejemplos de uso de PIP
 El script ``pip`` ofrece varias formas de uso, para instalar los paquetes de
 diversas fuentes:
 
-
-**Ejemplo 1.** Instalar un paquete por nombre, buscando en PyPI la versión
-más reciente: 
+**Ejemplo 1.** Instalar un paquete por nombre, buscando en PyPI la versión más reciente: 
 
 .. code-block:: sh
 
     $ pip install SQLObject
 
-**Ejemplo 2.** Instalar o actualizar un paquete por nombre y versión
-utilizando una dirección URL donde encontradas en una "página de descargas": 
+**Ejemplo 2.** Instalar o actualizar un paquete por nombre y versión utilizando una dirección URL donde encontradas en una "página de descargas": 
 
 .. code-block:: sh
 
     $ pip install -f http://pythonpaste.org/package_index.html SQLObject
 
-**Ejemplo 3.** Instalar o actualizar un paquete desde su propio `replica del
-repositorio PYPI`_ o tu repositorio de paquetes Egg privado: 
+**Ejemplo 3.** Instalar o actualizar un paquete desde su propio :ref:`replica del repositorio PyPI <creando_propio_repositorio_pypi>` o tu repositorio de paquetes Egg privado: 
 
 .. code-block:: sh
 
@@ -204,8 +200,7 @@ repositorio PYPI`_ o tu repositorio de paquetes Egg privado:
 
     $ pip install 'ZopeSkel==2.21.2'
 
-**Ejemplo 6.** Instalar todas las dependencias de mi proyecto Python usando
-un archivo de dependencias requeridas para instalar: 
+**Ejemplo 6.** Instalar todas las dependencias de mi proyecto Python usando un archivo de dependencias requeridas para instalar: 
 
 .. code-block:: sh
 
@@ -220,15 +215,13 @@ Un ejemplo del archivo :file:`pip_requirement.txt` puede ser el siguiente: ::
     PyYAML
     south
 
-**Ejemplo 7.** Actualizar un paquete ya instalado con la versión más reciente
-de PyPI: 
+**Ejemplo 7.** Actualizar un paquete ya instalado con la versión más reciente de PyPI: 
 
 .. code-block:: sh
 
     $ pip install --upgrade PyProtocols
 
-**Ejemplo 8.** Para usar realizar búsquedas de paquetes disponibles para
-instalar desde los repositorios por definidos: 
+**Ejemplo 8.** Para usar realizar búsquedas de paquetes disponibles para instalar desde los repositorios por definidos: 
 
 .. code-block:: sh
 
@@ -359,8 +352,7 @@ Referencias
 .. _haga clic aquí: http://blip.tv/file/get/Pycon-PyCon2011PackagingFromDistutilsToDistutils2191.mp4
 .. _clic aquí: http://pycon.blip.tv/file/4880990
 .. _pip: http://pypi.python.org/pypi/pip
-.. _PYPI: http://pypi.python.org/pypi
-.. _replica del repositorio PYPI: http://www.coactivate.org/projects/ploneve/instalar-y-configurar-su-propio-repositorio-de-pypi
+.. _PyPI: http://pypi.python.org/pypi
 .. _gp.recipe.pip: http://pypi.python.org/pypi/gp.recipe.pip
 .. _zc.recipe.egg#scripts: http://pypi.python.org/pypi/zc.recipe.egg#id23
 .. _lxml: http://codespeak.net/lxml/

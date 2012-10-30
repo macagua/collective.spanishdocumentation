@@ -6,8 +6,8 @@
 Setuptools y EasyInstall
 ========================
 
-:Autor(es): Carlos de la Guardia
-:Correo(s): carlos.delaguardia@gmail.com
+:Autor(es): Carlos de la Guardia, Leonardo J. Caballero G.
+:Correo(s): carlos.delaguardia@gmail.com, leonardocaballero@gmail.com
 :Lanzamiento: |version|
 :Fecha: |today|
 
@@ -35,11 +35,6 @@ Entre sus características principales están:
   directorio de trabajo, sin necesidad de listarlos individualmente o crear
   archivos de manifiesto.
 
-* La instalación es muy sencilla, solo se necesita bajar de internet el
-  archivo ``ez_setup.py`` y ejecutarlo con el Python que se desea utilizar
-  (versión 2.3.5 o superior). Esto instalará un programa llamado ``easy_install``
-  junto a los demás ejecutables de Python.
-
 .. _que_es_easyinstall:
 
 ¿Qué es EasyInstall?
@@ -50,6 +45,50 @@ descargar desde internet las dependencias, para instalarlas o actualizarlas
 al momento de construir, que además esta herramienta es capaz de bajar 
 de internet las dependencias utilizando HTTP, FTP, Subversion o SourceForge. 
 
+.. _instalacion_easyinstall:
+
+Instrucciones de Instalación
+============================
+
+Siempre existen más de dos formas de instalar paquetes en Python setuptools y
+easy_install ;)
+
+Instalación manual
+------------------
+
+Para ambas es recomendable que instale ciertas dependencias en su sistema
+operativo como las que se muestran a continuación: 
+
+.. code-block:: sh
+
+  # aptitude install build-essential python-dev
+
+La instalación es muy sencilla, solo se necesita bajar de internet el
+archivo `ez_setup.py`_ y ejecutarlo con el Python que se desea utilizar, 
+con los siguientes comandos: 
+
+.. code-block:: sh
+
+  # wget http://peak.telecommunity.com/dist/ez_setup.py
+  # python ez_setup.py
+
+Esto instalará un programa llamado ``easy_install`` junto a los demás 
+ejecutables de Python.
+
+
+Instalación en sistemas Debian
+------------------------------
+
+La instalación en sistemas Debian es recomendable que instale ciertas dependencias 
+en su sistema operativo como las que se muestran a continuación: 
+
+.. code-block:: sh
+
+  # aptitude install build-essential python-dev python-setuptools
+
+Esto instalará un programa llamado ``easy_install`` junto a los demás 
+ejecutables de Python.
+
 .. _uso_easyinstall:
 
 Ejemplos de uso
@@ -58,44 +97,58 @@ Ejemplos de uso
 El programa ``easy_install`` ofrece varias formas de uso, para instalar los paquetes
 de diversas fuentes.
 
-Ejemplo 1. Instalar un paquete por nombre, buscando en PyPI la versión más
+**Ejemplo 1.** Instalar un paquete por nombre, buscando en PyPI la versión más
 reciente: 
 
 .. code-block:: sh
 
     $ easy_install SQLObject
 
-Ejemplo 2. Instalar o actualizar un paquete por nombre y versión utilizando
+**Ejemplo 2.** Instalar o actualizar un paquete por nombre y versión utilizando
 los enlaces encontrados en una "página de descargas": 
 
 .. code-block:: sh
 
     $ easy_install -f http://pythonpaste.org/package_index.html SQLObject
 
-Ejemplo 3. Descargar e instalar una distribución de código fuente: 
+**Ejemplo 3.** Instalar o actualizar un paquete desde su propio :ref:`replica del repositorio PyPI <creando_propio_repositorio_pypi>` o tu repositorio de paquetes Egg privado: 
+
+.. code-block:: sh
+
+    $ pip install -i http://pypi.misitio.org/simple SQLObject
+
+**Ejemplo 4.** Descargar e instalar una distribución de código fuente: 
 
 .. code-block:: sh
 
     $ easy_install http://example.com/path/to/MyPackage-1.2.3.tgz
 
-Ejemplo 4. Instalar un Python .egg ya descargado: 
+**Ejemplo 5.** Instalar un Python .egg ya descargado: 
 
 .. code-block:: sh
 
     $ easy_install /my_downloads/OtherPackage-3.2.1-py2.3.egg
 
-Ejemplo 5. Instalar un paquete con una versión especifica: 
+**Ejemplo 6.** Instalar un paquete con una versión especifica: 
 
 .. code-block:: sh
 
     $ easy_install "ZopeSkel==2.21.2"
 
-Ejemplo 6. Actualizar un paquete ya instalado con la versión más reciente de
-PyPI: 
+**Ejemplo 7.** Actualizar un paquete ya instalado con la versión más reciente de PyPI: 
 
 .. code-block:: sh
 
     $ easy_install --upgrade PyProtocols
+
+
+Para más información consulte la ayuda disponible por que paquete ``easy_install``
+ejecutando el siguiente comando: 
+
+.. code-block:: sh
+
+    $ easy_install --help
+
 
 
 .. _easy_install_zope_plone:
@@ -154,5 +207,6 @@ Referencia
 - `Instalación de setuptools y EasyInstall para Python`_ desde la comunidad Plone México.
 
 .. _Setuptools: http://pypi.python.org/pypi/setuptools/
+.. _ez_setup.py: http://peak.telecommunity.com/dist/ez_setup.py
 .. _easy_install: http://peak.telecommunity.com/DevCenter/EasyInstall
 .. _Instalación de setuptools y EasyInstall para Python: http://plone.org/countries/mx/instalacion-de-setuptools-y-easyinstall-para-python
