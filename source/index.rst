@@ -307,9 +307,12 @@ Instrucciones acerca de esta documentación.
 .. toctree::
    :maxdepth: 2
 
+   acerca
+   copyright
+   licencia
+..
    documentando
    traduciendo
-   copyright
 
 
    
