@@ -1,2 +1,0 @@
-recursive-include collective *
-global-exclude *pyc
