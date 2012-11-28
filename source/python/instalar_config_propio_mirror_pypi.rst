@@ -14,7 +14,7 @@ Instalar y configurar su propio repositorio de PyP­I­
 .. contents:: :local:
 
 Este manual intenta ayudar a como implementar un servidor espejo (mirror) de paquetes 
-Egg Python del servidor central :term:`PyPI` local en su organización.
+Egg Python del servidor central ``PyPI`` local en su organización.
 
 .. toctree::
    :maxdepth: 1
@@ -53,14 +53,14 @@ En el caso de ubuntu la lista también es larga y abarca países de la A a la Z.
 Repositorio de PyPI
 -------------------
 
-En el caso de Python existe el sistema de :term:`paquetes Egg` y estos se disponen para ser 
+En el caso de Python existe el sistema de ``paquetes Egg`` y estos se disponen para ser 
 distribuidos como aplicaciones y librerías Python en un repositorio principal dispuesto por la 
 fundación Python en la siguiente dirección:
 
 -   http://pypi.python.org/simple/
 
 Que no es mas que la interfaz que consultan la herramientas :ref:`easy_install <que_es_easyinstall>` / :ref:`pip <que_es_pip>` 
-para realizar las instalaciones de :term:`paquetes Egg`.
+para realizar las instalaciones de ``paquetes Egg``.
 
 Este repositorio principal posee sus mirror o espejos como se listan a continuación:
 

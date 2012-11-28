@@ -70,7 +70,7 @@ Buildout, para esto debe ejecutar los siguientes comandos:
   $ nano $HOME/.buildout/default.cfg
 
 Luego de crear el archivo ``default.cfg`` defina algunas configuraciones de 
-usuario predeterminadas para cualquier parte de su configuración :term:`buildout`:
+usuario predeterminadas para cualquier parte de su configuración buildout:
 
 .. code-block:: cfg
 
@@ -131,14 +131,14 @@ Esto creará un nuevo intérprete Python dentro del directorio
 
   $ ./bin/python
 
-Y luego tendrá a disposición en su :term:`PYTHONPATH` el paquete que instalo
+Y luego tendrá a disposición en su ``PYTHONPATH`` el paquete que instalo
 `zope.component`_, como se demuestra a continuación: 
 
 .. code-block:: python
 
   >>> import zope.component
 
-Utilizando ``zc.buildout`` con la :term:`recipe` llamado `zc.recipe.egg`_ se puede crear un
+Utilizando ``zc.buildout`` con la ``recipe`` llamado `zc.recipe.egg`_ se puede crear un
 intérprete de Python con los paquetes Egg Python especificados.
 
 
