@@ -20,10 +20,20 @@ Son una serie de colecciones de plantillas *esqueletos* que permiten iniciar
 rápidamente proyectos, existente diversos *esqueletos* orientados a tipos de
 desarrollos específicos.
 
+.. _que_es_pastescript:
+
+¿Qué es PasteScript?
+--------------------
+
+Es una herramienta de linea de comando basada en plugins que le 
+permiten crear estructuras de paquetes de proyectos Python ademas sirve aplicaciones 
+web, con configuraciones basadas en `paste.deploy`_.
+
 Instalación
 ===========
 
-Dentro de su entorno virtual activado debe instalar el paquete ``PasteScript``, ejecutando el siguiente comando: 
+Dentro de su :ref:`entorno virtual <creacion_entornos_virtuales>` activado debe 
+instalar el paquete `PasteScript`_, ejecutando el siguiente comando: 
 
 .. code-block:: sh
 
@@ -116,7 +126,8 @@ Escriba un simple código que solicita un valor y luego lo muestra:
 
 Guarde los cambios en el archivo ``app.py``
 
-Luego importe su aplicacion ``app.py`` en el archivo ``__init__.py`` con el siguiente código fuente: 
+Luego importe su aplicacion ``app.py`` en el archivo ``__init__.py`` 
+con el siguiente código fuente: 
 
 .. code-block:: python
 
@@ -128,7 +139,8 @@ Para comprabar su instalación ejecute el siguiente comando:
 
   (python)$ python
 
-Y realice una importación del paquete mipaquetepython ejecutando el siguiente comando: 
+Y realice una importación del paquete mipaquetepython ejecutando 
+el siguiente comando: 
 
 .. code-block:: python
 
@@ -141,7 +153,8 @@ Y realice una importación del paquete mipaquetepython ejecutando el siguiente c
 Descarga código fuente
 ======================
 
-Para descargar el código fuente de este ejemplo ejecute el siguiente comando:
+Para descargar el código fuente de este ejemplo ejecute el siguiente 
+comando:
 
 .. code-block:: sh
 
@@ -191,8 +204,10 @@ Si desea trabajar con algún proyecto de desarrollo basado en esqueletos o plant
 Referencias
 ===========
 
-- `Gestión de proyectos con Buildout, instalando Zope/Plone con este mecanismo`_.
+- `Gestión de proyectos con Buildout, instalando Zope/Plone con este mecanismo`_ desde la comunidad de Plone Venezuela.
 
+.. _PasteScript: http://pypi.python.org/pypi/PasteScript
+.. _paste.deploy: http://pypi.python.org/pypi/PasteDeploy
 .. _django-project-templates: http://pypi.python.org/pypi/django-project-templates
 .. _fez.djangoskel: http://pypi.python.org/pypi/fez.djangoskel
 .. _django-harness: http://pypi.python.org/pypi/django-harness
