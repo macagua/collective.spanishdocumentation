@@ -25,7 +25,7 @@ si usted necesita ejecutar manualmente el `servidor proxy`_ Deliverance:
     WebOb = 0.9.8
     PasteScript = 1.7.5
     PasteDeploy = 1.5.0
-
+    
     [deliverance-server]
     recipe = zc.recipe.egg
     eggs =
@@ -34,20 +34,20 @@ si usted necesita ejecutar manualmente el `servidor proxy`_ Deliverance:
 
 .. note::
     
-    Opcionalmente, en algunos sistemas operativos, en particular, Mac OS X la instalación 
-    de un "buen" paquete (Python egg) de ``lxml`` puede ser problemático, debido a una 
-    falta de coincidencia en las versiones del sistema operativo de las librerías ``lxml`` 
-    con respecto a la ``libxml2`` y ``libxslt``. Para resolver esto, se puede compilar 
-    un ``lxml`` estático de paquete egg usando la siguiente receta buildout:
-
+    En algunos sistemas operativos, en particular, Mac OS X, la instalación del paquete Python 
+    ``lxml`` puede ser complicada, debido a una falta de coincidencia en las versiones de las 
+    librerías ``lxml`` del sistema operativo con respecto a la ``libxml2`` y ``libxslt``. 
+    
+Para resolver esto, se puede compilar un ``lxml`` estáticamente usando la siguiente configuración:
+    
     .. code-block:: cfg
 
         [buildout]
         versions = versions
         # lxml debería estar de primero en la lista ``parts``
         parts =
-           lxml
-           deliverance-server
+            lxml
+            deliverance-server
         
         [versions]
         Deliverance = 0.5.0
@@ -66,7 +66,20 @@ si usted necesita ejecutar manualmente el `servidor proxy`_ Deliverance:
             PasteScript
 
 
-Entonces usted tiene que comenzar de arranque:
+.. note::
+
+    El paquete ``lxml`` es una dependencia de Deliverance, usted podría necesitar instalar 
+    las librerías de desarrollo de ``libxml2`` y ``libxslt`` para poder construir esta 
+    configuración zc.buildout. 
+    
+En Debian/Ubuntu Linux usted puede ejecutar el siguiente comando:
+
+.. code-block:: console
+
+    $ sudo apt-get install build-essential python-dev libxml2-dev libxslt1-dev
+
+
+Entonces usted tiene que iniciar su proyecto con el siguiente comando:
 
 .. code-block:: console
 
@@ -78,18 +91,6 @@ Luego ejecute la construcción de su configuración zc.buildout, con el siguient
 
     $ ./bin/buildout -vN
 
-
-.. note::
-    
-    Note que el paquete lxml es una dependencia de Deliverance, usted podría 
-    necesitar instalar los paquetes de desarrollo de libxml2 y libxslt para 
-    poder construir esta configuración zc.buildout. En Debian/Ubuntu Linux usted puede ejecutar:
-
-    .. code-block:: console
-        
-        $ sudo apt-get install build-essential python-dev libxml2-dev libxslt1-dev
-
-    Luego vuelva a ejecutar la construcción de su configuración zc.buildout como en paso anterior
 
 Usted debería ver algo como esto:
 
