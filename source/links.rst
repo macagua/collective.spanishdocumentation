@@ -79,6 +79,12 @@ Plone
 http://plone.org/
     Página principal de la comunidad Plone.
 
+http://plone.es/
+    Página principal en Castellano de la comunidad Plone.
+
+http://webchat.freenode.net/?channels=plone-es
+    Canal IRC de la comunidad Plone en Castellano.
+
 http://plone.org/countries/conosur/
     Página principal de la comunidad Plone Conosur.
 
