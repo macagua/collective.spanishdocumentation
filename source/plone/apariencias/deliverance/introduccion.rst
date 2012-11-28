@@ -41,7 +41,8 @@ Componentes de Deliverance
    Contenidos
       Es la información a la que quiere aplicar un estilo a través del tema. Este puede ser un 
       sitio Web dinámico o un archivo estático, especificado a  través de una dirección ``URL`` 
-      por medio de reglas de `reescritura direcciones URL`_ y `proxy inverso`_.
+      por medio de reglas de :ref:`reescritura direcciones URL <zope_plone_webserver_terminologia_general>` 
+      y `proxy inverso`_.
 
    Tema
       Este contiene los estilos e información de diagramación/presentación de contenidos que se 
@@ -78,9 +79,11 @@ Es recomendable poseer conocimiento en las siguientes conceptos/tecnologías/her
 
 Beneficios
 ==========
-- Los diseñadores Web no necesitan aprender el sistema manejador de contenidos ``CMS``, el ``Framework`` o sistema de temas de un sitio/aplicación Web.
+- Los diseñadores Web no necesitan aprender el sistema manejador de contenidos ``CMS``, el 
+  ``Framework`` o sistema de temas de un sitio/aplicación Web.
 
-- Se puede unificar el diseño de múltiples aplicaciones Web con un diseño unificado aplicado a wikis, blogs, contenido estático ``HTML``, entre otros.
+- Se puede unificar el diseño de múltiples aplicaciones Web con un diseño unificado aplicado 
+  a wikis, blogs, contenido estático ``HTML``, entre otros.
 
 .. note::
 
@@ -98,7 +101,6 @@ Beneficios
 .. _HTML: http://es.wikipedia.org/wiki/HTML
 .. _CSS: http://es.wikipedia.org/wiki/Hojas_de_estilo_en_cascada
 .. _proxy inverso: http://es.wikipedia.org/wiki/Proxy#Reverse_Proxy_.2F_Proxy_inverso
-.. _reescritura direcciones URL: http://plone-spanish-docs.readthedocs.org/en/latest/zope/zope-plone-detras-servidor-web.html#terminologia-general
 .. _replace: http://packages.python.org/Deliverance/rules.html#behavior-replace
 .. _append, prepend: http://packages.python.org/Deliverance/rules.html#behavior-append-prepend
 .. _drop: http://packages.python.org/Deliverance/rules.html#behavior-drop
