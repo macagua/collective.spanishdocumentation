@@ -32,6 +32,7 @@ Servicio de Virtual hosting en Zope
 El servidor Zope viene con un objeto llamado "Virtual Host Monster" que le ayuda a hacer configuraciones de hosting virtual. 
 La técnica de hosting virtual es una forma de servir a muchos sitios web con un servidor Zope.
 
+.. _zope_plone_webserver_terminologia_general:
 
 Terminología general
 --------------------
