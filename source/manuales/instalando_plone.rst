@@ -991,8 +991,10 @@ Descargue e instale Plone
 Accediendo a Plone
 ------------------
 
-*Nota: Quizás tenga que indicarle a su Firewall (cortafuegos) que abra el
-puerto TCP 8080, antes de que pueda acceder a la interfaz web de Plone.*
+.. note::
+
+  Quizás tenga que indicarle a su Firewall (cortafuegos) que abra el
+  puerto TCP 8080, antes de que pueda acceder a la interfaz web de Plone.
 
 1.  Abra un navegador web y vaya a http://localhost:8080/ y haga clic en
     el botón "Create a new Plone site".
@@ -1007,7 +1009,6 @@ puerto TCP 8080, antes de que pueda acceder a la interfaz web de Plone.*
 4.  Después de que el sitio está creado usted será redirigido al sitio en
     la dirección http://localhost:8080/Plone. Usted puede utilizar esta
     dirección URL la próxima ves que usted quiera visitar su sitio.
-
 
 Iniciando y Deteniendo su servicio Plone
 ----------------------------------------
