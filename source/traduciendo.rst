@@ -77,23 +77,19 @@ Existe una serie de terminologías que debe conocer para entender el proceso de 
 Obtener y memorias de traducción
 ================================
 
-El almacenamiento de las memorias de traducción disponibles para este material 
-está disponible en el servidor de Subversion `"collective"
-<https://svn.plone.org/svn/collective/>`_ de los contribuyentes 
-a Plone. Si usted tiene una credenciales en este servidor y desea convertirse 
-en un colaborador ejecute el siguiente comando:
+El almacenamiento de este material está disponible en un repositorio Git 
+en GitHub.com "`collective.spanishdocumentation`_". Si usted tiene una 
+credenciales en este servidor y desea convertirse en un colaborador ejecute 
+el siguiente comando: ::
 
-.. code-block:: sh
+  $ git clone git@github.com:collective/collective.spanishdocumentation.git collective.spanishdocumentation
+  $ git checkout cat
 
-  $ svn co https://svn.plone.org/svn/collective/spanishdocs/branches/cat spanishdocs-omegat
+Si usted no tiene las credenciales de acceso al repositorio Git en GitHub.com "`collective.spanishdocumentation`_" o simplemente solo desea obtener y compilar 
+esta documentación ejecute el siguiente comando: ::
 
-Si usted no tiene las credenciales de acceso al repositorio SVN `"collective"
-<https://svn.plone.org/svn/collective/>`_ de Plone o simplemente solo desea obtener 
-y compilar esta documentación ejecute el siguiente comando:
-
-.. code-block:: sh
-
-  $ svn export http://svn.plone.org/svn/collective/spanishdocs/branches/cat spanishdocs-omegat
+  $ git clone https://github.com/collective/collective.spanishdocumentation.git collective.spanishdocumentation
+  $ git checkout cat
 
 
 Acerca de OmegaT
@@ -196,3 +192,5 @@ FAQ
   manipulables por seres humanos sino que las traducciones realizadas son generadas en formatos que tienen que 
   se procesadas por otros programas que se encargan de presentar estas traducciones en base a las configuraciones 
   de los *locales* del sistema operativo que lo esta ejecutando.
+  
+  .. _collective.spanishdocumentation: https://github.com/collective/collective.spanishdocumentation
